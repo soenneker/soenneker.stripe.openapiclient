@@ -11,48 +11,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("merchant_data") is { } nullNodeMerchantData && nullNodeMerchantData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantData = null;
+            if (parseNode.GetChildNode("purchase_details") is { } nullNodePurchaseDetails && nullNodePurchaseDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseDetails = null;
+        }
+
         /// <summary>The total amount to attempt to refund. This amount is in the provided currency, or defaults to the cards currency, and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Card associated with this unlinked refund transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Card { get; set; }
+        public string? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private string? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public string Card { get; set; }
+        public string Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private string _explicitNullValueCard = default!;
 #endif
         /// <summary>The currency of the unlinked refund. If not provided, defaults to the currency of the card. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Details about the seller (grocery store, e-commerce website, etc.) where the card authorization happened.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData? MerchantData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData? MerchantData { get => _explicitNullValueMerchantData; set { _explicitNullValueMerchantData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_data"); else _explicitNullProperties?.Remove("merchant_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData? _explicitNullValueMerchantData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData MerchantData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData MerchantData { get => _explicitNullValueMerchantData; set { _explicitNullValueMerchantData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_data"); else _explicitNullProperties?.Remove("merchant_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData _explicitNullValueMerchantData = default!;
 #endif
         /// <summary>Additional purchase information that is optionally provided by the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails? PurchaseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails? PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails? _explicitNullValuePurchaseDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails PurchaseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails _explicitNullValuePurchaseDetails = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,7 +116,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestMerchantData>("merchant_data", MerchantData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails>("purchase_details", PurchaseDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateUnlinkedRefundXWwwFormUrlencodedRequestPurchaseDetails>("purchase_details", PurchaseDetails);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,35 +11,53 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessible") is { } nullNodeAccessible && nullNodeAccessible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessible = null;
+            if (parseNode.GetChildNode("in_development") is { } nullNodeInDevelopment && nullNodeInDevelopment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InDevelopment = null;
+            if (parseNode.GetChildNode("restricted") is { } nullNodeRestricted && nullNodeRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Restricted = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The accessible property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible? Accessible { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible? Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible? _explicitNullValueAccessible = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible Accessible { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteAccessible _explicitNullValueAccessible = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The in_development property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment? InDevelopment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment? InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment? _explicitNullValueInDevelopment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment InDevelopment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment _explicitNullValueInDevelopment = default!;
 #endif
         /// <summary>The restricted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted? Restricted { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted? Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted? _explicitNullValueRestricted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted Restricted { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted _explicitNullValueRestricted = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteInDevelopment>("in_development", InDevelopment);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteRestricted>("restricted", Restricted);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsPaypayPaymentsSiteType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

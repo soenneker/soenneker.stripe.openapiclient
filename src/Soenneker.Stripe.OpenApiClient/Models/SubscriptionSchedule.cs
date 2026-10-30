@@ -12,128 +12,190 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionSchedule : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
+            if (parseNode.GetChildNode("billing_mode") is { } nullNodeBillingMode && nullNodeBillingMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingMode = null;
+            if (parseNode.GetChildNode("canceled_at") is { } nullNodeCanceledAt && nullNodeCanceledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledAt = null;
+            if (parseNode.GetChildNode("completed_at") is { } nullNodeCompletedAt && nullNodeCompletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedAt = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("current_phase") is { } nullNodeCurrentPhase && nullNodeCurrentPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPhase = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("customer_account") is { } nullNodeCustomerAccount && nullNodeCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccount = null;
+            if (parseNode.GetChildNode("default_settings") is { } nullNodeDefaultSettings && nullNodeDefaultSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSettings = null;
+            if (parseNode.GetChildNode("end_behavior") is { } nullNodeEndBehavior && nullNodeEndBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBehavior = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("pause_schedules") is { } nullNodePauseSchedules && nullNodePauseSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseSchedules = null;
+            if (parseNode.GetChildNode("phases") is { } nullNodePhases && nullNodePhases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phases = null;
+            if (parseNode.GetChildNode("released_at") is { } nullNodeReleasedAt && nullNodeReleasedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasedAt = null;
+            if (parseNode.GetChildNode("released_subscription") is { } nullNodeReleasedSubscription && nullNodeReleasedSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasedSubscription = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
+            if (parseNode.GetChildNode("test_clock") is { } nullNodeTestClock && nullNodeTestClock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestClock = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the Connect Application that created the schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication? Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication? _explicitNullValueApplication = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication _explicitNullValueApplication = default!;
 #endif
         /// <summary>The billing mode of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode? BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode? BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode? _explicitNullValueBillingMode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode _explicitNullValueBillingMode = default!;
 #endif
         /// <summary>Time at which the subscription schedule was canceled. Measured in seconds since the Unix epoch.</summary>
-        public int? CanceledAt { get; set; }
+        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private int? _explicitNullValueCanceledAt = default!;
         /// <summary>Time at which the subscription schedule was completed. Measured in seconds since the Unix epoch.</summary>
-        public int? CompletedAt { get; set; }
+        public int? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
+        private int? _explicitNullValueCompletedAt = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Object representing the start and end dates for the current phase of the subscription schedule, if it is `active`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed? CurrentPhase { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed? CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed? _explicitNullValueCurrentPhase = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed CurrentPhase { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed _explicitNullValueCurrentPhase = default!;
 #endif
         /// <summary>ID of the customer who owns the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer _explicitNullValueCustomer = default!;
 #endif
         /// <summary>ID of the account who owns the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccount { get; set; }
+        public string? CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string? _explicitNullValueCustomerAccount = default!;
 #nullable restore
 #else
-        public string CustomerAccount { get; set; }
+        public string CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>The default_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings? DefaultSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings? DefaultSettings { get => _explicitNullValueDefaultSettings; set { _explicitNullValueDefaultSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_settings"); else _explicitNullProperties?.Remove("default_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings? _explicitNullValueDefaultSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings DefaultSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings DefaultSettings { get => _explicitNullValueDefaultSettings; set { _explicitNullValueDefaultSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_settings"); else _explicitNullProperties?.Remove("default_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings _explicitNullValueDefaultSettings = default!;
 #endif
         /// <summary>Behavior of the subscription schedule and underlying subscription when it ends. Possible values are `release` or `cancel` with the default being `release`. `release` will end the subscription schedule and keep the underlying subscription running. `cancel` will end the subscription schedule and cancel the underlying subscription.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleEndBehavior? EndBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleEndBehavior? EndBehavior { get => _explicitNullValueEndBehavior; set { _explicitNullValueEndBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_behavior"); else _explicitNullProperties?.Remove("end_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleEndBehavior? _explicitNullValueEndBehavior = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject? _explicitNullValueObject = default!;
         /// <summary>The pause schedules for this subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>? PauseSchedules { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>? PauseSchedules { get => _explicitNullValuePauseSchedules; set { _explicitNullValuePauseSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_schedules"); else _explicitNullProperties?.Remove("pause_schedules"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>? _explicitNullValuePauseSchedules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule> PauseSchedules { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule> PauseSchedules { get => _explicitNullValuePauseSchedules; set { _explicitNullValuePauseSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_schedules"); else _explicitNullProperties?.Remove("pause_schedules"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule> _explicitNullValuePauseSchedules = default!;
 #endif
         /// <summary>Configuration for the subscription schedule&apos;s phases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>? Phases { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>? Phases { get => _explicitNullValuePhases; set { _explicitNullValuePhases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phases"); else _explicitNullProperties?.Remove("phases"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>? _explicitNullValuePhases = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration> Phases { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration> Phases { get => _explicitNullValuePhases; set { _explicitNullValuePhases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phases"); else _explicitNullProperties?.Remove("phases"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration> _explicitNullValuePhases = default!;
 #endif
         /// <summary>Time at which the subscription schedule was released. Measured in seconds since the Unix epoch.</summary>
-        public int? ReleasedAt { get; set; }
+        public int? ReleasedAt { get => _explicitNullValueReleasedAt; set { _explicitNullValueReleasedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_at"); else _explicitNullProperties?.Remove("released_at"); } }
+        private int? _explicitNullValueReleasedAt = default!;
         /// <summary>ID of the subscription once managed by the subscription schedule (if it is released).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleasedSubscription { get; set; }
+        public string? ReleasedSubscription { get => _explicitNullValueReleasedSubscription; set { _explicitNullValueReleasedSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_subscription"); else _explicitNullProperties?.Remove("released_subscription"); } }
+        private string? _explicitNullValueReleasedSubscription = default!;
 #nullable restore
 #else
-        public string ReleasedSubscription { get; set; }
+        public string ReleasedSubscription { get => _explicitNullValueReleasedSubscription; set { _explicitNullValueReleasedSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_subscription"); else _explicitNullProperties?.Remove("released_subscription"); } }
+        private string _explicitNullValueReleasedSubscription = default!;
 #endif
         /// <summary>The present status of the subscription schedule. Possible values are `not_started`, `active`, `completed`, `released`, and `canceled`. You can read more about the different states in our [behavior guide](https://docs.stripe.com/billing/subscriptions/subscription-schedules).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus? _explicitNullValueStatus = default!;
         /// <summary>ID of the subscription managed by the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription? Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription? _explicitNullValueSubscription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription _explicitNullValueSubscription = default!;
 #endif
         /// <summary>ID of the test clock this subscription schedule belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock? TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock? TestClock { get => _explicitNullValueTestClock; set { _explicitNullValueTestClock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_clock"); else _explicitNullProperties?.Remove("test_clock"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock? _explicitNullValueTestClock = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock TestClock { get => _explicitNullValueTestClock; set { _explicitNullValueTestClock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_clock"); else _explicitNullProperties?.Remove("test_clock"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock _explicitNullValueTestClock = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule"/> and sets the default values.
@@ -150,7 +212,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -211,6 +273,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription>("subscription", Subscription);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleTestClock>("test_clock", TestClock);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

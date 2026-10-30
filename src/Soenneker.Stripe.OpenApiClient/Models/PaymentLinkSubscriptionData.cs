@@ -12,42 +12,63 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentLinkSubscriptionData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("invoice_settings") is { } nullNodeInvoiceSettings && nullNodeInvoiceSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceSettings = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("trial_period_days") is { } nullNodeTrialPeriodDays && nullNodeTrialPeriodDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialPeriodDays = null;
+            if (parseNode.GetChildNode("trial_settings") is { } nullNodeTrialSettings && nullNodeTrialSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The subscription&apos;s description, meant to be displayable to the customer. Use this field to optionally store an explanation of the subscription for rendering in Stripe surfaces and certain local payment methods UIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The invoice_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings? InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings? InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings? _explicitNullValueInvoiceSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataInvoiceSettings _explicitNullValueInvoiceSettings = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on [Subscriptions](https://docs.stripe.com/api/subscriptions) generated from this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Integer representing the number of trial period days before the customer is charged for the first time.</summary>
-        public int? TrialPeriodDays { get; set; }
+        public int? TrialPeriodDays { get => _explicitNullValueTrialPeriodDays; set { _explicitNullValueTrialPeriodDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_period_days"); else _explicitNullProperties?.Remove("trial_period_days"); } }
+        private int? _explicitNullValueTrialPeriodDays = default!;
         /// <summary>Settings related to subscription trials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings? TrialSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings? TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings? _explicitNullValueTrialSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings TrialSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings _explicitNullValueTrialSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkSubscriptionData"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkSubscriptionData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkSubscriptionData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkSubscriptionData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceSubscriptionDataTrialSettings>("trial_settings", TrialSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

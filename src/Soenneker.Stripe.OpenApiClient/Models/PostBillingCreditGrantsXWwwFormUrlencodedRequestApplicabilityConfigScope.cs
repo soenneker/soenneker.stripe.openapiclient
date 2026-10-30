@@ -11,19 +11,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScope : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
+            if (parseNode.GetChildNode("price_type") is { } nullNodePriceType && nullNodePriceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The prices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem>? Prices { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem>? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem>? _explicitNullValuePrices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem> Prices { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem> Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem> _explicitNullValuePrices = default!;
 #endif
         /// <summary>The price type that credit grants can apply to. We currently only support the `metered` price type. This refers to prices that have a [Billing Meter](https://docs.stripe.com/api/billing/meter) attached to them. Cannot be used in combination with `prices`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? PriceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? PriceType { get => _explicitNullValuePriceType; set { _explicitNullValuePriceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_type"); else _explicitNullProperties?.Remove("price_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? _explicitNullValuePriceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScope"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScope CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScope();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScope(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestApplicabilityConfigScopePricesItem>("prices", Prices);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType>("price_type", PriceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

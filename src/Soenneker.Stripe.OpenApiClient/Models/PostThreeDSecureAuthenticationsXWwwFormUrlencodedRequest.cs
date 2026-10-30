@@ -11,97 +11,144 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acquirer_details") is { } nullNodeAcquirerDetails && nullNodeAcquirerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerDetails = null;
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("directory_server") is { } nullNodeDirectoryServer && nullNodeDirectoryServer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectoryServer = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("flow_preference") is { } nullNodeFlowPreference && nullNodeFlowPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowPreference = null;
+            if (parseNode.GetChildNode("future_usage") is { } nullNodeFutureUsage && nullNodeFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureUsage = null;
+            if (parseNode.GetChildNode("message_category") is { } nullNodeMessageCategory && nullNodeMessageCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageCategory = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("payment_method_data") is { } nullNodePaymentMethodData && nullNodePaymentMethodData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodData = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("submit") is { } nullNodeSubmit && nullNodeSubmit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Submit = null;
+        }
+
         /// <summary>Contains additional details about the acquirer for this 3DS Authentication.Refer to the [Pass acquirer details and directory server section of the standalone 3DS guide](/payments/3d-secure/standalone-3d-secure#pass-acquirer-details-and-directory-server) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails? AcquirerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails? AcquirerDetails { get => _explicitNullValueAcquirerDetails; set { _explicitNullValueAcquirerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_details"); else _explicitNullProperties?.Remove("acquirer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails? _explicitNullValueAcquirerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails AcquirerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails AcquirerDetails { get => _explicitNullValueAcquirerDetails; set { _explicitNullValueAcquirerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_details"); else _explicitNullProperties?.Remove("acquirer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestAcquirerDetails _explicitNullValueAcquirerDetails = default!;
 #endif
         /// <summary>A non-negative integer representing the amount in the [smallest currency unit](/currencies#zero-decimal). You can&apos;t include this parameter if `message_category` is `non_payment_authentication`</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Contains additional details on the channel used for this 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel? Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel _explicitNullValueChannel = default!;
 #endif
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The 3DS directory server with which this 3DS Authentication was processed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestDirectoryServer? DirectoryServer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestDirectoryServer? DirectoryServer { get => _explicitNullValueDirectoryServer; set { _explicitNullValueDirectoryServer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directory_server"); else _explicitNullProperties?.Remove("directory_server"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestDirectoryServer? _explicitNullValueDirectoryServer = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Contains additional details on your flow preference for this 3DS Authentication.Refer to the [Specify a flow preference section of the standalone 3DS guide](/payments/3d-secure/standalone-3d-secure#specify-a-flow-preference) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference? FlowPreference { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference? FlowPreference { get => _explicitNullValueFlowPreference; set { _explicitNullValueFlowPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_preference"); else _explicitNullProperties?.Remove("flow_preference"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference? _explicitNullValueFlowPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference FlowPreference { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference FlowPreference { get => _explicitNullValueFlowPreference; set { _explicitNullValueFlowPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_preference"); else _explicitNullProperties?.Remove("flow_preference"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFlowPreference _explicitNullValueFlowPreference = default!;
 #endif
         /// <summary>Contains information about future usage of this 3DS Authentication</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage? FutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage? FutureUsage { get => _explicitNullValueFutureUsage; set { _explicitNullValueFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_usage"); else _explicitNullProperties?.Remove("future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage? _explicitNullValueFutureUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage FutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage FutureUsage { get => _explicitNullValueFutureUsage; set { _explicitNullValueFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_usage"); else _explicitNullProperties?.Remove("future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestFutureUsage _explicitNullValueFutureUsage = default!;
 #endif
         /// <summary>Indicates whether this 3DS Authentication is being performed for a payment or non-payment use case.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMessageCategory? MessageCategory { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMessageCategory? MessageCategory { get => _explicitNullValueMessageCategory; set { _explicitNullValueMessageCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_category"); else _explicitNullProperties?.Remove("message_category"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMessageCategory? _explicitNullValueMessageCategory = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>ID of the payment method (a PaymentMethod object) to attach to this 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethod { get; set; }
+        public string? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private string? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public string PaymentMethod { get; set; }
+        public string PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private string _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>Hash used to generate the PaymentMethod to be used for this Authentication. This is mutually exclusive with the `payment_method` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData? PaymentMethodData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData? PaymentMethodData { get => _explicitNullValuePaymentMethodData; set { _explicitNullValuePaymentMethodData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_data"); else _explicitNullProperties?.Remove("payment_method_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData? _explicitNullValuePaymentMethodData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData PaymentMethodData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData PaymentMethodData { get => _explicitNullValuePaymentMethodData; set { _explicitNullValuePaymentMethodData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_data"); else _explicitNullProperties?.Remove("payment_method_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData _explicitNullValuePaymentMethodData = default!;
 #endif
         /// <summary>The reason for invoking standalone 3DS. This is tailored specifically for cases when you want Stripe to help determine the standalone 3DS flow to fit your use case instead of needing to select a specific 3DS flow.This parameter is exclusive with `flow_preference`. You can either use `reason` for controlling 3DS according to your business requirements, or use `flow_preference` for having fine-grained control over your 3DS flow preference.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestReason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestReason? _explicitNullValueReason = default!;
         /// <summary>The shipping address requested by the cardholder. You should try to include as complete address information as possible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>Set to `always` to skip the fingerprinting step and submit this Authentication immediately or `if_fingerprinting_not_supported` to submit this Authentication only if fingerprinting is not available. This parameter defaults to `never`.Refer to the [Submit at creation section of the standalone 3DS guide](/payments/3d-secure/standalone-3d-secure#submit-at-creation) for more information.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestSubmit? Submit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestSubmit? Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestSubmit? _explicitNullValueSubmit = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -110,7 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,7 +205,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestShippingAddress>("shipping_address", ShippingAddress);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestSubmit>("submit", Submit);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestSubmit>("submit", Submit);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

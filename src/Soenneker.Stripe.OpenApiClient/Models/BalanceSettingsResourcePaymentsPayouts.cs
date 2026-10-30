@@ -12,43 +12,64 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BalanceSettingsResourcePaymentsPayouts : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("automatic_transfer_rules_by_currency") is { } nullNodeAutomaticTransferRulesByCurrency && nullNodeAutomaticTransferRulesByCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticTransferRulesByCurrency = null;
+            if (parseNode.GetChildNode("minimum_balance_by_currency") is { } nullNodeMinimumBalanceByCurrency && nullNodeMinimumBalanceByCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumBalanceByCurrency = null;
+            if (parseNode.GetChildNode("schedule") is { } nullNodeSchedule && nullNodeSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schedule = null;
+            if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Configures per-currency rules for automatically transferring funds from the payments balance to a FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty? AutomaticTransferRulesByCurrency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty? AutomaticTransferRulesByCurrency { get => _explicitNullValueAutomaticTransferRulesByCurrency; set { _explicitNullValueAutomaticTransferRulesByCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_transfer_rules_by_currency"); else _explicitNullProperties?.Remove("automatic_transfer_rules_by_currency"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty? _explicitNullValueAutomaticTransferRulesByCurrency = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty AutomaticTransferRulesByCurrency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty AutomaticTransferRulesByCurrency { get => _explicitNullValueAutomaticTransferRulesByCurrency; set { _explicitNullValueAutomaticTransferRulesByCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_transfer_rules_by_currency"); else _explicitNullProperties?.Remove("automatic_transfer_rules_by_currency"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty _explicitNullValueAutomaticTransferRulesByCurrency = default!;
 #endif
         /// <summary>The minimum balance amount to retain per currency after automatic payouts. Only funds that exceed these amounts are paid out. Learn more about the [minimum balances for automatic payouts](/payouts/minimum-balances-for-automatic-payouts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty? MinimumBalanceByCurrency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty? MinimumBalanceByCurrency { get => _explicitNullValueMinimumBalanceByCurrency; set { _explicitNullValueMinimumBalanceByCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_balance_by_currency"); else _explicitNullProperties?.Remove("minimum_balance_by_currency"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty? _explicitNullValueMinimumBalanceByCurrency = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty MinimumBalanceByCurrency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty MinimumBalanceByCurrency { get => _explicitNullValueMinimumBalanceByCurrency; set { _explicitNullValueMinimumBalanceByCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_balance_by_currency"); else _explicitNullProperties?.Remove("minimum_balance_by_currency"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty _explicitNullValueMinimumBalanceByCurrency = default!;
 #endif
         /// <summary>Details on when funds from charges are available, and when they are paid out to an external account. See our [Setting Bank and Debit Card Payouts](https://docs.stripe.com/connect/bank-transfers#payout-information) documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule? Schedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule? Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule? _explicitNullValueSchedule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule Schedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule _explicitNullValueSchedule = default!;
 #endif
         /// <summary>The text that appears on the bank account statement for payouts. If not set, this defaults to the platform&apos;s bank descriptor as set in the Dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptor { get; set; }
+        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        private string? _explicitNullValueStatementDescriptor = default!;
 #nullable restore
 #else
-        public string StatementDescriptor { get; set; }
+        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        private string _explicitNullValueStatementDescriptor = default!;
 #endif
         /// <summary>Whether the funds in this account can be paid out.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts"/> and sets the default values.
         /// </summary>
@@ -64,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule>("schedule", Schedule);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

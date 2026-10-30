@@ -12,13 +12,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionsResourceTrialSettingsEndBehavior : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_anchor") is { } nullNodeBillingCycleAnchor && nullNodeBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchor = null;
+            if (parseNode.GetChildNode("missing_payment_method") is { } nullNodeMissingPaymentMethod && nullNodeMissingPaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingPaymentMethod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates how the subscription&apos;s billing cycle anchor is reset when a trial ends. If not set, the default is `now`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>Indicates how the subscription should change when the trial ends if the user did not provide a payment method.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get => _explicitNullValueMissingPaymentMethod; set { _explicitNullValueMissingPaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_payment_method"); else _explicitNullProperties?.Remove("missing_payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod? _explicitNullValueMissingPaymentMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehavior"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehavior CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehavior();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehavior(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod>("missing_payment_method", MissingPaymentMethod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

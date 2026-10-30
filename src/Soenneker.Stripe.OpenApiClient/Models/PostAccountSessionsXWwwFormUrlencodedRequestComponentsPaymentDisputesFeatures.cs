@@ -11,17 +11,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destination_on_behalf_of_charge_management") is { } nullNodeDestinationOnBehalfOfChargeManagement && nullNodeDestinationOnBehalfOfChargeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationOnBehalfOfChargeManagement = null;
+            if (parseNode.GetChildNode("dispute_management") is { } nullNodeDisputeManagement && nullNodeDisputeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeManagement = null;
+            if (parseNode.GetChildNode("refund_management") is { } nullNodeRefundManagement && nullNodeRefundManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundManagement = null;
+            if (parseNode.GetChildNode("smart_disputes_management") is { } nullNodeSmartDisputesManagement && nullNodeSmartDisputesManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDisputesManagement = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The destination_on_behalf_of_charge_management property</summary>
-        public bool? DestinationOnBehalfOfChargeManagement { get; set; }
+        public bool? DestinationOnBehalfOfChargeManagement { get => _explicitNullValueDestinationOnBehalfOfChargeManagement; set { _explicitNullValueDestinationOnBehalfOfChargeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_on_behalf_of_charge_management"); else _explicitNullProperties?.Remove("destination_on_behalf_of_charge_management"); } }
+        private bool? _explicitNullValueDestinationOnBehalfOfChargeManagement = default!;
         /// <summary>The dispute_management property</summary>
-        public bool? DisputeManagement { get; set; }
+        public bool? DisputeManagement { get => _explicitNullValueDisputeManagement; set { _explicitNullValueDisputeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_management"); else _explicitNullProperties?.Remove("dispute_management"); } }
+        private bool? _explicitNullValueDisputeManagement = default!;
         /// <summary>The refund_management property</summary>
-        public bool? RefundManagement { get; set; }
+        public bool? RefundManagement { get => _explicitNullValueRefundManagement; set { _explicitNullValueRefundManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_management"); else _explicitNullProperties?.Remove("refund_management"); } }
+        private bool? _explicitNullValueRefundManagement = default!;
         /// <summary>The smart_disputes_management property</summary>
-        public bool? SmartDisputesManagement { get; set; }
+        public bool? SmartDisputesManagement { get => _explicitNullValueSmartDisputesManagement; set { _explicitNullValueSmartDisputesManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_disputes_management"); else _explicitNullProperties?.Remove("smart_disputes_management"); } }
+        private bool? _explicitNullValueSmartDisputesManagement = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("dispute_management", DisputeManagement);
             writer.WriteBoolValue("refund_management", RefundManagement);
             writer.WriteBoolValue("smart_disputes_management", SmartDisputesManagement);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

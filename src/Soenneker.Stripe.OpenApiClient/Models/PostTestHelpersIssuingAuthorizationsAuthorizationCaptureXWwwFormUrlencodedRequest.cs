@@ -11,26 +11,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capture_amount") is { } nullNodeCaptureAmount && nullNodeCaptureAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureAmount = null;
+            if (parseNode.GetChildNode("close_authorization") is { } nullNodeCloseAuthorization && nullNodeCloseAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseAuthorization = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("purchase_details") is { } nullNodePurchaseDetails && nullNodePurchaseDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseDetails = null;
+        }
+
         /// <summary>The amount to capture from the authorization. If not provided, the full amount of the authorization will be captured. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? CaptureAmount { get; set; }
+        public int? CaptureAmount { get => _explicitNullValueCaptureAmount; set { _explicitNullValueCaptureAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_amount"); else _explicitNullProperties?.Remove("capture_amount"); } }
+        private int? _explicitNullValueCaptureAmount = default!;
         /// <summary>Whether to close the authorization after capture. Defaults to true. Set to false to enable multi-capture flows.</summary>
-        public bool? CloseAuthorization { get; set; }
+        public bool? CloseAuthorization { get => _explicitNullValueCloseAuthorization; set { _explicitNullValueCloseAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close_authorization"); else _explicitNullProperties?.Remove("close_authorization"); } }
+        private bool? _explicitNullValueCloseAuthorization = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Additional purchase information that is optionally provided by the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails? PurchaseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails? PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails? _explicitNullValuePurchaseDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails PurchaseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails _explicitNullValuePurchaseDetails = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -40,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("capture_amount", CaptureAmount);
             writer.WriteBoolValue("close_authorization", CloseAuthorization);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails>("purchase_details", PurchaseDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetails>("purchase_details", PurchaseDetails);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

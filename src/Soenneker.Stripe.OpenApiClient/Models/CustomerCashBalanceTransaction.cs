@@ -12,100 +12,149 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerCashBalanceTransaction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adjusted_for_overdraft") is { } nullNodeAdjustedForOverdraft && nullNodeAdjustedForOverdraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustedForOverdraft = null;
+            if (parseNode.GetChildNode("applied_to_payment") is { } nullNodeAppliedToPayment && nullNodeAppliedToPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedToPayment = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("customer_account") is { } nullNodeCustomerAccount && nullNodeCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccount = null;
+            if (parseNode.GetChildNode("ending_balance") is { } nullNodeEndingBalance && nullNodeEndingBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingBalance = null;
+            if (parseNode.GetChildNode("funded") is { } nullNodeFunded && nullNodeFunded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Funded = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("net_amount") is { } nullNodeNetAmount && nullNodeNetAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetAmount = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("refunded_from_payment") is { } nullNodeRefundedFromPayment && nullNodeRefundedFromPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundedFromPayment = null;
+            if (parseNode.GetChildNode("transferred_to_balance") is { } nullNodeTransferredToBalance && nullNodeTransferredToBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferredToBalance = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("unapplied_from_payment") is { } nullNodeUnappliedFromPayment && nullNodeUnappliedFromPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnappliedFromPayment = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The adjusted_for_overdraft property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft? AdjustedForOverdraft { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft? AdjustedForOverdraft { get => _explicitNullValueAdjustedForOverdraft; set { _explicitNullValueAdjustedForOverdraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjusted_for_overdraft"); else _explicitNullProperties?.Remove("adjusted_for_overdraft"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft? _explicitNullValueAdjustedForOverdraft = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft AdjustedForOverdraft { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft AdjustedForOverdraft { get => _explicitNullValueAdjustedForOverdraft; set { _explicitNullValueAdjustedForOverdraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjusted_for_overdraft"); else _explicitNullProperties?.Remove("adjusted_for_overdraft"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAdjustedForOverdraft _explicitNullValueAdjustedForOverdraft = default!;
 #endif
         /// <summary>The applied_to_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction? AppliedToPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction? AppliedToPayment { get => _explicitNullValueAppliedToPayment; set { _explicitNullValueAppliedToPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_to_payment"); else _explicitNullProperties?.Remove("applied_to_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction? _explicitNullValueAppliedToPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction AppliedToPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction AppliedToPayment { get => _explicitNullValueAppliedToPayment; set { _explicitNullValueAppliedToPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_to_payment"); else _explicitNullProperties?.Remove("applied_to_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction _explicitNullValueAppliedToPayment = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The customer whose available cash balance changed as a result of this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer _explicitNullValueCustomer = default!;
 #endif
         /// <summary>The ID of an Account representing a customer whose available cash balance changed as a result of this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccount { get; set; }
+        public string? CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string? _explicitNullValueCustomerAccount = default!;
 #nullable restore
 #else
-        public string CustomerAccount { get; set; }
+        public string CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>The total available cash balance for the specified currency after this transaction was applied. Represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? EndingBalance { get; set; }
+        public int? EndingBalance { get => _explicitNullValueEndingBalance; set { _explicitNullValueEndingBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_balance"); else _explicitNullProperties?.Remove("ending_balance"); } }
+        private int? _explicitNullValueEndingBalance = default!;
         /// <summary>The funded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction? Funded { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction? Funded { get => _explicitNullValueFunded; set { _explicitNullValueFunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funded"); else _explicitNullProperties?.Remove("funded"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction? _explicitNullValueFunded = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction Funded { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction Funded { get => _explicitNullValueFunded; set { _explicitNullValueFunded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funded"); else _explicitNullProperties?.Remove("funded"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction _explicitNullValueFunded = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>The amount by which the cash balance changed, represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). A positive value represents funds being added to the cash balance, a negative value represents funds being removed from the cash balance.</summary>
-        public int? NetAmount { get; set; }
+        public int? NetAmount { get => _explicitNullValueNetAmount; set { _explicitNullValueNetAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_amount"); else _explicitNullProperties?.Remove("net_amount"); } }
+        private int? _explicitNullValueNetAmount = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject? _explicitNullValueObject = default!;
         /// <summary>The refunded_from_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction? RefundedFromPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction? RefundedFromPayment { get => _explicitNullValueRefundedFromPayment; set { _explicitNullValueRefundedFromPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunded_from_payment"); else _explicitNullProperties?.Remove("refunded_from_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction? _explicitNullValueRefundedFromPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction RefundedFromPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction RefundedFromPayment { get => _explicitNullValueRefundedFromPayment; set { _explicitNullValueRefundedFromPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunded_from_payment"); else _explicitNullProperties?.Remove("refunded_from_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction _explicitNullValueRefundedFromPayment = default!;
 #endif
         /// <summary>The transferred_to_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance? TransferredToBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance? TransferredToBalance { get => _explicitNullValueTransferredToBalance; set { _explicitNullValueTransferredToBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferred_to_balance"); else _explicitNullProperties?.Remove("transferred_to_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance? _explicitNullValueTransferredToBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance TransferredToBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance TransferredToBalance { get => _explicitNullValueTransferredToBalance; set { _explicitNullValueTransferredToBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferred_to_balance"); else _explicitNullProperties?.Remove("transferred_to_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance _explicitNullValueTransferredToBalance = default!;
 #endif
         /// <summary>The type of the cash balance transaction. New types may be added in future. See [Customer Balance](https://docs.stripe.com/payments/customer-balance#types) to learn more about these types.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType? _explicitNullValueType = default!;
         /// <summary>The unapplied_from_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction? UnappliedFromPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction? UnappliedFromPayment { get => _explicitNullValueUnappliedFromPayment; set { _explicitNullValueUnappliedFromPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unapplied_from_payment"); else _explicitNullProperties?.Remove("unapplied_from_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction? _explicitNullValueUnappliedFromPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction UnappliedFromPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction UnappliedFromPayment { get => _explicitNullValueUnappliedFromPayment; set { _explicitNullValueUnappliedFromPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unapplied_from_payment"); else _explicitNullProperties?.Remove("unapplied_from_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction _explicitNullValueUnappliedFromPayment = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction"/> and sets the default values.
@@ -122,7 +171,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -173,6 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance>("transferred_to_balance", TransferredToBalance);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction>("unapplied_from_payment", UnappliedFromPayment);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

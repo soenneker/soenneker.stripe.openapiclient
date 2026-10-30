@@ -11,32 +11,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("prefetch") is { } nullNodePrefetch && nullNodePrefetch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prefetch = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters? Filters { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters Filters { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters _explicitNullValueFilters = default!;
 #endif
         /// <summary>The list of permissions to request. The `payment_method` permission must be included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>Data features requested to be retrieved upon account creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?>? Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?>? Prefetch { get => _explicitNullValuePrefetch; set { _explicitNullValuePrefetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefetch"); else _explicitNullProperties?.Remove("prefetch"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?>? _explicitNullValuePrefetch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?> Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?> Prefetch { get => _explicitNullValuePrefetch; set { _explicitNullValuePrefetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefetch"); else _explicitNullProperties?.Remove("prefetch"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?> _explicitNullValuePrefetch = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters>("filters", Filters);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem>("prefetch", Prefetch);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

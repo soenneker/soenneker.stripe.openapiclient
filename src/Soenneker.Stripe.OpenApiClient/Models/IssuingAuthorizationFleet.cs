@@ -12,29 +12,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorizationFleet : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cardholder_prompt_data") is { } nullNodeCardholderPromptData && nullNodeCardholderPromptData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderPromptData = null;
+            if (parseNode.GetChildNode("purchase_type") is { } nullNodePurchaseType && nullNodePurchaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseType = null;
+            if (parseNode.GetChildNode("reported_breakdown") is { } nullNodeReportedBreakdown && nullNodeReportedBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedBreakdown = null;
+            if (parseNode.GetChildNode("service_type") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Answers to prompts presented to the cardholder at the point of sale. Prompted fields vary depending on the configuration of your physical fleet cards. Typical points of sale support only numeric entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData? CardholderPromptData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData? CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData? _explicitNullValueCardholderPromptData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData CardholderPromptData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData _explicitNullValueCardholderPromptData = default!;
 #endif
         /// <summary>The type of purchase.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType? PurchaseType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType? PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType? _explicitNullValuePurchaseType = default!;
         /// <summary>More information about the total amount. Typically this information is received from the merchant after the authorization has been approved and the fuel dispensed. This information is not guaranteed to be accurate as some merchants may provide unreliable data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown? ReportedBreakdown { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown? ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown? _explicitNullValueReportedBreakdown = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown ReportedBreakdown { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown _explicitNullValueReportedBreakdown = default!;
 #endif
         /// <summary>The type of fuel service.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType? ServiceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType? _explicitNullValueServiceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet"/> and sets the default values.
         /// </summary>
@@ -50,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType>("purchase_type", PurchaseType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown>("reported_breakdown", ReportedBreakdown);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType>("service_type", ServiceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

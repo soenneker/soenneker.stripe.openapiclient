@@ -12,7 +12,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingBillResourceInvoicingTaxesTaxRateDetailsTaxRate : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,14 +43,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetailsTaxRate();
-            if(parseNode.GetStringValue() is string stringValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
             else {
-                result.TaxRate = new global::Soenneker.Stripe.OpenApiClient.Models.TaxRate();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("active") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("display_name") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("inclusive") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag7 && ("tax_rate".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("percentage") != null && (parseNode.GetChildNode("jurisdiction_level") == null || (parseNode.GetChildNode("jurisdiction_level")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag9 && ("city".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "country".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "county".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "district".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "multiple".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "state".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("rate_type") == null || (parseNode.GetChildNode("rate_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag10 && ("flat_amount".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal) || "percentage".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("tax_type") == null || (parseNode.GetChildNode("tax_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag11 && ("amusement_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "communications_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "digital_excise_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "gst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "hst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "igst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "jct".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "lease_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "mass_transit_parking_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "parking_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "pst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "qst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "retail_delivery_fee".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "rst".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "sales_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "service_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "utility_users_tax".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal) || "vat".Equals(optionalTag11.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.String == null && result.TaxRate == null && matchesUnionBranch0) result.TaxRate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TaxRate(), parseNode);
+            if (result.String == null && result.TaxRate == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.TaxRate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TaxRate(), parseNode);
+            if (result.String == null && result.TaxRate == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,12 +76,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (String == null && TaxRate == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (TaxRate != null && String == null) { if (TaxRate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TaxRate); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(String != null)
             {
                 writer.WriteStringValue(null, String);
             }
             else {
+                if (TaxRate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(null, TaxRate);
             }
         }

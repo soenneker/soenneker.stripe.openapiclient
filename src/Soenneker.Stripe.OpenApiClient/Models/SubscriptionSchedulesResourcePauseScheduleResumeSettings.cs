@@ -11,15 +11,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SubscriptionSchedulesResourcePauseScheduleResumeSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_anchor") is { } nullNodeBillingCycleAnchor && nullNodeBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchor = null;
+            if (parseNode.GetChildNode("payment_behavior") is { } nullNodePaymentBehavior && nullNodePaymentBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentBehavior = null;
+            if (parseNode.GetChildNode("proration_behavior") is { } nullNodeProrationBehavior && nullNodeProrationBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationBehavior = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing cycle anchor that applies when the subscription is resumed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsBillingCycleAnchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsBillingCycleAnchor? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsBillingCycleAnchor? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>Controls whether Stripe attempts payment on the resumption invoice and how that affects the subscription&apos;s status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsPaymentBehavior? PaymentBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsPaymentBehavior? PaymentBehavior { get => _explicitNullValuePaymentBehavior; set { _explicitNullValuePaymentBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_behavior"); else _explicitNullProperties?.Remove("payment_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsPaymentBehavior? _explicitNullValuePaymentBehavior = default!;
         /// <summary>Determines how to handle prorations resulting from the billing_cycle_anchor change on resume.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsProrationBehavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettings"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseScheduleResumeSettingsProrationBehavior>("proration_behavior", ProrationBehavior);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

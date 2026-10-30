@@ -11,23 +11,39 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GelatoReportDocumentOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_types") is { } nullNodeAllowedTypes && nullNodeAllowedTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedTypes = null;
+            if (parseNode.GetChildNode("require_id_number") is { } nullNodeRequireIdNumber && nullNodeRequireIdNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireIdNumber = null;
+            if (parseNode.GetChildNode("require_live_capture") is { } nullNodeRequireLiveCapture && nullNodeRequireLiveCapture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireLiveCapture = null;
+            if (parseNode.GetChildNode("require_matching_selfie") is { } nullNodeRequireMatchingSelfie && nullNodeRequireMatchingSelfie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireMatchingSelfie = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of strings of allowed identity document types. If the provided identity document isn’t one of the allowed types, the verification check will fail with a document_type_not_allowed error code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?>? AllowedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?>? AllowedTypes { get => _explicitNullValueAllowedTypes; set { _explicitNullValueAllowedTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_types"); else _explicitNullProperties?.Remove("allowed_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?>? _explicitNullValueAllowedTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?> AllowedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?> AllowedTypes { get => _explicitNullValueAllowedTypes; set { _explicitNullValueAllowedTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_types"); else _explicitNullProperties?.Remove("allowed_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?> _explicitNullValueAllowedTypes = default!;
 #endif
         /// <summary>Collect an ID number and perform an [ID number check](https://docs.stripe.com/identity/verification-checks?type=id-number) with the document’s extracted name and date of birth.</summary>
-        public bool? RequireIdNumber { get; set; }
+        public bool? RequireIdNumber { get => _explicitNullValueRequireIdNumber; set { _explicitNullValueRequireIdNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_id_number"); else _explicitNullProperties?.Remove("require_id_number"); } }
+        private bool? _explicitNullValueRequireIdNumber = default!;
         /// <summary>Disable image uploads, identity document images have to be captured using the device’s camera.</summary>
-        public bool? RequireLiveCapture { get; set; }
+        public bool? RequireLiveCapture { get => _explicitNullValueRequireLiveCapture; set { _explicitNullValueRequireLiveCapture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_live_capture"); else _explicitNullProperties?.Remove("require_live_capture"); } }
+        private bool? _explicitNullValueRequireLiveCapture = default!;
         /// <summary>Capture a face image and perform a [selfie check](https://docs.stripe.com/identity/verification-checks?type=selfie) comparing a photo ID and a picture of your user’s face. [Learn more](https://docs.stripe.com/identity/selfie).</summary>
-        public bool? RequireMatchingSelfie { get; set; }
+        public bool? RequireMatchingSelfie { get => _explicitNullValueRequireMatchingSelfie; set { _explicitNullValueRequireMatchingSelfie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_matching_selfie"); else _explicitNullProperties?.Remove("require_matching_selfie"); } }
+        private bool? _explicitNullValueRequireMatchingSelfie = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("require_id_number", RequireIdNumber);
             writer.WriteBoolValue("require_live_capture", RequireLiveCapture);
             writer.WriteBoolValue("require_matching_selfie", RequireMatchingSelfie);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

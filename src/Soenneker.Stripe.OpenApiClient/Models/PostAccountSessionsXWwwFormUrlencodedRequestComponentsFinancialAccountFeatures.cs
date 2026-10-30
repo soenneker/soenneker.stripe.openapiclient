@@ -11,17 +11,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("disable_stripe_user_authentication") is { } nullNodeDisableStripeUserAuthentication && nullNodeDisableStripeUserAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableStripeUserAuthentication = null;
+            if (parseNode.GetChildNode("external_account_collection") is { } nullNodeExternalAccountCollection && nullNodeExternalAccountCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAccountCollection = null;
+            if (parseNode.GetChildNode("send_money") is { } nullNodeSendMoney && nullNodeSendMoney.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendMoney = null;
+            if (parseNode.GetChildNode("transfer_balance") is { } nullNodeTransferBalance && nullNodeTransferBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBalance = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The disable_stripe_user_authentication property</summary>
-        public bool? DisableStripeUserAuthentication { get; set; }
+        public bool? DisableStripeUserAuthentication { get => _explicitNullValueDisableStripeUserAuthentication; set { _explicitNullValueDisableStripeUserAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_stripe_user_authentication"); else _explicitNullProperties?.Remove("disable_stripe_user_authentication"); } }
+        private bool? _explicitNullValueDisableStripeUserAuthentication = default!;
         /// <summary>The external_account_collection property</summary>
-        public bool? ExternalAccountCollection { get; set; }
+        public bool? ExternalAccountCollection { get => _explicitNullValueExternalAccountCollection; set { _explicitNullValueExternalAccountCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_account_collection"); else _explicitNullProperties?.Remove("external_account_collection"); } }
+        private bool? _explicitNullValueExternalAccountCollection = default!;
         /// <summary>The send_money property</summary>
-        public bool? SendMoney { get; set; }
+        public bool? SendMoney { get => _explicitNullValueSendMoney; set { _explicitNullValueSendMoney = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_money"); else _explicitNullProperties?.Remove("send_money"); } }
+        private bool? _explicitNullValueSendMoney = default!;
         /// <summary>The transfer_balance property</summary>
-        public bool? TransferBalance { get; set; }
+        public bool? TransferBalance { get => _explicitNullValueTransferBalance; set { _explicitNullValueTransferBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_balance"); else _explicitNullProperties?.Remove("transfer_balance"); } }
+        private bool? _explicitNullValueTransferBalance = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountFeatures"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("external_account_collection", ExternalAccountCollection);
             writer.WriteBoolValue("send_money", SendMoney);
             writer.WriteBoolValue("transfer_balance", TransferBalance);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

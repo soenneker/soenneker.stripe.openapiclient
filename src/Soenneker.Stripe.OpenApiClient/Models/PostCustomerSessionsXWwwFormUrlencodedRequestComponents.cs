@@ -12,64 +12,92 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCustomerSessionsXWwwFormUrlencodedRequestComponents : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_entitlements") is { } nullNodeActiveEntitlements && nullNodeActiveEntitlements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveEntitlements = null;
+            if (parseNode.GetChildNode("buy_button") is { } nullNodeBuyButton && nullNodeBuyButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyButton = null;
+            if (parseNode.GetChildNode("customer_portal") is { } nullNodeCustomerPortal && nullNodeCustomerPortal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPortal = null;
+            if (parseNode.GetChildNode("customer_sheet") is { } nullNodeCustomerSheet && nullNodeCustomerSheet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerSheet = null;
+            if (parseNode.GetChildNode("mobile_payment_element") is { } nullNodeMobilePaymentElement && nullNodeMobilePaymentElement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePaymentElement = null;
+            if (parseNode.GetChildNode("payment_element") is { } nullNodePaymentElement && nullNodePaymentElement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentElement = null;
+            if (parseNode.GetChildNode("pricing_table") is { } nullNodePricingTable && nullNodePricingTable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingTable = null;
+        }
+
         /// <summary>The active_entitlements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements? ActiveEntitlements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements? ActiveEntitlements { get => _explicitNullValueActiveEntitlements; set { _explicitNullValueActiveEntitlements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_entitlements"); else _explicitNullProperties?.Remove("active_entitlements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements? _explicitNullValueActiveEntitlements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements ActiveEntitlements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements ActiveEntitlements { get => _explicitNullValueActiveEntitlements; set { _explicitNullValueActiveEntitlements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_entitlements"); else _explicitNullProperties?.Remove("active_entitlements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements _explicitNullValueActiveEntitlements = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The buy_button property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton? BuyButton { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton? BuyButton { get => _explicitNullValueBuyButton; set { _explicitNullValueBuyButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buy_button"); else _explicitNullProperties?.Remove("buy_button"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton? _explicitNullValueBuyButton = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton BuyButton { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton BuyButton { get => _explicitNullValueBuyButton; set { _explicitNullValueBuyButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buy_button"); else _explicitNullProperties?.Remove("buy_button"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton _explicitNullValueBuyButton = default!;
 #endif
         /// <summary>The customer_portal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal? CustomerPortal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal? CustomerPortal { get => _explicitNullValueCustomerPortal; set { _explicitNullValueCustomerPortal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_portal"); else _explicitNullProperties?.Remove("customer_portal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal? _explicitNullValueCustomerPortal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal CustomerPortal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal CustomerPortal { get => _explicitNullValueCustomerPortal; set { _explicitNullValueCustomerPortal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_portal"); else _explicitNullProperties?.Remove("customer_portal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal _explicitNullValueCustomerPortal = default!;
 #endif
         /// <summary>The customer_sheet property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet? CustomerSheet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet? CustomerSheet { get => _explicitNullValueCustomerSheet; set { _explicitNullValueCustomerSheet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_sheet"); else _explicitNullProperties?.Remove("customer_sheet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet? _explicitNullValueCustomerSheet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet CustomerSheet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet CustomerSheet { get => _explicitNullValueCustomerSheet; set { _explicitNullValueCustomerSheet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_sheet"); else _explicitNullProperties?.Remove("customer_sheet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet _explicitNullValueCustomerSheet = default!;
 #endif
         /// <summary>The mobile_payment_element property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement? MobilePaymentElement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement? MobilePaymentElement { get => _explicitNullValueMobilePaymentElement; set { _explicitNullValueMobilePaymentElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_payment_element"); else _explicitNullProperties?.Remove("mobile_payment_element"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement? _explicitNullValueMobilePaymentElement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement MobilePaymentElement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement MobilePaymentElement { get => _explicitNullValueMobilePaymentElement; set { _explicitNullValueMobilePaymentElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_payment_element"); else _explicitNullProperties?.Remove("mobile_payment_element"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement _explicitNullValueMobilePaymentElement = default!;
 #endif
         /// <summary>The payment_element property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement? PaymentElement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement? PaymentElement { get => _explicitNullValuePaymentElement; set { _explicitNullValuePaymentElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_element"); else _explicitNullProperties?.Remove("payment_element"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement? _explicitNullValuePaymentElement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement PaymentElement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement PaymentElement { get => _explicitNullValuePaymentElement; set { _explicitNullValuePaymentElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_element"); else _explicitNullProperties?.Remove("payment_element"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement _explicitNullValuePaymentElement = default!;
 #endif
         /// <summary>The pricing_table property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable? PricingTable { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable? PricingTable { get => _explicitNullValuePricingTable; set { _explicitNullValuePricingTable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_table"); else _explicitNullProperties?.Remove("pricing_table"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable? _explicitNullValuePricingTable = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable PricingTable { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable PricingTable { get => _explicitNullValuePricingTable; set { _explicitNullValuePricingTable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing_table"); else _explicitNullProperties?.Remove("pricing_table"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable _explicitNullValuePricingTable = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponents"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponents CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponents();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponents(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement>("mobile_payment_element", MobilePaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement>("payment_element", PaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPricingTable>("pricing_table", PricingTable);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

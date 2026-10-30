@@ -12,24 +12,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChargeFraudDetailsComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("stripe_report") is { } nullNodeStripeReport && nullNodeStripeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeReport = null;
+            if (parseNode.GetChildNode("user_report") is { } nullNodeUserReport && nullNodeUserReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserReport = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Assessments from Stripe. If set, the value is `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripeReport { get; set; }
+        public string? StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
+        private string? _explicitNullValueStripeReport = default!;
 #nullable restore
 #else
-        public string StripeReport { get; set; }
+        public string StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
+        private string _explicitNullValueStripeReport = default!;
 #endif
         /// <summary>Assessments reported by you. If set, possible values of are `safe` and `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserReport { get; set; }
+        public string? UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
+        private string? _explicitNullValueUserReport = default!;
 #nullable restore
 #else
-        public string UserReport { get; set; }
+        public string UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
+        private string _explicitNullValueUserReport = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("stripe_report", StripeReport);
             writer.WriteStringValue("user_report", UserReport);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

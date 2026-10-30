@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AccountBrandingSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("logo") is { } nullNodeLogo && nullNodeLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logo = null;
+            if (parseNode.GetChildNode("primary_color") is { } nullNodePrimaryColor && nullNodePrimaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryColor = null;
+            if (parseNode.GetChildNode("secondary_color") is { } nullNodeSecondaryColor && nullNodeSecondaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryColor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) An icon for the account. Must be square and at least 128px x 128px.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? Icon { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon Icon { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon _explicitNullValueIcon = default!;
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) A logo for the account that will be used in Checkout instead of the icon and without the account&apos;s name next to it if provided. Must be at least 128px x 128px.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? Logo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? _explicitNullValueLogo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo Logo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo _explicitNullValueLogo = default!;
 #endif
         /// <summary>A CSS hex color value representing the primary branding color for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryColor { get; set; }
+        public string? PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
+        private string? _explicitNullValuePrimaryColor = default!;
 #nullable restore
 #else
-        public string PrimaryColor { get; set; }
+        public string PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
+        private string _explicitNullValuePrimaryColor = default!;
 #endif
         /// <summary>A CSS hex color value representing the secondary branding color for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryColor { get; set; }
+        public string? SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
+        private string? _explicitNullValueSecondaryColor = default!;
 #nullable restore
 #else
-        public string SecondaryColor { get; set; }
+        public string SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
+        private string _explicitNullValueSecondaryColor = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettings"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo>("logo", Logo);
             writer.WriteStringValue("primary_color", PrimaryColor);
             writer.WriteStringValue("secondary_color", SecondaryColor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

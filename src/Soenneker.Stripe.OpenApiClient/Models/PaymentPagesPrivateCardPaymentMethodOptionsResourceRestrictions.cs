@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brands_blocked") is { } nullNodeBrandsBlocked && nullNodeBrandsBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandsBlocked = null;
+            if (parseNode.GetChildNode("funding_types_blocked") is { } nullNodeFundingTypesBlocked && nullNodeFundingTypesBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingTypesBlocked = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card brands to block. If a customer enters or selects a card belonging to a blocked brand, they can&apos;t complete the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?>? BrandsBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?>? BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?>? _explicitNullValueBrandsBlocked = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?> BrandsBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?> BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?> _explicitNullValueBrandsBlocked = default!;
 #endif
         /// <summary>Card funding types to block for this Checkout Session. Supported values are `credit`, `debit`, and `prepaid`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?>? FundingTypesBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?>? FundingTypesBlocked { get => _explicitNullValueFundingTypesBlocked; set { _explicitNullValueFundingTypesBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_types_blocked"); else _explicitNullProperties?.Remove("funding_types_blocked"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?>? _explicitNullValueFundingTypesBlocked = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?> FundingTypesBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?> FundingTypesBlocked { get => _explicitNullValueFundingTypesBlocked; set { _explicitNullValueFundingTypesBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_types_blocked"); else _explicitNullProperties?.Remove("funding_types_blocked"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem?> _explicitNullValueFundingTypesBlocked = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem>("brands_blocked", BrandsBlocked);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsFundingTypesBlockedItem>("funding_types_blocked", FundingTypesBlocked);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

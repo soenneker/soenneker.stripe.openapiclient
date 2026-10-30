@@ -12,32 +12,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorizationNetworkDataComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acquiring_institution_id") is { } nullNodeAcquiringInstitutionId && nullNodeAcquiringInstitutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquiringInstitutionId = null;
+            if (parseNode.GetChildNode("system_trace_audit_number") is { } nullNodeSystemTraceAuditNumber && nullNodeSystemTraceAuditNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemTraceAuditNumber = null;
+            if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+        }
+
         /// <summary>Identifier assigned to the acquirer by the card network. Sometimes this value is not provided by the network; in this case, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquiringInstitutionId { get; set; }
+        public string? AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        private string? _explicitNullValueAcquiringInstitutionId = default!;
 #nullable restore
 #else
-        public string AcquiringInstitutionId { get; set; }
+        public string AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        private string _explicitNullValueAcquiringInstitutionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The System Trace Audit Number (STAN) is a 6-digit identifier assigned by the acquirer. Prefer `network_data.transaction_id` if present, unless you have special requirements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SystemTraceAuditNumber { get; set; }
+        public string? SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
+        private string? _explicitNullValueSystemTraceAuditNumber = default!;
 #nullable restore
 #else
-        public string SystemTraceAuditNumber { get; set; }
+        public string SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
+        private string _explicitNullValueSystemTraceAuditNumber = default!;
 #endif
         /// <summary>Unique identifier for the authorization assigned by the card network used to match subsequent messages, disputes, and transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get; set; }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get; set; }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("acquiring_institution_id", AcquiringInstitutionId);
             writer.WriteStringValue("system_trace_audit_number", SystemTraceAuditNumber);
             writer.WriteStringValue("transaction_id", TransactionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

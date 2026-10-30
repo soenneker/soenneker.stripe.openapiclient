@@ -11,56 +11,83 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostBillingMetersXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customer_mapping") is { } nullNodeCustomerMapping && nullNodeCustomerMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerMapping = null;
+            if (parseNode.GetChildNode("default_aggregation") is { } nullNodeDefaultAggregation && nullNodeDefaultAggregation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAggregation = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("event_name") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
+            if (parseNode.GetChildNode("event_time_window") is { } nullNodeEventTimeWindow && nullNodeEventTimeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTimeWindow = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("value_settings") is { } nullNodeValueSettings && nullNodeValueSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueSettings = null;
+        }
+
         /// <summary>Fields that specify how to map a meter event to a customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping? CustomerMapping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping? CustomerMapping { get => _explicitNullValueCustomerMapping; set { _explicitNullValueCustomerMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_mapping"); else _explicitNullProperties?.Remove("customer_mapping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping? _explicitNullValueCustomerMapping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping CustomerMapping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping CustomerMapping { get => _explicitNullValueCustomerMapping; set { _explicitNullValueCustomerMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_mapping"); else _explicitNullProperties?.Remove("customer_mapping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping _explicitNullValueCustomerMapping = default!;
 #endif
         /// <summary>The default settings to aggregate a meter&apos;s events with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation? DefaultAggregation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation? DefaultAggregation { get => _explicitNullValueDefaultAggregation; set { _explicitNullValueDefaultAggregation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_aggregation"); else _explicitNullProperties?.Remove("default_aggregation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation? _explicitNullValueDefaultAggregation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation DefaultAggregation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation DefaultAggregation { get => _explicitNullValueDefaultAggregation; set { _explicitNullValueDefaultAggregation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_aggregation"); else _explicitNullProperties?.Remove("default_aggregation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation _explicitNullValueDefaultAggregation = default!;
 #endif
         /// <summary>The meter’s name. Not visible to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The name of the meter event to record usage for. Corresponds with the `event_name` field on meter events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventName { get; set; }
+        public string? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        private string? _explicitNullValueEventName = default!;
 #nullable restore
 #else
-        public string EventName { get; set; }
+        public string EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        private string _explicitNullValueEventName = default!;
 #endif
         /// <summary>The time window which meter events have been pre-aggregated for, if any.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestEventTimeWindow? EventTimeWindow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestEventTimeWindow? EventTimeWindow { get => _explicitNullValueEventTimeWindow; set { _explicitNullValueEventTimeWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_time_window"); else _explicitNullProperties?.Remove("event_time_window"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestEventTimeWindow? _explicitNullValueEventTimeWindow = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Fields that specify how to calculate a meter event&apos;s value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings? ValueSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings? ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_settings"); else _explicitNullProperties?.Remove("value_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings? _explicitNullValueValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings ValueSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_settings"); else _explicitNullProperties?.Remove("value_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings _explicitNullValueValueSettings = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -70,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,7 +129,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("event_name", EventName);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestEventTimeWindow>("event_time_window", EventTimeWindow);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings>("value_settings", ValueSettings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestValueSettings>("value_settings", ValueSettings);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

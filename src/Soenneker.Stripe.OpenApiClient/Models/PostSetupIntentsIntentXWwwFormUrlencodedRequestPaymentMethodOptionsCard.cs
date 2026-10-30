@@ -11,28 +11,45 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mandate_options") is { } nullNodeMandateOptions && nullNodeMandateOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MandateOptions = null;
+            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("request_three_d_secure") is { } nullNodeRequestThreeDSecure && nullNodeRequestThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestThreeDSecure = null;
+            if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mandate_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions? MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions? MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions? _explicitNullValueMandateOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions _explicitNullValueMandateOptions = default!;
 #endif
         /// <summary>The network property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardNetwork? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardNetwork? _explicitNullValueNetwork = default!;
         /// <summary>The request_three_d_secure property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get => _explicitNullValueRequestThreeDSecure; set { _explicitNullValueRequestThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_three_d_secure"); else _explicitNullProperties?.Remove("request_three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardRequestThreeDSecure? _explicitNullValueRequestThreeDSecure = default!;
         /// <summary>The three_d_secure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure? ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardNetwork>("network", Network);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardRequestThreeDSecure>("request_three_d_secure", RequestThreeDSecure);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecure>("three_d_secure", ThreeDSecure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

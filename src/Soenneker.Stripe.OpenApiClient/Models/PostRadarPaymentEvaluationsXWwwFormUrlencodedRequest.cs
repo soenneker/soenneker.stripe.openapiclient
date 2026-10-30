@@ -11,46 +11,68 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostRadarPaymentEvaluationsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("client_device_metadata_details") is { } nullNodeClientDeviceMetadataDetails && nullNodeClientDeviceMetadataDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientDeviceMetadataDetails = null;
+            if (parseNode.GetChildNode("customer_details") is { } nullNodeCustomerDetails && nullNodeCustomerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDetails = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("payment_details") is { } nullNodePaymentDetails && nullNodePaymentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentDetails = null;
+        }
+
         /// <summary>Details about the Client Device Metadata to associate with the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails? ClientDeviceMetadataDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails? ClientDeviceMetadataDetails { get => _explicitNullValueClientDeviceMetadataDetails; set { _explicitNullValueClientDeviceMetadataDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_device_metadata_details"); else _explicitNullProperties?.Remove("client_device_metadata_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails? _explicitNullValueClientDeviceMetadataDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails ClientDeviceMetadataDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails ClientDeviceMetadataDetails { get => _explicitNullValueClientDeviceMetadataDetails; set { _explicitNullValueClientDeviceMetadataDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_device_metadata_details"); else _explicitNullProperties?.Remove("client_device_metadata_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestClientDeviceMetadataDetails _explicitNullValueClientDeviceMetadataDetails = default!;
 #endif
         /// <summary>Details about the customer associated with the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails? CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails? CustomerDetails { get => _explicitNullValueCustomerDetails; set { _explicitNullValueCustomerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_details"); else _explicitNullProperties?.Remove("customer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails? _explicitNullValueCustomerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails CustomerDetails { get => _explicitNullValueCustomerDetails; set { _explicitNullValueCustomerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_details"); else _explicitNullProperties?.Remove("customer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails _explicitNullValueCustomerDetails = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Details about the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails? PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails? PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails? _explicitNullValuePaymentDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails _explicitNullValuePaymentDetails = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +110,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails>("payment_details", PaymentDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetails>("payment_details", PaymentDetails);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

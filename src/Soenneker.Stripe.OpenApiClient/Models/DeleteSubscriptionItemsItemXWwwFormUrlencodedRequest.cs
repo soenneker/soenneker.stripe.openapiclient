@@ -11,15 +11,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeleteSubscriptionItemsItemXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("clear_usage") is { } nullNodeClearUsage && nullNodeClearUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClearUsage = null;
+            if (parseNode.GetChildNode("payment_behavior") is { } nullNodePaymentBehavior && nullNodePaymentBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentBehavior = null;
+            if (parseNode.GetChildNode("proration_behavior") is { } nullNodeProrationBehavior && nullNodeProrationBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationBehavior = null;
+            if (parseNode.GetChildNode("proration_date") is { } nullNodeProrationDate && nullNodeProrationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationDate = null;
+        }
+
         /// <summary>Delete all usage for the given subscription item. Allowed only when the current plan&apos;s `usage_type` is `metered`.</summary>
-        public bool? ClearUsage { get; set; }
+        public bool? ClearUsage { get => _explicitNullValueClearUsage; set { _explicitNullValueClearUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_usage"); else _explicitNullProperties?.Remove("clear_usage"); } }
+        private bool? _explicitNullValueClearUsage = default!;
         /// <summary>Controls how Stripe handles payment when a subscription update requires payment and `collection_method=charge_automatically`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior? PaymentBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior? PaymentBehavior { get => _explicitNullValuePaymentBehavior; set { _explicitNullValuePaymentBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_behavior"); else _explicitNullProperties?.Remove("payment_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior? _explicitNullValuePaymentBehavior = default!;
         /// <summary>Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) when the billing cycle changes (e.g., when switching plans, resetting `billing_cycle_anchor=now`, or starting a trial), or if an item&apos;s `quantity` changes. The default value is `create_prorations`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.</summary>
-        public int? ProrationDate { get; set; }
+        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private int? _explicitNullValueProrationDate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -28,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -54,7 +69,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("clear_usage", ClearUsage);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);
+            writer.WriteIntValue("proration_date", ProrationDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

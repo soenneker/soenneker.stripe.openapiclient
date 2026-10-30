@@ -12,15 +12,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryTransactionsResourceBalanceImpact : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
+            if (parseNode.GetChildNode("inbound_pending") is { } nullNodeInboundPending && nullNodeInboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundPending = null;
+            if (parseNode.GetChildNode("outbound_pending") is { } nullNodeOutboundPending && nullNodeOutboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPending = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The change made to funds the user can spend right now.</summary>
-        public int? Cash { get; set; }
+        public int? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        private int? _explicitNullValueCash = default!;
         /// <summary>The change made to funds that are not spendable yet, but will become available at a later time.</summary>
-        public int? InboundPending { get; set; }
+        public int? InboundPending { get => _explicitNullValueInboundPending; set { _explicitNullValueInboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_pending"); else _explicitNullProperties?.Remove("inbound_pending"); } }
+        private int? _explicitNullValueInboundPending = default!;
         /// <summary>The change made to funds in the account, but not spendable because they are being held for pending outbound flows.</summary>
-        public int? OutboundPending { get; set; }
+        public int? OutboundPending { get => _explicitNullValueOutboundPending; set { _explicitNullValueOutboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_pending"); else _explicitNullProperties?.Remove("outbound_pending"); } }
+        private int? _explicitNullValueOutboundPending = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("cash", Cash);
             writer.WriteIntValue("inbound_pending", InboundPending);
             writer.WriteIntValue("outbound_pending", OutboundPending);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

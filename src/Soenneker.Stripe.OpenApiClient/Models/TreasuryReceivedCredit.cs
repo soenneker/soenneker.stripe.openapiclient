@@ -12,94 +12,142 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryReceivedCredit : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("failure_code") is { } nullNodeFailureCode && nullNodeFailureCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCode = null;
+            if (parseNode.GetChildNode("financial_account") is { } nullNodeFinancialAccount && nullNodeFinancialAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAccount = null;
+            if (parseNode.GetChildNode("hosted_regulatory_receipt_url") is { } nullNodeHostedRegulatoryReceiptUrl && nullNodeHostedRegulatoryReceiptUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedRegulatoryReceiptUrl = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initiating_payment_method_details") is { } nullNodeInitiatingPaymentMethodDetails && nullNodeInitiatingPaymentMethodDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitiatingPaymentMethodDetails = null;
+            if (parseNode.GetChildNode("linked_flows") is { } nullNodeLinkedFlows && nullNodeLinkedFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedFlows = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("reversal_details") is { } nullNodeReversalDetails && nullNodeReversalDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReversalDetails = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Amount (in cents) transferred.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Reason for the failure. A ReceivedCredit might fail because the receiving FinancialAccount is closed or frozen.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditFailureCode? FailureCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditFailureCode? FailureCode { get => _explicitNullValueFailureCode; set { _explicitNullValueFailureCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_code"); else _explicitNullProperties?.Remove("failure_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditFailureCode? _explicitNullValueFailureCode = default!;
         /// <summary>The FinancialAccount that received the funds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinancialAccount { get; set; }
+        public string? FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private string? _explicitNullValueFinancialAccount = default!;
 #nullable restore
 #else
-        public string FinancialAccount { get; set; }
+        public string FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private string _explicitNullValueFinancialAccount = default!;
 #endif
         /// <summary>A [hosted transaction receipt](https://docs.stripe.com/treasury/moving-money/regulatory-receipts) URL that is provided when money movement is considered regulated under Stripe&apos;s money transmission licenses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedRegulatoryReceiptUrl { get; set; }
+        public string? HostedRegulatoryReceiptUrl { get => _explicitNullValueHostedRegulatoryReceiptUrl; set { _explicitNullValueHostedRegulatoryReceiptUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_regulatory_receipt_url"); else _explicitNullProperties?.Remove("hosted_regulatory_receipt_url"); } }
+        private string? _explicitNullValueHostedRegulatoryReceiptUrl = default!;
 #nullable restore
 #else
-        public string HostedRegulatoryReceiptUrl { get; set; }
+        public string HostedRegulatoryReceiptUrl { get => _explicitNullValueHostedRegulatoryReceiptUrl; set { _explicitNullValueHostedRegulatoryReceiptUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_regulatory_receipt_url"); else _explicitNullProperties?.Remove("hosted_regulatory_receipt_url"); } }
+        private string _explicitNullValueHostedRegulatoryReceiptUrl = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The initiating_payment_method_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails? InitiatingPaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails? InitiatingPaymentMethodDetails { get => _explicitNullValueInitiatingPaymentMethodDetails; set { _explicitNullValueInitiatingPaymentMethodDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiating_payment_method_details"); else _explicitNullProperties?.Remove("initiating_payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails? _explicitNullValueInitiatingPaymentMethodDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails InitiatingPaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails InitiatingPaymentMethodDetails { get => _explicitNullValueInitiatingPaymentMethodDetails; set { _explicitNullValueInitiatingPaymentMethodDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiating_payment_method_details"); else _explicitNullProperties?.Remove("initiating_payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails _explicitNullValueInitiatingPaymentMethodDetails = default!;
 #endif
         /// <summary>The linked_flows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows? LinkedFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows? LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows? _explicitNullValueLinkedFlows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows LinkedFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows _explicitNullValueLinkedFlows = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>The rails used to send the funds.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditNetwork? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditNetwork? _explicitNullValueNetwork = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditObject? _explicitNullValueObject = default!;
         /// <summary>Details describing when a ReceivedCredit may be reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails? ReversalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails? ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails? _explicitNullValueReversalDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails ReversalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails _explicitNullValueReversalDetails = default!;
 #endif
         /// <summary>Status of the ReceivedCredit. ReceivedCredits are created either `succeeded` (approved) or `failed` (declined). If a ReceivedCredit is declined, the failure reason can be found in the `failure_code` field.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditStatus? _explicitNullValueStatus = default!;
         /// <summary>The Transaction associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction? Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit"/> and sets the default values.
@@ -116,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,6 +215,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails>("reversal_details", ReversalDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditTransaction>("transaction", Transaction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

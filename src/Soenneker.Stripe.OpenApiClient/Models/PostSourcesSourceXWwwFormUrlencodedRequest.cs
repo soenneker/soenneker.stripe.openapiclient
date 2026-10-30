@@ -11,48 +11,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSourcesSourceXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("mandate") is { } nullNodeMandate && nullNodeMandate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mandate = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("source_order") is { } nullNodeSourceOrder && nullNodeSourceOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceOrder = null;
+        }
+
         /// <summary>Amount associated with the source.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Information about a mandate possibility attached to a source object (generally for bank debits) as well as its acceptance status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate? Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate? Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate? _explicitNullValueMandate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate Mandate { get => _explicitNullValueMandate; set { _explicitNullValueMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate"); else _explicitNullProperties?.Remove("mandate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate _explicitNullValueMandate = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Information about the owner of the payment instrument that may be used or required by particular source types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner? Owner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner Owner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>Information about the items and shipping associated with the source. Required for transactional credit (for example Klarna) sources before you can charge it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder? SourceOrder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder? SourceOrder { get => _explicitNullValueSourceOrder; set { _explicitNullValueSourceOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_order"); else _explicitNullProperties?.Remove("source_order"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder? _explicitNullValueSourceOrder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder SourceOrder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder SourceOrder { get => _explicitNullValueSourceOrder; set { _explicitNullValueSourceOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_order"); else _explicitNullProperties?.Remove("source_order"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder _explicitNullValueSourceOrder = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,7 +116,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandate>("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestOwner>("owner", Owner);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder>("source_order", SourceOrder);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestSourceOrder>("source_order", SourceOrder);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

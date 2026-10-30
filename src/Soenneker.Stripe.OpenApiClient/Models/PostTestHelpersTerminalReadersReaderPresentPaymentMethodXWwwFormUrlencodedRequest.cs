@@ -11,43 +11,66 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_tip") is { } nullNodeAmountTip && nullNodeAmountTip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTip = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("card_present") is { } nullNodeCardPresent && nullNodeCardPresent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardPresent = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("interac_present") is { } nullNodeInteracPresent && nullNodeInteracPresent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteracPresent = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Simulated on-reader tip amount.</summary>
-        public int? AmountTip { get; set; }
+        public int? AmountTip { get => _explicitNullValueAmountTip; set { _explicitNullValueAmountTip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tip"); else _explicitNullProperties?.Remove("amount_tip"); } }
+        private int? _explicitNullValueAmountTip = default!;
         /// <summary>Simulated data for the card payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Simulated data for the card_present payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent? CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent? CardPresent { get => _explicitNullValueCardPresent; set { _explicitNullValueCardPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_present"); else _explicitNullProperties?.Remove("card_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent? _explicitNullValueCardPresent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent CardPresent { get => _explicitNullValueCardPresent; set { _explicitNullValueCardPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_present"); else _explicitNullProperties?.Remove("card_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent _explicitNullValueCardPresent = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Simulated data for the interac_present payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent? InteracPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent? InteracPresent { get => _explicitNullValueInteracPresent; set { _explicitNullValueInteracPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interac_present"); else _explicitNullProperties?.Remove("interac_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent? _explicitNullValueInteracPresent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent InteracPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent InteracPresent { get => _explicitNullValueInteracPresent; set { _explicitNullValueInteracPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interac_present"); else _explicitNullProperties?.Remove("interac_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent _explicitNullValueInteracPresent = default!;
 #endif
         /// <summary>Simulated payment type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,7 +109,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestCardPresent>("card_present", CardPresent);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestInteracPresent>("interac_present", InteracPresent);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTerminalReadersReaderPresentPaymentMethodXWwwFormUrlencodedRequestType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

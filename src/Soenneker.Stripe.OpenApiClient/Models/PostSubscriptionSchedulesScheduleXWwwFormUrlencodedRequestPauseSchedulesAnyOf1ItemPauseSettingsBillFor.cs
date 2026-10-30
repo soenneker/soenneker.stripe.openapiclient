@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillFor : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("outstanding_usage_through") is { } nullNodeOutstandingUsageThrough && nullNodeOutstandingUsageThrough.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutstandingUsageThrough = null;
+            if (parseNode.GetChildNode("unused_time_from") is { } nullNodeUnusedTimeFrom && nullNodeUnusedTimeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnusedTimeFrom = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The outstanding_usage_through property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough? OutstandingUsageThrough { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough? OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough? _explicitNullValueOutstandingUsageThrough = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough OutstandingUsageThrough { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough _explicitNullValueOutstandingUsageThrough = default!;
 #endif
         /// <summary>The unused_time_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom? UnusedTimeFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom? UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom? _explicitNullValueUnusedTimeFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom UnusedTimeFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom _explicitNullValueUnusedTimeFrom = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillFor"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillFor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillFor();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillFor(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForOutstandingUsageThrough>("outstanding_usage_through", OutstandingUsageThrough);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemPauseSettingsBillForUnusedTimeFrom>("unused_time_from", UnusedTimeFrom);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

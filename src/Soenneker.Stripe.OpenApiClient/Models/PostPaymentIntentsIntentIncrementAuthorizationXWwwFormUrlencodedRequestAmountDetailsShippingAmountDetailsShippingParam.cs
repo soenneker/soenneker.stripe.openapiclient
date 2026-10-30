@@ -11,32 +11,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParam : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("from_postal_code") is { } nullNodeFromPostalCode && nullNodeFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPostalCode = null;
+            if (parseNode.GetChildNode("to_postal_code") is { } nullNodeToPostalCode && nullNodeToPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPostalCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? Amount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount Amount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount _explicitNullValueAmount = default!;
 #endif
         /// <summary>The from_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? FromPostalCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? _explicitNullValueFromPostalCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode FromPostalCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode _explicitNullValueFromPostalCode = default!;
 #endif
         /// <summary>The to_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? ToPostalCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? _explicitNullValueToPostalCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode ToPostalCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode _explicitNullValueToPostalCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParam"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParam();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParam(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode>("from_postal_code", FromPostalCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode>("to_postal_code", ToPostalCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

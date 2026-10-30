@@ -12,19 +12,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureStandaloneResourceThreeRiDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("previous_authentication") is { } nullNodePreviousAuthentication && nullNodePreviousAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousAuthentication = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the previous initial authenticated 3DS Authentication object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousAuthentication { get; set; }
+        public string? PreviousAuthentication { get => _explicitNullValuePreviousAuthentication; set { _explicitNullValuePreviousAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_authentication"); else _explicitNullProperties?.Remove("previous_authentication"); } }
+        private string? _explicitNullValuePreviousAuthentication = default!;
 #nullable restore
 #else
-        public string PreviousAuthentication { get; set; }
+        public string PreviousAuthentication { get => _explicitNullValuePreviousAuthentication; set { _explicitNullValuePreviousAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_authentication"); else _explicitNullProperties?.Remove("previous_authentication"); } }
+        private string _explicitNullValuePreviousAuthentication = default!;
 #endif
         /// <summary>Type of the 3RI Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetailsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetailsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetailsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetails"/> and sets the default values.
         /// </summary>
@@ -40,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("previous_authentication", PreviousAuthentication);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceThreeRiDetailsType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

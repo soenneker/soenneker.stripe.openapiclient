@@ -11,50 +11,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentIntentAmountDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discount_amount") is { } nullNodeDiscountAmount && nullNodeDiscountAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmount = null;
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("tip") is { } nullNodeTip && nullNodeTip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tip = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total discount applied on the transaction represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). An integer greater than 0.This field is mutually exclusive with the `amount_details[line_items][#][discount_amount]` field.</summary>
-        public int? DiscountAmount { get; set; }
+        public int? DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amount"); else _explicitNullProperties?.Remove("discount_amount"); } }
+        private int? _explicitNullValueDiscountAmount = default!;
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError? Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError _explicitNullValueError = default!;
 #endif
         /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsLineItems _explicitNullValueLineItems = default!;
 #endif
         /// <summary>The shipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax? Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax _explicitNullValueTax = default!;
 #endif
         /// <summary>The tip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip? Tip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip? Tip { get => _explicitNullValueTip; set { _explicitNullValueTip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tip"); else _explicitNullProperties?.Remove("tip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip? _explicitNullValueTip = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip Tip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip Tip { get => _explicitNullValueTip; set { _explicitNullValueTip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tip"); else _explicitNullProperties?.Remove("tip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip _explicitNullValueTip = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetails"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceShipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceTax>("tax", Tax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsClientResourceTip>("tip", Tip);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

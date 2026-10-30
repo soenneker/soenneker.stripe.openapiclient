@@ -12,6 +12,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PaymentSource : IAdditionalDataHolder, IComposedTypeWrapper, IParsable
     #pragma warning restore CS1591
     {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+
         /// <summary>The account this bank account belongs to. Only applicable on Accounts (not customers or recipients) This property is only available when returned as an [External Account](/api/external_account_bank_accounts/object) where [controller.is_controller](/api/accounts/object#account_object-controller-is_controller) is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -651,199 +655,199 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("object")?.GetStringValue();
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentSource();
-            if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>() is global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay allowRedisplayValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("always".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "limited".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "unspecified".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>() is global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay allowRedisplayValue)
             {
                 result.AllowRedisplay = allowRedisplayValue;
             }
             else if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+                
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType businessTypeValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("company".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "government_entity".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "individual".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "non_profit".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType businessTypeValue)
             {
                 result.BusinessType = businessTypeValue;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountObject objectValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("account".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountObject objectValue)
             {
                 result.Object = objectValue;
             }
             else if("account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PaymentSourceAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
+                
             }
             else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PaymentSourceCard = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+                
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>() is global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus regulatedStatusValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("regulated".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "unregulated".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>() is global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus regulatedStatusValue)
             {
                 result.RegulatedStatus = regulatedStatusValue;
             }
             else if("source".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+                
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountType typeValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("custom".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "express".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "none".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase) || "standard".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountType typeValue)
             {
                 result.Type = typeValue;
             }
-            else if(parseNode.GetStringValue() is string accountHolderNameValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string accountHolderNameValue)
             {
                 result.AccountHolderName = accountHolderNameValue;
             }
-            else if(parseNode.GetStringValue() is string accountHolderTypeValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string accountHolderTypeValue)
             {
                 result.AccountHolderType = accountHolderTypeValue;
             }
-            else if(parseNode.GetStringValue() is string accountTypeValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string accountTypeValue)
             {
                 result.AccountType = accountTypeValue;
             }
-            else if(parseNode.GetStringValue() is string addressCityValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressCityValue)
             {
                 result.AddressCity = addressCityValue;
             }
-            else if(parseNode.GetStringValue() is string addressCountryValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressCountryValue)
             {
                 result.AddressCountry = addressCountryValue;
             }
-            else if(parseNode.GetStringValue() is string addressLine1Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressLine1Value)
             {
                 result.AddressLine1 = addressLine1Value;
             }
-            else if(parseNode.GetStringValue() is string addressLine1CheckValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressLine1CheckValue)
             {
                 result.AddressLine1Check = addressLine1CheckValue;
             }
-            else if(parseNode.GetStringValue() is string addressLine2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressLine2Value)
             {
                 result.AddressLine2 = addressLine2Value;
             }
-            else if(parseNode.GetStringValue() is string addressStateValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressStateValue)
             {
                 result.AddressState = addressStateValue;
             }
-            else if(parseNode.GetStringValue() is string addressZipValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressZipValue)
             {
                 result.AddressZip = addressZipValue;
             }
-            else if(parseNode.GetStringValue() is string addressZipCheckValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string addressZipCheckValue)
             {
                 result.AddressZipCheck = addressZipCheckValue;
             }
-            else if(parseNode.GetIntValue() is int amountValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int amountValue)
             {
                 result.Amount = amountValue;
             }
-            else if(parseNode.GetStringValue() is string bankNameValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string bankNameValue)
             {
                 result.BankName = bankNameValue;
             }
-            else if(parseNode.GetStringValue() is string brandValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string brandValue)
             {
                 result.Brand = brandValue;
             }
-            else if(parseNode.GetBoolValue() is bool chargesEnabledValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool chargesEnabledValue)
             {
                 result.ChargesEnabled = chargesEnabledValue;
             }
-            else if(parseNode.GetStringValue() is string clientSecretValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string clientSecretValue)
             {
                 result.ClientSecret = clientSecretValue;
             }
-            else if(parseNode.GetStringValue() is string countryValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string countryValue)
             {
                 result.Country = countryValue;
             }
-            else if(parseNode.GetIntValue() is int createdValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int createdValue)
             {
                 result.Created = createdValue;
             }
-            else if(parseNode.GetStringValue() is string currencyValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string currencyValue)
             {
                 result.Currency = currencyValue;
             }
-            else if(parseNode.GetStringValue() is string cvcCheckValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string cvcCheckValue)
             {
                 result.CvcCheck = cvcCheckValue;
             }
-            else if(parseNode.GetStringValue() is string defaultCurrencyValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string defaultCurrencyValue)
             {
                 result.DefaultCurrency = defaultCurrencyValue;
             }
-            else if(parseNode.GetBoolValue() is bool defaultForCurrencyValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool defaultForCurrencyValue)
             {
                 result.DefaultForCurrency = defaultForCurrencyValue;
             }
-            else if(parseNode.GetBoolValue() is bool detailsSubmittedValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool detailsSubmittedValue)
             {
                 result.DetailsSubmitted = detailsSubmittedValue;
             }
-            else if(parseNode.GetStringValue() is string dynamicLast4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string dynamicLast4Value)
             {
                 result.DynamicLast4 = dynamicLast4Value;
             }
-            else if(parseNode.GetStringValue() is string emailValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string emailValue)
             {
                 result.Email = emailValue;
             }
-            else if(parseNode.GetIntValue() is int expMonthValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int expMonthValue)
             {
                 result.ExpMonth = expMonthValue;
             }
-            else if(parseNode.GetIntValue() is int expYearValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int expYearValue)
             {
                 result.ExpYear = expYearValue;
             }
-            else if(parseNode.GetStringValue() is string fingerprintValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string fingerprintValue)
             {
                 result.Fingerprint = fingerprintValue;
             }
-            else if(parseNode.GetStringValue() is string flowValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string flowValue)
             {
                 result.Flow = flowValue;
             }
-            else if(parseNode.GetStringValue() is string fundingValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string fundingValue)
             {
                 result.Funding = fundingValue;
             }
-            else if(parseNode.GetStringValue() is string idValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string idValue)
             {
                 result.Id = idValue;
             }
-            else if(parseNode.GetStringValue() is string last4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string last4Value)
             {
                 result.Last4 = last4Value;
             }
-            else if(parseNode.GetBoolValue() is bool livemodeValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool livemodeValue)
             {
                 result.Livemode = livemodeValue;
             }
-            else if(parseNode.GetStringValue() is string nameValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string nameValue)
             {
                 result.Name = nameValue;
             }
-            else if(parseNode.GetBoolValue() is bool payoutsEnabledValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool payoutsEnabledValue)
             {
                 result.PayoutsEnabled = payoutsEnabledValue;
             }
-            else if(parseNode.GetStringValue() is string routingNumberValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string routingNumberValue)
             {
                 result.RoutingNumber = routingNumberValue;
             }
-            else if(parseNode.GetStringValue() is string statementDescriptorValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string statementDescriptorValue)
             {
                 result.StatementDescriptor = statementDescriptorValue;
             }
-            else if(parseNode.GetStringValue() is string statusValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string statusValue)
             {
                 result.Status = statusValue;
             }
-            else if(parseNode.GetStringValue() is string tokenizationMethodValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string tokenizationMethodValue)
             {
                 result.TokenizationMethod = tokenizationMethodValue;
             }
-            else if(parseNode.GetStringValue() is string usageValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string usageValue)
             {
                 result.Usage = usageValue;
             }
@@ -851,7 +855,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.AvailablePayoutMethods = availablePayoutMethodsValue;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("account".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("business_type") == null || (parseNode.GetChildNode("business_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag3 && ("company".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "government_entity".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "individual".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "non_profit".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("type") == null || (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag4 && ("custom".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "express".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "none".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "standard".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("country") != null && parseNode.GetChildNode("currency") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("last4") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("bank_account".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("brand") != null && parseNode.GetChildNode("exp_month") != null && parseNode.GetChildNode("exp_year") != null && parseNode.GetChildNode("funding") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("last4") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag7 && ("card".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("allow_redisplay") == null || (parseNode.GetChildNode("allow_redisplay")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag8 && ("always".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "limited".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "unspecified".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("regulated_status") == null || (parseNode.GetChildNode("regulated_status")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag9 && ("regulated".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "unregulated".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("client_secret") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("flow") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag6 && ("source".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null && parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag9 && ("ach_credit_transfer".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "ach_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "acss_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "alipay".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "au_becs_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "bancontact".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "card".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "card_present".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "eps".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "giropay".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "ideal".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "klarna".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "multibanco".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "p24".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "sepa_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "sofort".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "three_d_secure".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "wechat".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("allow_redisplay") == null || (parseNode.GetChildNode("allow_redisplay")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag10 && ("always".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal) || "limited".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal) || "unspecified".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.Account == null && result.AccountHolderName == null && result.AccountHolderType == null && result.AccountType == null && result.AchCreditTransfer == null && result.AchDebit == null && result.AcssDebit == null && result.AddressCity == null && result.AddressCountry == null && result.AddressLine1 == null && result.AddressLine1Check == null && result.AddressLine2 == null && result.AddressState == null && result.AddressZip == null && result.AddressZipCheck == null && result.Alipay == null && result.AllowRedisplay == null && result.Amount == null && result.AuBecsDebit == null && result.Bancontact == null && result.BankAccount == null && result.BankName == null && result.Brand == null && result.BusinessProfile == null && result.BusinessType == null && result.Capabilities == null && result.Card == null && result.CardPresent == null && result.ChargesEnabled == null && result.ClientSecret == null && result.CodeVerification == null && result.Company == null && result.Controller == null && result.Country == null && result.Created == null && result.Currency == null && result.Customer == null && result.CvcCheck == null && result.DefaultCurrency == null && result.DefaultForCurrency == null && result.DetailsSubmitted == null && result.DynamicLast4 == null && result.Email == null && result.Eps == null && result.ExpMonth == null && result.ExpYear == null && result.ExternalAccounts == null && result.Fingerprint == null && result.Flow == null && result.Funding == null && result.FutureRequirements == null && result.Giropay == null && result.Groups == null && result.Id == null && result.Ideal == null && result.Individual == null && result.Klarna == null && result.Last4 == null && result.Livemode == null && result.Metadata == null && result.Multibanco == null && result.Name == null && result.Networks == null && result.Object == null && result.Owner == null && result.P24 == null && result.PaymentSourceAccount == null && result.PaymentSourceCard == null && result.PayoutsEnabled == null && result.Receiver == null && result.Redirect == null && result.RegulatedStatus == null && result.Requirements == null && result.RoutingNumber == null && result.SepaDebit == null && result.Settings == null && result.Sofort == null && result.Source == null && result.SourceOrder == null && result.StatementDescriptor == null && result.Status == null && result.ThreeDSecure == null && result.TokenizationMethod == null && result.TosAcceptance == null && result.Type == null && result.Usage == null && result.Wechat == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.PaymentSourceAccount = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Account(), parseNode);
+            if (result.Account == null && result.AccountHolderName == null && result.AccountHolderType == null && result.AccountType == null && result.AchCreditTransfer == null && result.AchDebit == null && result.AcssDebit == null && result.AddressCity == null && result.AddressCountry == null && result.AddressLine1 == null && result.AddressLine1Check == null && result.AddressLine2 == null && result.AddressState == null && result.AddressZip == null && result.AddressZipCheck == null && result.Alipay == null && result.AllowRedisplay == null && result.Amount == null && result.AuBecsDebit == null && result.Bancontact == null && result.BankAccount == null && result.BankName == null && result.Brand == null && result.BusinessProfile == null && result.BusinessType == null && result.Capabilities == null && result.Card == null && result.CardPresent == null && result.ChargesEnabled == null && result.ClientSecret == null && result.CodeVerification == null && result.Company == null && result.Controller == null && result.Country == null && result.Created == null && result.Currency == null && result.Customer == null && result.CvcCheck == null && result.DefaultCurrency == null && result.DefaultForCurrency == null && result.DetailsSubmitted == null && result.DynamicLast4 == null && result.Email == null && result.Eps == null && result.ExpMonth == null && result.ExpYear == null && result.ExternalAccounts == null && result.Fingerprint == null && result.Flow == null && result.Funding == null && result.FutureRequirements == null && result.Giropay == null && result.Groups == null && result.Id == null && result.Ideal == null && result.Individual == null && result.Klarna == null && result.Last4 == null && result.Livemode == null && result.Metadata == null && result.Multibanco == null && result.Name == null && result.Networks == null && result.Object == null && result.Owner == null && result.P24 == null && result.PaymentSourceAccount == null && result.PaymentSourceCard == null && result.PayoutsEnabled == null && result.Receiver == null && result.Redirect == null && result.RegulatedStatus == null && result.Requirements == null && result.RoutingNumber == null && result.SepaDebit == null && result.Settings == null && result.Sofort == null && result.Source == null && result.SourceOrder == null && result.StatementDescriptor == null && result.Status == null && result.ThreeDSecure == null && result.TokenizationMethod == null && result.TosAcceptance == null && result.Type == null && result.Usage == null && result.Wechat == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.BankAccount = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount(), parseNode);
+            if (result.Account == null && result.AccountHolderName == null && result.AccountHolderType == null && result.AccountType == null && result.AchCreditTransfer == null && result.AchDebit == null && result.AcssDebit == null && result.AddressCity == null && result.AddressCountry == null && result.AddressLine1 == null && result.AddressLine1Check == null && result.AddressLine2 == null && result.AddressState == null && result.AddressZip == null && result.AddressZipCheck == null && result.Alipay == null && result.AllowRedisplay == null && result.Amount == null && result.AuBecsDebit == null && result.Bancontact == null && result.BankAccount == null && result.BankName == null && result.Brand == null && result.BusinessProfile == null && result.BusinessType == null && result.Capabilities == null && result.Card == null && result.CardPresent == null && result.ChargesEnabled == null && result.ClientSecret == null && result.CodeVerification == null && result.Company == null && result.Controller == null && result.Country == null && result.Created == null && result.Currency == null && result.Customer == null && result.CvcCheck == null && result.DefaultCurrency == null && result.DefaultForCurrency == null && result.DetailsSubmitted == null && result.DynamicLast4 == null && result.Email == null && result.Eps == null && result.ExpMonth == null && result.ExpYear == null && result.ExternalAccounts == null && result.Fingerprint == null && result.Flow == null && result.Funding == null && result.FutureRequirements == null && result.Giropay == null && result.Groups == null && result.Id == null && result.Ideal == null && result.Individual == null && result.Klarna == null && result.Last4 == null && result.Livemode == null && result.Metadata == null && result.Multibanco == null && result.Name == null && result.Networks == null && result.Object == null && result.Owner == null && result.P24 == null && result.PaymentSourceAccount == null && result.PaymentSourceCard == null && result.PayoutsEnabled == null && result.Receiver == null && result.Redirect == null && result.RegulatedStatus == null && result.Requirements == null && result.RoutingNumber == null && result.SepaDebit == null && result.Settings == null && result.Sofort == null && result.Source == null && result.SourceOrder == null && result.StatementDescriptor == null && result.Status == null && result.ThreeDSecure == null && result.TokenizationMethod == null && result.TosAcceptance == null && result.Type == null && result.Usage == null && result.Wechat == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.PaymentSourceCard = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Card(), parseNode);
+            if (result.Account == null && result.AccountHolderName == null && result.AccountHolderType == null && result.AccountType == null && result.AchCreditTransfer == null && result.AchDebit == null && result.AcssDebit == null && result.AddressCity == null && result.AddressCountry == null && result.AddressLine1 == null && result.AddressLine1Check == null && result.AddressLine2 == null && result.AddressState == null && result.AddressZip == null && result.AddressZipCheck == null && result.Alipay == null && result.AllowRedisplay == null && result.Amount == null && result.AuBecsDebit == null && result.Bancontact == null && result.BankAccount == null && result.BankName == null && result.Brand == null && result.BusinessProfile == null && result.BusinessType == null && result.Capabilities == null && result.Card == null && result.CardPresent == null && result.ChargesEnabled == null && result.ClientSecret == null && result.CodeVerification == null && result.Company == null && result.Controller == null && result.Country == null && result.Created == null && result.Currency == null && result.Customer == null && result.CvcCheck == null && result.DefaultCurrency == null && result.DefaultForCurrency == null && result.DetailsSubmitted == null && result.DynamicLast4 == null && result.Email == null && result.Eps == null && result.ExpMonth == null && result.ExpYear == null && result.ExternalAccounts == null && result.Fingerprint == null && result.Flow == null && result.Funding == null && result.FutureRequirements == null && result.Giropay == null && result.Groups == null && result.Id == null && result.Ideal == null && result.Individual == null && result.Klarna == null && result.Last4 == null && result.Livemode == null && result.Metadata == null && result.Multibanco == null && result.Name == null && result.Networks == null && result.Object == null && result.Owner == null && result.P24 == null && result.PaymentSourceAccount == null && result.PaymentSourceCard == null && result.PayoutsEnabled == null && result.Receiver == null && result.Redirect == null && result.RegulatedStatus == null && result.Requirements == null && result.RoutingNumber == null && result.SepaDebit == null && result.Settings == null && result.Sofort == null && result.Source == null && result.SourceOrder == null && result.StatementDescriptor == null && result.Status == null && result.ThreeDSecure == null && result.TokenizationMethod == null && result.TosAcceptance == null && result.Type == null && result.Usage == null && result.Wechat == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.Source = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Source(), parseNode);
+            if (result.Account == null && result.AccountHolderName == null && result.AccountHolderType == null && result.AccountType == null && result.AchCreditTransfer == null && result.AchDebit == null && result.AcssDebit == null && result.AddressCity == null && result.AddressCountry == null && result.AddressLine1 == null && result.AddressLine1Check == null && result.AddressLine2 == null && result.AddressState == null && result.AddressZip == null && result.AddressZipCheck == null && result.Alipay == null && result.AllowRedisplay == null && result.Amount == null && result.AuBecsDebit == null && result.Bancontact == null && result.BankAccount == null && result.BankName == null && result.Brand == null && result.BusinessProfile == null && result.BusinessType == null && result.Capabilities == null && result.Card == null && result.CardPresent == null && result.ChargesEnabled == null && result.ClientSecret == null && result.CodeVerification == null && result.Company == null && result.Controller == null && result.Country == null && result.Created == null && result.Currency == null && result.Customer == null && result.CvcCheck == null && result.DefaultCurrency == null && result.DefaultForCurrency == null && result.DetailsSubmitted == null && result.DynamicLast4 == null && result.Email == null && result.Eps == null && result.ExpMonth == null && result.ExpYear == null && result.ExternalAccounts == null && result.Fingerprint == null && result.Flow == null && result.Funding == null && result.FutureRequirements == null && result.Giropay == null && result.Groups == null && result.Id == null && result.Ideal == null && result.Individual == null && result.Klarna == null && result.Last4 == null && result.Livemode == null && result.Metadata == null && result.Multibanco == null && result.Name == null && result.Networks == null && result.Object == null && result.Owner == null && result.P24 == null && result.PaymentSourceAccount == null && result.PaymentSourceCard == null && result.PayoutsEnabled == null && result.Receiver == null && result.Redirect == null && result.RegulatedStatus == null && result.Requirements == null && result.RoutingNumber == null && result.SepaDebit == null && result.Settings == null && result.Sofort == null && result.Source == null && result.SourceOrder == null && result.StatementDescriptor == null && result.Status == null && result.ThreeDSecure == null && result.TokenizationMethod == null && result.TosAcceptance == null && result.Type == null && result.Usage == null && result.Wechat == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -1035,25 +1050,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Account == null && AccountHolderName == null && AccountHolderType == null && AccountType == null && AchCreditTransfer == null && AchDebit == null && AcssDebit == null && AddressCity == null && AddressCountry == null && AddressLine1 == null && AddressLine1Check == null && AddressLine2 == null && AddressState == null && AddressZip == null && AddressZipCheck == null && Alipay == null && AllowRedisplay == null && Amount == null && AuBecsDebit == null && Bancontact == null && BankAccount == null && BankName == null && Brand == null && BusinessProfile == null && BusinessType == null && Capabilities == null && Card == null && CardPresent == null && ChargesEnabled == null && ClientSecret == null && CodeVerification == null && Company == null && Controller == null && Country == null && Created == null && Currency == null && Customer == null && CvcCheck == null && DefaultCurrency == null && DefaultForCurrency == null && DetailsSubmitted == null && DynamicLast4 == null && Email == null && Eps == null && ExpMonth == null && ExpYear == null && ExternalAccounts == null && Fingerprint == null && Flow == null && Funding == null && FutureRequirements == null && Giropay == null && Groups == null && Id == null && Ideal == null && Individual == null && Klarna == null && Last4 == null && Livemode == null && Metadata == null && Multibanco == null && Name == null && Networks == null && Object == null && Owner == null && P24 == null && PaymentSourceAccount == null && PaymentSourceCard == null && PayoutsEnabled == null && Receiver == null && Redirect == null && RegulatedStatus == null && Requirements == null && RoutingNumber == null && SepaDebit == null && Settings == null && Sofort == null && Source == null && SourceOrder == null && StatementDescriptor == null && Status == null && ThreeDSecure == null && TokenizationMethod == null && TosAcceptance == null && Type == null && Usage == null && Wechat == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (BankAccount != null && Account == null && AccountHolderName == null && AccountHolderType == null && AccountType == null && AchCreditTransfer == null && AchDebit == null && AcssDebit == null && AddressCity == null && AddressCountry == null && AddressLine1 == null && AddressLine1Check == null && AddressLine2 == null && AddressState == null && AddressZip == null && AddressZipCheck == null && Alipay == null && AllowRedisplay == null && Amount == null && AuBecsDebit == null && Bancontact == null && BankName == null && Brand == null && BusinessProfile == null && BusinessType == null && Capabilities == null && Card == null && CardPresent == null && ChargesEnabled == null && ClientSecret == null && CodeVerification == null && Company == null && Controller == null && Country == null && Created == null && Currency == null && Customer == null && CvcCheck == null && DefaultCurrency == null && DefaultForCurrency == null && DetailsSubmitted == null && DynamicLast4 == null && Email == null && Eps == null && ExpMonth == null && ExpYear == null && ExternalAccounts == null && Fingerprint == null && Flow == null && Funding == null && FutureRequirements == null && Giropay == null && Groups == null && Id == null && Ideal == null && Individual == null && Klarna == null && Last4 == null && Livemode == null && Metadata == null && Multibanco == null && Name == null && Networks == null && Object == null && Owner == null && P24 == null && PaymentSourceAccount == null && PaymentSourceCard == null && PayoutsEnabled == null && Receiver == null && Redirect == null && RegulatedStatus == null && Requirements == null && RoutingNumber == null && SepaDebit == null && Settings == null && Sofort == null && Source == null && SourceOrder == null && StatementDescriptor == null && Status == null && ThreeDSecure == null && TokenizationMethod == null && TosAcceptance == null && Type == null && Usage == null && Wechat == null) { if (BankAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, BankAccount); return; }
+            if (PaymentSourceAccount != null && Account == null && AccountHolderName == null && AccountHolderType == null && AccountType == null && AchCreditTransfer == null && AchDebit == null && AcssDebit == null && AddressCity == null && AddressCountry == null && AddressLine1 == null && AddressLine1Check == null && AddressLine2 == null && AddressState == null && AddressZip == null && AddressZipCheck == null && Alipay == null && AllowRedisplay == null && Amount == null && AuBecsDebit == null && Bancontact == null && BankAccount == null && BankName == null && Brand == null && BusinessProfile == null && BusinessType == null && Capabilities == null && Card == null && CardPresent == null && ChargesEnabled == null && ClientSecret == null && CodeVerification == null && Company == null && Controller == null && Country == null && Created == null && Currency == null && Customer == null && CvcCheck == null && DefaultCurrency == null && DefaultForCurrency == null && DetailsSubmitted == null && DynamicLast4 == null && Email == null && Eps == null && ExpMonth == null && ExpYear == null && ExternalAccounts == null && Fingerprint == null && Flow == null && Funding == null && FutureRequirements == null && Giropay == null && Groups == null && Id == null && Ideal == null && Individual == null && Klarna == null && Last4 == null && Livemode == null && Metadata == null && Multibanco == null && Name == null && Networks == null && Object == null && Owner == null && P24 == null && PaymentSourceCard == null && PayoutsEnabled == null && Receiver == null && Redirect == null && RegulatedStatus == null && Requirements == null && RoutingNumber == null && SepaDebit == null && Settings == null && Sofort == null && Source == null && SourceOrder == null && StatementDescriptor == null && Status == null && ThreeDSecure == null && TokenizationMethod == null && TosAcceptance == null && Type == null && Usage == null && Wechat == null) { if (PaymentSourceAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PaymentSourceAccount); return; }
+            if (PaymentSourceCard != null && Account == null && AccountHolderName == null && AccountHolderType == null && AccountType == null && AchCreditTransfer == null && AchDebit == null && AcssDebit == null && AddressCity == null && AddressCountry == null && AddressLine1 == null && AddressLine1Check == null && AddressLine2 == null && AddressState == null && AddressZip == null && AddressZipCheck == null && Alipay == null && AllowRedisplay == null && Amount == null && AuBecsDebit == null && Bancontact == null && BankAccount == null && BankName == null && Brand == null && BusinessProfile == null && BusinessType == null && Capabilities == null && Card == null && CardPresent == null && ChargesEnabled == null && ClientSecret == null && CodeVerification == null && Company == null && Controller == null && Country == null && Created == null && Currency == null && Customer == null && CvcCheck == null && DefaultCurrency == null && DefaultForCurrency == null && DetailsSubmitted == null && DynamicLast4 == null && Email == null && Eps == null && ExpMonth == null && ExpYear == null && ExternalAccounts == null && Fingerprint == null && Flow == null && Funding == null && FutureRequirements == null && Giropay == null && Groups == null && Id == null && Ideal == null && Individual == null && Klarna == null && Last4 == null && Livemode == null && Metadata == null && Multibanco == null && Name == null && Networks == null && Object == null && Owner == null && P24 == null && PaymentSourceAccount == null && PayoutsEnabled == null && Receiver == null && Redirect == null && RegulatedStatus == null && Requirements == null && RoutingNumber == null && SepaDebit == null && Settings == null && Sofort == null && Source == null && SourceOrder == null && StatementDescriptor == null && Status == null && ThreeDSecure == null && TokenizationMethod == null && TosAcceptance == null && Type == null && Usage == null && Wechat == null) { if (PaymentSourceCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PaymentSourceCard); return; }
+            if (Source != null && Account == null && AccountHolderName == null && AccountHolderType == null && AccountType == null && AchCreditTransfer == null && AchDebit == null && AcssDebit == null && AddressCity == null && AddressCountry == null && AddressLine1 == null && AddressLine1Check == null && AddressLine2 == null && AddressState == null && AddressZip == null && AddressZipCheck == null && Alipay == null && AllowRedisplay == null && Amount == null && AuBecsDebit == null && Bancontact == null && BankAccount == null && BankName == null && Brand == null && BusinessProfile == null && BusinessType == null && Capabilities == null && Card == null && CardPresent == null && ChargesEnabled == null && ClientSecret == null && CodeVerification == null && Company == null && Controller == null && Country == null && Created == null && Currency == null && Customer == null && CvcCheck == null && DefaultCurrency == null && DefaultForCurrency == null && DetailsSubmitted == null && DynamicLast4 == null && Email == null && Eps == null && ExpMonth == null && ExpYear == null && ExternalAccounts == null && Fingerprint == null && Flow == null && Funding == null && FutureRequirements == null && Giropay == null && Groups == null && Id == null && Ideal == null && Individual == null && Klarna == null && Last4 == null && Livemode == null && Metadata == null && Multibanco == null && Name == null && Networks == null && Object == null && Owner == null && P24 == null && PaymentSourceAccount == null && PaymentSourceCard == null && PayoutsEnabled == null && Receiver == null && Redirect == null && RegulatedStatus == null && Requirements == null && RoutingNumber == null && SepaDebit == null && Settings == null && Sofort == null && SourceOrder == null && StatementDescriptor == null && Status == null && ThreeDSecure == null && TokenizationMethod == null && TosAcceptance == null && Type == null && Usage == null && Wechat == null) { if (Source is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Source); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Account != null)
             {
+                if (Account is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount>(null, Account);
             }
             else if(AchCreditTransfer != null)
             {
+                if (AchCreditTransfer is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchCreditTransfer>(null, AchCreditTransfer);
             }
             else if(AchDebit != null)
             {
+                if (AchDebit is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit>(null, AchDebit);
             }
             else if(AcssDebit != null)
             {
+                if (AcssDebit is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit>(null, AcssDebit);
             }
             else if(Alipay != null)
             {
+                if (Alipay is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay>(null, Alipay);
             }
             else if(AllowRedisplay != null)
@@ -1062,18 +1089,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             else if(AuBecsDebit != null)
             {
+                if (AuBecsDebit is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit>(null, AuBecsDebit);
             }
             else if(Bancontact != null)
             {
+                if (Bancontact is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact>(null, Bancontact);
             }
             else if(BankAccount != null)
             {
+                if (BankAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount);
             }
             else if(BusinessProfile != null)
             {
+                if (BusinessProfile is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>(null, BusinessProfile);
             }
             else if(BusinessType != null)
@@ -1082,74 +1113,92 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             else if(Capabilities != null)
             {
+                if (Capabilities is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>(null, Capabilities);
             }
             else if(Card != null)
             {
+                if (Card is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCard>(null, Card);
             }
             else if(CardPresent != null)
             {
+                if (CardPresent is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent>(null, CardPresent);
             }
             else if(CodeVerification != null)
             {
+                if (CodeVerification is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow>(null, CodeVerification);
             }
             else if(Company != null)
             {
+                if (Company is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>(null, Company);
             }
             else if(Controller != null)
             {
+                if (Controller is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController>(null, Controller);
             }
             else if(Customer != null)
             {
+                if (Customer is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>(null, Customer);
             }
             else if(Eps != null)
             {
+                if (Eps is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps>(null, Eps);
             }
             else if(ExternalAccounts != null)
             {
+                if (ExternalAccounts is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>(null, ExternalAccounts);
             }
             else if(FutureRequirements != null)
             {
+                if (FutureRequirements is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>(null, FutureRequirements);
             }
             else if(Giropay != null)
             {
+                if (Giropay is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeGiropay>(null, Giropay);
             }
             else if(Groups != null)
             {
+                if (Groups is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>(null, Groups);
             }
             else if(Ideal != null)
             {
+                if (Ideal is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>(null, Ideal);
             }
             else if(Individual != null)
             {
+                if (Individual is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>(null, Individual);
             }
             else if(Klarna != null)
             {
+                if (Klarna is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>(null, Klarna);
             }
             else if(Metadata != null)
             {
+                if (Metadata is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>(null, Metadata);
             }
             else if(Multibanco != null)
             {
+                if (Multibanco is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>(null, Multibanco);
             }
             else if(Networks != null)
             {
+                if (Networks is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks>(null, Networks);
             }
             else if(Object != null)
@@ -1158,26 +1207,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             else if(Owner != null)
             {
+                if (Owner is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>(null, Owner);
             }
             else if(P24 != null)
             {
+                if (P24 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>(null, P24);
             }
             else if(PaymentSourceAccount != null)
             {
+                if (PaymentSourceAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, PaymentSourceAccount);
             }
             else if(PaymentSourceCard != null)
             {
+                if (PaymentSourceCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(null, PaymentSourceCard);
             }
             else if(Receiver != null)
             {
+                if (Receiver is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>(null, Receiver);
             }
             else if(Redirect != null)
             {
+                if (Redirect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>(null, Redirect);
             }
             else if(RegulatedStatus != null)
@@ -1186,34 +1241,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             else if(Requirements != null)
             {
+                if (Requirements is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>(null, Requirements);
             }
             else if(SepaDebit != null)
             {
+                if (SepaDebit is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSepaDebit>(null, SepaDebit);
             }
             else if(Settings != null)
             {
+                if (Settings is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>(null, Settings);
             }
             else if(Sofort != null)
             {
+                if (Sofort is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSofort>(null, Sofort);
             }
             else if(Source != null)
             {
+                if (Source is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(null, Source);
             }
             else if(SourceOrder != null)
             {
+                if (SourceOrder is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOrder>(null, SourceOrder);
             }
             else if(ThreeDSecure != null)
             {
+                if (ThreeDSecure is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure>(null, ThreeDSecure);
             }
             else if(TosAcceptance != null)
             {
+                if (TosAcceptance is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>(null, TosAcceptance);
             }
             else if(Type != null)
@@ -1222,6 +1285,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             else if(Wechat != null)
             {
+                if (Wechat is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat>(null, Wechat);
             }
             else if(AccountHolderName != null)
@@ -1388,7 +1452,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>(null, AvailablePayoutMethods);
             }
-            writer.WriteAdditionalData(AdditionalData);
+            
         }
     }
 }

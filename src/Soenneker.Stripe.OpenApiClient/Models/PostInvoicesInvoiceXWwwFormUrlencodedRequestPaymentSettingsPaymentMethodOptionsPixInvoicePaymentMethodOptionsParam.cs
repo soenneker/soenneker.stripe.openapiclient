@@ -11,13 +11,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_includes_iof") is { } nullNodeAmountIncludesIof && nullNodeAmountIncludesIof.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountIncludesIof = null;
+            if (parseNode.GetChildNode("expires_after_seconds") is { } nullNodeExpiresAfterSeconds && nullNodeExpiresAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterSeconds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_includes_iof property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? AmountIncludesIof { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? AmountIncludesIof { get => _explicitNullValueAmountIncludesIof; set { _explicitNullValueAmountIncludesIof = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_includes_iof"); else _explicitNullProperties?.Remove("amount_includes_iof"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? _explicitNullValueAmountIncludesIof = default!;
         /// <summary>The expires_after_seconds property</summary>
-        public int? ExpiresAfterSeconds { get; set; }
+        public int? ExpiresAfterSeconds { get => _explicitNullValueExpiresAfterSeconds; set { _explicitNullValueExpiresAfterSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_seconds"); else _explicitNullProperties?.Remove("expires_after_seconds"); } }
+        private int? _explicitNullValueExpiresAfterSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteIntValue("expires_after_seconds", ExpiresAfterSeconds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,176 +11,246 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTipping : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aed") is { } nullNodeAed && nullNodeAed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aed = null;
+            if (parseNode.GetChildNode("aud") is { } nullNodeAud && nullNodeAud.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aud = null;
+            if (parseNode.GetChildNode("cad") is { } nullNodeCad && nullNodeCad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cad = null;
+            if (parseNode.GetChildNode("chf") is { } nullNodeChf && nullNodeChf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chf = null;
+            if (parseNode.GetChildNode("czk") is { } nullNodeCzk && nullNodeCzk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Czk = null;
+            if (parseNode.GetChildNode("dkk") is { } nullNodeDkk && nullNodeDkk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dkk = null;
+            if (parseNode.GetChildNode("eur") is { } nullNodeEur && nullNodeEur.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eur = null;
+            if (parseNode.GetChildNode("gbp") is { } nullNodeGbp && nullNodeGbp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gbp = null;
+            if (parseNode.GetChildNode("gip") is { } nullNodeGip && nullNodeGip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gip = null;
+            if (parseNode.GetChildNode("hkd") is { } nullNodeHkd && nullNodeHkd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hkd = null;
+            if (parseNode.GetChildNode("huf") is { } nullNodeHuf && nullNodeHuf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Huf = null;
+            if (parseNode.GetChildNode("jpy") is { } nullNodeJpy && nullNodeJpy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jpy = null;
+            if (parseNode.GetChildNode("mxn") is { } nullNodeMxn && nullNodeMxn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mxn = null;
+            if (parseNode.GetChildNode("myr") is { } nullNodeMyr && nullNodeMyr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Myr = null;
+            if (parseNode.GetChildNode("nok") is { } nullNodeNok && nullNodeNok.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nok = null;
+            if (parseNode.GetChildNode("nzd") is { } nullNodeNzd && nullNodeNzd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nzd = null;
+            if (parseNode.GetChildNode("pln") is { } nullNodePln && nullNodePln.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pln = null;
+            if (parseNode.GetChildNode("ron") is { } nullNodeRon && nullNodeRon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ron = null;
+            if (parseNode.GetChildNode("sek") is { } nullNodeSek && nullNodeSek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sek = null;
+            if (parseNode.GetChildNode("sgd") is { } nullNodeSgd && nullNodeSgd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sgd = null;
+            if (parseNode.GetChildNode("usd") is { } nullNodeUsd && nullNodeUsd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usd = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The aed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed? Aed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed? Aed { get => _explicitNullValueAed; set { _explicitNullValueAed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aed"); else _explicitNullProperties?.Remove("aed"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed? _explicitNullValueAed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed Aed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed Aed { get => _explicitNullValueAed; set { _explicitNullValueAed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aed"); else _explicitNullProperties?.Remove("aed"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAed _explicitNullValueAed = default!;
 #endif
         /// <summary>The aud property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud? Aud { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud? Aud { get => _explicitNullValueAud; set { _explicitNullValueAud = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aud"); else _explicitNullProperties?.Remove("aud"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud? _explicitNullValueAud = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud Aud { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud Aud { get => _explicitNullValueAud; set { _explicitNullValueAud = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aud"); else _explicitNullProperties?.Remove("aud"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingAud _explicitNullValueAud = default!;
 #endif
         /// <summary>The cad property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad? Cad { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad? Cad { get => _explicitNullValueCad; set { _explicitNullValueCad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cad"); else _explicitNullProperties?.Remove("cad"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad? _explicitNullValueCad = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad Cad { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad Cad { get => _explicitNullValueCad; set { _explicitNullValueCad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cad"); else _explicitNullProperties?.Remove("cad"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCad _explicitNullValueCad = default!;
 #endif
         /// <summary>The chf property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf? Chf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf? Chf { get => _explicitNullValueChf; set { _explicitNullValueChf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chf"); else _explicitNullProperties?.Remove("chf"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf? _explicitNullValueChf = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf Chf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf Chf { get => _explicitNullValueChf; set { _explicitNullValueChf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chf"); else _explicitNullProperties?.Remove("chf"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingChf _explicitNullValueChf = default!;
 #endif
         /// <summary>The czk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk? Czk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk? Czk { get => _explicitNullValueCzk; set { _explicitNullValueCzk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("czk"); else _explicitNullProperties?.Remove("czk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk? _explicitNullValueCzk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk Czk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk Czk { get => _explicitNullValueCzk; set { _explicitNullValueCzk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("czk"); else _explicitNullProperties?.Remove("czk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingCzk _explicitNullValueCzk = default!;
 #endif
         /// <summary>The dkk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk? Dkk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk? Dkk { get => _explicitNullValueDkk; set { _explicitNullValueDkk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dkk"); else _explicitNullProperties?.Remove("dkk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk? _explicitNullValueDkk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk Dkk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk Dkk { get => _explicitNullValueDkk; set { _explicitNullValueDkk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dkk"); else _explicitNullProperties?.Remove("dkk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingDkk _explicitNullValueDkk = default!;
 #endif
         /// <summary>The eur property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur? Eur { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur? Eur { get => _explicitNullValueEur; set { _explicitNullValueEur = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eur"); else _explicitNullProperties?.Remove("eur"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur? _explicitNullValueEur = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur Eur { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur Eur { get => _explicitNullValueEur; set { _explicitNullValueEur = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eur"); else _explicitNullProperties?.Remove("eur"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingEur _explicitNullValueEur = default!;
 #endif
         /// <summary>The gbp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp? Gbp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp? Gbp { get => _explicitNullValueGbp; set { _explicitNullValueGbp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gbp"); else _explicitNullProperties?.Remove("gbp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp? _explicitNullValueGbp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp Gbp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp Gbp { get => _explicitNullValueGbp; set { _explicitNullValueGbp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gbp"); else _explicitNullProperties?.Remove("gbp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGbp _explicitNullValueGbp = default!;
 #endif
         /// <summary>The gip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip? Gip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip? Gip { get => _explicitNullValueGip; set { _explicitNullValueGip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gip"); else _explicitNullProperties?.Remove("gip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip? _explicitNullValueGip = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip Gip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip Gip { get => _explicitNullValueGip; set { _explicitNullValueGip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gip"); else _explicitNullProperties?.Remove("gip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingGip _explicitNullValueGip = default!;
 #endif
         /// <summary>The hkd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd? Hkd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd? Hkd { get => _explicitNullValueHkd; set { _explicitNullValueHkd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hkd"); else _explicitNullProperties?.Remove("hkd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd? _explicitNullValueHkd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd Hkd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd Hkd { get => _explicitNullValueHkd; set { _explicitNullValueHkd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hkd"); else _explicitNullProperties?.Remove("hkd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHkd _explicitNullValueHkd = default!;
 #endif
         /// <summary>The huf property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf? Huf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf? Huf { get => _explicitNullValueHuf; set { _explicitNullValueHuf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("huf"); else _explicitNullProperties?.Remove("huf"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf? _explicitNullValueHuf = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf Huf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf Huf { get => _explicitNullValueHuf; set { _explicitNullValueHuf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("huf"); else _explicitNullProperties?.Remove("huf"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingHuf _explicitNullValueHuf = default!;
 #endif
         /// <summary>The jpy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy? Jpy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy? Jpy { get => _explicitNullValueJpy; set { _explicitNullValueJpy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jpy"); else _explicitNullProperties?.Remove("jpy"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy? _explicitNullValueJpy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy Jpy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy Jpy { get => _explicitNullValueJpy; set { _explicitNullValueJpy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jpy"); else _explicitNullProperties?.Remove("jpy"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingJpy _explicitNullValueJpy = default!;
 #endif
         /// <summary>The mxn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn? Mxn { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn? Mxn { get => _explicitNullValueMxn; set { _explicitNullValueMxn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mxn"); else _explicitNullProperties?.Remove("mxn"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn? _explicitNullValueMxn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn Mxn { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn Mxn { get => _explicitNullValueMxn; set { _explicitNullValueMxn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mxn"); else _explicitNullProperties?.Remove("mxn"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMxn _explicitNullValueMxn = default!;
 #endif
         /// <summary>The myr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr? Myr { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr? Myr { get => _explicitNullValueMyr; set { _explicitNullValueMyr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("myr"); else _explicitNullProperties?.Remove("myr"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr? _explicitNullValueMyr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr Myr { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr Myr { get => _explicitNullValueMyr; set { _explicitNullValueMyr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("myr"); else _explicitNullProperties?.Remove("myr"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingMyr _explicitNullValueMyr = default!;
 #endif
         /// <summary>The nok property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok? Nok { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok? Nok { get => _explicitNullValueNok; set { _explicitNullValueNok = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nok"); else _explicitNullProperties?.Remove("nok"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok? _explicitNullValueNok = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok Nok { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok Nok { get => _explicitNullValueNok; set { _explicitNullValueNok = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nok"); else _explicitNullProperties?.Remove("nok"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNok _explicitNullValueNok = default!;
 #endif
         /// <summary>The nzd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd? Nzd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd? Nzd { get => _explicitNullValueNzd; set { _explicitNullValueNzd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nzd"); else _explicitNullProperties?.Remove("nzd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd? _explicitNullValueNzd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd Nzd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd Nzd { get => _explicitNullValueNzd; set { _explicitNullValueNzd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nzd"); else _explicitNullProperties?.Remove("nzd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingNzd _explicitNullValueNzd = default!;
 #endif
         /// <summary>The pln property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln? Pln { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln? Pln { get => _explicitNullValuePln; set { _explicitNullValuePln = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pln"); else _explicitNullProperties?.Remove("pln"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln? _explicitNullValuePln = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln Pln { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln Pln { get => _explicitNullValuePln; set { _explicitNullValuePln = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pln"); else _explicitNullProperties?.Remove("pln"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingPln _explicitNullValuePln = default!;
 #endif
         /// <summary>The ron property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon? Ron { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon? Ron { get => _explicitNullValueRon; set { _explicitNullValueRon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ron"); else _explicitNullProperties?.Remove("ron"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon? _explicitNullValueRon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon Ron { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon Ron { get => _explicitNullValueRon; set { _explicitNullValueRon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ron"); else _explicitNullProperties?.Remove("ron"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingRon _explicitNullValueRon = default!;
 #endif
         /// <summary>The sek property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek? Sek { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek? Sek { get => _explicitNullValueSek; set { _explicitNullValueSek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sek"); else _explicitNullProperties?.Remove("sek"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek? _explicitNullValueSek = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek Sek { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek Sek { get => _explicitNullValueSek; set { _explicitNullValueSek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sek"); else _explicitNullProperties?.Remove("sek"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek _explicitNullValueSek = default!;
 #endif
         /// <summary>The sgd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd? Sgd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd? Sgd { get => _explicitNullValueSgd; set { _explicitNullValueSgd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sgd"); else _explicitNullProperties?.Remove("sgd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd? _explicitNullValueSgd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd Sgd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd Sgd { get => _explicitNullValueSgd; set { _explicitNullValueSgd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sgd"); else _explicitNullProperties?.Remove("sgd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd _explicitNullValueSgd = default!;
 #endif
         /// <summary>The usd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd? Usd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd? Usd { get => _explicitNullValueUsd; set { _explicitNullValueUsd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd"); else _explicitNullProperties?.Remove("usd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd? _explicitNullValueUsd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd Usd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd Usd { get => _explicitNullValueUsd; set { _explicitNullValueUsd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd"); else _explicitNullProperties?.Remove("usd"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd _explicitNullValueUsd = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTipping"/> and sets the default values.
@@ -197,7 +267,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTipping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTipping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTipping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -258,6 +328,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSek>("sek", Sek);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingSgd>("sgd", Sgd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTippingTippingUsd>("usd", Usd);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

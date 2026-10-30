@@ -12,50 +12,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorizationFleetDataCardholderPromptData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alphanumeric_id") is { } nullNodeAlphanumericId && nullNodeAlphanumericId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlphanumericId = null;
+            if (parseNode.GetChildNode("driver_id") is { } nullNodeDriverId && nullNodeDriverId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriverId = null;
+            if (parseNode.GetChildNode("odometer") is { } nullNodeOdometer && nullNodeOdometer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Odometer = null;
+            if (parseNode.GetChildNode("unspecified_id") is { } nullNodeUnspecifiedId && nullNodeUnspecifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnspecifiedId = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("vehicle_number") is { } nullNodeVehicleNumber && nullNodeVehicleNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VehicleNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>[Deprecated] An alphanumeric ID, though typical point of sales only support numeric entry. The card program can be configured to prompt for a vehicle ID, driver ID, or generic ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlphanumericId { get; set; }
+        public string? AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
+        private string? _explicitNullValueAlphanumericId = default!;
 #nullable restore
 #else
-        public string AlphanumericId { get; set; }
+        public string AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
+        private string _explicitNullValueAlphanumericId = default!;
 #endif
         /// <summary>Driver ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DriverId { get; set; }
+        public string? DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
+        private string? _explicitNullValueDriverId = default!;
 #nullable restore
 #else
-        public string DriverId { get; set; }
+        public string DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
+        private string _explicitNullValueDriverId = default!;
 #endif
         /// <summary>Odometer reading.</summary>
-        public int? Odometer { get; set; }
+        public int? Odometer { get => _explicitNullValueOdometer; set { _explicitNullValueOdometer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("odometer"); else _explicitNullProperties?.Remove("odometer"); } }
+        private int? _explicitNullValueOdometer = default!;
         /// <summary>An alphanumeric ID. This field is used when a vehicle ID, driver ID, or generic ID is entered by the cardholder, but the merchant or card network did not specify the prompt type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnspecifiedId { get; set; }
+        public string? UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
+        private string? _explicitNullValueUnspecifiedId = default!;
 #nullable restore
 #else
-        public string UnspecifiedId { get; set; }
+        public string UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
+        private string _explicitNullValueUnspecifiedId = default!;
 #endif
         /// <summary>User ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>Vehicle number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VehicleNumber { get; set; }
+        public string? VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
+        private string? _explicitNullValueVehicleNumber = default!;
 #nullable restore
 #else
-        public string VehicleNumber { get; set; }
+        public string VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
+        private string _explicitNullValueVehicleNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData"/> and sets the default values.
@@ -72,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataCardholderPromptData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("unspecified_id", UnspecifiedId);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteStringValue("vehicle_number", VehicleNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

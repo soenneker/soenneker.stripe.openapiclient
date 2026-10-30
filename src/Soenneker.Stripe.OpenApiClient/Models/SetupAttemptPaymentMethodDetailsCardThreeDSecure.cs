@@ -12,27 +12,47 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetupAttemptPaymentMethodDetailsCardThreeDSecure : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authentication_flow") is { } nullNodeAuthenticationFlow && nullNodeAuthenticationFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationFlow = null;
+            if (parseNode.GetChildNode("electronic_commerce_indicator") is { } nullNodeElectronicCommerceIndicator && nullNodeElectronicCommerceIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectronicCommerceIndicator = null;
+            if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
+            if (parseNode.GetChildNode("result_reason") is { } nullNodeResultReason && nullNodeResultReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResultReason = null;
+            if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For authenticated transactions: how the customer was authenticated bythe issuing bank.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsAuthenticationFlow? AuthenticationFlow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsAuthenticationFlow? AuthenticationFlow { get => _explicitNullValueAuthenticationFlow; set { _explicitNullValueAuthenticationFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_flow"); else _explicitNullProperties?.Remove("authentication_flow"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsAuthenticationFlow? _explicitNullValueAuthenticationFlow = default!;
         /// <summary>The Electronic Commerce Indicator (ECI). A protocol-level fieldindicating what degree of authentication was performed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsElectronicCommerceIndicator? ElectronicCommerceIndicator { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsElectronicCommerceIndicator? ElectronicCommerceIndicator { get => _explicitNullValueElectronicCommerceIndicator; set { _explicitNullValueElectronicCommerceIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronic_commerce_indicator"); else _explicitNullProperties?.Remove("electronic_commerce_indicator"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsElectronicCommerceIndicator? _explicitNullValueElectronicCommerceIndicator = default!;
         /// <summary>Indicates the outcome of 3D Secure authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResult? Result { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResult? _explicitNullValueResult = default!;
         /// <summary>Additional information about why 3D Secure succeeded or failed basedon the `result`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason? ResultReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason? ResultReason { get => _explicitNullValueResultReason; set { _explicitNullValueResultReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result_reason"); else _explicitNullProperties?.Remove("result_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason? _explicitNullValueResultReason = default!;
         /// <summary>The 3D Secure 1 XID or 3D Secure 2 Directory Server Transaction ID(dsTransId) for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get; set; }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get; set; }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>The version of 3D Secure that was used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion? Version { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion? _explicitNullValueVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure"/> and sets the default values.
         /// </summary>
@@ -48,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason>("result_reason", ResultReason);
             writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion>("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

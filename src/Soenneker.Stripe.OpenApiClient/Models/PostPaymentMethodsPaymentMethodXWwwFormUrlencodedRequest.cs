@@ -11,48 +11,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_redisplay") is { } nullNodeAllowRedisplay && nullNodeAllowRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRedisplay = null;
+            if (parseNode.GetChildNode("billing_details") is { } nullNodeBillingDetails && nullNodeBillingDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingDetails = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("us_bank_account") is { } nullNodeUsBankAccount && nullNodeUsBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsBankAccount = null;
+        }
+
         /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow. The field defaults to `unspecified`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestAllowRedisplay? AllowRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestAllowRedisplay? AllowRedisplay { get => _explicitNullValueAllowRedisplay; set { _explicitNullValueAllowRedisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_redisplay"); else _explicitNullProperties?.Remove("allow_redisplay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestAllowRedisplay? _explicitNullValueAllowRedisplay = default!;
         /// <summary>Billing information associated with the PaymentMethod that may be used or required by particular types of payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails? BillingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails? BillingDetails { get => _explicitNullValueBillingDetails; set { _explicitNullValueBillingDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_details"); else _explicitNullProperties?.Remove("billing_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails? _explicitNullValueBillingDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails BillingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails BillingDetails { get => _explicitNullValueBillingDetails; set { _explicitNullValueBillingDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_details"); else _explicitNullProperties?.Remove("billing_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestBillingDetails _explicitNullValueBillingDetails = default!;
 #endif
         /// <summary>If this is a `card` PaymentMethod, this hash contains the user&apos;s card details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount? UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount? UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount? _explicitNullValueUsBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount _explicitNullValueUsBankAccount = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,7 +116,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard>("card", Card);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount>("us_bank_account", UsBankAccount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount>("us_bank_account", UsBankAccount);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

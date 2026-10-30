@@ -11,32 +11,50 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_redisplay") is { } nullNodeAllowRedisplay && nullNodeAllowRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRedisplay = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("process_config") is { } nullNodeProcessConfig && nullNodeProcessConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessConfig = null;
+            if (parseNode.GetChildNode("setup_intent") is { } nullNodeSetupIntent && nullNodeSetupIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupIntent = null;
+        }
+
         /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestAllowRedisplay? AllowRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestAllowRedisplay? AllowRedisplay { get => _explicitNullValueAllowRedisplay; set { _explicitNullValueAllowRedisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_redisplay"); else _explicitNullProperties?.Remove("allow_redisplay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestAllowRedisplay? _explicitNullValueAllowRedisplay = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Configuration overrides for this setup, such as MOTO and customer cancellation settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig? ProcessConfig { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig? ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig? _explicitNullValueProcessConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig ProcessConfig { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig _explicitNullValueProcessConfig = default!;
 #endif
         /// <summary>The ID of the SetupIntent to process on the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SetupIntent { get; set; }
+        public string? SetupIntent { get => _explicitNullValueSetupIntent; set { _explicitNullValueSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_intent"); else _explicitNullProperties?.Remove("setup_intent"); } }
+        private string? _explicitNullValueSetupIntent = default!;
 #nullable restore
 #else
-        public string SetupIntent { get; set; }
+        public string SetupIntent { get => _explicitNullValueSetupIntent; set { _explicitNullValueSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_intent"); else _explicitNullProperties?.Remove("setup_intent"); } }
+        private string _explicitNullValueSetupIntent = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +90,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestAllowRedisplay>("allow_redisplay", AllowRedisplay);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig>("process_config", ProcessConfig);
-            writer.WriteStringValue("setup_intent", SetupIntent);
+            writer.WriteStringValue("setup_intent", SetupIntent);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

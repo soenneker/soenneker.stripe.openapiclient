@@ -12,32 +12,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorizationTreasuryComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("received_credits") is { } nullNodeReceivedCredits && nullNodeReceivedCredits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedCredits = null;
+            if (parseNode.GetChildNode("received_debits") is { } nullNodeReceivedDebits && nullNodeReceivedDebits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDebits = null;
+            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The array of [ReceivedCredits](https://docs.stripe.com/api/treasury/received_credits) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReceivedCredits { get; set; }
+        public List<string>? ReceivedCredits { get => _explicitNullValueReceivedCredits; set { _explicitNullValueReceivedCredits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_credits"); else _explicitNullProperties?.Remove("received_credits"); } }
+        private List<string>? _explicitNullValueReceivedCredits = default!;
 #nullable restore
 #else
-        public List<string> ReceivedCredits { get; set; }
+        public List<string> ReceivedCredits { get => _explicitNullValueReceivedCredits; set { _explicitNullValueReceivedCredits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_credits"); else _explicitNullProperties?.Remove("received_credits"); } }
+        private List<string> _explicitNullValueReceivedCredits = default!;
 #endif
         /// <summary>The array of [ReceivedDebits](https://docs.stripe.com/api/treasury/received_debits) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReceivedDebits { get; set; }
+        public List<string>? ReceivedDebits { get => _explicitNullValueReceivedDebits; set { _explicitNullValueReceivedDebits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debits"); else _explicitNullProperties?.Remove("received_debits"); } }
+        private List<string>? _explicitNullValueReceivedDebits = default!;
 #nullable restore
 #else
-        public List<string> ReceivedDebits { get; set; }
+        public List<string> ReceivedDebits { get => _explicitNullValueReceivedDebits; set { _explicitNullValueReceivedDebits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debits"); else _explicitNullProperties?.Remove("received_debits"); } }
+        private List<string> _explicitNullValueReceivedDebits = default!;
 #endif
         /// <summary>The Treasury [Transaction](https://docs.stripe.com/api/treasury/transactions) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transaction { get; set; }
+        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private string? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public string Transaction { get; set; }
+        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private string _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("received_credits", ReceivedCredits);
             writer.WriteCollectionOfPrimitiveValues<string>("received_debits", ReceivedDebits);
             writer.WriteStringValue("transaction", Transaction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

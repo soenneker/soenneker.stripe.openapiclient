@@ -12,11 +12,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_holder_type") is { } nullNodeAccountHolderType && nullNodeAccountHolderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountHolderType = null;
+            if (parseNode.GetChildNode("account_type") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
+        }
+
         /// <summary>The account_holder_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountHolderType? AccountHolderType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountHolderType? AccountHolderType { get => _explicitNullValueAccountHolderType; set { _explicitNullValueAccountHolderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder_type"); else _explicitNullProperties?.Remove("account_holder_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountHolderType? _explicitNullValueAccountHolderType = default!;
         /// <summary>The account_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountType? AccountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_type"); else _explicitNullProperties?.Remove("account_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountType? _explicitNullValueAccountType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -34,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountHolderType>("account_holder_type", AccountHolderType);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccountAccountType>("account_type", AccountType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

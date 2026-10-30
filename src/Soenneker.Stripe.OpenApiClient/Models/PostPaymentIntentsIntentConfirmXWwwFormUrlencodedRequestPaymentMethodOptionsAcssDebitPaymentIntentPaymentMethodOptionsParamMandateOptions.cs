@@ -11,29 +11,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_mandate_url") is { } nullNodeCustomMandateUrl && nullNodeCustomMandateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMandateUrl = null;
+            if (parseNode.GetChildNode("interval_description") is { } nullNodeIntervalDescription && nullNodeIntervalDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalDescription = null;
+            if (parseNode.GetChildNode("payment_schedule") is { } nullNodePaymentSchedule && nullNodePaymentSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSchedule = null;
+            if (parseNode.GetChildNode("transaction_type") is { } nullNodeTransactionType && nullNodeTransactionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_mandate_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl? CustomMandateUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl? CustomMandateUrl { get => _explicitNullValueCustomMandateUrl; set { _explicitNullValueCustomMandateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_mandate_url"); else _explicitNullProperties?.Remove("custom_mandate_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl? _explicitNullValueCustomMandateUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl CustomMandateUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl CustomMandateUrl { get => _explicitNullValueCustomMandateUrl; set { _explicitNullValueCustomMandateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_mandate_url"); else _explicitNullProperties?.Remove("custom_mandate_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsCustomMandateUrl _explicitNullValueCustomMandateUrl = default!;
 #endif
         /// <summary>The interval_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntervalDescription { get; set; }
+        public string? IntervalDescription { get => _explicitNullValueIntervalDescription; set { _explicitNullValueIntervalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_description"); else _explicitNullProperties?.Remove("interval_description"); } }
+        private string? _explicitNullValueIntervalDescription = default!;
 #nullable restore
 #else
-        public string IntervalDescription { get; set; }
+        public string IntervalDescription { get => _explicitNullValueIntervalDescription; set { _explicitNullValueIntervalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_description"); else _explicitNullProperties?.Remove("interval_description"); } }
+        private string _explicitNullValueIntervalDescription = default!;
 #endif
         /// <summary>The payment_schedule property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule? PaymentSchedule { get => _explicitNullValuePaymentSchedule; set { _explicitNullValuePaymentSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_schedule"); else _explicitNullProperties?.Remove("payment_schedule"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule? _explicitNullValuePaymentSchedule = default!;
         /// <summary>The transaction_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType? TransactionType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType? TransactionType { get => _explicitNullValueTransactionType; set { _explicitNullValueTransactionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_type"); else _explicitNullProperties?.Remove("transaction_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType? _explicitNullValueTransactionType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptions"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("interval_description", IntervalDescription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType>("transaction_type", TransactionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

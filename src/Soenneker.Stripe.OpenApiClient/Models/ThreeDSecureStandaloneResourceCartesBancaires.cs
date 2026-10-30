@@ -12,32 +12,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureStandaloneResourceCartesBancaires : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avalgo") is { } nullNodeAvalgo && nullNodeAvalgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avalgo = null;
+            if (parseNode.GetChildNode("cb_exemption") is { } nullNodeCbExemption && nullNodeCbExemption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbExemption = null;
+            if (parseNode.GetChildNode("cb_score") is { } nullNodeCbScore && nullNodeCbScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cryptogram calculation algorithm used by the card Issuer&apos;s ACS to calculate the Authentication cryptogram. Also known as cavvAlgorithm. ARes/RReq messageExtension: `CB-AVALGO`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Avalgo { get; set; }
+        public string? Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
+        private string? _explicitNullValueAvalgo = default!;
 #nullable restore
 #else
-        public string Avalgo { get; set; }
+        public string Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
+        private string _explicitNullValueAvalgo = default!;
 #endif
         /// <summary>The exemption indicator returned from Cartes Bancaires in the ARes. This is a 3 byte bitmap (lowest significant byte first and most significant bit first) that has been Base64 encoded. String (4 characters). ARes message extension: `CB-EXEMPTION`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CbExemption { get; set; }
+        public string? CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        private string? _explicitNullValueCbExemption = default!;
 #nullable restore
 #else
-        public string CbExemption { get; set; }
+        public string CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        private string _explicitNullValueCbExemption = default!;
 #endif
         /// <summary>The risk score returned from Cartes Bancaires in the ARes. Numeric value 0-99. ARes/RReq message extension: `CB-SCORE`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CbScore { get; set; }
+        public string? CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
+        private string? _explicitNullValueCbScore = default!;
 #nullable restore
 #else
-        public string CbScore { get; set; }
+        public string CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
+        private string _explicitNullValueCbScore = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceCartesBancaires"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceCartesBancaires CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceCartesBancaires();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceCartesBancaires(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("avalgo", Avalgo);
             writer.WriteStringValue("cb_exemption", CbExemption);
             writer.WriteStringValue("cb_score", CbScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

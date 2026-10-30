@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DisputePaymentMethodDetailsKlarna : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("chargeback_loss_reason_code") is { } nullNodeChargebackLossReasonCode && nullNodeChargebackLossReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargebackLossReasonCode = null;
+            if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Chargeback loss reason mapped by Stripe from Klarna&apos;s chargeback loss reason</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChargebackLossReasonCode { get; set; }
+        public string? ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
+        private string? _explicitNullValueChargebackLossReasonCode = default!;
 #nullable restore
 #else
-        public string ChargebackLossReasonCode { get; set; }
+        public string ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
+        private string _explicitNullValueChargebackLossReasonCode = default!;
 #endif
         /// <summary>The reason for the dispute as defined by Klarna</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonCode { get; set; }
+        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        private string? _explicitNullValueReasonCode = default!;
 #nullable restore
 #else
-        public string ReasonCode { get; set; }
+        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        private string _explicitNullValueReasonCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("chargeback_loss_reason_code", ChargebackLossReasonCode);
             writer.WriteStringValue("reason_code", ReasonCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,36 +11,56 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlight : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("departure_at") is { } nullNodeDepartureAt && nullNodeDepartureAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAt = null;
+            if (parseNode.GetChildNode("passenger_name") is { } nullNodePassengerName && nullNodePassengerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassengerName = null;
+            if (parseNode.GetChildNode("refundable") is { } nullNodeRefundable && nullNodeRefundable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Refundable = null;
+            if (parseNode.GetChildNode("segments") is { } nullNodeSegments && nullNodeSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segments = null;
+            if (parseNode.GetChildNode("travel_agency") is { } nullNodeTravelAgency && nullNodeTravelAgency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TravelAgency = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The departure_at property</summary>
-        public int? DepartureAt { get; set; }
+        public int? DepartureAt { get => _explicitNullValueDepartureAt; set { _explicitNullValueDepartureAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_at"); else _explicitNullProperties?.Remove("departure_at"); } }
+        private int? _explicitNullValueDepartureAt = default!;
         /// <summary>The passenger_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PassengerName { get; set; }
+        public string? PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
+        private string? _explicitNullValuePassengerName = default!;
 #nullable restore
 #else
-        public string PassengerName { get; set; }
+        public string PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
+        private string _explicitNullValuePassengerName = default!;
 #endif
         /// <summary>The refundable property</summary>
-        public bool? Refundable { get; set; }
+        public bool? Refundable { get => _explicitNullValueRefundable; set { _explicitNullValueRefundable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundable"); else _explicitNullProperties?.Remove("refundable"); } }
+        private bool? _explicitNullValueRefundable = default!;
         /// <summary>The segments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? Segments { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? _explicitNullValueSegments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> Segments { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> _explicitNullValueSegments = default!;
 #endif
         /// <summary>The travel_agency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TravelAgency { get; set; }
+        public string? TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
+        private string? _explicitNullValueTravelAgency = default!;
 #nullable restore
 #else
-        public string TravelAgency { get; set; }
+        public string TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
+        private string _explicitNullValueTravelAgency = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlight"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlight CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlight();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlight(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("refundable", Refundable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>("segments", Segments);
             writer.WriteStringValue("travel_agency", TravelAgency);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

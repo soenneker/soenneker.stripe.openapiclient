@@ -11,44 +11,67 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TransferSchedule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("delay_days") is { } nullNodeDelayDays && nullNodeDelayDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayDays = null;
+            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("monthly_anchor") is { } nullNodeMonthlyAnchor && nullNodeMonthlyAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyAnchor = null;
+            if (parseNode.GetChildNode("monthly_payout_days") is { } nullNodeMonthlyPayoutDays && nullNodeMonthlyPayoutDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyPayoutDays = null;
+            if (parseNode.GetChildNode("weekly_anchor") is { } nullNodeWeeklyAnchor && nullNodeWeeklyAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeklyAnchor = null;
+            if (parseNode.GetChildNode("weekly_payout_days") is { } nullNodeWeeklyPayoutDays && nullNodeWeeklyPayoutDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeklyPayoutDays = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of days charges for the account will be held before being paid out.</summary>
-        public int? DelayDays { get; set; }
+        public int? DelayDays { get => _explicitNullValueDelayDays; set { _explicitNullValueDelayDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay_days"); else _explicitNullProperties?.Remove("delay_days"); } }
+        private int? _explicitNullValueDelayDays = default!;
         /// <summary>How frequently funds will be paid out. One of `manual` (payouts only created via API call), `daily`, `weekly`, or `monthly`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Interval { get; set; }
+        public string? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private string? _explicitNullValueInterval = default!;
 #nullable restore
 #else
-        public string Interval { get; set; }
+        public string Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private string _explicitNullValueInterval = default!;
 #endif
         /// <summary>The day of the month funds will be paid out. Only shown if `interval` is monthly. Payouts scheduled between the 29th and 31st of the month are sent on the last day of shorter months.</summary>
-        public int? MonthlyAnchor { get; set; }
+        public int? MonthlyAnchor { get => _explicitNullValueMonthlyAnchor; set { _explicitNullValueMonthlyAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_anchor"); else _explicitNullProperties?.Remove("monthly_anchor"); } }
+        private int? _explicitNullValueMonthlyAnchor = default!;
         /// <summary>The days of the month funds will be paid out. Only shown if `interval` is monthly. Payouts scheduled between the 29th and 31st of the month are sent on the last day of shorter months.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? MonthlyPayoutDays { get; set; }
+        public List<int?>? MonthlyPayoutDays { get => _explicitNullValueMonthlyPayoutDays; set { _explicitNullValueMonthlyPayoutDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_payout_days"); else _explicitNullProperties?.Remove("monthly_payout_days"); } }
+        private List<int?>? _explicitNullValueMonthlyPayoutDays = default!;
 #nullable restore
 #else
-        public List<int?> MonthlyPayoutDays { get; set; }
+        public List<int?> MonthlyPayoutDays { get => _explicitNullValueMonthlyPayoutDays; set { _explicitNullValueMonthlyPayoutDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_payout_days"); else _explicitNullProperties?.Remove("monthly_payout_days"); } }
+        private List<int?> _explicitNullValueMonthlyPayoutDays = default!;
 #endif
         /// <summary>The day of the week funds will be paid out, of the style &apos;monday&apos;, &apos;tuesday&apos;, etc. Only shown if `interval` is weekly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeeklyAnchor { get; set; }
+        public string? WeeklyAnchor { get => _explicitNullValueWeeklyAnchor; set { _explicitNullValueWeeklyAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_anchor"); else _explicitNullProperties?.Remove("weekly_anchor"); } }
+        private string? _explicitNullValueWeeklyAnchor = default!;
 #nullable restore
 #else
-        public string WeeklyAnchor { get; set; }
+        public string WeeklyAnchor { get => _explicitNullValueWeeklyAnchor; set { _explicitNullValueWeeklyAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_anchor"); else _explicitNullProperties?.Remove("weekly_anchor"); } }
+        private string _explicitNullValueWeeklyAnchor = default!;
 #endif
         /// <summary>The days of the week when available funds are paid out, specified as an array, for example, [`monday`, `tuesday`]. Only shown if `interval` is weekly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?>? WeeklyPayoutDays { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?>? WeeklyPayoutDays { get => _explicitNullValueWeeklyPayoutDays; set { _explicitNullValueWeeklyPayoutDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_payout_days"); else _explicitNullProperties?.Remove("weekly_payout_days"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?>? _explicitNullValueWeeklyPayoutDays = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?> WeeklyPayoutDays { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?> WeeklyPayoutDays { get => _explicitNullValueWeeklyPayoutDays; set { _explicitNullValueWeeklyPayoutDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_payout_days"); else _explicitNullProperties?.Remove("weekly_payout_days"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?> _explicitNullValueWeeklyPayoutDays = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("monthly_payout_days", MonthlyPayoutDays);
             writer.WriteStringValue("weekly_anchor", WeeklyAnchor);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem>("weekly_payout_days", WeeklyPayoutDays);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

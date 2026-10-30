@@ -11,22 +11,38 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentMethodOptionsCardPresent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capture_method") is { } nullNodeCaptureMethod && nullNodeCaptureMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureMethod = null;
+            if (parseNode.GetChildNode("request_extended_authorization") is { } nullNodeRequestExtendedAuthorization && nullNodeRequestExtendedAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestExtendedAuthorization = null;
+            if (parseNode.GetChildNode("request_incremental_authorization_support") is { } nullNodeRequestIncrementalAuthorizationSupport && nullNodeRequestIncrementalAuthorizationSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIncrementalAuthorizationSupport = null;
+            if (parseNode.GetChildNode("routing") is { } nullNodeRouting && nullNodeRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Routing = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentCaptureMethod? CaptureMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentCaptureMethod? CaptureMethod { get => _explicitNullValueCaptureMethod; set { _explicitNullValueCaptureMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_method"); else _explicitNullProperties?.Remove("capture_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentCaptureMethod? _explicitNullValueCaptureMethod = default!;
         /// <summary>Request ability to capture this payment beyond the standard [authorization validity window](https://docs.stripe.com/terminal/features/extended-authorizations#authorization-validity)</summary>
-        public bool? RequestExtendedAuthorization { get; set; }
+        public bool? RequestExtendedAuthorization { get => _explicitNullValueRequestExtendedAuthorization; set { _explicitNullValueRequestExtendedAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_extended_authorization"); else _explicitNullProperties?.Remove("request_extended_authorization"); } }
+        private bool? _explicitNullValueRequestExtendedAuthorization = default!;
         /// <summary>Request ability to [increment](https://docs.stripe.com/terminal/features/incremental-authorizations) this PaymentIntent if the combination of MCC and card brand is eligible. Check [incremental_authorization_supported](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported) in the [Confirm](https://docs.stripe.com/api/payment_intents/confirm) response to verify support.</summary>
-        public bool? RequestIncrementalAuthorizationSupport { get; set; }
+        public bool? RequestIncrementalAuthorizationSupport { get => _explicitNullValueRequestIncrementalAuthorizationSupport; set { _explicitNullValueRequestIncrementalAuthorizationSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_incremental_authorization_support"); else _explicitNullProperties?.Remove("request_incremental_authorization_support"); } }
+        private bool? _explicitNullValueRequestIncrementalAuthorizationSupport = default!;
         /// <summary>The routing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting? Routing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting? Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routing"); else _explicitNullProperties?.Remove("routing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting? _explicitNullValueRouting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting Routing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routing"); else _explicitNullProperties?.Remove("routing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting _explicitNullValueRouting = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresent"/> and sets the default values.
@@ -43,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("request_extended_authorization", RequestExtendedAuthorization);
             writer.WriteBoolValue("request_incremental_authorization_support", RequestIncrementalAuthorizationSupport);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardPresentRouting>("routing", Routing);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

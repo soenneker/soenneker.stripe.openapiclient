@@ -11,16 +11,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdownNonFuel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("gross_amount_decimal") is { } nullNodeGrossAmountDecimal && nullNodeGrossAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossAmountDecimal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The gross_amount_decimal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GrossAmountDecimal { get; set; }
+        public string? GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
+        private string? _explicitNullValueGrossAmountDecimal = default!;
 #nullable restore
 #else
-        public string GrossAmountDecimal { get; set; }
+        public string GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
+        private string _explicitNullValueGrossAmountDecimal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdownNonFuel"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdownNonFuel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdownNonFuel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdownNonFuel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("gross_amount_decimal", GrossAmountDecimal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

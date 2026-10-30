@@ -11,76 +11,113 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_details") is { } nullNodeAmountDetails && nullNodeAmountDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountDetails = null;
+            if (parseNode.GetChildNode("amount_to_capture") is { } nullNodeAmountToCapture && nullNodeAmountToCapture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountToCapture = null;
+            if (parseNode.GetChildNode("application_fee_amount") is { } nullNodeApplicationFeeAmount && nullNodeApplicationFeeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFeeAmount = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("final_capture") is { } nullNodeFinalCapture && nullNodeFinalCapture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalCapture = null;
+            if (parseNode.GetChildNode("hooks") is { } nullNodeHooks && nullNodeHooks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hooks = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("payment_details") is { } nullNodePaymentDetails && nullNodePaymentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentDetails = null;
+            if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
+            if (parseNode.GetChildNode("statement_descriptor_suffix") is { } nullNodeStatementDescriptorSuffix && nullNodeStatementDescriptorSuffix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorSuffix = null;
+            if (parseNode.GetChildNode("transfer_data") is { } nullNodeTransferData && nullNodeTransferData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferData = null;
+        }
+
         /// <summary>Provides industry-specific information about the amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails? AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetails _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>The amount to capture from the PaymentIntent, which must be less than or equal to the original amount. Defaults to the full `amount_capturable` if it&apos;s not provided.</summary>
-        public int? AmountToCapture { get; set; }
+        public int? AmountToCapture { get => _explicitNullValueAmountToCapture; set { _explicitNullValueAmountToCapture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_to_capture"); else _explicitNullProperties?.Remove("amount_to_capture"); } }
+        private int? _explicitNullValueAmountToCapture = default!;
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
-        public int? ApplicationFeeAmount { get; set; }
+        public int? ApplicationFeeAmount { get => _explicitNullValueApplicationFeeAmount; set { _explicitNullValueApplicationFeeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_amount"); else _explicitNullProperties?.Remove("application_fee_amount"); } }
+        private int? _explicitNullValueApplicationFeeAmount = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Defaults to `true`. When capturing a PaymentIntent, setting `final_capture` to `false` notifies Stripe to not release the remaining uncaptured funds to make sure that they&apos;re captured in future requests. You can only use this setting when [multicapture](https://docs.stripe.com/payments/multicapture) is available for PaymentIntents.</summary>
-        public bool? FinalCapture { get; set; }
+        public bool? FinalCapture { get => _explicitNullValueFinalCapture; set { _explicitNullValueFinalCapture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_capture"); else _explicitNullProperties?.Remove("final_capture"); } }
+        private bool? _explicitNullValueFinalCapture = default!;
         /// <summary>Automations to be run during the PaymentIntent lifecycle</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks? Hooks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks? Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks? _explicitNullValueHooks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks Hooks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestHooks _explicitNullValueHooks = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Provides industry-specific information about the charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails? PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails? PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails? _explicitNullValuePaymentDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails _explicitNullValuePaymentDetails = default!;
 #endif
         /// <summary>Text that appears on the customer&apos;s statement as the statement descriptor for a non-card charge. This value overrides the account&apos;s default statement descriptor. For information about requirements, including the 22-character limit, see [the Statement Descriptor docs](https://docs.stripe.com/get-started/account/statement-descriptors).Setting this value for a card charge returns an error. For card charges, set the [statement_descriptor_suffix](https://docs.stripe.com/get-started/account/statement-descriptors#dynamic) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptor { get; set; }
+        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        private string? _explicitNullValueStatementDescriptor = default!;
 #nullable restore
 #else
-        public string StatementDescriptor { get; set; }
+        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        private string _explicitNullValueStatementDescriptor = default!;
 #endif
         /// <summary>Provides information about a card charge. Concatenated to the account&apos;s [statement descriptor prefix](https://docs.stripe.com/get-started/account/statement-descriptors#static) to form the complete statement descriptor that appears on the customer&apos;s statement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorSuffix { get; set; }
+        public string? StatementDescriptorSuffix { get => _explicitNullValueStatementDescriptorSuffix; set { _explicitNullValueStatementDescriptorSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix"); else _explicitNullProperties?.Remove("statement_descriptor_suffix"); } }
+        private string? _explicitNullValueStatementDescriptorSuffix = default!;
 #nullable restore
 #else
-        public string StatementDescriptorSuffix { get; set; }
+        public string StatementDescriptorSuffix { get => _explicitNullValueStatementDescriptorSuffix; set { _explicitNullValueStatementDescriptorSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix"); else _explicitNullProperties?.Remove("statement_descriptor_suffix"); } }
+        private string _explicitNullValueStatementDescriptorSuffix = default!;
 #endif
         /// <summary>The parameters that you can use to automatically create a transfer after the paymentis captured. Learn more about the [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData? TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -90,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,7 +167,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetails>("payment_details", PaymentDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("statement_descriptor_suffix", StatementDescriptorSuffix);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

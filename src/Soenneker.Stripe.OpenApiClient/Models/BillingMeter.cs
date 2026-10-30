@@ -12,76 +12,116 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingMeter : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("customer_mapping") is { } nullNodeCustomerMapping && nullNodeCustomerMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerMapping = null;
+            if (parseNode.GetChildNode("default_aggregation") is { } nullNodeDefaultAggregation && nullNodeDefaultAggregation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAggregation = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("event_name") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
+            if (parseNode.GetChildNode("event_time_window") is { } nullNodeEventTimeWindow && nullNodeEventTimeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTimeWindow = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_transitions") is { } nullNodeStatusTransitions && nullNodeStatusTransitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusTransitions = null;
+            if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+            if (parseNode.GetChildNode("value_settings") is { } nullNodeValueSettings && nullNodeValueSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>The customer_mapping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings? CustomerMapping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings? CustomerMapping { get => _explicitNullValueCustomerMapping; set { _explicitNullValueCustomerMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_mapping"); else _explicitNullProperties?.Remove("customer_mapping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings? _explicitNullValueCustomerMapping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings CustomerMapping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings CustomerMapping { get => _explicitNullValueCustomerMapping; set { _explicitNullValueCustomerMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_mapping"); else _explicitNullProperties?.Remove("customer_mapping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings _explicitNullValueCustomerMapping = default!;
 #endif
         /// <summary>The default_aggregation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings? DefaultAggregation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings? DefaultAggregation { get => _explicitNullValueDefaultAggregation; set { _explicitNullValueDefaultAggregation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_aggregation"); else _explicitNullProperties?.Remove("default_aggregation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings? _explicitNullValueDefaultAggregation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings DefaultAggregation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings DefaultAggregation { get => _explicitNullValueDefaultAggregation; set { _explicitNullValueDefaultAggregation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_aggregation"); else _explicitNullProperties?.Remove("default_aggregation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings _explicitNullValueDefaultAggregation = default!;
 #endif
         /// <summary>The meter&apos;s name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The name of the meter event to record usage for. Corresponds with the `event_name` field on meter events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventName { get; set; }
+        public string? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        private string? _explicitNullValueEventName = default!;
 #nullable restore
 #else
-        public string EventName { get; set; }
+        public string EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        private string _explicitNullValueEventName = default!;
 #endif
         /// <summary>The time window which meter events have been pre-aggregated for, if any.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow? EventTimeWindow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow? EventTimeWindow { get => _explicitNullValueEventTimeWindow; set { _explicitNullValueEventTimeWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_time_window"); else _explicitNullProperties?.Remove("event_time_window"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow? _explicitNullValueEventTimeWindow = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject? _explicitNullValueObject = default!;
         /// <summary>The meter&apos;s status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus? _explicitNullValueStatus = default!;
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions? StatusTransitions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions? StatusTransitions { get => _explicitNullValueStatusTransitions; set { _explicitNullValueStatusTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_transitions"); else _explicitNullProperties?.Remove("status_transitions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions? _explicitNullValueStatusTransitions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions StatusTransitions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions StatusTransitions { get => _explicitNullValueStatusTransitions; set { _explicitNullValueStatusTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_transitions"); else _explicitNullProperties?.Remove("status_transitions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions _explicitNullValueStatusTransitions = default!;
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get; set; }
+        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private int? _explicitNullValueUpdated = default!;
         /// <summary>The value_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue? ValueSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue? ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_settings"); else _explicitNullProperties?.Remove("value_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue? _explicitNullValueValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue ValueSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_settings"); else _explicitNullProperties?.Remove("value_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue _explicitNullValueValueSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter"/> and sets the default values.
@@ -98,7 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,6 +183,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteIntValue("updated", Updated);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue>("value_settings", ValueSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

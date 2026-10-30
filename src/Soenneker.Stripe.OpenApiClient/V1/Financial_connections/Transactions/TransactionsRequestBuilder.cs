@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at*,transaction_refresh*}", pathParameters)
+        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,28 +43,26 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at*,transaction_refresh*}", rawUrl)
+        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of Financial Connections &lt;code&gt;Transaction&lt;/code&gt; objects.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionList"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetFinancialConnectionsTransactionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetFinancialConnectionsTransactionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionList> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
@@ -75,22 +73,19 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
         /// &lt;p&gt;Returns a list of Financial Connections &lt;code&gt;Transaction&lt;/code&gt; objects.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetFinancialConnectionsTransactionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetFinancialConnectionsTransactionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
             return requestInfo;
         }
         /// <summary>
@@ -154,6 +149,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
             /// <summary>A filter on the list based on the object `transacted_at` field. The value can be a string with an integer Unix timestamp, or it can be a dictionary with the following options:</summary>
             [QueryParameter("transacted_at")]
             public int? TransactedAt { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("transacted_at%5Bgt%5D")]
+            public int? TransactedAtgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("transacted_at%5Bgte%5D")]
+            public int? TransactedAtgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("transacted_at%5Blt%5D")]
+            public int? TransactedAtlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("transacted_at%5Blte%5D")]
+            public int? TransactedAtlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>A filter on the list based on the object `transaction_refresh` field. The value can be a dictionary with the following options:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

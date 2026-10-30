@@ -11,13 +11,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dispute_rate") is { } nullNodeDisputeRate && nullNodeDisputeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeRate = null;
+            if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dispute_rate property</summary>
-        public int? DisputeRate { get; set; }
+        public int? DisputeRate { get => _explicitNullValueDisputeRate; set { _explicitNullValueDisputeRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_rate"); else _explicitNullProperties?.Remove("dispute_rate"); } }
+        private int? _explicitNullValueDisputeRate = default!;
         /// <summary>The level property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? Level { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? _explicitNullValueLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dispute_rate", DisputeRate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel>("level", Level);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

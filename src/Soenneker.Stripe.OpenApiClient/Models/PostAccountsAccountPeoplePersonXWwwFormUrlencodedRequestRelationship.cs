@@ -12,36 +12,61 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationship : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorizer") is { } nullNodeAuthorizer && nullNodeAuthorizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorizer = null;
+            if (parseNode.GetChildNode("director") is { } nullNodeDirector && nullNodeDirector.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Director = null;
+            if (parseNode.GetChildNode("executive") is { } nullNodeExecutive && nullNodeExecutive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Executive = null;
+            if (parseNode.GetChildNode("legal_guardian") is { } nullNodeLegalGuardian && nullNodeLegalGuardian.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalGuardian = null;
+            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("percent_ownership") is { } nullNodePercentOwnership && nullNodePercentOwnership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentOwnership = null;
+            if (parseNode.GetChildNode("representative") is { } nullNodeRepresentative && nullNodeRepresentative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Representative = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authorizer property</summary>
-        public bool? Authorizer { get; set; }
+        public bool? Authorizer { get => _explicitNullValueAuthorizer; set { _explicitNullValueAuthorizer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizer"); else _explicitNullProperties?.Remove("authorizer"); } }
+        private bool? _explicitNullValueAuthorizer = default!;
         /// <summary>The director property</summary>
-        public bool? Director { get; set; }
+        public bool? Director { get => _explicitNullValueDirector; set { _explicitNullValueDirector = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("director"); else _explicitNullProperties?.Remove("director"); } }
+        private bool? _explicitNullValueDirector = default!;
         /// <summary>The executive property</summary>
-        public bool? Executive { get; set; }
+        public bool? Executive { get => _explicitNullValueExecutive; set { _explicitNullValueExecutive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executive"); else _explicitNullProperties?.Remove("executive"); } }
+        private bool? _explicitNullValueExecutive = default!;
         /// <summary>The legal_guardian property</summary>
-        public bool? LegalGuardian { get; set; }
+        public bool? LegalGuardian { get => _explicitNullValueLegalGuardian; set { _explicitNullValueLegalGuardian = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_guardian"); else _explicitNullProperties?.Remove("legal_guardian"); } }
+        private bool? _explicitNullValueLegalGuardian = default!;
         /// <summary>The owner property</summary>
-        public bool? Owner { get; set; }
+        public bool? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private bool? _explicitNullValueOwner = default!;
         /// <summary>The percent_ownership property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership? PercentOwnership { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership? PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership? _explicitNullValuePercentOwnership = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership PercentOwnership { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership _explicitNullValuePercentOwnership = default!;
 #endif
         /// <summary>The representative property</summary>
-        public bool? Representative { get; set; }
+        public bool? Representative { get => _explicitNullValueRepresentative; set { _explicitNullValueRepresentative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative"); else _explicitNullProperties?.Remove("representative"); } }
+        private bool? _explicitNullValueRepresentative = default!;
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationship"/> and sets the default values.
@@ -58,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationship CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationship();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationship(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestRelationshipPercentOwnership>("percent_ownership", PercentOwnership);
             writer.WriteBoolValue("representative", Representative);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

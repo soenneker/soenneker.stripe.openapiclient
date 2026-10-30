@@ -12,26 +12,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostBalanceSettingsXWwwFormUrlencodedRequestPayments : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("debit_negative_balances") is { } nullNodeDebitNegativeBalances && nullNodeDebitNegativeBalances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitNegativeBalances = null;
+            if (parseNode.GetChildNode("payouts") is { } nullNodePayouts && nullNodePayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payouts = null;
+            if (parseNode.GetChildNode("settlement_timing") is { } nullNodeSettlementTiming && nullNodeSettlementTiming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SettlementTiming = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The debit_negative_balances property</summary>
-        public bool? DebitNegativeBalances { get; set; }
+        public bool? DebitNegativeBalances { get => _explicitNullValueDebitNegativeBalances; set { _explicitNullValueDebitNegativeBalances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_negative_balances"); else _explicitNullProperties?.Remove("debit_negative_balances"); } }
+        private bool? _explicitNullValueDebitNegativeBalances = default!;
         /// <summary>The payouts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts? Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts? _explicitNullValuePayouts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts _explicitNullValuePayouts = default!;
 #endif
         /// <summary>The settlement_timing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming? SettlementTiming { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming? SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming? _explicitNullValueSettlementTiming = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming SettlementTiming { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming _explicitNullValueSettlementTiming = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPayments"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPayments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPayments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPayments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("debit_negative_balances", DebitNegativeBalances);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayouts>("payouts", Payouts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTiming>("settlement_timing", SettlementTiming);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

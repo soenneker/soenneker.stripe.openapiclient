@@ -11,15 +11,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingPhysicalBundleFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
+            if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
+            if (parseNode.GetChildNode("second_line") is { } nullNodeSecondLine && nullNodeSecondLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondLine = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The policy for how to use card logo images in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? _explicitNullValueCardLogo = default!;
         /// <summary>The policy for how to use carrier letter text in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? _explicitNullValueCarrierText = default!;
         /// <summary>The policy for how to use a second line on a card with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? SecondLine { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? SecondLine { get => _explicitNullValueSecondLine; set { _explicitNullValueSecondLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second_line"); else _explicitNullProperties?.Remove("second_line"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? _explicitNullValueSecondLine = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo>("card_logo", CardLogo);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText>("carrier_text", CarrierText);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine>("second_line", SecondLine);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

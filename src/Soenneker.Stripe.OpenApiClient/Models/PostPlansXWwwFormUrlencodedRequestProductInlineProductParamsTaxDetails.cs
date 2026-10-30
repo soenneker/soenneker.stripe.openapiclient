@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("performance_location") is { } nullNodePerformanceLocation && nullNodePerformanceLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerformanceLocation = null;
+            if (parseNode.GetChildNode("tax_code") is { } nullNodeTaxCode && nullNodeTaxCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The performance_location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PerformanceLocation { get; set; }
+        public string? PerformanceLocation { get => _explicitNullValuePerformanceLocation; set { _explicitNullValuePerformanceLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("performance_location"); else _explicitNullProperties?.Remove("performance_location"); } }
+        private string? _explicitNullValuePerformanceLocation = default!;
 #nullable restore
 #else
-        public string PerformanceLocation { get; set; }
+        public string PerformanceLocation { get => _explicitNullValuePerformanceLocation; set { _explicitNullValuePerformanceLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("performance_location"); else _explicitNullProperties?.Remove("performance_location"); } }
+        private string _explicitNullValuePerformanceLocation = default!;
 #endif
         /// <summary>The tax_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode? TaxCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode? TaxCode { get => _explicitNullValueTaxCode; set { _explicitNullValueTaxCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_code"); else _explicitNullProperties?.Remove("tax_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode? _explicitNullValueTaxCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode TaxCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode TaxCode { get => _explicitNullValueTaxCode; set { _explicitNullValueTaxCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_code"); else _explicitNullProperties?.Remove("tax_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode _explicitNullValueTaxCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetails"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("performance_location", PerformanceLocation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPlansXWwwFormUrlencodedRequestProductInlineProductParamsTaxDetailsTaxCode>("tax_code", TaxCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

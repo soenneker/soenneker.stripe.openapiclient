@@ -11,29 +11,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleet : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cardholder_prompt_data") is { } nullNodeCardholderPromptData && nullNodeCardholderPromptData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderPromptData = null;
+            if (parseNode.GetChildNode("purchase_type") is { } nullNodePurchaseType && nullNodePurchaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseType = null;
+            if (parseNode.GetChildNode("reported_breakdown") is { } nullNodeReportedBreakdown && nullNodeReportedBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedBreakdown = null;
+            if (parseNode.GetChildNode("service_type") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cardholder_prompt_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData? CardholderPromptData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData? CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData? _explicitNullValueCardholderPromptData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData CardholderPromptData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData _explicitNullValueCardholderPromptData = default!;
 #endif
         /// <summary>The purchase_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetPurchaseType? PurchaseType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetPurchaseType? PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetPurchaseType? _explicitNullValuePurchaseType = default!;
         /// <summary>The reported_breakdown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown? ReportedBreakdown { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown? ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown? _explicitNullValueReportedBreakdown = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown ReportedBreakdown { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown _explicitNullValueReportedBreakdown = default!;
 #endif
         /// <summary>The service_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetServiceType? ServiceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetServiceType? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetServiceType? _explicitNullValueServiceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleet"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleet CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleet();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleet(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetPurchaseType>("purchase_type", PurchaseType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetReportedBreakdown>("reported_breakdown", ReportedBreakdown);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetServiceType>("service_type", ServiceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

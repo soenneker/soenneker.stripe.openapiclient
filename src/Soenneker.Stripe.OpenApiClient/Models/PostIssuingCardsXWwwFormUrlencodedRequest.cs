@@ -11,113 +11,166 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingCardsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cardholder") is { } nullNodeCardholder && nullNodeCardholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cardholder = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("exp_month") is { } nullNodeExpMonth && nullNodeExpMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpMonth = null;
+            if (parseNode.GetChildNode("exp_year") is { } nullNodeExpYear && nullNodeExpYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpYear = null;
+            if (parseNode.GetChildNode("financial_account") is { } nullNodeFinancialAccount && nullNodeFinancialAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAccount = null;
+            if (parseNode.GetChildNode("lifecycle_controls") is { } nullNodeLifecycleControls && nullNodeLifecycleControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LifecycleControls = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("personalization_design") is { } nullNodePersonalizationDesign && nullNodePersonalizationDesign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalizationDesign = null;
+            if (parseNode.GetChildNode("pin") is { } nullNodePin && nullNodePin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pin = null;
+            if (parseNode.GetChildNode("replacement_for") is { } nullNodeReplacementFor && nullNodeReplacementFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplacementFor = null;
+            if (parseNode.GetChildNode("replacement_reason") is { } nullNodeReplacementReason && nullNodeReplacementReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplacementReason = null;
+            if (parseNode.GetChildNode("second_line") is { } nullNodeSecondLine && nullNodeSecondLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondLine = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("spending_controls") is { } nullNodeSpendingControls && nullNodeSpendingControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendingControls = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The [Cardholder](https://docs.stripe.com/api#issuing_cardholder_object) object with which the card will be associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cardholder { get; set; }
+        public string? Cardholder { get => _explicitNullValueCardholder; set { _explicitNullValueCardholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder"); else _explicitNullProperties?.Remove("cardholder"); } }
+        private string? _explicitNullValueCardholder = default!;
 #nullable restore
 #else
-        public string Cardholder { get; set; }
+        public string Cardholder { get => _explicitNullValueCardholder; set { _explicitNullValueCardholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder"); else _explicitNullProperties?.Remove("cardholder"); } }
+        private string _explicitNullValueCardholder = default!;
 #endif
         /// <summary>The currency for the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The desired expiration month (1-12) for this card if [specifying a custom expiration date](/issuing/cards/virtual/issue-cards?testing-method=with-code#exp-dates).</summary>
-        public int? ExpMonth { get; set; }
+        public int? ExpMonth { get => _explicitNullValueExpMonth; set { _explicitNullValueExpMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_month"); else _explicitNullProperties?.Remove("exp_month"); } }
+        private int? _explicitNullValueExpMonth = default!;
         /// <summary>The desired 4-digit expiration year for this card if [specifying a custom expiration date](/issuing/cards/virtual/issue-cards?testing-method=with-code#exp-dates).</summary>
-        public int? ExpYear { get; set; }
+        public int? ExpYear { get => _explicitNullValueExpYear; set { _explicitNullValueExpYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_year"); else _explicitNullProperties?.Remove("exp_year"); } }
+        private int? _explicitNullValueExpYear = default!;
         /// <summary>The new financial account ID the card will be associated with. This field allows a card to be reassigned to a different financial account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinancialAccount { get; set; }
+        public string? FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private string? _explicitNullValueFinancialAccount = default!;
 #nullable restore
 #else
-        public string FinancialAccount { get; set; }
+        public string FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private string _explicitNullValueFinancialAccount = default!;
 #endif
         /// <summary>Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls? LifecycleControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls? LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls? _explicitNullValueLifecycleControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls LifecycleControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestLifecycleControls _explicitNullValueLifecycleControls = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The personalization design object belonging to this card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonalizationDesign { get; set; }
+        public string? PersonalizationDesign { get => _explicitNullValuePersonalizationDesign; set { _explicitNullValuePersonalizationDesign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personalization_design"); else _explicitNullProperties?.Remove("personalization_design"); } }
+        private string? _explicitNullValuePersonalizationDesign = default!;
 #nullable restore
 #else
-        public string PersonalizationDesign { get; set; }
+        public string PersonalizationDesign { get => _explicitNullValuePersonalizationDesign; set { _explicitNullValuePersonalizationDesign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personalization_design"); else _explicitNullProperties?.Remove("personalization_design"); } }
+        private string _explicitNullValuePersonalizationDesign = default!;
 #endif
         /// <summary>The desired PIN for this card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin? Pin { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin? Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin? _explicitNullValuePin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin Pin { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestPin _explicitNullValuePin = default!;
 #endif
         /// <summary>The card this is meant to be a replacement for (if any).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReplacementFor { get; set; }
+        public string? ReplacementFor { get => _explicitNullValueReplacementFor; set { _explicitNullValueReplacementFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replacement_for"); else _explicitNullProperties?.Remove("replacement_for"); } }
+        private string? _explicitNullValueReplacementFor = default!;
 #nullable restore
 #else
-        public string ReplacementFor { get; set; }
+        public string ReplacementFor { get => _explicitNullValueReplacementFor; set { _explicitNullValueReplacementFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replacement_for"); else _explicitNullProperties?.Remove("replacement_for"); } }
+        private string _explicitNullValueReplacementFor = default!;
 #endif
         /// <summary>If `replacement_for` is specified, this should indicate why that card is being replaced.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestReplacementReason? ReplacementReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestReplacementReason? ReplacementReason { get => _explicitNullValueReplacementReason; set { _explicitNullValueReplacementReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replacement_reason"); else _explicitNullProperties?.Remove("replacement_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestReplacementReason? _explicitNullValueReplacementReason = default!;
         /// <summary>The second line to print on the card. Max length: 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine? SecondLine { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine? SecondLine { get => _explicitNullValueSecondLine; set { _explicitNullValueSecondLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second_line"); else _explicitNullProperties?.Remove("second_line"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine? _explicitNullValueSecondLine = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine SecondLine { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine SecondLine { get => _explicitNullValueSecondLine; set { _explicitNullValueSecondLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second_line"); else _explicitNullProperties?.Remove("second_line"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine _explicitNullValueSecondLine = default!;
 #endif
         /// <summary>The address where the card will be shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>Rules that control spending for this card. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls? SpendingControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls? SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls? _explicitNullValueSpendingControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls SpendingControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls _explicitNullValueSpendingControls = default!;
 #endif
         /// <summary>Whether authorizations can be approved on this card. May be blocked from activating cards depending on past-due Cardholder requirements. Defaults to `inactive`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestStatus? _explicitNullValueStatus = default!;
         /// <summary>The type of card to issue. Possible values are `physical` or `virtual`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -126,7 +179,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,7 +231,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSpendingControls>("spending_controls", SpendingControls);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestStatus>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,48 +12,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IdentityVerificationSessionOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("document") is { } nullNodeDocument && nullNodeDocument.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Document = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("id_number") is { } nullNodeIdNumber && nullNodeIdNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdNumber = null;
+            if (parseNode.GetChildNode("matching") is { } nullNodeMatching && nullNodeMatching.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Matching = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The document property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions? Document { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions? Document { get => _explicitNullValueDocument; set { _explicitNullValueDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document"); else _explicitNullProperties?.Remove("document"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions? _explicitNullValueDocument = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions Document { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions Document { get => _explicitNullValueDocument; set { _explicitNullValueDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document"); else _explicitNullProperties?.Remove("document"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionDocumentOptions _explicitNullValueDocument = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions? Email { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions Email { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionEmailOptions _explicitNullValueEmail = default!;
 #endif
         /// <summary>The id_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber? IdNumber { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber? IdNumber { get => _explicitNullValueIdNumber; set { _explicitNullValueIdNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number"); else _explicitNullProperties?.Remove("id_number"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber? _explicitNullValueIdNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber IdNumber { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber IdNumber { get => _explicitNullValueIdNumber; set { _explicitNullValueIdNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number"); else _explicitNullProperties?.Remove("id_number"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber _explicitNullValueIdNumber = default!;
 #endif
         /// <summary>The matching property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions? Matching { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions? Matching { get => _explicitNullValueMatching; set { _explicitNullValueMatching = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matching"); else _explicitNullProperties?.Remove("matching"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions? _explicitNullValueMatching = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions Matching { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions Matching { get => _explicitNullValueMatching; set { _explicitNullValueMatching = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matching"); else _explicitNullProperties?.Remove("matching"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions _explicitNullValueMatching = default!;
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions? Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions _explicitNullValuePhone = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber>("id_number", IdNumber);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions>("matching", Matching);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions>("phone", Phone);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,32 +11,50 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("final_amount") is { } nullNodeFinalAmount && nullNodeFinalAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalAmount = null;
+            if (parseNode.GetChildNode("fleet") is { } nullNodeFleet && nullNodeFleet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fleet = null;
+            if (parseNode.GetChildNode("fuel") is { } nullNodeFuel && nullNodeFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fuel = null;
+        }
+
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The final authorization amount that will be captured by the merchant. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? FinalAmount { get; set; }
+        public int? FinalAmount { get => _explicitNullValueFinalAmount; set { _explicitNullValueFinalAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_amount"); else _explicitNullProperties?.Remove("final_amount"); } }
+        private int? _explicitNullValueFinalAmount = default!;
         /// <summary>Fleet-specific information for authorizations using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet? Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet? Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet? _explicitNullValueFleet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet _explicitNullValueFleet = default!;
 #endif
         /// <summary>Information about fuel that was purchased with this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel? Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel? _explicitNullValueFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel _explicitNullValueFuel = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +90,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("final_amount", FinalAmount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleet>("fleet", Fleet);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel>("fuel", Fuel);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFuel>("fuel", Fuel);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

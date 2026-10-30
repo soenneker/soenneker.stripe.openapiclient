@@ -12,40 +12,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BankAccountFutureRequirements : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currently_due") is { } nullNodeCurrentlyDue && nullNodeCurrentlyDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentlyDue = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("past_due") is { } nullNodePastDue && nullNodePastDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PastDue = null;
+            if (parseNode.GetChildNode("pending_verification") is { } nullNodePendingVerification && nullNodePendingVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingVerification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Fields that need to be resolved to keep the external account enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the account is disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CurrentlyDue { get; set; }
+        public List<string>? CurrentlyDue { get => _explicitNullValueCurrentlyDue; set { _explicitNullValueCurrentlyDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_due"); else _explicitNullProperties?.Remove("currently_due"); } }
+        private List<string>? _explicitNullValueCurrentlyDue = default!;
 #nullable restore
 #else
-        public List<string> CurrentlyDue { get; set; }
+        public List<string> CurrentlyDue { get => _explicitNullValueCurrentlyDue; set { _explicitNullValueCurrentlyDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currently_due"); else _explicitNullProperties?.Remove("currently_due"); } }
+        private List<string> _explicitNullValueCurrentlyDue = default!;
 #endif
         /// <summary>Fields that are `currently_due` and need to be collected again because validation or verification failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? Errors { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError> Errors { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError> _explicitNullValueErrors = default!;
 #endif
         /// <summary>Fields that haven&apos;t been resolved by `current_deadline`. These fields need to be resolved to enable the external account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PastDue { get; set; }
+        public List<string>? PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
+        private List<string>? _explicitNullValuePastDue = default!;
 #nullable restore
 #else
-        public List<string> PastDue { get; set; }
+        public List<string> PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
+        private List<string> _explicitNullValuePastDue = default!;
 #endif
         /// <summary>Fields that are being reviewed, or might become required depending on the results of a review. If the review fails, these fields can move to `eventually_due`, `currently_due`, `past_due` or `alternatives`. Fields might appear in `eventually_due`, `currently_due`, `past_due` or `alternatives` and in `pending_verification` if one verification fails but another is still pending.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PendingVerification { get; set; }
+        public List<string>? PendingVerification { get => _explicitNullValuePendingVerification; set { _explicitNullValuePendingVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_verification"); else _explicitNullProperties?.Remove("pending_verification"); } }
+        private List<string>? _explicitNullValuePendingVerification = default!;
 #nullable restore
 #else
-        public List<string> PendingVerification { get; set; }
+        public List<string> PendingVerification { get => _explicitNullValuePendingVerification; set { _explicitNullValuePendingVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_verification"); else _explicitNullProperties?.Remove("pending_verification"); } }
+        private List<string> _explicitNullValuePendingVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>("errors", Errors);
             writer.WriteCollectionOfPrimitiveValues<string>("past_due", PastDue);
             writer.WriteCollectionOfPrimitiveValues<string>("pending_verification", PendingVerification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

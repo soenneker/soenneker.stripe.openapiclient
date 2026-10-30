@@ -11,116 +11,168 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_holder_name") is { } nullNodeAccountHolderName && nullNodeAccountHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountHolderName = null;
+            if (parseNode.GetChildNode("account_holder_type") is { } nullNodeAccountHolderType && nullNodeAccountHolderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountHolderType = null;
+            if (parseNode.GetChildNode("account_type") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
+            if (parseNode.GetChildNode("address_city") is { } nullNodeAddressCity && nullNodeAddressCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressCity = null;
+            if (parseNode.GetChildNode("address_country") is { } nullNodeAddressCountry && nullNodeAddressCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressCountry = null;
+            if (parseNode.GetChildNode("address_line1") is { } nullNodeAddressLine1 && nullNodeAddressLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine1 = null;
+            if (parseNode.GetChildNode("address_line2") is { } nullNodeAddressLine2 && nullNodeAddressLine2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine2 = null;
+            if (parseNode.GetChildNode("address_state") is { } nullNodeAddressState && nullNodeAddressState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressState = null;
+            if (parseNode.GetChildNode("address_zip") is { } nullNodeAddressZip && nullNodeAddressZip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressZip = null;
+            if (parseNode.GetChildNode("default_for_currency") is { } nullNodeDefaultForCurrency && nullNodeDefaultForCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultForCurrency = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("exp_month") is { } nullNodeExpMonth && nullNodeExpMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpMonth = null;
+            if (parseNode.GetChildNode("exp_year") is { } nullNodeExpYear && nullNodeExpYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpYear = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>The name of the person or business that owns the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountHolderName { get; set; }
+        public string? AccountHolderName { get => _explicitNullValueAccountHolderName; set { _explicitNullValueAccountHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder_name"); else _explicitNullProperties?.Remove("account_holder_name"); } }
+        private string? _explicitNullValueAccountHolderName = default!;
 #nullable restore
 #else
-        public string AccountHolderName { get; set; }
+        public string AccountHolderName { get => _explicitNullValueAccountHolderName; set { _explicitNullValueAccountHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder_name"); else _explicitNullProperties?.Remove("account_holder_name"); } }
+        private string _explicitNullValueAccountHolderName = default!;
 #endif
         /// <summary>The type of entity that holds the account. This can be either `individual` or `company`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountHolderType? AccountHolderType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountHolderType? AccountHolderType { get => _explicitNullValueAccountHolderType; set { _explicitNullValueAccountHolderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder_type"); else _explicitNullProperties?.Remove("account_holder_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountHolderType? _explicitNullValueAccountHolderType = default!;
         /// <summary>The bank account type. This can only be `checking` or `savings` in most countries. In Japan, this can only be `futsu` or `toza`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountType? AccountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_type"); else _explicitNullProperties?.Remove("account_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestAccountType? _explicitNullValueAccountType = default!;
         /// <summary>City/District/Suburb/Town/Village.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressCity { get; set; }
+        public string? AddressCity { get => _explicitNullValueAddressCity; set { _explicitNullValueAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_city"); else _explicitNullProperties?.Remove("address_city"); } }
+        private string? _explicitNullValueAddressCity = default!;
 #nullable restore
 #else
-        public string AddressCity { get; set; }
+        public string AddressCity { get => _explicitNullValueAddressCity; set { _explicitNullValueAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_city"); else _explicitNullProperties?.Remove("address_city"); } }
+        private string _explicitNullValueAddressCity = default!;
 #endif
         /// <summary>Billing address country, if provided when creating card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressCountry { get; set; }
+        public string? AddressCountry { get => _explicitNullValueAddressCountry; set { _explicitNullValueAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country"); else _explicitNullProperties?.Remove("address_country"); } }
+        private string? _explicitNullValueAddressCountry = default!;
 #nullable restore
 #else
-        public string AddressCountry { get; set; }
+        public string AddressCountry { get => _explicitNullValueAddressCountry; set { _explicitNullValueAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country"); else _explicitNullProperties?.Remove("address_country"); } }
+        private string _explicitNullValueAddressCountry = default!;
 #endif
         /// <summary>Address line 1 (Street address/PO Box/Company name).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressLine1 { get; set; }
+        public string? AddressLine1 { get => _explicitNullValueAddressLine1; set { _explicitNullValueAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1"); else _explicitNullProperties?.Remove("address_line1"); } }
+        private string? _explicitNullValueAddressLine1 = default!;
 #nullable restore
 #else
-        public string AddressLine1 { get; set; }
+        public string AddressLine1 { get => _explicitNullValueAddressLine1; set { _explicitNullValueAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1"); else _explicitNullProperties?.Remove("address_line1"); } }
+        private string _explicitNullValueAddressLine1 = default!;
 #endif
         /// <summary>Address line 2 (Apartment/Suite/Unit/Building).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressLine2 { get; set; }
+        public string? AddressLine2 { get => _explicitNullValueAddressLine2; set { _explicitNullValueAddressLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line2"); else _explicitNullProperties?.Remove("address_line2"); } }
+        private string? _explicitNullValueAddressLine2 = default!;
 #nullable restore
 #else
-        public string AddressLine2 { get; set; }
+        public string AddressLine2 { get => _explicitNullValueAddressLine2; set { _explicitNullValueAddressLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line2"); else _explicitNullProperties?.Remove("address_line2"); } }
+        private string _explicitNullValueAddressLine2 = default!;
 #endif
         /// <summary>State/County/Province/Region.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressState { get; set; }
+        public string? AddressState { get => _explicitNullValueAddressState; set { _explicitNullValueAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_state"); else _explicitNullProperties?.Remove("address_state"); } }
+        private string? _explicitNullValueAddressState = default!;
 #nullable restore
 #else
-        public string AddressState { get; set; }
+        public string AddressState { get => _explicitNullValueAddressState; set { _explicitNullValueAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_state"); else _explicitNullProperties?.Remove("address_state"); } }
+        private string _explicitNullValueAddressState = default!;
 #endif
         /// <summary>ZIP or postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressZip { get; set; }
+        public string? AddressZip { get => _explicitNullValueAddressZip; set { _explicitNullValueAddressZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_zip"); else _explicitNullProperties?.Remove("address_zip"); } }
+        private string? _explicitNullValueAddressZip = default!;
 #nullable restore
 #else
-        public string AddressZip { get; set; }
+        public string AddressZip { get => _explicitNullValueAddressZip; set { _explicitNullValueAddressZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_zip"); else _explicitNullProperties?.Remove("address_zip"); } }
+        private string _explicitNullValueAddressZip = default!;
 #endif
         /// <summary>When set to true, this becomes the default external account for its currency.</summary>
-        public bool? DefaultForCurrency { get; set; }
+        public bool? DefaultForCurrency { get => _explicitNullValueDefaultForCurrency; set { _explicitNullValueDefaultForCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_for_currency"); else _explicitNullProperties?.Remove("default_for_currency"); } }
+        private bool? _explicitNullValueDefaultForCurrency = default!;
         /// <summary>Documents that may be submitted to satisfy various informational requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments? Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestDocuments _explicitNullValueDocuments = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Two digit number representing the card’s expiration month.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpMonth { get; set; }
+        public string? ExpMonth { get => _explicitNullValueExpMonth; set { _explicitNullValueExpMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_month"); else _explicitNullProperties?.Remove("exp_month"); } }
+        private string? _explicitNullValueExpMonth = default!;
 #nullable restore
 #else
-        public string ExpMonth { get; set; }
+        public string ExpMonth { get => _explicitNullValueExpMonth; set { _explicitNullValueExpMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_month"); else _explicitNullProperties?.Remove("exp_month"); } }
+        private string _explicitNullValueExpMonth = default!;
 #endif
         /// <summary>Four digit number representing the card’s expiration year.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpYear { get; set; }
+        public string? ExpYear { get => _explicitNullValueExpYear; set { _explicitNullValueExpYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_year"); else _explicitNullProperties?.Remove("exp_year"); } }
+        private string? _explicitNullValueExpYear = default!;
 #nullable restore
 #else
-        public string ExpYear { get; set; }
+        public string ExpYear { get => _explicitNullValueExpYear; set { _explicitNullValueExpYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_year"); else _explicitNullProperties?.Remove("exp_year"); } }
+        private string _explicitNullValueExpYear = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Cardholder name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -130,7 +182,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -180,7 +232,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("exp_month", ExpMonth);
             writer.WriteStringValue("exp_year", ExpYear);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("name", Name);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,56 +11,81 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentMethodDetailsPaypal : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("payer_email") is { } nullNodePayerEmail && nullNodePayerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerEmail = null;
+            if (parseNode.GetChildNode("payer_id") is { } nullNodePayerId && nullNodePayerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerId = null;
+            if (parseNode.GetChildNode("payer_name") is { } nullNodePayerName && nullNodePayerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerName = null;
+            if (parseNode.GetChildNode("seller_protection") is { } nullNodeSellerProtection && nullNodeSellerProtection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerProtection = null;
+            if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Two-letter ISO code representing the buyer&apos;s country. Values are provided by PayPal directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get; set; }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get; set; }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>Owner&apos;s email. Values are provided by PayPal directly(if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerEmail { get; set; }
+        public string? PayerEmail { get => _explicitNullValuePayerEmail; set { _explicitNullValuePayerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_email"); else _explicitNullProperties?.Remove("payer_email"); } }
+        private string? _explicitNullValuePayerEmail = default!;
 #nullable restore
 #else
-        public string PayerEmail { get; set; }
+        public string PayerEmail { get => _explicitNullValuePayerEmail; set { _explicitNullValuePayerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_email"); else _explicitNullProperties?.Remove("payer_email"); } }
+        private string _explicitNullValuePayerEmail = default!;
 #endif
         /// <summary>PayPal account PayerID. This identifier uniquely identifies the PayPal customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerId { get; set; }
+        public string? PayerId { get => _explicitNullValuePayerId; set { _explicitNullValuePayerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_id"); else _explicitNullProperties?.Remove("payer_id"); } }
+        private string? _explicitNullValuePayerId = default!;
 #nullable restore
 #else
-        public string PayerId { get; set; }
+        public string PayerId { get => _explicitNullValuePayerId; set { _explicitNullValuePayerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_id"); else _explicitNullProperties?.Remove("payer_id"); } }
+        private string _explicitNullValuePayerId = default!;
 #endif
         /// <summary>Owner&apos;s full name. Values provided by PayPal directly(if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerName { get; set; }
+        public string? PayerName { get => _explicitNullValuePayerName; set { _explicitNullValuePayerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_name"); else _explicitNullProperties?.Remove("payer_name"); } }
+        private string? _explicitNullValuePayerName = default!;
 #nullable restore
 #else
-        public string PayerName { get; set; }
+        public string PayerName { get => _explicitNullValuePayerName; set { _explicitNullValuePayerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_name"); else _explicitNullProperties?.Remove("payer_name"); } }
+        private string _explicitNullValuePayerName = default!;
 #endif
         /// <summary>The level of protection offered as defined by PayPal Seller Protection for Merchants, for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection? SellerProtection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection? SellerProtection { get => _explicitNullValueSellerProtection; set { _explicitNullValueSellerProtection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_protection"); else _explicitNullProperties?.Remove("seller_protection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection? _explicitNullValueSellerProtection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection SellerProtection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection SellerProtection { get => _explicitNullValueSellerProtection; set { _explicitNullValueSellerProtection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_protection"); else _explicitNullProperties?.Remove("seller_protection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection _explicitNullValueSellerProtection = default!;
 #endif
         /// <summary>A unique ID generated by PayPal for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get; set; }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get; set; }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payer_name", PayerName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection>("seller_protection", SellerProtection);
             writer.WriteStringValue("transaction_id", TransactionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

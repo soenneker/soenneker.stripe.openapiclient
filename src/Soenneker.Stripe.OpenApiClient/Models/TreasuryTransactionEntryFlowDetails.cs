@@ -12,75 +12,108 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryTransactionEntryFlowDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("credit_reversal") is { } nullNodeCreditReversal && nullNodeCreditReversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditReversal = null;
+            if (parseNode.GetChildNode("debit_reversal") is { } nullNodeDebitReversal && nullNodeDebitReversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitReversal = null;
+            if (parseNode.GetChildNode("inbound_transfer") is { } nullNodeInboundTransfer && nullNodeInboundTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTransfer = null;
+            if (parseNode.GetChildNode("issuing_authorization") is { } nullNodeIssuingAuthorization && nullNodeIssuingAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingAuthorization = null;
+            if (parseNode.GetChildNode("outbound_payment") is { } nullNodeOutboundPayment && nullNodeOutboundPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPayment = null;
+            if (parseNode.GetChildNode("outbound_transfer") is { } nullNodeOutboundTransfer && nullNodeOutboundTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTransfer = null;
+            if (parseNode.GetChildNode("received_credit") is { } nullNodeReceivedCredit && nullNodeReceivedCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedCredit = null;
+            if (parseNode.GetChildNode("received_debit") is { } nullNodeReceivedDebit && nullNodeReceivedDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDebit = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>You can reverse some [ReceivedCredits](https://docs.stripe.com/api#received_credits) depending on their network and source flow. Reversing a ReceivedCredit leads to the creation of a new object known as a CreditReversal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal? CreditReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal? CreditReversal { get => _explicitNullValueCreditReversal; set { _explicitNullValueCreditReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_reversal"); else _explicitNullProperties?.Remove("credit_reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal? _explicitNullValueCreditReversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal CreditReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal CreditReversal { get => _explicitNullValueCreditReversal; set { _explicitNullValueCreditReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_reversal"); else _explicitNullProperties?.Remove("credit_reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal _explicitNullValueCreditReversal = default!;
 #endif
         /// <summary>You can reverse some [ReceivedDebits](https://docs.stripe.com/api#received_debits) depending on their network and source flow. Reversing a ReceivedDebit leads to the creation of a new object known as a DebitReversal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal? DebitReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal? DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal? _explicitNullValueDebitReversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal DebitReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal _explicitNullValueDebitReversal = default!;
 #endif
         /// <summary>Use [InboundTransfers](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/into/inbound-transfers) to add funds to your [FinancialAccount](https://docs.stripe.com/api#financial_accounts) via a PaymentMethod that is owned by you. The funds will be transferred via an ACH debit.Related guide: [Moving money with Treasury using InboundTransfer objects](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/into/inbound-transfers)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer? InboundTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer? InboundTransfer { get => _explicitNullValueInboundTransfer; set { _explicitNullValueInboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfer"); else _explicitNullProperties?.Remove("inbound_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer? _explicitNullValueInboundTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer InboundTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer InboundTransfer { get => _explicitNullValueInboundTransfer; set { _explicitNullValueInboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfer"); else _explicitNullProperties?.Remove("inbound_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer _explicitNullValueInboundTransfer = default!;
 #endif
         /// <summary>When an [issued card](https://docs.stripe.com/issuing) is used to make a purchase, an Issuing `Authorization`object is created. [Authorizations](https://docs.stripe.com/issuing/purchases/authorizations) must be approved for thepurchase to be completed successfully.Related guide: [Issued card authorizations](https://docs.stripe.com/issuing/purchases/authorizations)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization? IssuingAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization? IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization? _explicitNullValueIssuingAuthorization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization IssuingAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization _explicitNullValueIssuingAuthorization = default!;
 #endif
         /// <summary>Use [OutboundPayments](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/out-of/outbound-payments) to send funds to another party&apos;s external bank account or [FinancialAccount](https://docs.stripe.com/api#financial_accounts). To send money to an account belonging to the same user, use an [OutboundTransfer](https://docs.stripe.com/api#outbound_transfers).Simulate OutboundPayment state changes with the `/v1/test_helpers/treasury/outbound_payments` endpoints. These methods can only be called on test mode objects.Related guide: [Moving money with Treasury using OutboundPayment objects](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/out-of/outbound-payments)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment? OutboundPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment? OutboundPayment { get => _explicitNullValueOutboundPayment; set { _explicitNullValueOutboundPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_payment"); else _explicitNullProperties?.Remove("outbound_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment? _explicitNullValueOutboundPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment OutboundPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment OutboundPayment { get => _explicitNullValueOutboundPayment; set { _explicitNullValueOutboundPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_payment"); else _explicitNullProperties?.Remove("outbound_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment _explicitNullValueOutboundPayment = default!;
 #endif
         /// <summary>Use [OutboundTransfers](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/out-of/outbound-transfers) to transfer funds from a [FinancialAccount](https://docs.stripe.com/api#financial_accounts) to a PaymentMethod belonging to the same entity. To send funds to a different party, use [OutboundPayments](https://docs.stripe.com/api#outbound_payments) instead. You can send funds over ACH rails or through a domestic wire transfer to a user&apos;s own external bank account.Simulate OutboundTransfer state changes with the `/v1/test_helpers/treasury/outbound_transfers` endpoints. These methods can only be called on test mode objects.Related guide: [Moving money with Treasury using OutboundTransfer objects](https://docs.stripe.com/docs/treasury/moving-money/financial-accounts/out-of/outbound-transfers)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer? OutboundTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer? OutboundTransfer { get => _explicitNullValueOutboundTransfer; set { _explicitNullValueOutboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_transfer"); else _explicitNullProperties?.Remove("outbound_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer? _explicitNullValueOutboundTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer OutboundTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer OutboundTransfer { get => _explicitNullValueOutboundTransfer; set { _explicitNullValueOutboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_transfer"); else _explicitNullProperties?.Remove("outbound_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer _explicitNullValueOutboundTransfer = default!;
 #endif
         /// <summary>ReceivedCredits represent funds sent to a [FinancialAccount](https://docs.stripe.com/api#financial_accounts) (for example, via ACH or wire). These money movements are not initiated from the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit? ReceivedCredit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit? ReceivedCredit { get => _explicitNullValueReceivedCredit; set { _explicitNullValueReceivedCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_credit"); else _explicitNullProperties?.Remove("received_credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit? _explicitNullValueReceivedCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit ReceivedCredit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit ReceivedCredit { get => _explicitNullValueReceivedCredit; set { _explicitNullValueReceivedCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_credit"); else _explicitNullProperties?.Remove("received_credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit _explicitNullValueReceivedCredit = default!;
 #endif
         /// <summary>ReceivedDebits represent funds pulled from a [FinancialAccount](https://docs.stripe.com/api#financial_accounts). These are not initiated from the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit? ReceivedDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit? ReceivedDebit { get => _explicitNullValueReceivedDebit; set { _explicitNullValueReceivedDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debit"); else _explicitNullProperties?.Remove("received_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit? _explicitNullValueReceivedDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit ReceivedDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit ReceivedDebit { get => _explicitNullValueReceivedDebit; set { _explicitNullValueReceivedDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debit"); else _explicitNullProperties?.Remove("received_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit _explicitNullValueReceivedDebit = default!;
 #endif
         /// <summary>Type of the flow that created the Transaction. Set to the same value as `flow_type`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetailsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetailsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetailsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails"/> and sets the default values.
         /// </summary>
@@ -96,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -133,6 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCredit>("received_credit", ReceivedCredit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit>("received_debit", ReceivedDebit);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetailsType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

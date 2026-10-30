@@ -12,26 +12,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxIdVerificationComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("verified_address") is { } nullNodeVerifiedAddress && nullNodeVerifiedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedAddress = null;
+            if (parseNode.GetChildNode("verified_name") is { } nullNodeVerifiedName && nullNodeVerifiedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Verification status, one of `pending`, `verified`, `unverified`, or `unavailable`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus? _explicitNullValueStatus = default!;
         /// <summary>Verified address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerifiedAddress { get; set; }
+        public string? VerifiedAddress { get => _explicitNullValueVerifiedAddress; set { _explicitNullValueVerifiedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_address"); else _explicitNullProperties?.Remove("verified_address"); } }
+        private string? _explicitNullValueVerifiedAddress = default!;
 #nullable restore
 #else
-        public string VerifiedAddress { get; set; }
+        public string VerifiedAddress { get => _explicitNullValueVerifiedAddress; set { _explicitNullValueVerifiedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_address"); else _explicitNullProperties?.Remove("verified_address"); } }
+        private string _explicitNullValueVerifiedAddress = default!;
 #endif
         /// <summary>Verified name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerifiedName { get; set; }
+        public string? VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
+        private string? _explicitNullValueVerifiedName = default!;
 #nullable restore
 #else
-        public string VerifiedName { get; set; }
+        public string VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
+        private string _explicitNullValueVerifiedName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus>("status", Status);
             writer.WriteStringValue("verified_address", VerifiedAddress);
             writer.WriteStringValue("verified_name", VerifiedName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

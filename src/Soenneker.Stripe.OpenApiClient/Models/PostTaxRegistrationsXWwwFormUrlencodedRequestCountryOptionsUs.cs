@@ -11,123 +11,174 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUs : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("admissions_tax") is { } nullNodeAdmissionsTax && nullNodeAdmissionsTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdmissionsTax = null;
+            if (parseNode.GetChildNode("attendance_tax") is { } nullNodeAttendanceTax && nullNodeAttendanceTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttendanceTax = null;
+            if (parseNode.GetChildNode("entertainment_tax") is { } nullNodeEntertainmentTax && nullNodeEntertainmentTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntertainmentTax = null;
+            if (parseNode.GetChildNode("gross_receipts_tax") is { } nullNodeGrossReceiptsTax && nullNodeGrossReceiptsTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossReceiptsTax = null;
+            if (parseNode.GetChildNode("hospitality_tax") is { } nullNodeHospitalityTax && nullNodeHospitalityTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HospitalityTax = null;
+            if (parseNode.GetChildNode("local_amusement_tax") is { } nullNodeLocalAmusementTax && nullNodeLocalAmusementTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalAmusementTax = null;
+            if (parseNode.GetChildNode("local_lease_tax") is { } nullNodeLocalLeaseTax && nullNodeLocalLeaseTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalLeaseTax = null;
+            if (parseNode.GetChildNode("luxury_tax") is { } nullNodeLuxuryTax && nullNodeLuxuryTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LuxuryTax = null;
+            if (parseNode.GetChildNode("mass_transit_parking_tax") is { } nullNodeMassTransitParkingTax && nullNodeMassTransitParkingTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MassTransitParkingTax = null;
+            if (parseNode.GetChildNode("parking_tax") is { } nullNodeParkingTax && nullNodeParkingTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParkingTax = null;
+            if (parseNode.GetChildNode("resort_tax") is { } nullNodeResortTax && nullNodeResortTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResortTax = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("state_sales_tax") is { } nullNodeStateSalesTax && nullNodeStateSalesTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateSalesTax = null;
+            if (parseNode.GetChildNode("tourism_tax") is { } nullNodeTourismTax && nullNodeTourismTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TourismTax = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The admissions_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax? AdmissionsTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax? AdmissionsTax { get => _explicitNullValueAdmissionsTax; set { _explicitNullValueAdmissionsTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admissions_tax"); else _explicitNullProperties?.Remove("admissions_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax? _explicitNullValueAdmissionsTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax AdmissionsTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax AdmissionsTax { get => _explicitNullValueAdmissionsTax; set { _explicitNullValueAdmissionsTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admissions_tax"); else _explicitNullProperties?.Remove("admissions_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax _explicitNullValueAdmissionsTax = default!;
 #endif
         /// <summary>The attendance_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax? AttendanceTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax? AttendanceTax { get => _explicitNullValueAttendanceTax; set { _explicitNullValueAttendanceTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendance_tax"); else _explicitNullProperties?.Remove("attendance_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax? _explicitNullValueAttendanceTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax AttendanceTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax AttendanceTax { get => _explicitNullValueAttendanceTax; set { _explicitNullValueAttendanceTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attendance_tax"); else _explicitNullProperties?.Remove("attendance_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax _explicitNullValueAttendanceTax = default!;
 #endif
         /// <summary>The entertainment_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax? EntertainmentTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax? EntertainmentTax { get => _explicitNullValueEntertainmentTax; set { _explicitNullValueEntertainmentTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entertainment_tax"); else _explicitNullProperties?.Remove("entertainment_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax? _explicitNullValueEntertainmentTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax EntertainmentTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax EntertainmentTax { get => _explicitNullValueEntertainmentTax; set { _explicitNullValueEntertainmentTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entertainment_tax"); else _explicitNullProperties?.Remove("entertainment_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax _explicitNullValueEntertainmentTax = default!;
 #endif
         /// <summary>The gross_receipts_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax? GrossReceiptsTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax? GrossReceiptsTax { get => _explicitNullValueGrossReceiptsTax; set { _explicitNullValueGrossReceiptsTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_receipts_tax"); else _explicitNullProperties?.Remove("gross_receipts_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax? _explicitNullValueGrossReceiptsTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax GrossReceiptsTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax GrossReceiptsTax { get => _explicitNullValueGrossReceiptsTax; set { _explicitNullValueGrossReceiptsTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_receipts_tax"); else _explicitNullProperties?.Remove("gross_receipts_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax _explicitNullValueGrossReceiptsTax = default!;
 #endif
         /// <summary>The hospitality_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax? HospitalityTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax? HospitalityTax { get => _explicitNullValueHospitalityTax; set { _explicitNullValueHospitalityTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hospitality_tax"); else _explicitNullProperties?.Remove("hospitality_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax? _explicitNullValueHospitalityTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax HospitalityTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax HospitalityTax { get => _explicitNullValueHospitalityTax; set { _explicitNullValueHospitalityTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hospitality_tax"); else _explicitNullProperties?.Remove("hospitality_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax _explicitNullValueHospitalityTax = default!;
 #endif
         /// <summary>The local_amusement_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax? LocalAmusementTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax? LocalAmusementTax { get => _explicitNullValueLocalAmusementTax; set { _explicitNullValueLocalAmusementTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amusement_tax"); else _explicitNullProperties?.Remove("local_amusement_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax? _explicitNullValueLocalAmusementTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax LocalAmusementTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax LocalAmusementTax { get => _explicitNullValueLocalAmusementTax; set { _explicitNullValueLocalAmusementTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amusement_tax"); else _explicitNullProperties?.Remove("local_amusement_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax _explicitNullValueLocalAmusementTax = default!;
 #endif
         /// <summary>The local_lease_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax? LocalLeaseTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax? LocalLeaseTax { get => _explicitNullValueLocalLeaseTax; set { _explicitNullValueLocalLeaseTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_lease_tax"); else _explicitNullProperties?.Remove("local_lease_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax? _explicitNullValueLocalLeaseTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax LocalLeaseTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax LocalLeaseTax { get => _explicitNullValueLocalLeaseTax; set { _explicitNullValueLocalLeaseTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_lease_tax"); else _explicitNullProperties?.Remove("local_lease_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax _explicitNullValueLocalLeaseTax = default!;
 #endif
         /// <summary>The luxury_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax? LuxuryTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax? LuxuryTax { get => _explicitNullValueLuxuryTax; set { _explicitNullValueLuxuryTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("luxury_tax"); else _explicitNullProperties?.Remove("luxury_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax? _explicitNullValueLuxuryTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax LuxuryTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax LuxuryTax { get => _explicitNullValueLuxuryTax; set { _explicitNullValueLuxuryTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("luxury_tax"); else _explicitNullProperties?.Remove("luxury_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax _explicitNullValueLuxuryTax = default!;
 #endif
         /// <summary>The mass_transit_parking_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax? MassTransitParkingTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax? MassTransitParkingTax { get => _explicitNullValueMassTransitParkingTax; set { _explicitNullValueMassTransitParkingTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_transit_parking_tax"); else _explicitNullProperties?.Remove("mass_transit_parking_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax? _explicitNullValueMassTransitParkingTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax MassTransitParkingTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax MassTransitParkingTax { get => _explicitNullValueMassTransitParkingTax; set { _explicitNullValueMassTransitParkingTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_transit_parking_tax"); else _explicitNullProperties?.Remove("mass_transit_parking_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax _explicitNullValueMassTransitParkingTax = default!;
 #endif
         /// <summary>The parking_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax? ParkingTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax? ParkingTax { get => _explicitNullValueParkingTax; set { _explicitNullValueParkingTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parking_tax"); else _explicitNullProperties?.Remove("parking_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax? _explicitNullValueParkingTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax ParkingTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax ParkingTax { get => _explicitNullValueParkingTax; set { _explicitNullValueParkingTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parking_tax"); else _explicitNullProperties?.Remove("parking_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax _explicitNullValueParkingTax = default!;
 #endif
         /// <summary>The resort_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax? ResortTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax? ResortTax { get => _explicitNullValueResortTax; set { _explicitNullValueResortTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resort_tax"); else _explicitNullProperties?.Remove("resort_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax? _explicitNullValueResortTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax ResortTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax ResortTax { get => _explicitNullValueResortTax; set { _explicitNullValueResortTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resort_tax"); else _explicitNullProperties?.Remove("resort_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax _explicitNullValueResortTax = default!;
 #endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>The state_sales_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax? StateSalesTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax? StateSalesTax { get => _explicitNullValueStateSalesTax; set { _explicitNullValueStateSalesTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_sales_tax"); else _explicitNullProperties?.Remove("state_sales_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax? _explicitNullValueStateSalesTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax StateSalesTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax StateSalesTax { get => _explicitNullValueStateSalesTax; set { _explicitNullValueStateSalesTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_sales_tax"); else _explicitNullProperties?.Remove("state_sales_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax _explicitNullValueStateSalesTax = default!;
 #endif
         /// <summary>The tourism_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax? TourismTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax? TourismTax { get => _explicitNullValueTourismTax; set { _explicitNullValueTourismTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tourism_tax"); else _explicitNullProperties?.Remove("tourism_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax? _explicitNullValueTourismTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax TourismTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax TourismTax { get => _explicitNullValueTourismTax; set { _explicitNullValueTourismTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tourism_tax"); else _explicitNullProperties?.Remove("tourism_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax _explicitNullValueTourismTax = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUs"/> and sets the default values.
         /// </summary>
@@ -143,7 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUs CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUs();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUs(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -192,6 +243,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax>("state_sales_tax", StateSalesTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax>("tourism_tax", TourismTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

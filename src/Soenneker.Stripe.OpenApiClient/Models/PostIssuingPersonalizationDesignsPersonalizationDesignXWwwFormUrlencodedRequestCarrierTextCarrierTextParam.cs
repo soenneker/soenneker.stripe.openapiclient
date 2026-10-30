@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParam : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("footer_body") is { } nullNodeFooterBody && nullNodeFooterBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterBody = null;
+            if (parseNode.GetChildNode("footer_title") is { } nullNodeFooterTitle && nullNodeFooterTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterTitle = null;
+            if (parseNode.GetChildNode("header_body") is { } nullNodeHeaderBody && nullNodeHeaderBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderBody = null;
+            if (parseNode.GetChildNode("header_title") is { } nullNodeHeaderTitle && nullNodeHeaderTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderTitle = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The footer_body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody? FooterBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody? FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody? _explicitNullValueFooterBody = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody FooterBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody _explicitNullValueFooterBody = default!;
 #endif
         /// <summary>The footer_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle? FooterTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle? FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle? _explicitNullValueFooterTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle FooterTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle _explicitNullValueFooterTitle = default!;
 #endif
         /// <summary>The header_body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody? HeaderBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody? HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody? _explicitNullValueHeaderBody = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody HeaderBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody _explicitNullValueHeaderBody = default!;
 #endif
         /// <summary>The header_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle? HeaderTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle? HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle? _explicitNullValueHeaderTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle HeaderTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle _explicitNullValueHeaderTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParam"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParam();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParam(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle>("footer_title", FooterTitle);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderBody>("header_body", HeaderBody);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamHeaderTitle>("header_title", HeaderTitle);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

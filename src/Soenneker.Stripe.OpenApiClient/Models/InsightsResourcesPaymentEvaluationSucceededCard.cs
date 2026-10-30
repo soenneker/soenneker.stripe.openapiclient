@@ -12,15 +12,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsResourcesPaymentEvaluationSucceededCard : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_line1_check") is { } nullNodeAddressLine1Check && nullNodeAddressLine1Check.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine1Check = null;
+            if (parseNode.GetChildNode("address_postal_code_check") is { } nullNodeAddressPostalCodeCheck && nullNodeAddressPostalCodeCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressPostalCodeCheck = null;
+            if (parseNode.GetChildNode("cvc_check") is { } nullNodeCvcCheck && nullNodeCvcCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcCheck = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Result of the address line 1 check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressLine1Check? AddressLine1Check { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressLine1Check? AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressLine1Check? _explicitNullValueAddressLine1Check = default!;
         /// <summary>Indicates whether the cardholder provided a postal code and if it matched the cardholder’s billing address.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressPostalCodeCheck? AddressPostalCodeCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressPostalCodeCheck? AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressPostalCodeCheck? _explicitNullValueAddressPostalCodeCheck = default!;
         /// <summary>Result of the CVC check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardCvcCheck? CvcCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardCvcCheck? CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardCvcCheck? _explicitNullValueCvcCheck = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCard"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressLine1Check>("address_line1_check", AddressLine1Check);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardAddressPostalCodeCheck>("address_postal_code_check", AddressPostalCodeCheck);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceededCardCvcCheck>("cvc_check", CvcCheck);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,92 +11,135 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discountable") is { } nullNodeDiscountable && nullNodeDiscountable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discountable = null;
+            if (parseNode.GetChildNode("discounts") is { } nullNodeDiscounts && nullNodeDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discounts = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("period") is { } nullNodePeriod && nullNodePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Period = null;
+            if (parseNode.GetChildNode("price_data") is { } nullNodePriceData && nullNodePriceData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceData = null;
+            if (parseNode.GetChildNode("pricing") is { } nullNodePricing && nullNodePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pricing = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("quantity_decimal") is { } nullNodeQuantityDecimal && nullNodeQuantityDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantityDecimal = null;
+            if (parseNode.GetChildNode("tax_amounts") is { } nullNodeTaxAmounts && nullNodeTaxAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxAmounts = null;
+            if (parseNode.GetChildNode("tax_rates") is { } nullNodeTaxRates && nullNodeTaxRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRates = null;
+        }
+
         /// <summary>The integer amount in cents (or local equivalent) of the charge to be applied to the upcoming invoice. If you want to apply a credit to the customer&apos;s account, pass a negative amount.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>An arbitrary string which you can attach to the invoice item. The description is displayed in the invoice for easy tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Controls whether discounts apply to this line item. Defaults to false for prorations or negative line items, and true for all other line items. Cannot be set to true for prorations.</summary>
-        public bool? Discountable { get; set; }
+        public bool? Discountable { get => _explicitNullValueDiscountable; set { _explicitNullValueDiscountable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountable"); else _explicitNullProperties?.Remove("discountable"); } }
+        private bool? _explicitNullValueDiscountable = default!;
         /// <summary>The coupons, promotion codes &amp; existing discounts which apply to the line item. Item discounts are applied before invoice discounts. Pass an empty string to remove previously-defined discounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts? Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts? Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts? _explicitNullValueDiscounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestDiscounts _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. For [type=subscription](/api/invoices/line_item) line items, the incoming metadata specified on the request is directly used to set this value, in contrast to [type=invoiceitem](/api/invoices/line_item) line items, where any existing metadata on the invoice line is merged with the incoming data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://docs.stripe.com/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod? Period { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod? Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod? _explicitNullValuePeriod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod Period { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPeriod _explicitNullValuePeriod = default!;
 #endif
         /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData? PriceData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData? PriceData { get => _explicitNullValuePriceData; set { _explicitNullValuePriceData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_data"); else _explicitNullProperties?.Remove("price_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData? _explicitNullValuePriceData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData PriceData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData PriceData { get => _explicitNullValuePriceData; set { _explicitNullValuePriceData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_data"); else _explicitNullProperties?.Remove("price_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPriceData _explicitNullValuePriceData = default!;
 #endif
         /// <summary>The pricing information for the invoice item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing? Pricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing Pricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestPricing _explicitNullValuePricing = default!;
 #endif
         /// <summary>Non-negative integer. The quantity of units for the line item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.</summary>
-        public int? Quantity { get; set; }
+        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private int? _explicitNullValueQuantity = default!;
         /// <summary>Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuantityDecimal { get; set; }
+        public string? QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
+        private string? _explicitNullValueQuantityDecimal = default!;
 #nullable restore
 #else
-        public string QuantityDecimal { get; set; }
+        public string QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
+        private string _explicitNullValueQuantityDecimal = default!;
 #endif
         /// <summary>A list of up to 20 tax amounts for this line item. This can be useful if you calculate taxes on your own or use a third-party to calculate them. You cannot set tax amounts if any line item has [tax_rates](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-tax_rates) or if the invoice has [default_tax_rates](https://docs.stripe.com/api/invoices/object#invoice_object-default_tax_rates) or uses [automatic tax](https://docs.stripe.com/tax/invoicing). Pass an empty string to remove previously defined tax amounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts? TaxAmounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts? TaxAmounts { get => _explicitNullValueTaxAmounts; set { _explicitNullValueTaxAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amounts"); else _explicitNullProperties?.Remove("tax_amounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts? _explicitNullValueTaxAmounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts TaxAmounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts TaxAmounts { get => _explicitNullValueTaxAmounts; set { _explicitNullValueTaxAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amounts"); else _explicitNullProperties?.Remove("tax_amounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts _explicitNullValueTaxAmounts = default!;
 #endif
         /// <summary>The tax rates which apply to the line item. When set, the `default_tax_rates` on the invoice do not apply to this line item. Pass an empty string to remove previously-defined tax rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates? TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates? TaxRates { get => _explicitNullValueTaxRates; set { _explicitNullValueTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rates"); else _explicitNullProperties?.Remove("tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates? _explicitNullValueTaxRates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates TaxRates { get => _explicitNullValueTaxRates; set { _explicitNullValueTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rates"); else _explicitNullProperties?.Remove("tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates _explicitNullValueTaxRates = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -106,7 +149,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -150,7 +193,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxAmounts>("tax_amounts", TaxAmounts);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates>("tax_rates", TaxRates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates>("tax_rates", TaxRates);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

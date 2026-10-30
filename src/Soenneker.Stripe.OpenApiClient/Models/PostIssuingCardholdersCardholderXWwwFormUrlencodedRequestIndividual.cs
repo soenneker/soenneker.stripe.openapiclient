@@ -12,48 +12,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividual : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_issuing") is { } nullNodeCardIssuing && nullNodeCardIssuing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardIssuing = null;
+            if (parseNode.GetChildNode("dob") is { } nullNodeDob && nullNodeDob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dob = null;
+            if (parseNode.GetChildNode("first_name") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("last_name") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card_issuing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing? CardIssuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing? CardIssuing { get => _explicitNullValueCardIssuing; set { _explicitNullValueCardIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_issuing"); else _explicitNullProperties?.Remove("card_issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing? _explicitNullValueCardIssuing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing CardIssuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing CardIssuing { get => _explicitNullValueCardIssuing; set { _explicitNullValueCardIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_issuing"); else _explicitNullProperties?.Remove("card_issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualCardIssuing _explicitNullValueCardIssuing = default!;
 #endif
         /// <summary>The dob property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob? Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob? _explicitNullValueDob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualDob _explicitNullValueDob = default!;
 #endif
         /// <summary>The first_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>The last_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>The verification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification? Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividual"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividual CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividual();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividual(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("last_name", LastName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestIndividualVerification>("verification", Verification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

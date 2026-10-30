@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentIntentNextActionKonbiniStores : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("familymart") is { } nullNodeFamilymart && nullNodeFamilymart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Familymart = null;
+            if (parseNode.GetChildNode("lawson") is { } nullNodeLawson && nullNodeLawson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lawson = null;
+            if (parseNode.GetChildNode("ministop") is { } nullNodeMinistop && nullNodeMinistop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ministop = null;
+            if (parseNode.GetChildNode("seicomart") is { } nullNodeSeicomart && nullNodeSeicomart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Seicomart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>FamilyMart instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart? Familymart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart? Familymart { get => _explicitNullValueFamilymart; set { _explicitNullValueFamilymart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("familymart"); else _explicitNullProperties?.Remove("familymart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart? _explicitNullValueFamilymart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart Familymart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart Familymart { get => _explicitNullValueFamilymart; set { _explicitNullValueFamilymart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("familymart"); else _explicitNullProperties?.Remove("familymart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart _explicitNullValueFamilymart = default!;
 #endif
         /// <summary>Lawson instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson? Lawson { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson? Lawson { get => _explicitNullValueLawson; set { _explicitNullValueLawson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lawson"); else _explicitNullProperties?.Remove("lawson"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson? _explicitNullValueLawson = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson Lawson { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson Lawson { get => _explicitNullValueLawson; set { _explicitNullValueLawson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lawson"); else _explicitNullProperties?.Remove("lawson"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson _explicitNullValueLawson = default!;
 #endif
         /// <summary>Ministop instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop? Ministop { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop? Ministop { get => _explicitNullValueMinistop; set { _explicitNullValueMinistop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ministop"); else _explicitNullProperties?.Remove("ministop"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop? _explicitNullValueMinistop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop Ministop { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop Ministop { get => _explicitNullValueMinistop; set { _explicitNullValueMinistop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ministop"); else _explicitNullProperties?.Remove("ministop"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop _explicitNullValueMinistop = default!;
 #endif
         /// <summary>Seicomart instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart? Seicomart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart? Seicomart { get => _explicitNullValueSeicomart; set { _explicitNullValueSeicomart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seicomart"); else _explicitNullProperties?.Remove("seicomart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart? _explicitNullValueSeicomart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart Seicomart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart Seicomart { get => _explicitNullValueSeicomart; set { _explicitNullValueSeicomart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seicomart"); else _explicitNullProperties?.Remove("seicomart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart _explicitNullValueSeicomart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson>("lawson", Lawson);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop>("ministop", Ministop);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart>("seicomart", Seicomart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,35 +11,53 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifi : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enterprise_eap_peap") is { } nullNodeEnterpriseEapPeap && nullNodeEnterpriseEapPeap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseEapPeap = null;
+            if (parseNode.GetChildNode("enterprise_eap_tls") is { } nullNodeEnterpriseEapTls && nullNodeEnterpriseEapTls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseEapTls = null;
+            if (parseNode.GetChildNode("personal_psk") is { } nullNodePersonalPsk && nullNodePersonalPsk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalPsk = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enterprise_eap_peap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap? EnterpriseEapPeap { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap? EnterpriseEapPeap { get => _explicitNullValueEnterpriseEapPeap; set { _explicitNullValueEnterpriseEapPeap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_eap_peap"); else _explicitNullProperties?.Remove("enterprise_eap_peap"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap? _explicitNullValueEnterpriseEapPeap = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap EnterpriseEapPeap { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap EnterpriseEapPeap { get => _explicitNullValueEnterpriseEapPeap; set { _explicitNullValueEnterpriseEapPeap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_eap_peap"); else _explicitNullProperties?.Remove("enterprise_eap_peap"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap _explicitNullValueEnterpriseEapPeap = default!;
 #endif
         /// <summary>The enterprise_eap_tls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls? EnterpriseEapTls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls? EnterpriseEapTls { get => _explicitNullValueEnterpriseEapTls; set { _explicitNullValueEnterpriseEapTls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_eap_tls"); else _explicitNullProperties?.Remove("enterprise_eap_tls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls? _explicitNullValueEnterpriseEapTls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls EnterpriseEapTls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls EnterpriseEapTls { get => _explicitNullValueEnterpriseEapTls; set { _explicitNullValueEnterpriseEapTls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_eap_tls"); else _explicitNullProperties?.Remove("enterprise_eap_tls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls _explicitNullValueEnterpriseEapTls = default!;
 #endif
         /// <summary>The personal_psk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk? PersonalPsk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk? PersonalPsk { get => _explicitNullValuePersonalPsk; set { _explicitNullValuePersonalPsk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_psk"); else _explicitNullProperties?.Remove("personal_psk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk? _explicitNullValuePersonalPsk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk PersonalPsk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk PersonalPsk { get => _explicitNullValuePersonalPsk; set { _explicitNullValuePersonalPsk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_psk"); else _explicitNullProperties?.Remove("personal_psk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk _explicitNullValuePersonalPsk = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifi"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifi CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifi();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifi(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls>("enterprise_eap_tls", EnterpriseEapTls);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiPersonalPsk>("personal_psk", PersonalPsk);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifiWifiType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasons : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
+            if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card_logo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?>? CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?>? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?>? _explicitNullValueCardLogo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?> CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?> CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem?> _explicitNullValueCardLogo = default!;
 #endif
         /// <summary>The carrier_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?>? CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?>? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?>? _explicitNullValueCarrierText = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?> CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?> CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem?> _explicitNullValueCarrierText = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasons"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasons CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasons();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasons(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCardLogoItem>("card_logo", CardLogo);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignRejectXWwwFormUrlencodedRequestRejectionReasonsCarrierTextItem>("carrier_text", CarrierText);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

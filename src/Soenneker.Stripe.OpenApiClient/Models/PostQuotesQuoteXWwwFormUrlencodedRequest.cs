@@ -11,146 +11,208 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostQuotesQuoteXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("application_fee_amount") is { } nullNodeApplicationFeeAmount && nullNodeApplicationFeeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFeeAmount = null;
+            if (parseNode.GetChildNode("application_fee_percent") is { } nullNodeApplicationFeePercent && nullNodeApplicationFeePercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFeePercent = null;
+            if (parseNode.GetChildNode("automatic_tax") is { } nullNodeAutomaticTax && nullNodeAutomaticTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticTax = null;
+            if (parseNode.GetChildNode("collection_method") is { } nullNodeCollectionMethod && nullNodeCollectionMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionMethod = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("customer_account") is { } nullNodeCustomerAccount && nullNodeCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccount = null;
+            if (parseNode.GetChildNode("default_tax_rates") is { } nullNodeDefaultTaxRates && nullNodeDefaultTaxRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTaxRates = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discounts") is { } nullNodeDiscounts && nullNodeDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discounts = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("footer") is { } nullNodeFooter && nullNodeFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Footer = null;
+            if (parseNode.GetChildNode("header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("invoice_settings") is { } nullNodeInvoiceSettings && nullNodeInvoiceSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceSettings = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("on_behalf_of") is { } nullNodeOnBehalfOf && nullNodeOnBehalfOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnBehalfOf = null;
+            if (parseNode.GetChildNode("subscription_data") is { } nullNodeSubscriptionData && nullNodeSubscriptionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionData = null;
+            if (parseNode.GetChildNode("transfer_data") is { } nullNodeTransferData && nullNodeTransferData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferData = null;
+        }
+
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. There cannot be any line items with recurring prices when using this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount? ApplicationFeeAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount? ApplicationFeeAmount { get => _explicitNullValueApplicationFeeAmount; set { _explicitNullValueApplicationFeeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_amount"); else _explicitNullProperties?.Remove("application_fee_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount? _explicitNullValueApplicationFeeAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount ApplicationFeeAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount ApplicationFeeAmount { get => _explicitNullValueApplicationFeeAmount; set { _explicitNullValueApplicationFeeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_amount"); else _explicitNullProperties?.Remove("application_fee_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeeAmount _explicitNullValueApplicationFeeAmount = default!;
 #endif
         /// <summary>A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice total that will be transferred to the application owner&apos;s Stripe account. There must be at least 1 line item with a recurring price to use this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent? ApplicationFeePercent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent? ApplicationFeePercent { get => _explicitNullValueApplicationFeePercent; set { _explicitNullValueApplicationFeePercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_percent"); else _explicitNullProperties?.Remove("application_fee_percent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent? _explicitNullValueApplicationFeePercent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent ApplicationFeePercent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent ApplicationFeePercent { get => _explicitNullValueApplicationFeePercent; set { _explicitNullValueApplicationFeePercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_percent"); else _explicitNullProperties?.Remove("application_fee_percent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestApplicationFeePercent _explicitNullValueApplicationFeePercent = default!;
 #endif
         /// <summary>Settings for automatic tax lookup for this quote and resulting invoices and subscriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax? AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax? AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax? _explicitNullValueAutomaticTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestAutomaticTax _explicitNullValueAutomaticTax = default!;
 #endif
         /// <summary>Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay invoices at the end of the subscription cycle or at invoice finalization using the default payment method attached to the subscription or customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`. Defaults to `charge_automatically`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestCollectionMethod? CollectionMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestCollectionMethod? CollectionMethod { get => _explicitNullValueCollectionMethod; set { _explicitNullValueCollectionMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collection_method"); else _explicitNullProperties?.Remove("collection_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestCollectionMethod? _explicitNullValueCollectionMethod = default!;
         /// <summary>The customer for which this quote belongs to. A customer is required before finalizing the quote. Once specified, it cannot be changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Customer { get; set; }
+        public string? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public string Customer { get; set; }
+        public string Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string _explicitNullValueCustomer = default!;
 #endif
         /// <summary>The account for which this quote belongs to. A customer or account is required before finalizing the quote. Once specified, it cannot be changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccount { get; set; }
+        public string? CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string? _explicitNullValueCustomerAccount = default!;
 #nullable restore
 #else
-        public string CustomerAccount { get; set; }
+        public string CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>The tax rates that will apply to any line item that does not have `tax_rates` set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates? DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates? DefaultTaxRates { get => _explicitNullValueDefaultTaxRates; set { _explicitNullValueDefaultTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax_rates"); else _explicitNullProperties?.Remove("default_tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates? _explicitNullValueDefaultTaxRates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates DefaultTaxRates { get => _explicitNullValueDefaultTaxRates; set { _explicitNullValueDefaultTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax_rates"); else _explicitNullProperties?.Remove("default_tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDefaultTaxRates _explicitNullValueDefaultTaxRates = default!;
 #endif
         /// <summary>A description that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription? Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription _explicitNullValueDescription = default!;
 #endif
         /// <summary>The discounts applied to the quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts? Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts? Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts? _explicitNullValueDiscounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A future timestamp on which the quote will be canceled if in `open` or `draft` status. Measured in seconds since the Unix epoch.</summary>
-        public int? ExpiresAt { get; set; }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private int? _explicitNullValueExpiresAt = default!;
         /// <summary>A footer that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter? Footer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter? Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter? _explicitNullValueFooter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter Footer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter Footer { get => _explicitNullValueFooter; set { _explicitNullValueFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer"); else _explicitNullProperties?.Remove("footer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter _explicitNullValueFooter = default!;
 #endif
         /// <summary>A header that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader? Header { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader Header { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader _explicitNullValueHeader = default!;
 #endif
         /// <summary>All invoices will be billed using the specified settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings? InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings? InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings? _explicitNullValueInvoiceSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings _explicitNullValueInvoiceSettings = default!;
 #endif
         /// <summary>A list of line items the customer is being quoted for. Each line item includes information about the product, the quantity, and the resulting cost.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem>? LineItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem>? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem>? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem> LineItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem> LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestLineItemsItem> _explicitNullValueLineItems = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The account on behalf of which to charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf? OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf? OnBehalfOf { get => _explicitNullValueOnBehalfOf; set { _explicitNullValueOnBehalfOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of"); else _explicitNullProperties?.Remove("on_behalf_of"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf? _explicitNullValueOnBehalfOf = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf OnBehalfOf { get => _explicitNullValueOnBehalfOf; set { _explicitNullValueOnBehalfOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of"); else _explicitNullProperties?.Remove("on_behalf_of"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf _explicitNullValueOnBehalfOf = default!;
 #endif
         /// <summary>When creating a subscription or subscription schedule, the specified configuration data will be used. There must be at least one line item with a recurring price for a subscription or subscription schedule to be created. A subscription schedule is created if `subscription_data[effective_date]` is present and in the future, otherwise a subscription is created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData? SubscriptionData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData? SubscriptionData { get => _explicitNullValueSubscriptionData; set { _explicitNullValueSubscriptionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_data"); else _explicitNullProperties?.Remove("subscription_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData? _explicitNullValueSubscriptionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData SubscriptionData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData SubscriptionData { get => _explicitNullValueSubscriptionData; set { _explicitNullValueSubscriptionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_data"); else _explicitNullProperties?.Remove("subscription_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData _explicitNullValueSubscriptionData = default!;
 #endif
         /// <summary>The data with which to automatically create a Transfer for each of the invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData? TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -160,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -216,7 +278,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestOnBehalfOf>("on_behalf_of", OnBehalfOf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionData>("subscription_data", SubscriptionData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

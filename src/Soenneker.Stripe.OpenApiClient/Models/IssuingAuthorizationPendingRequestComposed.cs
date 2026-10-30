@@ -12,41 +12,65 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorizationPendingRequestComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("amount_details") is { } nullNodeAmountDetails && nullNodeAmountDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountDetails = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("is_amount_controllable") is { } nullNodeIsAmountControllable && nullNodeIsAmountControllable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAmountControllable = null;
+            if (parseNode.GetChildNode("merchant_amount") is { } nullNodeMerchantAmount && nullNodeMerchantAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAmount = null;
+            if (parseNode.GetChildNode("merchant_currency") is { } nullNodeMerchantCurrency && nullNodeMerchantCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantCurrency = null;
+            if (parseNode.GetChildNode("network_risk_score") is { } nullNodeNetworkRiskScore && nullNodeNetworkRiskScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkRiskScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional amount Stripe will hold if the authorization is approved, in the card&apos;s [currency](https://docs.stripe.com/api#issuing_authorization_object-pending-request-currency) and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails? AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestAmountDetails _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>If set `true`, you may provide [amount](https://docs.stripe.com/api/issuing/authorizations/approve#approve_issuing_authorization-amount) to control how much to hold for the authorization.</summary>
-        public bool? IsAmountControllable { get; set; }
+        public bool? IsAmountControllable { get => _explicitNullValueIsAmountControllable; set { _explicitNullValueIsAmountControllable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_amount_controllable"); else _explicitNullProperties?.Remove("is_amount_controllable"); } }
+        private bool? _explicitNullValueIsAmountControllable = default!;
         /// <summary>The amount the merchant is requesting to be authorized in the `merchant_currency`. The amount is in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
-        public int? MerchantAmount { get; set; }
+        public int? MerchantAmount { get => _explicitNullValueMerchantAmount; set { _explicitNullValueMerchantAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_amount"); else _explicitNullProperties?.Remove("merchant_amount"); } }
+        private int? _explicitNullValueMerchantAmount = default!;
         /// <summary>The local currency the merchant is requesting to authorize.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantCurrency { get; set; }
+        public string? MerchantCurrency { get => _explicitNullValueMerchantCurrency; set { _explicitNullValueMerchantCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_currency"); else _explicitNullProperties?.Remove("merchant_currency"); } }
+        private string? _explicitNullValueMerchantCurrency = default!;
 #nullable restore
 #else
-        public string MerchantCurrency { get; set; }
+        public string MerchantCurrency { get => _explicitNullValueMerchantCurrency; set { _explicitNullValueMerchantCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_currency"); else _explicitNullProperties?.Remove("merchant_currency"); } }
+        private string _explicitNullValueMerchantCurrency = default!;
 #endif
         /// <summary>The card network&apos;s estimate of the likelihood that an authorization is fraudulent. Takes on values between 1 and 99.</summary>
-        public int? NetworkRiskScore { get; set; }
+        public int? NetworkRiskScore { get => _explicitNullValueNetworkRiskScore; set { _explicitNullValueNetworkRiskScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_risk_score"); else _explicitNullProperties?.Remove("network_risk_score"); } }
+        private int? _explicitNullValueNetworkRiskScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed"/> and sets the default values.
         /// </summary>
@@ -62,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,6 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteIntValue("network_risk_score", NetworkRiskScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

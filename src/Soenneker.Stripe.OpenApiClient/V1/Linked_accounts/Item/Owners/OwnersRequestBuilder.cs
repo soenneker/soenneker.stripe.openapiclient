@@ -37,21 +37,19 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners
         /// &lt;p&gt;Lists all owners for a given &lt;code&gt;Account&lt;/code&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwners200Response"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwners200Response?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwnersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwners200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwners200Response> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwnersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwners200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
@@ -62,22 +60,19 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners
         /// &lt;p&gt;Lists all owners for a given &lt;code&gt;Account&lt;/code&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwnersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetLinkedAccountsAccountOwnersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.Owners.OwnersRequestBuilder.OwnersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
             return requestInfo;
         }
         /// <summary>

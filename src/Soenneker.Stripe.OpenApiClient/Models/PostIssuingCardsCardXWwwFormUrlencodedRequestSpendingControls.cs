@@ -12,64 +12,92 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControls : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_card_presences") is { } nullNodeAllowedCardPresences && nullNodeAllowedCardPresences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCardPresences = null;
+            if (parseNode.GetChildNode("allowed_categories") is { } nullNodeAllowedCategories && nullNodeAllowedCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCategories = null;
+            if (parseNode.GetChildNode("allowed_merchant_countries") is { } nullNodeAllowedMerchantCountries && nullNodeAllowedMerchantCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedMerchantCountries = null;
+            if (parseNode.GetChildNode("blocked_card_presences") is { } nullNodeBlockedCardPresences && nullNodeBlockedCardPresences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCardPresences = null;
+            if (parseNode.GetChildNode("blocked_categories") is { } nullNodeBlockedCategories && nullNodeBlockedCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCategories = null;
+            if (parseNode.GetChildNode("blocked_merchant_countries") is { } nullNodeBlockedMerchantCountries && nullNodeBlockedMerchantCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedMerchantCountries = null;
+            if (parseNode.GetChildNode("spending_limits") is { } nullNodeSpendingLimits && nullNodeSpendingLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendingLimits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowed_card_presences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?>? AllowedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?>? AllowedCardPresences { get => _explicitNullValueAllowedCardPresences; set { _explicitNullValueAllowedCardPresences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_card_presences"); else _explicitNullProperties?.Remove("allowed_card_presences"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?>? _explicitNullValueAllowedCardPresences = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?> AllowedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?> AllowedCardPresences { get => _explicitNullValueAllowedCardPresences; set { _explicitNullValueAllowedCardPresences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_card_presences"); else _explicitNullProperties?.Remove("allowed_card_presences"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCardPresencesItem?> _explicitNullValueAllowedCardPresences = default!;
 #endif
         /// <summary>The allowed_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?>? AllowedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?>? AllowedCategories { get => _explicitNullValueAllowedCategories; set { _explicitNullValueAllowedCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_categories"); else _explicitNullProperties?.Remove("allowed_categories"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?>? _explicitNullValueAllowedCategories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?> AllowedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?> AllowedCategories { get => _explicitNullValueAllowedCategories; set { _explicitNullValueAllowedCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_categories"); else _explicitNullProperties?.Remove("allowed_categories"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsAllowedCategoriesItem?> _explicitNullValueAllowedCategories = default!;
 #endif
         /// <summary>The allowed_merchant_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedMerchantCountries { get; set; }
+        public List<string>? AllowedMerchantCountries { get => _explicitNullValueAllowedMerchantCountries; set { _explicitNullValueAllowedMerchantCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_merchant_countries"); else _explicitNullProperties?.Remove("allowed_merchant_countries"); } }
+        private List<string>? _explicitNullValueAllowedMerchantCountries = default!;
 #nullable restore
 #else
-        public List<string> AllowedMerchantCountries { get; set; }
+        public List<string> AllowedMerchantCountries { get => _explicitNullValueAllowedMerchantCountries; set { _explicitNullValueAllowedMerchantCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_merchant_countries"); else _explicitNullProperties?.Remove("allowed_merchant_countries"); } }
+        private List<string> _explicitNullValueAllowedMerchantCountries = default!;
 #endif
         /// <summary>The blocked_card_presences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?>? BlockedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?>? BlockedCardPresences { get => _explicitNullValueBlockedCardPresences; set { _explicitNullValueBlockedCardPresences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_card_presences"); else _explicitNullProperties?.Remove("blocked_card_presences"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?>? _explicitNullValueBlockedCardPresences = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?> BlockedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?> BlockedCardPresences { get => _explicitNullValueBlockedCardPresences; set { _explicitNullValueBlockedCardPresences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_card_presences"); else _explicitNullProperties?.Remove("blocked_card_presences"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCardPresencesItem?> _explicitNullValueBlockedCardPresences = default!;
 #endif
         /// <summary>The blocked_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?>? BlockedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?>? BlockedCategories { get => _explicitNullValueBlockedCategories; set { _explicitNullValueBlockedCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_categories"); else _explicitNullProperties?.Remove("blocked_categories"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?>? _explicitNullValueBlockedCategories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?> BlockedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?> BlockedCategories { get => _explicitNullValueBlockedCategories; set { _explicitNullValueBlockedCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_categories"); else _explicitNullProperties?.Remove("blocked_categories"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem?> _explicitNullValueBlockedCategories = default!;
 #endif
         /// <summary>The blocked_merchant_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedMerchantCountries { get; set; }
+        public List<string>? BlockedMerchantCountries { get => _explicitNullValueBlockedMerchantCountries; set { _explicitNullValueBlockedMerchantCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merchant_countries"); else _explicitNullProperties?.Remove("blocked_merchant_countries"); } }
+        private List<string>? _explicitNullValueBlockedMerchantCountries = default!;
 #nullable restore
 #else
-        public List<string> BlockedMerchantCountries { get; set; }
+        public List<string> BlockedMerchantCountries { get => _explicitNullValueBlockedMerchantCountries; set { _explicitNullValueBlockedMerchantCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merchant_countries"); else _explicitNullProperties?.Remove("blocked_merchant_countries"); } }
+        private List<string> _explicitNullValueBlockedMerchantCountries = default!;
 #endif
         /// <summary>The spending_limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem>? SpendingLimits { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem>? SpendingLimits { get => _explicitNullValueSpendingLimits; set { _explicitNullValueSpendingLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_limits"); else _explicitNullProperties?.Remove("spending_limits"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem>? _explicitNullValueSpendingLimits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem> SpendingLimits { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem> SpendingLimits { get => _explicitNullValueSpendingLimits; set { _explicitNullValueSpendingLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_limits"); else _explicitNullProperties?.Remove("spending_limits"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem> _explicitNullValueSpendingLimits = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControls"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControls CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControls();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControls(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsBlockedCategoriesItem>("blocked_categories", BlockedCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("blocked_merchant_countries", BlockedMerchantCountries);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCardXWwwFormUrlencodedRequestSpendingControlsSpendingLimitsItem>("spending_limits", SpendingLimits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

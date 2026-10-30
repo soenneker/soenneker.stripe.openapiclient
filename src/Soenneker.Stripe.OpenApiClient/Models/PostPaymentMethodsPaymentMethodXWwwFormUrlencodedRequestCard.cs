@@ -12,20 +12,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exp_month") is { } nullNodeExpMonth && nullNodeExpMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpMonth = null;
+            if (parseNode.GetChildNode("exp_year") is { } nullNodeExpYear && nullNodeExpYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpYear = null;
+            if (parseNode.GetChildNode("networks") is { } nullNodeNetworks && nullNodeNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Networks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exp_month property</summary>
-        public int? ExpMonth { get; set; }
+        public int? ExpMonth { get => _explicitNullValueExpMonth; set { _explicitNullValueExpMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_month"); else _explicitNullProperties?.Remove("exp_month"); } }
+        private int? _explicitNullValueExpMonth = default!;
         /// <summary>The exp_year property</summary>
-        public int? ExpYear { get; set; }
+        public int? ExpYear { get => _explicitNullValueExpYear; set { _explicitNullValueExpYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp_year"); else _explicitNullProperties?.Remove("exp_year"); } }
+        private int? _explicitNullValueExpYear = default!;
         /// <summary>The networks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks? Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks? Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks? _explicitNullValueNetworks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks _explicitNullValueNetworks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworks>("networks", Networks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

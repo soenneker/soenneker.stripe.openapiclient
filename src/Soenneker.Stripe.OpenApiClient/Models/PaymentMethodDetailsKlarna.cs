@@ -11,48 +11,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentMethodDetailsKlarna : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("payer_details") is { } nullNodePayerDetails && nullNodePayerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerDetails = null;
+            if (parseNode.GetChildNode("payment_method_category") is { } nullNodePaymentMethodCategory && nullNodePaymentMethodCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodCategory = null;
+            if (parseNode.GetChildNode("preferred_locale") is { } nullNodePreferredLocale && nullNodePreferredLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLocale = null;
+            if (parseNode.GetChildNode("reader") is { } nullNodeReader && nullNodeReader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reader = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction&apos;s reader is assigned to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Location { get; set; }
+        public string? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public string Location { get; set; }
+        public string Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string _explicitNullValueLocation = default!;
 #endif
         /// <summary>The payer details for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails? PayerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails? PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails? _explicitNullValuePayerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails PayerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails _explicitNullValuePayerDetails = default!;
 #endif
         /// <summary>The Klarna payment method used for this transaction.Can be one of `pay_later`, `pay_now`, `pay_with_financing`, or `pay_in_installments`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodCategory { get; set; }
+        public string? PaymentMethodCategory { get => _explicitNullValuePaymentMethodCategory; set { _explicitNullValuePaymentMethodCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_category"); else _explicitNullProperties?.Remove("payment_method_category"); } }
+        private string? _explicitNullValuePaymentMethodCategory = default!;
 #nullable restore
 #else
-        public string PaymentMethodCategory { get; set; }
+        public string PaymentMethodCategory { get => _explicitNullValuePaymentMethodCategory; set { _explicitNullValuePaymentMethodCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_category"); else _explicitNullProperties?.Remove("payment_method_category"); } }
+        private string _explicitNullValuePaymentMethodCategory = default!;
 #endif
         /// <summary>Preferred language of the Klarna authorization page that the customer is redirected to.Can be one of `de-AT`, `en-AT`, `nl-BE`, `fr-BE`, `en-BE`, `de-DE`, `en-DE`, `da-DK`, `en-DK`, `es-ES`, `en-ES`, `fi-FI`, `sv-FI`, `en-FI`, `en-GB`, `en-IE`, `it-IT`, `en-IT`, `nl-NL`, `en-NL`, `nb-NO`, `en-NO`, `sv-SE`, `en-SE`, `en-US`, `es-US`, `fr-FR`, `en-FR`, `cs-CZ`, `en-CZ`, `ro-RO`, `en-RO`, `el-GR`, `en-GR`, `en-AU`, `en-NZ`, `en-CA`, `fr-CA`, `pl-PL`, `en-PL`, `pt-PT`, `en-PT`, `de-CH`, `fr-CH`, `it-CH`, or `en-CH`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredLocale { get; set; }
+        public string? PreferredLocale { get => _explicitNullValuePreferredLocale; set { _explicitNullValuePreferredLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locale"); else _explicitNullProperties?.Remove("preferred_locale"); } }
+        private string? _explicitNullValuePreferredLocale = default!;
 #nullable restore
 #else
-        public string PreferredLocale { get; set; }
+        public string PreferredLocale { get => _explicitNullValuePreferredLocale; set { _explicitNullValuePreferredLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locale"); else _explicitNullProperties?.Remove("preferred_locale"); } }
+        private string _explicitNullValuePreferredLocale = default!;
 #endif
         /// <summary>ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reader { get; set; }
+        public string? Reader { get => _explicitNullValueReader; set { _explicitNullValueReader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reader"); else _explicitNullProperties?.Remove("reader"); } }
+        private string? _explicitNullValueReader = default!;
 #nullable restore
 #else
-        public string Reader { get; set; }
+        public string Reader { get => _explicitNullValueReader; set { _explicitNullValueReader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reader"); else _explicitNullProperties?.Remove("reader"); } }
+        private string _explicitNullValueReader = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarna"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarna CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarna();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarna(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_category", PaymentMethodCategory);
             writer.WriteStringValue("preferred_locale", PreferredLocale);
             writer.WriteStringValue("reader", Reader);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

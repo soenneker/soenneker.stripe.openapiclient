@@ -11,48 +11,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentIntentNextActionWechatPayDisplayQrCode : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
+            if (parseNode.GetChildNode("image_data_url") is { } nullNodeImageDataUrl && nullNodeImageDataUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageDataUrl = null;
+            if (parseNode.GetChildNode("image_url_png") is { } nullNodeImageUrlPng && nullNodeImageUrlPng.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlPng = null;
+            if (parseNode.GetChildNode("image_url_svg") is { } nullNodeImageUrlSvg && nullNodeImageUrlSvg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlSvg = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The data being used to generate QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get; set; }
+        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private string? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public string Data { get; set; }
+        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private string _explicitNullValueData = default!;
 #endif
         /// <summary>The URL to the hosted WeChat Pay instructions page, which allows customers to view the WeChat Pay QR code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedInstructionsUrl { get; set; }
+        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        private string? _explicitNullValueHostedInstructionsUrl = default!;
 #nullable restore
 #else
-        public string HostedInstructionsUrl { get; set; }
+        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        private string _explicitNullValueHostedInstructionsUrl = default!;
 #endif
         /// <summary>The base64 image data for a pre-generated QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageDataUrl { get; set; }
+        public string? ImageDataUrl { get => _explicitNullValueImageDataUrl; set { _explicitNullValueImageDataUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_data_url"); else _explicitNullProperties?.Remove("image_data_url"); } }
+        private string? _explicitNullValueImageDataUrl = default!;
 #nullable restore
 #else
-        public string ImageDataUrl { get; set; }
+        public string ImageDataUrl { get => _explicitNullValueImageDataUrl; set { _explicitNullValueImageDataUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_data_url"); else _explicitNullProperties?.Remove("image_data_url"); } }
+        private string _explicitNullValueImageDataUrl = default!;
 #endif
         /// <summary>The image_url_png string used to render QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUrlPng { get; set; }
+        public string? ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
+        private string? _explicitNullValueImageUrlPng = default!;
 #nullable restore
 #else
-        public string ImageUrlPng { get; set; }
+        public string ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
+        private string _explicitNullValueImageUrlPng = default!;
 #endif
         /// <summary>The image_url_svg string used to render QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUrlSvg { get; set; }
+        public string? ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
+        private string? _explicitNullValueImageUrlSvg = default!;
 #nullable restore
 #else
-        public string ImageUrlSvg { get; set; }
+        public string ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
+        private string _explicitNullValueImageUrlSvg = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionWechatPayDisplayQrCode"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionWechatPayDisplayQrCode CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionWechatPayDisplayQrCode();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionWechatPayDisplayQrCode(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("image_data_url", ImageDataUrl);
             writer.WriteStringValue("image_url_png", ImageUrlPng);
             writer.WriteStringValue("image_url_svg", ImageUrlSvg);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

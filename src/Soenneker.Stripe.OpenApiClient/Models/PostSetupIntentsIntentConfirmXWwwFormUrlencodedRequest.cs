@@ -11,81 +11,117 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_payment_method_types") is { } nullNodeAllowedPaymentMethodTypes && nullNodeAllowedPaymentMethodTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedPaymentMethodTypes = null;
+            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("confirmation_token") is { } nullNodeConfirmationToken && nullNodeConfirmationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationToken = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("mandate_data") is { } nullNodeMandateData && nullNodeMandateData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MandateData = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("payment_method_data") is { } nullNodePaymentMethodData && nullNodePaymentMethodData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodData = null;
+            if (parseNode.GetChildNode("payment_method_options") is { } nullNodePaymentMethodOptions && nullNodePaymentMethodOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodOptions = null;
+            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("use_stripe_sdk") is { } nullNodeUseStripeSdk && nullNodeUseStripeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseStripeSdk = null;
+        }
+
         /// <summary>The list of payment method types to allow for this SetupIntent. Stripe will only use methods in this list when determining the payment methods to offer. A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?>? AllowedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?>? AllowedPaymentMethodTypes { get => _explicitNullValueAllowedPaymentMethodTypes; set { _explicitNullValueAllowedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_payment_method_types"); else _explicitNullProperties?.Remove("allowed_payment_method_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?>? _explicitNullValueAllowedPaymentMethodTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?> AllowedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?> AllowedPaymentMethodTypes { get => _explicitNullValueAllowedPaymentMethodTypes; set { _explicitNullValueAllowedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_payment_method_types"); else _explicitNullProperties?.Remove("allowed_payment_method_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?> _explicitNullValueAllowedPaymentMethodTypes = default!;
 #endif
         /// <summary>The client secret of the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get; set; }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get; set; }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>ID of the ConfirmationToken used to confirm this SetupIntent.If the provided ConfirmationToken contains properties that are also being provided in this request, such as `payment_method`, then the values in this request will take precedence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfirmationToken { get; set; }
+        public string? ConfirmationToken { get => _explicitNullValueConfirmationToken; set { _explicitNullValueConfirmationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_token"); else _explicitNullProperties?.Remove("confirmation_token"); } }
+        private string? _explicitNullValueConfirmationToken = default!;
 #nullable restore
 #else
-        public string ConfirmationToken { get; set; }
+        public string ConfirmationToken { get => _explicitNullValueConfirmationToken; set { _explicitNullValueConfirmationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_token"); else _explicitNullProperties?.Remove("confirmation_token"); } }
+        private string _explicitNullValueConfirmationToken = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The mandate_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData? MandateData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData? MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData? _explicitNullValueMandateData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData MandateData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData _explicitNullValueMandateData = default!;
 #endif
         /// <summary>ID of the payment method (a PaymentMethod, Card, or saved Source object) to attach to this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethod { get; set; }
+        public string? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private string? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public string PaymentMethod { get; set; }
+        public string PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private string _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>When included, this hash creates a PaymentMethod that is set as the [`payment_method`](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-payment_method)value in the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData? PaymentMethodData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData? PaymentMethodData { get => _explicitNullValuePaymentMethodData; set { _explicitNullValuePaymentMethodData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_data"); else _explicitNullProperties?.Remove("payment_method_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData? _explicitNullValuePaymentMethodData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData PaymentMethodData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData PaymentMethodData { get => _explicitNullValuePaymentMethodData; set { _explicitNullValuePaymentMethodData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_data"); else _explicitNullProperties?.Remove("payment_method_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData _explicitNullValuePaymentMethodData = default!;
 #endif
         /// <summary>Payment method-specific configuration for this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>The URL to redirect your customer back to after they authenticate on the payment method&apos;s app or site.If you&apos;d prefer to redirect to a mobile application, you can alternatively supply an application URI scheme.This parameter is only used for cards and other redirect-based payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>Set to `true` when confirming server-side and using Stripe.js, iOS, or Android client-side SDKs to handle the next actions.</summary>
-        public bool? UseStripeSdk { get; set; }
+        public bool? UseStripeSdk { get => _explicitNullValueUseStripeSdk; set { _explicitNullValueUseStripeSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_stripe_sdk"); else _explicitNullProperties?.Remove("use_stripe_sdk"); } }
+        private bool? _explicitNullValueUseStripeSdk = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,7 +168,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteStringValue("return_url", ReturnUrl);
-            writer.WriteBoolValue("use_stripe_sdk", UseStripeSdk);
+            writer.WriteBoolValue("use_stripe_sdk", UseStripeSdk);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

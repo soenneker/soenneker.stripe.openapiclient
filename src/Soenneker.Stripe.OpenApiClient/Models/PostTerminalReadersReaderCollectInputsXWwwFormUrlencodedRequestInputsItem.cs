@@ -11,37 +11,57 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_text") is { } nullNodeCustomText && nullNodeCustomText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomText = null;
+            if (parseNode.GetChildNode("required") is { } nullNodeRequired && nullNodeRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Required = null;
+            if (parseNode.GetChildNode("selection") is { } nullNodeSelection && nullNodeSelection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Selection = null;
+            if (parseNode.GetChildNode("toggles") is { } nullNodeToggles && nullNodeToggles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Toggles = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText? CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText? CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText? _explicitNullValueCustomText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemCustomText _explicitNullValueCustomText = default!;
 #endif
         /// <summary>The required property</summary>
-        public bool? Required { get; set; }
+        public bool? Required { get => _explicitNullValueRequired; set { _explicitNullValueRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required"); else _explicitNullProperties?.Remove("required"); } }
+        private bool? _explicitNullValueRequired = default!;
         /// <summary>The selection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection? Selection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection? Selection { get => _explicitNullValueSelection; set { _explicitNullValueSelection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selection"); else _explicitNullProperties?.Remove("selection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection? _explicitNullValueSelection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection Selection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection Selection { get => _explicitNullValueSelection; set { _explicitNullValueSelection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selection"); else _explicitNullProperties?.Remove("selection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection _explicitNullValueSelection = default!;
 #endif
         /// <summary>The toggles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem>? Toggles { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem>? Toggles { get => _explicitNullValueToggles; set { _explicitNullValueToggles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toggles"); else _explicitNullProperties?.Remove("toggles"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem>? _explicitNullValueToggles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem> Toggles { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem> Toggles { get => _explicitNullValueToggles; set { _explicitNullValueToggles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toggles"); else _explicitNullProperties?.Remove("toggles"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem> _explicitNullValueToggles = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItem"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemSelection>("selection", Selection);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemTogglesItem>("toggles", Toggles);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectInputsXWwwFormUrlencodedRequestInputsItemType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

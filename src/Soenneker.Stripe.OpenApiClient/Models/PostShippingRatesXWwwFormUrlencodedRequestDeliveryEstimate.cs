@@ -12,24 +12,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maximum") is { } nullNodeMaximum && nullNodeMaximum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Maximum = null;
+            if (parseNode.GetChildNode("minimum") is { } nullNodeMinimum && nullNodeMinimum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minimum = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum? Maximum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum? Maximum { get => _explicitNullValueMaximum; set { _explicitNullValueMaximum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum"); else _explicitNullProperties?.Remove("maximum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum? _explicitNullValueMaximum = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum Maximum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum Maximum { get => _explicitNullValueMaximum; set { _explicitNullValueMaximum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum"); else _explicitNullProperties?.Remove("maximum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum _explicitNullValueMaximum = default!;
 #endif
         /// <summary>The minimum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum? Minimum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum? Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum? _explicitNullValueMinimum = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum Minimum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum _explicitNullValueMinimum = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMaximum>("maximum", Maximum);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimateMinimum>("minimum", Minimum);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

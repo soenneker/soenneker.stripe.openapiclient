@@ -12,59 +12,91 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingCreditBalanceTransaction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("credit") is { } nullNodeCredit && nullNodeCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Credit = null;
+            if (parseNode.GetChildNode("credit_grant") is { } nullNodeCreditGrant && nullNodeCreditGrant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditGrant = null;
+            if (parseNode.GetChildNode("debit") is { } nullNodeDebit && nullNodeDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Debit = null;
+            if (parseNode.GetChildNode("effective_at") is { } nullNodeEffectiveAt && nullNodeEffectiveAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("test_clock") is { } nullNodeTestClock && nullNodeTestClock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestClock = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Credit details for this credit balance transaction. Only present if type is `credit`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit? Credit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit? Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit? _explicitNullValueCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit Credit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit _explicitNullValueCredit = default!;
 #endif
         /// <summary>The credit grant associated with this credit balance transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant? CreditGrant { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant? CreditGrant { get => _explicitNullValueCreditGrant; set { _explicitNullValueCreditGrant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_grant"); else _explicitNullProperties?.Remove("credit_grant"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant? _explicitNullValueCreditGrant = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant CreditGrant { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant CreditGrant { get => _explicitNullValueCreditGrant; set { _explicitNullValueCreditGrant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_grant"); else _explicitNullProperties?.Remove("credit_grant"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCreditGrant _explicitNullValueCreditGrant = default!;
 #endif
         /// <summary>Debit details for this credit balance transaction. Only present if type is `debit`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit? Debit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit? Debit { get => _explicitNullValueDebit; set { _explicitNullValueDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit"); else _explicitNullProperties?.Remove("debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit? _explicitNullValueDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit Debit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit Debit { get => _explicitNullValueDebit; set { _explicitNullValueDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit"); else _explicitNullProperties?.Remove("debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionDebit _explicitNullValueDebit = default!;
 #endif
         /// <summary>The effective time of this credit balance transaction.</summary>
-        public int? EffectiveAt { get; set; }
+        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private int? _explicitNullValueEffectiveAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionObject? _explicitNullValueObject = default!;
         /// <summary>ID of the test clock this credit balance transaction belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock? TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock? TestClock { get => _explicitNullValueTestClock; set { _explicitNullValueTestClock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_clock"); else _explicitNullProperties?.Remove("test_clock"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock? _explicitNullValueTestClock = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock TestClock { get => _explicitNullValueTestClock; set { _explicitNullValueTestClock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_clock"); else _explicitNullProperties?.Remove("test_clock"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock _explicitNullValueTestClock = default!;
 #endif
         /// <summary>The type of credit balance transaction (credit or debit).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction"/> and sets the default values.
         /// </summary>
@@ -80,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +151,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionTestClock>("test_clock", TestClock);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

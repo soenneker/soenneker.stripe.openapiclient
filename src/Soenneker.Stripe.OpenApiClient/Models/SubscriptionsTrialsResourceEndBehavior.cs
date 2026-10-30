@@ -12,11 +12,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionsTrialsResourceEndBehavior : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("missing_payment_method") is { } nullNodeMissingPaymentMethod && nullNodeMissingPaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingPaymentMethod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates how the subscription should change when the trial ends if the user did not provide a payment method.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get => _explicitNullValueMissingPaymentMethod; set { _explicitNullValueMissingPaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_payment_method"); else _explicitNullProperties?.Remove("missing_payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? _explicitNullValueMissingPaymentMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior"/> and sets the default values.
         /// </summary>
@@ -32,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,6 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod>("missing_payment_method", MissingPaymentMethod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

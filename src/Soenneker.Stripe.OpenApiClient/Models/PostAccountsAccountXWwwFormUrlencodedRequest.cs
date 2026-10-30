@@ -11,120 +11,171 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountsAccountXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_token") is { } nullNodeAccountToken && nullNodeAccountToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountToken = null;
+            if (parseNode.GetChildNode("business_profile") is { } nullNodeBusinessProfile && nullNodeBusinessProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessProfile = null;
+            if (parseNode.GetChildNode("business_type") is { } nullNodeBusinessType && nullNodeBusinessType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessType = null;
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("company") is { } nullNodeCompany && nullNodeCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Company = null;
+            if (parseNode.GetChildNode("default_currency") is { } nullNodeDefaultCurrency && nullNodeDefaultCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCurrency = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("external_account") is { } nullNodeExternalAccount && nullNodeExternalAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAccount = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("individual") is { } nullNodeIndividual && nullNodeIndividual.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Individual = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("settings") is { } nullNodeSettings && nullNodeSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Settings = null;
+            if (parseNode.GetChildNode("tos_acceptance") is { } nullNodeTosAcceptance && nullNodeTosAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TosAcceptance = null;
+        }
+
         /// <summary>An [account token](https://docs.stripe.com/api#create_account_token), used to securely provide details to the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountToken { get; set; }
+        public string? AccountToken { get => _explicitNullValueAccountToken; set { _explicitNullValueAccountToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_token"); else _explicitNullProperties?.Remove("account_token"); } }
+        private string? _explicitNullValueAccountToken = default!;
 #nullable restore
 #else
-        public string AccountToken { get; set; }
+        public string AccountToken { get => _explicitNullValueAccountToken; set { _explicitNullValueAccountToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_token"); else _explicitNullProperties?.Remove("account_token"); } }
+        private string _explicitNullValueAccountToken = default!;
 #endif
         /// <summary>Business information about the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile? BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile? BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile? _explicitNullValueBusinessProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessProfile _explicitNullValueBusinessProfile = default!;
 #endif
         /// <summary>The business type. Once you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions), this property can only be updated for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessType? BusinessType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessType? BusinessType { get => _explicitNullValueBusinessType; set { _explicitNullValueBusinessType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_type"); else _explicitNullProperties?.Remove("business_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestBusinessType? _explicitNullValueBusinessType = default!;
         /// <summary>Each key of the dictionary represents a capability, and each capabilitymaps to its settings (for example, whether it has been requested or not). Eachcapability is inactive until you have provided its specificrequirements and Stripe has verified them. An account might have someof its requested capabilities be active and some be inactive.Required when [account.controller.stripe_dashboard.type](/api/accounts/create#create_account-controller-dashboard-type)is `none`, which includes Custom accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities? Capabilities { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities Capabilities { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCapabilities _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>Information about the company or business. This field is available for any `business_type`. Once you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions), this property can only be updated for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany? Company { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany? Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany? _explicitNullValueCompany = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany Company { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestCompany _explicitNullValueCompany = default!;
 #endif
         /// <summary>Three-letter ISO currency code representing the default currency for the account. This must be a currency that [Stripe supports in the account&apos;s country](https://docs.stripe.com/payouts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCurrency { get; set; }
+        public string? DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
+        private string? _explicitNullValueDefaultCurrency = default!;
 #nullable restore
 #else
-        public string DefaultCurrency { get; set; }
+        public string DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
+        private string _explicitNullValueDefaultCurrency = default!;
 #endif
         /// <summary>Documents that may be submitted to satisfy various informational requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments? Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestDocuments _explicitNullValueDocuments = default!;
 #endif
         /// <summary>The email address of the account holder. This is only to make the account easier to identify to you. If [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts, Stripe doesn&apos;t email the account without your consent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A card or bank account to attach to the account for receiving [payouts](/connect/bank-debit-card-payouts) (you won’t be able to use it for top-ups). You can provide either a token, like the ones returned by [Stripe.js](/js), or a dictionary, as documented in the `external_account` parameter for [bank account](/api#account_create_bank_account) creation. &lt;br&gt;&lt;br&gt;By default, providing an external account sets it as the new default external account for its currency, and deletes the old default if one exists. To add additional external accounts without replacing the existing default for the currency, use the [bank account](/api#account_create_bank_account) or [card creation](/api#account_create_card) APIs. After you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions), this property can only be updated for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAccount { get; set; }
+        public string? ExternalAccount { get => _explicitNullValueExternalAccount; set { _explicitNullValueExternalAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_account"); else _explicitNullProperties?.Remove("external_account"); } }
+        private string? _explicitNullValueExternalAccount = default!;
 #nullable restore
 #else
-        public string ExternalAccount { get; set; }
+        public string ExternalAccount { get => _explicitNullValueExternalAccount; set { _explicitNullValueExternalAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_account"); else _explicitNullProperties?.Remove("external_account"); } }
+        private string _explicitNullValueExternalAccount = default!;
 #endif
         /// <summary>A hash of account group type to tokens. These are account groups this account should be added to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups? Groups { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups? _explicitNullValueGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups Groups { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestGroups _explicitNullValueGroups = default!;
 #endif
         /// <summary>Information about the person represented by the account. This field is null unless `business_type` is set to `individual`. Once you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions), this property can only be updated for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual? Individual { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual? Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual? _explicitNullValueIndividual = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual Individual { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual _explicitNullValueIndividual = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Options for customizing how the account functions within Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings? Settings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings Settings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings _explicitNullValueSettings = default!;
 #endif
         /// <summary>Details on the account&apos;s acceptance of the [Stripe Services Agreement](/connect/updating-accounts#tos-acceptance). This property can only be updated for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts. This property defaults to a `full` service agreement when empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance? TosAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance? TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance? _explicitNullValueTosAcceptance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance TosAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance _explicitNullValueTosAcceptance = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -134,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -182,7 +233,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestIndividual>("individual", Individual);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettings>("settings", Settings);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance>("tos_acceptance", TosAcceptance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestTosAcceptance>("tos_acceptance", TosAcceptance);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

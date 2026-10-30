@@ -12,72 +12,103 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetupIntentNextActionComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blik_authorize") is { } nullNodeBlikAuthorize && nullNodeBlikAuthorize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlikAuthorize = null;
+            if (parseNode.GetChildNode("cashapp_handle_redirect_or_display_qr_code") is { } nullNodeCashappHandleRedirectOrDisplayQrCode && nullNodeCashappHandleRedirectOrDisplayQrCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashappHandleRedirectOrDisplayQrCode = null;
+            if (parseNode.GetChildNode("pix_display_qr_code") is { } nullNodePixDisplayQrCode && nullNodePixDisplayQrCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PixDisplayQrCode = null;
+            if (parseNode.GetChildNode("redirect_to_url") is { } nullNodeRedirectToUrl && nullNodeRedirectToUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectToUrl = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upi_handle_redirect_or_display_qr_code") is { } nullNodeUpiHandleRedirectOrDisplayQrCode && nullNodeUpiHandleRedirectOrDisplayQrCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpiHandleRedirectOrDisplayQrCode = null;
+            if (parseNode.GetChildNode("use_stripe_sdk") is { } nullNodeUseStripeSdk && nullNodeUseStripeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseStripeSdk = null;
+            if (parseNode.GetChildNode("verify_with_microdeposits") is { } nullNodeVerifyWithMicrodeposits && nullNodeVerifyWithMicrodeposits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifyWithMicrodeposits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blik_authorize property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize? BlikAuthorize { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize? BlikAuthorize { get => _explicitNullValueBlikAuthorize; set { _explicitNullValueBlikAuthorize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik_authorize"); else _explicitNullProperties?.Remove("blik_authorize"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize? _explicitNullValueBlikAuthorize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize BlikAuthorize { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize BlikAuthorize { get => _explicitNullValueBlikAuthorize; set { _explicitNullValueBlikAuthorize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik_authorize"); else _explicitNullProperties?.Remove("blik_authorize"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionBlikAuthorize _explicitNullValueBlikAuthorize = default!;
 #endif
         /// <summary>The cashapp_handle_redirect_or_display_qr_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode? CashappHandleRedirectOrDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode? CashappHandleRedirectOrDisplayQrCode { get => _explicitNullValueCashappHandleRedirectOrDisplayQrCode; set { _explicitNullValueCashappHandleRedirectOrDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp_handle_redirect_or_display_qr_code"); else _explicitNullProperties?.Remove("cashapp_handle_redirect_or_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode? _explicitNullValueCashappHandleRedirectOrDisplayQrCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode CashappHandleRedirectOrDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode CashappHandleRedirectOrDisplayQrCode { get => _explicitNullValueCashappHandleRedirectOrDisplayQrCode; set { _explicitNullValueCashappHandleRedirectOrDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp_handle_redirect_or_display_qr_code"); else _explicitNullProperties?.Remove("cashapp_handle_redirect_or_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCashappHandleRedirectOrDisplayQrCode _explicitNullValueCashappHandleRedirectOrDisplayQrCode = default!;
 #endif
         /// <summary>The pix_display_qr_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode? PixDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode? PixDisplayQrCode { get => _explicitNullValuePixDisplayQrCode; set { _explicitNullValuePixDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix_display_qr_code"); else _explicitNullProperties?.Remove("pix_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode? _explicitNullValuePixDisplayQrCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode PixDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode PixDisplayQrCode { get => _explicitNullValuePixDisplayQrCode; set { _explicitNullValuePixDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix_display_qr_code"); else _explicitNullProperties?.Remove("pix_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionPixDisplayQrCode _explicitNullValuePixDisplayQrCode = default!;
 #endif
         /// <summary>The redirect_to_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl? RedirectToUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl? RedirectToUrl { get => _explicitNullValueRedirectToUrl; set { _explicitNullValueRedirectToUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_to_url"); else _explicitNullProperties?.Remove("redirect_to_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl? _explicitNullValueRedirectToUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl RedirectToUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl RedirectToUrl { get => _explicitNullValueRedirectToUrl; set { _explicitNullValueRedirectToUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_to_url"); else _explicitNullProperties?.Remove("redirect_to_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionRedirectToUrl _explicitNullValueRedirectToUrl = default!;
 #endif
         /// <summary>Type of the next action to perform. Refer to the other child attributes under `next_action` for available values. Examples include: `redirect_to_url`, `use_stripe_sdk`, `alipay_handle_redirect`, `oxxo_display_details`, or `verify_with_microdeposits`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The upi_handle_redirect_or_display_qr_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode? UpiHandleRedirectOrDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode? UpiHandleRedirectOrDisplayQrCode { get => _explicitNullValueUpiHandleRedirectOrDisplayQrCode; set { _explicitNullValueUpiHandleRedirectOrDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi_handle_redirect_or_display_qr_code"); else _explicitNullProperties?.Remove("upi_handle_redirect_or_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode? _explicitNullValueUpiHandleRedirectOrDisplayQrCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode UpiHandleRedirectOrDisplayQrCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode UpiHandleRedirectOrDisplayQrCode { get => _explicitNullValueUpiHandleRedirectOrDisplayQrCode; set { _explicitNullValueUpiHandleRedirectOrDisplayQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi_handle_redirect_or_display_qr_code"); else _explicitNullProperties?.Remove("upi_handle_redirect_or_display_qr_code"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode _explicitNullValueUpiHandleRedirectOrDisplayQrCode = default!;
 #endif
         /// <summary>When confirming a SetupIntent with Stripe.js, Stripe.js depends on the contents of this dictionary to invoke authentication flows. The shape of the contents is subject to change and is only intended to be used by Stripe.js.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty? UseStripeSdk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty? UseStripeSdk { get => _explicitNullValueUseStripeSdk; set { _explicitNullValueUseStripeSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_stripe_sdk"); else _explicitNullProperties?.Remove("use_stripe_sdk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty? _explicitNullValueUseStripeSdk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty UseStripeSdk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty UseStripeSdk { get => _explicitNullValueUseStripeSdk; set { _explicitNullValueUseStripeSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_stripe_sdk"); else _explicitNullProperties?.Remove("use_stripe_sdk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty _explicitNullValueUseStripeSdk = default!;
 #endif
         /// <summary>The verify_with_microdeposits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits? VerifyWithMicrodeposits { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits? VerifyWithMicrodeposits { get => _explicitNullValueVerifyWithMicrodeposits; set { _explicitNullValueVerifyWithMicrodeposits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_with_microdeposits"); else _explicitNullProperties?.Remove("verify_with_microdeposits"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits? _explicitNullValueVerifyWithMicrodeposits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits VerifyWithMicrodeposits { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits VerifyWithMicrodeposits { get => _explicitNullValueVerifyWithMicrodeposits; set { _explicitNullValueVerifyWithMicrodeposits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_with_microdeposits"); else _explicitNullProperties?.Remove("verify_with_microdeposits"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits _explicitNullValueVerifyWithMicrodeposits = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode>("upi_handle_redirect_or_display_qr_code", UpiHandleRedirectOrDisplayQrCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionUseStripeSdkProperty>("use_stripe_sdk", UseStripeSdk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits>("verify_with_microdeposits", VerifyWithMicrodeposits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,45 +11,68 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentIntentNextActionDisplayBankTransferInstructions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_remaining") is { } nullNodeAmountRemaining && nullNodeAmountRemaining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountRemaining = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("financial_addresses") is { } nullNodeFinancialAddresses && nullNodeFinancialAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAddresses = null;
+            if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
+            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The remaining amount that needs to be transferred to complete the payment.</summary>
-        public int? AmountRemaining { get; set; }
+        public int? AmountRemaining { get => _explicitNullValueAmountRemaining; set { _explicitNullValueAmountRemaining = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_remaining"); else _explicitNullProperties?.Remove("amount_remaining"); } }
+        private int? _explicitNullValueAmountRemaining = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>A list of financial addresses that can be used to fund the customer balance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>? FinancialAddresses { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>? FinancialAddresses { get => _explicitNullValueFinancialAddresses; set { _explicitNullValueFinancialAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_addresses"); else _explicitNullProperties?.Remove("financial_addresses"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>? _explicitNullValueFinancialAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress> FinancialAddresses { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress> FinancialAddresses { get => _explicitNullValueFinancialAddresses; set { _explicitNullValueFinancialAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_addresses"); else _explicitNullProperties?.Remove("financial_addresses"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress> _explicitNullValueFinancialAddresses = default!;
 #endif
         /// <summary>A link to a hosted page that guides your customer through completing the transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedInstructionsUrl { get; set; }
+        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        private string? _explicitNullValueHostedInstructionsUrl = default!;
 #nullable restore
 #else
-        public string HostedInstructionsUrl { get; set; }
+        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        private string _explicitNullValueHostedInstructionsUrl = default!;
 #endif
         /// <summary>A string identifying this payment. Instruct your customer to include this code in the reference or memo field of their bank transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference { get; set; }
+        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public string Reference { get; set; }
+        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string _explicitNullValueReference = default!;
 #endif
         /// <summary>Type of bank transfer</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions"/> and sets the default values.
         /// </summary>
@@ -65,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("hosted_instructions_url", HostedInstructionsUrl);
             writer.WriteStringValue("reference", Reference);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

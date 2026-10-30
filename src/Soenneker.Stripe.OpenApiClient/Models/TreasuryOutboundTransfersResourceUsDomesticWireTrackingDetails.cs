@@ -11,32 +11,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("chips") is { } nullNodeChips && nullNodeChips.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chips = null;
+            if (parseNode.GetChildNode("imad") is { } nullNodeImad && nullNodeImad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imad = null;
+            if (parseNode.GetChildNode("omad") is { } nullNodeOmad && nullNodeOmad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Omad = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>CHIPS System Sequence Number (SSN) of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Chips { get; set; }
+        public string? Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
+        private string? _explicitNullValueChips = default!;
 #nullable restore
 #else
-        public string Chips { get; set; }
+        public string Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
+        private string _explicitNullValueChips = default!;
 #endif
         /// <summary>IMAD of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Imad { get; set; }
+        public string? Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
+        private string? _explicitNullValueImad = default!;
 #nullable restore
 #else
-        public string Imad { get; set; }
+        public string Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
+        private string _explicitNullValueImad = default!;
 #endif
         /// <summary>OMAD of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Omad { get; set; }
+        public string? Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
+        private string? _explicitNullValueOmad = default!;
 #nullable restore
 #else
-        public string Omad { get; set; }
+        public string Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
+        private string _explicitNullValueOmad = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("chips", Chips);
             writer.WriteStringValue("imad", Imad);
             writer.WriteStringValue("omad", Omad);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

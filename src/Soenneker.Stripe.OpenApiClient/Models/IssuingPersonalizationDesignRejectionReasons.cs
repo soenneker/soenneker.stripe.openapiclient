@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingPersonalizationDesignRejectionReasons : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
+            if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reason(s) the card logo was rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?>? CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?>? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?>? _explicitNullValueCardLogo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?> CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?> CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?> _explicitNullValueCardLogo = default!;
 #endif
         /// <summary>The reason(s) the carrier text was rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?>? CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?>? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?>? _explicitNullValueCarrierText = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?> CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?> CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?> _explicitNullValueCarrierText = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem>("card_logo", CardLogo);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem>("carrier_text", CarrierText);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

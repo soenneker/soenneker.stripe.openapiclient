@@ -12,40 +12,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentLinksXWwwFormUrlencodedRequestCustomText : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("after_submit") is { } nullNodeAfterSubmit && nullNodeAfterSubmit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterSubmit = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("submit") is { } nullNodeSubmit && nullNodeSubmit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Submit = null;
+            if (parseNode.GetChildNode("terms_of_service_acceptance") is { } nullNodeTermsOfServiceAcceptance && nullNodeTermsOfServiceAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfServiceAcceptance = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The after_submit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit? AfterSubmit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit? AfterSubmit { get => _explicitNullValueAfterSubmit; set { _explicitNullValueAfterSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_submit"); else _explicitNullProperties?.Remove("after_submit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit? _explicitNullValueAfterSubmit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit AfterSubmit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit AfterSubmit { get => _explicitNullValueAfterSubmit; set { _explicitNullValueAfterSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_submit"); else _explicitNullProperties?.Remove("after_submit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextAfterSubmit _explicitNullValueAfterSubmit = default!;
 #endif
         /// <summary>The shipping_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>The submit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit? Submit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit? Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit? _explicitNullValueSubmit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit Submit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit _explicitNullValueSubmit = default!;
 #endif
         /// <summary>The terms_of_service_acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance? TermsOfServiceAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance? TermsOfServiceAcceptance { get => _explicitNullValueTermsOfServiceAcceptance; set { _explicitNullValueTermsOfServiceAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_acceptance"); else _explicitNullProperties?.Remove("terms_of_service_acceptance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance? _explicitNullValueTermsOfServiceAcceptance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance TermsOfServiceAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance TermsOfServiceAcceptance { get => _explicitNullValueTermsOfServiceAcceptance; set { _explicitNullValueTermsOfServiceAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_acceptance"); else _explicitNullProperties?.Remove("terms_of_service_acceptance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance _explicitNullValueTermsOfServiceAcceptance = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextShippingAddress>("shipping_address", ShippingAddress);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextSubmit>("submit", Submit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance>("terms_of_service_acceptance", TermsOfServiceAcceptance);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

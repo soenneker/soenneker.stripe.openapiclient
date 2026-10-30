@@ -12,21 +12,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentLinkConsentCollection : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payment_method_reuse_agreement") is { } nullNodePaymentMethodReuseAgreement && nullNodePaymentMethodReuseAgreement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodReuseAgreement = null;
+            if (parseNode.GetChildNode("promotions") is { } nullNodePromotions && nullNodePromotions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Promotions = null;
+            if (parseNode.GetChildNode("terms_of_service") is { } nullNodeTermsOfService && nullNodeTermsOfService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfService = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Settings related to the payment method reuse text shown in the Checkout UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement? PaymentMethodReuseAgreement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement? PaymentMethodReuseAgreement { get => _explicitNullValuePaymentMethodReuseAgreement; set { _explicitNullValuePaymentMethodReuseAgreement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_reuse_agreement"); else _explicitNullProperties?.Remove("payment_method_reuse_agreement"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement? _explicitNullValuePaymentMethodReuseAgreement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement PaymentMethodReuseAgreement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement PaymentMethodReuseAgreement { get => _explicitNullValuePaymentMethodReuseAgreement; set { _explicitNullValuePaymentMethodReuseAgreement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_reuse_agreement"); else _explicitNullProperties?.Remove("payment_method_reuse_agreement"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement _explicitNullValuePaymentMethodReuseAgreement = default!;
 #endif
         /// <summary>If set to `auto`, enables the collection of customer consent for promotional communications.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions? Promotions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions? Promotions { get => _explicitNullValuePromotions; set { _explicitNullValuePromotions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotions"); else _explicitNullProperties?.Remove("promotions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions? _explicitNullValuePromotions = default!;
         /// <summary>If set to `required`, it requires cutomers to accept the terms of service before being able to pay. If set to `none`, customers won&apos;t be shown a checkbox to accept the terms of service.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService? TermsOfService { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService? TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService? _explicitNullValueTermsOfService = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkConsentCollection"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkConsentCollection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkConsentCollection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkConsentCollection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement>("payment_method_reuse_agreement", PaymentMethodReuseAgreement);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions>("promotions", Promotions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService>("terms_of_service", TermsOfService);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

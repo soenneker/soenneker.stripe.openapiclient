@@ -12,18 +12,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ForwardingRequestRequestContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destination_duration") is { } nullNodeDestinationDuration && nullNodeDestinationDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationDuration = null;
+            if (parseNode.GetChildNode("destination_ip_address") is { } nullNodeDestinationIpAddress && nullNodeDestinationIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationIpAddress = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time it took in milliseconds for the destination endpoint to respond.</summary>
-        public int? DestinationDuration { get; set; }
+        public int? DestinationDuration { get => _explicitNullValueDestinationDuration; set { _explicitNullValueDestinationDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_duration"); else _explicitNullProperties?.Remove("destination_duration"); } }
+        private int? _explicitNullValueDestinationDuration = default!;
         /// <summary>The IP address of the destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationIpAddress { get; set; }
+        public string? DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
+        private string? _explicitNullValueDestinationIpAddress = default!;
 #nullable restore
 #else
-        public string DestinationIpAddress { get; set; }
+        public string DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
+        private string _explicitNullValueDestinationIpAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("destination_duration", DestinationDuration);
             writer.WriteStringValue("destination_ip_address", DestinationIpAddress);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

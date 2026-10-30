@@ -11,37 +11,57 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CheckoutAcssDebitMandateOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_mandate_url") is { } nullNodeCustomMandateUrl && nullNodeCustomMandateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMandateUrl = null;
+            if (parseNode.GetChildNode("default_for") is { } nullNodeDefaultFor && nullNodeDefaultFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultFor = null;
+            if (parseNode.GetChildNode("interval_description") is { } nullNodeIntervalDescription && nullNodeIntervalDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalDescription = null;
+            if (parseNode.GetChildNode("payment_schedule") is { } nullNodePaymentSchedule && nullNodePaymentSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSchedule = null;
+            if (parseNode.GetChildNode("transaction_type") is { } nullNodeTransactionType && nullNodeTransactionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A URL for custom mandate text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMandateUrl { get; set; }
+        public string? CustomMandateUrl { get => _explicitNullValueCustomMandateUrl; set { _explicitNullValueCustomMandateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_mandate_url"); else _explicitNullProperties?.Remove("custom_mandate_url"); } }
+        private string? _explicitNullValueCustomMandateUrl = default!;
 #nullable restore
 #else
-        public string CustomMandateUrl { get; set; }
+        public string CustomMandateUrl { get => _explicitNullValueCustomMandateUrl; set { _explicitNullValueCustomMandateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_mandate_url"); else _explicitNullProperties?.Remove("custom_mandate_url"); } }
+        private string _explicitNullValueCustomMandateUrl = default!;
 #endif
         /// <summary>List of Stripe products where this mandate can be selected automatically. Returned when the Session is in `setup` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?>? DefaultFor { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?>? DefaultFor { get => _explicitNullValueDefaultFor; set { _explicitNullValueDefaultFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_for"); else _explicitNullProperties?.Remove("default_for"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?>? _explicitNullValueDefaultFor = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?> DefaultFor { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?> DefaultFor { get => _explicitNullValueDefaultFor; set { _explicitNullValueDefaultFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_for"); else _explicitNullProperties?.Remove("default_for"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?> _explicitNullValueDefaultFor = default!;
 #endif
         /// <summary>Description of the interval. Only required if the &apos;payment_schedule&apos; parameter is &apos;interval&apos; or &apos;combined&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntervalDescription { get; set; }
+        public string? IntervalDescription { get => _explicitNullValueIntervalDescription; set { _explicitNullValueIntervalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_description"); else _explicitNullProperties?.Remove("interval_description"); } }
+        private string? _explicitNullValueIntervalDescription = default!;
 #nullable restore
 #else
-        public string IntervalDescription { get; set; }
+        public string IntervalDescription { get => _explicitNullValueIntervalDescription; set { _explicitNullValueIntervalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_description"); else _explicitNullProperties?.Remove("interval_description"); } }
+        private string _explicitNullValueIntervalDescription = default!;
 #endif
         /// <summary>Payment schedule for the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule? PaymentSchedule { get => _explicitNullValuePaymentSchedule; set { _explicitNullValuePaymentSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_schedule"); else _explicitNullProperties?.Remove("payment_schedule"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule? _explicitNullValuePaymentSchedule = default!;
         /// <summary>Transaction type of the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType? TransactionType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType? TransactionType { get => _explicitNullValueTransactionType; set { _explicitNullValueTransactionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_type"); else _explicitNullProperties?.Remove("transaction_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType? _explicitNullValueTransactionType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("interval_description", IntervalDescription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType>("transaction_type", TransactionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

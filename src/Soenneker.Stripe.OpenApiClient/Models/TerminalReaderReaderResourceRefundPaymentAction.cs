@@ -12,57 +12,87 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalReaderReaderResourceRefundPaymentAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("charge") is { } nullNodeCharge && nullNodeCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charge = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("refund") is { } nullNodeRefund && nullNodeRefund.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Refund = null;
+            if (parseNode.GetChildNode("refund_application_fee") is { } nullNodeRefundApplicationFee && nullNodeRefundApplicationFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundApplicationFee = null;
+            if (parseNode.GetChildNode("refund_payment_config") is { } nullNodeRefundPaymentConfig && nullNodeRefundPaymentConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundPaymentConfig = null;
+            if (parseNode.GetChildNode("reverse_transfer") is { } nullNodeReverseTransfer && nullNodeReverseTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReverseTransfer = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount being refunded.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Charge that is being refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge? Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge? _explicitNullValueCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Payment intent that is being refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent? _explicitNullValuePaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent _explicitNullValuePaymentIntent = default!;
 #endif
         /// <summary>The reason for the refund.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason? _explicitNullValueReason = default!;
         /// <summary>Unique identifier for the refund object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund? Refund { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund? Refund { get => _explicitNullValueRefund; set { _explicitNullValueRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund"); else _explicitNullProperties?.Remove("refund"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund? _explicitNullValueRefund = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund Refund { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund Refund { get => _explicitNullValueRefund; set { _explicitNullValueRefund = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund"); else _explicitNullProperties?.Remove("refund"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund _explicitNullValueRefund = default!;
 #endif
         /// <summary>Boolean indicating whether the application fee should be refunded when refunding this charge. If a full charge refund is given, the full application fee will be refunded. Otherwise, the application fee will be refunded in an amount proportional to the amount of the charge refunded. An application fee can be refunded only by the application that created the charge.</summary>
-        public bool? RefundApplicationFee { get; set; }
+        public bool? RefundApplicationFee { get => _explicitNullValueRefundApplicationFee; set { _explicitNullValueRefundApplicationFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_application_fee"); else _explicitNullProperties?.Remove("refund_application_fee"); } }
+        private bool? _explicitNullValueRefundApplicationFee = default!;
         /// <summary>Represents a per-transaction override of a reader configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig? RefundPaymentConfig { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig? RefundPaymentConfig { get => _explicitNullValueRefundPaymentConfig; set { _explicitNullValueRefundPaymentConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_payment_config"); else _explicitNullProperties?.Remove("refund_payment_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig? _explicitNullValueRefundPaymentConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig RefundPaymentConfig { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig RefundPaymentConfig { get => _explicitNullValueRefundPaymentConfig; set { _explicitNullValueRefundPaymentConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_payment_config"); else _explicitNullProperties?.Remove("refund_payment_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig _explicitNullValueRefundPaymentConfig = default!;
 #endif
         /// <summary>Boolean indicating whether the transfer should be reversed when refunding this charge. The transfer will be reversed proportionally to the amount being refunded (either the entire or partial amount). A transfer can be reversed only by the application that created the charge.</summary>
-        public bool? ReverseTransfer { get; set; }
+        public bool? ReverseTransfer { get => _explicitNullValueReverseTransfer; set { _explicitNullValueReverseTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reverse_transfer"); else _explicitNullProperties?.Remove("reverse_transfer"); } }
+        private bool? _explicitNullValueReverseTransfer = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction"/> and sets the default values.
         /// </summary>
@@ -78,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -115,6 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("refund_application_fee", RefundApplicationFee);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig>("refund_payment_config", RefundPaymentConfig);
             writer.WriteBoolValue("reverse_transfer", ReverseTransfer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,42 +11,63 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParam : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("registered_address") is { } nullNodeRegisteredAddress && nullNodeRegisteredAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegisteredAddress = null;
+            if (parseNode.GetChildNode("registered_name") is { } nullNodeRegisteredName && nullNodeRegisteredName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegisteredName = null;
+            if (parseNode.GetChildNode("registration_number") is { } nullNodeRegistrationNumber && nullNodeRegistrationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationNumber = null;
+            if (parseNode.GetChildNode("registration_type") is { } nullNodeRegistrationType && nullNodeRegistrationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationType = null;
+            if (parseNode.GetChildNode("vat") is { } nullNodeVat && nullNodeVat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vat = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The registered_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress? RegisteredAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress? RegisteredAddress { get => _explicitNullValueRegisteredAddress; set { _explicitNullValueRegisteredAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_address"); else _explicitNullProperties?.Remove("registered_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress? _explicitNullValueRegisteredAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress RegisteredAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress RegisteredAddress { get => _explicitNullValueRegisteredAddress; set { _explicitNullValueRegisteredAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_address"); else _explicitNullProperties?.Remove("registered_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegisteredAddress _explicitNullValueRegisteredAddress = default!;
 #endif
         /// <summary>The registered_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegisteredName { get; set; }
+        public string? RegisteredName { get => _explicitNullValueRegisteredName; set { _explicitNullValueRegisteredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_name"); else _explicitNullProperties?.Remove("registered_name"); } }
+        private string? _explicitNullValueRegisteredName = default!;
 #nullable restore
 #else
-        public string RegisteredName { get; set; }
+        public string RegisteredName { get => _explicitNullValueRegisteredName; set { _explicitNullValueRegisteredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_name"); else _explicitNullProperties?.Remove("registered_name"); } }
+        private string _explicitNullValueRegisteredName = default!;
 #endif
         /// <summary>The registration_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistrationNumber { get; set; }
+        public string? RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_number"); else _explicitNullProperties?.Remove("registration_number"); } }
+        private string? _explicitNullValueRegistrationNumber = default!;
 #nullable restore
 #else
-        public string RegistrationNumber { get; set; }
+        public string RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_number"); else _explicitNullProperties?.Remove("registration_number"); } }
+        private string _explicitNullValueRegistrationNumber = default!;
 #endif
         /// <summary>The registration_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegistrationType? RegistrationType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegistrationType? RegistrationType { get => _explicitNullValueRegistrationType; set { _explicitNullValueRegistrationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_type"); else _explicitNullProperties?.Remove("registration_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegistrationType? _explicitNullValueRegistrationType = default!;
         /// <summary>The vat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Vat { get; set; }
+        public string? Vat { get => _explicitNullValueVat; set { _explicitNullValueVat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vat"); else _explicitNullProperties?.Remove("vat"); } }
+        private string? _explicitNullValueVat = default!;
 #nullable restore
 #else
-        public string Vat { get; set; }
+        public string Vat { get => _explicitNullValueVat; set { _explicitNullValueVat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vat"); else _explicitNullProperties?.Remove("vat"); } }
+        private string _explicitNullValueVat = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParam"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParam();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParam(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("registration_number", RegistrationNumber);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieSubscriptionPaymentMethodOptionsParamCompanyDetailsCompanyDetailsParamRegistrationType>("registration_type", RegistrationType);
             writer.WriteStringValue("vat", Vat);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

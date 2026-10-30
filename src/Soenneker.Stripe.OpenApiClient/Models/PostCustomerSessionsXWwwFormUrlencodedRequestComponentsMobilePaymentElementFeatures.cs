@@ -11,25 +11,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payment_method_allow_redisplay_filters") is { } nullNodePaymentMethodAllowRedisplayFilters && nullNodePaymentMethodAllowRedisplayFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodAllowRedisplayFilters = null;
+            if (parseNode.GetChildNode("payment_method_redisplay") is { } nullNodePaymentMethodRedisplay && nullNodePaymentMethodRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRedisplay = null;
+            if (parseNode.GetChildNode("payment_method_remove") is { } nullNodePaymentMethodRemove && nullNodePaymentMethodRemove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRemove = null;
+            if (parseNode.GetChildNode("payment_method_save") is { } nullNodePaymentMethodSave && nullNodePaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodSave = null;
+            if (parseNode.GetChildNode("payment_method_save_allow_redisplay_override") is { } nullNodePaymentMethodSaveAllowRedisplayOverride && nullNodePaymentMethodSaveAllowRedisplayOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodSaveAllowRedisplayOverride = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The payment_method_allow_redisplay_filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?>? _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem?> _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #endif
         /// <summary>The payment_method_redisplay property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRedisplay? PaymentMethodRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRedisplay? PaymentMethodRedisplay { get => _explicitNullValuePaymentMethodRedisplay; set { _explicitNullValuePaymentMethodRedisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_redisplay"); else _explicitNullProperties?.Remove("payment_method_redisplay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRedisplay? _explicitNullValuePaymentMethodRedisplay = default!;
         /// <summary>The payment_method_remove property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRemove? PaymentMethodRemove { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRemove? PaymentMethodRemove { get => _explicitNullValuePaymentMethodRemove; set { _explicitNullValuePaymentMethodRemove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_remove"); else _explicitNullProperties?.Remove("payment_method_remove"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRemove? _explicitNullValuePaymentMethodRemove = default!;
         /// <summary>The payment_method_save property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSave? PaymentMethodSave { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSave? PaymentMethodSave { get => _explicitNullValuePaymentMethodSave; set { _explicitNullValuePaymentMethodSave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_save"); else _explicitNullProperties?.Remove("payment_method_save"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSave? _explicitNullValuePaymentMethodSave = default!;
         /// <summary>The payment_method_save_allow_redisplay_override property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSaveAllowRedisplayOverride? PaymentMethodSaveAllowRedisplayOverride { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSaveAllowRedisplayOverride? PaymentMethodSaveAllowRedisplayOverride { get => _explicitNullValuePaymentMethodSaveAllowRedisplayOverride; set { _explicitNullValuePaymentMethodSaveAllowRedisplayOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_save_allow_redisplay_override"); else _explicitNullProperties?.Remove("payment_method_save_allow_redisplay_override"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSaveAllowRedisplayOverride? _explicitNullValuePaymentMethodSaveAllowRedisplayOverride = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeatures"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSave>("payment_method_save", PaymentMethodSave);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodSaveAllowRedisplayOverride>("payment_method_save_allow_redisplay_override", PaymentMethodSaveAllowRedisplayOverride);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

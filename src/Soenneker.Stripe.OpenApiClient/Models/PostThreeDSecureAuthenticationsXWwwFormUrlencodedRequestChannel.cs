@@ -12,27 +12,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("browser") is { } nullNodeBrowser && nullNodeBrowser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Browser = null;
+            if (parseNode.GetChildNode("three_r_i") is { } nullNodeThreeRI && nullNodeThreeRI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeRI = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The browser property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser? Browser { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser? Browser { get => _explicitNullValueBrowser; set { _explicitNullValueBrowser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser"); else _explicitNullProperties?.Remove("browser"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser? _explicitNullValueBrowser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser Browser { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser Browser { get => _explicitNullValueBrowser; set { _explicitNullValueBrowser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser"); else _explicitNullProperties?.Remove("browser"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser _explicitNullValueBrowser = default!;
 #endif
         /// <summary>The three_r_i property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi? ThreeRI { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi? ThreeRI { get => _explicitNullValueThreeRI; set { _explicitNullValueThreeRI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_r_i"); else _explicitNullProperties?.Remove("three_r_i"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi? _explicitNullValueThreeRI = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi ThreeRI { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi ThreeRI { get => _explicitNullValueThreeRI; set { _explicitNullValueThreeRI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_r_i"); else _explicitNullProperties?.Remove("three_r_i"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi _explicitNullValueThreeRI = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelBrowser>("browser", Browser);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelThreeRi>("three_r_i", ThreeRI);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestChannelType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

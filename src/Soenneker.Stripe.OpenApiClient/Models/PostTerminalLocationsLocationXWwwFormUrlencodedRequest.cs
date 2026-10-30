@@ -11,86 +11,123 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalLocationsLocationXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_kana") is { } nullNodeAddressKana && nullNodeAddressKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKana = null;
+            if (parseNode.GetChildNode("address_kanji") is { } nullNodeAddressKanji && nullNodeAddressKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKanji = null;
+            if (parseNode.GetChildNode("configuration_overrides") is { } nullNodeConfigurationOverrides && nullNodeConfigurationOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationOverrides = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("display_name_kana") is { } nullNodeDisplayNameKana && nullNodeDisplayNameKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayNameKana = null;
+            if (parseNode.GetChildNode("display_name_kanji") is { } nullNodeDisplayNameKanji && nullNodeDisplayNameKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayNameKanji = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+        }
+
         /// <summary>The full address of the location. You can&apos;t change the location&apos;s `country`. If you need to modify the `country` field, create a new `Location` object and re-register any existing readers to that location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The Kana variation of the full address of the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana? AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKana _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The Kanji variation of the full address of the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji? AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestAddressKanji _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>The ID of a configuration that will be used to customize all readers in this location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides? ConfigurationOverrides { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides? ConfigurationOverrides { get => _explicitNullValueConfigurationOverrides; set { _explicitNullValueConfigurationOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_overrides"); else _explicitNullProperties?.Remove("configuration_overrides"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides? _explicitNullValueConfigurationOverrides = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides ConfigurationOverrides { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides ConfigurationOverrides { get => _explicitNullValueConfigurationOverrides; set { _explicitNullValueConfigurationOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_overrides"); else _explicitNullProperties?.Remove("configuration_overrides"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestConfigurationOverrides _explicitNullValueConfigurationOverrides = default!;
 #endif
         /// <summary>A name for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName? DisplayName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName DisplayName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayName _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The Kana variation of the name for the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana? DisplayNameKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana? DisplayNameKana { get => _explicitNullValueDisplayNameKana; set { _explicitNullValueDisplayNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name_kana"); else _explicitNullProperties?.Remove("display_name_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana? _explicitNullValueDisplayNameKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana DisplayNameKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana DisplayNameKana { get => _explicitNullValueDisplayNameKana; set { _explicitNullValueDisplayNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name_kana"); else _explicitNullProperties?.Remove("display_name_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKana _explicitNullValueDisplayNameKana = default!;
 #endif
         /// <summary>The Kanji variation of the name for the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji? DisplayNameKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji? DisplayNameKanji { get => _explicitNullValueDisplayNameKanji; set { _explicitNullValueDisplayNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name_kanji"); else _explicitNullProperties?.Remove("display_name_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji? _explicitNullValueDisplayNameKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji DisplayNameKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji DisplayNameKanji { get => _explicitNullValueDisplayNameKanji; set { _explicitNullValueDisplayNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name_kanji"); else _explicitNullProperties?.Remove("display_name_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji _explicitNullValueDisplayNameKanji = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The phone number for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone? Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone _explicitNullValuePhone = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -100,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,7 +175,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestDisplayNameKanji>("display_name_kanji", DisplayNameKanji);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocationXWwwFormUrlencodedRequestPhone>("phone", Phone);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

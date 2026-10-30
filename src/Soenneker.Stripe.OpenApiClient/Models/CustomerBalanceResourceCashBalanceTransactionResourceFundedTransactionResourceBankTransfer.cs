@@ -11,50 +11,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eu_bank_transfer") is { } nullNodeEuBankTransfer && nullNodeEuBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuBankTransfer = null;
+            if (parseNode.GetChildNode("gb_bank_transfer") is { } nullNodeGbBankTransfer && nullNodeGbBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GbBankTransfer = null;
+            if (parseNode.GetChildNode("jp_bank_transfer") is { } nullNodeJpBankTransfer && nullNodeJpBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JpBankTransfer = null;
+            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("us_bank_transfer") is { } nullNodeUsBankTransfer && nullNodeUsBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsBankTransfer = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eu_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer? EuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer? EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer? _explicitNullValueEuBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer EuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceEuBankTransfer _explicitNullValueEuBankTransfer = default!;
 #endif
         /// <summary>The gb_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer? GbBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer? GbBankTransfer { get => _explicitNullValueGbBankTransfer; set { _explicitNullValueGbBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb_bank_transfer"); else _explicitNullProperties?.Remove("gb_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer? _explicitNullValueGbBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer GbBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer GbBankTransfer { get => _explicitNullValueGbBankTransfer; set { _explicitNullValueGbBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb_bank_transfer"); else _explicitNullProperties?.Remove("gb_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer _explicitNullValueGbBankTransfer = default!;
 #endif
         /// <summary>The jp_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer? JpBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer? JpBankTransfer { get => _explicitNullValueJpBankTransfer; set { _explicitNullValueJpBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp_bank_transfer"); else _explicitNullProperties?.Remove("jp_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer? _explicitNullValueJpBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer JpBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer JpBankTransfer { get => _explicitNullValueJpBankTransfer; set { _explicitNullValueJpBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp_bank_transfer"); else _explicitNullProperties?.Remove("jp_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer _explicitNullValueJpBankTransfer = default!;
 #endif
         /// <summary>The user-supplied reference field on the bank transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference { get; set; }
+        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public string Reference { get; set; }
+        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string _explicitNullValueReference = default!;
 #endif
         /// <summary>The funding method type used to fund the customer balance. Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType? _explicitNullValueType = default!;
         /// <summary>The us_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer? UsBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer? UsBankTransfer { get => _explicitNullValueUsBankTransfer; set { _explicitNullValueUsBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_transfer"); else _explicitNullProperties?.Remove("us_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer? _explicitNullValueUsBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer UsBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer UsBankTransfer { get => _explicitNullValueUsBankTransfer; set { _explicitNullValueUsBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_transfer"); else _explicitNullProperties?.Remove("us_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer _explicitNullValueUsBankTransfer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("reference", Reference);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer>("us_bank_transfer", UsBankTransfer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

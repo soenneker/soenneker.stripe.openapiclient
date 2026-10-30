@@ -11,122 +11,180 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPricesXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("billing_scheme") is { } nullNodeBillingScheme && nullNodeBillingScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingScheme = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("currency_options") is { } nullNodeCurrencyOptions && nullNodeCurrencyOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOptions = null;
+            if (parseNode.GetChildNode("custom_unit_amount") is { } nullNodeCustomUnitAmount && nullNodeCustomUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomUnitAmount = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("lookup_key") is { } nullNodeLookupKey && nullNodeLookupKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookupKey = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("nickname") is { } nullNodeNickname && nullNodeNickname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nickname = null;
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+            if (parseNode.GetChildNode("product_data") is { } nullNodeProductData && nullNodeProductData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductData = null;
+            if (parseNode.GetChildNode("recurring") is { } nullNodeRecurring && nullNodeRecurring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurring = null;
+            if (parseNode.GetChildNode("tax_behavior") is { } nullNodeTaxBehavior && nullNodeTaxBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxBehavior = null;
+            if (parseNode.GetChildNode("tiers") is { } nullNodeTiers && nullNodeTiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tiers = null;
+            if (parseNode.GetChildNode("tiers_mode") is { } nullNodeTiersMode && nullNodeTiersMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiersMode = null;
+            if (parseNode.GetChildNode("transfer_lookup_key") is { } nullNodeTransferLookupKey && nullNodeTransferLookupKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferLookupKey = null;
+            if (parseNode.GetChildNode("transform_quantity") is { } nullNodeTransformQuantity && nullNodeTransformQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformQuantity = null;
+            if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
+            if (parseNode.GetChildNode("unit_amount_decimal") is { } nullNodeUnitAmountDecimal && nullNodeUnitAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmountDecimal = null;
+        }
+
         /// <summary>Whether the price can be used for new purchases. Defaults to `true`.</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Describes how to compute the price per period. Either `per_unit` or `tiered`. `per_unit` indicates that the fixed amount (specified in `unit_amount` or `unit_amount_decimal`) will be charged per unit in `quantity` (for prices with `usage_type=licensed`), or per unit of total usage (for prices with `usage_type=metered`). `tiered` indicates that the unit pricing will be computed using a tiering strategy as defined using the `tiers` and `tiers_mode` attributes.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestBillingScheme? BillingScheme { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestBillingScheme? BillingScheme { get => _explicitNullValueBillingScheme; set { _explicitNullValueBillingScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_scheme"); else _explicitNullProperties?.Remove("billing_scheme"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestBillingScheme? _explicitNullValueBillingScheme = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Prices defined in each available currency option. Each key must be a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) and a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions? CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions? CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions? _explicitNullValueCurrencyOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCurrencyOptions _explicitNullValueCurrencyOptions = default!;
 #endif
         /// <summary>When set, provides configuration for the amount to be adjusted by the customer during Checkout Sessions and Payment Links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount? CustomUnitAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount? CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount? _explicitNullValueCustomUnitAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount CustomUnitAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestCustomUnitAmount _explicitNullValueCustomUnitAmount = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A lookup key used to retrieve prices dynamically from a static string. This may be up to 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LookupKey { get; set; }
+        public string? LookupKey { get => _explicitNullValueLookupKey; set { _explicitNullValueLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookup_key"); else _explicitNullProperties?.Remove("lookup_key"); } }
+        private string? _explicitNullValueLookupKey = default!;
 #nullable restore
 #else
-        public string LookupKey { get; set; }
+        public string LookupKey { get => _explicitNullValueLookupKey; set { _explicitNullValueLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookup_key"); else _explicitNullProperties?.Remove("lookup_key"); } }
+        private string _explicitNullValueLookupKey = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>A brief description of the price, hidden from customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Nickname { get; set; }
+        public string? Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
+        private string? _explicitNullValueNickname = default!;
 #nullable restore
 #else
-        public string Nickname { get; set; }
+        public string Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
+        private string _explicitNullValueNickname = default!;
 #endif
         /// <summary>The ID of the [Product](https://docs.stripe.com/api/products) that this [Price](https://docs.stripe.com/api/prices) will belong to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Product { get; set; }
+        public string? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private string? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public string Product { get; set; }
+        public string Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private string _explicitNullValueProduct = default!;
 #endif
         /// <summary>These fields can be used to create a new product that this price will belong to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData? ProductData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData? ProductData { get => _explicitNullValueProductData; set { _explicitNullValueProductData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_data"); else _explicitNullProperties?.Remove("product_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData? _explicitNullValueProductData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData ProductData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData ProductData { get => _explicitNullValueProductData; set { _explicitNullValueProductData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_data"); else _explicitNullProperties?.Remove("product_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestProductData _explicitNullValueProductData = default!;
 #endif
         /// <summary>The recurring components of a price such as `interval` and `usage_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring? Recurring { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring? _explicitNullValueRecurring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring Recurring { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestRecurring _explicitNullValueRecurring = default!;
 #endif
         /// <summary>Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTaxBehavior? TaxBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTaxBehavior? TaxBehavior { get => _explicitNullValueTaxBehavior; set { _explicitNullValueTaxBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_behavior"); else _explicitNullProperties?.Remove("tax_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTaxBehavior? _explicitNullValueTaxBehavior = default!;
         /// <summary>Each element represents a pricing tier. This parameter requires `billing_scheme` to be set to `tiered`. See also the documentation for `billing_scheme`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem>? Tiers { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem>? Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem>? _explicitNullValueTiers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem> Tiers { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem> Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers"); else _explicitNullProperties?.Remove("tiers"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersItem> _explicitNullValueTiers = default!;
 #endif
         /// <summary>Defines if the tiering price should be `graduated` or `volume` based. In `volume`-based tiering, the maximum quantity within a period determines the per unit price, in `graduated` tiering pricing can successively change as the quantity grows.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersMode? TiersMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersMode? TiersMode { get => _explicitNullValueTiersMode; set { _explicitNullValueTiersMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiers_mode"); else _explicitNullProperties?.Remove("tiers_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTiersMode? _explicitNullValueTiersMode = default!;
         /// <summary>If set to true, will atomically remove the lookup key from the existing price, and assign it to this price.</summary>
-        public bool? TransferLookupKey { get; set; }
+        public bool? TransferLookupKey { get => _explicitNullValueTransferLookupKey; set { _explicitNullValueTransferLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_lookup_key"); else _explicitNullProperties?.Remove("transfer_lookup_key"); } }
+        private bool? _explicitNullValueTransferLookupKey = default!;
         /// <summary>Apply a transformation to the reported usage or set quantity before computing the billed price. Cannot be combined with `tiers`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity? TransformQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity? TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity? _explicitNullValueTransformQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity TransformQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity _explicitNullValueTransformQuantity = default!;
 #endif
         /// <summary>A positive integer in cents (or local equivalent) (or 0 for a free price) representing how much to charge. One of `unit_amount`, `unit_amount_decimal`, or `custom_unit_amount` is required, unless `billing_scheme=tiered`.</summary>
-        public int? UnitAmount { get; set; }
+        public int? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
+        private int? _explicitNullValueUnitAmount = default!;
         /// <summary>Same as `unit_amount`, but accepts a decimal value in cents (or local equivalent) with at most 12 decimal places. Only one of `unit_amount` and `unit_amount_decimal` can be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitAmountDecimal { get; set; }
+        public string? UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        private string? _explicitNullValueUnitAmountDecimal = default!;
 #nullable restore
 #else
-        public string UnitAmountDecimal { get; set; }
+        public string UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        private string _explicitNullValueUnitAmountDecimal = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -136,7 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -192,7 +250,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("transfer_lookup_key", TransferLookupKey);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPricesXWwwFormUrlencodedRequestTransformQuantity>("transform_quantity", TransformQuantity);
             writer.WriteIntValue("unit_amount", UnitAmount);
-            writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);
+            writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

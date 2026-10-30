@@ -12,123 +12,184 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureAuthentication : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acquirer_details") is { } nullNodeAcquirerDetails && nullNodeAcquirerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerDetails = null;
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("challenge_url") is { } nullNodeChallengeUrl && nullNodeChallengeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChallengeUrl = null;
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("directory_server") is { } nullNodeDirectoryServer && nullNodeDirectoryServer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectoryServer = null;
+            if (parseNode.GetChildNode("fingerprinting_url") is { } nullNodeFingerprintingUrl && nullNodeFingerprintingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintingUrl = null;
+            if (parseNode.GetChildNode("flow_preference") is { } nullNodeFlowPreference && nullNodeFlowPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowPreference = null;
+            if (parseNode.GetChildNode("future_usage") is { } nullNodeFutureUsage && nullNodeFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureUsage = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("message_category") is { } nullNodeMessageCategory && nullNodeMessageCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageCategory = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
+            if (parseNode.GetChildNode("outcome_details") is { } nullNodeOutcomeDetails && nullNodeOutcomeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutcomeDetails = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Contains additional details about the acquirer for a 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails? AcquirerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails? AcquirerDetails { get => _explicitNullValueAcquirerDetails; set { _explicitNullValueAcquirerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_details"); else _explicitNullProperties?.Remove("acquirer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails? _explicitNullValueAcquirerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails AcquirerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails AcquirerDetails { get => _explicitNullValueAcquirerDetails; set { _explicitNullValueAcquirerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_details"); else _explicitNullProperties?.Remove("acquirer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceAcquirerDetails _explicitNullValueAcquirerDetails = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount for this 3DS Authentication.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>The URL for presenting a challenge to your cardholder, present if status is requires_challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChallengeUrl { get; set; }
+        public string? ChallengeUrl { get => _explicitNullValueChallengeUrl; set { _explicitNullValueChallengeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challenge_url"); else _explicitNullProperties?.Remove("challenge_url"); } }
+        private string? _explicitNullValueChallengeUrl = default!;
 #nullable restore
 #else
-        public string ChallengeUrl { get; set; }
+        public string ChallengeUrl { get => _explicitNullValueChallengeUrl; set { _explicitNullValueChallengeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challenge_url"); else _explicitNullProperties?.Remove("challenge_url"); } }
+        private string _explicitNullValueChallengeUrl = default!;
 #endif
         /// <summary>Contains details on the channel used (browser, 3RI) for a standalone 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel? Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChannel _explicitNullValueChannel = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The 3DS directory server with which this 3DS Authentication was processed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationDirectoryServer? DirectoryServer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationDirectoryServer? DirectoryServer { get => _explicitNullValueDirectoryServer; set { _explicitNullValueDirectoryServer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directory_server"); else _explicitNullProperties?.Remove("directory_server"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationDirectoryServer? _explicitNullValueDirectoryServer = default!;
         /// <summary>The URL for performing issuer fingerprinting, present if fingerprinting is supported for the given payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FingerprintingUrl { get; set; }
+        public string? FingerprintingUrl { get => _explicitNullValueFingerprintingUrl; set { _explicitNullValueFingerprintingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprinting_url"); else _explicitNullProperties?.Remove("fingerprinting_url"); } }
+        private string? _explicitNullValueFingerprintingUrl = default!;
 #nullable restore
 #else
-        public string FingerprintingUrl { get; set; }
+        public string FingerprintingUrl { get => _explicitNullValueFingerprintingUrl; set { _explicitNullValueFingerprintingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprinting_url"); else _explicitNullProperties?.Remove("fingerprinting_url"); } }
+        private string _explicitNullValueFingerprintingUrl = default!;
 #endif
         /// <summary>Contains details of the flow preference used for a standalone 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference? FlowPreference { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference? FlowPreference { get => _explicitNullValueFlowPreference; set { _explicitNullValueFlowPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_preference"); else _explicitNullProperties?.Remove("flow_preference"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference? _explicitNullValueFlowPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference FlowPreference { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference FlowPreference { get => _explicitNullValueFlowPreference; set { _explicitNullValueFlowPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_preference"); else _explicitNullProperties?.Remove("flow_preference"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference _explicitNullValueFlowPreference = default!;
 #endif
         /// <summary>Contains information about the future authorisations related to this authentication</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage? FutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage? FutureUsage { get => _explicitNullValueFutureUsage; set { _explicitNullValueFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_usage"); else _explicitNullProperties?.Remove("future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage? _explicitNullValueFutureUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage FutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage FutureUsage { get => _explicitNullValueFutureUsage; set { _explicitNullValueFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_usage"); else _explicitNullProperties?.Remove("future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage _explicitNullValueFutureUsage = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>Indicates whether this 3DS Authentication is being performed for a payment or non-payment use case.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMessageCategory? MessageCategory { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMessageCategory? MessageCategory { get => _explicitNullValueMessageCategory; set { _explicitNullValueMessageCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_category"); else _explicitNullProperties?.Remove("message_category"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMessageCategory? _explicitNullValueMessageCategory = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationObject? _explicitNullValueObject = default!;
         /// <summary>The outcome of this 3DS Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationOutcome? Outcome { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationOutcome? _explicitNullValueOutcome = default!;
         /// <summary>Contains details on the result for a standalone 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails? OutcomeDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails? OutcomeDetails { get => _explicitNullValueOutcomeDetails; set { _explicitNullValueOutcomeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_details"); else _explicitNullProperties?.Remove("outcome_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails? _explicitNullValueOutcomeDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails OutcomeDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails OutcomeDetails { get => _explicitNullValueOutcomeDetails; set { _explicitNullValueOutcomeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome_details"); else _explicitNullProperties?.Remove("outcome_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails _explicitNullValueOutcomeDetails = default!;
 #endif
         /// <summary>ID of the payment method (a PaymentMethod object) to attach to this 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod PaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationPaymentMethod _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>The reason for invoking this 3DS Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationReason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationReason? _explicitNullValueReason = default!;
         /// <summary>Contains details about the shipping address for a 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>Status of this Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthentication"/> and sets the default values.
         /// </summary>
@@ -144,7 +205,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthentication CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthentication();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthentication(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -205,6 +266,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceShippingAddress>("shipping_address", ShippingAddress);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureAuthenticationStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

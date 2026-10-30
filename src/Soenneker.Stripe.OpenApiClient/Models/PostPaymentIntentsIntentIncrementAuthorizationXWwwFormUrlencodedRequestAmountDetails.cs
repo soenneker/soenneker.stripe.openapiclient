@@ -12,42 +12,63 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discount_amount") is { } nullNodeDiscountAmount && nullNodeDiscountAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmount = null;
+            if (parseNode.GetChildNode("enforce_arithmetic_validation") is { } nullNodeEnforceArithmeticValidation && nullNodeEnforceArithmeticValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceArithmeticValidation = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The discount_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount? DiscountAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount? DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amount"); else _explicitNullProperties?.Remove("discount_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount? _explicitNullValueDiscountAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount DiscountAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amount"); else _explicitNullProperties?.Remove("discount_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsDiscountAmount _explicitNullValueDiscountAmount = default!;
 #endif
         /// <summary>The enforce_arithmetic_validation property</summary>
-        public bool? EnforceArithmeticValidation { get; set; }
+        public bool? EnforceArithmeticValidation { get => _explicitNullValueEnforceArithmeticValidation; set { _explicitNullValueEnforceArithmeticValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforce_arithmetic_validation"); else _explicitNullProperties?.Remove("enforce_arithmetic_validation"); } }
+        private bool? _explicitNullValueEnforceArithmeticValidation = default!;
         /// <summary>The line_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems _explicitNullValueLineItems = default!;
 #endif
         /// <summary>The shipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax? Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax _explicitNullValueTax = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetails"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItems>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsShipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsTax>("tax", Tax);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

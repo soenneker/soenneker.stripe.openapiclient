@@ -12,60 +12,89 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Balance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("available") is { } nullNodeAvailable && nullNodeAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Available = null;
+            if (parseNode.GetChildNode("connect_reserved") is { } nullNodeConnectReserved && nullNodeConnectReserved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectReserved = null;
+            if (parseNode.GetChildNode("instant_available") is { } nullNodeInstantAvailable && nullNodeInstantAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstantAvailable = null;
+            if (parseNode.GetChildNode("issuing") is { } nullNodeIssuing && nullNodeIssuing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issuing = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("pending") is { } nullNodePending && nullNodePending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pending = null;
+            if (parseNode.GetChildNode("refund_and_dispute_prefunding") is { } nullNodeRefundAndDisputePrefunding && nullNodeRefundAndDisputePrefunding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAndDisputePrefunding = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Available funds that you can transfer or pay out automatically by Stripe or explicitly through the [Transfers API](https://docs.stripe.com/api#transfers) or [Payouts API](https://docs.stripe.com/api#payouts). You can find the available balance for each currency and payment type in the `source_types` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? Available { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? Available { get => _explicitNullValueAvailable; set { _explicitNullValueAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available"); else _explicitNullProperties?.Remove("available"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? _explicitNullValueAvailable = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> Available { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> Available { get => _explicitNullValueAvailable; set { _explicitNullValueAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available"); else _explicitNullProperties?.Remove("available"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> _explicitNullValueAvailable = default!;
 #endif
         /// <summary>Funds held due to negative balances on connected accounts where [account.controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts. You can find the connect reserve balance for each currency and payment type in the `source_types` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? ConnectReserved { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? ConnectReserved { get => _explicitNullValueConnectReserved; set { _explicitNullValueConnectReserved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_reserved"); else _explicitNullProperties?.Remove("connect_reserved"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? _explicitNullValueConnectReserved = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> ConnectReserved { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> ConnectReserved { get => _explicitNullValueConnectReserved; set { _explicitNullValueConnectReserved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_reserved"); else _explicitNullProperties?.Remove("connect_reserved"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> _explicitNullValueConnectReserved = default!;
 #endif
         /// <summary>Funds that you can pay out using Instant Payouts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet>? InstantAvailable { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet>? InstantAvailable { get => _explicitNullValueInstantAvailable; set { _explicitNullValueInstantAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instant_available"); else _explicitNullProperties?.Remove("instant_available"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet>? _explicitNullValueInstantAvailable = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet> InstantAvailable { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet> InstantAvailable { get => _explicitNullValueInstantAvailable; set { _explicitNullValueInstantAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instant_available"); else _explicitNullProperties?.Remove("instant_available"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet> _explicitNullValueInstantAvailable = default!;
 #endif
         /// <summary>The issuing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail? Issuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail? Issuing { get => _explicitNullValueIssuing; set { _explicitNullValueIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing"); else _explicitNullProperties?.Remove("issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail? _explicitNullValueIssuing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail Issuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail Issuing { get => _explicitNullValueIssuing; set { _explicitNullValueIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing"); else _explicitNullProperties?.Remove("issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail _explicitNullValueIssuing = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject? _explicitNullValueObject = default!;
         /// <summary>Funds that aren&apos;t available in the balance yet. You can find the pending balance for each currency and each payment type in the `source_types` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? Pending { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? Pending { get => _explicitNullValuePending; set { _explicitNullValuePending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending"); else _explicitNullProperties?.Remove("pending"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>? _explicitNullValuePending = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> Pending { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> Pending { get => _explicitNullValuePending; set { _explicitNullValuePending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending"); else _explicitNullProperties?.Remove("pending"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount> _explicitNullValuePending = default!;
 #endif
         /// <summary>The refund_and_dispute_prefunding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated? RefundAndDisputePrefunding { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated? RefundAndDisputePrefunding { get => _explicitNullValueRefundAndDisputePrefunding; set { _explicitNullValueRefundAndDisputePrefunding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_and_dispute_prefunding"); else _explicitNullProperties?.Remove("refund_and_dispute_prefunding"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated? _explicitNullValueRefundAndDisputePrefunding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated RefundAndDisputePrefunding { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated RefundAndDisputePrefunding { get => _explicitNullValueRefundAndDisputePrefunding; set { _explicitNullValueRefundAndDisputePrefunding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_and_dispute_prefunding"); else _explicitNullProperties?.Remove("refund_and_dispute_prefunding"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated _explicitNullValueRefundAndDisputePrefunding = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Balance"/> and sets the default values.
@@ -82,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.Balance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Balance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Balance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -117,6 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>("pending", Pending);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated>("refund_and_dispute_prefunding", RefundAndDisputePrefunding);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

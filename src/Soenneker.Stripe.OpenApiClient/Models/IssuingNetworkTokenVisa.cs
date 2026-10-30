@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingNetworkTokenVisa : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_reference_id") is { } nullNodeCardReferenceId && nullNodeCardReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardReferenceId = null;
+            if (parseNode.GetChildNode("token_reference_id") is { } nullNodeTokenReferenceId && nullNodeTokenReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenReferenceId = null;
+            if (parseNode.GetChildNode("token_requestor_id") is { } nullNodeTokenRequestorId && nullNodeTokenRequestorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenRequestorId = null;
+            if (parseNode.GetChildNode("token_risk_score") is { } nullNodeTokenRiskScore && nullNodeTokenRiskScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenRiskScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A unique reference ID from Visa to represent the card account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardReferenceId { get; set; }
+        public string? CardReferenceId { get => _explicitNullValueCardReferenceId; set { _explicitNullValueCardReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_reference_id"); else _explicitNullProperties?.Remove("card_reference_id"); } }
+        private string? _explicitNullValueCardReferenceId = default!;
 #nullable restore
 #else
-        public string CardReferenceId { get; set; }
+        public string CardReferenceId { get => _explicitNullValueCardReferenceId; set { _explicitNullValueCardReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_reference_id"); else _explicitNullProperties?.Remove("card_reference_id"); } }
+        private string _explicitNullValueCardReferenceId = default!;
 #endif
         /// <summary>The network-unique identifier for the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TokenReferenceId { get; set; }
+        public string? TokenReferenceId { get => _explicitNullValueTokenReferenceId; set { _explicitNullValueTokenReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_reference_id"); else _explicitNullProperties?.Remove("token_reference_id"); } }
+        private string? _explicitNullValueTokenReferenceId = default!;
 #nullable restore
 #else
-        public string TokenReferenceId { get; set; }
+        public string TokenReferenceId { get => _explicitNullValueTokenReferenceId; set { _explicitNullValueTokenReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_reference_id"); else _explicitNullProperties?.Remove("token_reference_id"); } }
+        private string _explicitNullValueTokenReferenceId = default!;
 #endif
         /// <summary>The ID of the entity requesting tokenization, specific to Visa.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TokenRequestorId { get; set; }
+        public string? TokenRequestorId { get => _explicitNullValueTokenRequestorId; set { _explicitNullValueTokenRequestorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_requestor_id"); else _explicitNullProperties?.Remove("token_requestor_id"); } }
+        private string? _explicitNullValueTokenRequestorId = default!;
 #nullable restore
 #else
-        public string TokenRequestorId { get; set; }
+        public string TokenRequestorId { get => _explicitNullValueTokenRequestorId; set { _explicitNullValueTokenRequestorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_requestor_id"); else _explicitNullProperties?.Remove("token_requestor_id"); } }
+        private string _explicitNullValueTokenRequestorId = default!;
 #endif
         /// <summary>Degree of risk associated with the token between `01` and `99`, with higher number indicating higher risk. A `00` value indicates the token was not scored by Visa.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TokenRiskScore { get; set; }
+        public string? TokenRiskScore { get => _explicitNullValueTokenRiskScore; set { _explicitNullValueTokenRiskScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_risk_score"); else _explicitNullProperties?.Remove("token_risk_score"); } }
+        private string? _explicitNullValueTokenRiskScore = default!;
 #nullable restore
 #else
-        public string TokenRiskScore { get; set; }
+        public string TokenRiskScore { get => _explicitNullValueTokenRiskScore; set { _explicitNullValueTokenRiskScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_risk_score"); else _explicitNullProperties?.Remove("token_risk_score"); } }
+        private string _explicitNullValueTokenRiskScore = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("token_reference_id", TokenReferenceId);
             writer.WriteStringValue("token_requestor_id", TokenRequestorId);
             writer.WriteStringValue("token_risk_score", TokenRiskScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

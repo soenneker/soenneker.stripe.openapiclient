@@ -12,34 +12,52 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostAccountsXWwwFormUrlencodedRequestController : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
+            if (parseNode.GetChildNode("losses") is { } nullNodeLosses && nullNodeLosses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Losses = null;
+            if (parseNode.GetChildNode("requirement_collection") is { } nullNodeRequirementCollection && nullNodeRequirementCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementCollection = null;
+            if (parseNode.GetChildNode("stripe_dashboard") is { } nullNodeStripeDashboard && nullNodeStripeDashboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeDashboard = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fees property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? Fees { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? _explicitNullValueFees = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees Fees { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees _explicitNullValueFees = default!;
 #endif
         /// <summary>The losses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? Losses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? _explicitNullValueLosses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses Losses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses _explicitNullValueLosses = default!;
 #endif
         /// <summary>The requirement_collection property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? RequirementCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? RequirementCollection { get => _explicitNullValueRequirementCollection; set { _explicitNullValueRequirementCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement_collection"); else _explicitNullProperties?.Remove("requirement_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? _explicitNullValueRequirementCollection = default!;
         /// <summary>The stripe_dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? StripeDashboard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? _explicitNullValueStripeDashboard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard StripeDashboard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard _explicitNullValueStripeDashboard = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestController"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestController CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestController();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestController(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses>("losses", Losses);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection>("requirement_collection", RequirementCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard>("stripe_dashboard", StripeDashboard);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

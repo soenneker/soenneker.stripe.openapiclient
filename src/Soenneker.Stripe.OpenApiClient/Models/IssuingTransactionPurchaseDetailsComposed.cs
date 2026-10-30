@@ -12,56 +12,81 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingTransactionPurchaseDetailsComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fleet") is { } nullNodeFleet && nullNodeFleet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fleet = null;
+            if (parseNode.GetChildNode("flight") is { } nullNodeFlight && nullNodeFlight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flight = null;
+            if (parseNode.GetChildNode("fuel") is { } nullNodeFuel && nullNodeFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fuel = null;
+            if (parseNode.GetChildNode("lodging") is { } nullNodeLodging && nullNodeLodging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lodging = null;
+            if (parseNode.GetChildNode("receipt") is { } nullNodeReceipt && nullNodeReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receipt = null;
+            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Fleet-specific information for transactions using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet? Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet? Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet? _explicitNullValueFleet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet _explicitNullValueFleet = default!;
 #endif
         /// <summary>Information about the flight that was purchased with this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight? Flight { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight? Flight { get => _explicitNullValueFlight; set { _explicitNullValueFlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight"); else _explicitNullProperties?.Remove("flight"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight? _explicitNullValueFlight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight Flight { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight Flight { get => _explicitNullValueFlight; set { _explicitNullValueFlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight"); else _explicitNullProperties?.Remove("flight"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFlight _explicitNullValueFlight = default!;
 #endif
         /// <summary>Information about fuel that was purchased with this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel? Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel? _explicitNullValueFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFuel _explicitNullValueFuel = default!;
 #endif
         /// <summary>Information about lodging that was purchased with this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging? Lodging { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging? Lodging { get => _explicitNullValueLodging; set { _explicitNullValueLodging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lodging"); else _explicitNullProperties?.Remove("lodging"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging? _explicitNullValueLodging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging Lodging { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging Lodging { get => _explicitNullValueLodging; set { _explicitNullValueLodging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lodging"); else _explicitNullProperties?.Remove("lodging"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging _explicitNullValueLodging = default!;
 #endif
         /// <summary>The line items in the purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>? Receipt { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>? _explicitNullValueReceipt = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData> Receipt { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData> Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData> _explicitNullValueReceipt = default!;
 #endif
         /// <summary>A merchant-specific order number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference { get; set; }
+        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public string Reference { get; set; }
+        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string _explicitNullValueReference = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging>("lodging", Lodging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>("receipt", Receipt);
             writer.WriteStringValue("reference", Reference);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,15 +12,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FinancialConnectionsAccountOwnershipRefresh : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("last_attempted_at") is { } nullNodeLastAttemptedAt && nullNodeLastAttemptedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptedAt = null;
+            if (parseNode.GetChildNode("next_refresh_available_at") is { } nullNodeNextRefreshAvailableAt && nullNodeNextRefreshAvailableAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextRefreshAvailableAt = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time at which the last refresh attempt was initiated. Measured in seconds since the Unix epoch.</summary>
-        public int? LastAttemptedAt { get; set; }
+        public int? LastAttemptedAt { get => _explicitNullValueLastAttemptedAt; set { _explicitNullValueLastAttemptedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_attempted_at"); else _explicitNullProperties?.Remove("last_attempted_at"); } }
+        private int? _explicitNullValueLastAttemptedAt = default!;
         /// <summary>Time at which the next ownership refresh can be initiated. This value will be `null` when `status` is `pending`. Measured in seconds since the Unix epoch.</summary>
-        public int? NextRefreshAvailableAt { get; set; }
+        public int? NextRefreshAvailableAt { get => _explicitNullValueNextRefreshAvailableAt; set { _explicitNullValueNextRefreshAvailableAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_refresh_available_at"); else _explicitNullProperties?.Remove("next_refresh_available_at"); } }
+        private int? _explicitNullValueNextRefreshAvailableAt = default!;
         /// <summary>The status of the last refresh attempt.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefreshStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefreshStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefreshStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("last_attempted_at", LastAttemptedAt);
             writer.WriteIntValue("next_refresh_available_at", NextRefreshAvailableAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefreshStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_tax_ids") is { } nullNodeAccountTaxIds && nullNodeAccountTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountTaxIds = null;
+            if (parseNode.GetChildNode("days_until_due") is { } nullNodeDaysUntilDue && nullNodeDaysUntilDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysUntilDue = null;
+            if (parseNode.GetChildNode("issuer") is { } nullNodeIssuer && nullNodeIssuer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issuer = null;
+        }
+
         /// <summary>The account_tax_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds? AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds? AccountTaxIds { get => _explicitNullValueAccountTaxIds; set { _explicitNullValueAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_tax_ids"); else _explicitNullProperties?.Remove("account_tax_ids"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds? _explicitNullValueAccountTaxIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds AccountTaxIds { get => _explicitNullValueAccountTaxIds; set { _explicitNullValueAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_tax_ids"); else _explicitNullProperties?.Remove("account_tax_ids"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds _explicitNullValueAccountTaxIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The days_until_due property</summary>
-        public int? DaysUntilDue { get; set; }
+        public int? DaysUntilDue { get => _explicitNullValueDaysUntilDue; set { _explicitNullValueDaysUntilDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_until_due"); else _explicitNullProperties?.Remove("days_until_due"); } }
+        private int? _explicitNullValueDaysUntilDue = default!;
         /// <summary>The issuer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer? Issuer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer? Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer? _explicitNullValueIssuer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer Issuer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer _explicitNullValueIssuer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettings"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsAccountTaxIds>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("days_until_due", DaysUntilDue);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsPhasesItemInvoiceSettingsIssuer>("issuer", Issuer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

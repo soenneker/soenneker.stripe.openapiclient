@@ -11,134 +11,189 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bbpos_wisepad3") is { } nullNodeBbposWisepad3 && nullNodeBbposWisepad3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BbposWisepad3 = null;
+            if (parseNode.GetChildNode("bbpos_wisepos_e") is { } nullNodeBbposWiseposE && nullNodeBbposWiseposE.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BbposWiseposE = null;
+            if (parseNode.GetChildNode("cellular") is { } nullNodeCellular && nullNodeCellular.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cellular = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("offline") is { } nullNodeOffline && nullNodeOffline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offline = null;
+            if (parseNode.GetChildNode("reboot_window") is { } nullNodeRebootWindow && nullNodeRebootWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RebootWindow = null;
+            if (parseNode.GetChildNode("stripe_s700") is { } nullNodeStripeS700 && nullNodeStripeS700.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeS700 = null;
+            if (parseNode.GetChildNode("stripe_s710") is { } nullNodeStripeS710 && nullNodeStripeS710.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeS710 = null;
+            if (parseNode.GetChildNode("tipping") is { } nullNodeTipping && nullNodeTipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tipping = null;
+            if (parseNode.GetChildNode("verifone_m425") is { } nullNodeVerifoneM425 && nullNodeVerifoneM425.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifoneM425 = null;
+            if (parseNode.GetChildNode("verifone_p400") is { } nullNodeVerifoneP400 && nullNodeVerifoneP400.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifoneP400 = null;
+            if (parseNode.GetChildNode("verifone_p630") is { } nullNodeVerifoneP630 && nullNodeVerifoneP630.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifoneP630 = null;
+            if (parseNode.GetChildNode("verifone_ux700") is { } nullNodeVerifoneUx700 && nullNodeVerifoneUx700.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifoneUx700 = null;
+            if (parseNode.GetChildNode("verifone_v660p") is { } nullNodeVerifoneV660p && nullNodeVerifoneV660p.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifoneV660p = null;
+            if (parseNode.GetChildNode("wifi") is { } nullNodeWifi && nullNodeWifi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wifi = null;
+        }
+
         /// <summary>An object containing device type specific settings for BBPOS WisePad 3 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3? BbposWisepad3 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3? BbposWisepad3 { get => _explicitNullValueBbposWisepad3; set { _explicitNullValueBbposWisepad3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bbpos_wisepad3"); else _explicitNullProperties?.Remove("bbpos_wisepad3"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3? _explicitNullValueBbposWisepad3 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3 BbposWisepad3 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3 BbposWisepad3 { get => _explicitNullValueBbposWisepad3; set { _explicitNullValueBbposWisepad3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bbpos_wisepad3"); else _explicitNullProperties?.Remove("bbpos_wisepad3"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWisepad3 _explicitNullValueBbposWisepad3 = default!;
 #endif
         /// <summary>An object containing device type specific settings for BBPOS WisePOS E readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE? BbposWiseposE { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE? BbposWiseposE { get => _explicitNullValueBbposWiseposE; set { _explicitNullValueBbposWiseposE = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bbpos_wisepos_e"); else _explicitNullProperties?.Remove("bbpos_wisepos_e"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE? _explicitNullValueBbposWiseposE = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE BbposWiseposE { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE BbposWiseposE { get => _explicitNullValueBbposWiseposE; set { _explicitNullValueBbposWiseposE = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bbpos_wisepos_e"); else _explicitNullProperties?.Remove("bbpos_wisepos_e"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestBbposWiseposE _explicitNullValueBbposWiseposE = default!;
 #endif
         /// <summary>Configuration for cellular connectivity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular? Cellular { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular? Cellular { get => _explicitNullValueCellular; set { _explicitNullValueCellular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cellular"); else _explicitNullProperties?.Remove("cellular"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular? _explicitNullValueCellular = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular Cellular { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular Cellular { get => _explicitNullValueCellular; set { _explicitNullValueCellular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cellular"); else _explicitNullProperties?.Remove("cellular"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestCellular _explicitNullValueCellular = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Name of the configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Configurations for collecting transactions offline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline? Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline? Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline? _explicitNullValueOffline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestOffline _explicitNullValueOffline = default!;
 #endif
         /// <summary>Reboot time settings for readers. that support customized reboot time configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow? RebootWindow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow? RebootWindow { get => _explicitNullValueRebootWindow; set { _explicitNullValueRebootWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reboot_window"); else _explicitNullProperties?.Remove("reboot_window"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow? _explicitNullValueRebootWindow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow RebootWindow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow RebootWindow { get => _explicitNullValueRebootWindow; set { _explicitNullValueRebootWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reboot_window"); else _explicitNullProperties?.Remove("reboot_window"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRebootWindow _explicitNullValueRebootWindow = default!;
 #endif
         /// <summary>An object containing device type specific settings for Stripe S700 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700? StripeS700 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700? StripeS700 { get => _explicitNullValueStripeS700; set { _explicitNullValueStripeS700 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_s700"); else _explicitNullProperties?.Remove("stripe_s700"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700? _explicitNullValueStripeS700 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700 StripeS700 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700 StripeS700 { get => _explicitNullValueStripeS700; set { _explicitNullValueStripeS700 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_s700"); else _explicitNullProperties?.Remove("stripe_s700"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700 _explicitNullValueStripeS700 = default!;
 #endif
         /// <summary>An object containing device type specific settings for Stripe S710 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710? StripeS710 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710? StripeS710 { get => _explicitNullValueStripeS710; set { _explicitNullValueStripeS710 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_s710"); else _explicitNullProperties?.Remove("stripe_s710"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710? _explicitNullValueStripeS710 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710 StripeS710 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710 StripeS710 { get => _explicitNullValueStripeS710; set { _explicitNullValueStripeS710 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_s710"); else _explicitNullProperties?.Remove("stripe_s710"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS710 _explicitNullValueStripeS710 = default!;
 #endif
         /// <summary>Tipping configurations for readers that support on-reader tips.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping? Tipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping? Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping? _explicitNullValueTipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping Tipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestTipping _explicitNullValueTipping = default!;
 #endif
         /// <summary>An object containing device type specific settings for Verifone M425 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425? VerifoneM425 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425? VerifoneM425 { get => _explicitNullValueVerifoneM425; set { _explicitNullValueVerifoneM425 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_m425"); else _explicitNullProperties?.Remove("verifone_m425"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425? _explicitNullValueVerifoneM425 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425 VerifoneM425 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425 VerifoneM425 { get => _explicitNullValueVerifoneM425; set { _explicitNullValueVerifoneM425 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_m425"); else _explicitNullProperties?.Remove("verifone_m425"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneM425 _explicitNullValueVerifoneM425 = default!;
 #endif
         /// <summary>An object containing device type specific settings for Verifone P400 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400? VerifoneP400 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400? VerifoneP400 { get => _explicitNullValueVerifoneP400; set { _explicitNullValueVerifoneP400 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_p400"); else _explicitNullProperties?.Remove("verifone_p400"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400? _explicitNullValueVerifoneP400 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400 VerifoneP400 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400 VerifoneP400 { get => _explicitNullValueVerifoneP400; set { _explicitNullValueVerifoneP400 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_p400"); else _explicitNullProperties?.Remove("verifone_p400"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP400 _explicitNullValueVerifoneP400 = default!;
 #endif
         /// <summary>An object containing device type specific settings for Verifone P630 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630? VerifoneP630 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630? VerifoneP630 { get => _explicitNullValueVerifoneP630; set { _explicitNullValueVerifoneP630 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_p630"); else _explicitNullProperties?.Remove("verifone_p630"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630? _explicitNullValueVerifoneP630 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630 VerifoneP630 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630 VerifoneP630 { get => _explicitNullValueVerifoneP630; set { _explicitNullValueVerifoneP630 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_p630"); else _explicitNullProperties?.Remove("verifone_p630"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630 _explicitNullValueVerifoneP630 = default!;
 #endif
         /// <summary>An object containing device type specific settings for Verifone UX700 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700? VerifoneUx700 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700? VerifoneUx700 { get => _explicitNullValueVerifoneUx700; set { _explicitNullValueVerifoneUx700 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_ux700"); else _explicitNullProperties?.Remove("verifone_ux700"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700? _explicitNullValueVerifoneUx700 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700 VerifoneUx700 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700 VerifoneUx700 { get => _explicitNullValueVerifoneUx700; set { _explicitNullValueVerifoneUx700 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_ux700"); else _explicitNullProperties?.Remove("verifone_ux700"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700 _explicitNullValueVerifoneUx700 = default!;
 #endif
         /// <summary>An object containing device type specific settings for Verifone V660p readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P? VerifoneV660p { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P? VerifoneV660p { get => _explicitNullValueVerifoneV660p; set { _explicitNullValueVerifoneV660p = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_v660p"); else _explicitNullProperties?.Remove("verifone_v660p"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P? _explicitNullValueVerifoneV660p = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P VerifoneV660p { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P VerifoneV660p { get => _explicitNullValueVerifoneV660p; set { _explicitNullValueVerifoneV660p = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifone_v660p"); else _explicitNullProperties?.Remove("verifone_v660p"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P _explicitNullValueVerifoneV660p = default!;
 #endif
         /// <summary>Configurations for connecting to a WiFi network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi? Wifi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi? Wifi { get => _explicitNullValueWifi; set { _explicitNullValueWifi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wifi"); else _explicitNullProperties?.Remove("wifi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi? _explicitNullValueWifi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi Wifi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi Wifi { get => _explicitNullValueWifi; set { _explicitNullValueWifi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wifi"); else _explicitNullProperties?.Remove("wifi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi _explicitNullValueWifi = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -148,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -198,7 +253,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneP630>("verifone_p630", VerifoneP630);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700>("verifone_ux700", VerifoneUx700);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneV660P>("verifone_v660p", VerifoneV660p);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi>("wifi", Wifi);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestWifi>("wifi", Wifi);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

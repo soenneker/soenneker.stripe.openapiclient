@@ -12,27 +12,47 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerSessionResourceComponentsResourcePaymentElementFeatures : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payment_method_allow_redisplay_filters") is { } nullNodePaymentMethodAllowRedisplayFilters && nullNodePaymentMethodAllowRedisplayFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodAllowRedisplayFilters = null;
+            if (parseNode.GetChildNode("payment_method_redisplay") is { } nullNodePaymentMethodRedisplay && nullNodePaymentMethodRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRedisplay = null;
+            if (parseNode.GetChildNode("payment_method_redisplay_limit") is { } nullNodePaymentMethodRedisplayLimit && nullNodePaymentMethodRedisplayLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRedisplayLimit = null;
+            if (parseNode.GetChildNode("payment_method_remove") is { } nullNodePaymentMethodRemove && nullNodePaymentMethodRemove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRemove = null;
+            if (parseNode.GetChildNode("payment_method_save") is { } nullNodePaymentMethodSave && nullNodePaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodSave = null;
+            if (parseNode.GetChildNode("payment_method_save_usage") is { } nullNodePaymentMethodSaveUsage && nullNodePaymentMethodSaveUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodSaveUsage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of [`allow_redisplay`](https://docs.stripe.com/api/payment_methods/object#payment_method_object-allow_redisplay) values that controls which saved payment methods the Payment Element displays by filtering to only show payment methods with an `allow_redisplay` value that is present in this list.If not specified, defaults to [&quot;always&quot;]. In order to display all saved payment methods, specify [&quot;always&quot;, &quot;limited&quot;, &quot;unspecified&quot;].</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #endif
         /// <summary>Controls whether or not the Payment Element shows saved payment methods. This parameter defaults to `disabled`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRedisplay? PaymentMethodRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRedisplay? PaymentMethodRedisplay { get => _explicitNullValuePaymentMethodRedisplay; set { _explicitNullValuePaymentMethodRedisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_redisplay"); else _explicitNullProperties?.Remove("payment_method_redisplay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRedisplay? _explicitNullValuePaymentMethodRedisplay = default!;
         /// <summary>Determines the max number of saved payment methods for the Payment Element to display. This parameter defaults to `3`. The maximum redisplay limit is `10`.</summary>
-        public int? PaymentMethodRedisplayLimit { get; set; }
+        public int? PaymentMethodRedisplayLimit { get => _explicitNullValuePaymentMethodRedisplayLimit; set { _explicitNullValuePaymentMethodRedisplayLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_redisplay_limit"); else _explicitNullProperties?.Remove("payment_method_redisplay_limit"); } }
+        private int? _explicitNullValuePaymentMethodRedisplayLimit = default!;
         /// <summary>Controls whether the Payment Element displays the option to remove a saved payment method. This parameter defaults to `disabled`.Allowing buyers to remove their saved payment methods impacts subscriptions that depend on that payment method. Removing the payment method detaches the [`customer` object](https://docs.stripe.com/api/payment_methods/object#payment_method_object-customer) from that [PaymentMethod](https://docs.stripe.com/api/payment_methods).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get => _explicitNullValuePaymentMethodRemove; set { _explicitNullValuePaymentMethodRemove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_remove"); else _explicitNullProperties?.Remove("payment_method_remove"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove? _explicitNullValuePaymentMethodRemove = default!;
         /// <summary>Controls whether the Payment Element displays a checkbox offering to save a new payment method. This parameter defaults to `disabled`.If a customer checks the box, the [`allow_redisplay`](https://docs.stripe.com/api/payment_methods/object#payment_method_object-allow_redisplay) value on the PaymentMethod is set to `&apos;always&apos;` at confirmation time. For PaymentIntents, the [`setup_future_usage`](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-setup_future_usage) value is also set to the value defined in `payment_method_save_usage`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave? PaymentMethodSave { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave? PaymentMethodSave { get => _explicitNullValuePaymentMethodSave; set { _explicitNullValuePaymentMethodSave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_save"); else _explicitNullProperties?.Remove("payment_method_save"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave? _explicitNullValuePaymentMethodSave = default!;
         /// <summary>When using PaymentIntents and the customer checks the save checkbox, this field determines the [`setup_future_usage`](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-setup_future_usage) value used to confirm the PaymentIntent.When using SetupIntents, directly configure the [`usage`](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-usage) value on SetupIntent creation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage? PaymentMethodSaveUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage? PaymentMethodSaveUsage { get => _explicitNullValuePaymentMethodSaveUsage; set { _explicitNullValuePaymentMethodSaveUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_save_usage"); else _explicitNullProperties?.Remove("payment_method_save_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage? _explicitNullValuePaymentMethodSaveUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures"/> and sets the default values.
         /// </summary>
@@ -48,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave>("payment_method_save", PaymentMethodSave);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage>("payment_method_save_usage", PaymentMethodSaveUsage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,15 +11,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_anchor") is { } nullNodeBillingCycleAnchor && nullNodeBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchor = null;
+            if (parseNode.GetChildNode("payment_behavior") is { } nullNodePaymentBehavior && nullNodePaymentBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentBehavior = null;
+            if (parseNode.GetChildNode("proration_behavior") is { } nullNodeProrationBehavior && nullNodeProrationBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationBehavior = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing_cycle_anchor property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsBillingCycleAnchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsBillingCycleAnchor? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsBillingCycleAnchor? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>The payment_behavior property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsPaymentBehavior? PaymentBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsPaymentBehavior? PaymentBehavior { get => _explicitNullValuePaymentBehavior; set { _explicitNullValuePaymentBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_behavior"); else _explicitNullProperties?.Remove("payment_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsPaymentBehavior? _explicitNullValuePaymentBehavior = default!;
         /// <summary>The proration_behavior property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsProrationBehavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettings"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItemResumeSettingsProrationBehavior>("proration_behavior", ProrationBehavior);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

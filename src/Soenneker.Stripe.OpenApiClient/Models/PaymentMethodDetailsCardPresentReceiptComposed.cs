@@ -12,74 +12,107 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentMethodDetailsCardPresentReceiptComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_type") is { } nullNodeAccountType && nullNodeAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountType = null;
+            if (parseNode.GetChildNode("application_cryptogram") is { } nullNodeApplicationCryptogram && nullNodeApplicationCryptogram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationCryptogram = null;
+            if (parseNode.GetChildNode("application_preferred_name") is { } nullNodeApplicationPreferredName && nullNodeApplicationPreferredName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationPreferredName = null;
+            if (parseNode.GetChildNode("authorization_code") is { } nullNodeAuthorizationCode && nullNodeAuthorizationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationCode = null;
+            if (parseNode.GetChildNode("authorization_response_code") is { } nullNodeAuthorizationResponseCode && nullNodeAuthorizationResponseCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationResponseCode = null;
+            if (parseNode.GetChildNode("cardholder_verification_method") is { } nullNodeCardholderVerificationMethod && nullNodeCardholderVerificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderVerificationMethod = null;
+            if (parseNode.GetChildNode("dedicated_file_name") is { } nullNodeDedicatedFileName && nullNodeDedicatedFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DedicatedFileName = null;
+            if (parseNode.GetChildNode("terminal_verification_results") is { } nullNodeTerminalVerificationResults && nullNodeTerminalVerificationResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerminalVerificationResults = null;
+            if (parseNode.GetChildNode("transaction_status_information") is { } nullNodeTransactionStatusInformation && nullNodeTransactionStatusInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionStatusInformation = null;
+        }
+
         /// <summary>The type of account being debited or credited</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptAccountType? AccountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptAccountType? AccountType { get => _explicitNullValueAccountType; set { _explicitNullValueAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_type"); else _explicitNullProperties?.Remove("account_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptAccountType? _explicitNullValueAccountType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Application Cryptogram, a unique value generated by the card to authenticate the transaction with issuers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApplicationCryptogram { get; set; }
+        public string? ApplicationCryptogram { get => _explicitNullValueApplicationCryptogram; set { _explicitNullValueApplicationCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_cryptogram"); else _explicitNullProperties?.Remove("application_cryptogram"); } }
+        private string? _explicitNullValueApplicationCryptogram = default!;
 #nullable restore
 #else
-        public string ApplicationCryptogram { get; set; }
+        public string ApplicationCryptogram { get => _explicitNullValueApplicationCryptogram; set { _explicitNullValueApplicationCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_cryptogram"); else _explicitNullProperties?.Remove("application_cryptogram"); } }
+        private string _explicitNullValueApplicationCryptogram = default!;
 #endif
         /// <summary>The Application Identifier (AID) on the card used to determine which networks are eligible to process the transaction. Referenced from EMV tag 9F12, data encoded on the card&apos;s chip.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApplicationPreferredName { get; set; }
+        public string? ApplicationPreferredName { get => _explicitNullValueApplicationPreferredName; set { _explicitNullValueApplicationPreferredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_preferred_name"); else _explicitNullProperties?.Remove("application_preferred_name"); } }
+        private string? _explicitNullValueApplicationPreferredName = default!;
 #nullable restore
 #else
-        public string ApplicationPreferredName { get; set; }
+        public string ApplicationPreferredName { get => _explicitNullValueApplicationPreferredName; set { _explicitNullValueApplicationPreferredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_preferred_name"); else _explicitNullProperties?.Remove("application_preferred_name"); } }
+        private string _explicitNullValueApplicationPreferredName = default!;
 #endif
         /// <summary>Identifier for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizationCode { get; set; }
+        public string? AuthorizationCode { get => _explicitNullValueAuthorizationCode; set { _explicitNullValueAuthorizationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_code"); else _explicitNullProperties?.Remove("authorization_code"); } }
+        private string? _explicitNullValueAuthorizationCode = default!;
 #nullable restore
 #else
-        public string AuthorizationCode { get; set; }
+        public string AuthorizationCode { get => _explicitNullValueAuthorizationCode; set { _explicitNullValueAuthorizationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_code"); else _explicitNullProperties?.Remove("authorization_code"); } }
+        private string _explicitNullValueAuthorizationCode = default!;
 #endif
         /// <summary>EMV tag 8A. A code returned by the card issuer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizationResponseCode { get; set; }
+        public string? AuthorizationResponseCode { get => _explicitNullValueAuthorizationResponseCode; set { _explicitNullValueAuthorizationResponseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_response_code"); else _explicitNullProperties?.Remove("authorization_response_code"); } }
+        private string? _explicitNullValueAuthorizationResponseCode = default!;
 #nullable restore
 #else
-        public string AuthorizationResponseCode { get; set; }
+        public string AuthorizationResponseCode { get => _explicitNullValueAuthorizationResponseCode; set { _explicitNullValueAuthorizationResponseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_response_code"); else _explicitNullProperties?.Remove("authorization_response_code"); } }
+        private string _explicitNullValueAuthorizationResponseCode = default!;
 #endif
         /// <summary>Describes the method used by the cardholder to verify ownership of the card. One of the following: `approval`, `failure`, `none`, `offline_pin`, `offline_pin_and_signature`, `online_pin`, or `signature`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardholderVerificationMethod { get; set; }
+        public string? CardholderVerificationMethod { get => _explicitNullValueCardholderVerificationMethod; set { _explicitNullValueCardholderVerificationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_verification_method"); else _explicitNullProperties?.Remove("cardholder_verification_method"); } }
+        private string? _explicitNullValueCardholderVerificationMethod = default!;
 #nullable restore
 #else
-        public string CardholderVerificationMethod { get; set; }
+        public string CardholderVerificationMethod { get => _explicitNullValueCardholderVerificationMethod; set { _explicitNullValueCardholderVerificationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_verification_method"); else _explicitNullProperties?.Remove("cardholder_verification_method"); } }
+        private string _explicitNullValueCardholderVerificationMethod = default!;
 #endif
         /// <summary>Similar to the application_preferred_name, identifying the applications (AIDs) available on the card. Referenced from EMV tag 84.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DedicatedFileName { get; set; }
+        public string? DedicatedFileName { get => _explicitNullValueDedicatedFileName; set { _explicitNullValueDedicatedFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dedicated_file_name"); else _explicitNullProperties?.Remove("dedicated_file_name"); } }
+        private string? _explicitNullValueDedicatedFileName = default!;
 #nullable restore
 #else
-        public string DedicatedFileName { get; set; }
+        public string DedicatedFileName { get => _explicitNullValueDedicatedFileName; set { _explicitNullValueDedicatedFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dedicated_file_name"); else _explicitNullProperties?.Remove("dedicated_file_name"); } }
+        private string _explicitNullValueDedicatedFileName = default!;
 #endif
         /// <summary>A 5-byte string that records the checks and validations that occur between the card and the terminal. These checks determine how the terminal processes the transaction and what risk tolerance is acceptable. Referenced from EMV Tag 95.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TerminalVerificationResults { get; set; }
+        public string? TerminalVerificationResults { get => _explicitNullValueTerminalVerificationResults; set { _explicitNullValueTerminalVerificationResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminal_verification_results"); else _explicitNullProperties?.Remove("terminal_verification_results"); } }
+        private string? _explicitNullValueTerminalVerificationResults = default!;
 #nullable restore
 #else
-        public string TerminalVerificationResults { get; set; }
+        public string TerminalVerificationResults { get => _explicitNullValueTerminalVerificationResults; set { _explicitNullValueTerminalVerificationResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminal_verification_results"); else _explicitNullProperties?.Remove("terminal_verification_results"); } }
+        private string _explicitNullValueTerminalVerificationResults = default!;
 #endif
         /// <summary>An indication of which steps were completed during the card read process. Referenced from EMV Tag 9B.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionStatusInformation { get; set; }
+        public string? TransactionStatusInformation { get => _explicitNullValueTransactionStatusInformation; set { _explicitNullValueTransactionStatusInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_status_information"); else _explicitNullProperties?.Remove("transaction_status_information"); } }
+        private string? _explicitNullValueTransactionStatusInformation = default!;
 #nullable restore
 #else
-        public string TransactionStatusInformation { get; set; }
+        public string TransactionStatusInformation { get => _explicitNullValueTransactionStatusInformation; set { _explicitNullValueTransactionStatusInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_status_information"); else _explicitNullProperties?.Remove("transaction_status_information"); } }
+        private string _explicitNullValueTransactionStatusInformation = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed"/> and sets the default values.
@@ -96,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -133,6 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("dedicated_file_name", DedicatedFileName);
             writer.WriteStringValue("terminal_verification_results", TerminalVerificationResults);
             writer.WriteStringValue("transaction_status_information", TransactionStatusInformation);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

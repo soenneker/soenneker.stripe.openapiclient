@@ -12,48 +12,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customer_update") is { } nullNodeCustomerUpdate && nullNodeCustomerUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerUpdate = null;
+            if (parseNode.GetChildNode("invoice_history") is { } nullNodeInvoiceHistory && nullNodeInvoiceHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceHistory = null;
+            if (parseNode.GetChildNode("payment_method_update") is { } nullNodePaymentMethodUpdate && nullNodePaymentMethodUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodUpdate = null;
+            if (parseNode.GetChildNode("subscription_cancel") is { } nullNodeSubscriptionCancel && nullNodeSubscriptionCancel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionCancel = null;
+            if (parseNode.GetChildNode("subscription_update") is { } nullNodeSubscriptionUpdate && nullNodeSubscriptionUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUpdate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customer_update property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate? CustomerUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate? CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate? _explicitNullValueCustomerUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate CustomerUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesCustomerUpdate _explicitNullValueCustomerUpdate = default!;
 #endif
         /// <summary>The invoice_history property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory? InvoiceHistory { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory? InvoiceHistory { get => _explicitNullValueInvoiceHistory; set { _explicitNullValueInvoiceHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_history"); else _explicitNullProperties?.Remove("invoice_history"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory? _explicitNullValueInvoiceHistory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory InvoiceHistory { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory InvoiceHistory { get => _explicitNullValueInvoiceHistory; set { _explicitNullValueInvoiceHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_history"); else _explicitNullProperties?.Remove("invoice_history"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesInvoiceHistory _explicitNullValueInvoiceHistory = default!;
 #endif
         /// <summary>The payment_method_update property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate? PaymentMethodUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate? PaymentMethodUpdate { get => _explicitNullValuePaymentMethodUpdate; set { _explicitNullValuePaymentMethodUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_update"); else _explicitNullProperties?.Remove("payment_method_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate? _explicitNullValuePaymentMethodUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate PaymentMethodUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate PaymentMethodUpdate { get => _explicitNullValuePaymentMethodUpdate; set { _explicitNullValuePaymentMethodUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_update"); else _explicitNullProperties?.Remove("payment_method_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate _explicitNullValuePaymentMethodUpdate = default!;
 #endif
         /// <summary>The subscription_cancel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel? SubscriptionCancel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel? SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel? _explicitNullValueSubscriptionCancel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel SubscriptionCancel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel _explicitNullValueSubscriptionCancel = default!;
 #endif
         /// <summary>The subscription_update property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate? SubscriptionUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate? SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate? _explicitNullValueSubscriptionUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate SubscriptionUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate _explicitNullValueSubscriptionUpdate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesPaymentMethodUpdate>("payment_method_update", PaymentMethodUpdate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancel>("subscription_cancel", SubscriptionCancel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionUpdate>("subscription_update", SubscriptionUpdate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,7 +12,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingTransactionDispute : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,14 +43,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionDispute();
-            if(parseNode.GetStringValue() is string stringValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
             else {
-                result.IssuingDispute = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("amount") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("currency") != null && parseNode.GetChildNode("evidence") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("metadata") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag8 && ("issuing.dispute".Equals(tag8.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null && (parseNode.GetChildNode("status")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag10 && ("expired".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "lost".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "submitted".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "unsubmitted".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "won".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("transaction") != null && (parseNode.GetChildNode("loss_reason") == null || (parseNode.GetChildNode("loss_reason")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag12 && ("cardholder_authentication_issuer_liability".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "eci5_token_transaction_with_tavv".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "excess_disputes_in_timeframe".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "has_not_met_the_minimum_dispute_amount_requirements".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "invalid_duplicate_dispute".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "invalid_incorrect_amount_dispute".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "invalid_no_authorization".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "invalid_use_of_disputes".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "merchandise_delivered_or_shipped".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "merchandise_or_service_as_described".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "not_cancelled".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "other".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "refund_issued".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "submitted_beyond_allowable_time_limit".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_3ds_required".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_approved_after_prior_fraud_dispute".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_authorized".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_electronically_read".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_qualifies_for_visa_easy_payment_service".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal) || "transaction_unattended".Equals(optionalTag12.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.IssuingDispute == null && result.String == null && matchesUnionBranch0) result.IssuingDispute = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute(), parseNode);
+            if (result.IssuingDispute == null && result.String == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.IssuingDispute = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute(), parseNode);
+            if (result.IssuingDispute == null && result.String == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,12 +76,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (IssuingDispute == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (IssuingDispute != null && String == null) { if (IssuingDispute is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, IssuingDispute); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(String != null)
             {
                 writer.WriteStringValue(null, String);
             }
             else {
+                if (IssuingDispute is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute>(null, IssuingDispute);
             }
         }

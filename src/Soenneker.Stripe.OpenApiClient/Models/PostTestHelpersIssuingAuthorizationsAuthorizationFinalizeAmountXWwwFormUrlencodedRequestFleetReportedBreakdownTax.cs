@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleetReportedBreakdownTax : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("local_amount_decimal") is { } nullNodeLocalAmountDecimal && nullNodeLocalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalAmountDecimal = null;
+            if (parseNode.GetChildNode("national_amount_decimal") is { } nullNodeNationalAmountDecimal && nullNodeNationalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalAmountDecimal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The local_amount_decimal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalAmountDecimal { get; set; }
+        public string? LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
+        private string? _explicitNullValueLocalAmountDecimal = default!;
 #nullable restore
 #else
-        public string LocalAmountDecimal { get; set; }
+        public string LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
+        private string _explicitNullValueLocalAmountDecimal = default!;
 #endif
         /// <summary>The national_amount_decimal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NationalAmountDecimal { get; set; }
+        public string? NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
+        private string? _explicitNullValueNationalAmountDecimal = default!;
 #nullable restore
 #else
-        public string NationalAmountDecimal { get; set; }
+        public string NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
+        private string _explicitNullValueNationalAmountDecimal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleetReportedBreakdownTax"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleetReportedBreakdownTax CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleetReportedBreakdownTax();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmountXWwwFormUrlencodedRequestFleetReportedBreakdownTax(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("local_amount_decimal", LocalAmountDecimal);
             writer.WriteStringValue("national_amount_decimal", NationalAmountDecimal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

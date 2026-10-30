@@ -11,19 +11,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParam : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("installments") is { } nullNodeInstallments && nullNodeInstallments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installments = null;
+            if (parseNode.GetChildNode("request_three_d_secure") is { } nullNodeRequestThreeDSecure && nullNodeRequestThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestThreeDSecure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The installments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments? Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments? _explicitNullValueInstallments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments _explicitNullValueInstallments = default!;
 #endif
         /// <summary>The request_three_d_secure property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamRequestThreeDSecure? RequestThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamRequestThreeDSecure? RequestThreeDSecure { get => _explicitNullValueRequestThreeDSecure; set { _explicitNullValueRequestThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_three_d_secure"); else _explicitNullProperties?.Remove("request_three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamRequestThreeDSecure? _explicitNullValueRequestThreeDSecure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParam"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParam CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParam();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParam(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallments>("installments", Installments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamRequestThreeDSecure>("request_three_d_secure", RequestThreeDSecure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

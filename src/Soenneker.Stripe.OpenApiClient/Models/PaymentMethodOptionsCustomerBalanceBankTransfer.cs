@@ -11,27 +11,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentMethodOptionsCustomerBalanceBankTransfer : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eu_bank_transfer") is { } nullNodeEuBankTransfer && nullNodeEuBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuBankTransfer = null;
+            if (parseNode.GetChildNode("requested_address_types") is { } nullNodeRequestedAddressTypes && nullNodeRequestedAddressTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedAddressTypes = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eu_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount? EuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount? EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount? _explicitNullValueEuBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount EuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount _explicitNullValueEuBankTransfer = default!;
 #endif
         /// <summary>List of address types that should be returned in the financial_addresses response. If not specified, all valid types will be returned.Permitted values include: `sort_code`, `zengin`, `iban`, or `spei`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?>? RequestedAddressTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?>? RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?>? _explicitNullValueRequestedAddressTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?> RequestedAddressTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?> RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?> _explicitNullValueRequestedAddressTypes = default!;
 #endif
         /// <summary>The bank transfer type that this PaymentIntent is allowed to use for funding Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount>("eu_bank_transfer", EuBankTransfer);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem>("requested_address_types", RequestedAddressTypes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

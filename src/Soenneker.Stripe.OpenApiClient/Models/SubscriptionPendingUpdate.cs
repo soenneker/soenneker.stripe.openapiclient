@@ -12,51 +12,80 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionPendingUpdate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_anchor") is { } nullNodeBillingCycleAnchor && nullNodeBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchor = null;
+            if (parseNode.GetChildNode("cancel_at_period_end") is { } nullNodeCancelAtPeriodEnd && nullNodeCancelAtPeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelAtPeriodEnd = null;
+            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("discounts") is { } nullNodeDiscounts && nullNodeDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discounts = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("subscription_items") is { } nullNodeSubscriptionItems && nullNodeSubscriptionItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionItems = null;
+            if (parseNode.GetChildNode("trial_end") is { } nullNodeTrialEnd && nullNodeTrialEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialEnd = null;
+            if (parseNode.GetChildNode("trial_from_plan") is { } nullNodeTrialFromPlan && nullNodeTrialFromPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialFromPlan = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If the update is applied, determines the date of the first full invoice, and, for plans with `month` or `year` intervals, the day of the month for subsequent invoices. The timestamp is in UTC format.</summary>
-        public int? BillingCycleAnchor { get; set; }
+        public int? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private int? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>Indicates whether this subscription should cancel at the end of the current period if the update is applied.</summary>
-        public bool? CancelAtPeriodEnd { get; set; }
+        public bool? CancelAtPeriodEnd { get => _explicitNullValueCancelAtPeriodEnd; set { _explicitNullValueCancelAtPeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_at_period_end"); else _explicitNullProperties?.Remove("cancel_at_period_end"); } }
+        private bool? _explicitNullValueCancelAtPeriodEnd = default!;
         /// <summary>The pending subscription-level discount that will be applied when the pending update is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount? Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>The discounts that will be applied to the subscription when the pending update is applied. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Discounts { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? _explicitNullValueDiscounts = default!;
 #nullable restore
 #else
-        public List<string> Discounts { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>The point after which the changes reflected by this update will be discarded and no longer applied.</summary>
-        public int? ExpiresAt { get; set; }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private int? _explicitNullValueExpiresAt = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>List of subscription items, each with an attached plan, that will be set if the update is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>? SubscriptionItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>? SubscriptionItems { get => _explicitNullValueSubscriptionItems; set { _explicitNullValueSubscriptionItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_items"); else _explicitNullProperties?.Remove("subscription_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>? _explicitNullValueSubscriptionItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem> SubscriptionItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem> SubscriptionItems { get => _explicitNullValueSubscriptionItems; set { _explicitNullValueSubscriptionItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_items"); else _explicitNullProperties?.Remove("subscription_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem> _explicitNullValueSubscriptionItems = default!;
 #endif
         /// <summary>Unix timestamp representing the end of the trial period the customer will get before being charged for the first time, if the update is applied.</summary>
-        public int? TrialEnd { get; set; }
+        public int? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
+        private int? _explicitNullValueTrialEnd = default!;
         /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more.</summary>
-        public bool? TrialFromPlan { get; set; }
+        public bool? TrialFromPlan { get => _explicitNullValueTrialFromPlan; set { _explicitNullValueTrialFromPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_from_plan"); else _explicitNullProperties?.Remove("trial_from_plan"); } }
+        private bool? _explicitNullValueTrialFromPlan = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate"/> and sets the default values.
         /// </summary>
@@ -72,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "subscription_items", n => { SubscriptionItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -103,12 +132,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>("discount", Discount);
-            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>("subscription_items", SubscriptionItems);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,32 +12,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryFinancialAccountsResourceBalance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
+            if (parseNode.GetChildNode("inbound_pending") is { } nullNodeInboundPending && nullNodeInboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundPending = null;
+            if (parseNode.GetChildNode("outbound_pending") is { } nullNodeOutboundPending && nullNodeOutboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPending = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Funds the user can spend right now.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty? Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty? _explicitNullValueCash = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty _explicitNullValueCash = default!;
 #endif
         /// <summary>Funds not spendable yet, but will become available at a later time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty? InboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty? InboundPending { get => _explicitNullValueInboundPending; set { _explicitNullValueInboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_pending"); else _explicitNullProperties?.Remove("inbound_pending"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty? _explicitNullValueInboundPending = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty InboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty InboundPending { get => _explicitNullValueInboundPending; set { _explicitNullValueInboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_pending"); else _explicitNullProperties?.Remove("inbound_pending"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty _explicitNullValueInboundPending = default!;
 #endif
         /// <summary>Funds in the account, but not spendable because they are being held for pending outbound flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty? OutboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty? OutboundPending { get => _explicitNullValueOutboundPending; set { _explicitNullValueOutboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_pending"); else _explicitNullProperties?.Remove("outbound_pending"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty? _explicitNullValueOutboundPending = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty OutboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty OutboundPending { get => _explicitNullValueOutboundPending; set { _explicitNullValueOutboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_pending"); else _explicitNullProperties?.Remove("outbound_pending"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty _explicitNullValueOutboundPending = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty>("cash", Cash);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty>("inbound_pending", InboundPending);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty>("outbound_pending", OutboundPending);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

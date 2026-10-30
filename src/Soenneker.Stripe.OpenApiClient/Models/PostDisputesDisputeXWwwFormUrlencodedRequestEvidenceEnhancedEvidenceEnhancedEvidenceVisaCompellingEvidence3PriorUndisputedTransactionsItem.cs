@@ -11,72 +11,103 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charge") is { } nullNodeCharge && nullNodeCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charge = null;
+            if (parseNode.GetChildNode("customer_account_id") is { } nullNodeCustomerAccountId && nullNodeCustomerAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccountId = null;
+            if (parseNode.GetChildNode("customer_device_fingerprint") is { } nullNodeCustomerDeviceFingerprint && nullNodeCustomerDeviceFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceFingerprint = null;
+            if (parseNode.GetChildNode("customer_device_id") is { } nullNodeCustomerDeviceId && nullNodeCustomerDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceId = null;
+            if (parseNode.GetChildNode("customer_email_address") is { } nullNodeCustomerEmailAddress && nullNodeCustomerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerEmailAddress = null;
+            if (parseNode.GetChildNode("customer_purchase_ip") is { } nullNodeCustomerPurchaseIp && nullNodeCustomerPurchaseIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPurchaseIp = null;
+            if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The charge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Charge { get; set; }
+        public string? Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private string? _explicitNullValueCharge = default!;
 #nullable restore
 #else
-        public string Charge { get; set; }
+        public string Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private string _explicitNullValueCharge = default!;
 #endif
         /// <summary>The customer_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId? CustomerAccountId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId? CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId? _explicitNullValueCustomerAccountId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId CustomerAccountId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerAccountId _explicitNullValueCustomerAccountId = default!;
 #endif
         /// <summary>The customer_device_fingerprint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint? CustomerDeviceFingerprint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint? CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint? _explicitNullValueCustomerDeviceFingerprint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint CustomerDeviceFingerprint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceFingerprint _explicitNullValueCustomerDeviceFingerprint = default!;
 #endif
         /// <summary>The customer_device_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId? CustomerDeviceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId? CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId? _explicitNullValueCustomerDeviceId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId CustomerDeviceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerDeviceId _explicitNullValueCustomerDeviceId = default!;
 #endif
         /// <summary>The customer_email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress? CustomerEmailAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress? CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress? _explicitNullValueCustomerEmailAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress CustomerEmailAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerEmailAddress _explicitNullValueCustomerEmailAddress = default!;
 #endif
         /// <summary>The customer_purchase_ip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp? CustomerPurchaseIp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp? CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp? _explicitNullValueCustomerPurchaseIp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp CustomerPurchaseIp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp _explicitNullValueCustomerPurchaseIp = default!;
 #endif
         /// <summary>The product_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription? ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>The shipping_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItem"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemCustomerPurchaseIp>("customer_purchase_ip", CustomerPurchaseIp);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemProductDescription>("product_description", ProductDescription);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3PriorUndisputedTransactionsItemShippingAddress>("shipping_address", ShippingAddress);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

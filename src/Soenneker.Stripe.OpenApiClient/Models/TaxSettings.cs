@@ -12,38 +12,60 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaults") is { } nullNodeDefaults && nullNodeDefaults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Defaults = null;
+            if (parseNode.GetChildNode("head_office") is { } nullNodeHeadOffice && nullNodeHeadOffice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadOffice = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_details") is { } nullNodeStatusDetails && nullNodeStatusDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The defaults property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults? Defaults { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults? Defaults { get => _explicitNullValueDefaults; set { _explicitNullValueDefaults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaults"); else _explicitNullProperties?.Remove("defaults"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults? _explicitNullValueDefaults = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults Defaults { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults Defaults { get => _explicitNullValueDefaults; set { _explicitNullValueDefaults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaults"); else _explicitNullProperties?.Remove("defaults"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults _explicitNullValueDefaults = default!;
 #endif
         /// <summary>The place where your business is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? HeadOffice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? _explicitNullValueHeadOffice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice HeadOffice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice _explicitNullValueHeadOffice = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject? _explicitNullValueObject = default!;
         /// <summary>Whether these settings have the information Stripe Tax needs to calculate tax. It doesn&apos;t reflect whether your integration is ready to collect tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus? _explicitNullValueStatus = default!;
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails? StatusDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails? StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails? _explicitNullValueStatusDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails StatusDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails _explicitNullValueStatusDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings"/> and sets the default values.
@@ -60,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,6 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails>("status_details", StatusDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,232 +11,325 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_tos_acceptances") is { } nullNodeAdditionalTosAcceptances && nullNodeAdditionalTosAcceptances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalTosAcceptances = null;
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_kana") is { } nullNodeAddressKana && nullNodeAddressKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKana = null;
+            if (parseNode.GetChildNode("address_kanji") is { } nullNodeAddressKanji && nullNodeAddressKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKanji = null;
+            if (parseNode.GetChildNode("dob") is { } nullNodeDob && nullNodeDob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dob = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("first_name") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("first_name_kana") is { } nullNodeFirstNameKana && nullNodeFirstNameKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstNameKana = null;
+            if (parseNode.GetChildNode("first_name_kanji") is { } nullNodeFirstNameKanji && nullNodeFirstNameKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstNameKanji = null;
+            if (parseNode.GetChildNode("full_name_aliases") is { } nullNodeFullNameAliases && nullNodeFullNameAliases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FullNameAliases = null;
+            if (parseNode.GetChildNode("gender") is { } nullNodeGender && nullNodeGender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gender = null;
+            if (parseNode.GetChildNode("id_number") is { } nullNodeIdNumber && nullNodeIdNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdNumber = null;
+            if (parseNode.GetChildNode("id_number_secondary") is { } nullNodeIdNumberSecondary && nullNodeIdNumberSecondary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdNumberSecondary = null;
+            if (parseNode.GetChildNode("last_name") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("last_name_kana") is { } nullNodeLastNameKana && nullNodeLastNameKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastNameKana = null;
+            if (parseNode.GetChildNode("last_name_kanji") is { } nullNodeLastNameKanji && nullNodeLastNameKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastNameKanji = null;
+            if (parseNode.GetChildNode("maiden_name") is { } nullNodeMaidenName && nullNodeMaidenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaidenName = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("nationality") is { } nullNodeNationality && nullNodeNationality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nationality = null;
+            if (parseNode.GetChildNode("person_token") is { } nullNodePersonToken && nullNodePersonToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonToken = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("political_exposure") is { } nullNodePoliticalExposure && nullNodePoliticalExposure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalExposure = null;
+            if (parseNode.GetChildNode("registered_address") is { } nullNodeRegisteredAddress && nullNodeRegisteredAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegisteredAddress = null;
+            if (parseNode.GetChildNode("relationship") is { } nullNodeRelationship && nullNodeRelationship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relationship = null;
+            if (parseNode.GetChildNode("ssn_last_4") is { } nullNodeSsnLast4 && nullNodeSsnLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsnLast4 = null;
+            if (parseNode.GetChildNode("us_cfpb_data") is { } nullNodeUsCfpbData && nullNodeUsCfpbData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsCfpbData = null;
+            if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
+        }
+
         /// <summary>Details on the legal guardian&apos;s or authorizer&apos;s acceptance of the required Stripe agreements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances? AdditionalTosAcceptances { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances? AdditionalTosAcceptances { get => _explicitNullValueAdditionalTosAcceptances; set { _explicitNullValueAdditionalTosAcceptances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_tos_acceptances"); else _explicitNullProperties?.Remove("additional_tos_acceptances"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances? _explicitNullValueAdditionalTosAcceptances = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances AdditionalTosAcceptances { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances AdditionalTosAcceptances { get => _explicitNullValueAdditionalTosAcceptances; set { _explicitNullValueAdditionalTosAcceptances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_tos_acceptances"); else _explicitNullProperties?.Remove("additional_tos_acceptances"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances _explicitNullValueAdditionalTosAcceptances = default!;
 #endif
         /// <summary>The person&apos;s address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The Kana variation of the person&apos;s address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana? AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKana _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The Kanji variation of the person&apos;s address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji? AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddressKanji _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>The person&apos;s date of birth.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob? Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob? _explicitNullValueDob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDob _explicitNullValueDob = default!;
 #endif
         /// <summary>Documents that may be submitted to satisfy various informational requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments? Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestDocuments _explicitNullValueDocuments = default!;
 #endif
         /// <summary>The person&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The person&apos;s first name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>The Kana variation of the person&apos;s first name (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstNameKana { get; set; }
+        public string? FirstNameKana { get => _explicitNullValueFirstNameKana; set { _explicitNullValueFirstNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_kana"); else _explicitNullProperties?.Remove("first_name_kana"); } }
+        private string? _explicitNullValueFirstNameKana = default!;
 #nullable restore
 #else
-        public string FirstNameKana { get; set; }
+        public string FirstNameKana { get => _explicitNullValueFirstNameKana; set { _explicitNullValueFirstNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_kana"); else _explicitNullProperties?.Remove("first_name_kana"); } }
+        private string _explicitNullValueFirstNameKana = default!;
 #endif
         /// <summary>The Kanji variation of the person&apos;s first name (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstNameKanji { get; set; }
+        public string? FirstNameKanji { get => _explicitNullValueFirstNameKanji; set { _explicitNullValueFirstNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_kanji"); else _explicitNullProperties?.Remove("first_name_kanji"); } }
+        private string? _explicitNullValueFirstNameKanji = default!;
 #nullable restore
 #else
-        public string FirstNameKanji { get; set; }
+        public string FirstNameKanji { get => _explicitNullValueFirstNameKanji; set { _explicitNullValueFirstNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_kanji"); else _explicitNullProperties?.Remove("first_name_kanji"); } }
+        private string _explicitNullValueFirstNameKanji = default!;
 #endif
         /// <summary>A list of alternate names or aliases that the person is known by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases? FullNameAliases { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases? FullNameAliases { get => _explicitNullValueFullNameAliases; set { _explicitNullValueFullNameAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_name_aliases"); else _explicitNullProperties?.Remove("full_name_aliases"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases? _explicitNullValueFullNameAliases = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases FullNameAliases { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases FullNameAliases { get => _explicitNullValueFullNameAliases; set { _explicitNullValueFullNameAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_name_aliases"); else _explicitNullProperties?.Remove("full_name_aliases"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestFullNameAliases _explicitNullValueFullNameAliases = default!;
 #endif
         /// <summary>The person&apos;s gender (International regulations require either &quot;male&quot; or &quot;female&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Gender { get; set; }
+        public string? Gender { get => _explicitNullValueGender; set { _explicitNullValueGender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gender"); else _explicitNullProperties?.Remove("gender"); } }
+        private string? _explicitNullValueGender = default!;
 #nullable restore
 #else
-        public string Gender { get; set; }
+        public string Gender { get => _explicitNullValueGender; set { _explicitNullValueGender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gender"); else _explicitNullProperties?.Remove("gender"); } }
+        private string _explicitNullValueGender = default!;
 #endif
         /// <summary>The person&apos;s ID number, as appropriate for their country. For example, a social security number in the U.S., social insurance number in Canada, etc. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdNumber { get; set; }
+        public string? IdNumber { get => _explicitNullValueIdNumber; set { _explicitNullValueIdNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number"); else _explicitNullProperties?.Remove("id_number"); } }
+        private string? _explicitNullValueIdNumber = default!;
 #nullable restore
 #else
-        public string IdNumber { get; set; }
+        public string IdNumber { get => _explicitNullValueIdNumber; set { _explicitNullValueIdNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number"); else _explicitNullProperties?.Remove("id_number"); } }
+        private string _explicitNullValueIdNumber = default!;
 #endif
         /// <summary>The person&apos;s secondary ID number, as appropriate for their country, will be used for enhanced verification checks. In Thailand, this would be the laser code found on the back of an ID card. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdNumberSecondary { get; set; }
+        public string? IdNumberSecondary { get => _explicitNullValueIdNumberSecondary; set { _explicitNullValueIdNumberSecondary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number_secondary"); else _explicitNullProperties?.Remove("id_number_secondary"); } }
+        private string? _explicitNullValueIdNumberSecondary = default!;
 #nullable restore
 #else
-        public string IdNumberSecondary { get; set; }
+        public string IdNumberSecondary { get => _explicitNullValueIdNumberSecondary; set { _explicitNullValueIdNumberSecondary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_number_secondary"); else _explicitNullProperties?.Remove("id_number_secondary"); } }
+        private string _explicitNullValueIdNumberSecondary = default!;
 #endif
         /// <summary>The person&apos;s last name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>The Kana variation of the person&apos;s last name (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastNameKana { get; set; }
+        public string? LastNameKana { get => _explicitNullValueLastNameKana; set { _explicitNullValueLastNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_kana"); else _explicitNullProperties?.Remove("last_name_kana"); } }
+        private string? _explicitNullValueLastNameKana = default!;
 #nullable restore
 #else
-        public string LastNameKana { get; set; }
+        public string LastNameKana { get => _explicitNullValueLastNameKana; set { _explicitNullValueLastNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_kana"); else _explicitNullProperties?.Remove("last_name_kana"); } }
+        private string _explicitNullValueLastNameKana = default!;
 #endif
         /// <summary>The Kanji variation of the person&apos;s last name (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastNameKanji { get; set; }
+        public string? LastNameKanji { get => _explicitNullValueLastNameKanji; set { _explicitNullValueLastNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_kanji"); else _explicitNullProperties?.Remove("last_name_kanji"); } }
+        private string? _explicitNullValueLastNameKanji = default!;
 #nullable restore
 #else
-        public string LastNameKanji { get; set; }
+        public string LastNameKanji { get => _explicitNullValueLastNameKanji; set { _explicitNullValueLastNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_kanji"); else _explicitNullProperties?.Remove("last_name_kanji"); } }
+        private string _explicitNullValueLastNameKanji = default!;
 #endif
         /// <summary>The person&apos;s maiden name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaidenName { get; set; }
+        public string? MaidenName { get => _explicitNullValueMaidenName; set { _explicitNullValueMaidenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maiden_name"); else _explicitNullProperties?.Remove("maiden_name"); } }
+        private string? _explicitNullValueMaidenName = default!;
 #nullable restore
 #else
-        public string MaidenName { get; set; }
+        public string MaidenName { get => _explicitNullValueMaidenName; set { _explicitNullValueMaidenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maiden_name"); else _explicitNullProperties?.Remove("maiden_name"); } }
+        private string _explicitNullValueMaidenName = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The country where the person is a national. Two-letter country code ([ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)), or &quot;XX&quot; if unavailable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Nationality { get; set; }
+        public string? Nationality { get => _explicitNullValueNationality; set { _explicitNullValueNationality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nationality"); else _explicitNullProperties?.Remove("nationality"); } }
+        private string? _explicitNullValueNationality = default!;
 #nullable restore
 #else
-        public string Nationality { get; set; }
+        public string Nationality { get => _explicitNullValueNationality; set { _explicitNullValueNationality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nationality"); else _explicitNullProperties?.Remove("nationality"); } }
+        private string _explicitNullValueNationality = default!;
 #endif
         /// <summary>A [person token](https://docs.stripe.com/connect/account-tokens), used to securely provide details to the person.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonToken { get; set; }
+        public string? PersonToken { get => _explicitNullValuePersonToken; set { _explicitNullValuePersonToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_token"); else _explicitNullProperties?.Remove("person_token"); } }
+        private string? _explicitNullValuePersonToken = default!;
 #nullable restore
 #else
-        public string PersonToken { get; set; }
+        public string PersonToken { get => _explicitNullValuePersonToken; set { _explicitNullValuePersonToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person_token"); else _explicitNullProperties?.Remove("person_token"); } }
+        private string _explicitNullValuePersonToken = default!;
 #endif
         /// <summary>The person&apos;s phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>Indicates if the person or any of their representatives, family members, or other closely related persons, declares that they hold or have held an important public job or function, in any jurisdiction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestPoliticalExposure? PoliticalExposure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestPoliticalExposure? PoliticalExposure { get => _explicitNullValuePoliticalExposure; set { _explicitNullValuePoliticalExposure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("political_exposure"); else _explicitNullProperties?.Remove("political_exposure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestPoliticalExposure? _explicitNullValuePoliticalExposure = default!;
         /// <summary>The person&apos;s registered address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress? RegisteredAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress? RegisteredAddress { get => _explicitNullValueRegisteredAddress; set { _explicitNullValueRegisteredAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_address"); else _explicitNullProperties?.Remove("registered_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress? _explicitNullValueRegisteredAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress RegisteredAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress RegisteredAddress { get => _explicitNullValueRegisteredAddress; set { _explicitNullValueRegisteredAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registered_address"); else _explicitNullProperties?.Remove("registered_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRegisteredAddress _explicitNullValueRegisteredAddress = default!;
 #endif
         /// <summary>The relationship that this person has with the account&apos;s legal entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship? Relationship { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship? Relationship { get => _explicitNullValueRelationship; set { _explicitNullValueRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship"); else _explicitNullProperties?.Remove("relationship"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship? _explicitNullValueRelationship = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship Relationship { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship Relationship { get => _explicitNullValueRelationship; set { _explicitNullValueRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship"); else _explicitNullProperties?.Remove("relationship"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship _explicitNullValueRelationship = default!;
 #endif
         /// <summary>The last four digits of the person&apos;s Social Security number (U.S. only).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SsnLast4 { get; set; }
+        public string? SsnLast4 { get => _explicitNullValueSsnLast4; set { _explicitNullValueSsnLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssn_last_4"); else _explicitNullProperties?.Remove("ssn_last_4"); } }
+        private string? _explicitNullValueSsnLast4 = default!;
 #nullable restore
 #else
-        public string SsnLast4 { get; set; }
+        public string SsnLast4 { get => _explicitNullValueSsnLast4; set { _explicitNullValueSsnLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssn_last_4"); else _explicitNullProperties?.Remove("ssn_last_4"); } }
+        private string _explicitNullValueSsnLast4 = default!;
 #endif
         /// <summary>Demographic data related to the person.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData? UsCfpbData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData? UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData? _explicitNullValueUsCfpbData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData UsCfpbData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData _explicitNullValueUsCfpbData = default!;
 #endif
         /// <summary>The person&apos;s verification status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification? Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -246,7 +339,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -322,7 +415,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestRelationship>("relationship", Relationship);
             writer.WriteStringValue("ssn_last_4", SsnLast4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestUsCfpbData>("us_cfpb_data", UsCfpbData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification>("verification", Verification);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestVerification>("verification", Verification);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

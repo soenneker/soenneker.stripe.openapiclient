@@ -12,48 +12,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostQuotesXWwwFormUrlencodedRequestSubscriptionData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_mode") is { } nullNodeBillingMode && nullNodeBillingMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingMode = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("effective_date") is { } nullNodeEffectiveDate && nullNodeEffectiveDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveDate = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("trial_period_days") is { } nullNodeTrialPeriodDays && nullNodeTrialPeriodDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialPeriodDays = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode? BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode? BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode? _explicitNullValueBillingMode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataBillingMode _explicitNullValueBillingMode = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The effective_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate? EffectiveDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate? EffectiveDate { get => _explicitNullValueEffectiveDate; set { _explicitNullValueEffectiveDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_date"); else _explicitNullProperties?.Remove("effective_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate? _explicitNullValueEffectiveDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate EffectiveDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate EffectiveDate { get => _explicitNullValueEffectiveDate; set { _explicitNullValueEffectiveDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_date"); else _explicitNullProperties?.Remove("effective_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate _explicitNullValueEffectiveDate = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The trial_period_days property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays? TrialPeriodDays { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays? TrialPeriodDays { get => _explicitNullValueTrialPeriodDays; set { _explicitNullValueTrialPeriodDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_period_days"); else _explicitNullProperties?.Remove("trial_period_days"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays? _explicitNullValueTrialPeriodDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays TrialPeriodDays { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays TrialPeriodDays { get => _explicitNullValueTrialPeriodDays; set { _explicitNullValueTrialPeriodDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_period_days"); else _explicitNullProperties?.Remove("trial_period_days"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays _explicitNullValueTrialPeriodDays = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionData"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate>("effective_date", EffectiveDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestSubscriptionDataTrialPeriodDays>("trial_period_days", TrialPeriodDays);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

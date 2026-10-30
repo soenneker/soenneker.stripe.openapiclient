@@ -11,158 +11,230 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LegalEntityCompany : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_kana") is { } nullNodeAddressKana && nullNodeAddressKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKana = null;
+            if (parseNode.GetChildNode("address_kanji") is { } nullNodeAddressKanji && nullNodeAddressKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKanji = null;
+            if (parseNode.GetChildNode("administrative_address") is { } nullNodeAdministrativeAddress && nullNodeAdministrativeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdministrativeAddress = null;
+            if (parseNode.GetChildNode("directorship_declaration") is { } nullNodeDirectorshipDeclaration && nullNodeDirectorshipDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectorshipDeclaration = null;
+            if (parseNode.GetChildNode("directors_provided") is { } nullNodeDirectorsProvided && nullNodeDirectorsProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectorsProvided = null;
+            if (parseNode.GetChildNode("executives_provided") is { } nullNodeExecutivesProvided && nullNodeExecutivesProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutivesProvided = null;
+            if (parseNode.GetChildNode("export_license_id") is { } nullNodeExportLicenseId && nullNodeExportLicenseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportLicenseId = null;
+            if (parseNode.GetChildNode("export_purpose_code") is { } nullNodeExportPurposeCode && nullNodeExportPurposeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportPurposeCode = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("name_kana") is { } nullNodeNameKana && nullNodeNameKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameKana = null;
+            if (parseNode.GetChildNode("name_kanji") is { } nullNodeNameKanji && nullNodeNameKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameKanji = null;
+            if (parseNode.GetChildNode("ownership_declaration") is { } nullNodeOwnershipDeclaration && nullNodeOwnershipDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipDeclaration = null;
+            if (parseNode.GetChildNode("ownership_exemption_reason") is { } nullNodeOwnershipExemptionReason && nullNodeOwnershipExemptionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipExemptionReason = null;
+            if (parseNode.GetChildNode("owners_provided") is { } nullNodeOwnersProvided && nullNodeOwnersProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnersProvided = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("principal_place_of_business") is { } nullNodePrincipalPlaceOfBusiness && nullNodePrincipalPlaceOfBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrincipalPlaceOfBusiness = null;
+            if (parseNode.GetChildNode("registration_date") is { } nullNodeRegistrationDate && nullNodeRegistrationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationDate = null;
+            if (parseNode.GetChildNode("representative_declaration") is { } nullNodeRepresentativeDeclaration && nullNodeRepresentativeDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepresentativeDeclaration = null;
+            if (parseNode.GetChildNode("structure") is { } nullNodeStructure && nullNodeStructure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Structure = null;
+            if (parseNode.GetChildNode("tax_id_provided") is { } nullNodeTaxIdProvided && nullNodeTaxIdProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdProvided = null;
+            if (parseNode.GetChildNode("tax_id_registrar") is { } nullNodeTaxIdRegistrar && nullNodeTaxIdRegistrar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdRegistrar = null;
+            if (parseNode.GetChildNode("vat_id_provided") is { } nullNodeVatIdProvided && nullNodeVatIdProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VatIdProvided = null;
+            if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueAddress = default!;
 #endif
         /// <summary>The Kana variation of the company&apos;s primary address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana? AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The Kanji variation of the company&apos;s primary address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji? AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>The administrative_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address? AdministrativeAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? AdministrativeAddress { get => _explicitNullValueAdministrativeAddress; set { _explicitNullValueAdministrativeAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("administrative_address"); else _explicitNullProperties?.Remove("administrative_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueAdministrativeAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address AdministrativeAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address AdministrativeAddress { get => _explicitNullValueAdministrativeAddress; set { _explicitNullValueAdministrativeAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("administrative_address"); else _explicitNullProperties?.Remove("administrative_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueAdministrativeAddress = default!;
 #endif
         /// <summary>This hash is used to attest that the director information provided to Stripe is both current and correct.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration? DirectorshipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration? DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration? _explicitNullValueDirectorshipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration DirectorshipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration _explicitNullValueDirectorshipDeclaration = default!;
 #endif
         /// <summary>Whether the company&apos;s directors have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all directors are provided via [the `directors_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-directors_provided).</summary>
-        public bool? DirectorsProvided { get; set; }
+        public bool? DirectorsProvided { get => _explicitNullValueDirectorsProvided; set { _explicitNullValueDirectorsProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directors_provided"); else _explicitNullProperties?.Remove("directors_provided"); } }
+        private bool? _explicitNullValueDirectorsProvided = default!;
         /// <summary>Whether the company&apos;s executives have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all executives are provided via [the `executives_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-executives_provided), or if Stripe determined that sufficient executives were provided.</summary>
-        public bool? ExecutivesProvided { get; set; }
+        public bool? ExecutivesProvided { get => _explicitNullValueExecutivesProvided; set { _explicitNullValueExecutivesProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executives_provided"); else _explicitNullProperties?.Remove("executives_provided"); } }
+        private bool? _explicitNullValueExecutivesProvided = default!;
         /// <summary>The export license ID number of the company, also referred as Import Export Code (India only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportLicenseId { get; set; }
+        public string? ExportLicenseId { get => _explicitNullValueExportLicenseId; set { _explicitNullValueExportLicenseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_license_id"); else _explicitNullProperties?.Remove("export_license_id"); } }
+        private string? _explicitNullValueExportLicenseId = default!;
 #nullable restore
 #else
-        public string ExportLicenseId { get; set; }
+        public string ExportLicenseId { get => _explicitNullValueExportLicenseId; set { _explicitNullValueExportLicenseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_license_id"); else _explicitNullProperties?.Remove("export_license_id"); } }
+        private string _explicitNullValueExportLicenseId = default!;
 #endif
         /// <summary>The purpose code to use for export transactions (India only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportPurposeCode { get; set; }
+        public string? ExportPurposeCode { get => _explicitNullValueExportPurposeCode; set { _explicitNullValueExportPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_purpose_code"); else _explicitNullProperties?.Remove("export_purpose_code"); } }
+        private string? _explicitNullValueExportPurposeCode = default!;
 #nullable restore
 #else
-        public string ExportPurposeCode { get; set; }
+        public string ExportPurposeCode { get => _explicitNullValueExportPurposeCode; set { _explicitNullValueExportPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_purpose_code"); else _explicitNullProperties?.Remove("export_purpose_code"); } }
+        private string _explicitNullValueExportPurposeCode = default!;
 #endif
         /// <summary>The company&apos;s legal name. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The Kana variation of the company&apos;s legal name (Japan only). Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameKana { get; set; }
+        public string? NameKana { get => _explicitNullValueNameKana; set { _explicitNullValueNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kana"); else _explicitNullProperties?.Remove("name_kana"); } }
+        private string? _explicitNullValueNameKana = default!;
 #nullable restore
 #else
-        public string NameKana { get; set; }
+        public string NameKana { get => _explicitNullValueNameKana; set { _explicitNullValueNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kana"); else _explicitNullProperties?.Remove("name_kana"); } }
+        private string _explicitNullValueNameKana = default!;
 #endif
         /// <summary>The Kanji variation of the company&apos;s legal name (Japan only). Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameKanji { get; set; }
+        public string? NameKanji { get => _explicitNullValueNameKanji; set { _explicitNullValueNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kanji"); else _explicitNullProperties?.Remove("name_kanji"); } }
+        private string? _explicitNullValueNameKanji = default!;
 #nullable restore
 #else
-        public string NameKanji { get; set; }
+        public string NameKanji { get => _explicitNullValueNameKanji; set { _explicitNullValueNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kanji"); else _explicitNullProperties?.Remove("name_kanji"); } }
+        private string _explicitNullValueNameKanji = default!;
 #endif
         /// <summary>This hash is used to attest that the beneficial owner information provided to Stripe is both current and correct.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration? OwnershipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration? OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration? _explicitNullValueOwnershipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration OwnershipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration _explicitNullValueOwnershipDeclaration = default!;
 #endif
         /// <summary>This value is used to determine if a business is exempt from providing ultimate beneficial owners. See [this support article](https://support.stripe.com/questions/exemption-from-providing-ownership-details) and [changelog](https://docs.stripe.com/changelog/acacia/2025-01-27/ownership-exemption-reason-accounts-api) for more details.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason? OwnershipExemptionReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason? OwnershipExemptionReason { get => _explicitNullValueOwnershipExemptionReason; set { _explicitNullValueOwnershipExemptionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_exemption_reason"); else _explicitNullProperties?.Remove("ownership_exemption_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason? _explicitNullValueOwnershipExemptionReason = default!;
         /// <summary>Whether the company&apos;s owners have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all owners are provided via [the `owners_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-owners_provided), or if Stripe determined that sufficient owners were provided. Stripe determines ownership requirements using both the number of owners provided and their total percent ownership (calculated by adding the `percent_ownership` of each owner together).</summary>
-        public bool? OwnersProvided { get; set; }
+        public bool? OwnersProvided { get => _explicitNullValueOwnersProvided; set { _explicitNullValueOwnersProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners_provided"); else _explicitNullProperties?.Remove("owners_provided"); } }
+        private bool? _explicitNullValueOwnersProvided = default!;
         /// <summary>The company&apos;s phone number (used for verification).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>The principal_place_of_business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address? PrincipalPlaceOfBusiness { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? PrincipalPlaceOfBusiness { get => _explicitNullValuePrincipalPlaceOfBusiness; set { _explicitNullValuePrincipalPlaceOfBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal_place_of_business"); else _explicitNullProperties?.Remove("principal_place_of_business"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValuePrincipalPlaceOfBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address PrincipalPlaceOfBusiness { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address PrincipalPlaceOfBusiness { get => _explicitNullValuePrincipalPlaceOfBusiness; set { _explicitNullValuePrincipalPlaceOfBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal_place_of_business"); else _explicitNullProperties?.Remove("principal_place_of_business"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValuePrincipalPlaceOfBusiness = default!;
 #endif
         /// <summary>The registration_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate? RegistrationDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate? RegistrationDate { get => _explicitNullValueRegistrationDate; set { _explicitNullValueRegistrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_date"); else _explicitNullProperties?.Remove("registration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate? _explicitNullValueRegistrationDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate RegistrationDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate RegistrationDate { get => _explicitNullValueRegistrationDate; set { _explicitNullValueRegistrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_date"); else _explicitNullProperties?.Remove("registration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate _explicitNullValueRegistrationDate = default!;
 #endif
         /// <summary>This hash is used to attest that the representative is authorized to act as the representative of their legal entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration? RepresentativeDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration? RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration? _explicitNullValueRepresentativeDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration RepresentativeDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration _explicitNullValueRepresentativeDeclaration = default!;
 #endif
         /// <summary>The category identifying the legal structure of the company or legal entity. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`. See [Business structure](https://docs.stripe.com/connect/identity-verification#business-structure) for more details.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure? Structure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure? Structure { get => _explicitNullValueStructure; set { _explicitNullValueStructure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structure"); else _explicitNullProperties?.Remove("structure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure? _explicitNullValueStructure = default!;
         /// <summary>Whether the company&apos;s business ID number was provided.</summary>
-        public bool? TaxIdProvided { get; set; }
+        public bool? TaxIdProvided { get => _explicitNullValueTaxIdProvided; set { _explicitNullValueTaxIdProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_provided"); else _explicitNullProperties?.Remove("tax_id_provided"); } }
+        private bool? _explicitNullValueTaxIdProvided = default!;
         /// <summary>The jurisdiction in which the `tax_id` is registered (Germany-based companies only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxIdRegistrar { get; set; }
+        public string? TaxIdRegistrar { get => _explicitNullValueTaxIdRegistrar; set { _explicitNullValueTaxIdRegistrar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_registrar"); else _explicitNullProperties?.Remove("tax_id_registrar"); } }
+        private string? _explicitNullValueTaxIdRegistrar = default!;
 #nullable restore
 #else
-        public string TaxIdRegistrar { get; set; }
+        public string TaxIdRegistrar { get => _explicitNullValueTaxIdRegistrar; set { _explicitNullValueTaxIdRegistrar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_registrar"); else _explicitNullProperties?.Remove("tax_id_registrar"); } }
+        private string _explicitNullValueTaxIdRegistrar = default!;
 #endif
         /// <summary>Whether the company&apos;s business VAT number was provided.</summary>
-        public bool? VatIdProvided { get; set; }
+        public bool? VatIdProvided { get => _explicitNullValueVatIdProvided; set { _explicitNullValueVatIdProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vat_id_provided"); else _explicitNullProperties?.Remove("vat_id_provided"); } }
+        private bool? _explicitNullValueVatIdProvided = default!;
         /// <summary>Information on the verification state of the company.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed? Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany"/> and sets the default values.
@@ -179,7 +251,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -246,6 +318,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("tax_id_registrar", TaxIdRegistrar);
             writer.WriteBoolValue("vat_id_provided", VatIdProvided);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed>("verification", Verification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

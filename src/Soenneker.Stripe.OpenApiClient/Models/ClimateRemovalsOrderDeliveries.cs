@@ -12,42 +12,63 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ClimateRemovalsOrderDeliveries : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("delivered_at") is { } nullNodeDeliveredAt && nullNodeDeliveredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveredAt = null;
+            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("metric_tons") is { } nullNodeMetricTons && nullNodeMetricTons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetricTons = null;
+            if (parseNode.GetChildNode("registry_url") is { } nullNodeRegistryUrl && nullNodeRegistryUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryUrl = null;
+            if (parseNode.GetChildNode("supplier") is { } nullNodeSupplier && nullNodeSupplier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Supplier = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the delivery occurred. Measured in seconds since the Unix epoch.</summary>
-        public int? DeliveredAt { get; set; }
+        public int? DeliveredAt { get => _explicitNullValueDeliveredAt; set { _explicitNullValueDeliveredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered_at"); else _explicitNullProperties?.Remove("delivered_at"); } }
+        private int? _explicitNullValueDeliveredAt = default!;
         /// <summary>Specific location of this delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation? Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation _explicitNullValueLocation = default!;
 #endif
         /// <summary>Quantity of carbon removal supplied by this delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MetricTons { get; set; }
+        public string? MetricTons { get => _explicitNullValueMetricTons; set { _explicitNullValueMetricTons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric_tons"); else _explicitNullProperties?.Remove("metric_tons"); } }
+        private string? _explicitNullValueMetricTons = default!;
 #nullable restore
 #else
-        public string MetricTons { get; set; }
+        public string MetricTons { get => _explicitNullValueMetricTons; set { _explicitNullValueMetricTons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric_tons"); else _explicitNullProperties?.Remove("metric_tons"); } }
+        private string _explicitNullValueMetricTons = default!;
 #endif
         /// <summary>Once retired, a URL to the registry entry for the tons from this delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistryUrl { get; set; }
+        public string? RegistryUrl { get => _explicitNullValueRegistryUrl; set { _explicitNullValueRegistryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registry_url"); else _explicitNullProperties?.Remove("registry_url"); } }
+        private string? _explicitNullValueRegistryUrl = default!;
 #nullable restore
 #else
-        public string RegistryUrl { get; set; }
+        public string RegistryUrl { get => _explicitNullValueRegistryUrl; set { _explicitNullValueRegistryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registry_url"); else _explicitNullProperties?.Remove("registry_url"); } }
+        private string _explicitNullValueRegistryUrl = default!;
 #endif
         /// <summary>A supplier of carbon removal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier? Supplier { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier? Supplier { get => _explicitNullValueSupplier; set { _explicitNullValueSupplier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supplier"); else _explicitNullProperties?.Remove("supplier"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier? _explicitNullValueSupplier = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier Supplier { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier Supplier { get => _explicitNullValueSupplier; set { _explicitNullValueSupplier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supplier"); else _explicitNullProperties?.Remove("supplier"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier _explicitNullValueSupplier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("metric_tons", MetricTons);
             writer.WriteStringValue("registry_url", RegistryUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier>("supplier", Supplier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

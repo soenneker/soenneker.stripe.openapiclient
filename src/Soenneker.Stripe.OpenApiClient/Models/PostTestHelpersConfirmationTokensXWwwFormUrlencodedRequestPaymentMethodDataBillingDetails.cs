@@ -11,48 +11,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail? Email { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail Email { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsEmail _explicitNullValueEmail = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName? Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName _explicitNullValueName = default!;
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone? Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone _explicitNullValuePhone = default!;
 #endif
         /// <summary>The tax_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxId { get; set; }
+        public string? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        private string? _explicitNullValueTaxId = default!;
 #nullable restore
 #else
-        public string TaxId { get; set; }
+        public string TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        private string _explicitNullValueTaxId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetails"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsName>("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersConfirmationTokensXWwwFormUrlencodedRequestPaymentMethodDataBillingDetailsPhone>("phone", Phone);
             writer.WriteStringValue("tax_id", TaxId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

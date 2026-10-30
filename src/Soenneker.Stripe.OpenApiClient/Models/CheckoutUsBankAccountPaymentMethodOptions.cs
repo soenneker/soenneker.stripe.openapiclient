@@ -11,29 +11,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CheckoutUsBankAccountPaymentMethodOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("financial_connections") is { } nullNodeFinancialConnections && nullNodeFinancialConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialConnections = null;
+            if (parseNode.GetChildNode("setup_future_usage") is { } nullNodeSetupFutureUsage && nullNodeSetupFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFutureUsage = null;
+            if (parseNode.GetChildNode("target_date") is { } nullNodeTargetDate && nullNodeTargetDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetDate = null;
+            if (parseNode.GetChildNode("verification_method") is { } nullNodeVerificationMethod && nullNodeVerificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationMethod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The financial_connections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions? FinancialConnections { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions? FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions? _explicitNullValueFinancialConnections = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions FinancialConnections { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions _explicitNullValueFinancialConnections = default!;
 #endif
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage? SetupFutureUsage { get => _explicitNullValueSetupFutureUsage; set { _explicitNullValueSetupFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_future_usage"); else _explicitNullProperties?.Remove("setup_future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage? _explicitNullValueSetupFutureUsage = default!;
         /// <summary>Controls when Stripe will attempt to debit the funds from the customer&apos;s account. The date must be a string in YYYY-MM-DD format. The date must be in the future and between 3 and 15 calendar days from now.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetDate { get; set; }
+        public string? TargetDate { get => _explicitNullValueTargetDate; set { _explicitNullValueTargetDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_date"); else _explicitNullProperties?.Remove("target_date"); } }
+        private string? _explicitNullValueTargetDate = default!;
 #nullable restore
 #else
-        public string TargetDate { get; set; }
+        public string TargetDate { get => _explicitNullValueTargetDate; set { _explicitNullValueTargetDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_date"); else _explicitNullProperties?.Remove("target_date"); } }
+        private string _explicitNullValueTargetDate = default!;
 #endif
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod? VerificationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod? VerificationMethod { get => _explicitNullValueVerificationMethod; set { _explicitNullValueVerificationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_method"); else _explicitNullProperties?.Remove("verification_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod? _explicitNullValueVerificationMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptions"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod>("verification_method", VerificationMethod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

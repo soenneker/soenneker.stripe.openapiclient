@@ -11,53 +11,84 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingDisputeCanceledEvidence : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
+            if (parseNode.GetChildNode("canceled_at") is { } nullNodeCanceledAt && nullNodeCanceledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledAt = null;
+            if (parseNode.GetChildNode("cancellation_policy_provided") is { } nullNodeCancellationPolicyProvided && nullNodeCancellationPolicyProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationPolicyProvided = null;
+            if (parseNode.GetChildNode("cancellation_reason") is { } nullNodeCancellationReason && nullNodeCancellationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationReason = null;
+            if (parseNode.GetChildNode("expected_at") is { } nullNodeExpectedAt && nullNodeExpectedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedAt = null;
+            if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
+            if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("product_type") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
+            if (parseNode.GetChildNode("returned_at") is { } nullNodeReturnedAt && nullNodeReturnedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnedAt = null;
+            if (parseNode.GetChildNode("return_status") is { } nullNodeReturnStatus && nullNodeReturnStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Additional documentation supporting the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation? AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>Date when order was canceled.</summary>
-        public int? CanceledAt { get; set; }
+        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private int? _explicitNullValueCanceledAt = default!;
         /// <summary>Whether the cardholder was provided with a cancellation policy.</summary>
-        public bool? CancellationPolicyProvided { get; set; }
+        public bool? CancellationPolicyProvided { get => _explicitNullValueCancellationPolicyProvided; set { _explicitNullValueCancellationPolicyProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_policy_provided"); else _explicitNullProperties?.Remove("cancellation_policy_provided"); } }
+        private bool? _explicitNullValueCancellationPolicyProvided = default!;
         /// <summary>Reason for canceling the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancellationReason { get; set; }
+        public string? CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private string? _explicitNullValueCancellationReason = default!;
 #nullable restore
 #else
-        public string CancellationReason { get; set; }
+        public string CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private string _explicitNullValueCancellationReason = default!;
 #endif
         /// <summary>Date when the cardholder expected to receive the product.</summary>
-        public int? ExpectedAt { get; set; }
+        public int? ExpectedAt { get => _explicitNullValueExpectedAt; set { _explicitNullValueExpectedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_at"); else _explicitNullProperties?.Remove("expected_at"); } }
+        private int? _explicitNullValueExpectedAt = default!;
         /// <summary>Explanation of why the cardholder is disputing this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Explanation { get; set; }
+        public string? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private string? _explicitNullValueExplanation = default!;
 #nullable restore
 #else
-        public string Explanation { get; set; }
+        public string Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private string _explicitNullValueExplanation = default!;
 #endif
         /// <summary>Description of the merchandise or service that was purchased.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductDescription { get; set; }
+        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private string? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public string ProductDescription { get; set; }
+        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private string _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>Whether the product was a merchandise or service.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType? ProductType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_type"); else _explicitNullProperties?.Remove("product_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType? _explicitNullValueProductType = default!;
         /// <summary>Date when the product was returned or attempted to be returned.</summary>
-        public int? ReturnedAt { get; set; }
+        public int? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
+        private int? _explicitNullValueReturnedAt = default!;
         /// <summary>Result of cardholder&apos;s attempt to return the product.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus? ReturnStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus? ReturnStatus { get => _explicitNullValueReturnStatus; set { _explicitNullValueReturnStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_status"); else _explicitNullProperties?.Remove("return_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus? _explicitNullValueReturnStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence"/> and sets the default values.
         /// </summary>
@@ -73,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType>("product_type", ProductType);
             writer.WriteIntValue("returned_at", ReturnedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus>("return_status", ReturnStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

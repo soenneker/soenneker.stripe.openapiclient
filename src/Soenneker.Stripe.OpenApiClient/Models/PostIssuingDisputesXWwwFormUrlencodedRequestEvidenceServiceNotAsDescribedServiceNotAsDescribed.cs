@@ -11,48 +11,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribed : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
+            if (parseNode.GetChildNode("canceled_at") is { } nullNodeCanceledAt && nullNodeCanceledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledAt = null;
+            if (parseNode.GetChildNode("cancellation_reason") is { } nullNodeCancellationReason && nullNodeCancellationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationReason = null;
+            if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
+            if (parseNode.GetChildNode("received_at") is { } nullNodeReceivedAt && nullNodeReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_documentation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation? AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>The canceled_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt? CanceledAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt? _explicitNullValueCanceledAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt CanceledAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCanceledAt _explicitNullValueCanceledAt = default!;
 #endif
         /// <summary>The cancellation_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason? CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason? CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason? _explicitNullValueCancellationReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason _explicitNullValueCancellationReason = default!;
 #endif
         /// <summary>The explanation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation? Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation? _explicitNullValueExplanation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation _explicitNullValueExplanation = default!;
 #endif
         /// <summary>The received_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt? ReceivedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt? ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt? _explicitNullValueReceivedAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt ReceivedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt _explicitNullValueReceivedAt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribed"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedExplanation>("explanation", Explanation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceServiceNotAsDescribedServiceNotAsDescribedReceivedAt>("received_at", ReceivedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

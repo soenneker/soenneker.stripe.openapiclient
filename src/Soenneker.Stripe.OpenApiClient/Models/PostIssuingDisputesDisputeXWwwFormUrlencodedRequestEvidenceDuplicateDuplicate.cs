@@ -11,56 +11,81 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
+            if (parseNode.GetChildNode("card_statement") is { } nullNodeCardStatement && nullNodeCardStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardStatement = null;
+            if (parseNode.GetChildNode("cash_receipt") is { } nullNodeCashReceipt && nullNodeCashReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashReceipt = null;
+            if (parseNode.GetChildNode("check_image") is { } nullNodeCheckImage && nullNodeCheckImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckImage = null;
+            if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
+            if (parseNode.GetChildNode("original_transaction") is { } nullNodeOriginalTransaction && nullNodeOriginalTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTransaction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_documentation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation? AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>The card_statement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement? CardStatement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement? CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement? _explicitNullValueCardStatement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement CardStatement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCardStatement _explicitNullValueCardStatement = default!;
 #endif
         /// <summary>The cash_receipt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt? CashReceipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt? CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt? _explicitNullValueCashReceipt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt CashReceipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCashReceipt _explicitNullValueCashReceipt = default!;
 #endif
         /// <summary>The check_image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage? CheckImage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage? CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage? _explicitNullValueCheckImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage CheckImage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage _explicitNullValueCheckImage = default!;
 #endif
         /// <summary>The explanation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation? Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation? _explicitNullValueExplanation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation _explicitNullValueExplanation = default!;
 #endif
         /// <summary>The original_transaction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalTransaction { get; set; }
+        public string? OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        private string? _explicitNullValueOriginalTransaction = default!;
 #nullable restore
 #else
-        public string OriginalTransaction { get; set; }
+        public string OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        private string _explicitNullValueOriginalTransaction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicate"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateCheckImage>("check_image", CheckImage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceDuplicateDuplicateExplanation>("explanation", Explanation);
             writer.WriteStringValue("original_transaction", OriginalTransaction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

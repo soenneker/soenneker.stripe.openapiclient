@@ -11,232 +11,323 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SetupAttemptPaymentMethodDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acss_debit") is { } nullNodeAcssDebit && nullNodeAcssDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcssDebit = null;
+            if (parseNode.GetChildNode("amazon_pay") is { } nullNodeAmazonPay && nullNodeAmazonPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmazonPay = null;
+            if (parseNode.GetChildNode("au_becs_debit") is { } nullNodeAuBecsDebit && nullNodeAuBecsDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuBecsDebit = null;
+            if (parseNode.GetChildNode("bacs_debit") is { } nullNodeBacsDebit && nullNodeBacsDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BacsDebit = null;
+            if (parseNode.GetChildNode("bancontact") is { } nullNodeBancontact && nullNodeBancontact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bancontact = null;
+            if (parseNode.GetChildNode("blik") is { } nullNodeBlik && nullNodeBlik.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blik = null;
+            if (parseNode.GetChildNode("boleto") is { } nullNodeBoleto && nullNodeBoleto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boleto = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("card_present") is { } nullNodeCardPresent && nullNodeCardPresent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardPresent = null;
+            if (parseNode.GetChildNode("cashapp") is { } nullNodeCashapp && nullNodeCashapp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cashapp = null;
+            if (parseNode.GetChildNode("ideal") is { } nullNodeIdeal && nullNodeIdeal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ideal = null;
+            if (parseNode.GetChildNode("kakao_pay") is { } nullNodeKakaoPay && nullNodeKakaoPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KakaoPay = null;
+            if (parseNode.GetChildNode("klarna") is { } nullNodeKlarna && nullNodeKlarna.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Klarna = null;
+            if (parseNode.GetChildNode("kr_card") is { } nullNodeKrCard && nullNodeKrCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KrCard = null;
+            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("naver_pay") is { } nullNodeNaverPay && nullNodeNaverPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NaverPay = null;
+            if (parseNode.GetChildNode("nz_bank_account") is { } nullNodeNzBankAccount && nullNodeNzBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NzBankAccount = null;
+            if (parseNode.GetChildNode("paypal") is { } nullNodePaypal && nullNodePaypal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypal = null;
+            if (parseNode.GetChildNode("payto") is { } nullNodePayto && nullNodePayto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payto = null;
+            if (parseNode.GetChildNode("pix") is { } nullNodePix && nullNodePix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pix = null;
+            if (parseNode.GetChildNode("revolut_pay") is { } nullNodeRevolutPay && nullNodeRevolutPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevolutPay = null;
+            if (parseNode.GetChildNode("satispay") is { } nullNodeSatispay && nullNodeSatispay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Satispay = null;
+            if (parseNode.GetChildNode("sepa_debit") is { } nullNodeSepaDebit && nullNodeSepaDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SepaDebit = null;
+            if (parseNode.GetChildNode("sofort") is { } nullNodeSofort && nullNodeSofort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sofort = null;
+            if (parseNode.GetChildNode("twint") is { } nullNodeTwint && nullNodeTwint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Twint = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upi") is { } nullNodeUpi && nullNodeUpi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upi = null;
+            if (parseNode.GetChildNode("us_bank_account") is { } nullNodeUsBankAccount && nullNodeUsBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsBankAccount = null;
+        }
+
         /// <summary>The acss_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty? AcssDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty? AcssDebit { get => _explicitNullValueAcssDebit; set { _explicitNullValueAcssDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acss_debit"); else _explicitNullProperties?.Remove("acss_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty? _explicitNullValueAcssDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty AcssDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty AcssDebit { get => _explicitNullValueAcssDebit; set { _explicitNullValueAcssDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acss_debit"); else _explicitNullProperties?.Remove("acss_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAcssDebitProperty _explicitNullValueAcssDebit = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amazon_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty? AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty? AmazonPay { get => _explicitNullValueAmazonPay; set { _explicitNullValueAmazonPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_pay"); else _explicitNullProperties?.Remove("amazon_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty? _explicitNullValueAmazonPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty AmazonPay { get => _explicitNullValueAmazonPay; set { _explicitNullValueAmazonPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_pay"); else _explicitNullProperties?.Remove("amazon_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAmazonPayProperty _explicitNullValueAmazonPay = default!;
 #endif
         /// <summary>The au_becs_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty? AuBecsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty? AuBecsDebit { get => _explicitNullValueAuBecsDebit; set { _explicitNullValueAuBecsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au_becs_debit"); else _explicitNullProperties?.Remove("au_becs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty? _explicitNullValueAuBecsDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty AuBecsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty AuBecsDebit { get => _explicitNullValueAuBecsDebit; set { _explicitNullValueAuBecsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au_becs_debit"); else _explicitNullProperties?.Remove("au_becs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty _explicitNullValueAuBecsDebit = default!;
 #endif
         /// <summary>The bacs_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty? BacsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty? BacsDebit { get => _explicitNullValueBacsDebit; set { _explicitNullValueBacsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bacs_debit"); else _explicitNullProperties?.Remove("bacs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty? _explicitNullValueBacsDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty BacsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty BacsDebit { get => _explicitNullValueBacsDebit; set { _explicitNullValueBacsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bacs_debit"); else _explicitNullProperties?.Remove("bacs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty _explicitNullValueBacsDebit = default!;
 #endif
         /// <summary>The bancontact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact? Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact? Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact? _explicitNullValueBancontact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact _explicitNullValueBancontact = default!;
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik? Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik? Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik? _explicitNullValueBlik = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik _explicitNullValueBlik = default!;
 #endif
         /// <summary>The boleto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty? Boleto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty? Boleto { get => _explicitNullValueBoleto; set { _explicitNullValueBoleto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boleto"); else _explicitNullProperties?.Remove("boleto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty? _explicitNullValueBoleto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty Boleto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty Boleto { get => _explicitNullValueBoleto; set { _explicitNullValueBoleto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boleto"); else _explicitNullProperties?.Remove("boleto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty _explicitNullValueBoleto = default!;
 #endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard _explicitNullValueCard = default!;
 #endif
         /// <summary>The card_present property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent? CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent? CardPresent { get => _explicitNullValueCardPresent; set { _explicitNullValueCardPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_present"); else _explicitNullProperties?.Remove("card_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent? _explicitNullValueCardPresent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent CardPresent { get => _explicitNullValueCardPresent; set { _explicitNullValueCardPresent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_present"); else _explicitNullProperties?.Remove("card_present"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent _explicitNullValueCardPresent = default!;
 #endif
         /// <summary>The cashapp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty? Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty? Cashapp { get => _explicitNullValueCashapp; set { _explicitNullValueCashapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp"); else _explicitNullProperties?.Remove("cashapp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty? _explicitNullValueCashapp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty Cashapp { get => _explicitNullValueCashapp; set { _explicitNullValueCashapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp"); else _explicitNullProperties?.Remove("cashapp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCashappProperty _explicitNullValueCashapp = default!;
 #endif
         /// <summary>The ideal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal? Ideal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal? Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal? _explicitNullValueIdeal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal Ideal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsIdeal _explicitNullValueIdeal = default!;
 #endif
         /// <summary>The kakao_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty? KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty? KakaoPay { get => _explicitNullValueKakaoPay; set { _explicitNullValueKakaoPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kakao_pay"); else _explicitNullProperties?.Remove("kakao_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty? _explicitNullValueKakaoPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty KakaoPay { get => _explicitNullValueKakaoPay; set { _explicitNullValueKakaoPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kakao_pay"); else _explicitNullProperties?.Remove("kakao_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKakaoPayProperty _explicitNullValueKakaoPay = default!;
 #endif
         /// <summary>The klarna property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty? Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty? Klarna { get => _explicitNullValueKlarna; set { _explicitNullValueKlarna = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("klarna"); else _explicitNullProperties?.Remove("klarna"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty? _explicitNullValueKlarna = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty Klarna { get => _explicitNullValueKlarna; set { _explicitNullValueKlarna = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("klarna"); else _explicitNullProperties?.Remove("klarna"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKlarnaProperty _explicitNullValueKlarna = default!;
 #endif
         /// <summary>The kr_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty? KrCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty? KrCard { get => _explicitNullValueKrCard; set { _explicitNullValueKrCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr_card"); else _explicitNullProperties?.Remove("kr_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty? _explicitNullValueKrCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty KrCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty KrCard { get => _explicitNullValueKrCard; set { _explicitNullValueKrCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr_card"); else _explicitNullProperties?.Remove("kr_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsKrCardProperty _explicitNullValueKrCard = default!;
 #endif
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty? Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsLinkProperty _explicitNullValueLink = default!;
 #endif
         /// <summary>The naver_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay? NaverPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay? NaverPay { get => _explicitNullValueNaverPay; set { _explicitNullValueNaverPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("naver_pay"); else _explicitNullProperties?.Remove("naver_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay? _explicitNullValueNaverPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay NaverPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay NaverPay { get => _explicitNullValueNaverPay; set { _explicitNullValueNaverPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("naver_pay"); else _explicitNullProperties?.Remove("naver_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNaverPay _explicitNullValueNaverPay = default!;
 #endif
         /// <summary>The nz_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty? NzBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty? NzBankAccount { get => _explicitNullValueNzBankAccount; set { _explicitNullValueNzBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz_bank_account"); else _explicitNullProperties?.Remove("nz_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty? _explicitNullValueNzBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty NzBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty NzBankAccount { get => _explicitNullValueNzBankAccount; set { _explicitNullValueNzBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz_bank_account"); else _explicitNullProperties?.Remove("nz_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty _explicitNullValueNzBankAccount = default!;
 #endif
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty? Paypal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty? Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty? _explicitNullValuePaypal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty Paypal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty _explicitNullValuePaypal = default!;
 #endif
         /// <summary>The payto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty? Payto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty? Payto { get => _explicitNullValuePayto; set { _explicitNullValuePayto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payto"); else _explicitNullProperties?.Remove("payto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty? _explicitNullValuePayto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty Payto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty Payto { get => _explicitNullValuePayto; set { _explicitNullValuePayto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payto"); else _explicitNullProperties?.Remove("payto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty _explicitNullValuePayto = default!;
 #endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix? Pix { get => _explicitNullValuePix; set { _explicitNullValuePix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix"); else _explicitNullProperties?.Remove("pix"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix? _explicitNullValuePix = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix Pix { get => _explicitNullValuePix; set { _explicitNullValuePix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix"); else _explicitNullProperties?.Remove("pix"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix _explicitNullValuePix = default!;
 #endif
         /// <summary>The revolut_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty? RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty? RevolutPay { get => _explicitNullValueRevolutPay; set { _explicitNullValueRevolutPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revolut_pay"); else _explicitNullProperties?.Remove("revolut_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty? _explicitNullValueRevolutPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty RevolutPay { get => _explicitNullValueRevolutPay; set { _explicitNullValueRevolutPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revolut_pay"); else _explicitNullProperties?.Remove("revolut_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty _explicitNullValueRevolutPay = default!;
 #endif
         /// <summary>The satispay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay? Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay? Satispay { get => _explicitNullValueSatispay; set { _explicitNullValueSatispay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("satispay"); else _explicitNullProperties?.Remove("satispay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay? _explicitNullValueSatispay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay Satispay { get => _explicitNullValueSatispay; set { _explicitNullValueSatispay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("satispay"); else _explicitNullProperties?.Remove("satispay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay _explicitNullValueSatispay = default!;
 #endif
         /// <summary>The sepa_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty? SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty? SepaDebit { get => _explicitNullValueSepaDebit; set { _explicitNullValueSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sepa_debit"); else _explicitNullProperties?.Remove("sepa_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty? _explicitNullValueSepaDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty SepaDebit { get => _explicitNullValueSepaDebit; set { _explicitNullValueSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sepa_debit"); else _explicitNullProperties?.Remove("sepa_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty _explicitNullValueSepaDebit = default!;
 #endif
         /// <summary>The sofort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort? Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort? Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort? _explicitNullValueSofort = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort _explicitNullValueSofort = default!;
 #endif
         /// <summary>The twint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty? Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty? Twint { get => _explicitNullValueTwint; set { _explicitNullValueTwint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twint"); else _explicitNullProperties?.Remove("twint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty? _explicitNullValueTwint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty Twint { get => _explicitNullValueTwint; set { _explicitNullValueTwint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twint"); else _explicitNullProperties?.Remove("twint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty _explicitNullValueTwint = default!;
 #endif
         /// <summary>The type of the payment method used in the SetupIntent (e.g., `card`). An additional hash is included on `payment_method_details` with a name matching this value. It contains confirmation-specific information for the payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The upi property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty? Upi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty? Upi { get => _explicitNullValueUpi; set { _explicitNullValueUpi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi"); else _explicitNullProperties?.Remove("upi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty? _explicitNullValueUpi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty Upi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty Upi { get => _explicitNullValueUpi; set { _explicitNullValueUpi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi"); else _explicitNullProperties?.Remove("upi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty _explicitNullValueUpi = default!;
 #endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty? UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty? UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty? _explicitNullValueUsBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty _explicitNullValueUsBankAccount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails"/> and sets the default values.
@@ -253,7 +344,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -328,6 +419,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUpiProperty>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsUsBankAccountProperty>("us_bank_account", UsBankAccount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

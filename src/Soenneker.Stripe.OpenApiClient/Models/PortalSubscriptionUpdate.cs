@@ -11,41 +11,65 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PortalSubscriptionUpdate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_cycle_anchor") is { } nullNodeBillingCycleAnchor && nullNodeBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycleAnchor = null;
+            if (parseNode.GetChildNode("default_allowed_updates") is { } nullNodeDefaultAllowedUpdates && nullNodeDefaultAllowedUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAllowedUpdates = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
+            if (parseNode.GetChildNode("proration_behavior") is { } nullNodeProrationBehavior && nullNodeProrationBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationBehavior = null;
+            if (parseNode.GetChildNode("schedule_at_period_end") is { } nullNodeScheduleAtPeriodEnd && nullNodeScheduleAtPeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleAtPeriodEnd = null;
+            if (parseNode.GetChildNode("trial_update_behavior") is { } nullNodeTrialUpdateBehavior && nullNodeTrialUpdateBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialUpdateBehavior = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines the value to use for the billing cycle anchor on subscription updates. Valid values are `now` or `unchanged`, and the default value is `unchanged`. Setting the value to `now` resets the subscription&apos;s billing cycle anchor to the current time (in UTC). For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>The types of subscription updates that are supported for items listed in the `products` attribute. When empty, subscriptions are not updateable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?>? DefaultAllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?>? DefaultAllowedUpdates { get => _explicitNullValueDefaultAllowedUpdates; set { _explicitNullValueDefaultAllowedUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_allowed_updates"); else _explicitNullProperties?.Remove("default_allowed_updates"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?>? _explicitNullValueDefaultAllowedUpdates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?> DefaultAllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?> DefaultAllowedUpdates { get => _explicitNullValueDefaultAllowedUpdates; set { _explicitNullValueDefaultAllowedUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_allowed_updates"); else _explicitNullProperties?.Remove("default_allowed_updates"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?> _explicitNullValueDefaultAllowedUpdates = default!;
 #endif
         /// <summary>Whether the feature is enabled.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The list of up to 10 products that support subscription updates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct>? Products { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct>? _explicitNullValueProducts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct> Products { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct> _explicitNullValueProducts = default!;
 #endif
         /// <summary>Determines how to handle prorations resulting from subscription updates. Valid values are `none`, `create_prorations`, and `always_invoice`. Defaults to a value of `none` if you don&apos;t set it during creation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>The schedule_at_period_end property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd? ScheduleAtPeriodEnd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd? ScheduleAtPeriodEnd { get => _explicitNullValueScheduleAtPeriodEnd; set { _explicitNullValueScheduleAtPeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_at_period_end"); else _explicitNullProperties?.Remove("schedule_at_period_end"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd? _explicitNullValueScheduleAtPeriodEnd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd ScheduleAtPeriodEnd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd ScheduleAtPeriodEnd { get => _explicitNullValueScheduleAtPeriodEnd; set { _explicitNullValueScheduleAtPeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_at_period_end"); else _explicitNullProperties?.Remove("schedule_at_period_end"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd _explicitNullValueScheduleAtPeriodEnd = default!;
 #endif
         /// <summary>Determines how handle updates to trialing subscriptions. Valid values are `end_trial` and `continue_trial`. Defaults to a value of `end_trial` if you don&apos;t set it during creation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior? TrialUpdateBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior? TrialUpdateBehavior { get => _explicitNullValueTrialUpdateBehavior; set { _explicitNullValueTrialUpdateBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_update_behavior"); else _explicitNullProperties?.Remove("trial_update_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior? _explicitNullValueTrialUpdateBehavior = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate"/> and sets the default values.
         /// </summary>
@@ -61,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd>("schedule_at_period_end", ScheduleAtPeriodEnd);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior>("trial_update_behavior", TrialUpdateBehavior);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

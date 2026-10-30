@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProrationDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("credited_items") is { } nullNodeCreditedItems && nullNodeCreditedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditedItems = null;
+            if (parseNode.GetChildNode("discount_amounts") is { } nullNodeDiscountAmounts && nullNodeDiscountAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmounts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For a credit proration, links to the debit invoice line items or invoice item that the credit applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? _explicitNullValueCreditedItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems _explicitNullValueCreditedItems = default!;
 #endif
         /// <summary>Discount amounts applied when the proration was created. This field is only populated for prorations created from subscriptions with `billing_mode=flexible`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? DiscountAmounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? _explicitNullValueDiscountAmounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> DiscountAmounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> _explicitNullValueDiscountAmounts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetails"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems>("credited_items", CreditedItems);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

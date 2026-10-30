@@ -11,56 +11,81 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TreasuryReceivedDebitsResourceLinkedFlows : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("debit_reversal") is { } nullNodeDebitReversal && nullNodeDebitReversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitReversal = null;
+            if (parseNode.GetChildNode("inbound_transfer") is { } nullNodeInboundTransfer && nullNodeInboundTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTransfer = null;
+            if (parseNode.GetChildNode("issuing_authorization") is { } nullNodeIssuingAuthorization && nullNodeIssuingAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingAuthorization = null;
+            if (parseNode.GetChildNode("issuing_transaction") is { } nullNodeIssuingTransaction && nullNodeIssuingTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingTransaction = null;
+            if (parseNode.GetChildNode("payout") is { } nullNodePayout && nullNodePayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payout = null;
+            if (parseNode.GetChildNode("topup") is { } nullNodeTopup && nullNodeTopup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topup = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The DebitReversal created as a result of this ReceivedDebit being reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DebitReversal { get; set; }
+        public string? DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private string? _explicitNullValueDebitReversal = default!;
 #nullable restore
 #else
-        public string DebitReversal { get; set; }
+        public string DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private string _explicitNullValueDebitReversal = default!;
 #endif
         /// <summary>Set if the ReceivedDebit is associated with an InboundTransfer&apos;s return of funds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundTransfer { get; set; }
+        public string? InboundTransfer { get => _explicitNullValueInboundTransfer; set { _explicitNullValueInboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfer"); else _explicitNullProperties?.Remove("inbound_transfer"); } }
+        private string? _explicitNullValueInboundTransfer = default!;
 #nullable restore
 #else
-        public string InboundTransfer { get; set; }
+        public string InboundTransfer { get => _explicitNullValueInboundTransfer; set { _explicitNullValueInboundTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfer"); else _explicitNullProperties?.Remove("inbound_transfer"); } }
+        private string _explicitNullValueInboundTransfer = default!;
 #endif
         /// <summary>Set if the ReceivedDebit was created due to an [Issuing Authorization](https://docs.stripe.com/api#issuing_authorizations) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingAuthorization { get; set; }
+        public string? IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private string? _explicitNullValueIssuingAuthorization = default!;
 #nullable restore
 #else
-        public string IssuingAuthorization { get; set; }
+        public string IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private string _explicitNullValueIssuingAuthorization = default!;
 #endif
         /// <summary>Set if the ReceivedDebit is also viewable as an [Issuing Dispute](https://docs.stripe.com/api#issuing_disputes) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingTransaction { get; set; }
+        public string? IssuingTransaction { get => _explicitNullValueIssuingTransaction; set { _explicitNullValueIssuingTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_transaction"); else _explicitNullProperties?.Remove("issuing_transaction"); } }
+        private string? _explicitNullValueIssuingTransaction = default!;
 #nullable restore
 #else
-        public string IssuingTransaction { get; set; }
+        public string IssuingTransaction { get => _explicitNullValueIssuingTransaction; set { _explicitNullValueIssuingTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_transaction"); else _explicitNullProperties?.Remove("issuing_transaction"); } }
+        private string _explicitNullValueIssuingTransaction = default!;
 #endif
         /// <summary>Set if the ReceivedDebit was created due to a [Payout](https://docs.stripe.com/api#payouts) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payout { get; set; }
+        public string? Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
+        private string? _explicitNullValuePayout = default!;
 #nullable restore
 #else
-        public string Payout { get; set; }
+        public string Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
+        private string _explicitNullValuePayout = default!;
 #endif
         /// <summary>Set if the ReceivedDebit was created due to a [Topup](https://docs.stripe.com/api#topups) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Topup { get; set; }
+        public string? Topup { get => _explicitNullValueTopup; set { _explicitNullValueTopup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topup"); else _explicitNullProperties?.Remove("topup"); } }
+        private string? _explicitNullValueTopup = default!;
 #nullable restore
 #else
-        public string Topup { get; set; }
+        public string Topup { get => _explicitNullValueTopup; set { _explicitNullValueTopup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topup"); else _explicitNullProperties?.Remove("topup"); } }
+        private string _explicitNullValueTopup = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceLinkedFlows"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceLinkedFlows CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceLinkedFlows();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceLinkedFlows(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("issuing_transaction", IssuingTransaction);
             writer.WriteStringValue("payout", Payout);
             writer.WriteStringValue("topup", Topup);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

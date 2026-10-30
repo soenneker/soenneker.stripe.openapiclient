@@ -11,51 +11,75 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("arrival_airport_code") is { } nullNodeArrivalAirportCode && nullNodeArrivalAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArrivalAirportCode = null;
+            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("departure_airport_code") is { } nullNodeDepartureAirportCode && nullNodeDepartureAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAirportCode = null;
+            if (parseNode.GetChildNode("flight_number") is { } nullNodeFlightNumber && nullNodeFlightNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightNumber = null;
+            if (parseNode.GetChildNode("service_class") is { } nullNodeServiceClass && nullNodeServiceClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceClass = null;
+            if (parseNode.GetChildNode("stopover_allowed") is { } nullNodeStopoverAllowed && nullNodeStopoverAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopoverAllowed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The arrival_airport_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArrivalAirportCode { get; set; }
+        public string? ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
+        private string? _explicitNullValueArrivalAirportCode = default!;
 #nullable restore
 #else
-        public string ArrivalAirportCode { get; set; }
+        public string ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
+        private string _explicitNullValueArrivalAirportCode = default!;
 #endif
         /// <summary>The carrier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get; set; }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get; set; }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>The departure_airport_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DepartureAirportCode { get; set; }
+        public string? DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
+        private string? _explicitNullValueDepartureAirportCode = default!;
 #nullable restore
 #else
-        public string DepartureAirportCode { get; set; }
+        public string DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
+        private string _explicitNullValueDepartureAirportCode = default!;
 #endif
         /// <summary>The flight_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlightNumber { get; set; }
+        public string? FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
+        private string? _explicitNullValueFlightNumber = default!;
 #nullable restore
 #else
-        public string FlightNumber { get; set; }
+        public string FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
+        private string _explicitNullValueFlightNumber = default!;
 #endif
         /// <summary>The service_class property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceClass { get; set; }
+        public string? ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
+        private string? _explicitNullValueServiceClass = default!;
 #nullable restore
 #else
-        public string ServiceClass { get; set; }
+        public string ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
+        private string _explicitNullValueServiceClass = default!;
 #endif
         /// <summary>The stopover_allowed property</summary>
-        public bool? StopoverAllowed { get; set; }
+        public bool? StopoverAllowed { get => _explicitNullValueStopoverAllowed; set { _explicitNullValueStopoverAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopover_allowed"); else _explicitNullProperties?.Remove("stopover_allowed"); } }
+        private bool? _explicitNullValueStopoverAllowed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem"/> and sets the default values.
         /// </summary>
@@ -71,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("flight_number", FlightNumber);
             writer.WriteStringValue("service_class", ServiceClass);
             writer.WriteBoolValue("stopover_allowed", StopoverAllowed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,62 +11,90 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostBillingPortalConfigurationsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("business_profile") is { } nullNodeBusinessProfile && nullNodeBusinessProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessProfile = null;
+            if (parseNode.GetChildNode("default_return_url") is { } nullNodeDefaultReturnUrl && nullNodeDefaultReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultReturnUrl = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("login_page") is { } nullNodeLoginPage && nullNodeLoginPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginPage = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+        }
+
         /// <summary>The business information shown to customers in the portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile? BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile? BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile? _explicitNullValueBusinessProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestBusinessProfile _explicitNullValueBusinessProfile = default!;
 #endif
         /// <summary>The default URL to redirect customers to when they click on the portal&apos;s link to return to your website. This can be [overridden](https://docs.stripe.com/api/customer_portal/sessions/create#create_portal_session-return_url) when creating the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl? DefaultReturnUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl? DefaultReturnUrl { get => _explicitNullValueDefaultReturnUrl; set { _explicitNullValueDefaultReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_return_url"); else _explicitNullProperties?.Remove("default_return_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl? _explicitNullValueDefaultReturnUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl DefaultReturnUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl DefaultReturnUrl { get => _explicitNullValueDefaultReturnUrl; set { _explicitNullValueDefaultReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_return_url"); else _explicitNullProperties?.Remove("default_return_url"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestDefaultReturnUrl _explicitNullValueDefaultReturnUrl = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Information about the features available in the portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures? Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures _explicitNullValueFeatures = default!;
 #endif
         /// <summary>The hosted login page for this configuration. Learn more about the portal login page in our [integration docs](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal#share).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage? LoginPage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage? LoginPage { get => _explicitNullValueLoginPage; set { _explicitNullValueLoginPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_page"); else _explicitNullProperties?.Remove("login_page"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage? _explicitNullValueLoginPage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage LoginPage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage LoginPage { get => _explicitNullValueLoginPage; set { _explicitNullValueLoginPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_page"); else _explicitNullProperties?.Remove("login_page"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage _explicitNullValueLoginPage = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The name of the configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName? Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName _explicitNullValueName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -76,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,7 +136,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeatures>("features", Features);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestLoginPage>("login_page", LoginPage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestName>("name", Name);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

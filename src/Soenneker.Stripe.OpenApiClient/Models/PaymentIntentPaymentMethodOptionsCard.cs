@@ -11,58 +11,95 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentIntentPaymentMethodOptionsCard : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capture_method") is { } nullNodeCaptureMethod && nullNodeCaptureMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureMethod = null;
+            if (parseNode.GetChildNode("installments") is { } nullNodeInstallments && nullNodeInstallments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installments = null;
+            if (parseNode.GetChildNode("mandate_options") is { } nullNodeMandateOptions && nullNodeMandateOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MandateOptions = null;
+            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("request_extended_authorization") is { } nullNodeRequestExtendedAuthorization && nullNodeRequestExtendedAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestExtendedAuthorization = null;
+            if (parseNode.GetChildNode("request_incremental_authorization") is { } nullNodeRequestIncrementalAuthorization && nullNodeRequestIncrementalAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIncrementalAuthorization = null;
+            if (parseNode.GetChildNode("request_multicapture") is { } nullNodeRequestMulticapture && nullNodeRequestMulticapture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestMulticapture = null;
+            if (parseNode.GetChildNode("request_overcapture") is { } nullNodeRequestOvercapture && nullNodeRequestOvercapture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestOvercapture = null;
+            if (parseNode.GetChildNode("request_three_d_secure") is { } nullNodeRequestThreeDSecure && nullNodeRequestThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestThreeDSecure = null;
+            if (parseNode.GetChildNode("require_cvc_recollection") is { } nullNodeRequireCvcRecollection && nullNodeRequireCvcRecollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireCvcRecollection = null;
+            if (parseNode.GetChildNode("setup_future_usage") is { } nullNodeSetupFutureUsage && nullNodeSetupFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFutureUsage = null;
+            if (parseNode.GetChildNode("statement_descriptor_suffix_kana") is { } nullNodeStatementDescriptorSuffixKana && nullNodeStatementDescriptorSuffixKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorSuffixKana = null;
+            if (parseNode.GetChildNode("statement_descriptor_suffix_kanji") is { } nullNodeStatementDescriptorSuffixKanji && nullNodeStatementDescriptorSuffixKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorSuffixKanji = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod? CaptureMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod? CaptureMethod { get => _explicitNullValueCaptureMethod; set { _explicitNullValueCaptureMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_method"); else _explicitNullProperties?.Remove("capture_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod? _explicitNullValueCaptureMethod = default!;
         /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://docs.stripe.com/payments/installments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments? Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments? _explicitNullValueInstallments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments _explicitNullValueInstallments = default!;
 #endif
         /// <summary>Configuration options for setting up an eMandate for cards issued in India.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions? MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions? MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions? _explicitNullValueMandateOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions _explicitNullValueMandateOptions = default!;
 #endif
         /// <summary>Selected network to process this payment intent on. Depends on the available networks of the card attached to the payment intent. Can be only set confirm-time.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork? _explicitNullValueNetwork = default!;
         /// <summary>Request ability to [capture beyond the standard authorization validity window](https://docs.stripe.com/payments/extended-authorization) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization? RequestExtendedAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization? RequestExtendedAuthorization { get => _explicitNullValueRequestExtendedAuthorization; set { _explicitNullValueRequestExtendedAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_extended_authorization"); else _explicitNullProperties?.Remove("request_extended_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization? _explicitNullValueRequestExtendedAuthorization = default!;
         /// <summary>Request ability to [increment the authorization](https://docs.stripe.com/payments/incremental-authorization) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization? RequestIncrementalAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization? RequestIncrementalAuthorization { get => _explicitNullValueRequestIncrementalAuthorization; set { _explicitNullValueRequestIncrementalAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_incremental_authorization"); else _explicitNullProperties?.Remove("request_incremental_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization? _explicitNullValueRequestIncrementalAuthorization = default!;
         /// <summary>Request ability to make [multiple captures](https://docs.stripe.com/payments/multicapture) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture? RequestMulticapture { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture? RequestMulticapture { get => _explicitNullValueRequestMulticapture; set { _explicitNullValueRequestMulticapture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_multicapture"); else _explicitNullProperties?.Remove("request_multicapture"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture? _explicitNullValueRequestMulticapture = default!;
         /// <summary>Request ability to [overcapture](https://docs.stripe.com/payments/overcapture) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture? RequestOvercapture { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture? RequestOvercapture { get => _explicitNullValueRequestOvercapture; set { _explicitNullValueRequestOvercapture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_overcapture"); else _explicitNullProperties?.Remove("request_overcapture"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture? _explicitNullValueRequestOvercapture = default!;
         /// <summary>We strongly recommend that you rely on our SCA Engine to automatically prompt your customers for authentication based on risk level and [other requirements](https://docs.stripe.com/strong-customer-authentication). However, if you wish to request 3D Secure based on logic from your own fraud engine, provide this option. If not provided, this value defaults to `automatic`. Read our guide on [manually requesting 3D Secure](https://docs.stripe.com/payments/3d-secure/authentication-flow#manual-three-ds) for more information on how this configuration interacts with Radar and our SCA Engine.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get => _explicitNullValueRequestThreeDSecure; set { _explicitNullValueRequestThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_three_d_secure"); else _explicitNullProperties?.Remove("request_three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure? _explicitNullValueRequestThreeDSecure = default!;
         /// <summary>When enabled, using a card that is attached to a customer will require the CVC to be provided again (i.e. using the cvc_token parameter).</summary>
-        public bool? RequireCvcRecollection { get; set; }
+        public bool? RequireCvcRecollection { get => _explicitNullValueRequireCvcRecollection; set { _explicitNullValueRequireCvcRecollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_cvc_recollection"); else _explicitNullProperties?.Remove("require_cvc_recollection"); } }
+        private bool? _explicitNullValueRequireCvcRecollection = default!;
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage? SetupFutureUsage { get => _explicitNullValueSetupFutureUsage; set { _explicitNullValueSetupFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_future_usage"); else _explicitNullProperties?.Remove("setup_future_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage? _explicitNullValueSetupFutureUsage = default!;
         /// <summary>Provides information about a card payment that customers see on their statements. Concatenated with the Kana prefix (shortened Kana descriptor) or Kana statement descriptor that’s set on the account to form the complete statement descriptor. Maximum 22 characters. On card statements, the *concatenation* of both prefix and suffix (including separators) will appear truncated to 22 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorSuffixKana { get; set; }
+        public string? StatementDescriptorSuffixKana { get => _explicitNullValueStatementDescriptorSuffixKana; set { _explicitNullValueStatementDescriptorSuffixKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix_kana"); else _explicitNullProperties?.Remove("statement_descriptor_suffix_kana"); } }
+        private string? _explicitNullValueStatementDescriptorSuffixKana = default!;
 #nullable restore
 #else
-        public string StatementDescriptorSuffixKana { get; set; }
+        public string StatementDescriptorSuffixKana { get => _explicitNullValueStatementDescriptorSuffixKana; set { _explicitNullValueStatementDescriptorSuffixKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix_kana"); else _explicitNullProperties?.Remove("statement_descriptor_suffix_kana"); } }
+        private string _explicitNullValueStatementDescriptorSuffixKana = default!;
 #endif
         /// <summary>Provides information about a card payment that customers see on their statements. Concatenated with the Kanji prefix (shortened Kanji descriptor) or Kanji statement descriptor that’s set on the account to form the complete statement descriptor. Maximum 17 characters. On card statements, the *concatenation* of both prefix and suffix (including separators) will appear truncated to 17 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorSuffixKanji { get; set; }
+        public string? StatementDescriptorSuffixKanji { get => _explicitNullValueStatementDescriptorSuffixKanji; set { _explicitNullValueStatementDescriptorSuffixKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_suffix_kanji"); } }
+        private string? _explicitNullValueStatementDescriptorSuffixKanji = default!;
 #nullable restore
 #else
-        public string StatementDescriptorSuffixKanji { get; set; }
+        public string StatementDescriptorSuffixKanji { get => _explicitNullValueStatementDescriptorSuffixKanji; set { _explicitNullValueStatementDescriptorSuffixKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_suffix_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_suffix_kanji"); } }
+        private string _explicitNullValueStatementDescriptorSuffixKanji = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard"/> and sets the default values.
@@ -79,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("statement_descriptor_suffix_kana", StatementDescriptorSuffixKana);
             writer.WriteStringValue("statement_descriptor_suffix_kanji", StatementDescriptorSuffixKanji);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

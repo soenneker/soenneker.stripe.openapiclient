@@ -12,452 +12,648 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CheckoutSession : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adaptive_pricing") is { } nullNodeAdaptivePricing && nullNodeAdaptivePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdaptivePricing = null;
+            if (parseNode.GetChildNode("after_expiration") is { } nullNodeAfterExpiration && nullNodeAfterExpiration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterExpiration = null;
+            if (parseNode.GetChildNode("allowed_payment_method_types") is { } nullNodeAllowedPaymentMethodTypes && nullNodeAllowedPaymentMethodTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedPaymentMethodTypes = null;
+            if (parseNode.GetChildNode("allow_promotion_codes") is { } nullNodeAllowPromotionCodes && nullNodeAllowPromotionCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPromotionCodes = null;
+            if (parseNode.GetChildNode("amount_subtotal") is { } nullNodeAmountSubtotal && nullNodeAmountSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountSubtotal = null;
+            if (parseNode.GetChildNode("amount_total") is { } nullNodeAmountTotal && nullNodeAmountTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTotal = null;
+            if (parseNode.GetChildNode("automatic_tax") is { } nullNodeAutomaticTax && nullNodeAutomaticTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticTax = null;
+            if (parseNode.GetChildNode("billing_address_collection") is { } nullNodeBillingAddressCollection && nullNodeBillingAddressCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddressCollection = null;
+            if (parseNode.GetChildNode("branding_settings") is { } nullNodeBrandingSettings && nullNodeBrandingSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandingSettings = null;
+            if (parseNode.GetChildNode("cancel_url") is { } nullNodeCancelUrl && nullNodeCancelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelUrl = null;
+            if (parseNode.GetChildNode("client_reference_id") is { } nullNodeClientReferenceId && nullNodeClientReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientReferenceId = null;
+            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("collected_information") is { } nullNodeCollectedInformation && nullNodeCollectedInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectedInformation = null;
+            if (parseNode.GetChildNode("consent") is { } nullNodeConsent && nullNodeConsent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consent = null;
+            if (parseNode.GetChildNode("consent_collection") is { } nullNodeConsentCollection && nullNodeConsentCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsentCollection = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("currency_conversion") is { } nullNodeCurrencyConversion && nullNodeCurrencyConversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyConversion = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("customer_account") is { } nullNodeCustomerAccount && nullNodeCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccount = null;
+            if (parseNode.GetChildNode("customer_creation") is { } nullNodeCustomerCreation && nullNodeCustomerCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCreation = null;
+            if (parseNode.GetChildNode("customer_details") is { } nullNodeCustomerDetails && nullNodeCustomerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDetails = null;
+            if (parseNode.GetChildNode("customer_email") is { } nullNodeCustomerEmail && nullNodeCustomerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerEmail = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("custom_text") is { } nullNodeCustomText && nullNodeCustomText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomText = null;
+            if (parseNode.GetChildNode("discounts") is { } nullNodeDiscounts && nullNodeDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discounts = null;
+            if (parseNode.GetChildNode("excluded_payment_method_types") is { } nullNodeExcludedPaymentMethodTypes && nullNodeExcludedPaymentMethodTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedPaymentMethodTypes = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("integration_identifier") is { } nullNodeIntegrationIdentifier && nullNodeIntegrationIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationIdentifier = null;
+            if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
+            if (parseNode.GetChildNode("invoice_creation") is { } nullNodeInvoiceCreation && nullNodeInvoiceCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceCreation = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("managed_payments") is { } nullNodeManagedPayments && nullNodeManagedPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagedPayments = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("name_collection") is { } nullNodeNameCollection && nullNodeNameCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameCollection = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("optional_items") is { } nullNodeOptionalItems && nullNodeOptionalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalItems = null;
+            if (parseNode.GetChildNode("origin_context") is { } nullNodeOriginContext && nullNodeOriginContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginContext = null;
+            if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
+            if (parseNode.GetChildNode("payment_link") is { } nullNodePaymentLink && nullNodePaymentLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentLink = null;
+            if (parseNode.GetChildNode("payment_method_collection") is { } nullNodePaymentMethodCollection && nullNodePaymentMethodCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodCollection = null;
+            if (parseNode.GetChildNode("payment_method_configuration_details") is { } nullNodePaymentMethodConfigurationDetails && nullNodePaymentMethodConfigurationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodConfigurationDetails = null;
+            if (parseNode.GetChildNode("payment_method_options") is { } nullNodePaymentMethodOptions && nullNodePaymentMethodOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodOptions = null;
+            if (parseNode.GetChildNode("payment_method_types") is { } nullNodePaymentMethodTypes && nullNodePaymentMethodTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodTypes = null;
+            if (parseNode.GetChildNode("payment_status") is { } nullNodePaymentStatus && nullNodePaymentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentStatus = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("phone_number_collection") is { } nullNodePhoneNumberCollection && nullNodePhoneNumberCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberCollection = null;
+            if (parseNode.GetChildNode("presentment_details") is { } nullNodePresentmentDetails && nullNodePresentmentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentmentDetails = null;
+            if (parseNode.GetChildNode("recovered_from") is { } nullNodeRecoveredFrom && nullNodeRecoveredFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecoveredFrom = null;
+            if (parseNode.GetChildNode("redirect_on_completion") is { } nullNodeRedirectOnCompletion && nullNodeRedirectOnCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectOnCompletion = null;
+            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("saved_payment_method_options") is { } nullNodeSavedPaymentMethodOptions && nullNodeSavedPaymentMethodOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SavedPaymentMethodOptions = null;
+            if (parseNode.GetChildNode("setup_intent") is { } nullNodeSetupIntent && nullNodeSetupIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupIntent = null;
+            if (parseNode.GetChildNode("shipping_address_collection") is { } nullNodeShippingAddressCollection && nullNodeShippingAddressCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddressCollection = null;
+            if (parseNode.GetChildNode("shipping_cost") is { } nullNodeShippingCost && nullNodeShippingCost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCost = null;
+            if (parseNode.GetChildNode("shipping_options") is { } nullNodeShippingOptions && nullNodeShippingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOptions = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("submit_type") is { } nullNodeSubmitType && nullNodeSubmitType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmitType = null;
+            if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
+            if (parseNode.GetChildNode("success_url") is { } nullNodeSuccessUrl && nullNodeSuccessUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessUrl = null;
+            if (parseNode.GetChildNode("tax_id_collection") is { } nullNodeTaxIdCollection && nullNodeTaxIdCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdCollection = null;
+            if (parseNode.GetChildNode("total_details") is { } nullNodeTotalDetails && nullNodeTotalDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDetails = null;
+            if (parseNode.GetChildNode("ui_mode") is { } nullNodeUiMode && nullNodeUiMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiMode = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("wallet_options") is { } nullNodeWalletOptions && nullNodeWalletOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WalletOptions = null;
+        }
+
         /// <summary>Settings for price localization with [Adaptive Pricing](https://docs.stripe.com/payments/checkout/adaptive-pricing).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing? AdaptivePricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing? AdaptivePricing { get => _explicitNullValueAdaptivePricing; set { _explicitNullValueAdaptivePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaptive_pricing"); else _explicitNullProperties?.Remove("adaptive_pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing? _explicitNullValueAdaptivePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing AdaptivePricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing AdaptivePricing { get => _explicitNullValueAdaptivePricing; set { _explicitNullValueAdaptivePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaptive_pricing"); else _explicitNullProperties?.Remove("adaptive_pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing _explicitNullValueAdaptivePricing = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When set, provides configuration for actions to take if this Checkout Session expires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration? AfterExpiration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration? AfterExpiration { get => _explicitNullValueAfterExpiration; set { _explicitNullValueAfterExpiration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_expiration"); else _explicitNullProperties?.Remove("after_expiration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration? _explicitNullValueAfterExpiration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration AfterExpiration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration AfterExpiration { get => _explicitNullValueAfterExpiration; set { _explicitNullValueAfterExpiration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_expiration"); else _explicitNullProperties?.Remove("after_expiration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration _explicitNullValueAfterExpiration = default!;
 #endif
         /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedPaymentMethodTypes { get; set; }
+        public List<string>? AllowedPaymentMethodTypes { get => _explicitNullValueAllowedPaymentMethodTypes; set { _explicitNullValueAllowedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_payment_method_types"); else _explicitNullProperties?.Remove("allowed_payment_method_types"); } }
+        private List<string>? _explicitNullValueAllowedPaymentMethodTypes = default!;
 #nullable restore
 #else
-        public List<string> AllowedPaymentMethodTypes { get; set; }
+        public List<string> AllowedPaymentMethodTypes { get => _explicitNullValueAllowedPaymentMethodTypes; set { _explicitNullValueAllowedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_payment_method_types"); else _explicitNullProperties?.Remove("allowed_payment_method_types"); } }
+        private List<string> _explicitNullValueAllowedPaymentMethodTypes = default!;
 #endif
         /// <summary>Enables user redeemable promotion codes.</summary>
-        public bool? AllowPromotionCodes { get; set; }
+        public bool? AllowPromotionCodes { get => _explicitNullValueAllowPromotionCodes; set { _explicitNullValueAllowPromotionCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_promotion_codes"); else _explicitNullProperties?.Remove("allow_promotion_codes"); } }
+        private bool? _explicitNullValueAllowPromotionCodes = default!;
         /// <summary>Total of all items before discounts or taxes are applied.</summary>
-        public int? AmountSubtotal { get; set; }
+        public int? AmountSubtotal { get => _explicitNullValueAmountSubtotal; set { _explicitNullValueAmountSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_subtotal"); else _explicitNullProperties?.Remove("amount_subtotal"); } }
+        private int? _explicitNullValueAmountSubtotal = default!;
         /// <summary>Total of all items after discounts and taxes are applied.</summary>
-        public int? AmountTotal { get; set; }
+        public int? AmountTotal { get => _explicitNullValueAmountTotal; set { _explicitNullValueAmountTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_total"); else _explicitNullProperties?.Remove("amount_total"); } }
+        private int? _explicitNullValueAmountTotal = default!;
         /// <summary>The automatic_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax? AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax? AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax? _explicitNullValueAutomaticTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax _explicitNullValueAutomaticTax = default!;
 #endif
         /// <summary>Describes whether Checkout should collect the customer&apos;s billing address. Defaults to `auto`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection? BillingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection? BillingAddressCollection { get => _explicitNullValueBillingAddressCollection; set { _explicitNullValueBillingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address_collection"); else _explicitNullProperties?.Remove("billing_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection? _explicitNullValueBillingAddressCollection = default!;
         /// <summary>The branding_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings? BrandingSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings? BrandingSettings { get => _explicitNullValueBrandingSettings; set { _explicitNullValueBrandingSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branding_settings"); else _explicitNullProperties?.Remove("branding_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings? _explicitNullValueBrandingSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings BrandingSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings BrandingSettings { get => _explicitNullValueBrandingSettings; set { _explicitNullValueBrandingSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branding_settings"); else _explicitNullProperties?.Remove("branding_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings _explicitNullValueBrandingSettings = default!;
 #endif
         /// <summary>If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CancelUrl { get; set; }
+        public string? CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string? _explicitNullValueCancelUrl = default!;
 #nullable restore
 #else
-        public string CancelUrl { get; set; }
+        public string CancelUrl { get => _explicitNullValueCancelUrl; set { _explicitNullValueCancelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_url"); else _explicitNullProperties?.Remove("cancel_url"); } }
+        private string _explicitNullValueCancelUrl = default!;
 #endif
         /// <summary>A unique string to reference the Checkout Session. This can be acustomer ID, a cart ID, or similar, and can be used to reconcile theSession with your internal systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientReferenceId { get; set; }
+        public string? ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
+        private string? _explicitNullValueClientReferenceId = default!;
 #nullable restore
 #else
-        public string ClientReferenceId { get; set; }
+        public string ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
+        private string _explicitNullValueClientReferenceId = default!;
 #endif
         /// <summary>The client secret of your Checkout Session. Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. For `ui_mode: embedded_page`, the client secret is to be used when initializing Stripe.js embedded checkout. For `ui_mode: elements`, use the client secret with [initCheckout](https://docs.stripe.com/js/custom_checkout/init) on your front end.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get; set; }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get; set; }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>Information about the customer collected within the Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation? CollectedInformation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation? CollectedInformation { get => _explicitNullValueCollectedInformation; set { _explicitNullValueCollectedInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collected_information"); else _explicitNullProperties?.Remove("collected_information"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation? _explicitNullValueCollectedInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation CollectedInformation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation CollectedInformation { get => _explicitNullValueCollectedInformation; set { _explicitNullValueCollectedInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collected_information"); else _explicitNullProperties?.Remove("collected_information"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation _explicitNullValueCollectedInformation = default!;
 #endif
         /// <summary>Results of `consent_collection` for this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent? Consent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent? Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent? _explicitNullValueConsent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent Consent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent _explicitNullValueConsent = default!;
 #endif
         /// <summary>When set, provides configuration for the Checkout Session to gather active consent from customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection? ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection? ConsentCollection { get => _explicitNullValueConsentCollection; set { _explicitNullValueConsentCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent_collection"); else _explicitNullProperties?.Remove("consent_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection? _explicitNullValueConsentCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection ConsentCollection { get => _explicitNullValueConsentCollection; set { _explicitNullValueConsentCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent_collection"); else _explicitNullProperties?.Remove("consent_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection _explicitNullValueConsentCollection = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Currency conversion details for [Adaptive Pricing](https://docs.stripe.com/payments/checkout/adaptive-pricing) sessions created before 2025-03-31.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion? CurrencyConversion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion? CurrencyConversion { get => _explicitNullValueCurrencyConversion; set { _explicitNullValueCurrencyConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_conversion"); else _explicitNullProperties?.Remove("currency_conversion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion? _explicitNullValueCurrencyConversion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion CurrencyConversion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion CurrencyConversion { get => _explicitNullValueCurrencyConversion; set { _explicitNullValueCurrencyConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_conversion"); else _explicitNullProperties?.Remove("currency_conversion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion _explicitNullValueCurrencyConversion = default!;
 #endif
         /// <summary>The ID of the customer for this Session.For Checkout Sessions in `subscription` mode or Checkout Sessions with `customer_creation` set as `always` in `payment` mode, Checkoutwill create a new customer object based on information providedduring the payment flow unless an existing customer was provided whenthe Session was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer _explicitNullValueCustomer = default!;
 #endif
         /// <summary>The ID of the account for this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccount { get; set; }
+        public string? CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string? _explicitNullValueCustomerAccount = default!;
 #nullable restore
 #else
-        public string CustomerAccount { get; set; }
+        public string CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>Configure whether a Checkout Session creates a Customer when the Checkout Session completes.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation? CustomerCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation? CustomerCreation { get => _explicitNullValueCustomerCreation; set { _explicitNullValueCustomerCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_creation"); else _explicitNullProperties?.Remove("customer_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation? _explicitNullValueCustomerCreation = default!;
         /// <summary>The customer details including the customer&apos;s tax exempt status and the customer&apos;s tax IDs. Customer&apos;s address details are not present on Sessions in `setup` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails? CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails? CustomerDetails { get => _explicitNullValueCustomerDetails; set { _explicitNullValueCustomerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_details"); else _explicitNullProperties?.Remove("customer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails? _explicitNullValueCustomerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails CustomerDetails { get => _explicitNullValueCustomerDetails; set { _explicitNullValueCustomerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_details"); else _explicitNullProperties?.Remove("customer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails _explicitNullValueCustomerDetails = default!;
 #endif
         /// <summary>If provided, this value will be used when the Customer object is created.If not provided, customers will be asked to enter their email address.Use this parameter to prefill customer data if you already have an emailon file. To access information about the customer once the payment flow iscomplete, use the `customer` attribute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerEmail { get; set; }
+        public string? CustomerEmail { get => _explicitNullValueCustomerEmail; set { _explicitNullValueCustomerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email"); else _explicitNullProperties?.Remove("customer_email"); } }
+        private string? _explicitNullValueCustomerEmail = default!;
 #nullable restore
 #else
-        public string CustomerEmail { get; set; }
+        public string CustomerEmail { get => _explicitNullValueCustomerEmail; set { _explicitNullValueCustomerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email"); else _explicitNullProperties?.Remove("customer_email"); } }
+        private string _explicitNullValueCustomerEmail = default!;
 #endif
         /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields>? CustomFields { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields> CustomFields { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>The custom_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText? CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText? CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText? _explicitNullValueCustomText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText _explicitNullValueCustomText = default!;
 #endif
         /// <summary>List of coupons and promotion codes attached to the Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount>? Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount>? Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount>? _explicitNullValueDiscounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount> Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount> Discounts { get => _explicitNullValueDiscounts; set { _explicitNullValueDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discounts"); else _explicitNullProperties?.Remove("discounts"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount> _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>A list of the types of payment methods (e.g., `card`) that should be excluded from this Checkout Session. This should only be used when payment methods for this Checkout Session are managed through the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExcludedPaymentMethodTypes { get; set; }
+        public List<string>? ExcludedPaymentMethodTypes { get => _explicitNullValueExcludedPaymentMethodTypes; set { _explicitNullValueExcludedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_payment_method_types"); else _explicitNullProperties?.Remove("excluded_payment_method_types"); } }
+        private List<string>? _explicitNullValueExcludedPaymentMethodTypes = default!;
 #nullable restore
 #else
-        public List<string> ExcludedPaymentMethodTypes { get; set; }
+        public List<string> ExcludedPaymentMethodTypes { get => _explicitNullValueExcludedPaymentMethodTypes; set { _explicitNullValueExcludedPaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_payment_method_types"); else _explicitNullProperties?.Remove("excluded_payment_method_types"); } }
+        private List<string> _explicitNullValueExcludedPaymentMethodTypes = default!;
 #endif
         /// <summary>The timestamp at which the Checkout Session will expire.</summary>
-        public int? ExpiresAt { get; set; }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private int? _explicitNullValueExpiresAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationIdentifier { get; set; }
+        public string? IntegrationIdentifier { get => _explicitNullValueIntegrationIdentifier; set { _explicitNullValueIntegrationIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_identifier"); else _explicitNullProperties?.Remove("integration_identifier"); } }
+        private string? _explicitNullValueIntegrationIdentifier = default!;
 #nullable restore
 #else
-        public string IntegrationIdentifier { get; set; }
+        public string IntegrationIdentifier { get => _explicitNullValueIntegrationIdentifier; set { _explicitNullValueIntegrationIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_identifier"); else _explicitNullProperties?.Remove("integration_identifier"); } }
+        private string _explicitNullValueIntegrationIdentifier = default!;
 #endif
         /// <summary>ID of the invoice created by the Checkout Session, if it exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice? Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice? _explicitNullValueInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice _explicitNullValueInvoice = default!;
 #endif
         /// <summary>Details on the state of invoice creation for the Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation? InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation? InvoiceCreation { get => _explicitNullValueInvoiceCreation; set { _explicitNullValueInvoiceCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_creation"); else _explicitNullProperties?.Remove("invoice_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation? _explicitNullValueInvoiceCreation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation InvoiceCreation { get => _explicitNullValueInvoiceCreation; set { _explicitNullValueInvoiceCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_creation"); else _explicitNullProperties?.Remove("invoice_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation _explicitNullValueInvoiceCreation = default!;
 #endif
         /// <summary>The line items purchased by the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems _explicitNullValueLineItems = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale? Locale { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale? _explicitNullValueLocale = default!;
         /// <summary>Settings for Managed Payments for this Checkout Session and resulting [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments? ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments? _explicitNullValueManagedPayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments _explicitNullValueManagedPayments = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The mode of the Checkout Session.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode? Mode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode? _explicitNullValueMode = default!;
         /// <summary>The name_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection? NameCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection? NameCollection { get => _explicitNullValueNameCollection; set { _explicitNullValueNameCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_collection"); else _explicitNullProperties?.Remove("name_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection? _explicitNullValueNameCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection NameCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection NameCollection { get => _explicitNullValueNameCollection; set { _explicitNullValueNameCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_collection"); else _explicitNullProperties?.Remove("name_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection _explicitNullValueNameCollection = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject? _explicitNullValueObject = default!;
         /// <summary>The optional items presented to the customer at checkout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem>? OptionalItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem>? OptionalItems { get => _explicitNullValueOptionalItems; set { _explicitNullValueOptionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_items"); else _explicitNullProperties?.Remove("optional_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem>? _explicitNullValueOptionalItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem> OptionalItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem> OptionalItems { get => _explicitNullValueOptionalItems; set { _explicitNullValueOptionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_items"); else _explicitNullProperties?.Remove("optional_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem> _explicitNullValueOptionalItems = default!;
 #endif
         /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext? OriginContext { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext? OriginContext { get => _explicitNullValueOriginContext; set { _explicitNullValueOriginContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_context"); else _explicitNullProperties?.Remove("origin_context"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext? _explicitNullValueOriginContext = default!;
         /// <summary>The ID of the PaymentIntent for Checkout Sessions in `payment` mode. You can&apos;t confirm or cancel the PaymentIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent? _explicitNullValuePaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent _explicitNullValuePaymentIntent = default!;
 #endif
         /// <summary>The ID of the Payment Link that created this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink? PaymentLink { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink? PaymentLink { get => _explicitNullValuePaymentLink; set { _explicitNullValuePaymentLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_link"); else _explicitNullProperties?.Remove("payment_link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink? _explicitNullValuePaymentLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink PaymentLink { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink PaymentLink { get => _explicitNullValuePaymentLink; set { _explicitNullValuePaymentLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_link"); else _explicitNullProperties?.Remove("payment_link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink _explicitNullValuePaymentLink = default!;
 #endif
         /// <summary>Configure whether a Checkout Session should collect a payment method for sessions with mode `payment`. Defaults to `always`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection? PaymentMethodCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection? PaymentMethodCollection { get => _explicitNullValuePaymentMethodCollection; set { _explicitNullValuePaymentMethodCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_collection"); else _explicitNullProperties?.Remove("payment_method_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection? _explicitNullValuePaymentMethodCollection = default!;
         /// <summary>Information about the payment method configuration used for this Checkout session if using dynamic payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails? _explicitNullValuePaymentMethodConfigurationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails _explicitNullValuePaymentMethodConfigurationDetails = default!;
 #endif
         /// <summary>Payment-method-specific configuration for the PaymentIntent or SetupIntent of this CheckoutSession.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>A list of the types of payment methods (e.g. card) this CheckoutSession is allowed to accept.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PaymentMethodTypes { get; set; }
+        public List<string>? PaymentMethodTypes { get => _explicitNullValuePaymentMethodTypes; set { _explicitNullValuePaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_types"); else _explicitNullProperties?.Remove("payment_method_types"); } }
+        private List<string>? _explicitNullValuePaymentMethodTypes = default!;
 #nullable restore
 #else
-        public List<string> PaymentMethodTypes { get; set; }
+        public List<string> PaymentMethodTypes { get => _explicitNullValuePaymentMethodTypes; set { _explicitNullValuePaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_types"); else _explicitNullProperties?.Remove("payment_method_types"); } }
+        private List<string> _explicitNullValuePaymentMethodTypes = default!;
 #endif
         /// <summary>The payment status of the Checkout Session, one of `paid`, `unpaid`, or `no_payment_required`.You can use this value to decide when to fulfill your customer&apos;s order.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus? PaymentStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus? PaymentStatus { get => _explicitNullValuePaymentStatus; set { _explicitNullValuePaymentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_status"); else _explicitNullProperties?.Remove("payment_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus? _explicitNullValuePaymentStatus = default!;
         /// <summary>This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions? Permissions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions Permissions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The phone_number_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection? PhoneNumberCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection? PhoneNumberCollection { get => _explicitNullValuePhoneNumberCollection; set { _explicitNullValuePhoneNumberCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_collection"); else _explicitNullProperties?.Remove("phone_number_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection? _explicitNullValuePhoneNumberCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection PhoneNumberCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection PhoneNumberCollection { get => _explicitNullValuePhoneNumberCollection; set { _explicitNullValuePhoneNumberCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_collection"); else _explicitNullProperties?.Remove("phone_number_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection _explicitNullValuePhoneNumberCollection = default!;
 #endif
         /// <summary>The presentment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails? PresentmentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails? PresentmentDetails { get => _explicitNullValuePresentmentDetails; set { _explicitNullValuePresentmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_details"); else _explicitNullProperties?.Remove("presentment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails? _explicitNullValuePresentmentDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails PresentmentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails PresentmentDetails { get => _explicitNullValuePresentmentDetails; set { _explicitNullValuePresentmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_details"); else _explicitNullProperties?.Remove("presentment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails _explicitNullValuePresentmentDetails = default!;
 #endif
         /// <summary>The ID of the original expired Checkout Session that triggered the recovery flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecoveredFrom { get; set; }
+        public string? RecoveredFrom { get => _explicitNullValueRecoveredFrom; set { _explicitNullValueRecoveredFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovered_from"); else _explicitNullProperties?.Remove("recovered_from"); } }
+        private string? _explicitNullValueRecoveredFrom = default!;
 #nullable restore
 #else
-        public string RecoveredFrom { get; set; }
+        public string RecoveredFrom { get => _explicitNullValueRecoveredFrom; set { _explicitNullValueRecoveredFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovered_from"); else _explicitNullProperties?.Remove("recovered_from"); } }
+        private string _explicitNullValueRecoveredFrom = default!;
 #endif
         /// <summary>This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion? RedirectOnCompletion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion? RedirectOnCompletion { get => _explicitNullValueRedirectOnCompletion; set { _explicitNullValueRedirectOnCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_on_completion"); else _explicitNullProperties?.Remove("redirect_on_completion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion? _explicitNullValueRedirectOnCompletion = default!;
         /// <summary>Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>Controls saved payment method settings for the session. Only available in `payment` and `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions? SavedPaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions? SavedPaymentMethodOptions { get => _explicitNullValueSavedPaymentMethodOptions; set { _explicitNullValueSavedPaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saved_payment_method_options"); else _explicitNullProperties?.Remove("saved_payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions? _explicitNullValueSavedPaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions SavedPaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions SavedPaymentMethodOptions { get => _explicitNullValueSavedPaymentMethodOptions; set { _explicitNullValueSavedPaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saved_payment_method_options"); else _explicitNullProperties?.Remove("saved_payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions _explicitNullValueSavedPaymentMethodOptions = default!;
 #endif
         /// <summary>The ID of the SetupIntent for Checkout Sessions in `setup` mode. You can&apos;t confirm or cancel the SetupIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent? SetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent? SetupIntent { get => _explicitNullValueSetupIntent; set { _explicitNullValueSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_intent"); else _explicitNullProperties?.Remove("setup_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent? _explicitNullValueSetupIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent SetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent SetupIntent { get => _explicitNullValueSetupIntent; set { _explicitNullValueSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_intent"); else _explicitNullProperties?.Remove("setup_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent _explicitNullValueSetupIntent = default!;
 #endif
         /// <summary>When set, provides configuration for Checkout to collect a shipping address from a customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection? ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection? ShippingAddressCollection { get => _explicitNullValueShippingAddressCollection; set { _explicitNullValueShippingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address_collection"); else _explicitNullProperties?.Remove("shipping_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection? _explicitNullValueShippingAddressCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection ShippingAddressCollection { get => _explicitNullValueShippingAddressCollection; set { _explicitNullValueShippingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address_collection"); else _explicitNullProperties?.Remove("shipping_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection _explicitNullValueShippingAddressCollection = default!;
 #endif
         /// <summary>The details of the customer cost of shipping, including the customer chosen ShippingRate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost? ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost? _explicitNullValueShippingCost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost _explicitNullValueShippingCost = default!;
 #endif
         /// <summary>The shipping rate options applied to this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption>? ShippingOptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption>? ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_options"); else _explicitNullProperties?.Remove("shipping_options"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption>? _explicitNullValueShippingOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption> ShippingOptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption> ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_options"); else _explicitNullProperties?.Remove("shipping_options"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption> _explicitNullValueShippingOptions = default!;
 #endif
         /// <summary>The status of the Checkout Session, one of `open`, `complete`, or `expired`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus? _explicitNullValueStatus = default!;
         /// <summary>Describes the type of transaction being performed by Checkout in order to customizerelevant text on the page, such as the submit button. `submit_type` can only bespecified on Checkout Sessions in `payment` mode. If blank or `auto`, `pay` is used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType? SubmitType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType? SubmitType { get => _explicitNullValueSubmitType; set { _explicitNullValueSubmitType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit_type"); else _explicitNullProperties?.Remove("submit_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType? _explicitNullValueSubmitType = default!;
         /// <summary>The ID of the [Subscription](https://docs.stripe.com/api/subscriptions) for Checkout Sessions in `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription? Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription? _explicitNullValueSubscription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription _explicitNullValueSubscription = default!;
 #endif
         /// <summary>The URL the customer will be directed to after the payment orsubscription creation is successful.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuccessUrl { get; set; }
+        public string? SuccessUrl { get => _explicitNullValueSuccessUrl; set { _explicitNullValueSuccessUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_url"); else _explicitNullProperties?.Remove("success_url"); } }
+        private string? _explicitNullValueSuccessUrl = default!;
 #nullable restore
 #else
-        public string SuccessUrl { get; set; }
+        public string SuccessUrl { get => _explicitNullValueSuccessUrl; set { _explicitNullValueSuccessUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_url"); else _explicitNullProperties?.Remove("success_url"); } }
+        private string _explicitNullValueSuccessUrl = default!;
 #endif
         /// <summary>The tax_id_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection? TaxIdCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection? TaxIdCollection { get => _explicitNullValueTaxIdCollection; set { _explicitNullValueTaxIdCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_collection"); else _explicitNullProperties?.Remove("tax_id_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection? _explicitNullValueTaxIdCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection TaxIdCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection TaxIdCollection { get => _explicitNullValueTaxIdCollection; set { _explicitNullValueTaxIdCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_collection"); else _explicitNullProperties?.Remove("tax_id_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection _explicitNullValueTaxIdCollection = default!;
 #endif
         /// <summary>Tax and discount details for the computed total amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails? TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails? TotalDetails { get => _explicitNullValueTotalDetails; set { _explicitNullValueTotalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_details"); else _explicitNullProperties?.Remove("total_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails? _explicitNullValueTotalDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails TotalDetails { get => _explicitNullValueTotalDetails; set { _explicitNullValueTotalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_details"); else _explicitNullProperties?.Remove("total_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails _explicitNullValueTotalDetails = default!;
 #endif
         /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode? UiMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode? UiMode { get => _explicitNullValueUiMode; set { _explicitNullValueUiMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_mode"); else _explicitNullProperties?.Remove("ui_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode? _explicitNullValueUiMode = default!;
         /// <summary>The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted_page`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Wallet-specific configuration for this Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed? WalletOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed? WalletOptions { get => _explicitNullValueWalletOptions; set { _explicitNullValueWalletOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_options"); else _explicitNullProperties?.Remove("wallet_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed? _explicitNullValueWalletOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed WalletOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed WalletOptions { get => _explicitNullValueWalletOptions; set { _explicitNullValueWalletOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_options"); else _explicitNullProperties?.Remove("wallet_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed _explicitNullValueWalletOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession"/> and sets the default values.
@@ -474,7 +670,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -631,6 +827,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode>("ui_mode", UiMode);
             writer.WriteStringValue("url", Url);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed>("wallet_options", WalletOptions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

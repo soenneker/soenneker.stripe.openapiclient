@@ -11,220 +11,316 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentLinksXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("after_completion") is { } nullNodeAfterCompletion && nullNodeAfterCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterCompletion = null;
+            if (parseNode.GetChildNode("allow_promotion_codes") is { } nullNodeAllowPromotionCodes && nullNodeAllowPromotionCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPromotionCodes = null;
+            if (parseNode.GetChildNode("application_fee_amount") is { } nullNodeApplicationFeeAmount && nullNodeApplicationFeeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFeeAmount = null;
+            if (parseNode.GetChildNode("application_fee_percent") is { } nullNodeApplicationFeePercent && nullNodeApplicationFeePercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFeePercent = null;
+            if (parseNode.GetChildNode("automatic_tax") is { } nullNodeAutomaticTax && nullNodeAutomaticTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticTax = null;
+            if (parseNode.GetChildNode("billing_address_collection") is { } nullNodeBillingAddressCollection && nullNodeBillingAddressCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddressCollection = null;
+            if (parseNode.GetChildNode("consent_collection") is { } nullNodeConsentCollection && nullNodeConsentCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsentCollection = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("customer_creation") is { } nullNodeCustomerCreation && nullNodeCustomerCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCreation = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("custom_text") is { } nullNodeCustomText && nullNodeCustomText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomText = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("inactive_message") is { } nullNodeInactiveMessage && nullNodeInactiveMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveMessage = null;
+            if (parseNode.GetChildNode("invoice_creation") is { } nullNodeInvoiceCreation && nullNodeInvoiceCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceCreation = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("managed_payments") is { } nullNodeManagedPayments && nullNodeManagedPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagedPayments = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name_collection") is { } nullNodeNameCollection && nullNodeNameCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameCollection = null;
+            if (parseNode.GetChildNode("on_behalf_of") is { } nullNodeOnBehalfOf && nullNodeOnBehalfOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnBehalfOf = null;
+            if (parseNode.GetChildNode("optional_items") is { } nullNodeOptionalItems && nullNodeOptionalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalItems = null;
+            if (parseNode.GetChildNode("payment_intent_data") is { } nullNodePaymentIntentData && nullNodePaymentIntentData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntentData = null;
+            if (parseNode.GetChildNode("payment_method_collection") is { } nullNodePaymentMethodCollection && nullNodePaymentMethodCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodCollection = null;
+            if (parseNode.GetChildNode("payment_method_options") is { } nullNodePaymentMethodOptions && nullNodePaymentMethodOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodOptions = null;
+            if (parseNode.GetChildNode("payment_method_types") is { } nullNodePaymentMethodTypes && nullNodePaymentMethodTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodTypes = null;
+            if (parseNode.GetChildNode("phone_number_collection") is { } nullNodePhoneNumberCollection && nullNodePhoneNumberCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberCollection = null;
+            if (parseNode.GetChildNode("restrictions") is { } nullNodeRestrictions && nullNodeRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Restrictions = null;
+            if (parseNode.GetChildNode("shipping_address_collection") is { } nullNodeShippingAddressCollection && nullNodeShippingAddressCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddressCollection = null;
+            if (parseNode.GetChildNode("shipping_options") is { } nullNodeShippingOptions && nullNodeShippingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOptions = null;
+            if (parseNode.GetChildNode("submit_type") is { } nullNodeSubmitType && nullNodeSubmitType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmitType = null;
+            if (parseNode.GetChildNode("subscription_data") is { } nullNodeSubscriptionData && nullNodeSubscriptionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionData = null;
+            if (parseNode.GetChildNode("tax_id_collection") is { } nullNodeTaxIdCollection && nullNodeTaxIdCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdCollection = null;
+            if (parseNode.GetChildNode("transfer_data") is { } nullNodeTransferData && nullNodeTransferData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferData = null;
+        }
+
         /// <summary>Behavior after the purchase is complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion? AfterCompletion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion? AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion? _explicitNullValueAfterCompletion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion AfterCompletion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAfterCompletion _explicitNullValueAfterCompletion = default!;
 #endif
         /// <summary>Enables user redeemable promotion codes.</summary>
-        public bool? AllowPromotionCodes { get; set; }
+        public bool? AllowPromotionCodes { get => _explicitNullValueAllowPromotionCodes; set { _explicitNullValueAllowPromotionCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_promotion_codes"); else _explicitNullProperties?.Remove("allow_promotion_codes"); } }
+        private bool? _explicitNullValueAllowPromotionCodes = default!;
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. Can only be applied when there are no line items with recurring prices.</summary>
-        public int? ApplicationFeeAmount { get; set; }
+        public int? ApplicationFeeAmount { get => _explicitNullValueApplicationFeeAmount; set { _explicitNullValueApplicationFeeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_amount"); else _explicitNullProperties?.Remove("application_fee_amount"); } }
+        private int? _explicitNullValueApplicationFeeAmount = default!;
         /// <summary>A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice total that will be transferred to the application owner&apos;s Stripe account. There must be at least 1 line item with a recurring price to use this field.</summary>
-        public double? ApplicationFeePercent { get; set; }
+        public double? ApplicationFeePercent { get => _explicitNullValueApplicationFeePercent; set { _explicitNullValueApplicationFeePercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_percent"); else _explicitNullProperties?.Remove("application_fee_percent"); } }
+        private double? _explicitNullValueApplicationFeePercent = default!;
         /// <summary>Configuration for automatic tax collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax? AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax? AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax? _explicitNullValueAutomaticTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax AutomaticTax { get => _explicitNullValueAutomaticTax; set { _explicitNullValueAutomaticTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_tax"); else _explicitNullProperties?.Remove("automatic_tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestAutomaticTax _explicitNullValueAutomaticTax = default!;
 #endif
         /// <summary>Configuration for collecting the customer&apos;s billing address. Defaults to `auto`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestBillingAddressCollection? BillingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestBillingAddressCollection? BillingAddressCollection { get => _explicitNullValueBillingAddressCollection; set { _explicitNullValueBillingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address_collection"); else _explicitNullProperties?.Remove("billing_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestBillingAddressCollection? _explicitNullValueBillingAddressCollection = default!;
         /// <summary>Configure fields to gather active consent from customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection? ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection? ConsentCollection { get => _explicitNullValueConsentCollection; set { _explicitNullValueConsentCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent_collection"); else _explicitNullProperties?.Remove("consent_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection? _explicitNullValueConsentCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection ConsentCollection { get => _explicitNullValueConsentCollection; set { _explicitNullValueConsentCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent_collection"); else _explicitNullProperties?.Remove("consent_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestConsentCollection _explicitNullValueConsentCollection = default!;
 #endif
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies) and supported by each line item&apos;s price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Configures whether [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link create a [Customer](https://docs.stripe.com/api/customers).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomerCreation? CustomerCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomerCreation? CustomerCreation { get => _explicitNullValueCustomerCreation; set { _explicitNullValueCustomerCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_creation"); else _explicitNullProperties?.Remove("customer_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomerCreation? _explicitNullValueCustomerCreation = default!;
         /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem>? CustomFields { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem> CustomFields { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText? CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText? CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText? _explicitNullValueCustomText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText CustomText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestCustomText _explicitNullValueCustomText = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The custom message to be displayed to a customer when a payment link is no longer active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InactiveMessage { get; set; }
+        public string? InactiveMessage { get => _explicitNullValueInactiveMessage; set { _explicitNullValueInactiveMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_message"); else _explicitNullProperties?.Remove("inactive_message"); } }
+        private string? _explicitNullValueInactiveMessage = default!;
 #nullable restore
 #else
-        public string InactiveMessage { get; set; }
+        public string InactiveMessage { get => _explicitNullValueInactiveMessage; set { _explicitNullValueInactiveMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_message"); else _explicitNullProperties?.Remove("inactive_message"); } }
+        private string _explicitNullValueInactiveMessage = default!;
 #endif
         /// <summary>Generate a post-purchase Invoice for one-time payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation? InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation? InvoiceCreation { get => _explicitNullValueInvoiceCreation; set { _explicitNullValueInvoiceCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_creation"); else _explicitNullProperties?.Remove("invoice_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation? _explicitNullValueInvoiceCreation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation InvoiceCreation { get => _explicitNullValueInvoiceCreation; set { _explicitNullValueInvoiceCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_creation"); else _explicitNullProperties?.Remove("invoice_creation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation _explicitNullValueInvoiceCreation = default!;
 #endif
         /// <summary>The line items representing what is being sold. Each line item represents an item being sold. Up to 20 line items are supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem>? LineItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem>? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem>? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem> LineItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem> LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestLineItemsItem> _explicitNullValueLineItems = default!;
 #endif
         /// <summary>Settings for Managed Payments for this Payment Link and resulting [CheckoutSessions](/api/checkout/sessions/object), [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments? ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments? _explicitNullValueManagedPayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestManagedPayments _explicitNullValueManagedPayments = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. Metadata associated with this Payment Link will automatically be copied to [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Controls settings applied for collecting the customer&apos;s name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection? NameCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection? NameCollection { get => _explicitNullValueNameCollection; set { _explicitNullValueNameCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_collection"); else _explicitNullProperties?.Remove("name_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection? _explicitNullValueNameCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection NameCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection NameCollection { get => _explicitNullValueNameCollection; set { _explicitNullValueNameCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_collection"); else _explicitNullProperties?.Remove("name_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestNameCollection _explicitNullValueNameCollection = default!;
 #endif
         /// <summary>The account on behalf of which to charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OnBehalfOf { get; set; }
+        public string? OnBehalfOf { get => _explicitNullValueOnBehalfOf; set { _explicitNullValueOnBehalfOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of"); else _explicitNullProperties?.Remove("on_behalf_of"); } }
+        private string? _explicitNullValueOnBehalfOf = default!;
 #nullable restore
 #else
-        public string OnBehalfOf { get; set; }
+        public string OnBehalfOf { get => _explicitNullValueOnBehalfOf; set { _explicitNullValueOnBehalfOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of"); else _explicitNullProperties?.Remove("on_behalf_of"); } }
+        private string _explicitNullValueOnBehalfOf = default!;
 #endif
         /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a payment link, and the existing limits on the number of line items allowed on a payment link apply to the combined number of line items and optional items.There is a maximum of 20 combined line items and optional items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem>? OptionalItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem>? OptionalItems { get => _explicitNullValueOptionalItems; set { _explicitNullValueOptionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_items"); else _explicitNullProperties?.Remove("optional_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem>? _explicitNullValueOptionalItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem> OptionalItems { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem> OptionalItems { get => _explicitNullValueOptionalItems; set { _explicitNullValueOptionalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_items"); else _explicitNullProperties?.Remove("optional_items"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestOptionalItemsItem> _explicitNullValueOptionalItems = default!;
 #endif
         /// <summary>A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData? PaymentIntentData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData? PaymentIntentData { get => _explicitNullValuePaymentIntentData; set { _explicitNullValuePaymentIntentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_data"); else _explicitNullProperties?.Remove("payment_intent_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData? _explicitNullValuePaymentIntentData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData PaymentIntentData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData PaymentIntentData { get => _explicitNullValuePaymentIntentData; set { _explicitNullValuePaymentIntentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_data"); else _explicitNullProperties?.Remove("payment_intent_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentIntentData _explicitNullValuePaymentIntentData = default!;
 #endif
         /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on [configuring subscriptions with a free trial](https://docs.stripe.com/payments/checkout/free-trials).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodCollection? PaymentMethodCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodCollection? PaymentMethodCollection { get => _explicitNullValuePaymentMethodCollection; set { _explicitNullValuePaymentMethodCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_collection"); else _explicitNullProperties?.Remove("payment_method_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodCollection? _explicitNullValuePaymentMethodCollection = default!;
         /// <summary>Payment-method-specific configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>The list of payment method types that customers can use. If no value is passed, Stripe will dynamically show relevant payment methods from your [payment method settings](https://dashboard.stripe.com/settings/payment_methods) (20+ payment methods [supported](https://docs.stripe.com/payments/payment-methods/integration-options#payment-method-product-support)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?>? PaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?>? PaymentMethodTypes { get => _explicitNullValuePaymentMethodTypes; set { _explicitNullValuePaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_types"); else _explicitNullProperties?.Remove("payment_method_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?>? _explicitNullValuePaymentMethodTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?> PaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?> PaymentMethodTypes { get => _explicitNullValuePaymentMethodTypes; set { _explicitNullValuePaymentMethodTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_types"); else _explicitNullProperties?.Remove("payment_method_types"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodTypesItem?> _explicitNullValuePaymentMethodTypes = default!;
 #endif
         /// <summary>Controls phone number collection settings during checkout.We recommend that you review your privacy policy and check with your legal contacts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection? PhoneNumberCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection? PhoneNumberCollection { get => _explicitNullValuePhoneNumberCollection; set { _explicitNullValuePhoneNumberCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_collection"); else _explicitNullProperties?.Remove("phone_number_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection? _explicitNullValuePhoneNumberCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection PhoneNumberCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection PhoneNumberCollection { get => _explicitNullValuePhoneNumberCollection; set { _explicitNullValuePhoneNumberCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_collection"); else _explicitNullProperties?.Remove("phone_number_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection _explicitNullValuePhoneNumberCollection = default!;
 #endif
         /// <summary>Settings that restrict the usage of a payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions? Restrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions? Restrictions { get => _explicitNullValueRestrictions; set { _explicitNullValueRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restrictions"); else _explicitNullProperties?.Remove("restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions? _explicitNullValueRestrictions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions Restrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions Restrictions { get => _explicitNullValueRestrictions; set { _explicitNullValueRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restrictions"); else _explicitNullProperties?.Remove("restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestRestrictions _explicitNullValueRestrictions = default!;
 #endif
         /// <summary>Configuration for collecting the customer&apos;s shipping address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection? ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection? ShippingAddressCollection { get => _explicitNullValueShippingAddressCollection; set { _explicitNullValueShippingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address_collection"); else _explicitNullProperties?.Remove("shipping_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection? _explicitNullValueShippingAddressCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection ShippingAddressCollection { get => _explicitNullValueShippingAddressCollection; set { _explicitNullValueShippingAddressCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address_collection"); else _explicitNullProperties?.Remove("shipping_address_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingAddressCollection _explicitNullValueShippingAddressCollection = default!;
 #endif
         /// <summary>The shipping rate options to apply to [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem>? ShippingOptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem>? ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_options"); else _explicitNullProperties?.Remove("shipping_options"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem>? _explicitNullValueShippingOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem> ShippingOptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem> ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_options"); else _explicitNullProperties?.Remove("shipping_options"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestShippingOptionsItem> _explicitNullValueShippingOptions = default!;
 #endif
         /// <summary>Describes the type of transaction being performed in order to customize relevant text on the page, such as the submit button. Changing this value will also affect the hostname in the [url](https://docs.stripe.com/api/payment_links/payment_links/object#url) property (example: `donate.stripe.com`).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubmitType? SubmitType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubmitType? SubmitType { get => _explicitNullValueSubmitType; set { _explicitNullValueSubmitType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit_type"); else _explicitNullProperties?.Remove("submit_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubmitType? _explicitNullValueSubmitType = default!;
         /// <summary>When creating a subscription, the specified configuration data will be used. There must be at least one line item with a recurring price to use `subscription_data`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData? SubscriptionData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData? SubscriptionData { get => _explicitNullValueSubscriptionData; set { _explicitNullValueSubscriptionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_data"); else _explicitNullProperties?.Remove("subscription_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData? _explicitNullValueSubscriptionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData SubscriptionData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData SubscriptionData { get => _explicitNullValueSubscriptionData; set { _explicitNullValueSubscriptionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_data"); else _explicitNullProperties?.Remove("subscription_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData _explicitNullValueSubscriptionData = default!;
 #endif
         /// <summary>Controls tax ID collection during checkout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection? TaxIdCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection? TaxIdCollection { get => _explicitNullValueTaxIdCollection; set { _explicitNullValueTaxIdCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_collection"); else _explicitNullProperties?.Remove("tax_id_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection? _explicitNullValueTaxIdCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection TaxIdCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection TaxIdCollection { get => _explicitNullValueTaxIdCollection; set { _explicitNullValueTaxIdCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_collection"); else _explicitNullProperties?.Remove("tax_id_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection _explicitNullValueTaxIdCollection = default!;
 #endif
         /// <summary>The account (if any) the payments will be attributed to for tax reporting, and where funds from each payment will be transferred to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData? TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -234,7 +330,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -316,7 +412,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubmitType>("submit_type", SubmitType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestSubscriptionData>("subscription_data", SubscriptionData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTaxIdCollection>("tax_id_collection", TaxIdCollection);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

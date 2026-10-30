@@ -11,70 +11,101 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTokensXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("bank_account") is { } nullNodeBankAccount && nullNodeBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankAccount = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("cvc_update") is { } nullNodeCvcUpdate && nullNodeCvcUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcUpdate = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("person") is { } nullNodePerson && nullNodePerson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Person = null;
+            if (parseNode.GetChildNode("pii") is { } nullNodePii && nullNodePii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pii = null;
+        }
+
         /// <summary>Information for the account this token represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount? Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccount _explicitNullValueAccount = default!;
 #endif
         /// <summary>The bank account this token will represent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount? BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount? BankAccount { get => _explicitNullValueBankAccount; set { _explicitNullValueBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account"); else _explicitNullProperties?.Remove("bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount? _explicitNullValueBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount BankAccount { get => _explicitNullValueBankAccount; set { _explicitNullValueBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account"); else _explicitNullProperties?.Remove("bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestBankAccount _explicitNullValueBankAccount = default!;
 #endif
         /// <summary>The card this token will represent. If you also pass in a customer, the card must be the ID of a card belonging to the customer. Otherwise, if you do not pass in a customer, this is a dictionary containing a user&apos;s credit card details, with the options described below.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Create a token for the customer, which is owned by the application&apos;s account. You can only use this with an [OAuth access token](https://docs.stripe.com/connect/standard-accounts) or [Stripe-Account header](https://docs.stripe.com/connect/authentication). Learn more about [cloning saved payment methods](https://docs.stripe.com/connect/cloning-saved-payment-methods).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Customer { get; set; }
+        public string? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public string Customer { get; set; }
+        public string Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string _explicitNullValueCustomer = default!;
 #endif
         /// <summary>The updated CVC value this token represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate? CvcUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate? CvcUpdate { get => _explicitNullValueCvcUpdate; set { _explicitNullValueCvcUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_update"); else _explicitNullProperties?.Remove("cvc_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate? _explicitNullValueCvcUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate CvcUpdate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate CvcUpdate { get => _explicitNullValueCvcUpdate; set { _explicitNullValueCvcUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_update"); else _explicitNullProperties?.Remove("cvc_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate _explicitNullValueCvcUpdate = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Information for the person this token represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson? Person { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson? Person { get => _explicitNullValuePerson; set { _explicitNullValuePerson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person"); else _explicitNullProperties?.Remove("person"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson? _explicitNullValuePerson = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson Person { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson Person { get => _explicitNullValuePerson; set { _explicitNullValuePerson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("person"); else _explicitNullProperties?.Remove("person"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson _explicitNullValuePerson = default!;
 #endif
         /// <summary>The PII this token represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii? Pii { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii? Pii { get => _explicitNullValuePii; set { _explicitNullValuePii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pii"); else _explicitNullProperties?.Remove("pii"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii? _explicitNullValuePii = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii Pii { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii Pii { get => _explicitNullValuePii; set { _explicitNullValuePii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pii"); else _explicitNullProperties?.Remove("pii"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii _explicitNullValuePii = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +149,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCvcUpdate>("cvc_update", CvcUpdate);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPerson>("person", Person);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii>("pii", Pii);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPii>("pii", Pii);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

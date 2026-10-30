@@ -11,64 +11,97 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostCreditNotesXWwwFormUrlencodedRequestLinesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("invoice_line_item") is { } nullNodeInvoiceLineItem && nullNodeInvoiceLineItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceLineItem = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("tax_amounts") is { } nullNodeTaxAmounts && nullNodeTaxAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxAmounts = null;
+            if (parseNode.GetChildNode("tax_rates") is { } nullNodeTaxRates && nullNodeTaxRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRates = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
+            if (parseNode.GetChildNode("unit_amount_decimal") is { } nullNodeUnitAmountDecimal && nullNodeUnitAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmountDecimal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The invoice_line_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceLineItem { get; set; }
+        public string? InvoiceLineItem { get => _explicitNullValueInvoiceLineItem; set { _explicitNullValueInvoiceLineItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_line_item"); else _explicitNullProperties?.Remove("invoice_line_item"); } }
+        private string? _explicitNullValueInvoiceLineItem = default!;
 #nullable restore
 #else
-        public string InvoiceLineItem { get; set; }
+        public string InvoiceLineItem { get => _explicitNullValueInvoiceLineItem; set { _explicitNullValueInvoiceLineItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_line_item"); else _explicitNullProperties?.Remove("invoice_line_item"); } }
+        private string _explicitNullValueInvoiceLineItem = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The quantity property</summary>
-        public int? Quantity { get; set; }
+        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private int? _explicitNullValueQuantity = default!;
         /// <summary>The tax_amounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts? TaxAmounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts? TaxAmounts { get => _explicitNullValueTaxAmounts; set { _explicitNullValueTaxAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amounts"); else _explicitNullProperties?.Remove("tax_amounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts? _explicitNullValueTaxAmounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts TaxAmounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts TaxAmounts { get => _explicitNullValueTaxAmounts; set { _explicitNullValueTaxAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amounts"); else _explicitNullProperties?.Remove("tax_amounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmounts _explicitNullValueTaxAmounts = default!;
 #endif
         /// <summary>The tax_rates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates? TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates? TaxRates { get => _explicitNullValueTaxRates; set { _explicitNullValueTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rates"); else _explicitNullProperties?.Remove("tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates? _explicitNullValueTaxRates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates TaxRates { get => _explicitNullValueTaxRates; set { _explicitNullValueTaxRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rates"); else _explicitNullProperties?.Remove("tax_rates"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxRates _explicitNullValueTaxRates = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemType? _explicitNullValueType = default!;
         /// <summary>The unit_amount property</summary>
-        public int? UnitAmount { get; set; }
+        public int? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
+        private int? _explicitNullValueUnitAmount = default!;
         /// <summary>The unit_amount_decimal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitAmountDecimal { get; set; }
+        public string? UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        private string? _explicitNullValueUnitAmountDecimal = default!;
 #nullable restore
 #else
-        public string UnitAmountDecimal { get; set; }
+        public string UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        private string _explicitNullValueUnitAmountDecimal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItem"/> and sets the default values.
@@ -85,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemType>("type", Type);
             writer.WriteIntValue("unit_amount", UnitAmount);
             writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

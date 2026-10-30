@@ -11,19 +11,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemand : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("average_amount") is { } nullNodeAverageAmount && nullNodeAverageAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageAmount = null;
+            if (parseNode.GetChildNode("maximum_amount") is { } nullNodeMaximumAmount && nullNodeMaximumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAmount = null;
+            if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
+            if (parseNode.GetChildNode("purchase_interval") is { } nullNodePurchaseInterval && nullNodePurchaseInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseInterval = null;
+            if (parseNode.GetChildNode("purchase_interval_count") is { } nullNodePurchaseIntervalCount && nullNodePurchaseIntervalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseIntervalCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The average_amount property</summary>
-        public int? AverageAmount { get; set; }
+        public int? AverageAmount { get => _explicitNullValueAverageAmount; set { _explicitNullValueAverageAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("average_amount"); else _explicitNullProperties?.Remove("average_amount"); } }
+        private int? _explicitNullValueAverageAmount = default!;
         /// <summary>The maximum_amount property</summary>
-        public int? MaximumAmount { get; set; }
+        public int? MaximumAmount { get => _explicitNullValueMaximumAmount; set { _explicitNullValueMaximumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_amount"); else _explicitNullProperties?.Remove("maximum_amount"); } }
+        private int? _explicitNullValueMaximumAmount = default!;
         /// <summary>The minimum_amount property</summary>
-        public int? MinimumAmount { get; set; }
+        public int? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        private int? _explicitNullValueMinimumAmount = default!;
         /// <summary>The purchase_interval property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemandPurchaseInterval? PurchaseInterval { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemandPurchaseInterval? PurchaseInterval { get => _explicitNullValuePurchaseInterval; set { _explicitNullValuePurchaseInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_interval"); else _explicitNullProperties?.Remove("purchase_interval"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemandPurchaseInterval? _explicitNullValuePurchaseInterval = default!;
         /// <summary>The purchase_interval_count property</summary>
-        public int? PurchaseIntervalCount { get; set; }
+        public int? PurchaseIntervalCount { get => _explicitNullValuePurchaseIntervalCount; set { _explicitNullValuePurchaseIntervalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_interval_count"); else _explicitNullProperties?.Remove("purchase_interval_count"); } }
+        private int? _explicitNullValuePurchaseIntervalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemand"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemand CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemand();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemand(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("minimum_amount", MinimumAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaOnDemandPurchaseInterval>("purchase_interval", PurchaseInterval);
             writer.WriteIntValue("purchase_interval_count", PurchaseIntervalCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

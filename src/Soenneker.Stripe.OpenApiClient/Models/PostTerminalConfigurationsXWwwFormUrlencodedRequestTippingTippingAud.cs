@@ -11,27 +11,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingAud : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fixed_amounts") is { } nullNodeFixedAmounts && nullNodeFixedAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedAmounts = null;
+            if (parseNode.GetChildNode("percentages") is { } nullNodePercentages && nullNodePercentages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentages = null;
+            if (parseNode.GetChildNode("smart_tip_threshold") is { } nullNodeSmartTipThreshold && nullNodeSmartTipThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartTipThreshold = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fixed_amounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? FixedAmounts { get; set; }
+        public List<int?>? FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
+        private List<int?>? _explicitNullValueFixedAmounts = default!;
 #nullable restore
 #else
-        public List<int?> FixedAmounts { get; set; }
+        public List<int?> FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
+        private List<int?> _explicitNullValueFixedAmounts = default!;
 #endif
         /// <summary>The percentages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Percentages { get; set; }
+        public List<int?>? Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
+        private List<int?>? _explicitNullValuePercentages = default!;
 #nullable restore
 #else
-        public List<int?> Percentages { get; set; }
+        public List<int?> Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
+        private List<int?> _explicitNullValuePercentages = default!;
 #endif
         /// <summary>The smart_tip_threshold property</summary>
-        public int? SmartTipThreshold { get; set; }
+        public int? SmartTipThreshold { get => _explicitNullValueSmartTipThreshold; set { _explicitNullValueSmartTipThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_tip_threshold"); else _explicitNullProperties?.Remove("smart_tip_threshold"); } }
+        private int? _explicitNullValueSmartTipThreshold = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingAud"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingAud CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingAud();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingAud(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("fixed_amounts", FixedAmounts);
             writer.WriteCollectionOfPrimitiveValues<int?>("percentages", Percentages);
             writer.WriteIntValue("smart_tip_threshold", SmartTipThreshold);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,49 +11,76 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecure : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ares_trans_status") is { } nullNodeAresTransStatus && nullNodeAresTransStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AresTransStatus = null;
+            if (parseNode.GetChildNode("cryptogram") is { } nullNodeCryptogram && nullNodeCryptogram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cryptogram = null;
+            if (parseNode.GetChildNode("electronic_commerce_indicator") is { } nullNodeElectronicCommerceIndicator && nullNodeElectronicCommerceIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectronicCommerceIndicator = null;
+            if (parseNode.GetChildNode("exemption_indicator") is { } nullNodeExemptionIndicator && nullNodeExemptionIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptionIndicator = null;
+            if (parseNode.GetChildNode("network_options") is { } nullNodeNetworkOptions && nullNodeNetworkOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkOptions = null;
+            if (parseNode.GetChildNode("requestor_challenge_indicator") is { } nullNodeRequestorChallengeIndicator && nullNodeRequestorChallengeIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestorChallengeIndicator = null;
+            if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ares_trans_status property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureAresTransStatus? AresTransStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureAresTransStatus? AresTransStatus { get => _explicitNullValueAresTransStatus; set { _explicitNullValueAresTransStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ares_trans_status"); else _explicitNullProperties?.Remove("ares_trans_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureAresTransStatus? _explicitNullValueAresTransStatus = default!;
         /// <summary>The cryptogram property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cryptogram { get; set; }
+        public string? Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        private string? _explicitNullValueCryptogram = default!;
 #nullable restore
 #else
-        public string Cryptogram { get; set; }
+        public string Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        private string _explicitNullValueCryptogram = default!;
 #endif
         /// <summary>The electronic_commerce_indicator property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureElectronicCommerceIndicator? ElectronicCommerceIndicator { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureElectronicCommerceIndicator? ElectronicCommerceIndicator { get => _explicitNullValueElectronicCommerceIndicator; set { _explicitNullValueElectronicCommerceIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronic_commerce_indicator"); else _explicitNullProperties?.Remove("electronic_commerce_indicator"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureElectronicCommerceIndicator? _explicitNullValueElectronicCommerceIndicator = default!;
         /// <summary>The exemption_indicator property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureExemptionIndicator? ExemptionIndicator { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureExemptionIndicator? ExemptionIndicator { get => _explicitNullValueExemptionIndicator; set { _explicitNullValueExemptionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exemption_indicator"); else _explicitNullProperties?.Remove("exemption_indicator"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureExemptionIndicator? _explicitNullValueExemptionIndicator = default!;
         /// <summary>The network_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions? NetworkOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions? NetworkOptions { get => _explicitNullValueNetworkOptions; set { _explicitNullValueNetworkOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_options"); else _explicitNullProperties?.Remove("network_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions? _explicitNullValueNetworkOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions NetworkOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions NetworkOptions { get => _explicitNullValueNetworkOptions; set { _explicitNullValueNetworkOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_options"); else _explicitNullProperties?.Remove("network_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptions _explicitNullValueNetworkOptions = default!;
 #endif
         /// <summary>The requestor_challenge_indicator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestorChallengeIndicator { get; set; }
+        public string? RequestorChallengeIndicator { get => _explicitNullValueRequestorChallengeIndicator; set { _explicitNullValueRequestorChallengeIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_challenge_indicator"); else _explicitNullProperties?.Remove("requestor_challenge_indicator"); } }
+        private string? _explicitNullValueRequestorChallengeIndicator = default!;
 #nullable restore
 #else
-        public string RequestorChallengeIndicator { get; set; }
+        public string RequestorChallengeIndicator { get => _explicitNullValueRequestorChallengeIndicator; set { _explicitNullValueRequestorChallengeIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_challenge_indicator"); else _explicitNullProperties?.Remove("requestor_challenge_indicator"); } }
+        private string _explicitNullValueRequestorChallengeIndicator = default!;
 #endif
         /// <summary>The transaction_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get; set; }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get; set; }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>The version property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureVersion? Version { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureVersion? _explicitNullValueVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecure"/> and sets the default values.
         /// </summary>
@@ -69,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("requestor_challenge_indicator", RequestorChallengeIndicator);
             writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureVersion>("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

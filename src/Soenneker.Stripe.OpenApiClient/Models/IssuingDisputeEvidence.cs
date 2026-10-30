@@ -11,74 +11,107 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingDisputeEvidence : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canceled") is { } nullNodeCanceled && nullNodeCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canceled = null;
+            if (parseNode.GetChildNode("duplicate") is { } nullNodeDuplicate && nullNodeDuplicate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duplicate = null;
+            if (parseNode.GetChildNode("fraudulent") is { } nullNodeFraudulent && nullNodeFraudulent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fraudulent = null;
+            if (parseNode.GetChildNode("merchandise_not_as_described") is { } nullNodeMerchandiseNotAsDescribed && nullNodeMerchandiseNotAsDescribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchandiseNotAsDescribed = null;
+            if (parseNode.GetChildNode("not_received") is { } nullNodeNotReceived && nullNodeNotReceived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotReceived = null;
+            if (parseNode.GetChildNode("no_valid_authorization") is { } nullNodeNoValidAuthorization && nullNodeNoValidAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoValidAuthorization = null;
+            if (parseNode.GetChildNode("other") is { } nullNodeOther && nullNodeOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Other = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("service_not_as_described") is { } nullNodeServiceNotAsDescribed && nullNodeServiceNotAsDescribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceNotAsDescribed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The canceled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence? Canceled { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence? Canceled { get => _explicitNullValueCanceled; set { _explicitNullValueCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled"); else _explicitNullProperties?.Remove("canceled"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence? _explicitNullValueCanceled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence Canceled { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence Canceled { get => _explicitNullValueCanceled; set { _explicitNullValueCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled"); else _explicitNullProperties?.Remove("canceled"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidence _explicitNullValueCanceled = default!;
 #endif
         /// <summary>The duplicate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence? Duplicate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence? Duplicate { get => _explicitNullValueDuplicate; set { _explicitNullValueDuplicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate"); else _explicitNullProperties?.Remove("duplicate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence? _explicitNullValueDuplicate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence Duplicate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence Duplicate { get => _explicitNullValueDuplicate; set { _explicitNullValueDuplicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate"); else _explicitNullProperties?.Remove("duplicate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidence _explicitNullValueDuplicate = default!;
 #endif
         /// <summary>The fraudulent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence? Fraudulent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence? Fraudulent { get => _explicitNullValueFraudulent; set { _explicitNullValueFraudulent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent"); else _explicitNullProperties?.Remove("fraudulent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence? _explicitNullValueFraudulent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence Fraudulent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence Fraudulent { get => _explicitNullValueFraudulent; set { _explicitNullValueFraudulent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent"); else _explicitNullProperties?.Remove("fraudulent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeFraudulentEvidence _explicitNullValueFraudulent = default!;
 #endif
         /// <summary>The merchandise_not_as_described property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence? MerchandiseNotAsDescribed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence? MerchandiseNotAsDescribed { get => _explicitNullValueMerchandiseNotAsDescribed; set { _explicitNullValueMerchandiseNotAsDescribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandise_not_as_described"); else _explicitNullProperties?.Remove("merchandise_not_as_described"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence? _explicitNullValueMerchandiseNotAsDescribed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence MerchandiseNotAsDescribed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence MerchandiseNotAsDescribed { get => _explicitNullValueMerchandiseNotAsDescribed; set { _explicitNullValueMerchandiseNotAsDescribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandise_not_as_described"); else _explicitNullProperties?.Remove("merchandise_not_as_described"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidence _explicitNullValueMerchandiseNotAsDescribed = default!;
 #endif
         /// <summary>The not_received property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence? NotReceived { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence? NotReceived { get => _explicitNullValueNotReceived; set { _explicitNullValueNotReceived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_received"); else _explicitNullProperties?.Remove("not_received"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence? _explicitNullValueNotReceived = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence NotReceived { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence NotReceived { get => _explicitNullValueNotReceived; set { _explicitNullValueNotReceived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_received"); else _explicitNullProperties?.Remove("not_received"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence _explicitNullValueNotReceived = default!;
 #endif
         /// <summary>The no_valid_authorization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence? NoValidAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence? NoValidAuthorization { get => _explicitNullValueNoValidAuthorization; set { _explicitNullValueNoValidAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no_valid_authorization"); else _explicitNullProperties?.Remove("no_valid_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence? _explicitNullValueNoValidAuthorization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence NoValidAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence NoValidAuthorization { get => _explicitNullValueNoValidAuthorization; set { _explicitNullValueNoValidAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no_valid_authorization"); else _explicitNullProperties?.Remove("no_valid_authorization"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence _explicitNullValueNoValidAuthorization = default!;
 #endif
         /// <summary>The other property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence? Other { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence? Other { get => _explicitNullValueOther; set { _explicitNullValueOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other"); else _explicitNullProperties?.Remove("other"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence? _explicitNullValueOther = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence Other { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence Other { get => _explicitNullValueOther; set { _explicitNullValueOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other"); else _explicitNullProperties?.Remove("other"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence _explicitNullValueOther = default!;
 #endif
         /// <summary>The reason for filing the dispute. Its value will match the field containing the evidence.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason? _explicitNullValueReason = default!;
         /// <summary>The service_not_as_described property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence? ServiceNotAsDescribed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence? ServiceNotAsDescribed { get => _explicitNullValueServiceNotAsDescribed; set { _explicitNullValueServiceNotAsDescribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_not_as_described"); else _explicitNullProperties?.Remove("service_not_as_described"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence? _explicitNullValueServiceNotAsDescribed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence ServiceNotAsDescribed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence ServiceNotAsDescribed { get => _explicitNullValueServiceNotAsDescribed; set { _explicitNullValueServiceNotAsDescribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_not_as_described"); else _explicitNullProperties?.Remove("service_not_as_described"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence _explicitNullValueServiceNotAsDescribed = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence"/> and sets the default values.
@@ -95,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +165,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence>("other", Other);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence>("service_not_as_described", ServiceNotAsDescribed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

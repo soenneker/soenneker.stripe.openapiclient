@@ -11,88 +11,127 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSubscriptionSchedulesXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_mode") is { } nullNodeBillingMode && nullNodeBillingMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingMode = null;
+            if (parseNode.GetChildNode("customer") is { } nullNodeCustomer && nullNodeCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customer = null;
+            if (parseNode.GetChildNode("customer_account") is { } nullNodeCustomerAccount && nullNodeCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccount = null;
+            if (parseNode.GetChildNode("default_settings") is { } nullNodeDefaultSettings && nullNodeDefaultSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSettings = null;
+            if (parseNode.GetChildNode("end_behavior") is { } nullNodeEndBehavior && nullNodeEndBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBehavior = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("from_subscription") is { } nullNodeFromSubscription && nullNodeFromSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromSubscription = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("pause_schedules") is { } nullNodePauseSchedules && nullNodePauseSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseSchedules = null;
+            if (parseNode.GetChildNode("phases") is { } nullNodePhases && nullNodePhases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phases = null;
+            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+        }
+
         /// <summary>Controls how prorations and invoices for subscriptions are calculated and orchestrated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode? BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode? BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode? _explicitNullValueBillingMode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode BillingMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_mode"); else _explicitNullProperties?.Remove("billing_mode"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestBillingMode _explicitNullValueBillingMode = default!;
 #endif
         /// <summary>The identifier of the customer to create the subscription schedule for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Customer { get; set; }
+        public string? Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string? _explicitNullValueCustomer = default!;
 #nullable restore
 #else
-        public string Customer { get; set; }
+        public string Customer { get => _explicitNullValueCustomer; set { _explicitNullValueCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer"); else _explicitNullProperties?.Remove("customer"); } }
+        private string _explicitNullValueCustomer = default!;
 #endif
         /// <summary>The identifier of the account to create the subscription schedule for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccount { get; set; }
+        public string? CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string? _explicitNullValueCustomerAccount = default!;
 #nullable restore
 #else
-        public string CustomerAccount { get; set; }
+        public string CustomerAccount { get => _explicitNullValueCustomerAccount; set { _explicitNullValueCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account"); else _explicitNullProperties?.Remove("customer_account"); } }
+        private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>Object representing the subscription schedule&apos;s default settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings? DefaultSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings? DefaultSettings { get => _explicitNullValueDefaultSettings; set { _explicitNullValueDefaultSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_settings"); else _explicitNullProperties?.Remove("default_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings? _explicitNullValueDefaultSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings DefaultSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings DefaultSettings { get => _explicitNullValueDefaultSettings; set { _explicitNullValueDefaultSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_settings"); else _explicitNullProperties?.Remove("default_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestDefaultSettings _explicitNullValueDefaultSettings = default!;
 #endif
         /// <summary>Behavior of the subscription schedule and underlying subscription when it ends. Possible values are `release` or `cancel` with the default being `release`. `release` will end the subscription schedule and keep the underlying subscription running. `cancel` will end the subscription schedule and cancel the underlying subscription.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestEndBehavior? EndBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestEndBehavior? EndBehavior { get => _explicitNullValueEndBehavior; set { _explicitNullValueEndBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_behavior"); else _explicitNullProperties?.Remove("end_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestEndBehavior? _explicitNullValueEndBehavior = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Migrate an existing subscription to be managed by a subscription schedule. If this parameter is set, a subscription schedule will be created using the subscription&apos;s item(s), set to auto-renew using the subscription&apos;s interval. When using this parameter, other parameters (such as phase values) cannot be set. To create a subscription schedule with other modifications, we recommend making two separate API calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromSubscription { get; set; }
+        public string? FromSubscription { get => _explicitNullValueFromSubscription; set { _explicitNullValueFromSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_subscription"); else _explicitNullProperties?.Remove("from_subscription"); } }
+        private string? _explicitNullValueFromSubscription = default!;
 #nullable restore
 #else
-        public string FromSubscription { get; set; }
+        public string FromSubscription { get => _explicitNullValueFromSubscription; set { _explicitNullValueFromSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_subscription"); else _explicitNullProperties?.Remove("from_subscription"); } }
+        private string _explicitNullValueFromSubscription = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Configures the subscription&apos;s pause behavior and, optionally, its resume behavior. Only one entry is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem>? PauseSchedules { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem>? PauseSchedules { get => _explicitNullValuePauseSchedules; set { _explicitNullValuePauseSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_schedules"); else _explicitNullProperties?.Remove("pause_schedules"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem>? _explicitNullValuePauseSchedules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem> PauseSchedules { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem> PauseSchedules { get => _explicitNullValuePauseSchedules; set { _explicitNullValuePauseSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_schedules"); else _explicitNullProperties?.Remove("pause_schedules"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem> _explicitNullValuePauseSchedules = default!;
 #endif
         /// <summary>List representing phases of the subscription schedule. Each phase can be customized to have different durations, plans, and coupons. If there are multiple phases, the `end_date` of one phase will always equal the `start_date` of the next phase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem>? Phases { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem>? Phases { get => _explicitNullValuePhases; set { _explicitNullValuePhases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phases"); else _explicitNullProperties?.Remove("phases"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem>? _explicitNullValuePhases = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem> Phases { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem> Phases { get => _explicitNullValuePhases; set { _explicitNullValuePhases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phases"); else _explicitNullProperties?.Remove("phases"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem> _explicitNullValuePhases = default!;
 #endif
         /// <summary>When the subscription schedule starts. We recommend using `now` so that it starts the subscription immediately, and to avoid unexpected behavior due to request delays or clock skew resulting in a slightly backdated or postdated start. You can also use a Unix timestamp to backdate the subscription so that it starts on a past date, or set a future date for the subscription to start on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate? StartDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate StartDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate _explicitNullValueStartDate = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -102,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,7 +181,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPauseSchedulesItem>("pause_schedules", PauseSchedules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem>("phases", Phases);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate>("start_date", StartDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestStartDate>("start_date", StartDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,17 +11,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InvoicesResourceStatusTransitions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("finalized_at") is { } nullNodeFinalizedAt && nullNodeFinalizedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalizedAt = null;
+            if (parseNode.GetChildNode("marked_uncollectible_at") is { } nullNodeMarkedUncollectibleAt && nullNodeMarkedUncollectibleAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkedUncollectibleAt = null;
+            if (parseNode.GetChildNode("paid_at") is { } nullNodePaidAt && nullNodePaidAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidAt = null;
+            if (parseNode.GetChildNode("voided_at") is { } nullNodeVoidedAt && nullNodeVoidedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the invoice draft was finalized.</summary>
-        public int? FinalizedAt { get; set; }
+        public int? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
+        private int? _explicitNullValueFinalizedAt = default!;
         /// <summary>The time that the invoice was marked uncollectible.</summary>
-        public int? MarkedUncollectibleAt { get; set; }
+        public int? MarkedUncollectibleAt { get => _explicitNullValueMarkedUncollectibleAt; set { _explicitNullValueMarkedUncollectibleAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marked_uncollectible_at"); else _explicitNullProperties?.Remove("marked_uncollectible_at"); } }
+        private int? _explicitNullValueMarkedUncollectibleAt = default!;
         /// <summary>The time that the invoice was paid.</summary>
-        public int? PaidAt { get; set; }
+        public int? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
+        private int? _explicitNullValuePaidAt = default!;
         /// <summary>The time that the invoice was voided.</summary>
-        public int? VoidedAt { get; set; }
+        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
+        private int? _explicitNullValueVoidedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("marked_uncollectible_at", MarkedUncollectibleAt);
             writer.WriteIntValue("paid_at", PaidAt);
             writer.WriteIntValue("voided_at", VoidedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

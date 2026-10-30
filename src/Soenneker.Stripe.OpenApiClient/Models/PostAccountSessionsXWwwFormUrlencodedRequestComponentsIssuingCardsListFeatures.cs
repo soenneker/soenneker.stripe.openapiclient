@@ -11,19 +11,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountSessionsXWwwFormUrlencodedRequestComponentsIssuingCardsListFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cardholder_management") is { } nullNodeCardholderManagement && nullNodeCardholderManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderManagement = null;
+            if (parseNode.GetChildNode("card_management") is { } nullNodeCardManagement && nullNodeCardManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardManagement = null;
+            if (parseNode.GetChildNode("card_spend_dispute_management") is { } nullNodeCardSpendDisputeManagement && nullNodeCardSpendDisputeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardSpendDisputeManagement = null;
+            if (parseNode.GetChildNode("disable_stripe_user_authentication") is { } nullNodeDisableStripeUserAuthentication && nullNodeDisableStripeUserAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableStripeUserAuthentication = null;
+            if (parseNode.GetChildNode("spend_control_management") is { } nullNodeSpendControlManagement && nullNodeSpendControlManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendControlManagement = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cardholder_management property</summary>
-        public bool? CardholderManagement { get; set; }
+        public bool? CardholderManagement { get => _explicitNullValueCardholderManagement; set { _explicitNullValueCardholderManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_management"); else _explicitNullProperties?.Remove("cardholder_management"); } }
+        private bool? _explicitNullValueCardholderManagement = default!;
         /// <summary>The card_management property</summary>
-        public bool? CardManagement { get; set; }
+        public bool? CardManagement { get => _explicitNullValueCardManagement; set { _explicitNullValueCardManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_management"); else _explicitNullProperties?.Remove("card_management"); } }
+        private bool? _explicitNullValueCardManagement = default!;
         /// <summary>The card_spend_dispute_management property</summary>
-        public bool? CardSpendDisputeManagement { get; set; }
+        public bool? CardSpendDisputeManagement { get => _explicitNullValueCardSpendDisputeManagement; set { _explicitNullValueCardSpendDisputeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_spend_dispute_management"); else _explicitNullProperties?.Remove("card_spend_dispute_management"); } }
+        private bool? _explicitNullValueCardSpendDisputeManagement = default!;
         /// <summary>The disable_stripe_user_authentication property</summary>
-        public bool? DisableStripeUserAuthentication { get; set; }
+        public bool? DisableStripeUserAuthentication { get => _explicitNullValueDisableStripeUserAuthentication; set { _explicitNullValueDisableStripeUserAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_stripe_user_authentication"); else _explicitNullProperties?.Remove("disable_stripe_user_authentication"); } }
+        private bool? _explicitNullValueDisableStripeUserAuthentication = default!;
         /// <summary>The spend_control_management property</summary>
-        public bool? SpendControlManagement { get; set; }
+        public bool? SpendControlManagement { get => _explicitNullValueSpendControlManagement; set { _explicitNullValueSpendControlManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spend_control_management"); else _explicitNullProperties?.Remove("spend_control_management"); } }
+        private bool? _explicitNullValueSpendControlManagement = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsIssuingCardsListFeatures"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsIssuingCardsListFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsIssuingCardsListFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsIssuingCardsListFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("card_spend_dispute_management", CardSpendDisputeManagement);
             writer.WriteBoolValue("disable_stripe_user_authentication", DisableStripeUserAuthentication);
             writer.WriteBoolValue("spend_control_management", SpendControlManagement);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

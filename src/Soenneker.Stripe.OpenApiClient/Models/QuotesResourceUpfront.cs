@@ -11,28 +11,45 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuotesResourceUpfront : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_subtotal") is { } nullNodeAmountSubtotal && nullNodeAmountSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountSubtotal = null;
+            if (parseNode.GetChildNode("amount_total") is { } nullNodeAmountTotal && nullNodeAmountTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTotal = null;
+            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("total_details") is { } nullNodeTotalDetails && nullNodeTotalDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total before any discounts or taxes are applied.</summary>
-        public int? AmountSubtotal { get; set; }
+        public int? AmountSubtotal { get => _explicitNullValueAmountSubtotal; set { _explicitNullValueAmountSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_subtotal"); else _explicitNullProperties?.Remove("amount_subtotal"); } }
+        private int? _explicitNullValueAmountSubtotal = default!;
         /// <summary>Total after discounts and taxes are applied.</summary>
-        public int? AmountTotal { get; set; }
+        public int? AmountTotal { get => _explicitNullValueAmountTotal; set { _explicitNullValueAmountTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_total"); else _explicitNullProperties?.Remove("amount_total"); } }
+        private int? _explicitNullValueAmountTotal = default!;
         /// <summary>The line items that will appear on the next invoice after this quote is accepted. This does not include pending invoice items that exist on the customer but may still be included in the next invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems _explicitNullValueLineItems = default!;
 #endif
         /// <summary>The total_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails? TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails? TotalDetails { get => _explicitNullValueTotalDetails; set { _explicitNullValueTotalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_details"); else _explicitNullProperties?.Remove("total_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails? _explicitNullValueTotalDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails TotalDetails { get => _explicitNullValueTotalDetails; set { _explicitNullValueTotalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_details"); else _explicitNullProperties?.Remove("total_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails _explicitNullValueTotalDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfrontLineItems>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails>("total_details", TotalDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

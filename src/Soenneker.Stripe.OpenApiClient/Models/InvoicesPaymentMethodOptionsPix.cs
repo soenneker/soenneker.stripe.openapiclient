@@ -12,13 +12,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvoicesPaymentMethodOptionsPix : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_includes_iof") is { } nullNodeAmountIncludesIof && nullNodeAmountIncludesIof.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountIncludesIof = null;
+            if (parseNode.GetChildNode("expires_after_seconds") is { } nullNodeExpiresAfterSeconds && nullNodeExpiresAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterSeconds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if the amount includes the IOF tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsPixAmountIncludesIof? AmountIncludesIof { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsPixAmountIncludesIof? AmountIncludesIof { get => _explicitNullValueAmountIncludesIof; set { _explicitNullValueAmountIncludesIof = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_includes_iof"); else _explicitNullProperties?.Remove("amount_includes_iof"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsPixAmountIncludesIof? _explicitNullValueAmountIncludesIof = default!;
         /// <summary>The number of seconds (between 10 and 1209600) after which Pix payment will expire. Defaults to 86400 seconds.</summary>
-        public int? ExpiresAfterSeconds { get; set; }
+        public int? ExpiresAfterSeconds { get => _explicitNullValueExpiresAfterSeconds; set { _explicitNullValueExpiresAfterSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_seconds"); else _explicitNullProperties?.Remove("expires_after_seconds"); } }
+        private int? _explicitNullValueExpiresAfterSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsPix"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsPix CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsPix();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsPix(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsPixAmountIncludesIof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteIntValue("expires_after_seconds", ExpiresAfterSeconds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

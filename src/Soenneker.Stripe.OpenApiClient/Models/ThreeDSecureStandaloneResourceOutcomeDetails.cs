@@ -12,80 +12,119 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureStandaloneResourceOutcomeDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acs_transaction_id") is { } nullNodeAcsTransactionId && nullNodeAcsTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcsTransactionId = null;
+            if (parseNode.GetChildNode("ares") is { } nullNodeAres && nullNodeAres.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ares = null;
+            if (parseNode.GetChildNode("ares_trans_status") is { } nullNodeAresTransStatus && nullNodeAresTransStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AresTransStatus = null;
+            if (parseNode.GetChildNode("cryptogram") is { } nullNodeCryptogram && nullNodeCryptogram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cryptogram = null;
+            if (parseNode.GetChildNode("ds_transaction_id") is { } nullNodeDsTransactionId && nullNodeDsTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DsTransactionId = null;
+            if (parseNode.GetChildNode("eci") is { } nullNodeEci && nullNodeEci.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eci = null;
+            if (parseNode.GetChildNode("network_details") is { } nullNodeNetworkDetails && nullNodeNetworkDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkDetails = null;
+            if (parseNode.GetChildNode("protocol_version") is { } nullNodeProtocolVersion && nullNodeProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtocolVersion = null;
+            if (parseNode.GetChildNode("requestor_challenge_indicator") is { } nullNodeRequestorChallengeIndicator && nullNodeRequestorChallengeIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestorChallengeIndicator = null;
+            if (parseNode.GetChildNode("rreq") is { } nullNodeRreq && nullNodeRreq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rreq = null;
+            if (parseNode.GetChildNode("rreq_trans_status") is { } nullNodeRreqTransStatus && nullNodeRreqTransStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RreqTransStatus = null;
+            if (parseNode.GetChildNode("three_ds_server_transaction_id") is { } nullNodeThreeDsServerTransactionId && nullNodeThreeDsServerTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDsServerTransactionId = null;
+        }
+
         /// <summary>Universally unique transaction identifier assigned by the issuer to identify the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcsTransactionId { get; set; }
+        public string? AcsTransactionId { get => _explicitNullValueAcsTransactionId; set { _explicitNullValueAcsTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acs_transaction_id"); else _explicitNullProperties?.Remove("acs_transaction_id"); } }
+        private string? _explicitNullValueAcsTransactionId = default!;
 #nullable restore
 #else
-        public string AcsTransactionId { get; set; }
+        public string AcsTransactionId { get => _explicitNullValueAcsTransactionId; set { _explicitNullValueAcsTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acs_transaction_id"); else _explicitNullProperties?.Remove("acs_transaction_id"); } }
+        private string _explicitNullValueAcsTransactionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Authentication Response Message (ARes) is the issuer&apos;s response to the AReq message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ares { get; set; }
+        public string? Ares { get => _explicitNullValueAres; set { _explicitNullValueAres = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ares"); else _explicitNullProperties?.Remove("ares"); } }
+        private string? _explicitNullValueAres = default!;
 #nullable restore
 #else
-        public string Ares { get; set; }
+        public string Ares { get => _explicitNullValueAres; set { _explicitNullValueAres = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ares"); else _explicitNullProperties?.Remove("ares"); } }
+        private string _explicitNullValueAres = default!;
 #endif
         /// <summary>TransStatus field on the ARes</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsAresTransStatus? AresTransStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsAresTransStatus? AresTransStatus { get => _explicitNullValueAresTransStatus; set { _explicitNullValueAresTransStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ares_trans_status"); else _explicitNullProperties?.Remove("ares_trans_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsAresTransStatus? _explicitNullValueAresTransStatus = default!;
         /// <summary>A 28-character Base64 string proving that 3DS was completed. Store this value securely, and don’t reuse it for multiple authorizations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cryptogram { get; set; }
+        public string? Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        private string? _explicitNullValueCryptogram = default!;
 #nullable restore
 #else
-        public string Cryptogram { get; set; }
+        public string Cryptogram { get => _explicitNullValueCryptogram; set { _explicitNullValueCryptogram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cryptogram"); else _explicitNullProperties?.Remove("cryptogram"); } }
+        private string _explicitNullValueCryptogram = default!;
 #endif
         /// <summary>The 3DS2 Directory Server Transaction ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DsTransactionId { get; set; }
+        public string? DsTransactionId { get => _explicitNullValueDsTransactionId; set { _explicitNullValueDsTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ds_transaction_id"); else _explicitNullProperties?.Remove("ds_transaction_id"); } }
+        private string? _explicitNullValueDsTransactionId = default!;
 #nullable restore
 #else
-        public string DsTransactionId { get; set; }
+        public string DsTransactionId { get => _explicitNullValueDsTransactionId; set { _explicitNullValueDsTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ds_transaction_id"); else _explicitNullProperties?.Remove("ds_transaction_id"); } }
+        private string _explicitNullValueDsTransactionId = default!;
 #endif
         /// <summary>Electronic Commerce Indicator provided by the issuer to indicate the result of this 3DS Authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Eci { get; set; }
+        public string? Eci { get => _explicitNullValueEci; set { _explicitNullValueEci = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci"); else _explicitNullProperties?.Remove("eci"); } }
+        private string? _explicitNullValueEci = default!;
 #nullable restore
 #else
-        public string Eci { get; set; }
+        public string Eci { get => _explicitNullValueEci; set { _explicitNullValueEci = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eci"); else _explicitNullProperties?.Remove("eci"); } }
+        private string _explicitNullValueEci = default!;
 #endif
         /// <summary>Contains details specific to the individual network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails? NetworkDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails? NetworkDetails { get => _explicitNullValueNetworkDetails; set { _explicitNullValueNetworkDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_details"); else _explicitNullProperties?.Remove("network_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails? _explicitNullValueNetworkDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails NetworkDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails NetworkDetails { get => _explicitNullValueNetworkDetails; set { _explicitNullValueNetworkDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_details"); else _explicitNullProperties?.Remove("network_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceNetworkDetails _explicitNullValueNetworkDetails = default!;
 #endif
         /// <summary>The 3DS protocol version used for this 3DS Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsProtocolVersion? ProtocolVersion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsProtocolVersion? ProtocolVersion { get => _explicitNullValueProtocolVersion; set { _explicitNullValueProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocol_version"); else _explicitNullProperties?.Remove("protocol_version"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsProtocolVersion? _explicitNullValueProtocolVersion = default!;
         /// <summary>The indicator provided to the issuer by Stripe in the AReq that indicates whether a challenge is requested for this Authentication. This indicator should match the flow_preference you specified but may be overridden (for compliance reasons for example).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRequestorChallengeIndicator? RequestorChallengeIndicator { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRequestorChallengeIndicator? RequestorChallengeIndicator { get => _explicitNullValueRequestorChallengeIndicator; set { _explicitNullValueRequestorChallengeIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_challenge_indicator"); else _explicitNullProperties?.Remove("requestor_challenge_indicator"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRequestorChallengeIndicator? _explicitNullValueRequestorChallengeIndicator = default!;
         /// <summary>The Results Request Message (RReq) communicates the results of the authentication or verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rreq { get; set; }
+        public string? Rreq { get => _explicitNullValueRreq; set { _explicitNullValueRreq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rreq"); else _explicitNullProperties?.Remove("rreq"); } }
+        private string? _explicitNullValueRreq = default!;
 #nullable restore
 #else
-        public string Rreq { get; set; }
+        public string Rreq { get => _explicitNullValueRreq; set { _explicitNullValueRreq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rreq"); else _explicitNullProperties?.Remove("rreq"); } }
+        private string _explicitNullValueRreq = default!;
 #endif
         /// <summary>TransStatus field on the RReq</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRreqTransStatus? RreqTransStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRreqTransStatus? RreqTransStatus { get => _explicitNullValueRreqTransStatus; set { _explicitNullValueRreqTransStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rreq_trans_status"); else _explicitNullProperties?.Remove("rreq_trans_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRreqTransStatus? _explicitNullValueRreqTransStatus = default!;
         /// <summary>Universally unique transaction identifier assigned by Stripe to identify the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreeDsServerTransactionId { get; set; }
+        public string? ThreeDsServerTransactionId { get => _explicitNullValueThreeDsServerTransactionId; set { _explicitNullValueThreeDsServerTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_ds_server_transaction_id"); else _explicitNullProperties?.Remove("three_ds_server_transaction_id"); } }
+        private string? _explicitNullValueThreeDsServerTransactionId = default!;
 #nullable restore
 #else
-        public string ThreeDsServerTransactionId { get; set; }
+        public string ThreeDsServerTransactionId { get => _explicitNullValueThreeDsServerTransactionId; set { _explicitNullValueThreeDsServerTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_ds_server_transaction_id"); else _explicitNullProperties?.Remove("three_ds_server_transaction_id"); } }
+        private string _explicitNullValueThreeDsServerTransactionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails"/> and sets the default values.
@@ -102,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -145,6 +184,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("rreq", Rreq);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceOutcomeDetailsRreqTransStatus>("rreq_trans_status", RreqTransStatus);
             writer.WriteStringValue("three_ds_server_transaction_id", ThreeDsServerTransactionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

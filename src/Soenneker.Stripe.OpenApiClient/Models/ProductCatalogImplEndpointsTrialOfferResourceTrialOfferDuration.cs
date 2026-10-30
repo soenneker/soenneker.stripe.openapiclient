@@ -11,19 +11,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductCatalogImplEndpointsTrialOfferResourceTrialOfferDuration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("relative") is { } nullNodeRelative && nullNodeRelative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relative = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The relative property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration? Relative { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration? Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration? _explicitNullValueRelative = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration Relative { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration _explicitNullValueRelative = default!;
 #endif
         /// <summary>The type of trial offer duration.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RelativeType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RelativeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.RelativeType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTrialOfferDuration"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTrialOfferDuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTrialOfferDuration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTrialOfferDuration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceRelativeDuration>("relative", Relative);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RelativeType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

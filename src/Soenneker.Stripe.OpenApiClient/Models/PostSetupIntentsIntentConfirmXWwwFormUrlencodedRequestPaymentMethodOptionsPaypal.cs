@@ -11,16 +11,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypal : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_agreement_id") is { } nullNodeBillingAgreementId && nullNodeBillingAgreementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAgreementId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing_agreement_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingAgreementId { get; set; }
+        public string? BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
+        private string? _explicitNullValueBillingAgreementId = default!;
 #nullable restore
 #else
-        public string BillingAgreementId { get; set; }
+        public string BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
+        private string _explicitNullValueBillingAgreementId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypal"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("billing_agreement_id", BillingAgreementId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

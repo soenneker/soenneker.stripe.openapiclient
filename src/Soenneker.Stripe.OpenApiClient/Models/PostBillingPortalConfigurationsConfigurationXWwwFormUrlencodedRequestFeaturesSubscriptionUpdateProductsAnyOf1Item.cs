@@ -11,32 +11,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1Item : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adjustable_quantity") is { } nullNodeAdjustableQuantity && nullNodeAdjustableQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustableQuantity = null;
+            if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The adjustable_quantity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity? AdjustableQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity? AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity? _explicitNullValueAdjustableQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity AdjustableQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity _explicitNullValueAdjustableQuantity = default!;
 #endif
         /// <summary>The prices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Prices { get; set; }
+        public List<string>? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<string>? _explicitNullValuePrices = default!;
 #nullable restore
 #else
-        public List<string> Prices { get; set; }
+        public List<string> Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        private List<string> _explicitNullValuePrices = default!;
 #endif
         /// <summary>The product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Product { get; set; }
+        public string? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private string? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public string Product { get; set; }
+        public string Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private string _explicitNullValueProduct = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1Item"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1Item CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1Item();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1Item(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateProductsAnyOf1ItemAdjustableQuantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteCollectionOfPrimitiveValues<string>("prices", Prices);
             writer.WriteStringValue("product", Product);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

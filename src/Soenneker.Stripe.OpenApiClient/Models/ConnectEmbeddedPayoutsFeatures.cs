@@ -11,19 +11,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectEmbeddedPayoutsFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("disable_stripe_user_authentication") is { } nullNodeDisableStripeUserAuthentication && nullNodeDisableStripeUserAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableStripeUserAuthentication = null;
+            if (parseNode.GetChildNode("edit_payout_schedule") is { } nullNodeEditPayoutSchedule && nullNodeEditPayoutSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditPayoutSchedule = null;
+            if (parseNode.GetChildNode("external_account_collection") is { } nullNodeExternalAccountCollection && nullNodeExternalAccountCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAccountCollection = null;
+            if (parseNode.GetChildNode("instant_payouts") is { } nullNodeInstantPayouts && nullNodeInstantPayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstantPayouts = null;
+            if (parseNode.GetChildNode("standard_payouts") is { } nullNodeStandardPayouts && nullNodeStandardPayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardPayouts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether Stripe user authentication is disabled. This value can only be `true` for accounts where `controller.requirement_collection` is `application` for the account. The default value is the opposite of the `external_account_collection` value. For example, if you don&apos;t set `external_account_collection`, it defaults to `true` and `disable_stripe_user_authentication` defaults to `false`.</summary>
-        public bool? DisableStripeUserAuthentication { get; set; }
+        public bool? DisableStripeUserAuthentication { get => _explicitNullValueDisableStripeUserAuthentication; set { _explicitNullValueDisableStripeUserAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_stripe_user_authentication"); else _explicitNullProperties?.Remove("disable_stripe_user_authentication"); } }
+        private bool? _explicitNullValueDisableStripeUserAuthentication = default!;
         /// <summary>Whether to allow payout schedule to be changed. Defaults to `true` when `controller.losses.payments` is set to `stripe` for the account, otherwise `false`.</summary>
-        public bool? EditPayoutSchedule { get; set; }
+        public bool? EditPayoutSchedule { get => _explicitNullValueEditPayoutSchedule; set { _explicitNullValueEditPayoutSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_payout_schedule"); else _explicitNullProperties?.Remove("edit_payout_schedule"); } }
+        private bool? _explicitNullValueEditPayoutSchedule = default!;
         /// <summary>Whether external account collection is enabled. This feature can only be `false` for accounts where you’re responsible for collecting updated information when requirements are due or change, like Custom accounts. The default value for this feature is `true`.</summary>
-        public bool? ExternalAccountCollection { get; set; }
+        public bool? ExternalAccountCollection { get => _explicitNullValueExternalAccountCollection; set { _explicitNullValueExternalAccountCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_account_collection"); else _explicitNullProperties?.Remove("external_account_collection"); } }
+        private bool? _explicitNullValueExternalAccountCollection = default!;
         /// <summary>Whether to allow creation of instant payouts. The default value is `enabled` when Stripe is responsible for negative account balances, and `use_dashboard_rules` otherwise.</summary>
-        public bool? InstantPayouts { get; set; }
+        public bool? InstantPayouts { get => _explicitNullValueInstantPayouts; set { _explicitNullValueInstantPayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instant_payouts"); else _explicitNullProperties?.Remove("instant_payouts"); } }
+        private bool? _explicitNullValueInstantPayouts = default!;
         /// <summary>Whether to allow creation of standard payouts. Defaults to `true` when `controller.losses.payments` is set to `stripe` for the account, otherwise `false`.</summary>
-        public bool? StandardPayouts { get; set; }
+        public bool? StandardPayouts { get => _explicitNullValueStandardPayouts; set { _explicitNullValueStandardPayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_payouts"); else _explicitNullProperties?.Remove("standard_payouts"); } }
+        private bool? _explicitNullValueStandardPayouts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsFeatures"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("external_account_collection", ExternalAccountCollection);
             writer.WriteBoolValue("instant_payouts", InstantPayouts);
             writer.WriteBoolValue("standard_payouts", StandardPayouts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

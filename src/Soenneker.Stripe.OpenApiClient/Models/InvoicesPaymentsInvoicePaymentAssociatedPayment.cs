@@ -11,35 +11,53 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InvoicesPaymentsInvoicePaymentAssociatedPayment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charge") is { } nullNodeCharge && nullNodeCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charge = null;
+            if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
+            if (parseNode.GetChildNode("payment_record") is { } nullNodePaymentRecord && nullNodePaymentRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentRecord = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the successful charge for this payment when `type` is `charge`. Note: charge is only surfaced if the charge object is not associated with a payment intent. If the charge object does have a payment intent, the Invoice Payment surfaces the payment intent instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge? Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge? _explicitNullValueCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>ID of the PaymentIntent associated with this payment when `type` is `payment_intent`. Note: This property is only populated for invoices finalized on or after March 15th, 2019.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent? _explicitNullValuePaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent _explicitNullValuePaymentIntent = default!;
 #endif
         /// <summary>ID of the PaymentRecord associated with this payment when `type` is `payment_record`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord? PaymentRecord { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord? PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord? _explicitNullValuePaymentRecord = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord PaymentRecord { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord _explicitNullValuePaymentRecord = default!;
 #endif
         /// <summary>Type of payment object associated with this invoice payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentIntent>("payment_intent", PaymentIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentPaymentRecord>("payment_record", PaymentRecord);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPaymentType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

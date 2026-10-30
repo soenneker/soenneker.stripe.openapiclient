@@ -11,27 +11,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bill_for") is { } nullNodeBillFor && nullNodeBillFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillFor = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("invoicing_behavior") is { } nullNodeInvoicingBehavior && nullNodeInvoicingBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoicingBehavior = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Controls what to bill for when pausing the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor? BillFor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor? BillFor { get => _explicitNullValueBillFor; set { _explicitNullValueBillFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_for"); else _explicitNullProperties?.Remove("bill_for"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor? _explicitNullValueBillFor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor BillFor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor BillFor { get => _explicitNullValueBillFor; set { _explicitNullValueBillFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_for"); else _explicitNullProperties?.Remove("bill_for"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor _explicitNullValueBillFor = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Determines how to handle debits and credits when pausing. Defaults to `pending_invoice_item`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestInvoicingBehavior? InvoicingBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestInvoicingBehavior? InvoicingBehavior { get => _explicitNullValueInvoicingBehavior; set { _explicitNullValueInvoicingBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoicing_behavior"); else _explicitNullProperties?.Remove("invoicing_behavior"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestInvoicingBehavior? _explicitNullValueInvoicingBehavior = default!;
         /// <summary>The type of pause settings.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestBillFor>("bill_for", BillFor);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionPauseXWwwFormUrlencodedRequestInvoicingBehavior>("invoicing_behavior", InvoicingBehavior);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

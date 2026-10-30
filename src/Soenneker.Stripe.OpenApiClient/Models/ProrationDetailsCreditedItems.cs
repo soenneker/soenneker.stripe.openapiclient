@@ -12,27 +12,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProrationDetailsCreditedItems : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("invoice_item") is { } nullNodeInvoiceItem && nullNodeInvoiceItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceItem = null;
+            if (parseNode.GetChildNode("invoice_line_item_details") is { } nullNodeInvoiceLineItemDetails && nullNodeInvoiceLineItemDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceLineItemDetails = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `type` is `invoice_item`, the invoice item id for the debited invoice item corresponding to this credit proration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceItem { get; set; }
+        public string? InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
+        private string? _explicitNullValueInvoiceItem = default!;
 #nullable restore
 #else
-        public string InvoiceItem { get; set; }
+        public string InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
+        private string _explicitNullValueInvoiceItem = default!;
 #endif
         /// <summary>The invoice_line_item_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems? InvoiceLineItemDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems? InvoiceLineItemDetails { get => _explicitNullValueInvoiceLineItemDetails; set { _explicitNullValueInvoiceLineItemDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_line_item_details"); else _explicitNullProperties?.Remove("invoice_line_item_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems? _explicitNullValueInvoiceLineItemDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems InvoiceLineItemDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems InvoiceLineItemDetails { get => _explicitNullValueInvoiceLineItemDetails; set { _explicitNullValueInvoiceLineItemDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_line_item_details"); else _explicitNullProperties?.Remove("invoice_line_item_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems _explicitNullValueInvoiceLineItemDetails = default!;
 #endif
         /// <summary>Whether the credit references a pending invoice item or one or more invoice line items on an invoice.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("invoice_item", InvoiceItem);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems>("invoice_line_item_details", InvoiceLineItemDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

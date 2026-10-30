@@ -11,88 +11,125 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SourceTypeMultibanco : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("entity") is { } nullNodeEntity && nullNodeEntity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entity = null;
+            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_city") is { } nullNodeRefundAccountHolderAddressCity && nullNodeRefundAccountHolderAddressCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressCity = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_country") is { } nullNodeRefundAccountHolderAddressCountry && nullNodeRefundAccountHolderAddressCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressCountry = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_line1") is { } nullNodeRefundAccountHolderAddressLine1 && nullNodeRefundAccountHolderAddressLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressLine1 = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_line2") is { } nullNodeRefundAccountHolderAddressLine2 && nullNodeRefundAccountHolderAddressLine2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressLine2 = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_postal_code") is { } nullNodeRefundAccountHolderAddressPostalCode && nullNodeRefundAccountHolderAddressPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressPostalCode = null;
+            if (parseNode.GetChildNode("refund_account_holder_address_state") is { } nullNodeRefundAccountHolderAddressState && nullNodeRefundAccountHolderAddressState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderAddressState = null;
+            if (parseNode.GetChildNode("refund_account_holder_name") is { } nullNodeRefundAccountHolderName && nullNodeRefundAccountHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAccountHolderName = null;
+            if (parseNode.GetChildNode("refund_iban") is { } nullNodeRefundIban && nullNodeRefundIban.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundIban = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The entity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Entity { get; set; }
+        public string? Entity { get => _explicitNullValueEntity; set { _explicitNullValueEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity"); else _explicitNullProperties?.Remove("entity"); } }
+        private string? _explicitNullValueEntity = default!;
 #nullable restore
 #else
-        public string Entity { get; set; }
+        public string Entity { get => _explicitNullValueEntity; set { _explicitNullValueEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity"); else _explicitNullProperties?.Remove("entity"); } }
+        private string _explicitNullValueEntity = default!;
 #endif
         /// <summary>The reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference { get; set; }
+        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public string Reference { get; set; }
+        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private string _explicitNullValueReference = default!;
 #endif
         /// <summary>The refund_account_holder_address_city property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressCity { get; set; }
+        public string? RefundAccountHolderAddressCity { get => _explicitNullValueRefundAccountHolderAddressCity; set { _explicitNullValueRefundAccountHolderAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_city"); else _explicitNullProperties?.Remove("refund_account_holder_address_city"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressCity = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressCity { get; set; }
+        public string RefundAccountHolderAddressCity { get => _explicitNullValueRefundAccountHolderAddressCity; set { _explicitNullValueRefundAccountHolderAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_city"); else _explicitNullProperties?.Remove("refund_account_holder_address_city"); } }
+        private string _explicitNullValueRefundAccountHolderAddressCity = default!;
 #endif
         /// <summary>The refund_account_holder_address_country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressCountry { get; set; }
+        public string? RefundAccountHolderAddressCountry { get => _explicitNullValueRefundAccountHolderAddressCountry; set { _explicitNullValueRefundAccountHolderAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_country"); else _explicitNullProperties?.Remove("refund_account_holder_address_country"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressCountry = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressCountry { get; set; }
+        public string RefundAccountHolderAddressCountry { get => _explicitNullValueRefundAccountHolderAddressCountry; set { _explicitNullValueRefundAccountHolderAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_country"); else _explicitNullProperties?.Remove("refund_account_holder_address_country"); } }
+        private string _explicitNullValueRefundAccountHolderAddressCountry = default!;
 #endif
         /// <summary>The refund_account_holder_address_line1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressLine1 { get; set; }
+        public string? RefundAccountHolderAddressLine1 { get => _explicitNullValueRefundAccountHolderAddressLine1; set { _explicitNullValueRefundAccountHolderAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_line1"); else _explicitNullProperties?.Remove("refund_account_holder_address_line1"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressLine1 = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressLine1 { get; set; }
+        public string RefundAccountHolderAddressLine1 { get => _explicitNullValueRefundAccountHolderAddressLine1; set { _explicitNullValueRefundAccountHolderAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_line1"); else _explicitNullProperties?.Remove("refund_account_holder_address_line1"); } }
+        private string _explicitNullValueRefundAccountHolderAddressLine1 = default!;
 #endif
         /// <summary>The refund_account_holder_address_line2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressLine2 { get; set; }
+        public string? RefundAccountHolderAddressLine2 { get => _explicitNullValueRefundAccountHolderAddressLine2; set { _explicitNullValueRefundAccountHolderAddressLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_line2"); else _explicitNullProperties?.Remove("refund_account_holder_address_line2"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressLine2 = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressLine2 { get; set; }
+        public string RefundAccountHolderAddressLine2 { get => _explicitNullValueRefundAccountHolderAddressLine2; set { _explicitNullValueRefundAccountHolderAddressLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_line2"); else _explicitNullProperties?.Remove("refund_account_holder_address_line2"); } }
+        private string _explicitNullValueRefundAccountHolderAddressLine2 = default!;
 #endif
         /// <summary>The refund_account_holder_address_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressPostalCode { get; set; }
+        public string? RefundAccountHolderAddressPostalCode { get => _explicitNullValueRefundAccountHolderAddressPostalCode; set { _explicitNullValueRefundAccountHolderAddressPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_postal_code"); else _explicitNullProperties?.Remove("refund_account_holder_address_postal_code"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressPostalCode = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressPostalCode { get; set; }
+        public string RefundAccountHolderAddressPostalCode { get => _explicitNullValueRefundAccountHolderAddressPostalCode; set { _explicitNullValueRefundAccountHolderAddressPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_postal_code"); else _explicitNullProperties?.Remove("refund_account_holder_address_postal_code"); } }
+        private string _explicitNullValueRefundAccountHolderAddressPostalCode = default!;
 #endif
         /// <summary>The refund_account_holder_address_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderAddressState { get; set; }
+        public string? RefundAccountHolderAddressState { get => _explicitNullValueRefundAccountHolderAddressState; set { _explicitNullValueRefundAccountHolderAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_state"); else _explicitNullProperties?.Remove("refund_account_holder_address_state"); } }
+        private string? _explicitNullValueRefundAccountHolderAddressState = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderAddressState { get; set; }
+        public string RefundAccountHolderAddressState { get => _explicitNullValueRefundAccountHolderAddressState; set { _explicitNullValueRefundAccountHolderAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_address_state"); else _explicitNullProperties?.Remove("refund_account_holder_address_state"); } }
+        private string _explicitNullValueRefundAccountHolderAddressState = default!;
 #endif
         /// <summary>The refund_account_holder_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAccountHolderName { get; set; }
+        public string? RefundAccountHolderName { get => _explicitNullValueRefundAccountHolderName; set { _explicitNullValueRefundAccountHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_name"); else _explicitNullProperties?.Remove("refund_account_holder_name"); } }
+        private string? _explicitNullValueRefundAccountHolderName = default!;
 #nullable restore
 #else
-        public string RefundAccountHolderName { get; set; }
+        public string RefundAccountHolderName { get => _explicitNullValueRefundAccountHolderName; set { _explicitNullValueRefundAccountHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_account_holder_name"); else _explicitNullProperties?.Remove("refund_account_holder_name"); } }
+        private string _explicitNullValueRefundAccountHolderName = default!;
 #endif
         /// <summary>The refund_iban property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundIban { get; set; }
+        public string? RefundIban { get => _explicitNullValueRefundIban; set { _explicitNullValueRefundIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_iban"); else _explicitNullProperties?.Remove("refund_iban"); } }
+        private string? _explicitNullValueRefundIban = default!;
 #nullable restore
 #else
-        public string RefundIban { get; set; }
+        public string RefundIban { get => _explicitNullValueRefundIban; set { _explicitNullValueRefundIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_iban"); else _explicitNullProperties?.Remove("refund_iban"); } }
+        private string _explicitNullValueRefundIban = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco"/> and sets the default values.
@@ -109,7 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("refund_account_holder_address_state", RefundAccountHolderAddressState);
             writer.WriteStringValue("refund_account_holder_name", RefundAccountHolderName);
             writer.WriteStringValue("refund_iban", RefundIban);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

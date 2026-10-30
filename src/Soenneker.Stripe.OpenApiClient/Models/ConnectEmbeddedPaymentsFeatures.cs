@@ -11,19 +11,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectEmbeddedPaymentsFeatures : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capture_payments") is { } nullNodeCapturePayments && nullNodeCapturePayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CapturePayments = null;
+            if (parseNode.GetChildNode("destination_on_behalf_of_charge_management") is { } nullNodeDestinationOnBehalfOfChargeManagement && nullNodeDestinationOnBehalfOfChargeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationOnBehalfOfChargeManagement = null;
+            if (parseNode.GetChildNode("dispute_management") is { } nullNodeDisputeManagement && nullNodeDisputeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeManagement = null;
+            if (parseNode.GetChildNode("refund_management") is { } nullNodeRefundManagement && nullNodeRefundManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundManagement = null;
+            if (parseNode.GetChildNode("smart_disputes_management") is { } nullNodeSmartDisputesManagement && nullNodeSmartDisputesManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartDisputesManagement = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to allow capturing and cancelling payment intents. This is `true` by default.</summary>
-        public bool? CapturePayments { get; set; }
+        public bool? CapturePayments { get => _explicitNullValueCapturePayments; set { _explicitNullValueCapturePayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_payments"); else _explicitNullProperties?.Remove("capture_payments"); } }
+        private bool? _explicitNullValueCapturePayments = default!;
         /// <summary>Whether connected accounts can manage destination charges that are created on behalf of them. This is `false` by default.</summary>
-        public bool? DestinationOnBehalfOfChargeManagement { get; set; }
+        public bool? DestinationOnBehalfOfChargeManagement { get => _explicitNullValueDestinationOnBehalfOfChargeManagement; set { _explicitNullValueDestinationOnBehalfOfChargeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_on_behalf_of_charge_management"); else _explicitNullProperties?.Remove("destination_on_behalf_of_charge_management"); } }
+        private bool? _explicitNullValueDestinationOnBehalfOfChargeManagement = default!;
         /// <summary>Whether responding to disputes is enabled, including submitting evidence and accepting disputes. This is `true` by default.</summary>
-        public bool? DisputeManagement { get; set; }
+        public bool? DisputeManagement { get => _explicitNullValueDisputeManagement; set { _explicitNullValueDisputeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_management"); else _explicitNullProperties?.Remove("dispute_management"); } }
+        private bool? _explicitNullValueDisputeManagement = default!;
         /// <summary>Whether sending refunds is enabled. This is `true` by default.</summary>
-        public bool? RefundManagement { get; set; }
+        public bool? RefundManagement { get => _explicitNullValueRefundManagement; set { _explicitNullValueRefundManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_management"); else _explicitNullProperties?.Remove("refund_management"); } }
+        private bool? _explicitNullValueRefundManagement = default!;
         /// <summary>Whether to allow connected accounts to submit disputes using Smart Disputes. Defaults to the value of `dispute_management`.</summary>
-        public bool? SmartDisputesManagement { get; set; }
+        public bool? SmartDisputesManagement { get => _explicitNullValueSmartDisputesManagement; set { _explicitNullValueSmartDisputesManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_disputes_management"); else _explicitNullProperties?.Remove("smart_disputes_management"); } }
+        private bool? _explicitNullValueSmartDisputesManagement = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsFeatures"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("dispute_management", DisputeManagement);
             writer.WriteBoolValue("refund_management", RefundManagement);
             writer.WriteBoolValue("smart_disputes_management", SmartDisputesManagement);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_schedulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at*,completed_at*,created*,customer*,customer_account*,ending_before*,expand*,limit*,released_at*,scheduled*,starting_after*}", pathParameters)
+        public Subscription_schedulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,28 +43,26 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_schedulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at*,completed_at*,created*,customer*,customer_account*,ending_before*,expand*,limit*,released_at*,scheduled*,starting_after*}", rawUrl)
+        public Subscription_schedulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the list of your subscription schedules.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
@@ -100,22 +98,19 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// &lt;p&gt;Retrieves the list of your subscription schedules.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -158,12 +153,60 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             /// <summary>Only return subscription schedules that were created canceled the given date interval.</summary>
             [QueryParameter("canceled_at")]
             public int? CanceledAt { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("canceled_at%5Bgt%5D")]
+            public int? CanceledAtgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("canceled_at%5Bgte%5D")]
+            public int? CanceledAtgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("canceled_at%5Blt%5D")]
+            public int? CanceledAtlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("canceled_at%5Blte%5D")]
+            public int? CanceledAtlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscription schedules that completed during the given date interval.</summary>
             [QueryParameter("completed_at")]
             public int? CompletedAt { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("completed_at%5Bgt%5D")]
+            public int? CompletedAtgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("completed_at%5Bgte%5D")]
+            public int? CompletedAtgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("completed_at%5Blt%5D")]
+            public int? CompletedAtlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("completed_at%5Blte%5D")]
+            public int? CompletedAtlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscription schedules that were created during the given date interval.</summary>
             [QueryParameter("created")]
             public int? Created { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Bgt%5D")]
+            public int? Createdgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Bgte%5D")]
+            public int? Createdgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Blt%5D")]
+            public int? Createdlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Blte%5D")]
+            public int? Createdlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscription schedules for the given customer. The response will not include subscription schedules for customers with a test clock attached if this parameter is not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -210,6 +253,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             /// <summary>Only return subscription schedules that were released during the given date interval.</summary>
             [QueryParameter("released_at")]
             public int? ReleasedAt { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("released_at%5Bgt%5D")]
+            public int? ReleasedAtgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("released_at%5Bgte%5D")]
+            public int? ReleasedAtgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("released_at%5Blt%5D")]
+            public int? ReleasedAtlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("released_at%5Blte%5D")]
+            public int? ReleasedAtlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscription schedules that have not started yet.</summary>
             [QueryParameter("scheduled")]
             public bool? Scheduled { get; set; }

@@ -11,189 +11,268 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostCustomersCustomerXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("balance") is { } nullNodeBalance && nullNodeBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Balance = null;
+            if (parseNode.GetChildNode("bank_account") is { } nullNodeBankAccount && nullNodeBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankAccount = null;
+            if (parseNode.GetChildNode("business_name") is { } nullNodeBusinessName && nullNodeBusinessName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessName = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("cash_balance") is { } nullNodeCashBalance && nullNodeCashBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashBalance = null;
+            if (parseNode.GetChildNode("default_alipay_account") is { } nullNodeDefaultAlipayAccount && nullNodeDefaultAlipayAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAlipayAccount = null;
+            if (parseNode.GetChildNode("default_bank_account") is { } nullNodeDefaultBankAccount && nullNodeDefaultBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultBankAccount = null;
+            if (parseNode.GetChildNode("default_card") is { } nullNodeDefaultCard && nullNodeDefaultCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCard = null;
+            if (parseNode.GetChildNode("default_source") is { } nullNodeDefaultSource && nullNodeDefaultSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSource = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("individual_name") is { } nullNodeIndividualName && nullNodeIndividualName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualName = null;
+            if (parseNode.GetChildNode("invoice_prefix") is { } nullNodeInvoicePrefix && nullNodeInvoicePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoicePrefix = null;
+            if (parseNode.GetChildNode("invoice_settings") is { } nullNodeInvoiceSettings && nullNodeInvoiceSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceSettings = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("next_invoice_sequence") is { } nullNodeNextInvoiceSequence && nullNodeNextInvoiceSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextInvoiceSequence = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("preferred_locales") is { } nullNodePreferredLocales && nullNodePreferredLocales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLocales = null;
+            if (parseNode.GetChildNode("shipping") is { } nullNodeShipping && nullNodeShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipping = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("tax_exempt") is { } nullNodeTaxExempt && nullNodeTaxExempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxExempt = null;
+        }
+
         /// <summary>The customer&apos;s address. Learn about [country-specific requirements for calculating tax](https://docs.stripe.com/invoicing/taxes?dashboard-or-api=dashboard#set-up-customer).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>An integer amount in cents (or local equivalent) that represents the customer&apos;s current balance, which affect the customer&apos;s future invoices. A negative amount represents a credit that decreases the amount due on an invoice; a positive amount increases the amount due on an invoice.</summary>
-        public int? Balance { get; set; }
+        public int? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
+        private int? _explicitNullValueBalance = default!;
         /// <summary>Either a token, like the ones returned by [Stripe.js](https://stripe.com/docs/js), or a dictionary containing a user&apos;s bank account details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount? BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount? BankAccount { get => _explicitNullValueBankAccount; set { _explicitNullValueBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account"); else _explicitNullProperties?.Remove("bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount? _explicitNullValueBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount BankAccount { get => _explicitNullValueBankAccount; set { _explicitNullValueBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account"); else _explicitNullProperties?.Remove("bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBankAccount _explicitNullValueBankAccount = default!;
 #endif
         /// <summary>The customer&apos;s business name. This may be up to *150 characters*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName? BusinessName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName? BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_name"); else _explicitNullProperties?.Remove("business_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName? _explicitNullValueBusinessName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName BusinessName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_name"); else _explicitNullProperties?.Remove("business_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestBusinessName _explicitNullValueBusinessName = default!;
 #endif
         /// <summary>A token, like the ones returned by [Stripe.js](https://stripe.com/docs/js).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Balance information and default balance settings for this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance? CashBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance? CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance? _explicitNullValueCashBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance CashBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalance _explicitNullValueCashBalance = default!;
 #endif
         /// <summary>ID of Alipay account to make the customer&apos;s new default for invoice payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultAlipayAccount { get; set; }
+        public string? DefaultAlipayAccount { get => _explicitNullValueDefaultAlipayAccount; set { _explicitNullValueDefaultAlipayAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_alipay_account"); else _explicitNullProperties?.Remove("default_alipay_account"); } }
+        private string? _explicitNullValueDefaultAlipayAccount = default!;
 #nullable restore
 #else
-        public string DefaultAlipayAccount { get; set; }
+        public string DefaultAlipayAccount { get => _explicitNullValueDefaultAlipayAccount; set { _explicitNullValueDefaultAlipayAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_alipay_account"); else _explicitNullProperties?.Remove("default_alipay_account"); } }
+        private string _explicitNullValueDefaultAlipayAccount = default!;
 #endif
         /// <summary>ID of bank account to make the customer&apos;s new default for invoice payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultBankAccount { get; set; }
+        public string? DefaultBankAccount { get => _explicitNullValueDefaultBankAccount; set { _explicitNullValueDefaultBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_bank_account"); else _explicitNullProperties?.Remove("default_bank_account"); } }
+        private string? _explicitNullValueDefaultBankAccount = default!;
 #nullable restore
 #else
-        public string DefaultBankAccount { get; set; }
+        public string DefaultBankAccount { get => _explicitNullValueDefaultBankAccount; set { _explicitNullValueDefaultBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_bank_account"); else _explicitNullProperties?.Remove("default_bank_account"); } }
+        private string _explicitNullValueDefaultBankAccount = default!;
 #endif
         /// <summary>ID of card to make the customer&apos;s new default for invoice payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCard { get; set; }
+        public string? DefaultCard { get => _explicitNullValueDefaultCard; set { _explicitNullValueDefaultCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_card"); else _explicitNullProperties?.Remove("default_card"); } }
+        private string? _explicitNullValueDefaultCard = default!;
 #nullable restore
 #else
-        public string DefaultCard { get; set; }
+        public string DefaultCard { get => _explicitNullValueDefaultCard; set { _explicitNullValueDefaultCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_card"); else _explicitNullProperties?.Remove("default_card"); } }
+        private string _explicitNullValueDefaultCard = default!;
 #endif
         /// <summary>If you are using payment methods created via the PaymentMethods API, see the [invoice_settings.default_payment_method](https://docs.stripe.com/api/customers/update#update_customer-invoice_settings-default_payment_method) parameter.Provide the ID of a payment source already attached to this customer to make it this customer&apos;s default payment source.If you want to add a new payment source and make it the default, see the [source](https://docs.stripe.com/api/customers/update#update_customer-source) property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultSource { get; set; }
+        public string? DefaultSource { get => _explicitNullValueDefaultSource; set { _explicitNullValueDefaultSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_source"); else _explicitNullProperties?.Remove("default_source"); } }
+        private string? _explicitNullValueDefaultSource = default!;
 #nullable restore
 #else
-        public string DefaultSource { get; set; }
+        public string DefaultSource { get => _explicitNullValueDefaultSource; set { _explicitNullValueDefaultSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_source"); else _explicitNullProperties?.Remove("default_source"); } }
+        private string _explicitNullValueDefaultSource = default!;
 #endif
         /// <summary>An arbitrary string that you can attach to a customer object. It is displayed alongside the customer in the dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Customer&apos;s email address. It&apos;s displayed alongside the customer in your dashboard and can be useful for searching and tracking. This may be up to *512 characters*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The customer&apos;s full name. This may be up to *150 characters*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName? IndividualName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName? IndividualName { get => _explicitNullValueIndividualName; set { _explicitNullValueIndividualName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_name"); else _explicitNullProperties?.Remove("individual_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName? _explicitNullValueIndividualName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName IndividualName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName IndividualName { get => _explicitNullValueIndividualName; set { _explicitNullValueIndividualName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_name"); else _explicitNullProperties?.Remove("individual_name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName _explicitNullValueIndividualName = default!;
 #endif
         /// <summary>The prefix for the customer used to generate unique invoice numbers. Must be 1–12 uppercase letters or numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoicePrefix { get; set; }
+        public string? InvoicePrefix { get => _explicitNullValueInvoicePrefix; set { _explicitNullValueInvoicePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_prefix"); else _explicitNullProperties?.Remove("invoice_prefix"); } }
+        private string? _explicitNullValueInvoicePrefix = default!;
 #nullable restore
 #else
-        public string InvoicePrefix { get; set; }
+        public string InvoicePrefix { get => _explicitNullValueInvoicePrefix; set { _explicitNullValueInvoicePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_prefix"); else _explicitNullProperties?.Remove("invoice_prefix"); } }
+        private string _explicitNullValueInvoicePrefix = default!;
 #endif
         /// <summary>Default invoice settings for this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings? InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings? InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings? _explicitNullValueInvoiceSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings InvoiceSettings { get => _explicitNullValueInvoiceSettings; set { _explicitNullValueInvoiceSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_settings"); else _explicitNullProperties?.Remove("invoice_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettings _explicitNullValueInvoiceSettings = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The customer&apos;s full name or business name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The sequence to be used on the customer&apos;s next invoice. Defaults to 1.</summary>
-        public int? NextInvoiceSequence { get; set; }
+        public int? NextInvoiceSequence { get => _explicitNullValueNextInvoiceSequence; set { _explicitNullValueNextInvoiceSequence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_invoice_sequence"); else _explicitNullProperties?.Remove("next_invoice_sequence"); } }
+        private int? _explicitNullValueNextInvoiceSequence = default!;
         /// <summary>The customer&apos;s phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>Customer&apos;s preferred languages, ordered by preference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PreferredLocales { get; set; }
+        public List<string>? PreferredLocales { get => _explicitNullValuePreferredLocales; set { _explicitNullValuePreferredLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locales"); else _explicitNullProperties?.Remove("preferred_locales"); } }
+        private List<string>? _explicitNullValuePreferredLocales = default!;
 #nullable restore
 #else
-        public List<string> PreferredLocales { get; set; }
+        public List<string> PreferredLocales { get => _explicitNullValuePreferredLocales; set { _explicitNullValuePreferredLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locales"); else _explicitNullProperties?.Remove("preferred_locales"); } }
+        private List<string> _explicitNullValuePreferredLocales = default!;
 #endif
         /// <summary>The customer&apos;s shipping information. Appears on invoices emailed to this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>Tax details about the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax? Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax _explicitNullValueTax = default!;
 #endif
         /// <summary>The customer&apos;s tax exemption. One of `none`, `exempt`, or `reverse`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt? TaxExempt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt? TaxExempt { get => _explicitNullValueTaxExempt; set { _explicitNullValueTaxExempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_exempt"); else _explicitNullProperties?.Remove("tax_exempt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt? _explicitNullValueTaxExempt = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -202,7 +281,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -270,7 +349,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestShipping>("shipping", Shipping);
             writer.WriteStringValue("source", Source);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTax>("tax", Tax);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt>("tax_exempt", TaxExempt);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt>("tax_exempt", TaxExempt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

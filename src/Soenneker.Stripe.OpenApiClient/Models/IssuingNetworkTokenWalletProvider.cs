@@ -11,64 +11,97 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingNetworkTokenWalletProvider : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("account_trust_score") is { } nullNodeAccountTrustScore && nullNodeAccountTrustScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountTrustScore = null;
+            if (parseNode.GetChildNode("cardholder_address") is { } nullNodeCardholderAddress && nullNodeCardholderAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderAddress = null;
+            if (parseNode.GetChildNode("cardholder_name") is { } nullNodeCardholderName && nullNodeCardholderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderName = null;
+            if (parseNode.GetChildNode("card_number_source") is { } nullNodeCardNumberSource && nullNodeCardNumberSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardNumberSource = null;
+            if (parseNode.GetChildNode("device_trust_score") is { } nullNodeDeviceTrustScore && nullNodeDeviceTrustScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceTrustScore = null;
+            if (parseNode.GetChildNode("hashed_account_email_address") is { } nullNodeHashedAccountEmailAddress && nullNodeHashedAccountEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HashedAccountEmailAddress = null;
+            if (parseNode.GetChildNode("reason_codes") is { } nullNodeReasonCodes && nullNodeReasonCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCodes = null;
+            if (parseNode.GetChildNode("suggested_decision") is { } nullNodeSuggestedDecision && nullNodeSuggestedDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedDecision = null;
+            if (parseNode.GetChildNode("suggested_decision_version") is { } nullNodeSuggestedDecisionVersion && nullNodeSuggestedDecisionVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedDecisionVersion = null;
+        }
+
         /// <summary>The wallet provider-given account ID of the digital wallet the token belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>An evaluation on the trustworthiness of the wallet account between 1 and 5. A higher score indicates more trustworthy.</summary>
-        public int? AccountTrustScore { get; set; }
+        public int? AccountTrustScore { get => _explicitNullValueAccountTrustScore; set { _explicitNullValueAccountTrustScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_trust_score"); else _explicitNullProperties?.Remove("account_trust_score"); } }
+        private int? _explicitNullValueAccountTrustScore = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cardholder_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress? CardholderAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress? CardholderAddress { get => _explicitNullValueCardholderAddress; set { _explicitNullValueCardholderAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_address"); else _explicitNullProperties?.Remove("cardholder_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress? _explicitNullValueCardholderAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress CardholderAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress CardholderAddress { get => _explicitNullValueCardholderAddress; set { _explicitNullValueCardholderAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_address"); else _explicitNullProperties?.Remove("cardholder_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress _explicitNullValueCardholderAddress = default!;
 #endif
         /// <summary>The name of the cardholder tokenizing the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardholderName { get; set; }
+        public string? CardholderName { get => _explicitNullValueCardholderName; set { _explicitNullValueCardholderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_name"); else _explicitNullProperties?.Remove("cardholder_name"); } }
+        private string? _explicitNullValueCardholderName = default!;
 #nullable restore
 #else
-        public string CardholderName { get; set; }
+        public string CardholderName { get => _explicitNullValueCardholderName; set { _explicitNullValueCardholderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_name"); else _explicitNullProperties?.Remove("cardholder_name"); } }
+        private string _explicitNullValueCardholderName = default!;
 #endif
         /// <summary>The method used for tokenizing a card.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource? CardNumberSource { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource? CardNumberSource { get => _explicitNullValueCardNumberSource; set { _explicitNullValueCardNumberSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_number_source"); else _explicitNullProperties?.Remove("card_number_source"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource? _explicitNullValueCardNumberSource = default!;
         /// <summary>An evaluation on the trustworthiness of the device. A higher score indicates more trustworthy.</summary>
-        public int? DeviceTrustScore { get; set; }
+        public int? DeviceTrustScore { get => _explicitNullValueDeviceTrustScore; set { _explicitNullValueDeviceTrustScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_trust_score"); else _explicitNullProperties?.Remove("device_trust_score"); } }
+        private int? _explicitNullValueDeviceTrustScore = default!;
         /// <summary>The hashed email address of the cardholder&apos;s account with the wallet provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HashedAccountEmailAddress { get; set; }
+        public string? HashedAccountEmailAddress { get => _explicitNullValueHashedAccountEmailAddress; set { _explicitNullValueHashedAccountEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hashed_account_email_address"); else _explicitNullProperties?.Remove("hashed_account_email_address"); } }
+        private string? _explicitNullValueHashedAccountEmailAddress = default!;
 #nullable restore
 #else
-        public string HashedAccountEmailAddress { get; set; }
+        public string HashedAccountEmailAddress { get => _explicitNullValueHashedAccountEmailAddress; set { _explicitNullValueHashedAccountEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hashed_account_email_address"); else _explicitNullProperties?.Remove("hashed_account_email_address"); } }
+        private string _explicitNullValueHashedAccountEmailAddress = default!;
 #endif
         /// <summary>The reasons for suggested tokenization given by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?>? ReasonCodes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?>? ReasonCodes { get => _explicitNullValueReasonCodes; set { _explicitNullValueReasonCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_codes"); else _explicitNullProperties?.Remove("reason_codes"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?>? _explicitNullValueReasonCodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?> ReasonCodes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?> ReasonCodes { get => _explicitNullValueReasonCodes; set { _explicitNullValueReasonCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_codes"); else _explicitNullProperties?.Remove("reason_codes"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?> _explicitNullValueReasonCodes = default!;
 #endif
         /// <summary>The recommendation on responding to the tokenization request.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision? SuggestedDecision { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision? SuggestedDecision { get => _explicitNullValueSuggestedDecision; set { _explicitNullValueSuggestedDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_decision"); else _explicitNullProperties?.Remove("suggested_decision"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision? _explicitNullValueSuggestedDecision = default!;
         /// <summary>The version of the standard for mapping reason codes followed by the wallet provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuggestedDecisionVersion { get; set; }
+        public string? SuggestedDecisionVersion { get => _explicitNullValueSuggestedDecisionVersion; set { _explicitNullValueSuggestedDecisionVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_decision_version"); else _explicitNullProperties?.Remove("suggested_decision_version"); } }
+        private string? _explicitNullValueSuggestedDecisionVersion = default!;
 #nullable restore
 #else
-        public string SuggestedDecisionVersion { get; set; }
+        public string SuggestedDecisionVersion { get => _explicitNullValueSuggestedDecisionVersion; set { _explicitNullValueSuggestedDecisionVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_decision_version"); else _explicitNullProperties?.Remove("suggested_decision_version"); } }
+        private string _explicitNullValueSuggestedDecisionVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider"/> and sets the default values.
@@ -85,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem>("reason_codes", ReasonCodes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision>("suggested_decision", SuggestedDecision);
             writer.WriteStringValue("suggested_decision_version", SuggestedDecisionVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

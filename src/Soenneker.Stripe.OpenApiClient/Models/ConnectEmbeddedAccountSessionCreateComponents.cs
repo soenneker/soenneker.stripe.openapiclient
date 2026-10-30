@@ -11,184 +11,257 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectEmbeddedAccountSessionCreateComponents : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_management") is { } nullNodeAccountManagement && nullNodeAccountManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountManagement = null;
+            if (parseNode.GetChildNode("account_onboarding") is { } nullNodeAccountOnboarding && nullNodeAccountOnboarding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountOnboarding = null;
+            if (parseNode.GetChildNode("balance_report") is { } nullNodeBalanceReport && nullNodeBalanceReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BalanceReport = null;
+            if (parseNode.GetChildNode("balances") is { } nullNodeBalances && nullNodeBalances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Balances = null;
+            if (parseNode.GetChildNode("disputes_list") is { } nullNodeDisputesList && nullNodeDisputesList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputesList = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("financial_account") is { } nullNodeFinancialAccount && nullNodeFinancialAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAccount = null;
+            if (parseNode.GetChildNode("financial_account_transactions") is { } nullNodeFinancialAccountTransactions && nullNodeFinancialAccountTransactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAccountTransactions = null;
+            if (parseNode.GetChildNode("instant_payouts_promotion") is { } nullNodeInstantPayoutsPromotion && nullNodeInstantPayoutsPromotion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstantPayoutsPromotion = null;
+            if (parseNode.GetChildNode("issuing_card") is { } nullNodeIssuingCard && nullNodeIssuingCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingCard = null;
+            if (parseNode.GetChildNode("issuing_cards_list") is { } nullNodeIssuingCardsList && nullNodeIssuingCardsList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingCardsList = null;
+            if (parseNode.GetChildNode("notification_banner") is { } nullNodeNotificationBanner && nullNodeNotificationBanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationBanner = null;
+            if (parseNode.GetChildNode("payment_details") is { } nullNodePaymentDetails && nullNodePaymentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentDetails = null;
+            if (parseNode.GetChildNode("payment_disputes") is { } nullNodePaymentDisputes && nullNodePaymentDisputes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentDisputes = null;
+            if (parseNode.GetChildNode("payment_method_settings") is { } nullNodePaymentMethodSettings && nullNodePaymentMethodSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodSettings = null;
+            if (parseNode.GetChildNode("payments") is { } nullNodePayments && nullNodePayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payments = null;
+            if (parseNode.GetChildNode("payout_details") is { } nullNodePayoutDetails && nullNodePayoutDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutDetails = null;
+            if (parseNode.GetChildNode("payout_reconciliation_report") is { } nullNodePayoutReconciliationReport && nullNodePayoutReconciliationReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutReconciliationReport = null;
+            if (parseNode.GetChildNode("payouts") is { } nullNodePayouts && nullNodePayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payouts = null;
+            if (parseNode.GetChildNode("payouts_list") is { } nullNodePayoutsList && nullNodePayoutsList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutsList = null;
+            if (parseNode.GetChildNode("tax_registrations") is { } nullNodeTaxRegistrations && nullNodeTaxRegistrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRegistrations = null;
+            if (parseNode.GetChildNode("tax_settings") is { } nullNodeTaxSettings && nullNodeTaxSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxSettings = null;
+        }
+
         /// <summary>The account_management property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? AccountManagement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? AccountManagement { get => _explicitNullValueAccountManagement; set { _explicitNullValueAccountManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_management"); else _explicitNullProperties?.Remove("account_management"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? _explicitNullValueAccountManagement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim AccountManagement { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim AccountManagement { get => _explicitNullValueAccountManagement; set { _explicitNullValueAccountManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_management"); else _explicitNullProperties?.Remove("account_management"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim _explicitNullValueAccountManagement = default!;
 #endif
         /// <summary>The account_onboarding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? AccountOnboarding { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? AccountOnboarding { get => _explicitNullValueAccountOnboarding; set { _explicitNullValueAccountOnboarding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_onboarding"); else _explicitNullProperties?.Remove("account_onboarding"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? _explicitNullValueAccountOnboarding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim AccountOnboarding { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim AccountOnboarding { get => _explicitNullValueAccountOnboarding; set { _explicitNullValueAccountOnboarding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_onboarding"); else _explicitNullProperties?.Remove("account_onboarding"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim _explicitNullValueAccountOnboarding = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The balance_report property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? BalanceReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? BalanceReport { get => _explicitNullValueBalanceReport; set { _explicitNullValueBalanceReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_report"); else _explicitNullProperties?.Remove("balance_report"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValueBalanceReport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim BalanceReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim BalanceReport { get => _explicitNullValueBalanceReport; set { _explicitNullValueBalanceReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_report"); else _explicitNullProperties?.Remove("balance_report"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValueBalanceReport = default!;
 #endif
         /// <summary>The balances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? Balances { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? Balances { get => _explicitNullValueBalances; set { _explicitNullValueBalances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balances"); else _explicitNullProperties?.Remove("balances"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? _explicitNullValueBalances = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig Balances { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig Balances { get => _explicitNullValueBalances; set { _explicitNullValueBalances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balances"); else _explicitNullProperties?.Remove("balances"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig _explicitNullValueBalances = default!;
 #endif
         /// <summary>The disputes_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig? DisputesList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig? DisputesList { get => _explicitNullValueDisputesList; set { _explicitNullValueDisputesList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputes_list"); else _explicitNullProperties?.Remove("disputes_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig? _explicitNullValueDisputesList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig DisputesList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig DisputesList { get => _explicitNullValueDisputesList; set { _explicitNullValueDisputesList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputes_list"); else _explicitNullProperties?.Remove("disputes_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedDisputesListConfig _explicitNullValueDisputesList = default!;
 #endif
         /// <summary>The documents property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim Documents { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValueDocuments = default!;
 #endif
         /// <summary>The financial_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim? FinancialAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim? FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim? _explicitNullValueFinancialAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim FinancialAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim FinancialAccount { get => _explicitNullValueFinancialAccount; set { _explicitNullValueFinancialAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account"); else _explicitNullProperties?.Remove("financial_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountConfigClaim _explicitNullValueFinancialAccount = default!;
 #endif
         /// <summary>The financial_account_transactions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim? FinancialAccountTransactions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim? FinancialAccountTransactions { get => _explicitNullValueFinancialAccountTransactions; set { _explicitNullValueFinancialAccountTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account_transactions"); else _explicitNullProperties?.Remove("financial_account_transactions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim? _explicitNullValueFinancialAccountTransactions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim FinancialAccountTransactions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim FinancialAccountTransactions { get => _explicitNullValueFinancialAccountTransactions; set { _explicitNullValueFinancialAccountTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_account_transactions"); else _explicitNullProperties?.Remove("financial_account_transactions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedFinancialAccountTransactionsConfigClaim _explicitNullValueFinancialAccountTransactions = default!;
 #endif
         /// <summary>The instant_payouts_promotion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig? InstantPayoutsPromotion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig? InstantPayoutsPromotion { get => _explicitNullValueInstantPayoutsPromotion; set { _explicitNullValueInstantPayoutsPromotion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instant_payouts_promotion"); else _explicitNullProperties?.Remove("instant_payouts_promotion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig? _explicitNullValueInstantPayoutsPromotion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig InstantPayoutsPromotion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig InstantPayoutsPromotion { get => _explicitNullValueInstantPayoutsPromotion; set { _explicitNullValueInstantPayoutsPromotion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instant_payouts_promotion"); else _explicitNullProperties?.Remove("instant_payouts_promotion"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedInstantPayoutsPromotionConfig _explicitNullValueInstantPayoutsPromotion = default!;
 #endif
         /// <summary>The issuing_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim? IssuingCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim? IssuingCard { get => _explicitNullValueIssuingCard; set { _explicitNullValueIssuingCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_card"); else _explicitNullProperties?.Remove("issuing_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim? _explicitNullValueIssuingCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim IssuingCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim IssuingCard { get => _explicitNullValueIssuingCard; set { _explicitNullValueIssuingCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_card"); else _explicitNullProperties?.Remove("issuing_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardConfigClaim _explicitNullValueIssuingCard = default!;
 #endif
         /// <summary>The issuing_cards_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim? IssuingCardsList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim? IssuingCardsList { get => _explicitNullValueIssuingCardsList; set { _explicitNullValueIssuingCardsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_cards_list"); else _explicitNullProperties?.Remove("issuing_cards_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim? _explicitNullValueIssuingCardsList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim IssuingCardsList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim IssuingCardsList { get => _explicitNullValueIssuingCardsList; set { _explicitNullValueIssuingCardsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_cards_list"); else _explicitNullProperties?.Remove("issuing_cards_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedIssuingCardsListConfigClaim _explicitNullValueIssuingCardsList = default!;
 #endif
         /// <summary>The notification_banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? NotificationBanner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? NotificationBanner { get => _explicitNullValueNotificationBanner; set { _explicitNullValueNotificationBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_banner"); else _explicitNullProperties?.Remove("notification_banner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim? _explicitNullValueNotificationBanner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim NotificationBanner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim NotificationBanner { get => _explicitNullValueNotificationBanner; set { _explicitNullValueNotificationBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_banner"); else _explicitNullProperties?.Remove("notification_banner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim _explicitNullValueNotificationBanner = default!;
 #endif
         /// <summary>The payment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? _explicitNullValuePaymentDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim PaymentDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim PaymentDetails { get => _explicitNullValuePaymentDetails; set { _explicitNullValuePaymentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_details"); else _explicitNullProperties?.Remove("payment_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim _explicitNullValuePaymentDetails = default!;
 #endif
         /// <summary>The payment_disputes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig? PaymentDisputes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig? PaymentDisputes { get => _explicitNullValuePaymentDisputes; set { _explicitNullValuePaymentDisputes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_disputes"); else _explicitNullProperties?.Remove("payment_disputes"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig? _explicitNullValuePaymentDisputes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig PaymentDisputes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig PaymentDisputes { get => _explicitNullValuePaymentDisputes; set { _explicitNullValuePaymentDisputes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_disputes"); else _explicitNullProperties?.Remove("payment_disputes"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig _explicitNullValuePaymentDisputes = default!;
 #endif
         /// <summary>The payment_method_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim? PaymentMethodSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim? PaymentMethodSettings { get => _explicitNullValuePaymentMethodSettings; set { _explicitNullValuePaymentMethodSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_settings"); else _explicitNullProperties?.Remove("payment_method_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim? _explicitNullValuePaymentMethodSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim PaymentMethodSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim PaymentMethodSettings { get => _explicitNullValuePaymentMethodSettings; set { _explicitNullValuePaymentMethodSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_settings"); else _explicitNullProperties?.Remove("payment_method_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim _explicitNullValuePaymentMethodSettings = default!;
 #endif
         /// <summary>The payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? Payments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? Payments { get => _explicitNullValuePayments; set { _explicitNullValuePayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments"); else _explicitNullProperties?.Remove("payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim? _explicitNullValuePayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim Payments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim Payments { get => _explicitNullValuePayments; set { _explicitNullValuePayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments"); else _explicitNullProperties?.Remove("payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim _explicitNullValuePayments = default!;
 #endif
         /// <summary>The payout_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutDetails { get => _explicitNullValuePayoutDetails; set { _explicitNullValuePayoutDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_details"); else _explicitNullProperties?.Remove("payout_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValuePayoutDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutDetails { get => _explicitNullValuePayoutDetails; set { _explicitNullValuePayoutDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_details"); else _explicitNullProperties?.Remove("payout_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValuePayoutDetails = default!;
 #endif
         /// <summary>The payout_reconciliation_report property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutReconciliationReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutReconciliationReport { get => _explicitNullValuePayoutReconciliationReport; set { _explicitNullValuePayoutReconciliationReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_reconciliation_report"); else _explicitNullProperties?.Remove("payout_reconciliation_report"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValuePayoutReconciliationReport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutReconciliationReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutReconciliationReport { get => _explicitNullValuePayoutReconciliationReport; set { _explicitNullValuePayoutReconciliationReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_reconciliation_report"); else _explicitNullProperties?.Remove("payout_reconciliation_report"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValuePayoutReconciliationReport = default!;
 #endif
         /// <summary>The payouts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig? _explicitNullValuePayouts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPayoutsConfig _explicitNullValuePayouts = default!;
 #endif
         /// <summary>The payouts_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutsList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? PayoutsList { get => _explicitNullValuePayoutsList; set { _explicitNullValuePayoutsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts_list"); else _explicitNullProperties?.Remove("payouts_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValuePayoutsList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutsList { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim PayoutsList { get => _explicitNullValuePayoutsList; set { _explicitNullValuePayoutsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts_list"); else _explicitNullProperties?.Remove("payouts_list"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValuePayoutsList = default!;
 #endif
         /// <summary>The tax_registrations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? TaxRegistrations { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? TaxRegistrations { get => _explicitNullValueTaxRegistrations; set { _explicitNullValueTaxRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_registrations"); else _explicitNullProperties?.Remove("tax_registrations"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValueTaxRegistrations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim TaxRegistrations { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim TaxRegistrations { get => _explicitNullValueTaxRegistrations; set { _explicitNullValueTaxRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_registrations"); else _explicitNullProperties?.Remove("tax_registrations"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValueTaxRegistrations = default!;
 #endif
         /// <summary>The tax_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? TaxSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? TaxSettings { get => _explicitNullValueTaxSettings; set { _explicitNullValueTaxSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_settings"); else _explicitNullProperties?.Remove("tax_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim? _explicitNullValueTaxSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim TaxSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim TaxSettings { get => _explicitNullValueTaxSettings; set { _explicitNullValueTaxSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_settings"); else _explicitNullProperties?.Remove("tax_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim _explicitNullValueTaxSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents"/> and sets the default values.
@@ -205,7 +278,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -268,6 +341,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>("payouts_list", PayoutsList);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>("tax_registrations", TaxRegistrations);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>("tax_settings", TaxSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

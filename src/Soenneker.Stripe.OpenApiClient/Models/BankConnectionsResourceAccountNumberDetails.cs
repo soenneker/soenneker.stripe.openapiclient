@@ -11,22 +11,38 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BankConnectionsResourceAccountNumberDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expected_expiry_date") is { } nullNodeExpectedExpiryDate && nullNodeExpectedExpiryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedExpiryDate = null;
+            if (parseNode.GetChildNode("identifier_type") is { } nullNodeIdentifierType && nullNodeIdentifierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierType = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the account number is expected to expire, if applicable.</summary>
-        public int? ExpectedExpiryDate { get; set; }
+        public int? ExpectedExpiryDate { get => _explicitNullValueExpectedExpiryDate; set { _explicitNullValueExpectedExpiryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_expiry_date"); else _explicitNullProperties?.Remove("expected_expiry_date"); } }
+        private int? _explicitNullValueExpectedExpiryDate = default!;
         /// <summary>The type of account number associated with the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get => _explicitNullValueIdentifierType; set { _explicitNullValueIdentifierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifier_type"); else _explicitNullProperties?.Remove("identifier_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? _explicitNullValueIdentifierType = default!;
         /// <summary>Whether the account number is currently active and usable for transactions.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? _explicitNullValueStatus = default!;
         /// <summary>The payment networks that the account number can be used for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? _explicitNullValueSupportedNetworks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> _explicitNullValueSupportedNetworks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails"/> and sets the default values.
@@ -43,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>("identifier_type", IdentifierType);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>("status", Status);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.AchItem>("supported_networks", SupportedNetworks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,40 +11,64 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssuingAuthorizationVerificationData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_line1_check") is { } nullNodeAddressLine1Check && nullNodeAddressLine1Check.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine1Check = null;
+            if (parseNode.GetChildNode("address_postal_code_check") is { } nullNodeAddressPostalCodeCheck && nullNodeAddressPostalCodeCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressPostalCodeCheck = null;
+            if (parseNode.GetChildNode("authentication_exemption") is { } nullNodeAuthenticationExemption && nullNodeAuthenticationExemption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationExemption = null;
+            if (parseNode.GetChildNode("cvc_check") is { } nullNodeCvcCheck && nullNodeCvcCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcCheck = null;
+            if (parseNode.GetChildNode("expiry_check") is { } nullNodeExpiryCheck && nullNodeExpiryCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiryCheck = null;
+            if (parseNode.GetChildNode("postal_code") is { } nullNodePostalCode && nullNodePostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCode = null;
+            if (parseNode.GetChildNode("three_d_secure") is { } nullNodeThreeDSecure && nullNodeThreeDSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeDSecure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the cardholder provided an address first line and if it matched the cardholder’s `billing.address.line1`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check? AddressLine1Check { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check? AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check? _explicitNullValueAddressLine1Check = default!;
         /// <summary>Whether the cardholder provided a postal code and if it matched the cardholder’s `billing.address.postal_code`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck? AddressPostalCodeCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck? AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck? _explicitNullValueAddressPostalCodeCheck = default!;
         /// <summary>The exemption applied to this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? AuthenticationExemption { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? _explicitNullValueAuthenticationExemption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption AuthenticationExemption { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption _explicitNullValueAuthenticationExemption = default!;
 #endif
         /// <summary>Whether the cardholder provided a CVC and if it matched Stripe’s record.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck? CvcCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck? CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck? _explicitNullValueCvcCheck = default!;
         /// <summary>Whether the cardholder provided an expiry date and if it matched Stripe’s record.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck? ExpiryCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck? ExpiryCheck { get => _explicitNullValueExpiryCheck; set { _explicitNullValueExpiryCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiry_check"); else _explicitNullProperties?.Remove("expiry_check"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck? _explicitNullValueExpiryCheck = default!;
         /// <summary>The postal code submitted as part of the authorization used for postal code verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostalCode { get; set; }
+        public string? PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code"); else _explicitNullProperties?.Remove("postal_code"); } }
+        private string? _explicitNullValuePostalCode = default!;
 #nullable restore
 #else
-        public string PostalCode { get; set; }
+        public string PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code"); else _explicitNullProperties?.Remove("postal_code"); } }
+        private string _explicitNullValuePostalCode = default!;
 #endif
         /// <summary>3D Secure details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData"/> and sets the default values.
@@ -61,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck>("expiry_check", ExpiryCheck);
             writer.WriteStringValue("postal_code", PostalCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure>("three_d_secure", ThreeDSecure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,18 +12,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_relinking") is { } nullNodeAllowRelinking && nullNodeAllowRelinking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRelinking = null;
+            if (parseNode.GetChildNode("merchant_display_name") is { } nullNodeMerchantDisplayName && nullNodeMerchantDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantDisplayName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the link should also support users relinking their Apple account.</summary>
-        public bool? AllowRelinking { get; set; }
+        public bool? AllowRelinking { get => _explicitNullValueAllowRelinking; set { _explicitNullValueAllowRelinking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_relinking"); else _explicitNullProperties?.Remove("allow_relinking"); } }
+        private bool? _explicitNullValueAllowRelinking = default!;
         /// <summary>The business name of the merchant accepting Apple&apos;s Terms and Conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantDisplayName { get; set; }
+        public string? MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
+        private string? _explicitNullValueMerchantDisplayName = default!;
 #nullable restore
 #else
-        public string MerchantDisplayName { get; set; }
+        public string MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
+        private string _explicitNullValueMerchantDisplayName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allow_relinking", AllowRelinking);
             writer.WriteStringValue("merchant_display_name", MerchantDisplayName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

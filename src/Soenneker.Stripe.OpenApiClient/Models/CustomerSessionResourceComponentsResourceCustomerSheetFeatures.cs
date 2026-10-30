@@ -12,19 +12,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerSessionResourceComponentsResourceCustomerSheetFeatures : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payment_method_allow_redisplay_filters") is { } nullNodePaymentMethodAllowRedisplayFilters && nullNodePaymentMethodAllowRedisplayFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodAllowRedisplayFilters = null;
+            if (parseNode.GetChildNode("payment_method_remove") is { } nullNodePaymentMethodRemove && nullNodePaymentMethodRemove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodRemove = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of [`allow_redisplay`](https://docs.stripe.com/api/payment_methods/object#payment_method_object-allow_redisplay) values that controls which saved payment methods the customer sheet displays by filtering to only show payment methods with an `allow_redisplay` value that is present in this list.If not specified, defaults to [&quot;always&quot;]. In order to display all saved payment methods, specify [&quot;always&quot;, &quot;limited&quot;, &quot;unspecified&quot;].</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?>? _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> PaymentMethodAllowRedisplayFilters { get => _explicitNullValuePaymentMethodAllowRedisplayFilters; set { _explicitNullValuePaymentMethodAllowRedisplayFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_allow_redisplay_filters"); else _explicitNullProperties?.Remove("payment_method_allow_redisplay_filters"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem?> _explicitNullValuePaymentMethodAllowRedisplayFilters = default!;
 #endif
         /// <summary>Controls whether the customer sheet displays the option to remove a saved payment method.&quot;Allowing buyers to remove their saved payment methods impacts subscriptions that depend on that payment method. Removing the payment method detaches the [`customer` object](https://docs.stripe.com/api/payment_methods/object#payment_method_object-customer) from that [PaymentMethod](https://docs.stripe.com/api/payment_methods).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get => _explicitNullValuePaymentMethodRemove; set { _explicitNullValuePaymentMethodRemove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_remove"); else _explicitNullProperties?.Remove("payment_method_remove"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove? _explicitNullValuePaymentMethodRemove = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetFeatures"/> and sets the default values.
         /// </summary>
@@ -40,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetFeatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetFeatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetFeatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem>("payment_method_allow_redisplay_filters", PaymentMethodAllowRedisplayFilters);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

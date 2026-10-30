@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LegalEntityCompanyVerificationDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("back") is { } nullNodeBack && nullNodeBack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Back = null;
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("details_code") is { } nullNodeDetailsCode && nullNodeDetailsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsCode = null;
+            if (parseNode.GetChildNode("front") is { } nullNodeFront && nullNodeFront.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Front = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The back of a document returned by a [file upload](https://docs.stripe.com/api#create_file) with a `purpose` value of `additional_verification`. Note that `additional_verification` files are [not downloadable](/file-upload#uploading-a-file).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack? Back { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack? Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack? _explicitNullValueBack = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack Back { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack _explicitNullValueBack = default!;
 #endif
         /// <summary>A user-displayable string describing the verification state of this document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Details { get; set; }
+        public string? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private string? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public string Details { get; set; }
+        public string Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private string _explicitNullValueDetails = default!;
 #endif
         /// <summary>One of `document_corrupt`, `document_expired`, `document_failed_copy`, `document_failed_greyscale`, `document_failed_other`, `document_failed_test_mode`, `document_fraudulent`, `document_incomplete`, `document_invalid`, `document_manipulated`, `document_not_readable`, `document_not_uploaded`, `document_type_not_supported`, or `document_too_large`. A machine-readable code specifying the verification state for this document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetailsCode { get; set; }
+        public string? DetailsCode { get => _explicitNullValueDetailsCode; set { _explicitNullValueDetailsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_code"); else _explicitNullProperties?.Remove("details_code"); } }
+        private string? _explicitNullValueDetailsCode = default!;
 #nullable restore
 #else
-        public string DetailsCode { get; set; }
+        public string DetailsCode { get => _explicitNullValueDetailsCode; set { _explicitNullValueDetailsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_code"); else _explicitNullProperties?.Remove("details_code"); } }
+        private string _explicitNullValueDetailsCode = default!;
 #endif
         /// <summary>The front of a document returned by a [file upload](https://docs.stripe.com/api#create_file) with a `purpose` value of `additional_verification`. Note that `additional_verification` files are [not downloadable](/file-upload#uploading-a-file).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront? Front { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront? Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront? _explicitNullValueFront = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront Front { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront _explicitNullValueFront = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("details", Details);
             writer.WriteStringValue("details_code", DetailsCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront>("front", Front);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,56 +11,81 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TreasuryReceivedCreditsResourceLinkedFlows : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("credit_reversal") is { } nullNodeCreditReversal && nullNodeCreditReversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditReversal = null;
+            if (parseNode.GetChildNode("issuing_authorization") is { } nullNodeIssuingAuthorization && nullNodeIssuingAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingAuthorization = null;
+            if (parseNode.GetChildNode("issuing_transaction") is { } nullNodeIssuingTransaction && nullNodeIssuingTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingTransaction = null;
+            if (parseNode.GetChildNode("source_flow") is { } nullNodeSourceFlow && nullNodeSourceFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlow = null;
+            if (parseNode.GetChildNode("source_flow_details") is { } nullNodeSourceFlowDetails && nullNodeSourceFlowDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlowDetails = null;
+            if (parseNode.GetChildNode("source_flow_type") is { } nullNodeSourceFlowType && nullNodeSourceFlowType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlowType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CreditReversal created as a result of this ReceivedCredit being reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditReversal { get; set; }
+        public string? CreditReversal { get => _explicitNullValueCreditReversal; set { _explicitNullValueCreditReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_reversal"); else _explicitNullProperties?.Remove("credit_reversal"); } }
+        private string? _explicitNullValueCreditReversal = default!;
 #nullable restore
 #else
-        public string CreditReversal { get; set; }
+        public string CreditReversal { get => _explicitNullValueCreditReversal; set { _explicitNullValueCreditReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_reversal"); else _explicitNullProperties?.Remove("credit_reversal"); } }
+        private string _explicitNullValueCreditReversal = default!;
 #endif
         /// <summary>Set if the ReceivedCredit was created due to an [Issuing Authorization](https://docs.stripe.com/api#issuing_authorizations) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingAuthorization { get; set; }
+        public string? IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private string? _explicitNullValueIssuingAuthorization = default!;
 #nullable restore
 #else
-        public string IssuingAuthorization { get; set; }
+        public string IssuingAuthorization { get => _explicitNullValueIssuingAuthorization; set { _explicitNullValueIssuingAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_authorization"); else _explicitNullProperties?.Remove("issuing_authorization"); } }
+        private string _explicitNullValueIssuingAuthorization = default!;
 #endif
         /// <summary>Set if the ReceivedCredit is also viewable as an [Issuing transaction](https://docs.stripe.com/api#issuing_transactions) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingTransaction { get; set; }
+        public string? IssuingTransaction { get => _explicitNullValueIssuingTransaction; set { _explicitNullValueIssuingTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_transaction"); else _explicitNullProperties?.Remove("issuing_transaction"); } }
+        private string? _explicitNullValueIssuingTransaction = default!;
 #nullable restore
 #else
-        public string IssuingTransaction { get; set; }
+        public string IssuingTransaction { get => _explicitNullValueIssuingTransaction; set { _explicitNullValueIssuingTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_transaction"); else _explicitNullProperties?.Remove("issuing_transaction"); } }
+        private string _explicitNullValueIssuingTransaction = default!;
 #endif
         /// <summary>ID of the source flow. Set if `network` is `stripe` and the source flow is visible to the user. Examples of source flows include OutboundPayments, payouts, or CreditReversals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceFlow { get; set; }
+        public string? SourceFlow { get => _explicitNullValueSourceFlow; set { _explicitNullValueSourceFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow"); else _explicitNullProperties?.Remove("source_flow"); } }
+        private string? _explicitNullValueSourceFlow = default!;
 #nullable restore
 #else
-        public string SourceFlow { get; set; }
+        public string SourceFlow { get => _explicitNullValueSourceFlow; set { _explicitNullValueSourceFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow"); else _explicitNullProperties?.Remove("source_flow"); } }
+        private string _explicitNullValueSourceFlow = default!;
 #endif
         /// <summary>The expandable object of the source flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails? SourceFlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails? SourceFlowDetails { get => _explicitNullValueSourceFlowDetails; set { _explicitNullValueSourceFlowDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_details"); else _explicitNullProperties?.Remove("source_flow_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails? _explicitNullValueSourceFlowDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails SourceFlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails SourceFlowDetails { get => _explicitNullValueSourceFlowDetails; set { _explicitNullValueSourceFlowDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_details"); else _explicitNullProperties?.Remove("source_flow_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails _explicitNullValueSourceFlowDetails = default!;
 #endif
         /// <summary>The type of flow that originated the ReceivedCredit (for example, `outbound_payment`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceFlowType { get; set; }
+        public string? SourceFlowType { get => _explicitNullValueSourceFlowType; set { _explicitNullValueSourceFlowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_type"); else _explicitNullProperties?.Remove("source_flow_type"); } }
+        private string? _explicitNullValueSourceFlowType = default!;
 #nullable restore
 #else
-        public string SourceFlowType { get; set; }
+        public string SourceFlowType { get => _explicitNullValueSourceFlowType; set { _explicitNullValueSourceFlowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_type"); else _explicitNullProperties?.Remove("source_flow_type"); } }
+        private string _explicitNullValueSourceFlowType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlows(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("source_flow", SourceFlow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails>("source_flow_details", SourceFlowDetails);
             writer.WriteStringValue("source_flow_type", SourceFlowType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

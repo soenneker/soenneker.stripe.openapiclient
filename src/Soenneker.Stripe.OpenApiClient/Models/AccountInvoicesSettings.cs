@@ -11,19 +11,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AccountInvoicesSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("default_account_tax_ids") is { } nullNodeDefaultAccountTaxIds && nullNodeDefaultAccountTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccountTaxIds = null;
+            if (parseNode.GetChildNode("hosted_payment_method_save") is { } nullNodeHostedPaymentMethodSave && nullNodeHostedPaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedPaymentMethodSave = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list of default Account Tax IDs to automatically include on invoices. Account Tax IDs get added when an invoice is finalized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DefaultAccountTaxIds { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? _explicitNullValueDefaultAccountTaxIds = default!;
 #nullable restore
 #else
-        public List<string> DefaultAccountTaxIds { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueDefaultAccountTaxIds = default!;
 #endif
         /// <summary>Whether to save the payment method after a payment is completed for a one-time invoice or a subscription invoice when the customer already has a default payment method on the hosted invoice page.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave? HostedPaymentMethodSave { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave? HostedPaymentMethodSave { get => _explicitNullValueHostedPaymentMethodSave; set { _explicitNullValueHostedPaymentMethodSave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_payment_method_save"); else _explicitNullProperties?.Remove("hosted_payment_method_save"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave? _explicitNullValueHostedPaymentMethodSave = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>(); } },
             };
         }
@@ -60,8 +72,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("default_account_tax_ids", DefaultAccountTaxIds);
+            writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("default_account_tax_ids", DefaultAccountTaxIds);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>("hosted_payment_method_save", HostedPaymentMethodSave);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

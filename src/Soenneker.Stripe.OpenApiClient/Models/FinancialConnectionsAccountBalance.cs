@@ -12,37 +12,57 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FinancialConnectionsAccountBalance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("as_of") is { } nullNodeAsOf && nullNodeAsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsOf = null;
+            if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
+            if (parseNode.GetChildNode("credit") is { } nullNodeCredit && nullNodeCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Credit = null;
+            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the external institution calculated this balance. Measured in seconds since the Unix epoch.</summary>
-        public int? AsOf { get; set; }
+        public int? AsOf { get => _explicitNullValueAsOf; set { _explicitNullValueAsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("as_of"); else _explicitNullProperties?.Remove("as_of"); } }
+        private int? _explicitNullValueAsOf = default!;
         /// <summary>The cash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? _explicitNullValueCash = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance _explicitNullValueCash = default!;
 #endif
         /// <summary>The credit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? Credit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? _explicitNullValueCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance Credit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance _explicitNullValueCredit = default!;
 #endif
         /// <summary>The balances owed to (or by) the account holder, before subtracting any outbound pending transactions or adding any inbound pending transactions.Each key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.Each value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? Current { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? _explicitNullValueCurrent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty Current { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty _explicitNullValueCurrent = default!;
 #endif
         /// <summary>The `type` of the balance. An additional hash is included on the balance with a name matching this value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance"/> and sets the default values.
         /// </summary>
@@ -58,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance>("credit", Credit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty>("current", Current);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

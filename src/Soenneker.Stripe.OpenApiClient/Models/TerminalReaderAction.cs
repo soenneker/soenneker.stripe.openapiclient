@@ -12,101 +12,145 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalReaderAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_error") is { } nullNodeApiError && nullNodeApiError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiError = null;
+            if (parseNode.GetChildNode("collect_inputs") is { } nullNodeCollectInputs && nullNodeCollectInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectInputs = null;
+            if (parseNode.GetChildNode("collect_payment_method") is { } nullNodeCollectPaymentMethod && nullNodeCollectPaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectPaymentMethod = null;
+            if (parseNode.GetChildNode("confirm_payment_intent") is { } nullNodeConfirmPaymentIntent && nullNodeConfirmPaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmPaymentIntent = null;
+            if (parseNode.GetChildNode("failure_code") is { } nullNodeFailureCode && nullNodeFailureCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCode = null;
+            if (parseNode.GetChildNode("failure_message") is { } nullNodeFailureMessage && nullNodeFailureMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureMessage = null;
+            if (parseNode.GetChildNode("print_content") is { } nullNodePrintContent && nullNodePrintContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintContent = null;
+            if (parseNode.GetChildNode("process_payment_intent") is { } nullNodeProcessPaymentIntent && nullNodeProcessPaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessPaymentIntent = null;
+            if (parseNode.GetChildNode("process_setup_intent") is { } nullNodeProcessSetupIntent && nullNodeProcessSetupIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessSetupIntent = null;
+            if (parseNode.GetChildNode("refund_payment") is { } nullNodeRefundPayment && nullNodeRefundPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundPayment = null;
+            if (parseNode.GetChildNode("set_reader_display") is { } nullNodeSetReaderDisplay && nullNodeSetReaderDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetReaderDisplay = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reader action failed due to an [API error](https://docs.stripe.com/api/errors). Only present when `status` is `failed` and the underlying failure was an API error. Avoid parsing the `message` field for programmatic logic; use `type` or `code` instead. The `message` field is for display to humans only and may be updated at anytime. Requires [reader version](https://docs.stripe.com/terminal/readers/stripe-reader-s700-s710#reader-software-version) 2.42 or later. Readers on older versions always return null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError? ApiError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError? ApiError { get => _explicitNullValueApiError; set { _explicitNullValueApiError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error"); else _explicitNullProperties?.Remove("api_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError? _explicitNullValueApiError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError ApiError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError ApiError { get => _explicitNullValueApiError; set { _explicitNullValueApiError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error"); else _explicitNullProperties?.Remove("api_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionApiError _explicitNullValueApiError = default!;
 #endif
         /// <summary>Represents a reader action to collect customer inputs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction? CollectInputs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction? CollectInputs { get => _explicitNullValueCollectInputs; set { _explicitNullValueCollectInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collect_inputs"); else _explicitNullProperties?.Remove("collect_inputs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction? _explicitNullValueCollectInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction CollectInputs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction CollectInputs { get => _explicitNullValueCollectInputs; set { _explicitNullValueCollectInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collect_inputs"); else _explicitNullProperties?.Remove("collect_inputs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectInputsAction _explicitNullValueCollectInputs = default!;
 #endif
         /// <summary>Represents a reader action to collect a payment method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction? CollectPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction? CollectPaymentMethod { get => _explicitNullValueCollectPaymentMethod; set { _explicitNullValueCollectPaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collect_payment_method"); else _explicitNullProperties?.Remove("collect_payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction? _explicitNullValueCollectPaymentMethod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction CollectPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction CollectPaymentMethod { get => _explicitNullValueCollectPaymentMethod; set { _explicitNullValueCollectPaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collect_payment_method"); else _explicitNullProperties?.Remove("collect_payment_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodAction _explicitNullValueCollectPaymentMethod = default!;
 #endif
         /// <summary>Represents a reader action to confirm a payment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction? ConfirmPaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction? ConfirmPaymentIntent { get => _explicitNullValueConfirmPaymentIntent; set { _explicitNullValueConfirmPaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_payment_intent"); else _explicitNullProperties?.Remove("confirm_payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction? _explicitNullValueConfirmPaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction ConfirmPaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction ConfirmPaymentIntent { get => _explicitNullValueConfirmPaymentIntent; set { _explicitNullValueConfirmPaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_payment_intent"); else _explicitNullProperties?.Remove("confirm_payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction _explicitNullValueConfirmPaymentIntent = default!;
 #endif
         /// <summary>Failure code, only set if status is `failed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureCode { get; set; }
+        public string? FailureCode { get => _explicitNullValueFailureCode; set { _explicitNullValueFailureCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_code"); else _explicitNullProperties?.Remove("failure_code"); } }
+        private string? _explicitNullValueFailureCode = default!;
 #nullable restore
 #else
-        public string FailureCode { get; set; }
+        public string FailureCode { get => _explicitNullValueFailureCode; set { _explicitNullValueFailureCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_code"); else _explicitNullProperties?.Remove("failure_code"); } }
+        private string _explicitNullValueFailureCode = default!;
 #endif
         /// <summary>Detailed failure message, only set if status is `failed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureMessage { get; set; }
+        public string? FailureMessage { get => _explicitNullValueFailureMessage; set { _explicitNullValueFailureMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_message"); else _explicitNullProperties?.Remove("failure_message"); } }
+        private string? _explicitNullValueFailureMessage = default!;
 #nullable restore
 #else
-        public string FailureMessage { get; set; }
+        public string FailureMessage { get => _explicitNullValueFailureMessage; set { _explicitNullValueFailureMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_message"); else _explicitNullProperties?.Remove("failure_message"); } }
+        private string _explicitNullValueFailureMessage = default!;
 #endif
         /// <summary>Represents a reader action to print content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent? PrintContent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent? PrintContent { get => _explicitNullValuePrintContent; set { _explicitNullValuePrintContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("print_content"); else _explicitNullProperties?.Remove("print_content"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent? _explicitNullValuePrintContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent PrintContent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent PrintContent { get => _explicitNullValuePrintContent; set { _explicitNullValuePrintContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("print_content"); else _explicitNullProperties?.Remove("print_content"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePrintContent _explicitNullValuePrintContent = default!;
 #endif
         /// <summary>Represents a reader action to process a payment intent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction? ProcessPaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction? ProcessPaymentIntent { get => _explicitNullValueProcessPaymentIntent; set { _explicitNullValueProcessPaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_payment_intent"); else _explicitNullProperties?.Remove("process_payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction? _explicitNullValueProcessPaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction ProcessPaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction ProcessPaymentIntent { get => _explicitNullValueProcessPaymentIntent; set { _explicitNullValueProcessPaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_payment_intent"); else _explicitNullProperties?.Remove("process_payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentAction _explicitNullValueProcessPaymentIntent = default!;
 #endif
         /// <summary>Represents a reader action to process a setup intent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction? ProcessSetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction? ProcessSetupIntent { get => _explicitNullValueProcessSetupIntent; set { _explicitNullValueProcessSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_setup_intent"); else _explicitNullProperties?.Remove("process_setup_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction? _explicitNullValueProcessSetupIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction ProcessSetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction ProcessSetupIntent { get => _explicitNullValueProcessSetupIntent; set { _explicitNullValueProcessSetupIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_setup_intent"); else _explicitNullProperties?.Remove("process_setup_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessSetupIntentAction _explicitNullValueProcessSetupIntent = default!;
 #endif
         /// <summary>Represents a reader action to refund a payment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction? RefundPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction? RefundPayment { get => _explicitNullValueRefundPayment; set { _explicitNullValueRefundPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_payment"); else _explicitNullProperties?.Remove("refund_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction? _explicitNullValueRefundPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction RefundPayment { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction RefundPayment { get => _explicitNullValueRefundPayment; set { _explicitNullValueRefundPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_payment"); else _explicitNullProperties?.Remove("refund_payment"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction _explicitNullValueRefundPayment = default!;
 #endif
         /// <summary>Represents a reader action to set the reader display</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction? SetReaderDisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction? SetReaderDisplay { get => _explicitNullValueSetReaderDisplay; set { _explicitNullValueSetReaderDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_reader_display"); else _explicitNullProperties?.Remove("set_reader_display"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction? _explicitNullValueSetReaderDisplay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction SetReaderDisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction SetReaderDisplay { get => _explicitNullValueSetReaderDisplay; set { _explicitNullValueSetReaderDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_reader_display"); else _explicitNullProperties?.Remove("set_reader_display"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction _explicitNullValueSetReaderDisplay = default!;
 #endif
         /// <summary>Status of the action performed by the reader.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus? _explicitNullValueStatus = default!;
         /// <summary>Type of action performed by the reader.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction"/> and sets the default values.
         /// </summary>
@@ -122,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,6 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction>("set_reader_display", SetReaderDisplay);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

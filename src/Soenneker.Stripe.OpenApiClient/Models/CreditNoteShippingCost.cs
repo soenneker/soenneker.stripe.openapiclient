@@ -12,30 +12,49 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreditNoteShippingCost : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_subtotal") is { } nullNodeAmountSubtotal && nullNodeAmountSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountSubtotal = null;
+            if (parseNode.GetChildNode("amount_tax") is { } nullNodeAmountTax && nullNodeAmountTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTax = null;
+            if (parseNode.GetChildNode("amount_total") is { } nullNodeAmountTotal && nullNodeAmountTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTotal = null;
+            if (parseNode.GetChildNode("shipping_rate") is { } nullNodeShippingRate && nullNodeShippingRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingRate = null;
+            if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total shipping cost before any taxes are applied.</summary>
-        public int? AmountSubtotal { get; set; }
+        public int? AmountSubtotal { get => _explicitNullValueAmountSubtotal; set { _explicitNullValueAmountSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_subtotal"); else _explicitNullProperties?.Remove("amount_subtotal"); } }
+        private int? _explicitNullValueAmountSubtotal = default!;
         /// <summary>Total tax amount applied due to shipping costs. If no tax was applied, defaults to 0.</summary>
-        public int? AmountTax { get; set; }
+        public int? AmountTax { get => _explicitNullValueAmountTax; set { _explicitNullValueAmountTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tax"); else _explicitNullProperties?.Remove("amount_tax"); } }
+        private int? _explicitNullValueAmountTax = default!;
         /// <summary>Total shipping cost after taxes are applied.</summary>
-        public int? AmountTotal { get; set; }
+        public int? AmountTotal { get => _explicitNullValueAmountTotal; set { _explicitNullValueAmountTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_total"); else _explicitNullProperties?.Remove("amount_total"); } }
+        private int? _explicitNullValueAmountTotal = default!;
         /// <summary>The ID of the ShippingRate for this invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate? ShippingRate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate? ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate? _explicitNullValueShippingRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate ShippingRate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate _explicitNullValueShippingRate = default!;
 #endif
         /// <summary>The taxes applied to the shipping rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>? Taxes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>? _explicitNullValueTaxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount> Taxes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount> _explicitNullValueTaxes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost"/> and sets the default values.
@@ -52,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCostShippingRate>("shipping_rate", ShippingRate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>("taxes", Taxes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

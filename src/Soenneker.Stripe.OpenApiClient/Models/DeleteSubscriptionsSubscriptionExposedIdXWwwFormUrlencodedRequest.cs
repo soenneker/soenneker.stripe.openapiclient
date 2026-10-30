@@ -11,27 +11,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancellation_details") is { } nullNodeCancellationDetails && nullNodeCancellationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationDetails = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("invoice_now") is { } nullNodeInvoiceNow && nullNodeInvoiceNow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceNow = null;
+            if (parseNode.GetChildNode("prorate") is { } nullNodeProrate && nullNodeProrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prorate = null;
+        }
+
         /// <summary>Details about why this subscription was cancelled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails? CancellationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails? _explicitNullValueCancellationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails CancellationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails _explicitNullValueCancellationDetails = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Will generate a final invoice that invoices for any un-invoiced metered usage and new/pending proration invoice items. Defaults to `false`.</summary>
-        public bool? InvoiceNow { get; set; }
+        public bool? InvoiceNow { get => _explicitNullValueInvoiceNow; set { _explicitNullValueInvoiceNow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_now"); else _explicitNullProperties?.Remove("invoice_now"); } }
+        private bool? _explicitNullValueInvoiceNow = default!;
         /// <summary>Will generate a proration invoice item that credits remaining unused time until the subscription period end. Defaults to `false`.</summary>
-        public bool? Prorate { get; set; }
+        public bool? Prorate { get => _explicitNullValueProrate; set { _explicitNullValueProrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prorate"); else _explicitNullProperties?.Remove("prorate"); } }
+        private bool? _explicitNullValueProrate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails>("cancellation_details", CancellationDetails);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteBoolValue("invoice_now", InvoiceNow);
-            writer.WriteBoolValue("prorate", Prorate);
+            writer.WriteBoolValue("prorate", Prorate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

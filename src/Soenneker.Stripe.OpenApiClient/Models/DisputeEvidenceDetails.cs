@@ -11,25 +11,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DisputeEvidenceDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("due_by") is { } nullNodeDueBy && nullNodeDueBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueBy = null;
+            if (parseNode.GetChildNode("enhanced_eligibility") is { } nullNodeEnhancedEligibility && nullNodeEnhancedEligibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnhancedEligibility = null;
+            if (parseNode.GetChildNode("has_evidence") is { } nullNodeHasEvidence && nullNodeHasEvidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasEvidence = null;
+            if (parseNode.GetChildNode("past_due") is { } nullNodePastDue && nullNodePastDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PastDue = null;
+            if (parseNode.GetChildNode("submission_count") is { } nullNodeSubmissionCount && nullNodeSubmissionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmissionCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date by which evidence must be submitted in order to successfully challenge dispute. Will be 0 if the customer&apos;s bank or credit card company doesn&apos;t allow a response for this particular dispute.</summary>
-        public int? DueBy { get; set; }
+        public int? DueBy { get => _explicitNullValueDueBy; set { _explicitNullValueDueBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_by"); else _explicitNullProperties?.Remove("due_by"); } }
+        private int? _explicitNullValueDueBy = default!;
         /// <summary>The enhanced_eligibility property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility? EnhancedEligibility { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility? EnhancedEligibility { get => _explicitNullValueEnhancedEligibility; set { _explicitNullValueEnhancedEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhanced_eligibility"); else _explicitNullProperties?.Remove("enhanced_eligibility"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility? _explicitNullValueEnhancedEligibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility EnhancedEligibility { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility EnhancedEligibility { get => _explicitNullValueEnhancedEligibility; set { _explicitNullValueEnhancedEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhanced_eligibility"); else _explicitNullProperties?.Remove("enhanced_eligibility"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility _explicitNullValueEnhancedEligibility = default!;
 #endif
         /// <summary>Whether evidence has been staged for this dispute.</summary>
-        public bool? HasEvidence { get; set; }
+        public bool? HasEvidence { get => _explicitNullValueHasEvidence; set { _explicitNullValueHasEvidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_evidence"); else _explicitNullProperties?.Remove("has_evidence"); } }
+        private bool? _explicitNullValueHasEvidence = default!;
         /// <summary>Whether the last evidence submission was submitted past the due date. Defaults to `false` if no evidence submissions have occurred. If `true`, then delivery of the latest evidence is *not* guaranteed.</summary>
-        public bool? PastDue { get; set; }
+        public bool? PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
+        private bool? _explicitNullValuePastDue = default!;
         /// <summary>The number of times evidence has been submitted. Typically, you may only submit evidence once.</summary>
-        public int? SubmissionCount { get; set; }
+        public int? SubmissionCount { get => _explicitNullValueSubmissionCount; set { _explicitNullValueSubmissionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submission_count"); else _explicitNullProperties?.Remove("submission_count"); } }
+        private int? _explicitNullValueSubmissionCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("has_evidence", HasEvidence);
             writer.WriteBoolValue("past_due", PastDue);
             writer.WriteIntValue("submission_count", SubmissionCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

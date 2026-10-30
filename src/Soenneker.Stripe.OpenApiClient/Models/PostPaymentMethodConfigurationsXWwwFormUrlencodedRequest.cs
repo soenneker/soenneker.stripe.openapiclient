@@ -11,526 +11,728 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostPaymentMethodConfigurationsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acss_debit") is { } nullNodeAcssDebit && nullNodeAcssDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcssDebit = null;
+            if (parseNode.GetChildNode("affirm") is { } nullNodeAffirm && nullNodeAffirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Affirm = null;
+            if (parseNode.GetChildNode("afterpay_clearpay") is { } nullNodeAfterpayClearpay && nullNodeAfterpayClearpay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterpayClearpay = null;
+            if (parseNode.GetChildNode("alipay") is { } nullNodeAlipay && nullNodeAlipay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alipay = null;
+            if (parseNode.GetChildNode("alma") is { } nullNodeAlma && nullNodeAlma.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alma = null;
+            if (parseNode.GetChildNode("amazon_pay") is { } nullNodeAmazonPay && nullNodeAmazonPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmazonPay = null;
+            if (parseNode.GetChildNode("apple_pay") is { } nullNodeApplePay && nullNodeApplePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePay = null;
+            if (parseNode.GetChildNode("apple_pay_later") is { } nullNodeApplePayLater && nullNodeApplePayLater.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePayLater = null;
+            if (parseNode.GetChildNode("au_becs_debit") is { } nullNodeAuBecsDebit && nullNodeAuBecsDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuBecsDebit = null;
+            if (parseNode.GetChildNode("bacs_debit") is { } nullNodeBacsDebit && nullNodeBacsDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BacsDebit = null;
+            if (parseNode.GetChildNode("bancontact") is { } nullNodeBancontact && nullNodeBancontact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bancontact = null;
+            if (parseNode.GetChildNode("billie") is { } nullNodeBillie && nullNodeBillie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Billie = null;
+            if (parseNode.GetChildNode("bizum") is { } nullNodeBizum && nullNodeBizum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bizum = null;
+            if (parseNode.GetChildNode("blik") is { } nullNodeBlik && nullNodeBlik.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blik = null;
+            if (parseNode.GetChildNode("boleto") is { } nullNodeBoleto && nullNodeBoleto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boleto = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("cartes_bancaires") is { } nullNodeCartesBancaires && nullNodeCartesBancaires.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CartesBancaires = null;
+            if (parseNode.GetChildNode("cashapp") is { } nullNodeCashapp && nullNodeCashapp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cashapp = null;
+            if (parseNode.GetChildNode("crypto") is { } nullNodeCrypto && nullNodeCrypto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Crypto = null;
+            if (parseNode.GetChildNode("customer_balance") is { } nullNodeCustomerBalance && nullNodeCustomerBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerBalance = null;
+            if (parseNode.GetChildNode("eps") is { } nullNodeEps && nullNodeEps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eps = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("fpx") is { } nullNodeFpx && nullNodeFpx.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fpx = null;
+            if (parseNode.GetChildNode("fr_meal_voucher_conecs") is { } nullNodeFrMealVoucherConecs && nullNodeFrMealVoucherConecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrMealVoucherConecs = null;
+            if (parseNode.GetChildNode("giropay") is { } nullNodeGiropay && nullNodeGiropay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Giropay = null;
+            if (parseNode.GetChildNode("google_pay") is { } nullNodeGooglePay && nullNodeGooglePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePay = null;
+            if (parseNode.GetChildNode("grabpay") is { } nullNodeGrabpay && nullNodeGrabpay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grabpay = null;
+            if (parseNode.GetChildNode("ideal") is { } nullNodeIdeal && nullNodeIdeal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ideal = null;
+            if (parseNode.GetChildNode("jcb") is { } nullNodeJcb && nullNodeJcb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jcb = null;
+            if (parseNode.GetChildNode("kakao_pay") is { } nullNodeKakaoPay && nullNodeKakaoPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KakaoPay = null;
+            if (parseNode.GetChildNode("klarna") is { } nullNodeKlarna && nullNodeKlarna.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Klarna = null;
+            if (parseNode.GetChildNode("konbini") is { } nullNodeKonbini && nullNodeKonbini.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Konbini = null;
+            if (parseNode.GetChildNode("kr_card") is { } nullNodeKrCard && nullNodeKrCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KrCard = null;
+            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("mb_way") is { } nullNodeMbWay && nullNodeMbWay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MbWay = null;
+            if (parseNode.GetChildNode("mobilepay") is { } nullNodeMobilepay && nullNodeMobilepay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mobilepay = null;
+            if (parseNode.GetChildNode("multibanco") is { } nullNodeMultibanco && nullNodeMultibanco.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Multibanco = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("naver_pay") is { } nullNodeNaverPay && nullNodeNaverPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NaverPay = null;
+            if (parseNode.GetChildNode("nz_bank_account") is { } nullNodeNzBankAccount && nullNodeNzBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NzBankAccount = null;
+            if (parseNode.GetChildNode("oxxo") is { } nullNodeOxxo && nullNodeOxxo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oxxo = null;
+            if (parseNode.GetChildNode("p24") is { } nullNodeP24 && nullNodeP24.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) P24 = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("pay_by_bank") is { } nullNodePayByBank && nullNodePayByBank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayByBank = null;
+            if (parseNode.GetChildNode("payco") is { } nullNodePayco && nullNodePayco.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payco = null;
+            if (parseNode.GetChildNode("paynow") is { } nullNodePaynow && nullNodePaynow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paynow = null;
+            if (parseNode.GetChildNode("paypal") is { } nullNodePaypal && nullNodePaypal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypal = null;
+            if (parseNode.GetChildNode("paypay") is { } nullNodePaypay && nullNodePaypay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paypay = null;
+            if (parseNode.GetChildNode("payto") is { } nullNodePayto && nullNodePayto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payto = null;
+            if (parseNode.GetChildNode("pix") is { } nullNodePix && nullNodePix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pix = null;
+            if (parseNode.GetChildNode("promptpay") is { } nullNodePromptpay && nullNodePromptpay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Promptpay = null;
+            if (parseNode.GetChildNode("revolut_pay") is { } nullNodeRevolutPay && nullNodeRevolutPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevolutPay = null;
+            if (parseNode.GetChildNode("samsung_pay") is { } nullNodeSamsungPay && nullNodeSamsungPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamsungPay = null;
+            if (parseNode.GetChildNode("satispay") is { } nullNodeSatispay && nullNodeSatispay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Satispay = null;
+            if (parseNode.GetChildNode("scalapay") is { } nullNodeScalapay && nullNodeScalapay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scalapay = null;
+            if (parseNode.GetChildNode("sepa_debit") is { } nullNodeSepaDebit && nullNodeSepaDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SepaDebit = null;
+            if (parseNode.GetChildNode("sequra") is { } nullNodeSequra && nullNodeSequra.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sequra = null;
+            if (parseNode.GetChildNode("sofort") is { } nullNodeSofort && nullNodeSofort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sofort = null;
+            if (parseNode.GetChildNode("sunbit") is { } nullNodeSunbit && nullNodeSunbit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sunbit = null;
+            if (parseNode.GetChildNode("swish") is { } nullNodeSwish && nullNodeSwish.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Swish = null;
+            if (parseNode.GetChildNode("twint") is { } nullNodeTwint && nullNodeTwint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Twint = null;
+            if (parseNode.GetChildNode("upi") is { } nullNodeUpi && nullNodeUpi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upi = null;
+            if (parseNode.GetChildNode("us_bank_account") is { } nullNodeUsBankAccount && nullNodeUsBankAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsBankAccount = null;
+            if (parseNode.GetChildNode("wechat_pay") is { } nullNodeWechatPay && nullNodeWechatPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WechatPay = null;
+            if (parseNode.GetChildNode("zip") is { } nullNodeZip && nullNodeZip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zip = null;
+        }
+
         /// <summary>Canadian pre-authorized debit payments, check this [page](https://docs.stripe.com/payments/acss-debit) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit? AcssDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit? AcssDebit { get => _explicitNullValueAcssDebit; set { _explicitNullValueAcssDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acss_debit"); else _explicitNullProperties?.Remove("acss_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit? _explicitNullValueAcssDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit AcssDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit AcssDebit { get => _explicitNullValueAcssDebit; set { _explicitNullValueAcssDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acss_debit"); else _explicitNullProperties?.Remove("acss_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAcssDebit _explicitNullValueAcssDebit = default!;
 #endif
         /// <summary>[Affirm](https://www.affirm.com/) gives your customers a way to split purchases over a series of payments. Depending on the purchase, they can pay with four interest-free payments (Split Pay) or pay over a longer term (Installments), which might include interest. Check this [page](https://docs.stripe.com/payments/affirm) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm? Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm? Affirm { get => _explicitNullValueAffirm; set { _explicitNullValueAffirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affirm"); else _explicitNullProperties?.Remove("affirm"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm? _explicitNullValueAffirm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm Affirm { get => _explicitNullValueAffirm; set { _explicitNullValueAffirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affirm"); else _explicitNullProperties?.Remove("affirm"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAffirm _explicitNullValueAffirm = default!;
 #endif
         /// <summary>Afterpay gives your customers a way to pay for purchases in installments, check this [page](https://docs.stripe.com/payments/afterpay-clearpay) for more details like country availability. Afterpay is particularly popular among businesses selling fashion, beauty, and sports products.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay? AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay? AfterpayClearpay { get => _explicitNullValueAfterpayClearpay; set { _explicitNullValueAfterpayClearpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("afterpay_clearpay"); else _explicitNullProperties?.Remove("afterpay_clearpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay? _explicitNullValueAfterpayClearpay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay AfterpayClearpay { get => _explicitNullValueAfterpayClearpay; set { _explicitNullValueAfterpayClearpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("afterpay_clearpay"); else _explicitNullProperties?.Remove("afterpay_clearpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAfterpayClearpay _explicitNullValueAfterpayClearpay = default!;
 #endif
         /// <summary>Alipay is a digital wallet in China that has more than a billion active users worldwide. Alipay users can pay on the web or on a mobile device using login credentials or their Alipay app. Alipay has a low dispute rate and reduces fraud by authenticating payments using the customer&apos;s login credentials. Check this [page](https://docs.stripe.com/payments/alipay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay? Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay? Alipay { get => _explicitNullValueAlipay; set { _explicitNullValueAlipay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alipay"); else _explicitNullProperties?.Remove("alipay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay? _explicitNullValueAlipay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay Alipay { get => _explicitNullValueAlipay; set { _explicitNullValueAlipay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alipay"); else _explicitNullProperties?.Remove("alipay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlipay _explicitNullValueAlipay = default!;
 #endif
         /// <summary>Alma is a Buy Now, Pay Later payment method that offers customers the ability to pay in 2, 3, or 4 installments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma? Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma? Alma { get => _explicitNullValueAlma; set { _explicitNullValueAlma = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alma"); else _explicitNullProperties?.Remove("alma"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma? _explicitNullValueAlma = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma Alma { get => _explicitNullValueAlma; set { _explicitNullValueAlma = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alma"); else _explicitNullProperties?.Remove("alma"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAlma _explicitNullValueAlma = default!;
 #endif
         /// <summary>Amazon Pay is a wallet payment method that lets your customers check out the same way as on Amazon.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay? AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay? AmazonPay { get => _explicitNullValueAmazonPay; set { _explicitNullValueAmazonPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_pay"); else _explicitNullProperties?.Remove("amazon_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay? _explicitNullValueAmazonPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay AmazonPay { get => _explicitNullValueAmazonPay; set { _explicitNullValueAmazonPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_pay"); else _explicitNullProperties?.Remove("amazon_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAmazonPay _explicitNullValueAmazonPay = default!;
 #endif
         /// <summary>Stripe users can accept [Apple Pay](https://stripe.com/payments/apple-pay) in iOS applications in iOS 9 and later, and on the web in Safari starting with iOS 10 or macOS Sierra. There are no additional fees to process Apple Pay payments, and the [pricing](https://stripe.com/pricing) is the same as other card transactions. Check this [page](https://docs.stripe.com/apple-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay? ApplePay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay? ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay? _explicitNullValueApplePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay ApplePay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePay _explicitNullValueApplePay = default!;
 #endif
         /// <summary>Apple Pay Later, a payment method for customers to buy now and pay later, gives your customers a way to split purchases into four installments across six weeks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater? ApplePayLater { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater? ApplePayLater { get => _explicitNullValueApplePayLater; set { _explicitNullValueApplePayLater = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay_later"); else _explicitNullProperties?.Remove("apple_pay_later"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater? _explicitNullValueApplePayLater = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater ApplePayLater { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater ApplePayLater { get => _explicitNullValueApplePayLater; set { _explicitNullValueApplePayLater = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay_later"); else _explicitNullProperties?.Remove("apple_pay_later"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestApplePayLater _explicitNullValueApplePayLater = default!;
 #endif
         /// <summary>Stripe users in Australia can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with an Australian bank account. Check this [page](https://docs.stripe.com/payments/au-becs-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit? AuBecsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit? AuBecsDebit { get => _explicitNullValueAuBecsDebit; set { _explicitNullValueAuBecsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au_becs_debit"); else _explicitNullProperties?.Remove("au_becs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit? _explicitNullValueAuBecsDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit AuBecsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit AuBecsDebit { get => _explicitNullValueAuBecsDebit; set { _explicitNullValueAuBecsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au_becs_debit"); else _explicitNullProperties?.Remove("au_becs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestAuBecsDebit _explicitNullValueAuBecsDebit = default!;
 #endif
         /// <summary>Stripe users in the UK can accept Bacs Direct Debit payments from customers with a UK bank account, check this [page](https://docs.stripe.com/payments/payment-methods/bacs-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit? BacsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit? BacsDebit { get => _explicitNullValueBacsDebit; set { _explicitNullValueBacsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bacs_debit"); else _explicitNullProperties?.Remove("bacs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit? _explicitNullValueBacsDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit BacsDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit BacsDebit { get => _explicitNullValueBacsDebit; set { _explicitNullValueBacsDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bacs_debit"); else _explicitNullProperties?.Remove("bacs_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBacsDebit _explicitNullValueBacsDebit = default!;
 #endif
         /// <summary>Bancontact is the most popular online payment method in Belgium, with over 15 million cards in circulation. [Customers](https://docs.stripe.com/api/customers) use a Bancontact card or mobile app linked to a Belgian bank account to make online payments that are secure, guaranteed, and confirmed immediately. Check this [page](https://docs.stripe.com/payments/bancontact) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact? Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact? Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact? _explicitNullValueBancontact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact Bancontact { get => _explicitNullValueBancontact; set { _explicitNullValueBancontact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bancontact"); else _explicitNullProperties?.Remove("bancontact"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBancontact _explicitNullValueBancontact = default!;
 #endif
         /// <summary>Billie is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method that offers businesses Pay by Invoice where they offer payment terms ranging from 7-120 days. Customers are redirected from your website or app, authorize the payment with Billie, then return to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie? Billie { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie? Billie { get => _explicitNullValueBillie; set { _explicitNullValueBillie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billie"); else _explicitNullProperties?.Remove("billie"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie? _explicitNullValueBillie = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie Billie { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie Billie { get => _explicitNullValueBillie; set { _explicitNullValueBillie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billie"); else _explicitNullProperties?.Remove("billie"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillie _explicitNullValueBillie = default!;
 #endif
         /// <summary>To enable Bizum, buyers need a Spanish IBAN from a bank connected to Bizum. Within their banking app, they can enable Bizum and link their mobile number to their IBAN.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum? Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum? Bizum { get => _explicitNullValueBizum; set { _explicitNullValueBizum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bizum"); else _explicitNullProperties?.Remove("bizum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum? _explicitNullValueBizum = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum Bizum { get => _explicitNullValueBizum; set { _explicitNullValueBizum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bizum"); else _explicitNullProperties?.Remove("bizum"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBizum _explicitNullValueBizum = default!;
 #endif
         /// <summary>BLIK is a [single use](https://docs.stripe.com/payments/payment-methods#usage) payment method that requires customers to authenticate their payments. When customers want to pay online using BLIK, they request a six-digit code from their banking application and enter it into the payment collection form. Check this [page](https://docs.stripe.com/payments/blik) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik? Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik? Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik? _explicitNullValueBlik = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik Blik { get => _explicitNullValueBlik; set { _explicitNullValueBlik = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blik"); else _explicitNullProperties?.Remove("blik"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBlik _explicitNullValueBlik = default!;
 #endif
         /// <summary>Boleto is an official (regulated by the Central Bank of Brazil) payment method in Brazil. Check this [page](https://docs.stripe.com/payments/boleto) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto? Boleto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto? Boleto { get => _explicitNullValueBoleto; set { _explicitNullValueBoleto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boleto"); else _explicitNullProperties?.Remove("boleto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto? _explicitNullValueBoleto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto Boleto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto Boleto { get => _explicitNullValueBoleto; set { _explicitNullValueBoleto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boleto"); else _explicitNullProperties?.Remove("boleto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBoleto _explicitNullValueBoleto = default!;
 #endif
         /// <summary>Cards are a popular way for consumers and businesses to pay online or in person. Stripe supports global and local card networks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Cartes Bancaires is France&apos;s local card network. More than 95% of these cards are co-branded with either Visa or Mastercard, meaning you can process these cards over either Cartes Bancaires or the Visa or Mastercard networks. Check this [page](https://docs.stripe.com/payments/cartes-bancaires) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires? CartesBancaires { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires? CartesBancaires { get => _explicitNullValueCartesBancaires; set { _explicitNullValueCartesBancaires = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cartes_bancaires"); else _explicitNullProperties?.Remove("cartes_bancaires"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires? _explicitNullValueCartesBancaires = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires CartesBancaires { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires CartesBancaires { get => _explicitNullValueCartesBancaires; set { _explicitNullValueCartesBancaires = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cartes_bancaires"); else _explicitNullProperties?.Remove("cartes_bancaires"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCartesBancaires _explicitNullValueCartesBancaires = default!;
 #endif
         /// <summary>Cash App is a popular consumer app in the US that allows customers to bank, invest, send, and receive money using their digital wallet. Check this [page](https://docs.stripe.com/payments/cash-app-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp? Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp? Cashapp { get => _explicitNullValueCashapp; set { _explicitNullValueCashapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp"); else _explicitNullProperties?.Remove("cashapp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp? _explicitNullValueCashapp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp Cashapp { get => _explicitNullValueCashapp; set { _explicitNullValueCashapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashapp"); else _explicitNullProperties?.Remove("cashapp"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCashapp _explicitNullValueCashapp = default!;
 #endif
         /// <summary>[Stablecoin payments](https://docs.stripe.com/payments/stablecoin-payments) enable customers to pay in stablecoins like USDC from 100s of wallets including Phantom and Metamask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto? Crypto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto? Crypto { get => _explicitNullValueCrypto; set { _explicitNullValueCrypto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto"); else _explicitNullProperties?.Remove("crypto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto? _explicitNullValueCrypto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto Crypto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto Crypto { get => _explicitNullValueCrypto; set { _explicitNullValueCrypto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto"); else _explicitNullProperties?.Remove("crypto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCrypto _explicitNullValueCrypto = default!;
 #endif
         /// <summary>Uses a customer’s [cash balance](https://docs.stripe.com/payments/customer-balance) for the payment. The cash balance can be funded via a bank transfer. Check this [page](https://docs.stripe.com/payments/bank-transfers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance? CustomerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance? CustomerBalance { get => _explicitNullValueCustomerBalance; set { _explicitNullValueCustomerBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_balance"); else _explicitNullProperties?.Remove("customer_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance? _explicitNullValueCustomerBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance CustomerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance CustomerBalance { get => _explicitNullValueCustomerBalance; set { _explicitNullValueCustomerBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_balance"); else _explicitNullProperties?.Remove("customer_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestCustomerBalance _explicitNullValueCustomerBalance = default!;
 #endif
         /// <summary>EPS is an Austria-based payment method that allows customers to complete transactions online using their bank credentials. EPS is supported by all Austrian banks and is accepted by over 80% of Austrian online retailers. Check this [page](https://docs.stripe.com/payments/eps) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps? Eps { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps? Eps { get => _explicitNullValueEps; set { _explicitNullValueEps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eps"); else _explicitNullProperties?.Remove("eps"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps? _explicitNullValueEps = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps Eps { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps Eps { get => _explicitNullValueEps; set { _explicitNullValueEps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eps"); else _explicitNullProperties?.Remove("eps"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestEps _explicitNullValueEps = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Financial Process Exchange (FPX) is a Malaysia-based payment method that allows customers to complete transactions online using their bank credentials. Bank Negara Malaysia (BNM), the Central Bank of Malaysia, and eleven other major Malaysian financial institutions are members of the PayNet Group, which owns and operates FPX. It is one of the most popular online payment methods in Malaysia, with nearly 90 million transactions in 2018 according to BNM. Check this [page](https://docs.stripe.com/payments/fpx) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx? Fpx { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx? Fpx { get => _explicitNullValueFpx; set { _explicitNullValueFpx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fpx"); else _explicitNullProperties?.Remove("fpx"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx? _explicitNullValueFpx = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx Fpx { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx Fpx { get => _explicitNullValueFpx; set { _explicitNullValueFpx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fpx"); else _explicitNullProperties?.Remove("fpx"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFpx _explicitNullValueFpx = default!;
 #endif
         /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/meal-vouchers/fr-meal-vouchers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs? FrMealVoucherConecs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs? FrMealVoucherConecs { get => _explicitNullValueFrMealVoucherConecs; set { _explicitNullValueFrMealVoucherConecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr_meal_voucher_conecs"); else _explicitNullProperties?.Remove("fr_meal_voucher_conecs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs? _explicitNullValueFrMealVoucherConecs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs FrMealVoucherConecs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs FrMealVoucherConecs { get => _explicitNullValueFrMealVoucherConecs; set { _explicitNullValueFrMealVoucherConecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr_meal_voucher_conecs"); else _explicitNullProperties?.Remove("fr_meal_voucher_conecs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestFrMealVoucherConecs _explicitNullValueFrMealVoucherConecs = default!;
 #endif
         /// <summary>giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://docs.stripe.com/payments/giropay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay? Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay? Giropay { get => _explicitNullValueGiropay; set { _explicitNullValueGiropay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("giropay"); else _explicitNullProperties?.Remove("giropay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay? _explicitNullValueGiropay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay Giropay { get => _explicitNullValueGiropay; set { _explicitNullValueGiropay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("giropay"); else _explicitNullProperties?.Remove("giropay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGiropay _explicitNullValueGiropay = default!;
 #endif
         /// <summary>Google Pay allows customers to make payments in your app or website using any credit or debit card saved to their Google Account, including those from Google Play, YouTube, Chrome, or an Android device. Use the Google Pay API to request any credit or debit card stored in your customer&apos;s Google account. Check this [page](https://docs.stripe.com/google-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay? GooglePay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay? GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay? _explicitNullValueGooglePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay GooglePay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGooglePay _explicitNullValueGooglePay = default!;
 #endif
         /// <summary>GrabPay is a payment method developed by [Grab](https://www.grab.com/sg/consumer/finance/pay/). GrabPay is a digital wallet - customers maintain a balance in their wallets that they pay out with. Check this [page](https://docs.stripe.com/payments/grabpay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay? Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay? Grabpay { get => _explicitNullValueGrabpay; set { _explicitNullValueGrabpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grabpay"); else _explicitNullProperties?.Remove("grabpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay? _explicitNullValueGrabpay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay Grabpay { get => _explicitNullValueGrabpay; set { _explicitNullValueGrabpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grabpay"); else _explicitNullProperties?.Remove("grabpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestGrabpay _explicitNullValueGrabpay = default!;
 #endif
         /// <summary>iDEAL is a Netherlands-based payment method that allows customers to complete transactions online using their bank credentials. All major Dutch banks are members of Currence, the scheme that operates iDEAL, making it the most popular online payment method in the Netherlands with a share of online transactions close to 55%. Check this [page](https://docs.stripe.com/payments/ideal) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal? Ideal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal? Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal? _explicitNullValueIdeal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal Ideal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal Ideal { get => _explicitNullValueIdeal; set { _explicitNullValueIdeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ideal"); else _explicitNullProperties?.Remove("ideal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestIdeal _explicitNullValueIdeal = default!;
 #endif
         /// <summary>JCB is a credit card company based in Japan. JCB is currently available in Japan to businesses approved by JCB, and available to all businesses in Australia, Canada, Hong Kong, Japan, New Zealand, Singapore, Switzerland, United Kingdom, United States, and all countries in the European Economic Area except Iceland. Check this [page](https://support.stripe.com/questions/accepting-japan-credit-bureau-%28jcb%29-payments) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb? Jcb { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb? Jcb { get => _explicitNullValueJcb; set { _explicitNullValueJcb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jcb"); else _explicitNullProperties?.Remove("jcb"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb? _explicitNullValueJcb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb Jcb { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb Jcb { get => _explicitNullValueJcb; set { _explicitNullValueJcb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jcb"); else _explicitNullProperties?.Remove("jcb"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestJcb _explicitNullValueJcb = default!;
 #endif
         /// <summary>Kakao Pay is a popular local wallet available in South Korea.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay? KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay? KakaoPay { get => _explicitNullValueKakaoPay; set { _explicitNullValueKakaoPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kakao_pay"); else _explicitNullProperties?.Remove("kakao_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay? _explicitNullValueKakaoPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay KakaoPay { get => _explicitNullValueKakaoPay; set { _explicitNullValueKakaoPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kakao_pay"); else _explicitNullProperties?.Remove("kakao_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKakaoPay _explicitNullValueKakaoPay = default!;
 #endif
         /// <summary>Klarna gives customers a range of [payment options](https://docs.stripe.com/payments/klarna#payment-options) during checkout. Available payment options vary depending on the customer&apos;s billing address and the transaction amount. These payment options make it convenient for customers to purchase items in all price ranges. Check this [page](https://docs.stripe.com/payments/klarna) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna? Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna? Klarna { get => _explicitNullValueKlarna; set { _explicitNullValueKlarna = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("klarna"); else _explicitNullProperties?.Remove("klarna"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna? _explicitNullValueKlarna = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna Klarna { get => _explicitNullValueKlarna; set { _explicitNullValueKlarna = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("klarna"); else _explicitNullProperties?.Remove("klarna"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKlarna _explicitNullValueKlarna = default!;
 #endif
         /// <summary>Konbini allows customers in Japan to pay for bills and online purchases at convenience stores with cash. Check this [page](https://docs.stripe.com/payments/konbini) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini? Konbini { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini? Konbini { get => _explicitNullValueKonbini; set { _explicitNullValueKonbini = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("konbini"); else _explicitNullProperties?.Remove("konbini"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini? _explicitNullValueKonbini = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini Konbini { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini Konbini { get => _explicitNullValueKonbini; set { _explicitNullValueKonbini = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("konbini"); else _explicitNullProperties?.Remove("konbini"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKonbini _explicitNullValueKonbini = default!;
 #endif
         /// <summary>Korean cards let users pay using locally issued cards from South Korea.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard? KrCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard? KrCard { get => _explicitNullValueKrCard; set { _explicitNullValueKrCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr_card"); else _explicitNullProperties?.Remove("kr_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard? _explicitNullValueKrCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard KrCard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard KrCard { get => _explicitNullValueKrCard; set { _explicitNullValueKrCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr_card"); else _explicitNullProperties?.Remove("kr_card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestKrCard _explicitNullValueKrCard = default!;
 #endif
         /// <summary>[Link](https://docs.stripe.com/payments/link) is a payment method network. With Link, users save their payment details once, then reuse that information to pay with one click for any business on the network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink? Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestLink _explicitNullValueLink = default!;
 #endif
         /// <summary>MB WAY is the most popular wallet in Portugal. After entering their phone number in your checkout, customers approve the payment directly in their MB WAY app. Check this [page](https://docs.stripe.com/payments/mb-way) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay? MbWay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay? MbWay { get => _explicitNullValueMbWay; set { _explicitNullValueMbWay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mb_way"); else _explicitNullProperties?.Remove("mb_way"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay? _explicitNullValueMbWay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay MbWay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay MbWay { get => _explicitNullValueMbWay; set { _explicitNullValueMbWay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mb_way"); else _explicitNullProperties?.Remove("mb_way"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMbWay _explicitNullValueMbWay = default!;
 #endif
         /// <summary>MobilePay is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) card wallet payment method used in Denmark and Finland. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the MobilePay app. Check this [page](https://docs.stripe.com/payments/mobilepay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay? Mobilepay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay? Mobilepay { get => _explicitNullValueMobilepay; set { _explicitNullValueMobilepay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobilepay"); else _explicitNullProperties?.Remove("mobilepay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay? _explicitNullValueMobilepay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay Mobilepay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay Mobilepay { get => _explicitNullValueMobilepay; set { _explicitNullValueMobilepay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobilepay"); else _explicitNullProperties?.Remove("mobilepay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMobilepay _explicitNullValueMobilepay = default!;
 #endif
         /// <summary>Stripe users in Europe and the United States can accept Multibanco payments from customers in Portugal using [Sources](https://stripe.com/docs/sources)—a single integration path for creating payments using any supported method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco? Multibanco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco? Multibanco { get => _explicitNullValueMultibanco; set { _explicitNullValueMultibanco = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multibanco"); else _explicitNullProperties?.Remove("multibanco"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco? _explicitNullValueMultibanco = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco Multibanco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco Multibanco { get => _explicitNullValueMultibanco; set { _explicitNullValueMultibanco = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multibanco"); else _explicitNullProperties?.Remove("multibanco"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestMultibanco _explicitNullValueMultibanco = default!;
 #endif
         /// <summary>Configuration name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Naver Pay is a popular local wallet available in South Korea.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay? NaverPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay? NaverPay { get => _explicitNullValueNaverPay; set { _explicitNullValueNaverPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("naver_pay"); else _explicitNullProperties?.Remove("naver_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay? _explicitNullValueNaverPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay NaverPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay NaverPay { get => _explicitNullValueNaverPay; set { _explicitNullValueNaverPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("naver_pay"); else _explicitNullProperties?.Remove("naver_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNaverPay _explicitNullValueNaverPay = default!;
 #endif
         /// <summary>Stripe users in New Zealand can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with a New Zeland bank account. Check this [page](https://docs.stripe.com/payments/nz-bank-account) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount? NzBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount? NzBankAccount { get => _explicitNullValueNzBankAccount; set { _explicitNullValueNzBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz_bank_account"); else _explicitNullProperties?.Remove("nz_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount? _explicitNullValueNzBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount NzBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount NzBankAccount { get => _explicitNullValueNzBankAccount; set { _explicitNullValueNzBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz_bank_account"); else _explicitNullProperties?.Remove("nz_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestNzBankAccount _explicitNullValueNzBankAccount = default!;
 #endif
         /// <summary>OXXO is a Mexican chain of convenience stores with thousands of locations across Latin America and represents nearly 20% of online transactions in Mexico. OXXO allows customers to pay bills and online purchases in-store with cash. Check this [page](https://docs.stripe.com/payments/oxxo) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo? Oxxo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo? Oxxo { get => _explicitNullValueOxxo; set { _explicitNullValueOxxo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oxxo"); else _explicitNullProperties?.Remove("oxxo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo? _explicitNullValueOxxo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo Oxxo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo Oxxo { get => _explicitNullValueOxxo; set { _explicitNullValueOxxo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oxxo"); else _explicitNullProperties?.Remove("oxxo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestOxxo _explicitNullValueOxxo = default!;
 #endif
         /// <summary>Przelewy24 is a Poland-based payment method aggregator that allows customers to complete transactions online using bank transfers and other methods. Bank transfers account for 30% of online payments in Poland and Przelewy24 provides a way for customers to pay with over 165 banks. Check this [page](https://docs.stripe.com/payments/p24) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24? P24 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24? P24 { get => _explicitNullValueP24; set { _explicitNullValueP24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p24"); else _explicitNullProperties?.Remove("p24"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24? _explicitNullValueP24 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24 P24 { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24 P24 { get => _explicitNullValueP24; set { _explicitNullValueP24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p24"); else _explicitNullProperties?.Remove("p24"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestP24 _explicitNullValueP24 = default!;
 #endif
         /// <summary>Configuration&apos;s parent configuration. Specify to create a child configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parent { get; set; }
+        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private string? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public string Parent { get; set; }
+        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private string _explicitNullValueParent = default!;
 #endif
         /// <summary>Pay by bank is a redirect payment method backed by bank transfers. A customer is redirected to their bank to authorize a bank transfer for a given amount. This removes a lot of the error risks inherent in waiting for the customer to initiate a transfer themselves, and is less expensive than card payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank? PayByBank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank? PayByBank { get => _explicitNullValuePayByBank; set { _explicitNullValuePayByBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_by_bank"); else _explicitNullProperties?.Remove("pay_by_bank"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank? _explicitNullValuePayByBank = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank PayByBank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank PayByBank { get => _explicitNullValuePayByBank; set { _explicitNullValuePayByBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_by_bank"); else _explicitNullProperties?.Remove("pay_by_bank"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayByBank _explicitNullValuePayByBank = default!;
 #endif
         /// <summary>PAYCO is a [single-use](https://docs.stripe.com/payments/payment-methods#usage local wallet available in South Korea.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco? Payco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco? Payco { get => _explicitNullValuePayco; set { _explicitNullValuePayco = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payco"); else _explicitNullProperties?.Remove("payco"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco? _explicitNullValuePayco = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco Payco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco Payco { get => _explicitNullValuePayco; set { _explicitNullValuePayco = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payco"); else _explicitNullProperties?.Remove("payco"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayco _explicitNullValuePayco = default!;
 #endif
         /// <summary>PayNow is a Singapore-based payment method that allows customers to make a payment using their preferred app from participating banks and participating non-bank financial institutions. Check this [page](https://docs.stripe.com/payments/paynow) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow? Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow? Paynow { get => _explicitNullValuePaynow; set { _explicitNullValuePaynow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paynow"); else _explicitNullProperties?.Remove("paynow"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow? _explicitNullValuePaynow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow Paynow { get => _explicitNullValuePaynow; set { _explicitNullValuePaynow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paynow"); else _explicitNullProperties?.Remove("paynow"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaynow _explicitNullValuePaynow = default!;
 #endif
         /// <summary>PayPal, a digital wallet popular with customers in Europe, allows your customers worldwide to pay using their PayPal account. Check this [page](https://docs.stripe.com/payments/paypal) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal? Paypal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal? Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal? _explicitNullValuePaypal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal Paypal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal Paypal { get => _explicitNullValuePaypal; set { _explicitNullValuePaypal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypal"); else _explicitNullProperties?.Remove("paypal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypal _explicitNullValuePaypal = default!;
 #endif
         /// <summary>Customers can pay with PayPay online or using the PayPay app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay? Paypay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay? Paypay { get => _explicitNullValuePaypay; set { _explicitNullValuePaypay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypay"); else _explicitNullProperties?.Remove("paypay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay? _explicitNullValuePaypay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay Paypay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay Paypay { get => _explicitNullValuePaypay; set { _explicitNullValuePaypay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypay"); else _explicitNullProperties?.Remove("paypay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPaypay _explicitNullValuePaypay = default!;
 #endif
         /// <summary>PayTo is a [real-time](https://docs.stripe.com/payments/real-time) payment method that enables customers in Australia to pay by providing their bank account details. Customers must accept a mandate authorizing you to debit their account. Check this [page](https://docs.stripe.com/payments/payto) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto? Payto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto? Payto { get => _explicitNullValuePayto; set { _explicitNullValuePayto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payto"); else _explicitNullProperties?.Remove("payto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto? _explicitNullValuePayto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto Payto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto Payto { get => _explicitNullValuePayto; set { _explicitNullValuePayto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payto"); else _explicitNullProperties?.Remove("payto"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPayto _explicitNullValuePayto = default!;
 #endif
         /// <summary>Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix? Pix { get => _explicitNullValuePix; set { _explicitNullValuePix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix"); else _explicitNullProperties?.Remove("pix"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix? _explicitNullValuePix = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix Pix { get => _explicitNullValuePix; set { _explicitNullValuePix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pix"); else _explicitNullProperties?.Remove("pix"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPix _explicitNullValuePix = default!;
 #endif
         /// <summary>PromptPay is a Thailand-based payment method that allows customers to make a payment using their preferred app from participating banks. Check this [page](https://docs.stripe.com/payments/promptpay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay? Promptpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay? Promptpay { get => _explicitNullValuePromptpay; set { _explicitNullValuePromptpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promptpay"); else _explicitNullProperties?.Remove("promptpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay? _explicitNullValuePromptpay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay Promptpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay Promptpay { get => _explicitNullValuePromptpay; set { _explicitNullValuePromptpay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promptpay"); else _explicitNullProperties?.Remove("promptpay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestPromptpay _explicitNullValuePromptpay = default!;
 #endif
         /// <summary>Revolut Pay, developed by Revolut, a global finance app, is a digital wallet payment method. Revolut Pay uses the customer’s stored balance or cards to fund the payment, and offers the option for non-Revolut customers to save their details after their first purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay? RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay? RevolutPay { get => _explicitNullValueRevolutPay; set { _explicitNullValueRevolutPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revolut_pay"); else _explicitNullProperties?.Remove("revolut_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay? _explicitNullValueRevolutPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay RevolutPay { get => _explicitNullValueRevolutPay; set { _explicitNullValueRevolutPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revolut_pay"); else _explicitNullProperties?.Remove("revolut_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestRevolutPay _explicitNullValueRevolutPay = default!;
 #endif
         /// <summary>Samsung Pay is a [single-use](https://docs.stripe.com/payments/payment-methods#usage local wallet available in South Korea.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay? SamsungPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay? SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay? _explicitNullValueSamsungPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay SamsungPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSamsungPay _explicitNullValueSamsungPay = default!;
 #endif
         /// <summary>Satispay is a [single-use](/payments/payment-methods#usage) payment method where customers are required to [authenticate](/payments/payment-methods#customer-actions) their payment. Customers pay by being redirected from your website or app, authorizing the payment with Satispay, then returning to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay? Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay? Satispay { get => _explicitNullValueSatispay; set { _explicitNullValueSatispay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("satispay"); else _explicitNullProperties?.Remove("satispay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay? _explicitNullValueSatispay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay Satispay { get => _explicitNullValueSatispay; set { _explicitNullValueSatispay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("satispay"); else _explicitNullProperties?.Remove("satispay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSatispay _explicitNullValueSatispay = default!;
 #endif
         /// <summary>Scalapay is a [single-use](/payments/payment-methods#usage) payment method that lets customers pay in 3 or 4 installments. Customers are redirected from your website or app, authorize the payment with Scalapay, then return to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay? Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay? Scalapay { get => _explicitNullValueScalapay; set { _explicitNullValueScalapay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalapay"); else _explicitNullProperties?.Remove("scalapay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay? _explicitNullValueScalapay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay Scalapay { get => _explicitNullValueScalapay; set { _explicitNullValueScalapay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalapay"); else _explicitNullProperties?.Remove("scalapay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestScalapay _explicitNullValueScalapay = default!;
 #endif
         /// <summary>The [Single Euro Payments Area (SEPA)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area) is an initiative of the European Union to simplify payments within and across member countries. SEPA established and enforced banking standards to allow for the direct debiting of every EUR-denominated bank account within the SEPA region, check this [page](https://docs.stripe.com/payments/sepa-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit? SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit? SepaDebit { get => _explicitNullValueSepaDebit; set { _explicitNullValueSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sepa_debit"); else _explicitNullProperties?.Remove("sepa_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit? _explicitNullValueSepaDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit SepaDebit { get => _explicitNullValueSepaDebit; set { _explicitNullValueSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sepa_debit"); else _explicitNullProperties?.Remove("sepa_debit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSepaDebit _explicitNullValueSepaDebit = default!;
 #endif
         /// <summary>SeQura is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method that offers customers payment terms ranging from 7-120 days. Customers are redirected from your website or app, authorize the payment with SeQura, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra? Sequra { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra? Sequra { get => _explicitNullValueSequra; set { _explicitNullValueSequra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequra"); else _explicitNullProperties?.Remove("sequra"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra? _explicitNullValueSequra = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra Sequra { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra Sequra { get => _explicitNullValueSequra; set { _explicitNullValueSequra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequra"); else _explicitNullProperties?.Remove("sequra"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSequra _explicitNullValueSequra = default!;
 #endif
         /// <summary>Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)—a single integration path for creating payments using any supported method—to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://docs.stripe.com/payments/sofort) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort? Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort? Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort? _explicitNullValueSofort = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort Sofort { get => _explicitNullValueSofort; set { _explicitNullValueSofort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sofort"); else _explicitNullProperties?.Remove("sofort"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSofort _explicitNullValueSofort = default!;
 #endif
         /// <summary>Sunbit is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method where customers choose to pay in 3, 6, or 12 installments. Customers are redirected from your website or app, authorize the payment with Sunbit, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit? Sunbit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit? Sunbit { get => _explicitNullValueSunbit; set { _explicitNullValueSunbit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sunbit"); else _explicitNullProperties?.Remove("sunbit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit? _explicitNullValueSunbit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit Sunbit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit Sunbit { get => _explicitNullValueSunbit; set { _explicitNullValueSunbit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sunbit"); else _explicitNullProperties?.Remove("sunbit"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSunbit _explicitNullValueSunbit = default!;
 #endif
         /// <summary>Swish is a [real-time](https://docs.stripe.com/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://docs.stripe.com/payments/swish) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish? Swish { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish? Swish { get => _explicitNullValueSwish; set { _explicitNullValueSwish = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swish"); else _explicitNullProperties?.Remove("swish"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish? _explicitNullValueSwish = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish Swish { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish Swish { get => _explicitNullValueSwish; set { _explicitNullValueSwish = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swish"); else _explicitNullProperties?.Remove("swish"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestSwish _explicitNullValueSwish = default!;
 #endif
         /// <summary>Twint is a payment method popular in Switzerland. It allows customers to pay using their mobile phone. Check this [page](https://docs.stripe.com/payments/twint) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint? Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint? Twint { get => _explicitNullValueTwint; set { _explicitNullValueTwint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twint"); else _explicitNullProperties?.Remove("twint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint? _explicitNullValueTwint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint Twint { get => _explicitNullValueTwint; set { _explicitNullValueTwint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twint"); else _explicitNullProperties?.Remove("twint"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestTwint _explicitNullValueTwint = default!;
 #endif
         /// <summary>Unified Payment Interface (UPI) is India&apos;s leading payment method with exponential growth since it launched in 2016.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi? Upi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi? Upi { get => _explicitNullValueUpi; set { _explicitNullValueUpi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi"); else _explicitNullProperties?.Remove("upi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi? _explicitNullValueUpi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi Upi { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi Upi { get => _explicitNullValueUpi; set { _explicitNullValueUpi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upi"); else _explicitNullProperties?.Remove("upi"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi _explicitNullValueUpi = default!;
 #endif
         /// <summary>Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://docs.stripe.com/payments/ach-direct-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount? UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount? UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount? _explicitNullValueUsBankAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount UsBankAccount { get => _explicitNullValueUsBankAccount; set { _explicitNullValueUsBankAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_bank_account"); else _explicitNullProperties?.Remove("us_bank_account"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount _explicitNullValueUsBankAccount = default!;
 #endif
         /// <summary>WeChat, owned by Tencent, is China&apos;s leading mobile app with over 1 billion monthly active users. Chinese consumers can use WeChat Pay to pay for goods and services inside of businesses&apos; apps and websites. WeChat Pay users buy most frequently in gaming, e-commerce, travel, online education, and food/nutrition. Check this [page](https://docs.stripe.com/payments/wechat-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay? WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay? WechatPay { get => _explicitNullValueWechatPay; set { _explicitNullValueWechatPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wechat_pay"); else _explicitNullProperties?.Remove("wechat_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay? _explicitNullValueWechatPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay WechatPay { get => _explicitNullValueWechatPay; set { _explicitNullValueWechatPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wechat_pay"); else _explicitNullProperties?.Remove("wechat_pay"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay _explicitNullValueWechatPay = default!;
 #endif
         /// <summary>Zip gives your customers a way to split purchases over a series of payments. Check this [page](https://docs.stripe.com/payments/zip) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip? Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip? Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip? _explicitNullValueZip = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip _explicitNullValueZip = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -540,7 +742,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -688,7 +890,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUpi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestUsBankAccount>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestWechatPay>("wechat_pay", WechatPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip>("zip", Zip);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestZip>("zip", Zip);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

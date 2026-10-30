@@ -12,32 +12,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessment : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_testing_risk") is { } nullNodeCardTestingRisk && nullNodeCardTestingRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardTestingRisk = null;
+            if (parseNode.GetChildNode("fraud_risk") is { } nullNodeFraudRisk && nullNodeFraudRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudRisk = null;
+            if (parseNode.GetChildNode("merchant_dispute_risk") is { } nullNodeMerchantDisputeRisk && nullNodeMerchantDisputeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantDisputeRisk = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card_testing_risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk? CardTestingRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk? CardTestingRisk { get => _explicitNullValueCardTestingRisk; set { _explicitNullValueCardTestingRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_testing_risk"); else _explicitNullProperties?.Remove("card_testing_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk? _explicitNullValueCardTestingRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk CardTestingRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk CardTestingRisk { get => _explicitNullValueCardTestingRisk; set { _explicitNullValueCardTestingRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_testing_risk"); else _explicitNullProperties?.Remove("card_testing_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk _explicitNullValueCardTestingRisk = default!;
 #endif
         /// <summary>The fraud_risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk? FraudRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk? FraudRisk { get => _explicitNullValueFraudRisk; set { _explicitNullValueFraudRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_risk"); else _explicitNullProperties?.Remove("fraud_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk? _explicitNullValueFraudRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk FraudRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk FraudRisk { get => _explicitNullValueFraudRisk; set { _explicitNullValueFraudRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_risk"); else _explicitNullProperties?.Remove("fraud_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk _explicitNullValueFraudRisk = default!;
 #endif
         /// <summary>The merchant_dispute_risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk? MerchantDisputeRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk? MerchantDisputeRisk { get => _explicitNullValueMerchantDisputeRisk; set { _explicitNullValueMerchantDisputeRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_dispute_risk"); else _explicitNullProperties?.Remove("merchant_dispute_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk? _explicitNullValueMerchantDisputeRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk MerchantDisputeRisk { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk MerchantDisputeRisk { get => _explicitNullValueMerchantDisputeRisk; set { _explicitNullValueMerchantDisputeRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_dispute_risk"); else _explicitNullProperties?.Remove("merchant_dispute_risk"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk _explicitNullValueMerchantDisputeRisk = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessment"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentCardTestingRisk>("card_testing_risk", CardTestingRisk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentFraudRisk>("fraud_risk", FraudRisk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk>("merchant_dispute_risk", MerchantDisputeRisk);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

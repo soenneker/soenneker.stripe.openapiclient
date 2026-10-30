@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", pathParameters)
+        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,current_period_end,current_period_end%5Bgt%5D,current_period_end%5Bgte%5D,current_period_end%5Blt%5D,current_period_end%5Blte%5D,current_period_start,current_period_start%5Bgt%5D,current_period_start%5Bgte%5D,current_period_start%5Blt%5D,current_period_start%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,28 +49,26 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", rawUrl)
+        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,current_period_end,current_period_end%5Bgt%5D,current_period_end%5Bgte%5D,current_period_end%5Blt%5D,current_period_end%5Blte%5D,current_period_start,current_period_start%5Bgt%5D,current_period_start%5Bgte%5D,current_period_start%5Blt%5D,current_period_start%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;By default, returns a list of subscriptions that have not been canceled. In order to list canceled subscriptions, specify &lt;code&gt;status=canceled&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList> GetAsync(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
@@ -106,22 +104,19 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// &lt;p&gt;By default, returns a list of subscriptions that have not been canceled. In order to list canceled subscriptions, specify &lt;code&gt;status=canceled&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -177,12 +172,60 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             /// <summary>Only return subscriptions that were created during the given date interval.</summary>
             [QueryParameter("created")]
             public int? Created { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Bgt%5D")]
+            public int? Createdgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Bgte%5D")]
+            public int? Createdgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Blt%5D")]
+            public int? Createdlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("created%5Blte%5D")]
+            public int? Createdlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscriptions whose minimum item current_period_end falls within the given date interval.</summary>
             [QueryParameter("current_period_end")]
             public int? CurrentPeriodEnd { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_end%5Bgt%5D")]
+            public int? CurrentPeriodEndgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_end%5Bgte%5D")]
+            public int? CurrentPeriodEndgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_end%5Blt%5D")]
+            public int? CurrentPeriodEndlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_end%5Blte%5D")]
+            public int? CurrentPeriodEndlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Only return subscriptions whose maximum item current_period_start falls within the given date interval.</summary>
             [QueryParameter("current_period_start")]
             public int? CurrentPeriodStart { get; set; }
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_start%5Bgt%5D")]
+            public int? CurrentPeriodStartgt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_start%5Bgte%5D")]
+            public int? CurrentPeriodStartgte { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_start%5Blt%5D")]
+            public int? CurrentPeriodStartlt { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("current_period_start%5Blte%5D")]
+            public int? CurrentPeriodStartlte { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The ID of the customer whose subscriptions you&apos;re retrieving.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

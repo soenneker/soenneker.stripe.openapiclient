@@ -12,24 +12,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingDisputeTreasuryComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("debit_reversal") is { } nullNodeDebitReversal && nullNodeDebitReversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitReversal = null;
+            if (parseNode.GetChildNode("received_debit") is { } nullNodeReceivedDebit && nullNodeReceivedDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedDebit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Treasury [DebitReversal](https://docs.stripe.com/api/treasury/debit_reversals) representing this Issuing dispute</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DebitReversal { get; set; }
+        public string? DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private string? _explicitNullValueDebitReversal = default!;
 #nullable restore
 #else
-        public string DebitReversal { get; set; }
+        public string DebitReversal { get => _explicitNullValueDebitReversal; set { _explicitNullValueDebitReversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_reversal"); else _explicitNullProperties?.Remove("debit_reversal"); } }
+        private string _explicitNullValueDebitReversal = default!;
 #endif
         /// <summary>The Treasury [ReceivedDebit](https://docs.stripe.com/api/treasury/received_debits) that is being disputed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceivedDebit { get; set; }
+        public string? ReceivedDebit { get => _explicitNullValueReceivedDebit; set { _explicitNullValueReceivedDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debit"); else _explicitNullProperties?.Remove("received_debit"); } }
+        private string? _explicitNullValueReceivedDebit = default!;
 #nullable restore
 #else
-        public string ReceivedDebit { get; set; }
+        public string ReceivedDebit { get => _explicitNullValueReceivedDebit; set { _explicitNullValueReceivedDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_debit"); else _explicitNullProperties?.Remove("received_debit"); } }
+        private string _explicitNullValueReceivedDebit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("debit_reversal", DebitReversal);
             writer.WriteStringValue("received_debit", ReceivedDebit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

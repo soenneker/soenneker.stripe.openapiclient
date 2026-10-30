@@ -12,7 +12,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApmsSourcesSourceListDataItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceListDataItem();
             if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+                
             }
             else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+                
             }
             else if("source".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("country") != null && parseNode.GetChildNode("currency") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("last4") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("bank_account".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("brand") != null && parseNode.GetChildNode("exp_month") != null && parseNode.GetChildNode("exp_year") != null && parseNode.GetChildNode("funding") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("last4") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag7 && ("card".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("allow_redisplay") == null || (parseNode.GetChildNode("allow_redisplay")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag8 && ("always".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "limited".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "unspecified".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("regulated_status") == null || (parseNode.GetChildNode("regulated_status")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag9 && ("regulated".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal) || "unregulated".Equals(optionalTag9.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("client_secret") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("flow") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag6 && ("source".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null && parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag9 && ("ach_credit_transfer".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "ach_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "acss_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "alipay".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "au_becs_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "bancontact".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "card".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "card_present".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "eps".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "giropay".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "ideal".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "klarna".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "multibanco".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "p24".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "sepa_debit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "sofort".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "three_d_secure".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "wechat".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("allow_redisplay") == null || (parseNode.GetChildNode("allow_redisplay")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag10 && ("always".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal) || "limited".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal) || "unspecified".Equals(optionalTag10.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.BankAccount == null && result.Card == null && result.Source == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.BankAccount = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount(), parseNode);
+            if (result.BankAccount == null && result.Card == null && result.Source == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.Card = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Card(), parseNode);
+            if (result.BankAccount == null && result.Card == null && result.Source == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.Source = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.Source(), parseNode);
+            if (result.BankAccount == null && result.Card == null && result.Source == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (BankAccount == null && Card == null && Source == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (BankAccount != null && Card == null && Source == null) { if (BankAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, BankAccount); return; }
+            if (Card != null && BankAccount == null && Source == null) { if (Card is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Card); return; }
+            if (Source != null && BankAccount == null && Card == null) { if (Source is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Source); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(BankAccount != null)
             {
+                if (BankAccount is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount);
             }
             else if(Card != null)
             {
+                if (Card is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(null, Card);
             }
             else if(Source != null)
             {
+                if (Source is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(null, Source);
             }
         }

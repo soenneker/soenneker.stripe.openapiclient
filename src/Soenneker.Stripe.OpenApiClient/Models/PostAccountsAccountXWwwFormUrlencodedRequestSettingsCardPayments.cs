@@ -11,40 +11,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPayments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("decline_on") is { } nullNodeDeclineOn && nullNodeDeclineOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclineOn = null;
+            if (parseNode.GetChildNode("statement_descriptor_prefix") is { } nullNodeStatementDescriptorPrefix && nullNodeStatementDescriptorPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorPrefix = null;
+            if (parseNode.GetChildNode("statement_descriptor_prefix_kana") is { } nullNodeStatementDescriptorPrefixKana && nullNodeStatementDescriptorPrefixKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorPrefixKana = null;
+            if (parseNode.GetChildNode("statement_descriptor_prefix_kanji") is { } nullNodeStatementDescriptorPrefixKanji && nullNodeStatementDescriptorPrefixKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorPrefixKanji = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The decline_on property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn? DeclineOn { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn? DeclineOn { get => _explicitNullValueDeclineOn; set { _explicitNullValueDeclineOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decline_on"); else _explicitNullProperties?.Remove("decline_on"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn? _explicitNullValueDeclineOn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn DeclineOn { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn DeclineOn { get => _explicitNullValueDeclineOn; set { _explicitNullValueDeclineOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decline_on"); else _explicitNullProperties?.Remove("decline_on"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn _explicitNullValueDeclineOn = default!;
 #endif
         /// <summary>The statement_descriptor_prefix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorPrefix { get; set; }
+        public string? StatementDescriptorPrefix { get => _explicitNullValueStatementDescriptorPrefix; set { _explicitNullValueStatementDescriptorPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix"); else _explicitNullProperties?.Remove("statement_descriptor_prefix"); } }
+        private string? _explicitNullValueStatementDescriptorPrefix = default!;
 #nullable restore
 #else
-        public string StatementDescriptorPrefix { get; set; }
+        public string StatementDescriptorPrefix { get => _explicitNullValueStatementDescriptorPrefix; set { _explicitNullValueStatementDescriptorPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix"); else _explicitNullProperties?.Remove("statement_descriptor_prefix"); } }
+        private string _explicitNullValueStatementDescriptorPrefix = default!;
 #endif
         /// <summary>The statement_descriptor_prefix_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana? StatementDescriptorPrefixKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana? StatementDescriptorPrefixKana { get => _explicitNullValueStatementDescriptorPrefixKana; set { _explicitNullValueStatementDescriptorPrefixKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix_kana"); else _explicitNullProperties?.Remove("statement_descriptor_prefix_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana? _explicitNullValueStatementDescriptorPrefixKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana StatementDescriptorPrefixKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana StatementDescriptorPrefixKana { get => _explicitNullValueStatementDescriptorPrefixKana; set { _explicitNullValueStatementDescriptorPrefixKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix_kana"); else _explicitNullProperties?.Remove("statement_descriptor_prefix_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana _explicitNullValueStatementDescriptorPrefixKana = default!;
 #endif
         /// <summary>The statement_descriptor_prefix_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji? StatementDescriptorPrefixKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji? StatementDescriptorPrefixKanji { get => _explicitNullValueStatementDescriptorPrefixKanji; set { _explicitNullValueStatementDescriptorPrefixKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_prefix_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji? _explicitNullValueStatementDescriptorPrefixKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji StatementDescriptorPrefixKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji StatementDescriptorPrefixKanji { get => _explicitNullValueStatementDescriptorPrefixKanji; set { _explicitNullValueStatementDescriptorPrefixKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_prefix_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_prefix_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji _explicitNullValueStatementDescriptorPrefixKanji = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPayments"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPayments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPayments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPayments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("statement_descriptor_prefix", StatementDescriptorPrefix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKana>("statement_descriptor_prefix_kana", StatementDescriptorPrefixKana);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardPaymentsStatementDescriptorPrefixKanji>("statement_descriptor_prefix_kanji", StatementDescriptorPrefixKanji);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

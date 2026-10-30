@@ -11,77 +11,112 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceled : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
+            if (parseNode.GetChildNode("canceled_at") is { } nullNodeCanceledAt && nullNodeCanceledAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledAt = null;
+            if (parseNode.GetChildNode("cancellation_policy_provided") is { } nullNodeCancellationPolicyProvided && nullNodeCancellationPolicyProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationPolicyProvided = null;
+            if (parseNode.GetChildNode("cancellation_reason") is { } nullNodeCancellationReason && nullNodeCancellationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationReason = null;
+            if (parseNode.GetChildNode("expected_at") is { } nullNodeExpectedAt && nullNodeExpectedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedAt = null;
+            if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
+            if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("product_type") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
+            if (parseNode.GetChildNode("returned_at") is { } nullNodeReturnedAt && nullNodeReturnedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnedAt = null;
+            if (parseNode.GetChildNode("return_status") is { } nullNodeReturnStatus && nullNodeReturnStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_documentation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation? AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation AdditionalDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>The canceled_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt? CanceledAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt? _explicitNullValueCanceledAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt CanceledAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt _explicitNullValueCanceledAt = default!;
 #endif
         /// <summary>The cancellation_policy_provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided? CancellationPolicyProvided { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided? CancellationPolicyProvided { get => _explicitNullValueCancellationPolicyProvided; set { _explicitNullValueCancellationPolicyProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_policy_provided"); else _explicitNullProperties?.Remove("cancellation_policy_provided"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided? _explicitNullValueCancellationPolicyProvided = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided CancellationPolicyProvided { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided CancellationPolicyProvided { get => _explicitNullValueCancellationPolicyProvided; set { _explicitNullValueCancellationPolicyProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_policy_provided"); else _explicitNullProperties?.Remove("cancellation_policy_provided"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationPolicyProvided _explicitNullValueCancellationPolicyProvided = default!;
 #endif
         /// <summary>The cancellation_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason? CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason? CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason? _explicitNullValueCancellationReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledCancellationReason _explicitNullValueCancellationReason = default!;
 #endif
         /// <summary>The expected_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt? ExpectedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt? ExpectedAt { get => _explicitNullValueExpectedAt; set { _explicitNullValueExpectedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_at"); else _explicitNullProperties?.Remove("expected_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt? _explicitNullValueExpectedAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt ExpectedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt ExpectedAt { get => _explicitNullValueExpectedAt; set { _explicitNullValueExpectedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_at"); else _explicitNullProperties?.Remove("expected_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExpectedAt _explicitNullValueExpectedAt = default!;
 #endif
         /// <summary>The explanation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation? Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation? _explicitNullValueExplanation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation Explanation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledExplanation _explicitNullValueExplanation = default!;
 #endif
         /// <summary>The product_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription? ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductDescription _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>The product_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductType? ProductType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductType? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_type"); else _explicitNullProperties?.Remove("product_type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductType? _explicitNullValueProductType = default!;
         /// <summary>The returned_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt? ReturnedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt? _explicitNullValueReturnedAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt ReturnedAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt _explicitNullValueReturnedAt = default!;
 #endif
         /// <summary>The return_status property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnStatus? ReturnStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnStatus? ReturnStatus { get => _explicitNullValueReturnStatus; set { _explicitNullValueReturnStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_status"); else _explicitNullProperties?.Remove("return_status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnStatus? _explicitNullValueReturnStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceled"/> and sets the default values.
         /// </summary>
@@ -97,7 +132,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceled CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceled();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceled(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -136,6 +171,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledProductType>("product_type", ProductType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnedAt>("returned_at", ReturnedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesXWwwFormUrlencodedRequestEvidenceCanceledCanceledReturnStatus>("return_status", ReturnStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

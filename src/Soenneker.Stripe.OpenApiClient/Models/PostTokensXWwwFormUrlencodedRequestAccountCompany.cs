@@ -11,180 +11,259 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTokensXWwwFormUrlencodedRequestAccountCompany : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_kana") is { } nullNodeAddressKana && nullNodeAddressKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKana = null;
+            if (parseNode.GetChildNode("address_kanji") is { } nullNodeAddressKanji && nullNodeAddressKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKanji = null;
+            if (parseNode.GetChildNode("administrative_address") is { } nullNodeAdministrativeAddress && nullNodeAdministrativeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdministrativeAddress = null;
+            if (parseNode.GetChildNode("directorship_declaration") is { } nullNodeDirectorshipDeclaration && nullNodeDirectorshipDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectorshipDeclaration = null;
+            if (parseNode.GetChildNode("directors_provided") is { } nullNodeDirectorsProvided && nullNodeDirectorsProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectorsProvided = null;
+            if (parseNode.GetChildNode("executives_provided") is { } nullNodeExecutivesProvided && nullNodeExecutivesProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutivesProvided = null;
+            if (parseNode.GetChildNode("export_license_id") is { } nullNodeExportLicenseId && nullNodeExportLicenseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportLicenseId = null;
+            if (parseNode.GetChildNode("export_purpose_code") is { } nullNodeExportPurposeCode && nullNodeExportPurposeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportPurposeCode = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("name_kana") is { } nullNodeNameKana && nullNodeNameKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameKana = null;
+            if (parseNode.GetChildNode("name_kanji") is { } nullNodeNameKanji && nullNodeNameKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameKanji = null;
+            if (parseNode.GetChildNode("ownership_declaration") is { } nullNodeOwnershipDeclaration && nullNodeOwnershipDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipDeclaration = null;
+            if (parseNode.GetChildNode("ownership_declaration_shown_and_signed") is { } nullNodeOwnershipDeclarationShownAndSigned && nullNodeOwnershipDeclarationShownAndSigned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipDeclarationShownAndSigned = null;
+            if (parseNode.GetChildNode("ownership_exemption_reason") is { } nullNodeOwnershipExemptionReason && nullNodeOwnershipExemptionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipExemptionReason = null;
+            if (parseNode.GetChildNode("owners_provided") is { } nullNodeOwnersProvided && nullNodeOwnersProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnersProvided = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("principal_place_of_business") is { } nullNodePrincipalPlaceOfBusiness && nullNodePrincipalPlaceOfBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrincipalPlaceOfBusiness = null;
+            if (parseNode.GetChildNode("registration_date") is { } nullNodeRegistrationDate && nullNodeRegistrationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationDate = null;
+            if (parseNode.GetChildNode("registration_number") is { } nullNodeRegistrationNumber && nullNodeRegistrationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationNumber = null;
+            if (parseNode.GetChildNode("representative_declaration") is { } nullNodeRepresentativeDeclaration && nullNodeRepresentativeDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepresentativeDeclaration = null;
+            if (parseNode.GetChildNode("structure") is { } nullNodeStructure && nullNodeStructure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Structure = null;
+            if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
+            if (parseNode.GetChildNode("tax_id_registrar") is { } nullNodeTaxIdRegistrar && nullNodeTaxIdRegistrar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdRegistrar = null;
+            if (parseNode.GetChildNode("vat_id") is { } nullNodeVatId && nullNodeVatId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VatId = null;
+            if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The address_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana? AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana AddressKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The address_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji? AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji AddressKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>The administrative_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress? AdministrativeAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress? AdministrativeAddress { get => _explicitNullValueAdministrativeAddress; set { _explicitNullValueAdministrativeAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("administrative_address"); else _explicitNullProperties?.Remove("administrative_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress? _explicitNullValueAdministrativeAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress AdministrativeAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress AdministrativeAddress { get => _explicitNullValueAdministrativeAddress; set { _explicitNullValueAdministrativeAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("administrative_address"); else _explicitNullProperties?.Remove("administrative_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress _explicitNullValueAdministrativeAddress = default!;
 #endif
         /// <summary>The directorship_declaration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration? DirectorshipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration? DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration? _explicitNullValueDirectorshipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration DirectorshipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration _explicitNullValueDirectorshipDeclaration = default!;
 #endif
         /// <summary>The directors_provided property</summary>
-        public bool? DirectorsProvided { get; set; }
+        public bool? DirectorsProvided { get => _explicitNullValueDirectorsProvided; set { _explicitNullValueDirectorsProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directors_provided"); else _explicitNullProperties?.Remove("directors_provided"); } }
+        private bool? _explicitNullValueDirectorsProvided = default!;
         /// <summary>The executives_provided property</summary>
-        public bool? ExecutivesProvided { get; set; }
+        public bool? ExecutivesProvided { get => _explicitNullValueExecutivesProvided; set { _explicitNullValueExecutivesProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executives_provided"); else _explicitNullProperties?.Remove("executives_provided"); } }
+        private bool? _explicitNullValueExecutivesProvided = default!;
         /// <summary>The export_license_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportLicenseId { get; set; }
+        public string? ExportLicenseId { get => _explicitNullValueExportLicenseId; set { _explicitNullValueExportLicenseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_license_id"); else _explicitNullProperties?.Remove("export_license_id"); } }
+        private string? _explicitNullValueExportLicenseId = default!;
 #nullable restore
 #else
-        public string ExportLicenseId { get; set; }
+        public string ExportLicenseId { get => _explicitNullValueExportLicenseId; set { _explicitNullValueExportLicenseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_license_id"); else _explicitNullProperties?.Remove("export_license_id"); } }
+        private string _explicitNullValueExportLicenseId = default!;
 #endif
         /// <summary>The export_purpose_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportPurposeCode { get; set; }
+        public string? ExportPurposeCode { get => _explicitNullValueExportPurposeCode; set { _explicitNullValueExportPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_purpose_code"); else _explicitNullProperties?.Remove("export_purpose_code"); } }
+        private string? _explicitNullValueExportPurposeCode = default!;
 #nullable restore
 #else
-        public string ExportPurposeCode { get; set; }
+        public string ExportPurposeCode { get => _explicitNullValueExportPurposeCode; set { _explicitNullValueExportPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_purpose_code"); else _explicitNullProperties?.Remove("export_purpose_code"); } }
+        private string _explicitNullValueExportPurposeCode = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The name_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameKana { get; set; }
+        public string? NameKana { get => _explicitNullValueNameKana; set { _explicitNullValueNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kana"); else _explicitNullProperties?.Remove("name_kana"); } }
+        private string? _explicitNullValueNameKana = default!;
 #nullable restore
 #else
-        public string NameKana { get; set; }
+        public string NameKana { get => _explicitNullValueNameKana; set { _explicitNullValueNameKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kana"); else _explicitNullProperties?.Remove("name_kana"); } }
+        private string _explicitNullValueNameKana = default!;
 #endif
         /// <summary>The name_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameKanji { get; set; }
+        public string? NameKanji { get => _explicitNullValueNameKanji; set { _explicitNullValueNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kanji"); else _explicitNullProperties?.Remove("name_kanji"); } }
+        private string? _explicitNullValueNameKanji = default!;
 #nullable restore
 #else
-        public string NameKanji { get; set; }
+        public string NameKanji { get => _explicitNullValueNameKanji; set { _explicitNullValueNameKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_kanji"); else _explicitNullProperties?.Remove("name_kanji"); } }
+        private string _explicitNullValueNameKanji = default!;
 #endif
         /// <summary>The ownership_declaration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration? OwnershipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration? OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration? _explicitNullValueOwnershipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration OwnershipDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipDeclaration _explicitNullValueOwnershipDeclaration = default!;
 #endif
         /// <summary>The ownership_declaration_shown_and_signed property</summary>
-        public bool? OwnershipDeclarationShownAndSigned { get; set; }
+        public bool? OwnershipDeclarationShownAndSigned { get => _explicitNullValueOwnershipDeclarationShownAndSigned; set { _explicitNullValueOwnershipDeclarationShownAndSigned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration_shown_and_signed"); else _explicitNullProperties?.Remove("ownership_declaration_shown_and_signed"); } }
+        private bool? _explicitNullValueOwnershipDeclarationShownAndSigned = default!;
         /// <summary>The ownership_exemption_reason property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipExemptionReason? OwnershipExemptionReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipExemptionReason? OwnershipExemptionReason { get => _explicitNullValueOwnershipExemptionReason; set { _explicitNullValueOwnershipExemptionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_exemption_reason"); else _explicitNullProperties?.Remove("ownership_exemption_reason"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipExemptionReason? _explicitNullValueOwnershipExemptionReason = default!;
         /// <summary>The owners_provided property</summary>
-        public bool? OwnersProvided { get; set; }
+        public bool? OwnersProvided { get => _explicitNullValueOwnersProvided; set { _explicitNullValueOwnersProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners_provided"); else _explicitNullProperties?.Remove("owners_provided"); } }
+        private bool? _explicitNullValueOwnersProvided = default!;
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>The principal_place_of_business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness? PrincipalPlaceOfBusiness { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness? PrincipalPlaceOfBusiness { get => _explicitNullValuePrincipalPlaceOfBusiness; set { _explicitNullValuePrincipalPlaceOfBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal_place_of_business"); else _explicitNullProperties?.Remove("principal_place_of_business"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness? _explicitNullValuePrincipalPlaceOfBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness PrincipalPlaceOfBusiness { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness PrincipalPlaceOfBusiness { get => _explicitNullValuePrincipalPlaceOfBusiness; set { _explicitNullValuePrincipalPlaceOfBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal_place_of_business"); else _explicitNullProperties?.Remove("principal_place_of_business"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness _explicitNullValuePrincipalPlaceOfBusiness = default!;
 #endif
         /// <summary>The registration_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate? RegistrationDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate? RegistrationDate { get => _explicitNullValueRegistrationDate; set { _explicitNullValueRegistrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_date"); else _explicitNullProperties?.Remove("registration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate? _explicitNullValueRegistrationDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate RegistrationDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate RegistrationDate { get => _explicitNullValueRegistrationDate; set { _explicitNullValueRegistrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_date"); else _explicitNullProperties?.Remove("registration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate _explicitNullValueRegistrationDate = default!;
 #endif
         /// <summary>The registration_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistrationNumber { get; set; }
+        public string? RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_number"); else _explicitNullProperties?.Remove("registration_number"); } }
+        private string? _explicitNullValueRegistrationNumber = default!;
 #nullable restore
 #else
-        public string RegistrationNumber { get; set; }
+        public string RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_number"); else _explicitNullProperties?.Remove("registration_number"); } }
+        private string _explicitNullValueRegistrationNumber = default!;
 #endif
         /// <summary>The representative_declaration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration? RepresentativeDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration? RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration? _explicitNullValueRepresentativeDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration RepresentativeDeclaration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration _explicitNullValueRepresentativeDeclaration = default!;
 #endif
         /// <summary>The structure property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyStructure? Structure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyStructure? Structure { get => _explicitNullValueStructure; set { _explicitNullValueStructure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structure"); else _explicitNullProperties?.Remove("structure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyStructure? _explicitNullValueStructure = default!;
         /// <summary>The tax_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxId { get; set; }
+        public string? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        private string? _explicitNullValueTaxId = default!;
 #nullable restore
 #else
-        public string TaxId { get; set; }
+        public string TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        private string _explicitNullValueTaxId = default!;
 #endif
         /// <summary>The tax_id_registrar property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxIdRegistrar { get; set; }
+        public string? TaxIdRegistrar { get => _explicitNullValueTaxIdRegistrar; set { _explicitNullValueTaxIdRegistrar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_registrar"); else _explicitNullProperties?.Remove("tax_id_registrar"); } }
+        private string? _explicitNullValueTaxIdRegistrar = default!;
 #nullable restore
 #else
-        public string TaxIdRegistrar { get; set; }
+        public string TaxIdRegistrar { get => _explicitNullValueTaxIdRegistrar; set { _explicitNullValueTaxIdRegistrar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id_registrar"); else _explicitNullProperties?.Remove("tax_id_registrar"); } }
+        private string _explicitNullValueTaxIdRegistrar = default!;
 #endif
         /// <summary>The vat_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VatId { get; set; }
+        public string? VatId { get => _explicitNullValueVatId; set { _explicitNullValueVatId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vat_id"); else _explicitNullProperties?.Remove("vat_id"); } }
+        private string? _explicitNullValueVatId = default!;
 #nullable restore
 #else
-        public string VatId { get; set; }
+        public string VatId { get => _explicitNullValueVatId; set { _explicitNullValueVatId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vat_id"); else _explicitNullProperties?.Remove("vat_id"); } }
+        private string _explicitNullValueVatId = default!;
 #endif
         /// <summary>The verification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification? Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification Verification { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompany"/> and sets the default values.
@@ -201,7 +280,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompany CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompany();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompany(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -272,6 +351,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("tax_id_registrar", TaxIdRegistrar);
             writer.WriteStringValue("vat_id", VatId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyVerification>("verification", Verification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,73 +11,106 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
+            if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("lookup_key") is { } nullNodeLookupKey && nullNodeLookupKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookupKey = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("physical_bundle") is { } nullNodePhysicalBundle && nullNodePhysicalBundle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhysicalBundle = null;
+            if (parseNode.GetChildNode("preferences") is { } nullNodePreferences && nullNodePreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferences = null;
+            if (parseNode.GetChildNode("transfer_lookup_key") is { } nullNodeTransferLookupKey && nullNodeTransferLookupKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferLookupKey = null;
+        }
+
         /// <summary>The file for the card logo, for use with physical bundles that support card logos. Must have a `purpose` value of `issuing_logo`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo? CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo? _explicitNullValueCardLogo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCardLogo _explicitNullValueCardLogo = default!;
 #endif
         /// <summary>Hash containing carrier text, for use with physical bundles that support carrier text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText? CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText? _explicitNullValueCarrierText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierText _explicitNullValueCarrierText = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A lookup key used to retrieve personalization designs dynamically from a static string. This may be up to 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey? LookupKey { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey? LookupKey { get => _explicitNullValueLookupKey; set { _explicitNullValueLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookup_key"); else _explicitNullProperties?.Remove("lookup_key"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey? _explicitNullValueLookupKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey LookupKey { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey LookupKey { get => _explicitNullValueLookupKey; set { _explicitNullValueLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookup_key"); else _explicitNullProperties?.Remove("lookup_key"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestLookupKey _explicitNullValueLookupKey = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Friendly display name. Providing an empty string will set the field to null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName? Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName _explicitNullValueName = default!;
 #endif
         /// <summary>The physical bundle object belonging to this personalization design.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhysicalBundle { get; set; }
+        public string? PhysicalBundle { get => _explicitNullValuePhysicalBundle; set { _explicitNullValuePhysicalBundle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physical_bundle"); else _explicitNullProperties?.Remove("physical_bundle"); } }
+        private string? _explicitNullValuePhysicalBundle = default!;
 #nullable restore
 #else
-        public string PhysicalBundle { get; set; }
+        public string PhysicalBundle { get => _explicitNullValuePhysicalBundle; set { _explicitNullValuePhysicalBundle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("physical_bundle"); else _explicitNullProperties?.Remove("physical_bundle"); } }
+        private string _explicitNullValuePhysicalBundle = default!;
 #endif
         /// <summary>Information on whether this personalization design is used to create cards when one is not specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences? Preferences { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences? Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences? _explicitNullValuePreferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences Preferences { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences Preferences { get => _explicitNullValuePreferences; set { _explicitNullValuePreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferences"); else _explicitNullProperties?.Remove("preferences"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences _explicitNullValuePreferences = default!;
 #endif
         /// <summary>If set to true, will atomically remove the lookup key from the existing personalization design, and assign it to this personalization design.</summary>
-        public bool? TransferLookupKey { get; set; }
+        public bool? TransferLookupKey { get => _explicitNullValueTransferLookupKey; set { _explicitNullValueTransferLookupKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_lookup_key"); else _explicitNullProperties?.Remove("transfer_lookup_key"); } }
+        private bool? _explicitNullValueTransferLookupKey = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -86,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,7 +155,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestName>("name", Name);
             writer.WriteStringValue("physical_bundle", PhysicalBundle);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestPreferences>("preferences", Preferences);
-            writer.WriteBoolValue("transfer_lookup_key", TransferLookupKey);
+            writer.WriteBoolValue("transfer_lookup_key", TransferLookupKey);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

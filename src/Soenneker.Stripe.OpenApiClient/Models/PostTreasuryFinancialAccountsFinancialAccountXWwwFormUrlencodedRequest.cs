@@ -11,54 +11,79 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("forwarding_settings") is { } nullNodeForwardingSettings && nullNodeForwardingSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardingSettings = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("nickname") is { } nullNodeNickname && nullNodeNickname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nickname = null;
+            if (parseNode.GetChildNode("platform_restrictions") is { } nullNodePlatformRestrictions && nullNodePlatformRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformRestrictions = null;
+        }
+
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Encodes whether a FinancialAccount has access to a particular feature, with a status enum and associated `status_details`. Stripe or the platform may control features via the requested field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures? Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeatures _explicitNullValueFeatures = default!;
 #endif
         /// <summary>A different bank account where funds can be deposited/debited in order to get the closing FA&apos;s balance to $0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings? ForwardingSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings? ForwardingSettings { get => _explicitNullValueForwardingSettings; set { _explicitNullValueForwardingSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwarding_settings"); else _explicitNullProperties?.Remove("forwarding_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings? _explicitNullValueForwardingSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings ForwardingSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings ForwardingSettings { get => _explicitNullValueForwardingSettings; set { _explicitNullValueForwardingSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwarding_settings"); else _explicitNullProperties?.Remove("forwarding_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings _explicitNullValueForwardingSettings = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The nickname for the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname? Nickname { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname? Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname? _explicitNullValueNickname = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname Nickname { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname _explicitNullValueNickname = default!;
 #endif
         /// <summary>The set of functionalities that the platform can restrict on the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions? PlatformRestrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions? PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions? _explicitNullValuePlatformRestrictions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions PlatformRestrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions _explicitNullValuePlatformRestrictions = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -68,7 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,7 +123,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestForwardingSettings>("forwarding_settings", ForwardingSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestNickname>("nickname", Nickname);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions>("platform_restrictions", PlatformRestrictions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions>("platform_restrictions", PlatformRestrictions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

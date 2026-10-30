@@ -11,29 +11,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreditNotesPretaxCreditAmount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("credit_balance_transaction") is { } nullNodeCreditBalanceTransaction && nullNodeCreditBalanceTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditBalanceTransaction = null;
+            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount, in cents (or local equivalent), of the pretax credit amount.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>The credit balance transaction that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? CreditBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? _explicitNullValueCreditBalanceTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction CreditBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction _explicitNullValueCreditBalanceTransaction = default!;
 #endif
         /// <summary>The discount that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount? Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>Type of the pretax credit amount referenced.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction>("credit_balance_transaction", CreditBalanceTransaction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount>("discount", Discount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

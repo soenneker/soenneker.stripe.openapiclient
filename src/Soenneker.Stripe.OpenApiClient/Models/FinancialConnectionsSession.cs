@@ -12,100 +12,144 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FinancialConnectionsSession : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_holder") is { } nullNodeAccountHolder && nullNodeAccountHolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountHolder = null;
+            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("bank_account_token") is { } nullNodeBankAccountToken && nullNodeBankAccountToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankAccountToken = null;
+            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("limits") is { } nullNodeLimits && nullNodeLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limits = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("manual_entry") is { } nullNodeManualEntry && nullNodeManualEntry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManualEntry = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("prefetch") is { } nullNodePrefetch && nullNodePrefetch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prefetch = null;
+            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+        }
+
         /// <summary>The account holder for whom accounts are collected in this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? _explicitNullValueAccountHolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder _explicitNullValueAccountHolder = default!;
 #endif
         /// <summary>The accounts that were collected as part of this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts? Accounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts Accounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Tokenization is the process Stripe uses to collect sensitive card or bankaccount details, or personally identifiable information (PII), directly fromyour customers in a secure manner. A token representing this information isreturned to your server to use. Use our[recommended payments integrations](https://docs.stripe.com/payments) to perform this processon the client-side. This guarantees that no sensitive card data touches your server,and allows your integration to operate in a PCI-compliant way.If you can&apos;t use client-side tokenization, you can also create tokens usingthe API with either your publishable or secret API key. Ifyour integration uses this method, you&apos;re responsible for any PCI compliancethat it might require, and you must keep your secret API key safe. Unlike withclient-side tokenization, your customer&apos;s information isn&apos;t sent directly toStripe, so we can&apos;t determine how it&apos;s handled or stored.You can&apos;t store or use tokens more than once. To store card or bank accountinformation for later use, create [Customer](https://docs.stripe.com/api#customers)objects or [External accounts](/api#external_accounts).[Radar](https://docs.stripe.com/radar), our integrated solution for automatic fraud protection,performs best with integrations that use client-side tokenization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Token? BankAccountToken { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Token? BankAccountToken { get => _explicitNullValueBankAccountToken; set { _explicitNullValueBankAccountToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_token"); else _explicitNullProperties?.Remove("bank_account_token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Token? _explicitNullValueBankAccountToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Token BankAccountToken { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Token BankAccountToken { get => _explicitNullValueBankAccountToken; set { _explicitNullValueBankAccountToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_token"); else _explicitNullProperties?.Remove("bank_account_token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Token _explicitNullValueBankAccountToken = default!;
 #endif
         /// <summary>A value that will be passed to the client to launch the authentication flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get; set; }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get; set; }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters? Filters { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters Filters { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters _explicitNullValueFilters = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits? Limits { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits? Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits? _explicitNullValueLimits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits Limits { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits _explicitNullValueLimits = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>The manual_entry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry? ManualEntry { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry? ManualEntry { get => _explicitNullValueManualEntry; set { _explicitNullValueManualEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manual_entry"); else _explicitNullProperties?.Remove("manual_entry"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry? _explicitNullValueManualEntry = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry ManualEntry { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry ManualEntry { get => _explicitNullValueManualEntry; set { _explicitNullValueManualEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manual_entry"); else _explicitNullProperties?.Remove("manual_entry"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry _explicitNullValueManualEntry = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject? _explicitNullValueObject = default!;
         /// <summary>Permissions requested for accounts collected during this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>Data features requested to be retrieved upon account creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?>? Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?>? Prefetch { get => _explicitNullValuePrefetch; set { _explicitNullValuePrefetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefetch"); else _explicitNullProperties?.Remove("prefetch"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?>? _explicitNullValuePrefetch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?> Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?> Prefetch { get => _explicitNullValuePrefetch; set { _explicitNullValuePrefetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefetch"); else _explicitNullProperties?.Remove("prefetch"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?> _explicitNullValuePrefetch = default!;
 #endif
         /// <summary>For webview integrations only. Upon completing OAuth login in the native browser, the user will be redirected to this URL to return to your app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get; set; }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get; set; }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession"/> and sets the default values.
@@ -122,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,6 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem>("prefetch", Prefetch);
             writer.WriteStringValue("return_url", ReturnUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

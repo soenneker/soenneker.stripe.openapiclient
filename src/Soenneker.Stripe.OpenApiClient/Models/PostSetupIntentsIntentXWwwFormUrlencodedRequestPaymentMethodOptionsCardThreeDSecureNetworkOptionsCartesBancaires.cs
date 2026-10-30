@@ -11,21 +11,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancaires : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cb_avalgo") is { } nullNodeCbAvalgo && nullNodeCbAvalgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbAvalgo = null;
+            if (parseNode.GetChildNode("cb_exemption") is { } nullNodeCbExemption && nullNodeCbExemption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbExemption = null;
+            if (parseNode.GetChildNode("cb_score") is { } nullNodeCbScore && nullNodeCbScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cb_avalgo property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancairesCbAvalgo? CbAvalgo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancairesCbAvalgo? CbAvalgo { get => _explicitNullValueCbAvalgo; set { _explicitNullValueCbAvalgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_avalgo"); else _explicitNullProperties?.Remove("cb_avalgo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancairesCbAvalgo? _explicitNullValueCbAvalgo = default!;
         /// <summary>The cb_exemption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CbExemption { get; set; }
+        public string? CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        private string? _explicitNullValueCbExemption = default!;
 #nullable restore
 #else
-        public string CbExemption { get; set; }
+        public string CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        private string _explicitNullValueCbExemption = default!;
 #endif
         /// <summary>The cb_score property</summary>
-        public int? CbScore { get; set; }
+        public int? CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
+        private int? _explicitNullValueCbScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancaires"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancaires CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancaires();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancaires(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardThreeDSecureNetworkOptionsCartesBancairesCbAvalgo>("cb_avalgo", CbAvalgo);
             writer.WriteStringValue("cb_exemption", CbExemption);
             writer.WriteIntValue("cb_score", CbScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

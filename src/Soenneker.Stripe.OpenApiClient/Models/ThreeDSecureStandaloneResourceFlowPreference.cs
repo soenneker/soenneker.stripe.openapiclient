@@ -12,35 +12,53 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ThreeDSecureStandaloneResourceFlowPreference : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("challenge") is { } nullNodeChallenge && nullNodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Challenge = null;
+            if (parseNode.GetChildNode("data_share") is { } nullNodeDataShare && nullNodeDataShare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataShare = null;
+            if (parseNode.GetChildNode("frictionless") is { } nullNodeFrictionless && nullNodeFrictionless.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frictionless = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The challenge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails? Challenge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails? Challenge { get => _explicitNullValueChallenge; set { _explicitNullValueChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challenge"); else _explicitNullProperties?.Remove("challenge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails? _explicitNullValueChallenge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails Challenge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails Challenge { get => _explicitNullValueChallenge; set { _explicitNullValueChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challenge"); else _explicitNullProperties?.Remove("challenge"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceChallengeDetails _explicitNullValueChallenge = default!;
 #endif
         /// <summary>The data_share property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails? DataShare { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails? DataShare { get => _explicitNullValueDataShare; set { _explicitNullValueDataShare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_share"); else _explicitNullProperties?.Remove("data_share"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails? _explicitNullValueDataShare = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails DataShare { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails DataShare { get => _explicitNullValueDataShare; set { _explicitNullValueDataShare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_share"); else _explicitNullProperties?.Remove("data_share"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails _explicitNullValueDataShare = default!;
 #endif
         /// <summary>The frictionless property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails? Frictionless { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails? Frictionless { get => _explicitNullValueFrictionless; set { _explicitNullValueFrictionless = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frictionless"); else _explicitNullProperties?.Remove("frictionless"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails? _explicitNullValueFrictionless = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails Frictionless { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails Frictionless { get => _explicitNullValueFrictionless; set { _explicitNullValueFrictionless = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frictionless"); else _explicitNullProperties?.Remove("frictionless"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails _explicitNullValueFrictionless = default!;
 #endif
         /// <summary>Type of flow you requested for this 3DS Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreferenceType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreferenceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreferenceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference"/> and sets the default values.
         /// </summary>
@@ -56,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreference(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceDataShareDetails>("data_share", DataShare);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFrictionlessDetails>("frictionless", Frictionless);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFlowPreferenceType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

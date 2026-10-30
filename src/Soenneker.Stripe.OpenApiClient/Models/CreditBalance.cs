@@ -11,24 +11,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreditBalance : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("available_balance") is { } nullNodeAvailableBalance && nullNodeAvailableBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableBalance = null;
+            if (parseNode.GetChildNode("ledger_balance") is { } nullNodeLedgerBalance && nullNodeLedgerBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LedgerBalance = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The available_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? AvailableBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? AvailableBalance { get => _explicitNullValueAvailableBalance; set { _explicitNullValueAvailableBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_balance"); else _explicitNullProperties?.Remove("available_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? _explicitNullValueAvailableBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount AvailableBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount AvailableBalance { get => _explicitNullValueAvailableBalance; set { _explicitNullValueAvailableBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_balance"); else _explicitNullProperties?.Remove("available_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount _explicitNullValueAvailableBalance = default!;
 #endif
         /// <summary>The ledger_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? LedgerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? LedgerBalance { get => _explicitNullValueLedgerBalance; set { _explicitNullValueLedgerBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ledger_balance"); else _explicitNullProperties?.Remove("ledger_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount? _explicitNullValueLedgerBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount LedgerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount LedgerBalance { get => _explicitNullValueLedgerBalance; set { _explicitNullValueLedgerBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ledger_balance"); else _explicitNullProperties?.Remove("ledger_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount _explicitNullValueLedgerBalance = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditBalance"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.CreditBalance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.CreditBalance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CreditBalance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>("available_balance", AvailableBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>("ledger_balance", LedgerBalance);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

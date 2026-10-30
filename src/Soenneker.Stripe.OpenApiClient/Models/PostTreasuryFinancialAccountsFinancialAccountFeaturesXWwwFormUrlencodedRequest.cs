@@ -11,70 +11,101 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_issuing") is { } nullNodeCardIssuing && nullNodeCardIssuing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardIssuing = null;
+            if (parseNode.GetChildNode("deposit_insurance") is { } nullNodeDepositInsurance && nullNodeDepositInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepositInsurance = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("financial_addresses") is { } nullNodeFinancialAddresses && nullNodeFinancialAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialAddresses = null;
+            if (parseNode.GetChildNode("inbound_transfers") is { } nullNodeInboundTransfers && nullNodeInboundTransfers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTransfers = null;
+            if (parseNode.GetChildNode("intra_stripe_flows") is { } nullNodeIntraStripeFlows && nullNodeIntraStripeFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntraStripeFlows = null;
+            if (parseNode.GetChildNode("outbound_payments") is { } nullNodeOutboundPayments && nullNodeOutboundPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPayments = null;
+            if (parseNode.GetChildNode("outbound_transfers") is { } nullNodeOutboundTransfers && nullNodeOutboundTransfers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTransfers = null;
+        }
+
         /// <summary>Encodes the FinancialAccount&apos;s ability to be used with the Issuing product, including attaching cards to and drawing funds from the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing? CardIssuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing? CardIssuing { get => _explicitNullValueCardIssuing; set { _explicitNullValueCardIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_issuing"); else _explicitNullProperties?.Remove("card_issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing? _explicitNullValueCardIssuing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing CardIssuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing CardIssuing { get => _explicitNullValueCardIssuing; set { _explicitNullValueCardIssuing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_issuing"); else _explicitNullProperties?.Remove("card_issuing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestCardIssuing _explicitNullValueCardIssuing = default!;
 #endif
         /// <summary>Represents whether this FinancialAccount is eligible for deposit insurance. Various factors determine the insurance amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance? DepositInsurance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance? DepositInsurance { get => _explicitNullValueDepositInsurance; set { _explicitNullValueDepositInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deposit_insurance"); else _explicitNullProperties?.Remove("deposit_insurance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance? _explicitNullValueDepositInsurance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance DepositInsurance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance DepositInsurance { get => _explicitNullValueDepositInsurance; set { _explicitNullValueDepositInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deposit_insurance"); else _explicitNullProperties?.Remove("deposit_insurance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestDepositInsurance _explicitNullValueDepositInsurance = default!;
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>Contains Features that add FinancialAddresses to the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses? FinancialAddresses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses? FinancialAddresses { get => _explicitNullValueFinancialAddresses; set { _explicitNullValueFinancialAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_addresses"); else _explicitNullProperties?.Remove("financial_addresses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses? _explicitNullValueFinancialAddresses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses FinancialAddresses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses FinancialAddresses { get => _explicitNullValueFinancialAddresses; set { _explicitNullValueFinancialAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_addresses"); else _explicitNullProperties?.Remove("financial_addresses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddresses _explicitNullValueFinancialAddresses = default!;
 #endif
         /// <summary>Contains settings related to adding funds to a FinancialAccount from another Account with the same owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers? InboundTransfers { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers? InboundTransfers { get => _explicitNullValueInboundTransfers; set { _explicitNullValueInboundTransfers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfers"); else _explicitNullProperties?.Remove("inbound_transfers"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers? _explicitNullValueInboundTransfers = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers InboundTransfers { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers InboundTransfers { get => _explicitNullValueInboundTransfers; set { _explicitNullValueInboundTransfers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_transfers"); else _explicitNullProperties?.Remove("inbound_transfers"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers _explicitNullValueInboundTransfers = default!;
 #endif
         /// <summary>Represents the ability for the FinancialAccount to send money to, or receive money from other FinancialAccounts (for example, via OutboundPayment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows? IntraStripeFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows? IntraStripeFlows { get => _explicitNullValueIntraStripeFlows; set { _explicitNullValueIntraStripeFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intra_stripe_flows"); else _explicitNullProperties?.Remove("intra_stripe_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows? _explicitNullValueIntraStripeFlows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows IntraStripeFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows IntraStripeFlows { get => _explicitNullValueIntraStripeFlows; set { _explicitNullValueIntraStripeFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intra_stripe_flows"); else _explicitNullProperties?.Remove("intra_stripe_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows _explicitNullValueIntraStripeFlows = default!;
 #endif
         /// <summary>Includes Features related to initiating money movement out of the FinancialAccount to someone else&apos;s bucket of money.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments? OutboundPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments? OutboundPayments { get => _explicitNullValueOutboundPayments; set { _explicitNullValueOutboundPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_payments"); else _explicitNullProperties?.Remove("outbound_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments? _explicitNullValueOutboundPayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments OutboundPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments OutboundPayments { get => _explicitNullValueOutboundPayments; set { _explicitNullValueOutboundPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_payments"); else _explicitNullProperties?.Remove("outbound_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments _explicitNullValueOutboundPayments = default!;
 #endif
         /// <summary>Contains a Feature and settings related to moving money out of the FinancialAccount into another Account with the same owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers? OutboundTransfers { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers? OutboundTransfers { get => _explicitNullValueOutboundTransfers; set { _explicitNullValueOutboundTransfers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_transfers"); else _explicitNullProperties?.Remove("outbound_transfers"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers? _explicitNullValueOutboundTransfers = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers OutboundTransfers { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers OutboundTransfers { get => _explicitNullValueOutboundTransfers; set { _explicitNullValueOutboundTransfers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_transfers"); else _explicitNullProperties?.Remove("outbound_transfers"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers _explicitNullValueOutboundTransfers = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +149,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestInboundTransfers>("inbound_transfers", InboundTransfers);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestIntraStripeFlows>("intra_stripe_flows", IntraStripeFlows);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundPayments>("outbound_payments", OutboundPayments);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers>("outbound_transfers", OutboundTransfers);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestOutboundTransfers>("outbound_transfers", OutboundTransfers);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

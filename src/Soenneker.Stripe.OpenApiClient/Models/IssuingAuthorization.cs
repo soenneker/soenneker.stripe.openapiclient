@@ -12,188 +12,275 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorization : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("amount_details") is { } nullNodeAmountDetails && nullNodeAmountDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountDetails = null;
+            if (parseNode.GetChildNode("approved") is { } nullNodeApproved && nullNodeApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Approved = null;
+            if (parseNode.GetChildNode("authorization_method") is { } nullNodeAuthorizationMethod && nullNodeAuthorizationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationMethod = null;
+            if (parseNode.GetChildNode("balance_transactions") is { } nullNodeBalanceTransactions && nullNodeBalanceTransactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BalanceTransactions = null;
+            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("cardholder") is { } nullNodeCardholder && nullNodeCardholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cardholder = null;
+            if (parseNode.GetChildNode("card_presence") is { } nullNodeCardPresence && nullNodeCardPresence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardPresence = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("fleet") is { } nullNodeFleet && nullNodeFleet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fleet = null;
+            if (parseNode.GetChildNode("fraud_challenges") is { } nullNodeFraudChallenges && nullNodeFraudChallenges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudChallenges = null;
+            if (parseNode.GetChildNode("fuel") is { } nullNodeFuel && nullNodeFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fuel = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("merchant_amount") is { } nullNodeMerchantAmount && nullNodeMerchantAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAmount = null;
+            if (parseNode.GetChildNode("merchant_currency") is { } nullNodeMerchantCurrency && nullNodeMerchantCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantCurrency = null;
+            if (parseNode.GetChildNode("merchant_data") is { } nullNodeMerchantData && nullNodeMerchantData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantData = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("network_data") is { } nullNodeNetworkData && nullNodeNetworkData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkData = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("pending_request") is { } nullNodePendingRequest && nullNodePendingRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingRequest = null;
+            if (parseNode.GetChildNode("request_history") is { } nullNodeRequestHistory && nullNodeRequestHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestHistory = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("transactions") is { } nullNodeTransactions && nullNodeTransactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactions = null;
+            if (parseNode.GetChildNode("treasury") is { } nullNodeTreasury && nullNodeTreasury.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Treasury = null;
+            if (parseNode.GetChildNode("verification_data") is { } nullNodeVerificationData && nullNodeVerificationData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationData = null;
+            if (parseNode.GetChildNode("verified_by_fraud_challenge") is { } nullNodeVerifiedByFraudChallenge && nullNodeVerifiedByFraudChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedByFraudChallenge = null;
+            if (parseNode.GetChildNode("wallet") is { } nullNodeWallet && nullNodeWallet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wallet = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total amount that was authorized or rejected. This amount is in `currency` and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). `amount` should be the same as `merchant_amount`, unless `currency` and `merchant_currency` are different.</summary>
-        public int? Amount { get; set; }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private int? _explicitNullValueAmount = default!;
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>Whether the authorization has been approved.</summary>
-        public bool? Approved { get; set; }
+        public bool? Approved { get => _explicitNullValueApproved; set { _explicitNullValueApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved"); else _explicitNullProperties?.Remove("approved"); } }
+        private bool? _explicitNullValueApproved = default!;
         /// <summary>How the card details were provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod? AuthorizationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod? AuthorizationMethod { get => _explicitNullValueAuthorizationMethod; set { _explicitNullValueAuthorizationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_method"); else _explicitNullProperties?.Remove("authorization_method"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod? _explicitNullValueAuthorizationMethod = default!;
         /// <summary>List of balance transactions associated with this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>? BalanceTransactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>? BalanceTransactions { get => _explicitNullValueBalanceTransactions; set { _explicitNullValueBalanceTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transactions"); else _explicitNullProperties?.Remove("balance_transactions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>? _explicitNullValueBalanceTransactions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> BalanceTransactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> BalanceTransactions { get => _explicitNullValueBalanceTransactions; set { _explicitNullValueBalanceTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transactions"); else _explicitNullProperties?.Remove("balance_transactions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> _explicitNullValueBalanceTransactions = default!;
 #endif
         /// <summary>You can [create physical or virtual cards](https://docs.stripe.com/issuing) that are issued to cardholders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard _explicitNullValueCard = default!;
 #endif
         /// <summary>The cardholder to whom this authorization belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder? Cardholder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder? Cardholder { get => _explicitNullValueCardholder; set { _explicitNullValueCardholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder"); else _explicitNullProperties?.Remove("cardholder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder? _explicitNullValueCardholder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder Cardholder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder Cardholder { get => _explicitNullValueCardholder; set { _explicitNullValueCardholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder"); else _explicitNullProperties?.Remove("cardholder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder _explicitNullValueCardholder = default!;
 #endif
         /// <summary>Whether the card was present at the point of sale for the authorization.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? CardPresence { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? CardPresence { get => _explicitNullValueCardPresence; set { _explicitNullValueCardPresence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_presence"); else _explicitNullProperties?.Remove("card_presence"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? _explicitNullValueCardPresence = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get; set; }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private int? _explicitNullValueCreated = default!;
         /// <summary>The currency of the cardholder. This currency can be different from the currency presented at authorization and the `merchant_currency` field on this authorization. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Fleet-specific information for authorizations using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? _explicitNullValueFleet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet _explicitNullValueFleet = default!;
 #endif
         /// <summary>Fraud challenges sent to the cardholder, if this authorization was declined for fraud risk reasons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>? FraudChallenges { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>? FraudChallenges { get => _explicitNullValueFraudChallenges; set { _explicitNullValueFraudChallenges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_challenges"); else _explicitNullProperties?.Remove("fraud_challenges"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>? _explicitNullValueFraudChallenges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge> FraudChallenges { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge> FraudChallenges { get => _explicitNullValueFraudChallenges; set { _explicitNullValueFraudChallenges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_challenges"); else _explicitNullProperties?.Remove("fraud_challenges"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge> _explicitNullValueFraudChallenges = default!;
 #endif
         /// <summary>Information about fuel that was purchased with this transaction. Typically this information is received from the merchant after the authorization has been approved and the fuel dispensed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? _explicitNullValueFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel _explicitNullValueFuel = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get; set; }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        private bool? _explicitNullValueLivemode = default!;
         /// <summary>The total amount that was authorized or rejected. This amount is in the `merchant_currency` and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). `merchant_amount` should be the same as `amount`, unless `merchant_currency` and `currency` are different.</summary>
-        public int? MerchantAmount { get; set; }
+        public int? MerchantAmount { get => _explicitNullValueMerchantAmount; set { _explicitNullValueMerchantAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_amount"); else _explicitNullProperties?.Remove("merchant_amount"); } }
+        private int? _explicitNullValueMerchantAmount = default!;
         /// <summary>The local currency that was presented to the cardholder for the authorization. This currency can be different from the cardholder currency and the `currency` field on this authorization. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantCurrency { get; set; }
+        public string? MerchantCurrency { get => _explicitNullValueMerchantCurrency; set { _explicitNullValueMerchantCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_currency"); else _explicitNullProperties?.Remove("merchant_currency"); } }
+        private string? _explicitNullValueMerchantCurrency = default!;
 #nullable restore
 #else
-        public string MerchantCurrency { get; set; }
+        public string MerchantCurrency { get => _explicitNullValueMerchantCurrency; set { _explicitNullValueMerchantCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_currency"); else _explicitNullProperties?.Remove("merchant_currency"); } }
+        private string _explicitNullValueMerchantCurrency = default!;
 #endif
         /// <summary>The merchant_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData? MerchantData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData? MerchantData { get => _explicitNullValueMerchantData; set { _explicitNullValueMerchantData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_data"); else _explicitNullProperties?.Remove("merchant_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData? _explicitNullValueMerchantData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData MerchantData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData MerchantData { get => _explicitNullValueMerchantData; set { _explicitNullValueMerchantData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_data"); else _explicitNullProperties?.Remove("merchant_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData _explicitNullValueMerchantData = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Details about the authorization, such as identifiers, set by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? NetworkData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? _explicitNullValueNetworkData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed NetworkData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed _explicitNullValueNetworkData = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject? _explicitNullValueObject = default!;
         /// <summary>The pending authorization request. This field will only be non-null during an `issuing_authorization.request` webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? PendingRequest { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? _explicitNullValuePendingRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed PendingRequest { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed _explicitNullValuePendingRequest = default!;
 #endif
         /// <summary>History of every time a `pending_request` authorization was approved/declined, either by you directly or by Stripe (e.g. based on your spending_controls). If the merchant changes the authorization by performing an incremental authorization, you can look at this field to see the previous requests for the authorization. This field can be helpful in determining why a given authorization was approved/declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>? RequestHistory { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>? RequestHistory { get => _explicitNullValueRequestHistory; set { _explicitNullValueRequestHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_history"); else _explicitNullProperties?.Remove("request_history"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>? _explicitNullValueRequestHistory = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest> RequestHistory { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest> RequestHistory { get => _explicitNullValueRequestHistory; set { _explicitNullValueRequestHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_history"); else _explicitNullProperties?.Remove("request_history"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest> _explicitNullValueRequestHistory = default!;
 #endif
         /// <summary>The current status of the authorization in its lifecycle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus? _explicitNullValueStatus = default!;
         /// <summary>[Token](https://docs.stripe.com/api/issuing/tokens/object) object used for this authorization. If a network token was not used for this authorization, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken? Token { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken Token { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken _explicitNullValueToken = default!;
 #endif
         /// <summary>List of [transactions](https://docs.stripe.com/api/issuing/transactions) associated with this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>? Transactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>? Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>? _explicitNullValueTransactions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction> Transactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction> Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
+        private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction> _explicitNullValueTransactions = default!;
 #endif
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this authorization if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? _explicitNullValueTreasury = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed _explicitNullValueTreasury = default!;
 #endif
         /// <summary>The verification_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData? VerificationData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData? VerificationData { get => _explicitNullValueVerificationData; set { _explicitNullValueVerificationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_data"); else _explicitNullProperties?.Remove("verification_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData? _explicitNullValueVerificationData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData VerificationData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData VerificationData { get => _explicitNullValueVerificationData; set { _explicitNullValueVerificationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_data"); else _explicitNullProperties?.Remove("verification_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData _explicitNullValueVerificationData = default!;
 #endif
         /// <summary>Whether the authorization bypassed fraud risk checks because the cardholder has previously completed a fraud challenge on a similar high-risk authorization from the same merchant.</summary>
-        public bool? VerifiedByFraudChallenge { get; set; }
+        public bool? VerifiedByFraudChallenge { get => _explicitNullValueVerifiedByFraudChallenge; set { _explicitNullValueVerifiedByFraudChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_by_fraud_challenge"); else _explicitNullProperties?.Remove("verified_by_fraud_challenge"); } }
+        private bool? _explicitNullValueVerifiedByFraudChallenge = default!;
         /// <summary>The digital wallet used for this transaction. One of `apple_pay`, `google_pay`, or `samsung_pay`. Will populate as `null` when no digital wallet was utilized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Wallet { get; set; }
+        public string? Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private string? _explicitNullValueWallet = default!;
 #nullable restore
 #else
-        public string Wallet { get; set; }
+        public string Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private string _explicitNullValueWallet = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization"/> and sets the default values.
@@ -210,7 +297,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -289,6 +376,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData>("verification_data", VerificationData);
             writer.WriteBoolValue("verified_by_fraud_challenge", VerifiedByFraudChallenge);
             writer.WriteStringValue("wallet", Wallet);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

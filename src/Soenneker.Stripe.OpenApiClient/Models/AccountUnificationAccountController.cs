@@ -11,39 +11,61 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AccountUnificationAccountController : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
+            if (parseNode.GetChildNode("is_controller") is { } nullNodeIsController && nullNodeIsController.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsController = null;
+            if (parseNode.GetChildNode("losses") is { } nullNodeLosses && nullNodeLosses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Losses = null;
+            if (parseNode.GetChildNode("requirement_collection") is { } nullNodeRequirementCollection && nullNodeRequirementCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementCollection = null;
+            if (parseNode.GetChildNode("stripe_dashboard") is { } nullNodeStripeDashboard && nullNodeStripeDashboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeDashboard = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fees property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees? Fees { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees? _explicitNullValueFees = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees Fees { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees _explicitNullValueFees = default!;
 #endif
         /// <summary>`true` if the Connect application retrieving the resource controls the account and can therefore exercise [platform controls](https://docs.stripe.com/connect/platform-controls-for-standard-accounts). Otherwise, this field is null.</summary>
-        public bool? IsController { get; set; }
+        public bool? IsController { get => _explicitNullValueIsController; set { _explicitNullValueIsController = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_controller"); else _explicitNullProperties?.Remove("is_controller"); } }
+        private bool? _explicitNullValueIsController = default!;
         /// <summary>The losses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses? Losses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses? Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses? _explicitNullValueLosses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses Losses { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses _explicitNullValueLosses = default!;
 #endif
         /// <summary>A value indicating responsibility for collecting requirements on this account. Only returned when the Connect application retrieving the resource controls the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection? RequirementCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection? RequirementCollection { get => _explicitNullValueRequirementCollection; set { _explicitNullValueRequirementCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement_collection"); else _explicitNullProperties?.Remove("requirement_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection? _explicitNullValueRequirementCollection = default!;
         /// <summary>The stripe_dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard? StripeDashboard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard? StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard? _explicitNullValueStripeDashboard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard StripeDashboard { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard _explicitNullValueStripeDashboard = default!;
 #endif
         /// <summary>The controller type. Can be `application`, if a Connect application controls the account, or `account`, if the account controls itself.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection>("requirement_collection", RequirementCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard>("stripe_dashboard", StripeDashboard);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
