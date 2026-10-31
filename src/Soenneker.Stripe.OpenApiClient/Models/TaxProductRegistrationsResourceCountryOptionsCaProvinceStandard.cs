@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("province") is { } nullNodeProvince && nullNodeProvince.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Province = null;
+            if (parseNode.GetChildNode("province") is null) { _explicitNullValueProvince = default!; _explicitNullProperties?.Remove("province"); }
+            else if (parseNode.GetChildNode("province") is { } nullNodeProvince && nullNodeProvince.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Province = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Two-letter CA province code ([ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Province { get => _explicitNullValueProvince; set { _explicitNullValueProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("province"); else _explicitNullProperties?.Remove("province"); } }
+        public string? Province { get => _explicitNullValueProvince; set { _explicitNullValueProvince = value; AdditionalData?.Remove("province"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("province"); else _explicitNullProperties?.Remove("province"); } }
         private string? _explicitNullValueProvince = default!;
 #nullable restore
 #else
-        public string Province { get => _explicitNullValueProvince; set { _explicitNullValueProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("province"); else _explicitNullProperties?.Remove("province"); } }
+        public string Province { get => _explicitNullValueProvince; set { _explicitNullValueProvince = value; AdditionalData?.Remove("province"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("province"); else _explicitNullProperties?.Remove("province"); } }
         private string _explicitNullValueProvince = default!;
 #endif
         /// <summary>

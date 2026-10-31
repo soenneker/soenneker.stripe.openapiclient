@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("financial_connections") is { } nullNodeFinancialConnections && nullNodeFinancialConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialConnections = null;
-            if (parseNode.GetChildNode("verification_method") is { } nullNodeVerificationMethod && nullNodeVerificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationMethod = null;
+            if (parseNode.GetChildNode("financial_connections") is null) { _explicitNullValueFinancialConnections = default!; _explicitNullProperties?.Remove("financial_connections"); }
+            else if (parseNode.GetChildNode("financial_connections") is { } nullNodeFinancialConnections && nullNodeFinancialConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinancialConnections = null;
+            if (parseNode.GetChildNode("verification_method") is null) { _explicitNullValueVerificationMethod = default!; _explicitNullProperties?.Remove("verification_method"); }
+            else if (parseNode.GetChildNode("verification_method") is { } nullNodeVerificationMethod && nullNodeVerificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The financial_connections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions? FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions? FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; AdditionalData?.Remove("financial_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions? _explicitNullValueFinancialConnections = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions FinancialConnections { get => _explicitNullValueFinancialConnections; set { _explicitNullValueFinancialConnections = value; AdditionalData?.Remove("financial_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("financial_connections"); else _explicitNullProperties?.Remove("financial_connections"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions _explicitNullValueFinancialConnections = default!;
 #endif
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountVerificationMethod? VerificationMethod { get => _explicitNullValueVerificationMethod; set { _explicitNullValueVerificationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_method"); else _explicitNullProperties?.Remove("verification_method"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountVerificationMethod? VerificationMethod { get => _explicitNullValueVerificationMethod; set { _explicitNullValueVerificationMethod = value; AdditionalData?.Remove("verification_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_method"); else _explicitNullProperties?.Remove("verification_method"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountVerificationMethod? _explicitNullValueVerificationMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsUsBankAccount"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions.CreateFromDiscriminatorValue); } },
-                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountVerificationMethod>(); } },
+                { "verification_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountVerificationMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVerificationMethod = default; _explicitNullProperties?.Remove("verification_method"); AdditionalData["verification_method"] = unknown; } else { VerificationMethod = parsed; AdditionalData.Remove("verification_method"); } } },
             };
         }
         /// <summary>

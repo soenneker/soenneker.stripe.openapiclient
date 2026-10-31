@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("creditor_id") is { } nullNodeCreditorId && nullNodeCreditorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditorId = null;
+            if (parseNode.GetChildNode("creditor_id") is null) { _explicitNullValueCreditorId = default!; _explicitNullProperties?.Remove("creditor_id"); }
+            else if (parseNode.GetChildNode("creditor_id") is { } nullNodeCreditorId && nullNodeCreditorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditorId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>SEPA creditor identifier that identifies the company making the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditorId { get => _explicitNullValueCreditorId; set { _explicitNullValueCreditorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_id"); else _explicitNullProperties?.Remove("creditor_id"); } }
+        public string? CreditorId { get => _explicitNullValueCreditorId; set { _explicitNullValueCreditorId = value; AdditionalData?.Remove("creditor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_id"); else _explicitNullProperties?.Remove("creditor_id"); } }
         private string? _explicitNullValueCreditorId = default!;
 #nullable restore
 #else
-        public string CreditorId { get => _explicitNullValueCreditorId; set { _explicitNullValueCreditorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_id"); else _explicitNullProperties?.Remove("creditor_id"); } }
+        public string CreditorId { get => _explicitNullValueCreditorId; set { _explicitNullValueCreditorId = value; AdditionalData?.Remove("creditor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_id"); else _explicitNullProperties?.Remove("creditor_id"); } }
         private string _explicitNullValueCreditorId = default!;
 #endif
         /// <summary>

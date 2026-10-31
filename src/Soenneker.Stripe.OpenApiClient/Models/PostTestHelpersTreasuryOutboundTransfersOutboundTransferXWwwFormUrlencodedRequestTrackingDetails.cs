@@ -18,34 +18,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ach") is { } nullNodeAch && nullNodeAch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ach = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("us_domestic_wire") is { } nullNodeUsDomesticWire && nullNodeUsDomesticWire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsDomesticWire = null;
+            if (parseNode.GetChildNode("ach") is null) { _explicitNullValueAch = default!; _explicitNullProperties?.Remove("ach"); }
+            else if (parseNode.GetChildNode("ach") is { } nullNodeAch && nullNodeAch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ach = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("us_domestic_wire") is null) { _explicitNullValueUsDomesticWire = default!; _explicitNullProperties?.Remove("us_domestic_wire"); }
+            else if (parseNode.GetChildNode("us_domestic_wire") is { } nullNodeUsDomesticWire && nullNodeUsDomesticWire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsDomesticWire = null;
         }
 
         /// <summary>The ach property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch? Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch? Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; AdditionalData?.Remove("ach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch? _explicitNullValueAch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; AdditionalData?.Remove("ach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch _explicitNullValueAch = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsType? _explicitNullValueType = default!;
         /// <summary>The us_domestic_wire property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire? UsDomesticWire { get => _explicitNullValueUsDomesticWire; set { _explicitNullValueUsDomesticWire = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_domestic_wire"); else _explicitNullProperties?.Remove("us_domestic_wire"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire? UsDomesticWire { get => _explicitNullValueUsDomesticWire; set { _explicitNullValueUsDomesticWire = value; AdditionalData?.Remove("us_domestic_wire"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_domestic_wire"); else _explicitNullProperties?.Remove("us_domestic_wire"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire? _explicitNullValueUsDomesticWire = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire UsDomesticWire { get => _explicitNullValueUsDomesticWire; set { _explicitNullValueUsDomesticWire = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_domestic_wire"); else _explicitNullProperties?.Remove("us_domestic_wire"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire UsDomesticWire { get => _explicitNullValueUsDomesticWire; set { _explicitNullValueUsDomesticWire = value; AdditionalData?.Remove("us_domestic_wire"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_domestic_wire"); else _explicitNullProperties?.Remove("us_domestic_wire"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire _explicitNullValueUsDomesticWire = default!;
 #endif
         /// <summary>
@@ -74,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ach", n => { Ach = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch>(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsAch.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "us_domestic_wire", n => { UsDomesticWire = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire>(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferXWwwFormUrlencodedRequestTrackingDetailsUsDomesticWire.CreateFromDiscriminatorValue); } },
             };
         }

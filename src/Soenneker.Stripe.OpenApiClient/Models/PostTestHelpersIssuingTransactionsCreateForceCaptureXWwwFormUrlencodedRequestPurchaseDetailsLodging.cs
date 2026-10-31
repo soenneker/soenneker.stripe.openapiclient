@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("check_in_at") is { } nullNodeCheckInAt && nullNodeCheckInAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckInAt = null;
-            if (parseNode.GetChildNode("nights") is { } nullNodeNights && nullNodeNights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nights = null;
+            if (parseNode.GetChildNode("check_in_at") is null) { _explicitNullValueCheckInAt = default!; _explicitNullProperties?.Remove("check_in_at"); }
+            else if (parseNode.GetChildNode("check_in_at") is { } nullNodeCheckInAt && nullNodeCheckInAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckInAt = null;
+            if (parseNode.GetChildNode("nights") is null) { _explicitNullValueNights = default!; _explicitNullProperties?.Remove("nights"); }
+            else if (parseNode.GetChildNode("nights") is { } nullNodeNights && nullNodeNights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nights = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The check_in_at property</summary>
-        public int? CheckInAt { get => _explicitNullValueCheckInAt; set { _explicitNullValueCheckInAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_in_at"); else _explicitNullProperties?.Remove("check_in_at"); } }
+        public int? CheckInAt { get => _explicitNullValueCheckInAt; set { _explicitNullValueCheckInAt = value; AdditionalData?.Remove("check_in_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_in_at"); else _explicitNullProperties?.Remove("check_in_at"); } }
         private int? _explicitNullValueCheckInAt = default!;
         /// <summary>The nights property</summary>
-        public int? Nights { get => _explicitNullValueNights; set { _explicitNullValueNights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nights"); else _explicitNullProperties?.Remove("nights"); } }
+        public int? Nights { get => _explicitNullValueNights; set { _explicitNullValueNights = value; AdditionalData?.Remove("nights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nights"); else _explicitNullProperties?.Remove("nights"); } }
         private int? _explicitNullValueNights = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingTransactionsCreateForceCaptureXWwwFormUrlencodedRequestPurchaseDetailsLodging"/> and sets the default values.

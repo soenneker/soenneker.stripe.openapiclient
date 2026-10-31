@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("coupon") is { } nullNodeCoupon && nullNodeCoupon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupon = null;
-            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
-            if (parseNode.GetChildNode("promotion_code") is { } nullNodePromotionCode && nullNodePromotionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotionCode = null;
+            if (parseNode.GetChildNode("coupon") is null) { _explicitNullValueCoupon = default!; _explicitNullProperties?.Remove("coupon"); }
+            else if (parseNode.GetChildNode("coupon") is { } nullNodeCoupon && nullNodeCoupon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupon = null;
+            if (parseNode.GetChildNode("discount") is null) { _explicitNullValueDiscount = default!; _explicitNullProperties?.Remove("discount"); }
+            else if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("promotion_code") is null) { _explicitNullValuePromotionCode = default!; _explicitNullProperties?.Remove("promotion_code"); }
+            else if (parseNode.GetChildNode("promotion_code") is { } nullNodePromotionCode && nullNodePromotionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotionCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the coupon to create a new discount for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon? Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon? Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; AdditionalData?.Remove("coupon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon? _explicitNullValueCoupon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; AdditionalData?.Remove("coupon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndCoupon _explicitNullValueCoupon = default!;
 #endif
         /// <summary>ID of an existing discount on the object (or one of its ancestors) to reuse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>ID of the promotion code to create a new discount for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode? PromotionCode { get => _explicitNullValuePromotionCode; set { _explicitNullValuePromotionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotion_code"); else _explicitNullProperties?.Remove("promotion_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode? PromotionCode { get => _explicitNullValuePromotionCode; set { _explicitNullValuePromotionCode = value; AdditionalData?.Remove("promotion_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotion_code"); else _explicitNullProperties?.Remove("promotion_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode? _explicitNullValuePromotionCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode PromotionCode { get => _explicitNullValuePromotionCode; set { _explicitNullValuePromotionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotion_code"); else _explicitNullProperties?.Remove("promotion_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode PromotionCode { get => _explicitNullValuePromotionCode; set { _explicitNullValuePromotionCode = value; AdditionalData?.Remove("promotion_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotion_code"); else _explicitNullProperties?.Remove("promotion_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEndPromotionCode _explicitNullValuePromotionCode = default!;
 #endif
         /// <summary>

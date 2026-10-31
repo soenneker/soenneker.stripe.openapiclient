@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reference_prefix") is { } nullNodeReferencePrefix && nullNodeReferencePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferencePrefix = null;
+            if (parseNode.GetChildNode("reference_prefix") is null) { _explicitNullValueReferencePrefix = default!; _explicitNullProperties?.Remove("reference_prefix"); }
+            else if (parseNode.GetChildNode("reference_prefix") is { } nullNodeReferencePrefix && nullNodeReferencePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferencePrefix = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Prefix used to generate the Mandate reference. Must be at most 12 characters long. Must consist of only uppercase letters, numbers, spaces, or the following special characters: &apos;/&apos;, &apos;_&apos;, &apos;-&apos;, &apos;&amp;&apos;, &apos;.&apos;. Cannot begin with &apos;DDIC&apos; or &apos;STRIPE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferencePrefix { get => _explicitNullValueReferencePrefix; set { _explicitNullValueReferencePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_prefix"); else _explicitNullProperties?.Remove("reference_prefix"); } }
+        public string? ReferencePrefix { get => _explicitNullValueReferencePrefix; set { _explicitNullValueReferencePrefix = value; AdditionalData?.Remove("reference_prefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_prefix"); else _explicitNullProperties?.Remove("reference_prefix"); } }
         private string? _explicitNullValueReferencePrefix = default!;
 #nullable restore
 #else
-        public string ReferencePrefix { get => _explicitNullValueReferencePrefix; set { _explicitNullValueReferencePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_prefix"); else _explicitNullProperties?.Remove("reference_prefix"); } }
+        public string ReferencePrefix { get => _explicitNullValueReferencePrefix; set { _explicitNullValueReferencePrefix = value; AdditionalData?.Remove("reference_prefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_prefix"); else _explicitNullProperties?.Remove("reference_prefix"); } }
         private string _explicitNullValueReferencePrefix = default!;
 #endif
         /// <summary>

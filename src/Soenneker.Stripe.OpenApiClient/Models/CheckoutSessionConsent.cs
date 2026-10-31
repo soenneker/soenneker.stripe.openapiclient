@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("promotions") is { } nullNodePromotions && nullNodePromotions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Promotions = null;
-            if (parseNode.GetChildNode("terms_of_service") is { } nullNodeTermsOfService && nullNodeTermsOfService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfService = null;
+            if (parseNode.GetChildNode("promotions") is null) { _explicitNullValuePromotions = default!; _explicitNullProperties?.Remove("promotions"); }
+            else if (parseNode.GetChildNode("promotions") is { } nullNodePromotions && nullNodePromotions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Promotions = null;
+            if (parseNode.GetChildNode("terms_of_service") is null) { _explicitNullValueTermsOfService = default!; _explicitNullProperties?.Remove("terms_of_service"); }
+            else if (parseNode.GetChildNode("terms_of_service") is { } nullNodeTermsOfService && nullNodeTermsOfService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfService = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `opt_in`, the customer consents to receiving promotional communicationsfrom the merchant about this Checkout Session.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions? Promotions { get => _explicitNullValuePromotions; set { _explicitNullValuePromotions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotions"); else _explicitNullProperties?.Remove("promotions"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions? Promotions { get => _explicitNullValuePromotions; set { _explicitNullValuePromotions = value; AdditionalData?.Remove("promotions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotions"); else _explicitNullProperties?.Remove("promotions"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions? _explicitNullValuePromotions = default!;
         /// <summary>If `accepted`, the customer in this Checkout Session has agreed to the merchant&apos;s terms of service.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService? TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService? TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; AdditionalData?.Remove("terms_of_service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService? _explicitNullValueTermsOfService = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "promotions", n => { Promotions = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions>(); } },
-                { "terms_of_service", n => { TermsOfService = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService>(); } },
+                { "promotions", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePromotions = default; _explicitNullProperties?.Remove("promotions"); AdditionalData["promotions"] = unknown; } else { Promotions = parsed; AdditionalData.Remove("promotions"); } } },
+                { "terms_of_service", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTermsOfService = default; _explicitNullProperties?.Remove("terms_of_service"); AdditionalData["terms_of_service"] = unknown; } else { TermsOfService = parsed; AdditionalData.Remove("terms_of_service"); } } },
             };
         }
         /// <summary>

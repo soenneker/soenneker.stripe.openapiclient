@@ -17,49 +17,54 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("departure_at") is { } nullNodeDepartureAt && nullNodeDepartureAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAt = null;
-            if (parseNode.GetChildNode("passenger_name") is { } nullNodePassengerName && nullNodePassengerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassengerName = null;
-            if (parseNode.GetChildNode("refundable") is { } nullNodeRefundable && nullNodeRefundable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Refundable = null;
-            if (parseNode.GetChildNode("segments") is { } nullNodeSegments && nullNodeSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segments = null;
-            if (parseNode.GetChildNode("travel_agency") is { } nullNodeTravelAgency && nullNodeTravelAgency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TravelAgency = null;
+            if (parseNode.GetChildNode("departure_at") is null) { _explicitNullValueDepartureAt = default!; _explicitNullProperties?.Remove("departure_at"); }
+            else if (parseNode.GetChildNode("departure_at") is { } nullNodeDepartureAt && nullNodeDepartureAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAt = null;
+            if (parseNode.GetChildNode("passenger_name") is null) { _explicitNullValuePassengerName = default!; _explicitNullProperties?.Remove("passenger_name"); }
+            else if (parseNode.GetChildNode("passenger_name") is { } nullNodePassengerName && nullNodePassengerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassengerName = null;
+            if (parseNode.GetChildNode("refundable") is null) { _explicitNullValueRefundable = default!; _explicitNullProperties?.Remove("refundable"); }
+            else if (parseNode.GetChildNode("refundable") is { } nullNodeRefundable && nullNodeRefundable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Refundable = null;
+            if (parseNode.GetChildNode("segments") is null) { _explicitNullValueSegments = default!; _explicitNullProperties?.Remove("segments"); }
+            else if (parseNode.GetChildNode("segments") is { } nullNodeSegments && nullNodeSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segments = null;
+            if (parseNode.GetChildNode("travel_agency") is null) { _explicitNullValueTravelAgency = default!; _explicitNullProperties?.Remove("travel_agency"); }
+            else if (parseNode.GetChildNode("travel_agency") is { } nullNodeTravelAgency && nullNodeTravelAgency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TravelAgency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The departure_at property</summary>
-        public int? DepartureAt { get => _explicitNullValueDepartureAt; set { _explicitNullValueDepartureAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_at"); else _explicitNullProperties?.Remove("departure_at"); } }
+        public int? DepartureAt { get => _explicitNullValueDepartureAt; set { _explicitNullValueDepartureAt = value; AdditionalData?.Remove("departure_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_at"); else _explicitNullProperties?.Remove("departure_at"); } }
         private int? _explicitNullValueDepartureAt = default!;
         /// <summary>The passenger_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
+        public string? PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; AdditionalData?.Remove("passenger_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
         private string? _explicitNullValuePassengerName = default!;
 #nullable restore
 #else
-        public string PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
+        public string PassengerName { get => _explicitNullValuePassengerName; set { _explicitNullValuePassengerName = value; AdditionalData?.Remove("passenger_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passenger_name"); else _explicitNullProperties?.Remove("passenger_name"); } }
         private string _explicitNullValuePassengerName = default!;
 #endif
         /// <summary>The refundable property</summary>
-        public bool? Refundable { get => _explicitNullValueRefundable; set { _explicitNullValueRefundable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundable"); else _explicitNullProperties?.Remove("refundable"); } }
+        public bool? Refundable { get => _explicitNullValueRefundable; set { _explicitNullValueRefundable = value; AdditionalData?.Remove("refundable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundable"); else _explicitNullProperties?.Remove("refundable"); } }
         private bool? _explicitNullValueRefundable = default!;
         /// <summary>The segments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; AdditionalData?.Remove("segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>? _explicitNullValueSegments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; AdditionalData?.Remove("segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem> _explicitNullValueSegments = default!;
 #endif
         /// <summary>The travel_agency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
+        public string? TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; AdditionalData?.Remove("travel_agency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
         private string? _explicitNullValueTravelAgency = default!;
 #nullable restore
 #else
-        public string TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
+        public string TravelAgency { get => _explicitNullValueTravelAgency; set { _explicitNullValueTravelAgency = value; AdditionalData?.Remove("travel_agency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("travel_agency"); else _explicitNullProperties?.Remove("travel_agency"); } }
         private string _explicitNullValueTravelAgency = default!;
 #endif
         /// <summary>

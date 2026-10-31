@@ -18,19 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
-            if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("aba") is null) { _explicitNullValueAba = default!; _explicitNullProperties?.Remove("aba"); }
+            else if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
+            if (parseNode.GetChildNode("supported_networks") is null) { _explicitNullValueSupportedNetworks = default!; _explicitNullProperties?.Remove("supported_networks"); }
+            else if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>ABA Records contain U.S. bank account details per the ABA format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord? _explicitNullValueAba = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord _explicitNullValueAba = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,15 +41,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of networks that the address supports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?>? _explicitNullValueSupportedNetworks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?> _explicitNullValueSupportedNetworks = default!;
 #endif
         /// <summary>The type of financial address</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AbaType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AbaType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AbaType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "aba", n => { Aba = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord.CreateFromDiscriminatorValue); } },
                 { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AbaType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AbaType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

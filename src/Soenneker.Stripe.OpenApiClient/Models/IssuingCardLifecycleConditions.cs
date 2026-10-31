@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payment_count") is { } nullNodePaymentCount && nullNodePaymentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentCount = null;
+            if (parseNode.GetChildNode("payment_count") is null) { _explicitNullValuePaymentCount = default!; _explicitNullProperties?.Remove("payment_count"); }
+            else if (parseNode.GetChildNode("payment_count") is { } nullNodePaymentCount && nullNodePaymentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card is automatically cancelled when it makes this number of non-zero payment authorizations and transactions. The count includes penny authorizations, but doesn&apos;t include non-payment actions, such as authorization advice.</summary>
-        public int? PaymentCount { get => _explicitNullValuePaymentCount; set { _explicitNullValuePaymentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_count"); else _explicitNullProperties?.Remove("payment_count"); } }
+        public int? PaymentCount { get => _explicitNullValuePaymentCount; set { _explicitNullValuePaymentCount = value; AdditionalData?.Remove("payment_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_count"); else _explicitNullProperties?.Remove("payment_count"); } }
         private int? _explicitNullValuePaymentCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions"/> and sets the default values.

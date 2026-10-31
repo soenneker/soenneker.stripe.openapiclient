@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data_string") is { } nullNodeDataString && nullNodeDataString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataString = null;
-            if (parseNode.GetChildNode("native_url") is { } nullNodeNativeUrl && nullNodeNativeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeUrl = null;
-            if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
+            if (parseNode.GetChildNode("data_string") is null) { _explicitNullValueDataString = default!; _explicitNullProperties?.Remove("data_string"); }
+            else if (parseNode.GetChildNode("data_string") is { } nullNodeDataString && nullNodeDataString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataString = null;
+            if (parseNode.GetChildNode("native_url") is null) { _explicitNullValueNativeUrl = default!; _explicitNullProperties?.Remove("native_url"); }
+            else if (parseNode.GetChildNode("native_url") is { } nullNodeNativeUrl && nullNodeNativeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeUrl = null;
+            if (parseNode.GetChildNode("statement_descriptor") is null) { _explicitNullValueStatementDescriptor = default!; _explicitNullProperties?.Remove("statement_descriptor"); }
+            else if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The data_string property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataString { get => _explicitNullValueDataString; set { _explicitNullValueDataString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_string"); else _explicitNullProperties?.Remove("data_string"); } }
+        public string? DataString { get => _explicitNullValueDataString; set { _explicitNullValueDataString = value; AdditionalData?.Remove("data_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_string"); else _explicitNullProperties?.Remove("data_string"); } }
         private string? _explicitNullValueDataString = default!;
 #nullable restore
 #else
-        public string DataString { get => _explicitNullValueDataString; set { _explicitNullValueDataString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_string"); else _explicitNullProperties?.Remove("data_string"); } }
+        public string DataString { get => _explicitNullValueDataString; set { _explicitNullValueDataString = value; AdditionalData?.Remove("data_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_string"); else _explicitNullProperties?.Remove("data_string"); } }
         private string _explicitNullValueDataString = default!;
 #endif
         /// <summary>The native_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NativeUrl { get => _explicitNullValueNativeUrl; set { _explicitNullValueNativeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_url"); else _explicitNullProperties?.Remove("native_url"); } }
+        public string? NativeUrl { get => _explicitNullValueNativeUrl; set { _explicitNullValueNativeUrl = value; AdditionalData?.Remove("native_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_url"); else _explicitNullProperties?.Remove("native_url"); } }
         private string? _explicitNullValueNativeUrl = default!;
 #nullable restore
 #else
-        public string NativeUrl { get => _explicitNullValueNativeUrl; set { _explicitNullValueNativeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_url"); else _explicitNullProperties?.Remove("native_url"); } }
+        public string NativeUrl { get => _explicitNullValueNativeUrl; set { _explicitNullValueNativeUrl = value; AdditionalData?.Remove("native_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_url"); else _explicitNullProperties?.Remove("native_url"); } }
         private string _explicitNullValueNativeUrl = default!;
 #endif
         /// <summary>The statement_descriptor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string? _explicitNullValueStatementDescriptor = default!;
 #nullable restore
 #else
-        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string _explicitNullValueStatementDescriptor = default!;
 #endif
         /// <summary>

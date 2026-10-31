@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("transition") is null) { _explicitNullValueTransition = default!; _explicitNullProperties?.Remove("transition"); }
+            else if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The transition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; AdditionalData?.Remove("transition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition? _explicitNullValueTransition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; AdditionalData?.Remove("transition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition _explicitNullValueTransition = default!;
 #endif
         /// <summary>The type of behavior when the trial offer ends.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TransitionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransitionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TransitionType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTrialOfferEndBehavior"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "transition", n => { Transition = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition>(global::Soenneker.Stripe.OpenApiClient.Models.ProductCatalogImplEndpointsTrialOfferResourceTransition.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransitionType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransitionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

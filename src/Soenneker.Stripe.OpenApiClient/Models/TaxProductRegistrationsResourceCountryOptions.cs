@@ -17,107 +17,208 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ae") is { } nullNodeAe && nullNodeAe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ae = null;
-            if (parseNode.GetChildNode("al") is { } nullNodeAl && nullNodeAl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Al = null;
-            if (parseNode.GetChildNode("am") is { } nullNodeAm && nullNodeAm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Am = null;
-            if (parseNode.GetChildNode("ao") is { } nullNodeAo && nullNodeAo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ao = null;
-            if (parseNode.GetChildNode("at") is { } nullNodeAt && nullNodeAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) At = null;
-            if (parseNode.GetChildNode("au") is { } nullNodeAu && nullNodeAu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Au = null;
-            if (parseNode.GetChildNode("aw") is { } nullNodeAw && nullNodeAw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aw = null;
-            if (parseNode.GetChildNode("az") is { } nullNodeAz && nullNodeAz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Az = null;
-            if (parseNode.GetChildNode("ba") is { } nullNodeBa && nullNodeBa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ba = null;
-            if (parseNode.GetChildNode("bb") is { } nullNodeBb && nullNodeBb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bb = null;
-            if (parseNode.GetChildNode("bd") is { } nullNodeBd && nullNodeBd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bd = null;
-            if (parseNode.GetChildNode("be") is { } nullNodeBe && nullNodeBe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Be = null;
-            if (parseNode.GetChildNode("bf") is { } nullNodeBf && nullNodeBf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bf = null;
-            if (parseNode.GetChildNode("bg") is { } nullNodeBg && nullNodeBg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bg = null;
-            if (parseNode.GetChildNode("bh") is { } nullNodeBh && nullNodeBh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bh = null;
-            if (parseNode.GetChildNode("bj") is { } nullNodeBj && nullNodeBj.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bj = null;
-            if (parseNode.GetChildNode("bs") is { } nullNodeBs && nullNodeBs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bs = null;
-            if (parseNode.GetChildNode("by") is { } nullNodeBy && nullNodeBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) By = null;
-            if (parseNode.GetChildNode("ca") is { } nullNodeCa && nullNodeCa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ca = null;
-            if (parseNode.GetChildNode("cd") is { } nullNodeCd && nullNodeCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cd = null;
-            if (parseNode.GetChildNode("ch") is { } nullNodeCh && nullNodeCh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ch = null;
-            if (parseNode.GetChildNode("cl") is { } nullNodeCl && nullNodeCl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cl = null;
-            if (parseNode.GetChildNode("cm") is { } nullNodeCm && nullNodeCm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cm = null;
-            if (parseNode.GetChildNode("co") is { } nullNodeCo && nullNodeCo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Co = null;
-            if (parseNode.GetChildNode("cr") is { } nullNodeCr && nullNodeCr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cr = null;
-            if (parseNode.GetChildNode("cv") is { } nullNodeCv && nullNodeCv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cv = null;
-            if (parseNode.GetChildNode("cy") is { } nullNodeCy && nullNodeCy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cy = null;
-            if (parseNode.GetChildNode("cz") is { } nullNodeCz && nullNodeCz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cz = null;
-            if (parseNode.GetChildNode("de") is { } nullNodeDe && nullNodeDe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) De = null;
-            if (parseNode.GetChildNode("dk") is { } nullNodeDk && nullNodeDk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dk = null;
-            if (parseNode.GetChildNode("ec") is { } nullNodeEc && nullNodeEc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ec = null;
-            if (parseNode.GetChildNode("ee") is { } nullNodeEe && nullNodeEe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ee = null;
-            if (parseNode.GetChildNode("eg") is { } nullNodeEg && nullNodeEg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eg = null;
-            if (parseNode.GetChildNode("es") is { } nullNodeEs && nullNodeEs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Es = null;
-            if (parseNode.GetChildNode("et") is { } nullNodeEt && nullNodeEt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Et = null;
-            if (parseNode.GetChildNode("fi") is { } nullNodeFi && nullNodeFi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fi = null;
-            if (parseNode.GetChildNode("fr") is { } nullNodeFr && nullNodeFr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fr = null;
-            if (parseNode.GetChildNode("gb") is { } nullNodeGb && nullNodeGb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gb = null;
-            if (parseNode.GetChildNode("ge") is { } nullNodeGe && nullNodeGe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ge = null;
-            if (parseNode.GetChildNode("gn") is { } nullNodeGn && nullNodeGn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gn = null;
-            if (parseNode.GetChildNode("gr") is { } nullNodeGr && nullNodeGr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gr = null;
-            if (parseNode.GetChildNode("hr") is { } nullNodeHr && nullNodeHr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hr = null;
-            if (parseNode.GetChildNode("hu") is { } nullNodeHu && nullNodeHu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hu = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("ie") is { } nullNodeIe && nullNodeIe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ie = null;
-            if (parseNode.GetChildNode("in") is { } nullNodeIn && nullNodeIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) In = null;
-            if (parseNode.GetChildNode("is") is { } nullNodeIs && nullNodeIs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Is = null;
-            if (parseNode.GetChildNode("it") is { } nullNodeIt && nullNodeIt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) It = null;
-            if (parseNode.GetChildNode("jp") is { } nullNodeJp && nullNodeJp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jp = null;
-            if (parseNode.GetChildNode("ke") is { } nullNodeKe && nullNodeKe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ke = null;
-            if (parseNode.GetChildNode("kg") is { } nullNodeKg && nullNodeKg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kg = null;
-            if (parseNode.GetChildNode("kh") is { } nullNodeKh && nullNodeKh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kh = null;
-            if (parseNode.GetChildNode("kr") is { } nullNodeKr && nullNodeKr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kr = null;
-            if (parseNode.GetChildNode("kz") is { } nullNodeKz && nullNodeKz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kz = null;
-            if (parseNode.GetChildNode("la") is { } nullNodeLa && nullNodeLa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) La = null;
-            if (parseNode.GetChildNode("lk") is { } nullNodeLk && nullNodeLk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lk = null;
-            if (parseNode.GetChildNode("lt") is { } nullNodeLt && nullNodeLt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lt = null;
-            if (parseNode.GetChildNode("lu") is { } nullNodeLu && nullNodeLu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lu = null;
-            if (parseNode.GetChildNode("lv") is { } nullNodeLv && nullNodeLv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lv = null;
-            if (parseNode.GetChildNode("ma") is { } nullNodeMa && nullNodeMa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ma = null;
-            if (parseNode.GetChildNode("md") is { } nullNodeMd && nullNodeMd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Md = null;
-            if (parseNode.GetChildNode("me") is { } nullNodeMe && nullNodeMe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Me = null;
-            if (parseNode.GetChildNode("mk") is { } nullNodeMk && nullNodeMk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mk = null;
-            if (parseNode.GetChildNode("mr") is { } nullNodeMr && nullNodeMr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mr = null;
-            if (parseNode.GetChildNode("mt") is { } nullNodeMt && nullNodeMt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mt = null;
-            if (parseNode.GetChildNode("mx") is { } nullNodeMx && nullNodeMx.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mx = null;
-            if (parseNode.GetChildNode("my") is { } nullNodeMy && nullNodeMy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) My = null;
-            if (parseNode.GetChildNode("ng") is { } nullNodeNg && nullNodeNg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ng = null;
-            if (parseNode.GetChildNode("nl") is { } nullNodeNl && nullNodeNl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nl = null;
-            if (parseNode.GetChildNode("no") is { } nullNodeNo && nullNodeNo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) No = null;
-            if (parseNode.GetChildNode("np") is { } nullNodeNp && nullNodeNp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Np = null;
-            if (parseNode.GetChildNode("nz") is { } nullNodeNz && nullNodeNz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nz = null;
-            if (parseNode.GetChildNode("om") is { } nullNodeOm && nullNodeOm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Om = null;
-            if (parseNode.GetChildNode("pe") is { } nullNodePe && nullNodePe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pe = null;
-            if (parseNode.GetChildNode("ph") is { } nullNodePh && nullNodePh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ph = null;
-            if (parseNode.GetChildNode("pl") is { } nullNodePl && nullNodePl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pl = null;
-            if (parseNode.GetChildNode("pt") is { } nullNodePt && nullNodePt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pt = null;
-            if (parseNode.GetChildNode("ro") is { } nullNodeRo && nullNodeRo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ro = null;
-            if (parseNode.GetChildNode("rs") is { } nullNodeRs && nullNodeRs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rs = null;
-            if (parseNode.GetChildNode("ru") is { } nullNodeRu && nullNodeRu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ru = null;
-            if (parseNode.GetChildNode("sa") is { } nullNodeSa && nullNodeSa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sa = null;
-            if (parseNode.GetChildNode("se") is { } nullNodeSe && nullNodeSe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Se = null;
-            if (parseNode.GetChildNode("sg") is { } nullNodeSg && nullNodeSg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sg = null;
-            if (parseNode.GetChildNode("si") is { } nullNodeSi && nullNodeSi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Si = null;
-            if (parseNode.GetChildNode("sk") is { } nullNodeSk && nullNodeSk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sk = null;
-            if (parseNode.GetChildNode("sn") is { } nullNodeSn && nullNodeSn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sn = null;
-            if (parseNode.GetChildNode("sr") is { } nullNodeSr && nullNodeSr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sr = null;
-            if (parseNode.GetChildNode("th") is { } nullNodeTh && nullNodeTh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Th = null;
-            if (parseNode.GetChildNode("tj") is { } nullNodeTj && nullNodeTj.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tj = null;
-            if (parseNode.GetChildNode("tr") is { } nullNodeTr && nullNodeTr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tr = null;
-            if (parseNode.GetChildNode("tw") is { } nullNodeTw && nullNodeTw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tw = null;
-            if (parseNode.GetChildNode("tz") is { } nullNodeTz && nullNodeTz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tz = null;
-            if (parseNode.GetChildNode("ua") is { } nullNodeUa && nullNodeUa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ua = null;
-            if (parseNode.GetChildNode("ug") is { } nullNodeUg && nullNodeUg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ug = null;
-            if (parseNode.GetChildNode("us") is { } nullNodeUs && nullNodeUs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Us = null;
-            if (parseNode.GetChildNode("uy") is { } nullNodeUy && nullNodeUy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uy = null;
-            if (parseNode.GetChildNode("uz") is { } nullNodeUz && nullNodeUz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uz = null;
-            if (parseNode.GetChildNode("vn") is { } nullNodeVn && nullNodeVn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vn = null;
-            if (parseNode.GetChildNode("za") is { } nullNodeZa && nullNodeZa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Za = null;
-            if (parseNode.GetChildNode("zm") is { } nullNodeZm && nullNodeZm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zm = null;
-            if (parseNode.GetChildNode("zw") is { } nullNodeZw && nullNodeZw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zw = null;
+            if (parseNode.GetChildNode("ae") is null) { _explicitNullValueAe = default!; _explicitNullProperties?.Remove("ae"); }
+            else if (parseNode.GetChildNode("ae") is { } nullNodeAe && nullNodeAe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ae = null;
+            if (parseNode.GetChildNode("al") is null) { _explicitNullValueAl = default!; _explicitNullProperties?.Remove("al"); }
+            else if (parseNode.GetChildNode("al") is { } nullNodeAl && nullNodeAl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Al = null;
+            if (parseNode.GetChildNode("am") is null) { _explicitNullValueAm = default!; _explicitNullProperties?.Remove("am"); }
+            else if (parseNode.GetChildNode("am") is { } nullNodeAm && nullNodeAm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Am = null;
+            if (parseNode.GetChildNode("ao") is null) { _explicitNullValueAo = default!; _explicitNullProperties?.Remove("ao"); }
+            else if (parseNode.GetChildNode("ao") is { } nullNodeAo && nullNodeAo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ao = null;
+            if (parseNode.GetChildNode("at") is null) { _explicitNullValueAt = default!; _explicitNullProperties?.Remove("at"); }
+            else if (parseNode.GetChildNode("at") is { } nullNodeAt && nullNodeAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) At = null;
+            if (parseNode.GetChildNode("au") is null) { _explicitNullValueAu = default!; _explicitNullProperties?.Remove("au"); }
+            else if (parseNode.GetChildNode("au") is { } nullNodeAu && nullNodeAu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Au = null;
+            if (parseNode.GetChildNode("aw") is null) { _explicitNullValueAw = default!; _explicitNullProperties?.Remove("aw"); }
+            else if (parseNode.GetChildNode("aw") is { } nullNodeAw && nullNodeAw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aw = null;
+            if (parseNode.GetChildNode("az") is null) { _explicitNullValueAz = default!; _explicitNullProperties?.Remove("az"); }
+            else if (parseNode.GetChildNode("az") is { } nullNodeAz && nullNodeAz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Az = null;
+            if (parseNode.GetChildNode("ba") is null) { _explicitNullValueBa = default!; _explicitNullProperties?.Remove("ba"); }
+            else if (parseNode.GetChildNode("ba") is { } nullNodeBa && nullNodeBa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ba = null;
+            if (parseNode.GetChildNode("bb") is null) { _explicitNullValueBb = default!; _explicitNullProperties?.Remove("bb"); }
+            else if (parseNode.GetChildNode("bb") is { } nullNodeBb && nullNodeBb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bb = null;
+            if (parseNode.GetChildNode("bd") is null) { _explicitNullValueBd = default!; _explicitNullProperties?.Remove("bd"); }
+            else if (parseNode.GetChildNode("bd") is { } nullNodeBd && nullNodeBd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bd = null;
+            if (parseNode.GetChildNode("be") is null) { _explicitNullValueBe = default!; _explicitNullProperties?.Remove("be"); }
+            else if (parseNode.GetChildNode("be") is { } nullNodeBe && nullNodeBe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Be = null;
+            if (parseNode.GetChildNode("bf") is null) { _explicitNullValueBf = default!; _explicitNullProperties?.Remove("bf"); }
+            else if (parseNode.GetChildNode("bf") is { } nullNodeBf && nullNodeBf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bf = null;
+            if (parseNode.GetChildNode("bg") is null) { _explicitNullValueBg = default!; _explicitNullProperties?.Remove("bg"); }
+            else if (parseNode.GetChildNode("bg") is { } nullNodeBg && nullNodeBg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bg = null;
+            if (parseNode.GetChildNode("bh") is null) { _explicitNullValueBh = default!; _explicitNullProperties?.Remove("bh"); }
+            else if (parseNode.GetChildNode("bh") is { } nullNodeBh && nullNodeBh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bh = null;
+            if (parseNode.GetChildNode("bj") is null) { _explicitNullValueBj = default!; _explicitNullProperties?.Remove("bj"); }
+            else if (parseNode.GetChildNode("bj") is { } nullNodeBj && nullNodeBj.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bj = null;
+            if (parseNode.GetChildNode("bs") is null) { _explicitNullValueBs = default!; _explicitNullProperties?.Remove("bs"); }
+            else if (parseNode.GetChildNode("bs") is { } nullNodeBs && nullNodeBs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bs = null;
+            if (parseNode.GetChildNode("by") is null) { _explicitNullValueBy = default!; _explicitNullProperties?.Remove("by"); }
+            else if (parseNode.GetChildNode("by") is { } nullNodeBy && nullNodeBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) By = null;
+            if (parseNode.GetChildNode("ca") is null) { _explicitNullValueCa = default!; _explicitNullProperties?.Remove("ca"); }
+            else if (parseNode.GetChildNode("ca") is { } nullNodeCa && nullNodeCa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ca = null;
+            if (parseNode.GetChildNode("cd") is null) { _explicitNullValueCd = default!; _explicitNullProperties?.Remove("cd"); }
+            else if (parseNode.GetChildNode("cd") is { } nullNodeCd && nullNodeCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cd = null;
+            if (parseNode.GetChildNode("ch") is null) { _explicitNullValueCh = default!; _explicitNullProperties?.Remove("ch"); }
+            else if (parseNode.GetChildNode("ch") is { } nullNodeCh && nullNodeCh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ch = null;
+            if (parseNode.GetChildNode("cl") is null) { _explicitNullValueCl = default!; _explicitNullProperties?.Remove("cl"); }
+            else if (parseNode.GetChildNode("cl") is { } nullNodeCl && nullNodeCl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cl = null;
+            if (parseNode.GetChildNode("cm") is null) { _explicitNullValueCm = default!; _explicitNullProperties?.Remove("cm"); }
+            else if (parseNode.GetChildNode("cm") is { } nullNodeCm && nullNodeCm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cm = null;
+            if (parseNode.GetChildNode("co") is null) { _explicitNullValueCo = default!; _explicitNullProperties?.Remove("co"); }
+            else if (parseNode.GetChildNode("co") is { } nullNodeCo && nullNodeCo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Co = null;
+            if (parseNode.GetChildNode("cr") is null) { _explicitNullValueCr = default!; _explicitNullProperties?.Remove("cr"); }
+            else if (parseNode.GetChildNode("cr") is { } nullNodeCr && nullNodeCr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cr = null;
+            if (parseNode.GetChildNode("cv") is null) { _explicitNullValueCv = default!; _explicitNullProperties?.Remove("cv"); }
+            else if (parseNode.GetChildNode("cv") is { } nullNodeCv && nullNodeCv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cv = null;
+            if (parseNode.GetChildNode("cy") is null) { _explicitNullValueCy = default!; _explicitNullProperties?.Remove("cy"); }
+            else if (parseNode.GetChildNode("cy") is { } nullNodeCy && nullNodeCy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cy = null;
+            if (parseNode.GetChildNode("cz") is null) { _explicitNullValueCz = default!; _explicitNullProperties?.Remove("cz"); }
+            else if (parseNode.GetChildNode("cz") is { } nullNodeCz && nullNodeCz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cz = null;
+            if (parseNode.GetChildNode("de") is null) { _explicitNullValueDe = default!; _explicitNullProperties?.Remove("de"); }
+            else if (parseNode.GetChildNode("de") is { } nullNodeDe && nullNodeDe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) De = null;
+            if (parseNode.GetChildNode("dk") is null) { _explicitNullValueDk = default!; _explicitNullProperties?.Remove("dk"); }
+            else if (parseNode.GetChildNode("dk") is { } nullNodeDk && nullNodeDk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dk = null;
+            if (parseNode.GetChildNode("ec") is null) { _explicitNullValueEc = default!; _explicitNullProperties?.Remove("ec"); }
+            else if (parseNode.GetChildNode("ec") is { } nullNodeEc && nullNodeEc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ec = null;
+            if (parseNode.GetChildNode("ee") is null) { _explicitNullValueEe = default!; _explicitNullProperties?.Remove("ee"); }
+            else if (parseNode.GetChildNode("ee") is { } nullNodeEe && nullNodeEe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ee = null;
+            if (parseNode.GetChildNode("eg") is null) { _explicitNullValueEg = default!; _explicitNullProperties?.Remove("eg"); }
+            else if (parseNode.GetChildNode("eg") is { } nullNodeEg && nullNodeEg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eg = null;
+            if (parseNode.GetChildNode("es") is null) { _explicitNullValueEs = default!; _explicitNullProperties?.Remove("es"); }
+            else if (parseNode.GetChildNode("es") is { } nullNodeEs && nullNodeEs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Es = null;
+            if (parseNode.GetChildNode("et") is null) { _explicitNullValueEt = default!; _explicitNullProperties?.Remove("et"); }
+            else if (parseNode.GetChildNode("et") is { } nullNodeEt && nullNodeEt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Et = null;
+            if (parseNode.GetChildNode("fi") is null) { _explicitNullValueFi = default!; _explicitNullProperties?.Remove("fi"); }
+            else if (parseNode.GetChildNode("fi") is { } nullNodeFi && nullNodeFi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fi = null;
+            if (parseNode.GetChildNode("fr") is null) { _explicitNullValueFr = default!; _explicitNullProperties?.Remove("fr"); }
+            else if (parseNode.GetChildNode("fr") is { } nullNodeFr && nullNodeFr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fr = null;
+            if (parseNode.GetChildNode("gb") is null) { _explicitNullValueGb = default!; _explicitNullProperties?.Remove("gb"); }
+            else if (parseNode.GetChildNode("gb") is { } nullNodeGb && nullNodeGb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gb = null;
+            if (parseNode.GetChildNode("ge") is null) { _explicitNullValueGe = default!; _explicitNullProperties?.Remove("ge"); }
+            else if (parseNode.GetChildNode("ge") is { } nullNodeGe && nullNodeGe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ge = null;
+            if (parseNode.GetChildNode("gn") is null) { _explicitNullValueGn = default!; _explicitNullProperties?.Remove("gn"); }
+            else if (parseNode.GetChildNode("gn") is { } nullNodeGn && nullNodeGn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gn = null;
+            if (parseNode.GetChildNode("gr") is null) { _explicitNullValueGr = default!; _explicitNullProperties?.Remove("gr"); }
+            else if (parseNode.GetChildNode("gr") is { } nullNodeGr && nullNodeGr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gr = null;
+            if (parseNode.GetChildNode("hr") is null) { _explicitNullValueHr = default!; _explicitNullProperties?.Remove("hr"); }
+            else if (parseNode.GetChildNode("hr") is { } nullNodeHr && nullNodeHr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hr = null;
+            if (parseNode.GetChildNode("hu") is null) { _explicitNullValueHu = default!; _explicitNullProperties?.Remove("hu"); }
+            else if (parseNode.GetChildNode("hu") is { } nullNodeHu && nullNodeHu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hu = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("ie") is null) { _explicitNullValueIe = default!; _explicitNullProperties?.Remove("ie"); }
+            else if (parseNode.GetChildNode("ie") is { } nullNodeIe && nullNodeIe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ie = null;
+            if (parseNode.GetChildNode("in") is null) { _explicitNullValueIn = default!; _explicitNullProperties?.Remove("in"); }
+            else if (parseNode.GetChildNode("in") is { } nullNodeIn && nullNodeIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) In = null;
+            if (parseNode.GetChildNode("is") is null) { _explicitNullValueIs = default!; _explicitNullProperties?.Remove("is"); }
+            else if (parseNode.GetChildNode("is") is { } nullNodeIs && nullNodeIs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Is = null;
+            if (parseNode.GetChildNode("it") is null) { _explicitNullValueIt = default!; _explicitNullProperties?.Remove("it"); }
+            else if (parseNode.GetChildNode("it") is { } nullNodeIt && nullNodeIt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) It = null;
+            if (parseNode.GetChildNode("jp") is null) { _explicitNullValueJp = default!; _explicitNullProperties?.Remove("jp"); }
+            else if (parseNode.GetChildNode("jp") is { } nullNodeJp && nullNodeJp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jp = null;
+            if (parseNode.GetChildNode("ke") is null) { _explicitNullValueKe = default!; _explicitNullProperties?.Remove("ke"); }
+            else if (parseNode.GetChildNode("ke") is { } nullNodeKe && nullNodeKe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ke = null;
+            if (parseNode.GetChildNode("kg") is null) { _explicitNullValueKg = default!; _explicitNullProperties?.Remove("kg"); }
+            else if (parseNode.GetChildNode("kg") is { } nullNodeKg && nullNodeKg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kg = null;
+            if (parseNode.GetChildNode("kh") is null) { _explicitNullValueKh = default!; _explicitNullProperties?.Remove("kh"); }
+            else if (parseNode.GetChildNode("kh") is { } nullNodeKh && nullNodeKh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kh = null;
+            if (parseNode.GetChildNode("kr") is null) { _explicitNullValueKr = default!; _explicitNullProperties?.Remove("kr"); }
+            else if (parseNode.GetChildNode("kr") is { } nullNodeKr && nullNodeKr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kr = null;
+            if (parseNode.GetChildNode("kz") is null) { _explicitNullValueKz = default!; _explicitNullProperties?.Remove("kz"); }
+            else if (parseNode.GetChildNode("kz") is { } nullNodeKz && nullNodeKz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kz = null;
+            if (parseNode.GetChildNode("la") is null) { _explicitNullValueLa = default!; _explicitNullProperties?.Remove("la"); }
+            else if (parseNode.GetChildNode("la") is { } nullNodeLa && nullNodeLa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) La = null;
+            if (parseNode.GetChildNode("lk") is null) { _explicitNullValueLk = default!; _explicitNullProperties?.Remove("lk"); }
+            else if (parseNode.GetChildNode("lk") is { } nullNodeLk && nullNodeLk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lk = null;
+            if (parseNode.GetChildNode("lt") is null) { _explicitNullValueLt = default!; _explicitNullProperties?.Remove("lt"); }
+            else if (parseNode.GetChildNode("lt") is { } nullNodeLt && nullNodeLt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lt = null;
+            if (parseNode.GetChildNode("lu") is null) { _explicitNullValueLu = default!; _explicitNullProperties?.Remove("lu"); }
+            else if (parseNode.GetChildNode("lu") is { } nullNodeLu && nullNodeLu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lu = null;
+            if (parseNode.GetChildNode("lv") is null) { _explicitNullValueLv = default!; _explicitNullProperties?.Remove("lv"); }
+            else if (parseNode.GetChildNode("lv") is { } nullNodeLv && nullNodeLv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lv = null;
+            if (parseNode.GetChildNode("ma") is null) { _explicitNullValueMa = default!; _explicitNullProperties?.Remove("ma"); }
+            else if (parseNode.GetChildNode("ma") is { } nullNodeMa && nullNodeMa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ma = null;
+            if (parseNode.GetChildNode("md") is null) { _explicitNullValueMd = default!; _explicitNullProperties?.Remove("md"); }
+            else if (parseNode.GetChildNode("md") is { } nullNodeMd && nullNodeMd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Md = null;
+            if (parseNode.GetChildNode("me") is null) { _explicitNullValueMe = default!; _explicitNullProperties?.Remove("me"); }
+            else if (parseNode.GetChildNode("me") is { } nullNodeMe && nullNodeMe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Me = null;
+            if (parseNode.GetChildNode("mk") is null) { _explicitNullValueMk = default!; _explicitNullProperties?.Remove("mk"); }
+            else if (parseNode.GetChildNode("mk") is { } nullNodeMk && nullNodeMk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mk = null;
+            if (parseNode.GetChildNode("mr") is null) { _explicitNullValueMr = default!; _explicitNullProperties?.Remove("mr"); }
+            else if (parseNode.GetChildNode("mr") is { } nullNodeMr && nullNodeMr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mr = null;
+            if (parseNode.GetChildNode("mt") is null) { _explicitNullValueMt = default!; _explicitNullProperties?.Remove("mt"); }
+            else if (parseNode.GetChildNode("mt") is { } nullNodeMt && nullNodeMt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mt = null;
+            if (parseNode.GetChildNode("mx") is null) { _explicitNullValueMx = default!; _explicitNullProperties?.Remove("mx"); }
+            else if (parseNode.GetChildNode("mx") is { } nullNodeMx && nullNodeMx.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mx = null;
+            if (parseNode.GetChildNode("my") is null) { _explicitNullValueMy = default!; _explicitNullProperties?.Remove("my"); }
+            else if (parseNode.GetChildNode("my") is { } nullNodeMy && nullNodeMy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) My = null;
+            if (parseNode.GetChildNode("ng") is null) { _explicitNullValueNg = default!; _explicitNullProperties?.Remove("ng"); }
+            else if (parseNode.GetChildNode("ng") is { } nullNodeNg && nullNodeNg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ng = null;
+            if (parseNode.GetChildNode("nl") is null) { _explicitNullValueNl = default!; _explicitNullProperties?.Remove("nl"); }
+            else if (parseNode.GetChildNode("nl") is { } nullNodeNl && nullNodeNl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nl = null;
+            if (parseNode.GetChildNode("no") is null) { _explicitNullValueNo = default!; _explicitNullProperties?.Remove("no"); }
+            else if (parseNode.GetChildNode("no") is { } nullNodeNo && nullNodeNo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) No = null;
+            if (parseNode.GetChildNode("np") is null) { _explicitNullValueNp = default!; _explicitNullProperties?.Remove("np"); }
+            else if (parseNode.GetChildNode("np") is { } nullNodeNp && nullNodeNp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Np = null;
+            if (parseNode.GetChildNode("nz") is null) { _explicitNullValueNz = default!; _explicitNullProperties?.Remove("nz"); }
+            else if (parseNode.GetChildNode("nz") is { } nullNodeNz && nullNodeNz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nz = null;
+            if (parseNode.GetChildNode("om") is null) { _explicitNullValueOm = default!; _explicitNullProperties?.Remove("om"); }
+            else if (parseNode.GetChildNode("om") is { } nullNodeOm && nullNodeOm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Om = null;
+            if (parseNode.GetChildNode("pe") is null) { _explicitNullValuePe = default!; _explicitNullProperties?.Remove("pe"); }
+            else if (parseNode.GetChildNode("pe") is { } nullNodePe && nullNodePe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pe = null;
+            if (parseNode.GetChildNode("ph") is null) { _explicitNullValuePh = default!; _explicitNullProperties?.Remove("ph"); }
+            else if (parseNode.GetChildNode("ph") is { } nullNodePh && nullNodePh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ph = null;
+            if (parseNode.GetChildNode("pl") is null) { _explicitNullValuePl = default!; _explicitNullProperties?.Remove("pl"); }
+            else if (parseNode.GetChildNode("pl") is { } nullNodePl && nullNodePl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pl = null;
+            if (parseNode.GetChildNode("pt") is null) { _explicitNullValuePt = default!; _explicitNullProperties?.Remove("pt"); }
+            else if (parseNode.GetChildNode("pt") is { } nullNodePt && nullNodePt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pt = null;
+            if (parseNode.GetChildNode("ro") is null) { _explicitNullValueRo = default!; _explicitNullProperties?.Remove("ro"); }
+            else if (parseNode.GetChildNode("ro") is { } nullNodeRo && nullNodeRo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ro = null;
+            if (parseNode.GetChildNode("rs") is null) { _explicitNullValueRs = default!; _explicitNullProperties?.Remove("rs"); }
+            else if (parseNode.GetChildNode("rs") is { } nullNodeRs && nullNodeRs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rs = null;
+            if (parseNode.GetChildNode("ru") is null) { _explicitNullValueRu = default!; _explicitNullProperties?.Remove("ru"); }
+            else if (parseNode.GetChildNode("ru") is { } nullNodeRu && nullNodeRu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ru = null;
+            if (parseNode.GetChildNode("sa") is null) { _explicitNullValueSa = default!; _explicitNullProperties?.Remove("sa"); }
+            else if (parseNode.GetChildNode("sa") is { } nullNodeSa && nullNodeSa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sa = null;
+            if (parseNode.GetChildNode("se") is null) { _explicitNullValueSe = default!; _explicitNullProperties?.Remove("se"); }
+            else if (parseNode.GetChildNode("se") is { } nullNodeSe && nullNodeSe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Se = null;
+            if (parseNode.GetChildNode("sg") is null) { _explicitNullValueSg = default!; _explicitNullProperties?.Remove("sg"); }
+            else if (parseNode.GetChildNode("sg") is { } nullNodeSg && nullNodeSg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sg = null;
+            if (parseNode.GetChildNode("si") is null) { _explicitNullValueSi = default!; _explicitNullProperties?.Remove("si"); }
+            else if (parseNode.GetChildNode("si") is { } nullNodeSi && nullNodeSi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Si = null;
+            if (parseNode.GetChildNode("sk") is null) { _explicitNullValueSk = default!; _explicitNullProperties?.Remove("sk"); }
+            else if (parseNode.GetChildNode("sk") is { } nullNodeSk && nullNodeSk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sk = null;
+            if (parseNode.GetChildNode("sn") is null) { _explicitNullValueSn = default!; _explicitNullProperties?.Remove("sn"); }
+            else if (parseNode.GetChildNode("sn") is { } nullNodeSn && nullNodeSn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sn = null;
+            if (parseNode.GetChildNode("sr") is null) { _explicitNullValueSr = default!; _explicitNullProperties?.Remove("sr"); }
+            else if (parseNode.GetChildNode("sr") is { } nullNodeSr && nullNodeSr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sr = null;
+            if (parseNode.GetChildNode("th") is null) { _explicitNullValueTh = default!; _explicitNullProperties?.Remove("th"); }
+            else if (parseNode.GetChildNode("th") is { } nullNodeTh && nullNodeTh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Th = null;
+            if (parseNode.GetChildNode("tj") is null) { _explicitNullValueTj = default!; _explicitNullProperties?.Remove("tj"); }
+            else if (parseNode.GetChildNode("tj") is { } nullNodeTj && nullNodeTj.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tj = null;
+            if (parseNode.GetChildNode("tr") is null) { _explicitNullValueTr = default!; _explicitNullProperties?.Remove("tr"); }
+            else if (parseNode.GetChildNode("tr") is { } nullNodeTr && nullNodeTr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tr = null;
+            if (parseNode.GetChildNode("tw") is null) { _explicitNullValueTw = default!; _explicitNullProperties?.Remove("tw"); }
+            else if (parseNode.GetChildNode("tw") is { } nullNodeTw && nullNodeTw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tw = null;
+            if (parseNode.GetChildNode("tz") is null) { _explicitNullValueTz = default!; _explicitNullProperties?.Remove("tz"); }
+            else if (parseNode.GetChildNode("tz") is { } nullNodeTz && nullNodeTz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tz = null;
+            if (parseNode.GetChildNode("ua") is null) { _explicitNullValueUa = default!; _explicitNullProperties?.Remove("ua"); }
+            else if (parseNode.GetChildNode("ua") is { } nullNodeUa && nullNodeUa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ua = null;
+            if (parseNode.GetChildNode("ug") is null) { _explicitNullValueUg = default!; _explicitNullProperties?.Remove("ug"); }
+            else if (parseNode.GetChildNode("ug") is { } nullNodeUg && nullNodeUg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ug = null;
+            if (parseNode.GetChildNode("us") is null) { _explicitNullValueUs = default!; _explicitNullProperties?.Remove("us"); }
+            else if (parseNode.GetChildNode("us") is { } nullNodeUs && nullNodeUs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Us = null;
+            if (parseNode.GetChildNode("uy") is null) { _explicitNullValueUy = default!; _explicitNullProperties?.Remove("uy"); }
+            else if (parseNode.GetChildNode("uy") is { } nullNodeUy && nullNodeUy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uy = null;
+            if (parseNode.GetChildNode("uz") is null) { _explicitNullValueUz = default!; _explicitNullProperties?.Remove("uz"); }
+            else if (parseNode.GetChildNode("uz") is { } nullNodeUz && nullNodeUz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uz = null;
+            if (parseNode.GetChildNode("vn") is null) { _explicitNullValueVn = default!; _explicitNullProperties?.Remove("vn"); }
+            else if (parseNode.GetChildNode("vn") is { } nullNodeVn && nullNodeVn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vn = null;
+            if (parseNode.GetChildNode("za") is null) { _explicitNullValueZa = default!; _explicitNullProperties?.Remove("za"); }
+            else if (parseNode.GetChildNode("za") is { } nullNodeZa && nullNodeZa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Za = null;
+            if (parseNode.GetChildNode("zm") is null) { _explicitNullValueZm = default!; _explicitNullProperties?.Remove("zm"); }
+            else if (parseNode.GetChildNode("zm") is { } nullNodeZm && nullNodeZm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zm = null;
+            if (parseNode.GetChildNode("zw") is null) { _explicitNullValueZw = default!; _explicitNullProperties?.Remove("zw"); }
+            else if (parseNode.GetChildNode("zw") is { } nullNodeZw && nullNodeZw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zw = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -125,1011 +226,1011 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ae property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Ae { get => _explicitNullValueAe; set { _explicitNullValueAe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ae"); else _explicitNullProperties?.Remove("ae"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Ae { get => _explicitNullValueAe; set { _explicitNullValueAe = value; AdditionalData?.Remove("ae"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ae"); else _explicitNullProperties?.Remove("ae"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueAe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Ae { get => _explicitNullValueAe; set { _explicitNullValueAe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ae"); else _explicitNullProperties?.Remove("ae"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Ae { get => _explicitNullValueAe; set { _explicitNullValueAe = value; AdditionalData?.Remove("ae"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ae"); else _explicitNullProperties?.Remove("ae"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueAe = default!;
 #endif
         /// <summary>The al property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Al { get => _explicitNullValueAl; set { _explicitNullValueAl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("al"); else _explicitNullProperties?.Remove("al"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Al { get => _explicitNullValueAl; set { _explicitNullValueAl = value; AdditionalData?.Remove("al"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("al"); else _explicitNullProperties?.Remove("al"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueAl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Al { get => _explicitNullValueAl; set { _explicitNullValueAl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("al"); else _explicitNullProperties?.Remove("al"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Al { get => _explicitNullValueAl; set { _explicitNullValueAl = value; AdditionalData?.Remove("al"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("al"); else _explicitNullProperties?.Remove("al"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueAl = default!;
 #endif
         /// <summary>The am property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Am { get => _explicitNullValueAm; set { _explicitNullValueAm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am"); else _explicitNullProperties?.Remove("am"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Am { get => _explicitNullValueAm; set { _explicitNullValueAm = value; AdditionalData?.Remove("am"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am"); else _explicitNullProperties?.Remove("am"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueAm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Am { get => _explicitNullValueAm; set { _explicitNullValueAm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am"); else _explicitNullProperties?.Remove("am"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Am { get => _explicitNullValueAm; set { _explicitNullValueAm = value; AdditionalData?.Remove("am"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am"); else _explicitNullProperties?.Remove("am"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueAm = default!;
 #endif
         /// <summary>The ao property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Ao { get => _explicitNullValueAo; set { _explicitNullValueAo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ao"); else _explicitNullProperties?.Remove("ao"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Ao { get => _explicitNullValueAo; set { _explicitNullValueAo = value; AdditionalData?.Remove("ao"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ao"); else _explicitNullProperties?.Remove("ao"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueAo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Ao { get => _explicitNullValueAo; set { _explicitNullValueAo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ao"); else _explicitNullProperties?.Remove("ao"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Ao { get => _explicitNullValueAo; set { _explicitNullValueAo = value; AdditionalData?.Remove("ao"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ao"); else _explicitNullProperties?.Remove("ao"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueAo = default!;
 #endif
         /// <summary>The at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? At { get => _explicitNullValueAt; set { _explicitNullValueAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at"); else _explicitNullProperties?.Remove("at"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? At { get => _explicitNullValueAt; set { _explicitNullValueAt = value; AdditionalData?.Remove("at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at"); else _explicitNullProperties?.Remove("at"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueAt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope At { get => _explicitNullValueAt; set { _explicitNullValueAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at"); else _explicitNullProperties?.Remove("at"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope At { get => _explicitNullValueAt; set { _explicitNullValueAt = value; AdditionalData?.Remove("at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at"); else _explicitNullProperties?.Remove("at"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueAt = default!;
 #endif
         /// <summary>The au property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Au { get => _explicitNullValueAu; set { _explicitNullValueAu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au"); else _explicitNullProperties?.Remove("au"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Au { get => _explicitNullValueAu; set { _explicitNullValueAu = value; AdditionalData?.Remove("au"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au"); else _explicitNullProperties?.Remove("au"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueAu = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Au { get => _explicitNullValueAu; set { _explicitNullValueAu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au"); else _explicitNullProperties?.Remove("au"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Au { get => _explicitNullValueAu; set { _explicitNullValueAu = value; AdditionalData?.Remove("au"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("au"); else _explicitNullProperties?.Remove("au"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueAu = default!;
 #endif
         /// <summary>The aw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Aw { get => _explicitNullValueAw; set { _explicitNullValueAw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aw"); else _explicitNullProperties?.Remove("aw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Aw { get => _explicitNullValueAw; set { _explicitNullValueAw = value; AdditionalData?.Remove("aw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aw"); else _explicitNullProperties?.Remove("aw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueAw = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Aw { get => _explicitNullValueAw; set { _explicitNullValueAw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aw"); else _explicitNullProperties?.Remove("aw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Aw { get => _explicitNullValueAw; set { _explicitNullValueAw = value; AdditionalData?.Remove("aw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aw"); else _explicitNullProperties?.Remove("aw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueAw = default!;
 #endif
         /// <summary>The az property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Az { get => _explicitNullValueAz; set { _explicitNullValueAz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("az"); else _explicitNullProperties?.Remove("az"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Az { get => _explicitNullValueAz; set { _explicitNullValueAz = value; AdditionalData?.Remove("az"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("az"); else _explicitNullProperties?.Remove("az"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueAz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Az { get => _explicitNullValueAz; set { _explicitNullValueAz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("az"); else _explicitNullProperties?.Remove("az"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Az { get => _explicitNullValueAz; set { _explicitNullValueAz = value; AdditionalData?.Remove("az"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("az"); else _explicitNullProperties?.Remove("az"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueAz = default!;
 #endif
         /// <summary>The ba property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Ba { get => _explicitNullValueBa; set { _explicitNullValueBa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ba"); else _explicitNullProperties?.Remove("ba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Ba { get => _explicitNullValueBa; set { _explicitNullValueBa = value; AdditionalData?.Remove("ba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ba"); else _explicitNullProperties?.Remove("ba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Ba { get => _explicitNullValueBa; set { _explicitNullValueBa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ba"); else _explicitNullProperties?.Remove("ba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Ba { get => _explicitNullValueBa; set { _explicitNullValueBa = value; AdditionalData?.Remove("ba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ba"); else _explicitNullProperties?.Remove("ba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBa = default!;
 #endif
         /// <summary>The bb property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bb { get => _explicitNullValueBb; set { _explicitNullValueBb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bb"); else _explicitNullProperties?.Remove("bb"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bb { get => _explicitNullValueBb; set { _explicitNullValueBb = value; AdditionalData?.Remove("bb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bb"); else _explicitNullProperties?.Remove("bb"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bb { get => _explicitNullValueBb; set { _explicitNullValueBb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bb"); else _explicitNullProperties?.Remove("bb"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bb { get => _explicitNullValueBb; set { _explicitNullValueBb = value; AdditionalData?.Remove("bb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bb"); else _explicitNullProperties?.Remove("bb"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBb = default!;
 #endif
         /// <summary>The bd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bd { get => _explicitNullValueBd; set { _explicitNullValueBd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bd"); else _explicitNullProperties?.Remove("bd"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bd { get => _explicitNullValueBd; set { _explicitNullValueBd = value; AdditionalData?.Remove("bd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bd"); else _explicitNullProperties?.Remove("bd"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bd { get => _explicitNullValueBd; set { _explicitNullValueBd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bd"); else _explicitNullProperties?.Remove("bd"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bd { get => _explicitNullValueBd; set { _explicitNullValueBd = value; AdditionalData?.Remove("bd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bd"); else _explicitNullProperties?.Remove("bd"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBd = default!;
 #endif
         /// <summary>The be property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Be { get => _explicitNullValueBe; set { _explicitNullValueBe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("be"); else _explicitNullProperties?.Remove("be"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Be { get => _explicitNullValueBe; set { _explicitNullValueBe = value; AdditionalData?.Remove("be"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("be"); else _explicitNullProperties?.Remove("be"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueBe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Be { get => _explicitNullValueBe; set { _explicitNullValueBe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("be"); else _explicitNullProperties?.Remove("be"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Be { get => _explicitNullValueBe; set { _explicitNullValueBe = value; AdditionalData?.Remove("be"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("be"); else _explicitNullProperties?.Remove("be"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueBe = default!;
 #endif
         /// <summary>The bf property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bf { get => _explicitNullValueBf; set { _explicitNullValueBf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bf"); else _explicitNullProperties?.Remove("bf"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bf { get => _explicitNullValueBf; set { _explicitNullValueBf = value; AdditionalData?.Remove("bf"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bf"); else _explicitNullProperties?.Remove("bf"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBf = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bf { get => _explicitNullValueBf; set { _explicitNullValueBf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bf"); else _explicitNullProperties?.Remove("bf"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bf { get => _explicitNullValueBf; set { _explicitNullValueBf = value; AdditionalData?.Remove("bf"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bf"); else _explicitNullProperties?.Remove("bf"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBf = default!;
 #endif
         /// <summary>The bg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Bg { get => _explicitNullValueBg; set { _explicitNullValueBg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bg"); else _explicitNullProperties?.Remove("bg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Bg { get => _explicitNullValueBg; set { _explicitNullValueBg = value; AdditionalData?.Remove("bg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bg"); else _explicitNullProperties?.Remove("bg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueBg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Bg { get => _explicitNullValueBg; set { _explicitNullValueBg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bg"); else _explicitNullProperties?.Remove("bg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Bg { get => _explicitNullValueBg; set { _explicitNullValueBg = value; AdditionalData?.Remove("bg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bg"); else _explicitNullProperties?.Remove("bg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueBg = default!;
 #endif
         /// <summary>The bh property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bh { get => _explicitNullValueBh; set { _explicitNullValueBh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bh"); else _explicitNullProperties?.Remove("bh"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bh { get => _explicitNullValueBh; set { _explicitNullValueBh = value; AdditionalData?.Remove("bh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bh"); else _explicitNullProperties?.Remove("bh"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bh { get => _explicitNullValueBh; set { _explicitNullValueBh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bh"); else _explicitNullProperties?.Remove("bh"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bh { get => _explicitNullValueBh; set { _explicitNullValueBh = value; AdditionalData?.Remove("bh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bh"); else _explicitNullProperties?.Remove("bh"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBh = default!;
 #endif
         /// <summary>The bj property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Bj { get => _explicitNullValueBj; set { _explicitNullValueBj = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bj"); else _explicitNullProperties?.Remove("bj"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Bj { get => _explicitNullValueBj; set { _explicitNullValueBj = value; AdditionalData?.Remove("bj"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bj"); else _explicitNullProperties?.Remove("bj"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueBj = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Bj { get => _explicitNullValueBj; set { _explicitNullValueBj = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bj"); else _explicitNullProperties?.Remove("bj"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Bj { get => _explicitNullValueBj; set { _explicitNullValueBj = value; AdditionalData?.Remove("bj"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bj"); else _explicitNullProperties?.Remove("bj"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueBj = default!;
 #endif
         /// <summary>The bs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bs { get => _explicitNullValueBs; set { _explicitNullValueBs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bs"); else _explicitNullProperties?.Remove("bs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Bs { get => _explicitNullValueBs; set { _explicitNullValueBs = value; AdditionalData?.Remove("bs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bs"); else _explicitNullProperties?.Remove("bs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueBs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bs { get => _explicitNullValueBs; set { _explicitNullValueBs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bs"); else _explicitNullProperties?.Remove("bs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Bs { get => _explicitNullValueBs; set { _explicitNullValueBs = value; AdditionalData?.Remove("bs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bs"); else _explicitNullProperties?.Remove("bs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueBs = default!;
 #endif
         /// <summary>The by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? By { get => _explicitNullValueBy; set { _explicitNullValueBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by"); else _explicitNullProperties?.Remove("by"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? By { get => _explicitNullValueBy; set { _explicitNullValueBy = value; AdditionalData?.Remove("by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by"); else _explicitNullProperties?.Remove("by"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified By { get => _explicitNullValueBy; set { _explicitNullValueBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by"); else _explicitNullProperties?.Remove("by"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified By { get => _explicitNullValueBy; set { _explicitNullValueBy = value; AdditionalData?.Remove("by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by"); else _explicitNullProperties?.Remove("by"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueBy = default!;
 #endif
         /// <summary>The ca property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada? Ca { get => _explicitNullValueCa; set { _explicitNullValueCa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca"); else _explicitNullProperties?.Remove("ca"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada? Ca { get => _explicitNullValueCa; set { _explicitNullValueCa = value; AdditionalData?.Remove("ca"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca"); else _explicitNullProperties?.Remove("ca"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada? _explicitNullValueCa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada Ca { get => _explicitNullValueCa; set { _explicitNullValueCa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca"); else _explicitNullProperties?.Remove("ca"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada Ca { get => _explicitNullValueCa; set { _explicitNullValueCa = value; AdditionalData?.Remove("ca"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca"); else _explicitNullProperties?.Remove("ca"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada _explicitNullValueCa = default!;
 #endif
         /// <summary>The cd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Cd { get => _explicitNullValueCd; set { _explicitNullValueCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cd"); else _explicitNullProperties?.Remove("cd"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Cd { get => _explicitNullValueCd; set { _explicitNullValueCd = value; AdditionalData?.Remove("cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cd"); else _explicitNullProperties?.Remove("cd"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueCd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Cd { get => _explicitNullValueCd; set { _explicitNullValueCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cd"); else _explicitNullProperties?.Remove("cd"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Cd { get => _explicitNullValueCd; set { _explicitNullValueCd = value; AdditionalData?.Remove("cd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cd"); else _explicitNullProperties?.Remove("cd"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueCd = default!;
 #endif
         /// <summary>The ch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Ch { get => _explicitNullValueCh; set { _explicitNullValueCh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ch"); else _explicitNullProperties?.Remove("ch"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Ch { get => _explicitNullValueCh; set { _explicitNullValueCh = value; AdditionalData?.Remove("ch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ch"); else _explicitNullProperties?.Remove("ch"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueCh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Ch { get => _explicitNullValueCh; set { _explicitNullValueCh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ch"); else _explicitNullProperties?.Remove("ch"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Ch { get => _explicitNullValueCh; set { _explicitNullValueCh = value; AdditionalData?.Remove("ch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ch"); else _explicitNullProperties?.Remove("ch"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueCh = default!;
 #endif
         /// <summary>The cl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cl { get => _explicitNullValueCl; set { _explicitNullValueCl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cl"); else _explicitNullProperties?.Remove("cl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cl { get => _explicitNullValueCl; set { _explicitNullValueCl = value; AdditionalData?.Remove("cl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cl"); else _explicitNullProperties?.Remove("cl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueCl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cl { get => _explicitNullValueCl; set { _explicitNullValueCl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cl"); else _explicitNullProperties?.Remove("cl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cl { get => _explicitNullValueCl; set { _explicitNullValueCl = value; AdditionalData?.Remove("cl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cl"); else _explicitNullProperties?.Remove("cl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueCl = default!;
 #endif
         /// <summary>The cm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cm { get => _explicitNullValueCm; set { _explicitNullValueCm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cm"); else _explicitNullProperties?.Remove("cm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cm { get => _explicitNullValueCm; set { _explicitNullValueCm = value; AdditionalData?.Remove("cm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cm"); else _explicitNullProperties?.Remove("cm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueCm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cm { get => _explicitNullValueCm; set { _explicitNullValueCm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cm"); else _explicitNullProperties?.Remove("cm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cm { get => _explicitNullValueCm; set { _explicitNullValueCm = value; AdditionalData?.Remove("cm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cm"); else _explicitNullProperties?.Remove("cm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueCm = default!;
 #endif
         /// <summary>The co property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Co { get => _explicitNullValueCo; set { _explicitNullValueCo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("co"); else _explicitNullProperties?.Remove("co"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Co { get => _explicitNullValueCo; set { _explicitNullValueCo = value; AdditionalData?.Remove("co"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("co"); else _explicitNullProperties?.Remove("co"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueCo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Co { get => _explicitNullValueCo; set { _explicitNullValueCo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("co"); else _explicitNullProperties?.Remove("co"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Co { get => _explicitNullValueCo; set { _explicitNullValueCo = value; AdditionalData?.Remove("co"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("co"); else _explicitNullProperties?.Remove("co"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueCo = default!;
 #endif
         /// <summary>The cr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cr { get => _explicitNullValueCr; set { _explicitNullValueCr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cr"); else _explicitNullProperties?.Remove("cr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cr { get => _explicitNullValueCr; set { _explicitNullValueCr = value; AdditionalData?.Remove("cr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cr"); else _explicitNullProperties?.Remove("cr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueCr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cr { get => _explicitNullValueCr; set { _explicitNullValueCr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cr"); else _explicitNullProperties?.Remove("cr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cr { get => _explicitNullValueCr; set { _explicitNullValueCr = value; AdditionalData?.Remove("cr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cr"); else _explicitNullProperties?.Remove("cr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueCr = default!;
 #endif
         /// <summary>The cv property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cv { get => _explicitNullValueCv; set { _explicitNullValueCv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv"); else _explicitNullProperties?.Remove("cv"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Cv { get => _explicitNullValueCv; set { _explicitNullValueCv = value; AdditionalData?.Remove("cv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv"); else _explicitNullProperties?.Remove("cv"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueCv = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cv { get => _explicitNullValueCv; set { _explicitNullValueCv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv"); else _explicitNullProperties?.Remove("cv"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Cv { get => _explicitNullValueCv; set { _explicitNullValueCv = value; AdditionalData?.Remove("cv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv"); else _explicitNullProperties?.Remove("cv"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueCv = default!;
 #endif
         /// <summary>The cy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Cy { get => _explicitNullValueCy; set { _explicitNullValueCy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cy"); else _explicitNullProperties?.Remove("cy"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Cy { get => _explicitNullValueCy; set { _explicitNullValueCy = value; AdditionalData?.Remove("cy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cy"); else _explicitNullProperties?.Remove("cy"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueCy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Cy { get => _explicitNullValueCy; set { _explicitNullValueCy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cy"); else _explicitNullProperties?.Remove("cy"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Cy { get => _explicitNullValueCy; set { _explicitNullValueCy = value; AdditionalData?.Remove("cy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cy"); else _explicitNullProperties?.Remove("cy"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueCy = default!;
 #endif
         /// <summary>The cz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Cz { get => _explicitNullValueCz; set { _explicitNullValueCz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cz"); else _explicitNullProperties?.Remove("cz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Cz { get => _explicitNullValueCz; set { _explicitNullValueCz = value; AdditionalData?.Remove("cz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cz"); else _explicitNullProperties?.Remove("cz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueCz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Cz { get => _explicitNullValueCz; set { _explicitNullValueCz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cz"); else _explicitNullProperties?.Remove("cz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Cz { get => _explicitNullValueCz; set { _explicitNullValueCz = value; AdditionalData?.Remove("cz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cz"); else _explicitNullProperties?.Remove("cz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueCz = default!;
 #endif
         /// <summary>The de property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? De { get => _explicitNullValueDe; set { _explicitNullValueDe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("de"); else _explicitNullProperties?.Remove("de"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? De { get => _explicitNullValueDe; set { _explicitNullValueDe = value; AdditionalData?.Remove("de"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("de"); else _explicitNullProperties?.Remove("de"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueDe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope De { get => _explicitNullValueDe; set { _explicitNullValueDe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("de"); else _explicitNullProperties?.Remove("de"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope De { get => _explicitNullValueDe; set { _explicitNullValueDe = value; AdditionalData?.Remove("de"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("de"); else _explicitNullProperties?.Remove("de"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueDe = default!;
 #endif
         /// <summary>The dk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Dk { get => _explicitNullValueDk; set { _explicitNullValueDk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dk"); else _explicitNullProperties?.Remove("dk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Dk { get => _explicitNullValueDk; set { _explicitNullValueDk = value; AdditionalData?.Remove("dk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dk"); else _explicitNullProperties?.Remove("dk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueDk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Dk { get => _explicitNullValueDk; set { _explicitNullValueDk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dk"); else _explicitNullProperties?.Remove("dk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Dk { get => _explicitNullValueDk; set { _explicitNullValueDk = value; AdditionalData?.Remove("dk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dk"); else _explicitNullProperties?.Remove("dk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueDk = default!;
 #endif
         /// <summary>The ec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ec { get => _explicitNullValueEc; set { _explicitNullValueEc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec"); else _explicitNullProperties?.Remove("ec"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ec { get => _explicitNullValueEc; set { _explicitNullValueEc = value; AdditionalData?.Remove("ec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec"); else _explicitNullProperties?.Remove("ec"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueEc = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ec { get => _explicitNullValueEc; set { _explicitNullValueEc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec"); else _explicitNullProperties?.Remove("ec"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ec { get => _explicitNullValueEc; set { _explicitNullValueEc = value; AdditionalData?.Remove("ec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec"); else _explicitNullProperties?.Remove("ec"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueEc = default!;
 #endif
         /// <summary>The ee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ee { get => _explicitNullValueEe; set { _explicitNullValueEe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ee"); else _explicitNullProperties?.Remove("ee"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ee { get => _explicitNullValueEe; set { _explicitNullValueEe = value; AdditionalData?.Remove("ee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ee"); else _explicitNullProperties?.Remove("ee"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueEe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ee { get => _explicitNullValueEe; set { _explicitNullValueEe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ee"); else _explicitNullProperties?.Remove("ee"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ee { get => _explicitNullValueEe; set { _explicitNullValueEe = value; AdditionalData?.Remove("ee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ee"); else _explicitNullProperties?.Remove("ee"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueEe = default!;
 #endif
         /// <summary>The eg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Eg { get => _explicitNullValueEg; set { _explicitNullValueEg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eg"); else _explicitNullProperties?.Remove("eg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Eg { get => _explicitNullValueEg; set { _explicitNullValueEg = value; AdditionalData?.Remove("eg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eg"); else _explicitNullProperties?.Remove("eg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueEg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Eg { get => _explicitNullValueEg; set { _explicitNullValueEg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eg"); else _explicitNullProperties?.Remove("eg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Eg { get => _explicitNullValueEg; set { _explicitNullValueEg = value; AdditionalData?.Remove("eg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eg"); else _explicitNullProperties?.Remove("eg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueEg = default!;
 #endif
         /// <summary>The es property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain? Es { get => _explicitNullValueEs; set { _explicitNullValueEs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("es"); else _explicitNullProperties?.Remove("es"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain? Es { get => _explicitNullValueEs; set { _explicitNullValueEs = value; AdditionalData?.Remove("es"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("es"); else _explicitNullProperties?.Remove("es"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain? _explicitNullValueEs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain Es { get => _explicitNullValueEs; set { _explicitNullValueEs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("es"); else _explicitNullProperties?.Remove("es"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain Es { get => _explicitNullValueEs; set { _explicitNullValueEs = value; AdditionalData?.Remove("es"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("es"); else _explicitNullProperties?.Remove("es"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSpain _explicitNullValueEs = default!;
 #endif
         /// <summary>The et property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Et { get => _explicitNullValueEt; set { _explicitNullValueEt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("et"); else _explicitNullProperties?.Remove("et"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Et { get => _explicitNullValueEt; set { _explicitNullValueEt = value; AdditionalData?.Remove("et"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("et"); else _explicitNullProperties?.Remove("et"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueEt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Et { get => _explicitNullValueEt; set { _explicitNullValueEt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("et"); else _explicitNullProperties?.Remove("et"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Et { get => _explicitNullValueEt; set { _explicitNullValueEt = value; AdditionalData?.Remove("et"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("et"); else _explicitNullProperties?.Remove("et"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueEt = default!;
 #endif
         /// <summary>The fi property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Fi { get => _explicitNullValueFi; set { _explicitNullValueFi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fi"); else _explicitNullProperties?.Remove("fi"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Fi { get => _explicitNullValueFi; set { _explicitNullValueFi = value; AdditionalData?.Remove("fi"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fi"); else _explicitNullProperties?.Remove("fi"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueFi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Fi { get => _explicitNullValueFi; set { _explicitNullValueFi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fi"); else _explicitNullProperties?.Remove("fi"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Fi { get => _explicitNullValueFi; set { _explicitNullValueFi = value; AdditionalData?.Remove("fi"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fi"); else _explicitNullProperties?.Remove("fi"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueFi = default!;
 #endif
         /// <summary>The fr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Fr { get => _explicitNullValueFr; set { _explicitNullValueFr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr"); else _explicitNullProperties?.Remove("fr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Fr { get => _explicitNullValueFr; set { _explicitNullValueFr = value; AdditionalData?.Remove("fr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr"); else _explicitNullProperties?.Remove("fr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueFr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Fr { get => _explicitNullValueFr; set { _explicitNullValueFr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr"); else _explicitNullProperties?.Remove("fr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Fr { get => _explicitNullValueFr; set { _explicitNullValueFr = value; AdditionalData?.Remove("fr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fr"); else _explicitNullProperties?.Remove("fr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueFr = default!;
 #endif
         /// <summary>The gb property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Gb { get => _explicitNullValueGb; set { _explicitNullValueGb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb"); else _explicitNullProperties?.Remove("gb"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Gb { get => _explicitNullValueGb; set { _explicitNullValueGb = value; AdditionalData?.Remove("gb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb"); else _explicitNullProperties?.Remove("gb"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueGb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Gb { get => _explicitNullValueGb; set { _explicitNullValueGb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb"); else _explicitNullProperties?.Remove("gb"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Gb { get => _explicitNullValueGb; set { _explicitNullValueGb = value; AdditionalData?.Remove("gb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gb"); else _explicitNullProperties?.Remove("gb"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueGb = default!;
 #endif
         /// <summary>The ge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ge { get => _explicitNullValueGe; set { _explicitNullValueGe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ge"); else _explicitNullProperties?.Remove("ge"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ge { get => _explicitNullValueGe; set { _explicitNullValueGe = value; AdditionalData?.Remove("ge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ge"); else _explicitNullProperties?.Remove("ge"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueGe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ge { get => _explicitNullValueGe; set { _explicitNullValueGe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ge"); else _explicitNullProperties?.Remove("ge"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ge { get => _explicitNullValueGe; set { _explicitNullValueGe = value; AdditionalData?.Remove("ge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ge"); else _explicitNullProperties?.Remove("ge"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueGe = default!;
 #endif
         /// <summary>The gn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Gn { get => _explicitNullValueGn; set { _explicitNullValueGn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gn"); else _explicitNullProperties?.Remove("gn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Gn { get => _explicitNullValueGn; set { _explicitNullValueGn = value; AdditionalData?.Remove("gn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gn"); else _explicitNullProperties?.Remove("gn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueGn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Gn { get => _explicitNullValueGn; set { _explicitNullValueGn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gn"); else _explicitNullProperties?.Remove("gn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Gn { get => _explicitNullValueGn; set { _explicitNullValueGn = value; AdditionalData?.Remove("gn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gn"); else _explicitNullProperties?.Remove("gn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueGn = default!;
 #endif
         /// <summary>The gr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Gr { get => _explicitNullValueGr; set { _explicitNullValueGr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gr"); else _explicitNullProperties?.Remove("gr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Gr { get => _explicitNullValueGr; set { _explicitNullValueGr = value; AdditionalData?.Remove("gr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gr"); else _explicitNullProperties?.Remove("gr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueGr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Gr { get => _explicitNullValueGr; set { _explicitNullValueGr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gr"); else _explicitNullProperties?.Remove("gr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Gr { get => _explicitNullValueGr; set { _explicitNullValueGr = value; AdditionalData?.Remove("gr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gr"); else _explicitNullProperties?.Remove("gr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueGr = default!;
 #endif
         /// <summary>The hr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Hr { get => _explicitNullValueHr; set { _explicitNullValueHr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hr"); else _explicitNullProperties?.Remove("hr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Hr { get => _explicitNullValueHr; set { _explicitNullValueHr = value; AdditionalData?.Remove("hr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hr"); else _explicitNullProperties?.Remove("hr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueHr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Hr { get => _explicitNullValueHr; set { _explicitNullValueHr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hr"); else _explicitNullProperties?.Remove("hr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Hr { get => _explicitNullValueHr; set { _explicitNullValueHr = value; AdditionalData?.Remove("hr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hr"); else _explicitNullProperties?.Remove("hr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueHr = default!;
 #endif
         /// <summary>The hu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Hu { get => _explicitNullValueHu; set { _explicitNullValueHu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hu"); else _explicitNullProperties?.Remove("hu"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Hu { get => _explicitNullValueHu; set { _explicitNullValueHu = value; AdditionalData?.Remove("hu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hu"); else _explicitNullProperties?.Remove("hu"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueHu = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Hu { get => _explicitNullValueHu; set { _explicitNullValueHu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hu"); else _explicitNullProperties?.Remove("hu"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Hu { get => _explicitNullValueHu; set { _explicitNullValueHu = value; AdditionalData?.Remove("hu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hu"); else _explicitNullProperties?.Remove("hu"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueHu = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueId = default!;
 #endif
         /// <summary>The ie property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ie { get => _explicitNullValueIe; set { _explicitNullValueIe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ie"); else _explicitNullProperties?.Remove("ie"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ie { get => _explicitNullValueIe; set { _explicitNullValueIe = value; AdditionalData?.Remove("ie"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ie"); else _explicitNullProperties?.Remove("ie"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueIe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ie { get => _explicitNullValueIe; set { _explicitNullValueIe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ie"); else _explicitNullProperties?.Remove("ie"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ie { get => _explicitNullValueIe; set { _explicitNullValueIe = value; AdditionalData?.Remove("ie"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ie"); else _explicitNullProperties?.Remove("ie"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueIe = default!;
 #endif
         /// <summary>The in property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; AdditionalData?.Remove("in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueIn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; AdditionalData?.Remove("in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueIn = default!;
 #endif
         /// <summary>The is property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Is { get => _explicitNullValueIs; set { _explicitNullValueIs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is"); else _explicitNullProperties?.Remove("is"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Is { get => _explicitNullValueIs; set { _explicitNullValueIs = value; AdditionalData?.Remove("is"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is"); else _explicitNullProperties?.Remove("is"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueIs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Is { get => _explicitNullValueIs; set { _explicitNullValueIs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is"); else _explicitNullProperties?.Remove("is"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Is { get => _explicitNullValueIs; set { _explicitNullValueIs = value; AdditionalData?.Remove("is"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is"); else _explicitNullProperties?.Remove("is"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueIs = default!;
 #endif
         /// <summary>The it property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? It { get => _explicitNullValueIt; set { _explicitNullValueIt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("it"); else _explicitNullProperties?.Remove("it"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? It { get => _explicitNullValueIt; set { _explicitNullValueIt = value; AdditionalData?.Remove("it"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("it"); else _explicitNullProperties?.Remove("it"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueIt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope It { get => _explicitNullValueIt; set { _explicitNullValueIt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("it"); else _explicitNullProperties?.Remove("it"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope It { get => _explicitNullValueIt; set { _explicitNullValueIt = value; AdditionalData?.Remove("it"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("it"); else _explicitNullProperties?.Remove("it"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueIt = default!;
 #endif
         /// <summary>The jp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Jp { get => _explicitNullValueJp; set { _explicitNullValueJp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp"); else _explicitNullProperties?.Remove("jp"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Jp { get => _explicitNullValueJp; set { _explicitNullValueJp = value; AdditionalData?.Remove("jp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp"); else _explicitNullProperties?.Remove("jp"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueJp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Jp { get => _explicitNullValueJp; set { _explicitNullValueJp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp"); else _explicitNullProperties?.Remove("jp"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Jp { get => _explicitNullValueJp; set { _explicitNullValueJp = value; AdditionalData?.Remove("jp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jp"); else _explicitNullProperties?.Remove("jp"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueJp = default!;
 #endif
         /// <summary>The ke property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ke { get => _explicitNullValueKe; set { _explicitNullValueKe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ke"); else _explicitNullProperties?.Remove("ke"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ke { get => _explicitNullValueKe; set { _explicitNullValueKe = value; AdditionalData?.Remove("ke"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ke"); else _explicitNullProperties?.Remove("ke"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueKe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ke { get => _explicitNullValueKe; set { _explicitNullValueKe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ke"); else _explicitNullProperties?.Remove("ke"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ke { get => _explicitNullValueKe; set { _explicitNullValueKe = value; AdditionalData?.Remove("ke"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ke"); else _explicitNullProperties?.Remove("ke"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueKe = default!;
 #endif
         /// <summary>The kg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kg { get => _explicitNullValueKg; set { _explicitNullValueKg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kg"); else _explicitNullProperties?.Remove("kg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kg { get => _explicitNullValueKg; set { _explicitNullValueKg = value; AdditionalData?.Remove("kg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kg"); else _explicitNullProperties?.Remove("kg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueKg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kg { get => _explicitNullValueKg; set { _explicitNullValueKg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kg"); else _explicitNullProperties?.Remove("kg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kg { get => _explicitNullValueKg; set { _explicitNullValueKg = value; AdditionalData?.Remove("kg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kg"); else _explicitNullProperties?.Remove("kg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueKg = default!;
 #endif
         /// <summary>The kh property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kh { get => _explicitNullValueKh; set { _explicitNullValueKh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kh"); else _explicitNullProperties?.Remove("kh"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kh { get => _explicitNullValueKh; set { _explicitNullValueKh = value; AdditionalData?.Remove("kh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kh"); else _explicitNullProperties?.Remove("kh"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueKh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kh { get => _explicitNullValueKh; set { _explicitNullValueKh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kh"); else _explicitNullProperties?.Remove("kh"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kh { get => _explicitNullValueKh; set { _explicitNullValueKh = value; AdditionalData?.Remove("kh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kh"); else _explicitNullProperties?.Remove("kh"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueKh = default!;
 #endif
         /// <summary>The kr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kr { get => _explicitNullValueKr; set { _explicitNullValueKr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr"); else _explicitNullProperties?.Remove("kr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kr { get => _explicitNullValueKr; set { _explicitNullValueKr = value; AdditionalData?.Remove("kr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr"); else _explicitNullProperties?.Remove("kr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueKr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kr { get => _explicitNullValueKr; set { _explicitNullValueKr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr"); else _explicitNullProperties?.Remove("kr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kr { get => _explicitNullValueKr; set { _explicitNullValueKr = value; AdditionalData?.Remove("kr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kr"); else _explicitNullProperties?.Remove("kr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueKr = default!;
 #endif
         /// <summary>The kz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kz { get => _explicitNullValueKz; set { _explicitNullValueKz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kz"); else _explicitNullProperties?.Remove("kz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Kz { get => _explicitNullValueKz; set { _explicitNullValueKz = value; AdditionalData?.Remove("kz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kz"); else _explicitNullProperties?.Remove("kz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueKz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kz { get => _explicitNullValueKz; set { _explicitNullValueKz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kz"); else _explicitNullProperties?.Remove("kz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Kz { get => _explicitNullValueKz; set { _explicitNullValueKz = value; AdditionalData?.Remove("kz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kz"); else _explicitNullProperties?.Remove("kz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueKz = default!;
 #endif
         /// <summary>The la property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? La { get => _explicitNullValueLa; set { _explicitNullValueLa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("la"); else _explicitNullProperties?.Remove("la"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? La { get => _explicitNullValueLa; set { _explicitNullValueLa = value; AdditionalData?.Remove("la"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("la"); else _explicitNullProperties?.Remove("la"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueLa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified La { get => _explicitNullValueLa; set { _explicitNullValueLa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("la"); else _explicitNullProperties?.Remove("la"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified La { get => _explicitNullValueLa; set { _explicitNullValueLa = value; AdditionalData?.Remove("la"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("la"); else _explicitNullProperties?.Remove("la"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueLa = default!;
 #endif
         /// <summary>The lk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Lk { get => _explicitNullValueLk; set { _explicitNullValueLk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lk"); else _explicitNullProperties?.Remove("lk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Lk { get => _explicitNullValueLk; set { _explicitNullValueLk = value; AdditionalData?.Remove("lk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lk"); else _explicitNullProperties?.Remove("lk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueLk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Lk { get => _explicitNullValueLk; set { _explicitNullValueLk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lk"); else _explicitNullProperties?.Remove("lk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Lk { get => _explicitNullValueLk; set { _explicitNullValueLk = value; AdditionalData?.Remove("lk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lk"); else _explicitNullProperties?.Remove("lk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueLk = default!;
 #endif
         /// <summary>The lt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lt { get => _explicitNullValueLt; set { _explicitNullValueLt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lt"); else _explicitNullProperties?.Remove("lt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lt { get => _explicitNullValueLt; set { _explicitNullValueLt = value; AdditionalData?.Remove("lt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lt"); else _explicitNullProperties?.Remove("lt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueLt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lt { get => _explicitNullValueLt; set { _explicitNullValueLt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lt"); else _explicitNullProperties?.Remove("lt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lt { get => _explicitNullValueLt; set { _explicitNullValueLt = value; AdditionalData?.Remove("lt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lt"); else _explicitNullProperties?.Remove("lt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueLt = default!;
 #endif
         /// <summary>The lu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lu { get => _explicitNullValueLu; set { _explicitNullValueLu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lu"); else _explicitNullProperties?.Remove("lu"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lu { get => _explicitNullValueLu; set { _explicitNullValueLu = value; AdditionalData?.Remove("lu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lu"); else _explicitNullProperties?.Remove("lu"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueLu = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lu { get => _explicitNullValueLu; set { _explicitNullValueLu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lu"); else _explicitNullProperties?.Remove("lu"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lu { get => _explicitNullValueLu; set { _explicitNullValueLu = value; AdditionalData?.Remove("lu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lu"); else _explicitNullProperties?.Remove("lu"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueLu = default!;
 #endif
         /// <summary>The lv property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lv { get => _explicitNullValueLv; set { _explicitNullValueLv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lv"); else _explicitNullProperties?.Remove("lv"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Lv { get => _explicitNullValueLv; set { _explicitNullValueLv = value; AdditionalData?.Remove("lv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lv"); else _explicitNullProperties?.Remove("lv"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueLv = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lv { get => _explicitNullValueLv; set { _explicitNullValueLv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lv"); else _explicitNullProperties?.Remove("lv"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Lv { get => _explicitNullValueLv; set { _explicitNullValueLv = value; AdditionalData?.Remove("lv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lv"); else _explicitNullProperties?.Remove("lv"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueLv = default!;
 #endif
         /// <summary>The ma property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ma { get => _explicitNullValueMa; set { _explicitNullValueMa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ma"); else _explicitNullProperties?.Remove("ma"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ma { get => _explicitNullValueMa; set { _explicitNullValueMa = value; AdditionalData?.Remove("ma"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ma"); else _explicitNullProperties?.Remove("ma"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueMa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ma { get => _explicitNullValueMa; set { _explicitNullValueMa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ma"); else _explicitNullProperties?.Remove("ma"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ma { get => _explicitNullValueMa; set { _explicitNullValueMa = value; AdditionalData?.Remove("ma"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ma"); else _explicitNullProperties?.Remove("ma"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueMa = default!;
 #endif
         /// <summary>The md property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Md { get => _explicitNullValueMd; set { _explicitNullValueMd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md"); else _explicitNullProperties?.Remove("md"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Md { get => _explicitNullValueMd; set { _explicitNullValueMd = value; AdditionalData?.Remove("md"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md"); else _explicitNullProperties?.Remove("md"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueMd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Md { get => _explicitNullValueMd; set { _explicitNullValueMd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md"); else _explicitNullProperties?.Remove("md"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Md { get => _explicitNullValueMd; set { _explicitNullValueMd = value; AdditionalData?.Remove("md"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md"); else _explicitNullProperties?.Remove("md"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueMd = default!;
 #endif
         /// <summary>The me property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Me { get => _explicitNullValueMe; set { _explicitNullValueMe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me"); else _explicitNullProperties?.Remove("me"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Me { get => _explicitNullValueMe; set { _explicitNullValueMe = value; AdditionalData?.Remove("me"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me"); else _explicitNullProperties?.Remove("me"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueMe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Me { get => _explicitNullValueMe; set { _explicitNullValueMe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me"); else _explicitNullProperties?.Remove("me"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Me { get => _explicitNullValueMe; set { _explicitNullValueMe = value; AdditionalData?.Remove("me"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("me"); else _explicitNullProperties?.Remove("me"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueMe = default!;
 #endif
         /// <summary>The mk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Mk { get => _explicitNullValueMk; set { _explicitNullValueMk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mk"); else _explicitNullProperties?.Remove("mk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Mk { get => _explicitNullValueMk; set { _explicitNullValueMk = value; AdditionalData?.Remove("mk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mk"); else _explicitNullProperties?.Remove("mk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueMk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Mk { get => _explicitNullValueMk; set { _explicitNullValueMk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mk"); else _explicitNullProperties?.Remove("mk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Mk { get => _explicitNullValueMk; set { _explicitNullValueMk = value; AdditionalData?.Remove("mk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mk"); else _explicitNullProperties?.Remove("mk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueMk = default!;
 #endif
         /// <summary>The mr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Mr { get => _explicitNullValueMr; set { _explicitNullValueMr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr"); else _explicitNullProperties?.Remove("mr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Mr { get => _explicitNullValueMr; set { _explicitNullValueMr = value; AdditionalData?.Remove("mr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr"); else _explicitNullProperties?.Remove("mr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueMr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Mr { get => _explicitNullValueMr; set { _explicitNullValueMr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr"); else _explicitNullProperties?.Remove("mr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Mr { get => _explicitNullValueMr; set { _explicitNullValueMr = value; AdditionalData?.Remove("mr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr"); else _explicitNullProperties?.Remove("mr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueMr = default!;
 #endif
         /// <summary>The mt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Mt { get => _explicitNullValueMt; set { _explicitNullValueMt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mt"); else _explicitNullProperties?.Remove("mt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Mt { get => _explicitNullValueMt; set { _explicitNullValueMt = value; AdditionalData?.Remove("mt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mt"); else _explicitNullProperties?.Remove("mt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueMt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Mt { get => _explicitNullValueMt; set { _explicitNullValueMt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mt"); else _explicitNullProperties?.Remove("mt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Mt { get => _explicitNullValueMt; set { _explicitNullValueMt = value; AdditionalData?.Remove("mt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mt"); else _explicitNullProperties?.Remove("mt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueMt = default!;
 #endif
         /// <summary>The mx property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Mx { get => _explicitNullValueMx; set { _explicitNullValueMx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mx"); else _explicitNullProperties?.Remove("mx"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Mx { get => _explicitNullValueMx; set { _explicitNullValueMx = value; AdditionalData?.Remove("mx"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mx"); else _explicitNullProperties?.Remove("mx"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueMx = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Mx { get => _explicitNullValueMx; set { _explicitNullValueMx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mx"); else _explicitNullProperties?.Remove("mx"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Mx { get => _explicitNullValueMx; set { _explicitNullValueMx = value; AdditionalData?.Remove("mx"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mx"); else _explicitNullProperties?.Remove("mx"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueMx = default!;
 #endif
         /// <summary>The my property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? My { get => _explicitNullValueMy; set { _explicitNullValueMy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my"); else _explicitNullProperties?.Remove("my"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? My { get => _explicitNullValueMy; set { _explicitNullValueMy = value; AdditionalData?.Remove("my"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my"); else _explicitNullProperties?.Remove("my"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueMy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified My { get => _explicitNullValueMy; set { _explicitNullValueMy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my"); else _explicitNullProperties?.Remove("my"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified My { get => _explicitNullValueMy; set { _explicitNullValueMy = value; AdditionalData?.Remove("my"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my"); else _explicitNullProperties?.Remove("my"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueMy = default!;
 #endif
         /// <summary>The ng property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ng { get => _explicitNullValueNg; set { _explicitNullValueNg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ng"); else _explicitNullProperties?.Remove("ng"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ng { get => _explicitNullValueNg; set { _explicitNullValueNg = value; AdditionalData?.Remove("ng"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ng"); else _explicitNullProperties?.Remove("ng"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueNg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ng { get => _explicitNullValueNg; set { _explicitNullValueNg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ng"); else _explicitNullProperties?.Remove("ng"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ng { get => _explicitNullValueNg; set { _explicitNullValueNg = value; AdditionalData?.Remove("ng"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ng"); else _explicitNullProperties?.Remove("ng"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueNg = default!;
 #endif
         /// <summary>The nl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Nl { get => _explicitNullValueNl; set { _explicitNullValueNl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nl"); else _explicitNullProperties?.Remove("nl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Nl { get => _explicitNullValueNl; set { _explicitNullValueNl = value; AdditionalData?.Remove("nl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nl"); else _explicitNullProperties?.Remove("nl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueNl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Nl { get => _explicitNullValueNl; set { _explicitNullValueNl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nl"); else _explicitNullProperties?.Remove("nl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Nl { get => _explicitNullValueNl; set { _explicitNullValueNl = value; AdditionalData?.Remove("nl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nl"); else _explicitNullProperties?.Remove("nl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueNl = default!;
 #endif
         /// <summary>The no property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? No { get => _explicitNullValueNo; set { _explicitNullValueNo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no"); else _explicitNullProperties?.Remove("no"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? No { get => _explicitNullValueNo; set { _explicitNullValueNo = value; AdditionalData?.Remove("no"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no"); else _explicitNullProperties?.Remove("no"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueNo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods No { get => _explicitNullValueNo; set { _explicitNullValueNo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no"); else _explicitNullProperties?.Remove("no"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods No { get => _explicitNullValueNo; set { _explicitNullValueNo = value; AdditionalData?.Remove("no"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("no"); else _explicitNullProperties?.Remove("no"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueNo = default!;
 #endif
         /// <summary>The np property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Np { get => _explicitNullValueNp; set { _explicitNullValueNp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("np"); else _explicitNullProperties?.Remove("np"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Np { get => _explicitNullValueNp; set { _explicitNullValueNp = value; AdditionalData?.Remove("np"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("np"); else _explicitNullProperties?.Remove("np"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueNp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Np { get => _explicitNullValueNp; set { _explicitNullValueNp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("np"); else _explicitNullProperties?.Remove("np"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Np { get => _explicitNullValueNp; set { _explicitNullValueNp = value; AdditionalData?.Remove("np"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("np"); else _explicitNullProperties?.Remove("np"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueNp = default!;
 #endif
         /// <summary>The nz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Nz { get => _explicitNullValueNz; set { _explicitNullValueNz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz"); else _explicitNullProperties?.Remove("nz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Nz { get => _explicitNullValueNz; set { _explicitNullValueNz = value; AdditionalData?.Remove("nz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz"); else _explicitNullProperties?.Remove("nz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueNz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Nz { get => _explicitNullValueNz; set { _explicitNullValueNz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz"); else _explicitNullProperties?.Remove("nz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Nz { get => _explicitNullValueNz; set { _explicitNullValueNz = value; AdditionalData?.Remove("nz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nz"); else _explicitNullProperties?.Remove("nz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueNz = default!;
 #endif
         /// <summary>The om property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Om { get => _explicitNullValueOm; set { _explicitNullValueOm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("om"); else _explicitNullProperties?.Remove("om"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Om { get => _explicitNullValueOm; set { _explicitNullValueOm = value; AdditionalData?.Remove("om"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("om"); else _explicitNullProperties?.Remove("om"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueOm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Om { get => _explicitNullValueOm; set { _explicitNullValueOm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("om"); else _explicitNullProperties?.Remove("om"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Om { get => _explicitNullValueOm; set { _explicitNullValueOm = value; AdditionalData?.Remove("om"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("om"); else _explicitNullProperties?.Remove("om"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueOm = default!;
 #endif
         /// <summary>The pe property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Pe { get => _explicitNullValuePe; set { _explicitNullValuePe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pe"); else _explicitNullProperties?.Remove("pe"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Pe { get => _explicitNullValuePe; set { _explicitNullValuePe = value; AdditionalData?.Remove("pe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pe"); else _explicitNullProperties?.Remove("pe"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValuePe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Pe { get => _explicitNullValuePe; set { _explicitNullValuePe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pe"); else _explicitNullProperties?.Remove("pe"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Pe { get => _explicitNullValuePe; set { _explicitNullValuePe = value; AdditionalData?.Remove("pe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pe"); else _explicitNullProperties?.Remove("pe"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValuePe = default!;
 #endif
         /// <summary>The ph property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ph { get => _explicitNullValuePh; set { _explicitNullValuePh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ph"); else _explicitNullProperties?.Remove("ph"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ph { get => _explicitNullValuePh; set { _explicitNullValuePh = value; AdditionalData?.Remove("ph"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ph"); else _explicitNullProperties?.Remove("ph"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValuePh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ph { get => _explicitNullValuePh; set { _explicitNullValuePh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ph"); else _explicitNullProperties?.Remove("ph"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ph { get => _explicitNullValuePh; set { _explicitNullValuePh = value; AdditionalData?.Remove("ph"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ph"); else _explicitNullProperties?.Remove("ph"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValuePh = default!;
 #endif
         /// <summary>The pl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Pl { get => _explicitNullValuePl; set { _explicitNullValuePl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pl"); else _explicitNullProperties?.Remove("pl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Pl { get => _explicitNullValuePl; set { _explicitNullValuePl = value; AdditionalData?.Remove("pl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pl"); else _explicitNullProperties?.Remove("pl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValuePl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Pl { get => _explicitNullValuePl; set { _explicitNullValuePl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pl"); else _explicitNullProperties?.Remove("pl"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Pl { get => _explicitNullValuePl; set { _explicitNullValuePl = value; AdditionalData?.Remove("pl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pl"); else _explicitNullProperties?.Remove("pl"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValuePl = default!;
 #endif
         /// <summary>The pt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Pt { get => _explicitNullValuePt; set { _explicitNullValuePt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pt"); else _explicitNullProperties?.Remove("pt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Pt { get => _explicitNullValuePt; set { _explicitNullValuePt = value; AdditionalData?.Remove("pt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pt"); else _explicitNullProperties?.Remove("pt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValuePt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Pt { get => _explicitNullValuePt; set { _explicitNullValuePt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pt"); else _explicitNullProperties?.Remove("pt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Pt { get => _explicitNullValuePt; set { _explicitNullValuePt = value; AdditionalData?.Remove("pt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pt"); else _explicitNullProperties?.Remove("pt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValuePt = default!;
 #endif
         /// <summary>The ro property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ro { get => _explicitNullValueRo; set { _explicitNullValueRo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ro"); else _explicitNullProperties?.Remove("ro"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Ro { get => _explicitNullValueRo; set { _explicitNullValueRo = value; AdditionalData?.Remove("ro"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ro"); else _explicitNullProperties?.Remove("ro"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueRo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ro { get => _explicitNullValueRo; set { _explicitNullValueRo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ro"); else _explicitNullProperties?.Remove("ro"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Ro { get => _explicitNullValueRo; set { _explicitNullValueRo = value; AdditionalData?.Remove("ro"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ro"); else _explicitNullProperties?.Remove("ro"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueRo = default!;
 #endif
         /// <summary>The rs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Rs { get => _explicitNullValueRs; set { _explicitNullValueRs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rs"); else _explicitNullProperties?.Remove("rs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Rs { get => _explicitNullValueRs; set { _explicitNullValueRs = value; AdditionalData?.Remove("rs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rs"); else _explicitNullProperties?.Remove("rs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueRs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Rs { get => _explicitNullValueRs; set { _explicitNullValueRs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rs"); else _explicitNullProperties?.Remove("rs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Rs { get => _explicitNullValueRs; set { _explicitNullValueRs = value; AdditionalData?.Remove("rs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rs"); else _explicitNullProperties?.Remove("rs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueRs = default!;
 #endif
         /// <summary>The ru property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ru { get => _explicitNullValueRu; set { _explicitNullValueRu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ru"); else _explicitNullProperties?.Remove("ru"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ru { get => _explicitNullValueRu; set { _explicitNullValueRu = value; AdditionalData?.Remove("ru"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ru"); else _explicitNullProperties?.Remove("ru"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueRu = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ru { get => _explicitNullValueRu; set { _explicitNullValueRu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ru"); else _explicitNullProperties?.Remove("ru"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ru { get => _explicitNullValueRu; set { _explicitNullValueRu = value; AdditionalData?.Remove("ru"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ru"); else _explicitNullProperties?.Remove("ru"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueRu = default!;
 #endif
         /// <summary>The sa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Sa { get => _explicitNullValueSa; set { _explicitNullValueSa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sa"); else _explicitNullProperties?.Remove("sa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Sa { get => _explicitNullValueSa; set { _explicitNullValueSa = value; AdditionalData?.Remove("sa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sa"); else _explicitNullProperties?.Remove("sa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueSa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Sa { get => _explicitNullValueSa; set { _explicitNullValueSa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sa"); else _explicitNullProperties?.Remove("sa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Sa { get => _explicitNullValueSa; set { _explicitNullValueSa = value; AdditionalData?.Remove("sa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sa"); else _explicitNullProperties?.Remove("sa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueSa = default!;
 #endif
         /// <summary>The se property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Se { get => _explicitNullValueSe; set { _explicitNullValueSe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("se"); else _explicitNullProperties?.Remove("se"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Se { get => _explicitNullValueSe; set { _explicitNullValueSe = value; AdditionalData?.Remove("se"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("se"); else _explicitNullProperties?.Remove("se"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueSe = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Se { get => _explicitNullValueSe; set { _explicitNullValueSe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("se"); else _explicitNullProperties?.Remove("se"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Se { get => _explicitNullValueSe; set { _explicitNullValueSe = value; AdditionalData?.Remove("se"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("se"); else _explicitNullProperties?.Remove("se"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueSe = default!;
 #endif
         /// <summary>The sg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Sg { get => _explicitNullValueSg; set { _explicitNullValueSg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sg"); else _explicitNullProperties?.Remove("sg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? Sg { get => _explicitNullValueSg; set { _explicitNullValueSg = value; AdditionalData?.Remove("sg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sg"); else _explicitNullProperties?.Remove("sg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods? _explicitNullValueSg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Sg { get => _explicitNullValueSg; set { _explicitNullValueSg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sg"); else _explicitNullProperties?.Remove("sg"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods Sg { get => _explicitNullValueSg; set { _explicitNullValueSg = value; AdditionalData?.Remove("sg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sg"); else _explicitNullProperties?.Remove("sg"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefaultInboundGoods _explicitNullValueSg = default!;
 #endif
         /// <summary>The si property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Si { get => _explicitNullValueSi; set { _explicitNullValueSi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("si"); else _explicitNullProperties?.Remove("si"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Si { get => _explicitNullValueSi; set { _explicitNullValueSi = value; AdditionalData?.Remove("si"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("si"); else _explicitNullProperties?.Remove("si"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueSi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Si { get => _explicitNullValueSi; set { _explicitNullValueSi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("si"); else _explicitNullProperties?.Remove("si"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Si { get => _explicitNullValueSi; set { _explicitNullValueSi = value; AdditionalData?.Remove("si"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("si"); else _explicitNullProperties?.Remove("si"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueSi = default!;
 #endif
         /// <summary>The sk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Sk { get => _explicitNullValueSk; set { _explicitNullValueSk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sk"); else _explicitNullProperties?.Remove("sk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? Sk { get => _explicitNullValueSk; set { _explicitNullValueSk = value; AdditionalData?.Remove("sk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sk"); else _explicitNullProperties?.Remove("sk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope? _explicitNullValueSk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Sk { get => _explicitNullValueSk; set { _explicitNullValueSk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sk"); else _explicitNullProperties?.Remove("sk"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope Sk { get => _explicitNullValueSk; set { _explicitNullValueSk = value; AdditionalData?.Remove("sk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sk"); else _explicitNullProperties?.Remove("sk"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope _explicitNullValueSk = default!;
 #endif
         /// <summary>The sn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Sn { get => _explicitNullValueSn; set { _explicitNullValueSn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sn"); else _explicitNullProperties?.Remove("sn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Sn { get => _explicitNullValueSn; set { _explicitNullValueSn = value; AdditionalData?.Remove("sn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sn"); else _explicitNullProperties?.Remove("sn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueSn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Sn { get => _explicitNullValueSn; set { _explicitNullValueSn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sn"); else _explicitNullProperties?.Remove("sn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Sn { get => _explicitNullValueSn; set { _explicitNullValueSn = value; AdditionalData?.Remove("sn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sn"); else _explicitNullProperties?.Remove("sn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueSn = default!;
 #endif
         /// <summary>The sr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Sr { get => _explicitNullValueSr; set { _explicitNullValueSr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sr"); else _explicitNullProperties?.Remove("sr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Sr { get => _explicitNullValueSr; set { _explicitNullValueSr = value; AdditionalData?.Remove("sr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sr"); else _explicitNullProperties?.Remove("sr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueSr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Sr { get => _explicitNullValueSr; set { _explicitNullValueSr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sr"); else _explicitNullProperties?.Remove("sr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Sr { get => _explicitNullValueSr; set { _explicitNullValueSr = value; AdditionalData?.Remove("sr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sr"); else _explicitNullProperties?.Remove("sr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueSr = default!;
 #endif
         /// <summary>The th property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand? Th { get => _explicitNullValueTh; set { _explicitNullValueTh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("th"); else _explicitNullProperties?.Remove("th"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand? Th { get => _explicitNullValueTh; set { _explicitNullValueTh = value; AdditionalData?.Remove("th"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("th"); else _explicitNullProperties?.Remove("th"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand? _explicitNullValueTh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand Th { get => _explicitNullValueTh; set { _explicitNullValueTh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("th"); else _explicitNullProperties?.Remove("th"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand Th { get => _explicitNullValueTh; set { _explicitNullValueTh = value; AdditionalData?.Remove("th"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("th"); else _explicitNullProperties?.Remove("th"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand _explicitNullValueTh = default!;
 #endif
         /// <summary>The tj property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tj { get => _explicitNullValueTj; set { _explicitNullValueTj = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tj"); else _explicitNullProperties?.Remove("tj"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tj { get => _explicitNullValueTj; set { _explicitNullValueTj = value; AdditionalData?.Remove("tj"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tj"); else _explicitNullProperties?.Remove("tj"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueTj = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tj { get => _explicitNullValueTj; set { _explicitNullValueTj = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tj"); else _explicitNullProperties?.Remove("tj"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tj { get => _explicitNullValueTj; set { _explicitNullValueTj = value; AdditionalData?.Remove("tj"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tj"); else _explicitNullProperties?.Remove("tj"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueTj = default!;
 #endif
         /// <summary>The tr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tr { get => _explicitNullValueTr; set { _explicitNullValueTr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tr"); else _explicitNullProperties?.Remove("tr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tr { get => _explicitNullValueTr; set { _explicitNullValueTr = value; AdditionalData?.Remove("tr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tr"); else _explicitNullProperties?.Remove("tr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueTr = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tr { get => _explicitNullValueTr; set { _explicitNullValueTr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tr"); else _explicitNullProperties?.Remove("tr"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tr { get => _explicitNullValueTr; set { _explicitNullValueTr = value; AdditionalData?.Remove("tr"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tr"); else _explicitNullProperties?.Remove("tr"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueTr = default!;
 #endif
         /// <summary>The tw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tw { get => _explicitNullValueTw; set { _explicitNullValueTw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tw"); else _explicitNullProperties?.Remove("tw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tw { get => _explicitNullValueTw; set { _explicitNullValueTw = value; AdditionalData?.Remove("tw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tw"); else _explicitNullProperties?.Remove("tw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueTw = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tw { get => _explicitNullValueTw; set { _explicitNullValueTw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tw"); else _explicitNullProperties?.Remove("tw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tw { get => _explicitNullValueTw; set { _explicitNullValueTw = value; AdditionalData?.Remove("tw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tw"); else _explicitNullProperties?.Remove("tw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueTw = default!;
 #endif
         /// <summary>The tz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tz { get => _explicitNullValueTz; set { _explicitNullValueTz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tz"); else _explicitNullProperties?.Remove("tz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Tz { get => _explicitNullValueTz; set { _explicitNullValueTz = value; AdditionalData?.Remove("tz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tz"); else _explicitNullProperties?.Remove("tz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueTz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tz { get => _explicitNullValueTz; set { _explicitNullValueTz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tz"); else _explicitNullProperties?.Remove("tz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Tz { get => _explicitNullValueTz; set { _explicitNullValueTz = value; AdditionalData?.Remove("tz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tz"); else _explicitNullProperties?.Remove("tz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueTz = default!;
 #endif
         /// <summary>The ua property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ua { get => _explicitNullValueUa; set { _explicitNullValueUa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ua"); else _explicitNullProperties?.Remove("ua"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ua { get => _explicitNullValueUa; set { _explicitNullValueUa = value; AdditionalData?.Remove("ua"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ua"); else _explicitNullProperties?.Remove("ua"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueUa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ua { get => _explicitNullValueUa; set { _explicitNullValueUa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ua"); else _explicitNullProperties?.Remove("ua"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ua { get => _explicitNullValueUa; set { _explicitNullValueUa = value; AdditionalData?.Remove("ua"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ua"); else _explicitNullProperties?.Remove("ua"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueUa = default!;
 #endif
         /// <summary>The ug property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ug { get => _explicitNullValueUg; set { _explicitNullValueUg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ug"); else _explicitNullProperties?.Remove("ug"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Ug { get => _explicitNullValueUg; set { _explicitNullValueUg = value; AdditionalData?.Remove("ug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ug"); else _explicitNullProperties?.Remove("ug"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueUg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ug { get => _explicitNullValueUg; set { _explicitNullValueUg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ug"); else _explicitNullProperties?.Remove("ug"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Ug { get => _explicitNullValueUg; set { _explicitNullValueUg = value; AdditionalData?.Remove("ug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ug"); else _explicitNullProperties?.Remove("ug"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueUg = default!;
 #endif
         /// <summary>The us property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates? Us { get => _explicitNullValueUs; set { _explicitNullValueUs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us"); else _explicitNullProperties?.Remove("us"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates? Us { get => _explicitNullValueUs; set { _explicitNullValueUs = value; AdditionalData?.Remove("us"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us"); else _explicitNullProperties?.Remove("us"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates? _explicitNullValueUs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates Us { get => _explicitNullValueUs; set { _explicitNullValueUs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us"); else _explicitNullProperties?.Remove("us"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates Us { get => _explicitNullValueUs; set { _explicitNullValueUs = value; AdditionalData?.Remove("us"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us"); else _explicitNullProperties?.Remove("us"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates _explicitNullValueUs = default!;
 #endif
         /// <summary>The uy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Uy { get => _explicitNullValueUy; set { _explicitNullValueUy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uy"); else _explicitNullProperties?.Remove("uy"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Uy { get => _explicitNullValueUy; set { _explicitNullValueUy = value; AdditionalData?.Remove("uy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uy"); else _explicitNullProperties?.Remove("uy"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueUy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Uy { get => _explicitNullValueUy; set { _explicitNullValueUy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uy"); else _explicitNullProperties?.Remove("uy"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Uy { get => _explicitNullValueUy; set { _explicitNullValueUy = value; AdditionalData?.Remove("uy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uy"); else _explicitNullProperties?.Remove("uy"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueUy = default!;
 #endif
         /// <summary>The uz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Uz { get => _explicitNullValueUz; set { _explicitNullValueUz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uz"); else _explicitNullProperties?.Remove("uz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Uz { get => _explicitNullValueUz; set { _explicitNullValueUz = value; AdditionalData?.Remove("uz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uz"); else _explicitNullProperties?.Remove("uz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueUz = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Uz { get => _explicitNullValueUz; set { _explicitNullValueUz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uz"); else _explicitNullProperties?.Remove("uz"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Uz { get => _explicitNullValueUz; set { _explicitNullValueUz = value; AdditionalData?.Remove("uz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uz"); else _explicitNullProperties?.Remove("uz"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueUz = default!;
 #endif
         /// <summary>The vn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Vn { get => _explicitNullValueVn; set { _explicitNullValueVn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vn"); else _explicitNullProperties?.Remove("vn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Vn { get => _explicitNullValueVn; set { _explicitNullValueVn = value; AdditionalData?.Remove("vn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vn"); else _explicitNullProperties?.Remove("vn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueVn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Vn { get => _explicitNullValueVn; set { _explicitNullValueVn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vn"); else _explicitNullProperties?.Remove("vn"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Vn { get => _explicitNullValueVn; set { _explicitNullValueVn = value; AdditionalData?.Remove("vn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vn"); else _explicitNullProperties?.Remove("vn"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueVn = default!;
 #endif
         /// <summary>The za property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Za { get => _explicitNullValueZa; set { _explicitNullValueZa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("za"); else _explicitNullProperties?.Remove("za"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Za { get => _explicitNullValueZa; set { _explicitNullValueZa = value; AdditionalData?.Remove("za"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("za"); else _explicitNullProperties?.Remove("za"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueZa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Za { get => _explicitNullValueZa; set { _explicitNullValueZa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("za"); else _explicitNullProperties?.Remove("za"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Za { get => _explicitNullValueZa; set { _explicitNullValueZa = value; AdditionalData?.Remove("za"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("za"); else _explicitNullProperties?.Remove("za"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueZa = default!;
 #endif
         /// <summary>The zm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Zm { get => _explicitNullValueZm; set { _explicitNullValueZm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zm"); else _explicitNullProperties?.Remove("zm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? Zm { get => _explicitNullValueZm; set { _explicitNullValueZm = value; AdditionalData?.Remove("zm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zm"); else _explicitNullProperties?.Remove("zm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified? _explicitNullValueZm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Zm { get => _explicitNullValueZm; set { _explicitNullValueZm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zm"); else _explicitNullProperties?.Remove("zm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified Zm { get => _explicitNullValueZm; set { _explicitNullValueZm = value; AdditionalData?.Remove("zm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zm"); else _explicitNullProperties?.Remove("zm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsSimplified _explicitNullValueZm = default!;
 #endif
         /// <summary>The zw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Zw { get => _explicitNullValueZw; set { _explicitNullValueZw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zw"); else _explicitNullProperties?.Remove("zw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? Zw { get => _explicitNullValueZw; set { _explicitNullValueZw = value; AdditionalData?.Remove("zw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zw"); else _explicitNullProperties?.Remove("zw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault? _explicitNullValueZw = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Zw { get => _explicitNullValueZw; set { _explicitNullValueZw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zw"); else _explicitNullProperties?.Remove("zw"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault Zw { get => _explicitNullValueZw; set { _explicitNullValueZw = value; AdditionalData?.Remove("zw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zw"); else _explicitNullProperties?.Remove("zw"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsDefault _explicitNullValueZw = default!;
 #endif
         /// <summary>

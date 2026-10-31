@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issuing_dispute") is { } nullNodeIssuingDispute && nullNodeIssuingDispute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingDispute = null;
+            if (parseNode.GetChildNode("issuing_dispute") is null) { _explicitNullValueIssuingDispute = default!; _explicitNullProperties?.Remove("issuing_dispute"); }
+            else if (parseNode.GetChildNode("issuing_dispute") is { } nullNodeIssuingDispute && nullNodeIssuingDispute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuingDispute = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set if there is an Issuing dispute associated with the DebitReversal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuingDispute { get => _explicitNullValueIssuingDispute; set { _explicitNullValueIssuingDispute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_dispute"); else _explicitNullProperties?.Remove("issuing_dispute"); } }
+        public string? IssuingDispute { get => _explicitNullValueIssuingDispute; set { _explicitNullValueIssuingDispute = value; AdditionalData?.Remove("issuing_dispute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_dispute"); else _explicitNullProperties?.Remove("issuing_dispute"); } }
         private string? _explicitNullValueIssuingDispute = default!;
 #nullable restore
 #else
-        public string IssuingDispute { get => _explicitNullValueIssuingDispute; set { _explicitNullValueIssuingDispute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_dispute"); else _explicitNullProperties?.Remove("issuing_dispute"); } }
+        public string IssuingDispute { get => _explicitNullValueIssuingDispute; set { _explicitNullValueIssuingDispute = value; AdditionalData?.Remove("issuing_dispute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuing_dispute"); else _explicitNullProperties?.Remove("issuing_dispute"); } }
         private string _explicitNullValueIssuingDispute = default!;
 #endif
         /// <summary>

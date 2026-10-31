@@ -17,31 +17,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("taxability_reason") is { } nullNodeTaxabilityReason && nullNodeTaxabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityReason = null;
-            if (parseNode.GetChildNode("taxable_amount") is { } nullNodeTaxableAmount && nullNodeTaxableAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxableAmount = null;
-            if (parseNode.GetChildNode("tax_rate_data") is { } nullNodeTaxRateData && nullNodeTaxRateData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRateData = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("taxability_reason") is null) { _explicitNullValueTaxabilityReason = default!; _explicitNullProperties?.Remove("taxability_reason"); }
+            else if (parseNode.GetChildNode("taxability_reason") is { } nullNodeTaxabilityReason && nullNodeTaxabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityReason = null;
+            if (parseNode.GetChildNode("taxable_amount") is null) { _explicitNullValueTaxableAmount = default!; _explicitNullProperties?.Remove("taxable_amount"); }
+            else if (parseNode.GetChildNode("taxable_amount") is { } nullNodeTaxableAmount && nullNodeTaxableAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxableAmount = null;
+            if (parseNode.GetChildNode("tax_rate_data") is null) { _explicitNullValueTaxRateData = default!; _explicitNullProperties?.Remove("tax_rate_data"); }
+            else if (parseNode.GetChildNode("tax_rate_data") is { } nullNodeTaxRateData && nullNodeTaxRateData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRateData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
-        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>The taxability_reason property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxabilityReason? TaxabilityReason { get => _explicitNullValueTaxabilityReason; set { _explicitNullValueTaxabilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_reason"); else _explicitNullProperties?.Remove("taxability_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxabilityReason? TaxabilityReason { get => _explicitNullValueTaxabilityReason; set { _explicitNullValueTaxabilityReason = value; AdditionalData?.Remove("taxability_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_reason"); else _explicitNullProperties?.Remove("taxability_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxabilityReason? _explicitNullValueTaxabilityReason = default!;
         /// <summary>The taxable_amount property</summary>
-        public int? TaxableAmount { get => _explicitNullValueTaxableAmount; set { _explicitNullValueTaxableAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxable_amount"); else _explicitNullProperties?.Remove("taxable_amount"); } }
+        public int? TaxableAmount { get => _explicitNullValueTaxableAmount; set { _explicitNullValueTaxableAmount = value; AdditionalData?.Remove("taxable_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxable_amount"); else _explicitNullProperties?.Remove("taxable_amount"); } }
         private int? _explicitNullValueTaxableAmount = default!;
         /// <summary>The tax_rate_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData? TaxRateData { get => _explicitNullValueTaxRateData; set { _explicitNullValueTaxRateData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_data"); else _explicitNullProperties?.Remove("tax_rate_data"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData? TaxRateData { get => _explicitNullValueTaxRateData; set { _explicitNullValueTaxRateData = value; AdditionalData?.Remove("tax_rate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_data"); else _explicitNullProperties?.Remove("tax_rate_data"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData? _explicitNullValueTaxRateData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData TaxRateData { get => _explicitNullValueTaxRateData; set { _explicitNullValueTaxRateData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_data"); else _explicitNullProperties?.Remove("tax_rate_data"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData TaxRateData { get => _explicitNullValueTaxRateData; set { _explicitNullValueTaxRateData = value; AdditionalData?.Remove("tax_rate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_data"); else _explicitNullProperties?.Remove("tax_rate_data"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData _explicitNullValueTaxRateData = default!;
 #endif
         /// <summary>
@@ -71,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "tax_rate_data", n => { TaxRateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxRateData.CreateFromDiscriminatorValue); } },
-                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxabilityReason>(); } },
+                { "taxability_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemTaxabilityReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxabilityReason = default; _explicitNullProperties?.Remove("taxability_reason"); AdditionalData["taxability_reason"] = unknown; } else { TaxabilityReason = parsed; AdditionalData.Remove("taxability_reason"); } } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
             };
         }

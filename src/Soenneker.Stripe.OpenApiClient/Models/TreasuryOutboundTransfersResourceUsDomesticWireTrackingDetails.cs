@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chips") is { } nullNodeChips && nullNodeChips.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chips = null;
-            if (parseNode.GetChildNode("imad") is { } nullNodeImad && nullNodeImad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imad = null;
-            if (parseNode.GetChildNode("omad") is { } nullNodeOmad && nullNodeOmad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Omad = null;
+            if (parseNode.GetChildNode("chips") is null) { _explicitNullValueChips = default!; _explicitNullProperties?.Remove("chips"); }
+            else if (parseNode.GetChildNode("chips") is { } nullNodeChips && nullNodeChips.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chips = null;
+            if (parseNode.GetChildNode("imad") is null) { _explicitNullValueImad = default!; _explicitNullProperties?.Remove("imad"); }
+            else if (parseNode.GetChildNode("imad") is { } nullNodeImad && nullNodeImad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imad = null;
+            if (parseNode.GetChildNode("omad") is null) { _explicitNullValueOmad = default!; _explicitNullProperties?.Remove("omad"); }
+            else if (parseNode.GetChildNode("omad") is { } nullNodeOmad && nullNodeOmad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Omad = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>CHIPS System Sequence Number (SSN) of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
+        public string? Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; AdditionalData?.Remove("chips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
         private string? _explicitNullValueChips = default!;
 #nullable restore
 #else
-        public string Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
+        public string Chips { get => _explicitNullValueChips; set { _explicitNullValueChips = value; AdditionalData?.Remove("chips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chips"); else _explicitNullProperties?.Remove("chips"); } }
         private string _explicitNullValueChips = default!;
 #endif
         /// <summary>IMAD of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
+        public string? Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; AdditionalData?.Remove("imad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
         private string? _explicitNullValueImad = default!;
 #nullable restore
 #else
-        public string Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
+        public string Imad { get => _explicitNullValueImad; set { _explicitNullValueImad = value; AdditionalData?.Remove("imad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imad"); else _explicitNullProperties?.Remove("imad"); } }
         private string _explicitNullValueImad = default!;
 #endif
         /// <summary>OMAD of the OutboundTransfer for transfers sent over the `us_domestic_wire` network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
+        public string? Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; AdditionalData?.Remove("omad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
         private string? _explicitNullValueOmad = default!;
 #nullable restore
 #else
-        public string Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
+        public string Omad { get => _explicitNullValueOmad; set { _explicitNullValueOmad = value; AdditionalData?.Remove("omad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omad"); else _explicitNullProperties?.Remove("omad"); } }
         private string _explicitNullValueOmad = default!;
 #endif
         /// <summary>

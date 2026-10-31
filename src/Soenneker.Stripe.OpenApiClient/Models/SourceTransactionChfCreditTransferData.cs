@@ -17,11 +17,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
-            if (parseNode.GetChildNode("sender_address_country") is { } nullNodeSenderAddressCountry && nullNodeSenderAddressCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAddressCountry = null;
-            if (parseNode.GetChildNode("sender_address_line1") is { } nullNodeSenderAddressLine1 && nullNodeSenderAddressLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAddressLine1 = null;
-            if (parseNode.GetChildNode("sender_iban") is { } nullNodeSenderIban && nullNodeSenderIban.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderIban = null;
-            if (parseNode.GetChildNode("sender_name") is { } nullNodeSenderName && nullNodeSenderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderName = null;
+            if (parseNode.GetChildNode("reference") is null) { _explicitNullValueReference = default!; _explicitNullProperties?.Remove("reference"); }
+            else if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+            if (parseNode.GetChildNode("sender_address_country") is null) { _explicitNullValueSenderAddressCountry = default!; _explicitNullProperties?.Remove("sender_address_country"); }
+            else if (parseNode.GetChildNode("sender_address_country") is { } nullNodeSenderAddressCountry && nullNodeSenderAddressCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAddressCountry = null;
+            if (parseNode.GetChildNode("sender_address_line1") is null) { _explicitNullValueSenderAddressLine1 = default!; _explicitNullProperties?.Remove("sender_address_line1"); }
+            else if (parseNode.GetChildNode("sender_address_line1") is { } nullNodeSenderAddressLine1 && nullNodeSenderAddressLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAddressLine1 = null;
+            if (parseNode.GetChildNode("sender_iban") is null) { _explicitNullValueSenderIban = default!; _explicitNullProperties?.Remove("sender_iban"); }
+            else if (parseNode.GetChildNode("sender_iban") is { } nullNodeSenderIban && nullNodeSenderIban.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderIban = null;
+            if (parseNode.GetChildNode("sender_name") is null) { _explicitNullValueSenderName = default!; _explicitNullProperties?.Remove("sender_name"); }
+            else if (parseNode.GetChildNode("sender_name") is { } nullNodeSenderName && nullNodeSenderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Reference associated with the transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; AdditionalData?.Remove("reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
         private string? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        public string Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; AdditionalData?.Remove("reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
         private string _explicitNullValueReference = default!;
 #endif
         /// <summary>Sender&apos;s country address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderAddressCountry { get => _explicitNullValueSenderAddressCountry; set { _explicitNullValueSenderAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_country"); else _explicitNullProperties?.Remove("sender_address_country"); } }
+        public string? SenderAddressCountry { get => _explicitNullValueSenderAddressCountry; set { _explicitNullValueSenderAddressCountry = value; AdditionalData?.Remove("sender_address_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_country"); else _explicitNullProperties?.Remove("sender_address_country"); } }
         private string? _explicitNullValueSenderAddressCountry = default!;
 #nullable restore
 #else
-        public string SenderAddressCountry { get => _explicitNullValueSenderAddressCountry; set { _explicitNullValueSenderAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_country"); else _explicitNullProperties?.Remove("sender_address_country"); } }
+        public string SenderAddressCountry { get => _explicitNullValueSenderAddressCountry; set { _explicitNullValueSenderAddressCountry = value; AdditionalData?.Remove("sender_address_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_country"); else _explicitNullProperties?.Remove("sender_address_country"); } }
         private string _explicitNullValueSenderAddressCountry = default!;
 #endif
         /// <summary>Sender&apos;s line 1 address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderAddressLine1 { get => _explicitNullValueSenderAddressLine1; set { _explicitNullValueSenderAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_line1"); else _explicitNullProperties?.Remove("sender_address_line1"); } }
+        public string? SenderAddressLine1 { get => _explicitNullValueSenderAddressLine1; set { _explicitNullValueSenderAddressLine1 = value; AdditionalData?.Remove("sender_address_line1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_line1"); else _explicitNullProperties?.Remove("sender_address_line1"); } }
         private string? _explicitNullValueSenderAddressLine1 = default!;
 #nullable restore
 #else
-        public string SenderAddressLine1 { get => _explicitNullValueSenderAddressLine1; set { _explicitNullValueSenderAddressLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_line1"); else _explicitNullProperties?.Remove("sender_address_line1"); } }
+        public string SenderAddressLine1 { get => _explicitNullValueSenderAddressLine1; set { _explicitNullValueSenderAddressLine1 = value; AdditionalData?.Remove("sender_address_line1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_address_line1"); else _explicitNullProperties?.Remove("sender_address_line1"); } }
         private string _explicitNullValueSenderAddressLine1 = default!;
 #endif
         /// <summary>Sender&apos;s bank account IBAN.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderIban { get => _explicitNullValueSenderIban; set { _explicitNullValueSenderIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_iban"); else _explicitNullProperties?.Remove("sender_iban"); } }
+        public string? SenderIban { get => _explicitNullValueSenderIban; set { _explicitNullValueSenderIban = value; AdditionalData?.Remove("sender_iban"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_iban"); else _explicitNullProperties?.Remove("sender_iban"); } }
         private string? _explicitNullValueSenderIban = default!;
 #nullable restore
 #else
-        public string SenderIban { get => _explicitNullValueSenderIban; set { _explicitNullValueSenderIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_iban"); else _explicitNullProperties?.Remove("sender_iban"); } }
+        public string SenderIban { get => _explicitNullValueSenderIban; set { _explicitNullValueSenderIban = value; AdditionalData?.Remove("sender_iban"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_iban"); else _explicitNullProperties?.Remove("sender_iban"); } }
         private string _explicitNullValueSenderIban = default!;
 #endif
         /// <summary>Sender&apos;s name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
+        public string? SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; AdditionalData?.Remove("sender_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
         private string? _explicitNullValueSenderName = default!;
 #nullable restore
 #else
-        public string SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
+        public string SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; AdditionalData?.Remove("sender_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
         private string _explicitNullValueSenderName = default!;
 #endif
         /// <summary>

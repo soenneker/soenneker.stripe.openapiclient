@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ethnicity_details") is { } nullNodeEthnicityDetails && nullNodeEthnicityDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EthnicityDetails = null;
-            if (parseNode.GetChildNode("race_details") is { } nullNodeRaceDetails && nullNodeRaceDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RaceDetails = null;
-            if (parseNode.GetChildNode("self_identified_gender") is { } nullNodeSelfIdentifiedGender && nullNodeSelfIdentifiedGender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelfIdentifiedGender = null;
+            if (parseNode.GetChildNode("ethnicity_details") is null) { _explicitNullValueEthnicityDetails = default!; _explicitNullProperties?.Remove("ethnicity_details"); }
+            else if (parseNode.GetChildNode("ethnicity_details") is { } nullNodeEthnicityDetails && nullNodeEthnicityDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EthnicityDetails = null;
+            if (parseNode.GetChildNode("race_details") is null) { _explicitNullValueRaceDetails = default!; _explicitNullProperties?.Remove("race_details"); }
+            else if (parseNode.GetChildNode("race_details") is { } nullNodeRaceDetails && nullNodeRaceDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RaceDetails = null;
+            if (parseNode.GetChildNode("self_identified_gender") is null) { _explicitNullValueSelfIdentifiedGender = default!; _explicitNullProperties?.Remove("self_identified_gender"); }
+            else if (parseNode.GetChildNode("self_identified_gender") is { } nullNodeSelfIdentifiedGender && nullNodeSelfIdentifiedGender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelfIdentifiedGender = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The persons ethnicity details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails? EthnicityDetails { get => _explicitNullValueEthnicityDetails; set { _explicitNullValueEthnicityDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_details"); else _explicitNullProperties?.Remove("ethnicity_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails? EthnicityDetails { get => _explicitNullValueEthnicityDetails; set { _explicitNullValueEthnicityDetails = value; AdditionalData?.Remove("ethnicity_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_details"); else _explicitNullProperties?.Remove("ethnicity_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails? _explicitNullValueEthnicityDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails EthnicityDetails { get => _explicitNullValueEthnicityDetails; set { _explicitNullValueEthnicityDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_details"); else _explicitNullProperties?.Remove("ethnicity_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails EthnicityDetails { get => _explicitNullValueEthnicityDetails; set { _explicitNullValueEthnicityDetails = value; AdditionalData?.Remove("ethnicity_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_details"); else _explicitNullProperties?.Remove("ethnicity_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails _explicitNullValueEthnicityDetails = default!;
 #endif
         /// <summary>The persons race details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails? RaceDetails { get => _explicitNullValueRaceDetails; set { _explicitNullValueRaceDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_details"); else _explicitNullProperties?.Remove("race_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails? RaceDetails { get => _explicitNullValueRaceDetails; set { _explicitNullValueRaceDetails = value; AdditionalData?.Remove("race_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_details"); else _explicitNullProperties?.Remove("race_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails? _explicitNullValueRaceDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails RaceDetails { get => _explicitNullValueRaceDetails; set { _explicitNullValueRaceDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_details"); else _explicitNullProperties?.Remove("race_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails RaceDetails { get => _explicitNullValueRaceDetails; set { _explicitNullValueRaceDetails = value; AdditionalData?.Remove("race_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_details"); else _explicitNullProperties?.Remove("race_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails _explicitNullValueRaceDetails = default!;
 #endif
         /// <summary>The persons self-identified gender</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelfIdentifiedGender { get => _explicitNullValueSelfIdentifiedGender; set { _explicitNullValueSelfIdentifiedGender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self_identified_gender"); else _explicitNullProperties?.Remove("self_identified_gender"); } }
+        public string? SelfIdentifiedGender { get => _explicitNullValueSelfIdentifiedGender; set { _explicitNullValueSelfIdentifiedGender = value; AdditionalData?.Remove("self_identified_gender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self_identified_gender"); else _explicitNullProperties?.Remove("self_identified_gender"); } }
         private string? _explicitNullValueSelfIdentifiedGender = default!;
 #nullable restore
 #else
-        public string SelfIdentifiedGender { get => _explicitNullValueSelfIdentifiedGender; set { _explicitNullValueSelfIdentifiedGender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self_identified_gender"); else _explicitNullProperties?.Remove("self_identified_gender"); } }
+        public string SelfIdentifiedGender { get => _explicitNullValueSelfIdentifiedGender; set { _explicitNullValueSelfIdentifiedGender = value; AdditionalData?.Remove("self_identified_gender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self_identified_gender"); else _explicitNullProperties?.Remove("self_identified_gender"); } }
         private string _explicitNullValueSelfIdentifiedGender = default!;
 #endif
         /// <summary>

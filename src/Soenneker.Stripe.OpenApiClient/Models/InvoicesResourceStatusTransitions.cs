@@ -17,25 +17,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("finalized_at") is { } nullNodeFinalizedAt && nullNodeFinalizedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalizedAt = null;
-            if (parseNode.GetChildNode("marked_uncollectible_at") is { } nullNodeMarkedUncollectibleAt && nullNodeMarkedUncollectibleAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkedUncollectibleAt = null;
-            if (parseNode.GetChildNode("paid_at") is { } nullNodePaidAt && nullNodePaidAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidAt = null;
-            if (parseNode.GetChildNode("voided_at") is { } nullNodeVoidedAt && nullNodeVoidedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidedAt = null;
+            if (parseNode.GetChildNode("finalized_at") is null) { _explicitNullValueFinalizedAt = default!; _explicitNullProperties?.Remove("finalized_at"); }
+            else if (parseNode.GetChildNode("finalized_at") is { } nullNodeFinalizedAt && nullNodeFinalizedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalizedAt = null;
+            if (parseNode.GetChildNode("marked_uncollectible_at") is null) { _explicitNullValueMarkedUncollectibleAt = default!; _explicitNullProperties?.Remove("marked_uncollectible_at"); }
+            else if (parseNode.GetChildNode("marked_uncollectible_at") is { } nullNodeMarkedUncollectibleAt && nullNodeMarkedUncollectibleAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkedUncollectibleAt = null;
+            if (parseNode.GetChildNode("paid_at") is null) { _explicitNullValuePaidAt = default!; _explicitNullProperties?.Remove("paid_at"); }
+            else if (parseNode.GetChildNode("paid_at") is { } nullNodePaidAt && nullNodePaidAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidAt = null;
+            if (parseNode.GetChildNode("voided_at") is null) { _explicitNullValueVoidedAt = default!; _explicitNullProperties?.Remove("voided_at"); }
+            else if (parseNode.GetChildNode("voided_at") is { } nullNodeVoidedAt && nullNodeVoidedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the invoice draft was finalized.</summary>
-        public int? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
+        public int? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; AdditionalData?.Remove("finalized_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
         private int? _explicitNullValueFinalizedAt = default!;
         /// <summary>The time that the invoice was marked uncollectible.</summary>
-        public int? MarkedUncollectibleAt { get => _explicitNullValueMarkedUncollectibleAt; set { _explicitNullValueMarkedUncollectibleAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marked_uncollectible_at"); else _explicitNullProperties?.Remove("marked_uncollectible_at"); } }
+        public int? MarkedUncollectibleAt { get => _explicitNullValueMarkedUncollectibleAt; set { _explicitNullValueMarkedUncollectibleAt = value; AdditionalData?.Remove("marked_uncollectible_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marked_uncollectible_at"); else _explicitNullProperties?.Remove("marked_uncollectible_at"); } }
         private int? _explicitNullValueMarkedUncollectibleAt = default!;
         /// <summary>The time that the invoice was paid.</summary>
-        public int? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
+        public int? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; AdditionalData?.Remove("paid_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
         private int? _explicitNullValuePaidAt = default!;
         /// <summary>The time that the invoice was voided.</summary>
-        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
+        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
         private int? _explicitNullValueVoidedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions"/> and sets the default values.

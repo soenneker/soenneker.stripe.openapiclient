@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("credited_items") is { } nullNodeCreditedItems && nullNodeCreditedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditedItems = null;
-            if (parseNode.GetChildNode("discount_amounts") is { } nullNodeDiscountAmounts && nullNodeDiscountAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmounts = null;
+            if (parseNode.GetChildNode("credited_items") is null) { _explicitNullValueCreditedItems = default!; _explicitNullProperties?.Remove("credited_items"); }
+            else if (parseNode.GetChildNode("credited_items") is { } nullNodeCreditedItems && nullNodeCreditedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditedItems = null;
+            if (parseNode.GetChildNode("discount_amounts") is null) { _explicitNullValueDiscountAmounts = default!; _explicitNullProperties?.Remove("discount_amounts"); }
+            else if (parseNode.GetChildNode("discount_amounts") is { } nullNodeDiscountAmounts && nullNodeDiscountAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmounts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For a credit proration, links to the debit invoice line items or invoice item that the credit applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? _explicitNullValueCreditedItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems _explicitNullValueCreditedItems = default!;
 #endif
         /// <summary>Discount amounts applied when the proration was created. This field is only populated for prorations created from subscriptions with `billing_mode=flexible`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; AdditionalData?.Remove("discount_amounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? _explicitNullValueDiscountAmounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> DiscountAmounts { get => _explicitNullValueDiscountAmounts; set { _explicitNullValueDiscountAmounts = value; AdditionalData?.Remove("discount_amounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_amounts"); else _explicitNullProperties?.Remove("discount_amounts"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> _explicitNullValueDiscountAmounts = default!;
 #endif
         /// <summary>

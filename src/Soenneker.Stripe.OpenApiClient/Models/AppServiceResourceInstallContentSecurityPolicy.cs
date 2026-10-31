@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("connect_src") is { } nullNodeConnectSrc && nullNodeConnectSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectSrc = null;
-            if (parseNode.GetChildNode("image_src") is { } nullNodeImageSrc && nullNodeImageSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageSrc = null;
+            if (parseNode.GetChildNode("connect_src") is null) { _explicitNullValueConnectSrc = default!; _explicitNullProperties?.Remove("connect_src"); }
+            else if (parseNode.GetChildNode("connect_src") is { } nullNodeConnectSrc && nullNodeConnectSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectSrc = null;
+            if (parseNode.GetChildNode("image_src") is null) { _explicitNullValueImageSrc = default!; _explicitNullProperties?.Remove("image_src"); }
+            else if (parseNode.GetChildNode("image_src") is { } nullNodeImageSrc && nullNodeImageSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageSrc = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The URLs that the app can make network requests to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConnectSrc { get => _explicitNullValueConnectSrc; set { _explicitNullValueConnectSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_src"); else _explicitNullProperties?.Remove("connect_src"); } }
+        public List<string>? ConnectSrc { get => _explicitNullValueConnectSrc; set { _explicitNullValueConnectSrc = value; AdditionalData?.Remove("connect_src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_src"); else _explicitNullProperties?.Remove("connect_src"); } }
         private List<string>? _explicitNullValueConnectSrc = default!;
 #nullable restore
 #else
-        public List<string> ConnectSrc { get => _explicitNullValueConnectSrc; set { _explicitNullValueConnectSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_src"); else _explicitNullProperties?.Remove("connect_src"); } }
+        public List<string> ConnectSrc { get => _explicitNullValueConnectSrc; set { _explicitNullValueConnectSrc = value; AdditionalData?.Remove("connect_src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_src"); else _explicitNullProperties?.Remove("connect_src"); } }
         private List<string> _explicitNullValueConnectSrc = default!;
 #endif
         /// <summary>The URLs that the app can load images from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ImageSrc { get => _explicitNullValueImageSrc; set { _explicitNullValueImageSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_src"); else _explicitNullProperties?.Remove("image_src"); } }
+        public List<string>? ImageSrc { get => _explicitNullValueImageSrc; set { _explicitNullValueImageSrc = value; AdditionalData?.Remove("image_src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_src"); else _explicitNullProperties?.Remove("image_src"); } }
         private List<string>? _explicitNullValueImageSrc = default!;
 #nullable restore
 #else
-        public List<string> ImageSrc { get => _explicitNullValueImageSrc; set { _explicitNullValueImageSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_src"); else _explicitNullProperties?.Remove("image_src"); } }
+        public List<string> ImageSrc { get => _explicitNullValueImageSrc; set { _explicitNullValueImageSrc = value; AdditionalData?.Remove("image_src"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_src"); else _explicitNullProperties?.Remove("image_src"); } }
         private List<string> _explicitNullValueImageSrc = default!;
 #endif
         /// <summary>

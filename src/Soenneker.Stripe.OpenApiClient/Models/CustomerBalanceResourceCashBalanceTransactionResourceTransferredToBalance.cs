@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("balance_transaction") is { } nullNodeBalanceTransaction && nullNodeBalanceTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BalanceTransaction = null;
+            if (parseNode.GetChildNode("balance_transaction") is null) { _explicitNullValueBalanceTransaction = default!; _explicitNullProperties?.Remove("balance_transaction"); }
+            else if (parseNode.GetChildNode("balance_transaction") is { } nullNodeBalanceTransaction && nullNodeBalanceTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BalanceTransaction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The [Balance Transaction](https://docs.stripe.com/api/balance_transactions/object) that corresponds to funds transferred to your Stripe balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction? BalanceTransaction { get => _explicitNullValueBalanceTransaction; set { _explicitNullValueBalanceTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transaction"); else _explicitNullProperties?.Remove("balance_transaction"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction? BalanceTransaction { get => _explicitNullValueBalanceTransaction; set { _explicitNullValueBalanceTransaction = value; AdditionalData?.Remove("balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transaction"); else _explicitNullProperties?.Remove("balance_transaction"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction? _explicitNullValueBalanceTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction BalanceTransaction { get => _explicitNullValueBalanceTransaction; set { _explicitNullValueBalanceTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transaction"); else _explicitNullProperties?.Remove("balance_transaction"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction BalanceTransaction { get => _explicitNullValueBalanceTransaction; set { _explicitNullValueBalanceTransaction = value; AdditionalData?.Remove("balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_transaction"); else _explicitNullProperties?.Remove("balance_transaction"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalanceBalanceTransaction _explicitNullValueBalanceTransaction = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payment_flow_file") is { } nullNodePaymentFlowFile && nullNodePaymentFlowFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFlowFile = null;
+            if (parseNode.GetChildNode("payment_flow_file") is null) { _explicitNullValuePaymentFlowFile = default!; _explicitNullProperties?.Remove("payment_flow_file"); }
+            else if (parseNode.GetChildNode("payment_flow_file") is { } nullNodePaymentFlowFile && nullNodePaymentFlowFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFlowFile = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment_flow_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentFlowFile { get => _explicitNullValuePaymentFlowFile; set { _explicitNullValuePaymentFlowFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_flow_file"); else _explicitNullProperties?.Remove("payment_flow_file"); } }
+        public string? PaymentFlowFile { get => _explicitNullValuePaymentFlowFile; set { _explicitNullValuePaymentFlowFile = value; AdditionalData?.Remove("payment_flow_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_flow_file"); else _explicitNullProperties?.Remove("payment_flow_file"); } }
         private string? _explicitNullValuePaymentFlowFile = default!;
 #nullable restore
 #else
-        public string PaymentFlowFile { get => _explicitNullValuePaymentFlowFile; set { _explicitNullValuePaymentFlowFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_flow_file"); else _explicitNullProperties?.Remove("payment_flow_file"); } }
+        public string PaymentFlowFile { get => _explicitNullValuePaymentFlowFile; set { _explicitNullValuePaymentFlowFile = value; AdditionalData?.Remove("payment_flow_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_flow_file"); else _explicitNullProperties?.Remove("payment_flow_file"); } }
         private string _explicitNullValuePaymentFlowFile = default!;
 #endif
         /// <summary>

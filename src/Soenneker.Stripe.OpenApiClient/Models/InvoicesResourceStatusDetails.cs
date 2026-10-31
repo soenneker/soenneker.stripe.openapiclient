@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("uncollectible") is { } nullNodeUncollectible && nullNodeUncollectible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uncollectible = null;
+            if (parseNode.GetChildNode("uncollectible") is null) { _explicitNullValueUncollectible = default!; _explicitNullProperties?.Remove("uncollectible"); }
+            else if (parseNode.GetChildNode("uncollectible") is { } nullNodeUncollectible && nullNodeUncollectible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uncollectible = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The uncollectible property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails? Uncollectible { get => _explicitNullValueUncollectible; set { _explicitNullValueUncollectible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uncollectible"); else _explicitNullProperties?.Remove("uncollectible"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails? Uncollectible { get => _explicitNullValueUncollectible; set { _explicitNullValueUncollectible = value; AdditionalData?.Remove("uncollectible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uncollectible"); else _explicitNullProperties?.Remove("uncollectible"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails? _explicitNullValueUncollectible = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails Uncollectible { get => _explicitNullValueUncollectible; set { _explicitNullValueUncollectible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uncollectible"); else _explicitNullProperties?.Remove("uncollectible"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails Uncollectible { get => _explicitNullValueUncollectible; set { _explicitNullValueUncollectible = value; AdditionalData?.Remove("uncollectible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uncollectible"); else _explicitNullProperties?.Remove("uncollectible"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceUncollectibleStatusDetails _explicitNullValueUncollectible = default!;
 #endif
         /// <summary>

@@ -17,43 +17,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("flat_amount") is { } nullNodeFlatAmount && nullNodeFlatAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatAmount = null;
-            if (parseNode.GetChildNode("flat_amount_decimal") is { } nullNodeFlatAmountDecimal && nullNodeFlatAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatAmountDecimal = null;
-            if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
-            if (parseNode.GetChildNode("unit_amount_decimal") is { } nullNodeUnitAmountDecimal && nullNodeUnitAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmountDecimal = null;
-            if (parseNode.GetChildNode("up_to") is { } nullNodeUpTo && nullNodeUpTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpTo = null;
+            if (parseNode.GetChildNode("flat_amount") is null) { _explicitNullValueFlatAmount = default!; _explicitNullProperties?.Remove("flat_amount"); }
+            else if (parseNode.GetChildNode("flat_amount") is { } nullNodeFlatAmount && nullNodeFlatAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatAmount = null;
+            if (parseNode.GetChildNode("flat_amount_decimal") is null) { _explicitNullValueFlatAmountDecimal = default!; _explicitNullProperties?.Remove("flat_amount_decimal"); }
+            else if (parseNode.GetChildNode("flat_amount_decimal") is { } nullNodeFlatAmountDecimal && nullNodeFlatAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatAmountDecimal = null;
+            if (parseNode.GetChildNode("unit_amount") is null) { _explicitNullValueUnitAmount = default!; _explicitNullProperties?.Remove("unit_amount"); }
+            else if (parseNode.GetChildNode("unit_amount") is { } nullNodeUnitAmount && nullNodeUnitAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmount = null;
+            if (parseNode.GetChildNode("unit_amount_decimal") is null) { _explicitNullValueUnitAmountDecimal = default!; _explicitNullProperties?.Remove("unit_amount_decimal"); }
+            else if (parseNode.GetChildNode("unit_amount_decimal") is { } nullNodeUnitAmountDecimal && nullNodeUnitAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitAmountDecimal = null;
+            if (parseNode.GetChildNode("up_to") is null) { _explicitNullValueUpTo = default!; _explicitNullProperties?.Remove("up_to"); }
+            else if (parseNode.GetChildNode("up_to") is { } nullNodeUpTo && nullNodeUpTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpTo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Price for the entire tier.</summary>
-        public int? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
+        public int? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
         private int? _explicitNullValueFlatAmount = default!;
         /// <summary>Same as `flat_amount`, but contains a decimal value with at most 12 decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlatAmountDecimal { get => _explicitNullValueFlatAmountDecimal; set { _explicitNullValueFlatAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount_decimal"); else _explicitNullProperties?.Remove("flat_amount_decimal"); } }
+        public string? FlatAmountDecimal { get => _explicitNullValueFlatAmountDecimal; set { _explicitNullValueFlatAmountDecimal = value; AdditionalData?.Remove("flat_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount_decimal"); else _explicitNullProperties?.Remove("flat_amount_decimal"); } }
         private string? _explicitNullValueFlatAmountDecimal = default!;
 #nullable restore
 #else
-        public string FlatAmountDecimal { get => _explicitNullValueFlatAmountDecimal; set { _explicitNullValueFlatAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount_decimal"); else _explicitNullProperties?.Remove("flat_amount_decimal"); } }
+        public string FlatAmountDecimal { get => _explicitNullValueFlatAmountDecimal; set { _explicitNullValueFlatAmountDecimal = value; AdditionalData?.Remove("flat_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount_decimal"); else _explicitNullProperties?.Remove("flat_amount_decimal"); } }
         private string _explicitNullValueFlatAmountDecimal = default!;
 #endif
         /// <summary>Per unit price for units relevant to the tier.</summary>
-        public int? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
+        public int? UnitAmount { get => _explicitNullValueUnitAmount; set { _explicitNullValueUnitAmount = value; AdditionalData?.Remove("unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount"); else _explicitNullProperties?.Remove("unit_amount"); } }
         private int? _explicitNullValueUnitAmount = default!;
         /// <summary>Same as `unit_amount`, but contains a decimal value with at most 12 decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        public string? UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; AdditionalData?.Remove("unit_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
         private string? _explicitNullValueUnitAmountDecimal = default!;
 #nullable restore
 #else
-        public string UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
+        public string UnitAmountDecimal { get => _explicitNullValueUnitAmountDecimal; set { _explicitNullValueUnitAmountDecimal = value; AdditionalData?.Remove("unit_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_amount_decimal"); else _explicitNullProperties?.Remove("unit_amount_decimal"); } }
         private string _explicitNullValueUnitAmountDecimal = default!;
 #endif
         /// <summary>Up to and including to this quantity will be contained in the tier.</summary>
-        public int? UpTo { get => _explicitNullValueUpTo; set { _explicitNullValueUpTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("up_to"); else _explicitNullProperties?.Remove("up_to"); } }
+        public int? UpTo { get => _explicitNullValueUpTo; set { _explicitNullValueUpTo = value; AdditionalData?.Remove("up_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("up_to"); else _explicitNullProperties?.Remove("up_to"); } }
         private int? _explicitNullValueUpTo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PlanTier"/> and sets the default values.

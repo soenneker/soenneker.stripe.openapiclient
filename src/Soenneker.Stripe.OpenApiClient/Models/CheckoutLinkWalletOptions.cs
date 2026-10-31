@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display") is { } nullNodeDisplay && nullNodeDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Display = null;
+            if (parseNode.GetChildNode("display") is null) { _explicitNullValueDisplay = default!; _explicitNullProperties?.Remove("display"); }
+            else if (parseNode.GetChildNode("display") is { } nullNodeDisplay && nullNodeDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Display = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Describes whether Checkout should display Link. Defaults to `auto`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay? Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay? Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; AdditionalData?.Remove("display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay? _explicitNullValueDisplay = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptions"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "display", n => { Display = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay>(); } },
+                { "display", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisplay = default; _explicitNullProperties?.Remove("display"); AdditionalData["display"] = unknown; } else { Display = parsed; AdditionalData.Remove("display"); } } },
             };
         }
         /// <summary>

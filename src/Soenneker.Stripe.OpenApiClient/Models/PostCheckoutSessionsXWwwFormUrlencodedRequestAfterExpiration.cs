@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recovery") is { } nullNodeRecovery && nullNodeRecovery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recovery = null;
+            if (parseNode.GetChildNode("recovery") is null) { _explicitNullValueRecovery = default!; _explicitNullProperties?.Remove("recovery"); }
+            else if (parseNode.GetChildNode("recovery") is { } nullNodeRecovery && nullNodeRecovery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recovery = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The recovery property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery? Recovery { get => _explicitNullValueRecovery; set { _explicitNullValueRecovery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery"); else _explicitNullProperties?.Remove("recovery"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery? Recovery { get => _explicitNullValueRecovery; set { _explicitNullValueRecovery = value; AdditionalData?.Remove("recovery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery"); else _explicitNullProperties?.Remove("recovery"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery? _explicitNullValueRecovery = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery Recovery { get => _explicitNullValueRecovery; set { _explicitNullValueRecovery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery"); else _explicitNullProperties?.Remove("recovery"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery Recovery { get => _explicitNullValueRecovery; set { _explicitNullValueRecovery = value; AdditionalData?.Remove("recovery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery"); else _explicitNullProperties?.Remove("recovery"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpirationRecovery _explicitNullValueRecovery = default!;
 #endif
         /// <summary>

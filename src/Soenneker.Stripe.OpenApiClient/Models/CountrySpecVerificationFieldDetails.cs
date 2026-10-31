@@ -17,18 +17,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional") is { } nullNodeAdditional && nullNodeAdditional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Additional = null;
-            if (parseNode.GetChildNode("minimum") is { } nullNodeMinimum && nullNodeMinimum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minimum = null;
+            if (parseNode.GetChildNode("additional") is null) { _explicitNullValueAdditional = default!; _explicitNullProperties?.Remove("additional"); }
+            else if (parseNode.GetChildNode("additional") is { } nullNodeAdditional && nullNodeAdditional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Additional = null;
+            if (parseNode.GetChildNode("minimum") is null) { _explicitNullValueMinimum = default!; _explicitNullProperties?.Remove("minimum"); }
+            else if (parseNode.GetChildNode("minimum") is { } nullNodeMinimum && nullNodeMinimum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Minimum = null;
         }
 
         /// <summary>Additional fields which are only required for some users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Additional { get => _explicitNullValueAdditional; set { _explicitNullValueAdditional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional"); else _explicitNullProperties?.Remove("additional"); } }
+        public List<string>? Additional { get => _explicitNullValueAdditional; set { _explicitNullValueAdditional = value; AdditionalData?.Remove("additional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional"); else _explicitNullProperties?.Remove("additional"); } }
         private List<string>? _explicitNullValueAdditional = default!;
 #nullable restore
 #else
-        public List<string> Additional { get => _explicitNullValueAdditional; set { _explicitNullValueAdditional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional"); else _explicitNullProperties?.Remove("additional"); } }
+        public List<string> Additional { get => _explicitNullValueAdditional; set { _explicitNullValueAdditional = value; AdditionalData?.Remove("additional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional"); else _explicitNullProperties?.Remove("additional"); } }
         private List<string> _explicitNullValueAdditional = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +38,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Fields which every account must eventually provide.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
+        public List<string>? Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; AdditionalData?.Remove("minimum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
         private List<string>? _explicitNullValueMinimum = default!;
 #nullable restore
 #else
-        public List<string> Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
+        public List<string> Minimum { get => _explicitNullValueMinimum; set { _explicitNullValueMinimum = value; AdditionalData?.Remove("minimum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum"); else _explicitNullProperties?.Remove("minimum"); } }
         private List<string> _explicitNullValueMinimum = default!;
 #endif
         /// <summary>

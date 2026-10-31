@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gross_amount_decimal") is { } nullNodeGrossAmountDecimal && nullNodeGrossAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossAmountDecimal = null;
+            if (parseNode.GetChildNode("gross_amount_decimal") is null) { _explicitNullValueGrossAmountDecimal = default!; _explicitNullProperties?.Remove("gross_amount_decimal"); }
+            else if (parseNode.GetChildNode("gross_amount_decimal") is { } nullNodeGrossAmountDecimal && nullNodeGrossAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossAmountDecimal = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Gross fuel amount that should equal Fuel Volume multiplied by Fuel Unit Cost, inclusive of taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
+        public string? GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; AdditionalData?.Remove("gross_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
         private string? _explicitNullValueGrossAmountDecimal = default!;
 #nullable restore
 #else
-        public string GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
+        public string GrossAmountDecimal { get => _explicitNullValueGrossAmountDecimal; set { _explicitNullValueGrossAmountDecimal = value; AdditionalData?.Remove("gross_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gross_amount_decimal"); else _explicitNullProperties?.Remove("gross_amount_decimal"); } }
         private string _explicitNullValueGrossAmountDecimal = default!;
 #endif
         /// <summary>

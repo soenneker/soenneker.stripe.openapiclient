@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
-            if (parseNode.GetChildNode("privacy_policy_url") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
-            if (parseNode.GetChildNode("terms_of_service_url") is { } nullNodeTermsOfServiceUrl && nullNodeTermsOfServiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfServiceUrl = null;
+            if (parseNode.GetChildNode("headline") is null) { _explicitNullValueHeadline = default!; _explicitNullProperties?.Remove("headline"); }
+            else if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
+            if (parseNode.GetChildNode("privacy_policy_url") is null) { _explicitNullValuePrivacyPolicyUrl = default!; _explicitNullProperties?.Remove("privacy_policy_url"); }
+            else if (parseNode.GetChildNode("privacy_policy_url") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
+            if (parseNode.GetChildNode("terms_of_service_url") is null) { _explicitNullValueTermsOfServiceUrl = default!; _explicitNullProperties?.Remove("terms_of_service_url"); }
+            else if (parseNode.GetChildNode("terms_of_service_url") is { } nullNodeTermsOfServiceUrl && nullNodeTermsOfServiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfServiceUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,32 +31,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The headline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline? _explicitNullValueHeadline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline _explicitNullValueHeadline = default!;
 #endif
         /// <summary>The privacy_policy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl? _explicitNullValuePrivacyPolicyUrl = default!;
+        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacy_policy_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
+        private string? _explicitNullValuePrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl _explicitNullValuePrivacyPolicyUrl = default!;
+        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacy_policy_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
+        private string _explicitNullValuePrivacyPolicyUrl = default!;
 #endif
         /// <summary>The terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl? TermsOfServiceUrl { get => _explicitNullValueTermsOfServiceUrl; set { _explicitNullValueTermsOfServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_url"); else _explicitNullProperties?.Remove("terms_of_service_url"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl? _explicitNullValueTermsOfServiceUrl = default!;
+        public string? TermsOfServiceUrl { get => _explicitNullValueTermsOfServiceUrl; set { _explicitNullValueTermsOfServiceUrl = value; AdditionalData?.Remove("terms_of_service_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_url"); else _explicitNullProperties?.Remove("terms_of_service_url"); } }
+        private string? _explicitNullValueTermsOfServiceUrl = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl TermsOfServiceUrl { get => _explicitNullValueTermsOfServiceUrl; set { _explicitNullValueTermsOfServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_url"); else _explicitNullProperties?.Remove("terms_of_service_url"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl _explicitNullValueTermsOfServiceUrl = default!;
+        public string TermsOfServiceUrl { get => _explicitNullValueTermsOfServiceUrl; set { _explicitNullValueTermsOfServiceUrl = value; AdditionalData?.Remove("terms_of_service_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_url"); else _explicitNullProperties?.Remove("terms_of_service_url"); } }
+        private string _explicitNullValueTermsOfServiceUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfile"/> and sets the default values.
@@ -81,8 +84,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "headline", n => { Headline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline.CreateFromDiscriminatorValue); } },
-                { "privacy_policy_url", n => { PrivacyPolicyUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl.CreateFromDiscriminatorValue); } },
-                { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl.CreateFromDiscriminatorValue); } },
+                { "privacy_policy_url", n => { PrivacyPolicyUrl = n.GetStringValue(); } },
+                { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -93,8 +96,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileHeadline>("headline", Headline);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfilePrivacyPolicyUrl>("privacy_policy_url", PrivacyPolicyUrl);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestBusinessProfileTermsOfServiceUrl>("terms_of_service_url", TermsOfServiceUrl);
+            writer.WriteStringValue("privacy_policy_url", PrivacyPolicyUrl);
+            writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

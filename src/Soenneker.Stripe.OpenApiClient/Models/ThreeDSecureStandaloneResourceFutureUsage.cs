@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("installment") is { } nullNodeInstallment && nullNodeInstallment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installment = null;
-            if (parseNode.GetChildNode("recurring") is { } nullNodeRecurring && nullNodeRecurring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurring = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("installment") is null) { _explicitNullValueInstallment = default!; _explicitNullProperties?.Remove("installment"); }
+            else if (parseNode.GetChildNode("installment") is { } nullNodeInstallment && nullNodeInstallment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installment = null;
+            if (parseNode.GetChildNode("recurring") is null) { _explicitNullValueRecurring = default!; _explicitNullProperties?.Remove("recurring"); }
+            else if (parseNode.GetChildNode("recurring") is { } nullNodeRecurring && nullNodeRecurring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurring = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about installment payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment? Installment { get => _explicitNullValueInstallment; set { _explicitNullValueInstallment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installment"); else _explicitNullProperties?.Remove("installment"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment? Installment { get => _explicitNullValueInstallment; set { _explicitNullValueInstallment = value; AdditionalData?.Remove("installment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installment"); else _explicitNullProperties?.Remove("installment"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment? _explicitNullValueInstallment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment Installment { get => _explicitNullValueInstallment; set { _explicitNullValueInstallment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installment"); else _explicitNullProperties?.Remove("installment"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment Installment { get => _explicitNullValueInstallment; set { _explicitNullValueInstallment = value; AdditionalData?.Remove("installment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installment"); else _explicitNullProperties?.Remove("installment"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment _explicitNullValueInstallment = default!;
 #endif
         /// <summary>Details about recurring payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring? _explicitNullValueRecurring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring _explicitNullValueRecurring = default!;
 #endif
         /// <summary>The type of future usage declared for this 3DS Authentication.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsageType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsageType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsageType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsage"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "installment", n => { Installment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment>(global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceInstallment.CreateFromDiscriminatorValue); } },
                 { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring>(global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceRecurring.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsageType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureStandaloneResourceFutureUsageType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

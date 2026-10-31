@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("brands_blocked") is { } nullNodeBrandsBlocked && nullNodeBrandsBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandsBlocked = null;
+            if (parseNode.GetChildNode("brands_blocked") is null) { _explicitNullValueBrandsBlocked = default!; _explicitNullProperties?.Remove("brands_blocked"); }
+            else if (parseNode.GetChildNode("brands_blocked") is { } nullNodeBrandsBlocked && nullNodeBrandsBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandsBlocked = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The card brands to block. If a customer enters or selects a card belonging to a blocked brand, they can&apos;t complete the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?>? BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?>? BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; AdditionalData?.Remove("brands_blocked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?>? _explicitNullValueBrandsBlocked = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?> BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?> BrandsBlocked { get => _explicitNullValueBrandsBlocked; set { _explicitNullValueBrandsBlocked = value; AdditionalData?.Remove("brands_blocked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands_blocked"); else _explicitNullProperties?.Remove("brands_blocked"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCardRestrictionsBrandsBlockedItem?> _explicitNullValueBrandsBlocked = default!;
 #endif
         /// <summary>

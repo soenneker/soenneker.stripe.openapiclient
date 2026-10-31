@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expires_after_days") is { } nullNodeExpiresAfterDays && nullNodeExpiresAfterDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterDays = null;
-            if (parseNode.GetChildNode("setup_future_usage") is { } nullNodeSetupFutureUsage && nullNodeSetupFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFutureUsage = null;
+            if (parseNode.GetChildNode("expires_after_days") is null) { _explicitNullValueExpiresAfterDays = default!; _explicitNullProperties?.Remove("expires_after_days"); }
+            else if (parseNode.GetChildNode("expires_after_days") is { } nullNodeExpiresAfterDays && nullNodeExpiresAfterDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterDays = null;
+            if (parseNode.GetChildNode("setup_future_usage") is null) { _explicitNullValueSetupFutureUsage = default!; _explicitNullProperties?.Remove("setup_future_usage"); }
+            else if (parseNode.GetChildNode("setup_future_usage") is { } nullNodeSetupFutureUsage && nullNodeSetupFutureUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFutureUsage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expires_after_days property</summary>
-        public int? ExpiresAfterDays { get => _explicitNullValueExpiresAfterDays; set { _explicitNullValueExpiresAfterDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_days"); else _explicitNullProperties?.Remove("expires_after_days"); } }
+        public int? ExpiresAfterDays { get => _explicitNullValueExpiresAfterDays; set { _explicitNullValueExpiresAfterDays = value; AdditionalData?.Remove("expires_after_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_days"); else _explicitNullProperties?.Remove("expires_after_days"); } }
         private int? _explicitNullValueExpiresAfterDays = default!;
         /// <summary>The setup_future_usage property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoletoSetupFutureUsage? SetupFutureUsage { get => _explicitNullValueSetupFutureUsage; set { _explicitNullValueSetupFutureUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_future_usage"); else _explicitNullProperties?.Remove("setup_future_usage"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoletoSetupFutureUsage? SetupFutureUsage { get => _explicitNullValueSetupFutureUsage; set { _explicitNullValueSetupFutureUsage = value; AdditionalData?.Remove("setup_future_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_future_usage"); else _explicitNullProperties?.Remove("setup_future_usage"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoletoSetupFutureUsage? _explicitNullValueSetupFutureUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoleto"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expires_after_days", n => { ExpiresAfterDays = n.GetIntValue(); } },
-                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoletoSetupFutureUsage>(); } },
+                { "setup_future_usage", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsBoletoSetupFutureUsage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetupFutureUsage = default; _explicitNullProperties?.Remove("setup_future_usage"); AdditionalData["setup_future_usage"] = unknown; } else { SetupFutureUsage = parsed; AdditionalData.Remove("setup_future_usage"); } } },
             };
         }
         /// <summary>

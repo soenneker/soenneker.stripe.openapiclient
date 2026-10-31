@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payments_pricing") is { } nullNodePaymentsPricing && nullNodePaymentsPricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentsPricing = null;
+            if (parseNode.GetChildNode("payments_pricing") is null) { _explicitNullValuePaymentsPricing = default!; _explicitNullProperties?.Remove("payments_pricing"); }
+            else if (parseNode.GetChildNode("payments_pricing") is { } nullNodePaymentsPricing && nullNodePaymentsPricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentsPricing = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The group the account is in to determine their payments pricing, and null if the account is on customized pricing. [See the Platform pricing tool documentation](https://docs.stripe.com/connect/platform-pricing-tools) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentsPricing { get => _explicitNullValuePaymentsPricing; set { _explicitNullValuePaymentsPricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments_pricing"); else _explicitNullProperties?.Remove("payments_pricing"); } }
+        public string? PaymentsPricing { get => _explicitNullValuePaymentsPricing; set { _explicitNullValuePaymentsPricing = value; AdditionalData?.Remove("payments_pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments_pricing"); else _explicitNullProperties?.Remove("payments_pricing"); } }
         private string? _explicitNullValuePaymentsPricing = default!;
 #nullable restore
 #else
-        public string PaymentsPricing { get => _explicitNullValuePaymentsPricing; set { _explicitNullValuePaymentsPricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments_pricing"); else _explicitNullProperties?.Remove("payments_pricing"); } }
+        public string PaymentsPricing { get => _explicitNullValuePaymentsPricing; set { _explicitNullValuePaymentsPricing = value; AdditionalData?.Remove("payments_pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payments_pricing"); else _explicitNullProperties?.Remove("payments_pricing"); } }
         private string _explicitNullValuePaymentsPricing = default!;
 #endif
         /// <summary>

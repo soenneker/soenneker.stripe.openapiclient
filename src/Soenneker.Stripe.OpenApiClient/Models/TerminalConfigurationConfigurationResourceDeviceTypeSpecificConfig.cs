@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("splashscreen") is { } nullNodeSplashscreen && nullNodeSplashscreen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Splashscreen = null;
+            if (parseNode.GetChildNode("splashscreen") is null) { _explicitNullValueSplashscreen = default!; _explicitNullProperties?.Remove("splashscreen"); }
+            else if (parseNode.GetChildNode("splashscreen") is { } nullNodeSplashscreen && nullNodeSplashscreen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Splashscreen = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A File ID representing an image to display on the reader</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen? Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen? Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; AdditionalData?.Remove("splashscreen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen? _explicitNullValueSplashscreen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; AdditionalData?.Remove("splashscreen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfigSplashscreen _explicitNullValueSplashscreen = default!;
 #endif
         /// <summary>

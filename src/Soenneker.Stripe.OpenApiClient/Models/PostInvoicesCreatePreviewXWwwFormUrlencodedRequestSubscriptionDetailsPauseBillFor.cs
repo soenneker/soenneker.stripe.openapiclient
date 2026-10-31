@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("outstanding_usage_through") is { } nullNodeOutstandingUsageThrough && nullNodeOutstandingUsageThrough.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutstandingUsageThrough = null;
-            if (parseNode.GetChildNode("unused_time_from") is { } nullNodeUnusedTimeFrom && nullNodeUnusedTimeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnusedTimeFrom = null;
+            if (parseNode.GetChildNode("outstanding_usage_through") is null) { _explicitNullValueOutstandingUsageThrough = default!; _explicitNullProperties?.Remove("outstanding_usage_through"); }
+            else if (parseNode.GetChildNode("outstanding_usage_through") is { } nullNodeOutstandingUsageThrough && nullNodeOutstandingUsageThrough.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutstandingUsageThrough = null;
+            if (parseNode.GetChildNode("unused_time_from") is null) { _explicitNullValueUnusedTimeFrom = default!; _explicitNullProperties?.Remove("unused_time_from"); }
+            else if (parseNode.GetChildNode("unused_time_from") is { } nullNodeUnusedTimeFrom && nullNodeUnusedTimeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnusedTimeFrom = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The outstanding_usage_through property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough? OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough? OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; AdditionalData?.Remove("outstanding_usage_through"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough? _explicitNullValueOutstandingUsageThrough = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough OutstandingUsageThrough { get => _explicitNullValueOutstandingUsageThrough; set { _explicitNullValueOutstandingUsageThrough = value; AdditionalData?.Remove("outstanding_usage_through"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outstanding_usage_through"); else _explicitNullProperties?.Remove("outstanding_usage_through"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForOutstandingUsageThrough _explicitNullValueOutstandingUsageThrough = default!;
 #endif
         /// <summary>The unused_time_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom? UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom? UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; AdditionalData?.Remove("unused_time_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom? _explicitNullValueUnusedTimeFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom UnusedTimeFrom { get => _explicitNullValueUnusedTimeFrom; set { _explicitNullValueUnusedTimeFrom = value; AdditionalData?.Remove("unused_time_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused_time_from"); else _explicitNullProperties?.Remove("unused_time_from"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPauseBillForUnusedTimeFrom _explicitNullValueUnusedTimeFrom = default!;
 #endif
         /// <summary>

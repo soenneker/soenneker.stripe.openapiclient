@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eu_bank_transfer") is { } nullNodeEuBankTransfer && nullNodeEuBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuBankTransfer = null;
-            if (parseNode.GetChildNode("requested_address_types") is { } nullNodeRequestedAddressTypes && nullNodeRequestedAddressTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedAddressTypes = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("eu_bank_transfer") is null) { _explicitNullValueEuBankTransfer = default!; _explicitNullProperties?.Remove("eu_bank_transfer"); }
+            else if (parseNode.GetChildNode("eu_bank_transfer") is { } nullNodeEuBankTransfer && nullNodeEuBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuBankTransfer = null;
+            if (parseNode.GetChildNode("requested_address_types") is null) { _explicitNullValueRequestedAddressTypes = default!; _explicitNullProperties?.Remove("requested_address_types"); }
+            else if (parseNode.GetChildNode("requested_address_types") is { } nullNodeRequestedAddressTypes && nullNodeRequestedAddressTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedAddressTypes = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The eu_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer? EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer? EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; AdditionalData?.Remove("eu_bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer? _explicitNullValueEuBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer EuBankTransfer { get => _explicitNullValueEuBankTransfer; set { _explicitNullValueEuBankTransfer = value; AdditionalData?.Remove("eu_bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_bank_transfer"); else _explicitNullProperties?.Remove("eu_bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer _explicitNullValueEuBankTransfer = default!;
 #endif
         /// <summary>The requested_address_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?>? RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?>? RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; AdditionalData?.Remove("requested_address_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?>? _explicitNullValueRequestedAddressTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?> RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?> RequestedAddressTypes { get => _explicitNullValueRequestedAddressTypes; set { _explicitNullValueRequestedAddressTypes = value; AdditionalData?.Remove("requested_address_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_address_types"); else _explicitNullProperties?.Remove("requested_address_types"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem?> _explicitNullValueRequestedAddressTypes = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransfer"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "eu_bank_transfer", n => { EuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferEuBankTransfer.CreateFromDiscriminatorValue); } },
                 { "requested_address_types", n => { RequestedAddressTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferRequestedAddressTypesItem>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransferType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

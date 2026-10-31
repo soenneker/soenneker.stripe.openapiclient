@@ -17,11 +17,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("address_source") is { } nullNodeAddressSource && nullNodeAddressSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSource = null;
-            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
-            if (parseNode.GetChildNode("taxability_override") is { } nullNodeTaxabilityOverride && nullNodeTaxabilityOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityOverride = null;
-            if (parseNode.GetChildNode("tax_ids") is { } nullNodeTaxIds && nullNodeTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIds = null;
+            if (parseNode.GetChildNode("address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("address"); }
+            else if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_source") is null) { _explicitNullValueAddressSource = default!; _explicitNullProperties?.Remove("address_source"); }
+            else if (parseNode.GetChildNode("address_source") is { } nullNodeAddressSource && nullNodeAddressSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSource = null;
+            if (parseNode.GetChildNode("ip_address") is null) { _explicitNullValueIpAddress = default!; _explicitNullProperties?.Remove("ip_address"); }
+            else if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("taxability_override") is null) { _explicitNullValueTaxabilityOverride = default!; _explicitNullProperties?.Remove("taxability_override"); }
+            else if (parseNode.GetChildNode("taxability_override") is { } nullNodeTaxabilityOverride && nullNodeTaxabilityOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityOverride = null;
+            if (parseNode.GetChildNode("tax_ids") is null) { _explicitNullValueTaxIds = default!; _explicitNullProperties?.Remove("tax_ids"); }
+            else if (parseNode.GetChildNode("tax_ids") is { } nullNodeTaxIds && nullNodeTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,37 +34,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s postal address (for example, home or business location).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The type of customer address provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource? AddressSource { get => _explicitNullValueAddressSource; set { _explicitNullValueAddressSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_source"); else _explicitNullProperties?.Remove("address_source"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource? AddressSource { get => _explicitNullValueAddressSource; set { _explicitNullValueAddressSource = value; AdditionalData?.Remove("address_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_source"); else _explicitNullProperties?.Remove("address_source"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource? _explicitNullValueAddressSource = default!;
         /// <summary>The customer&apos;s IP address (IPv4 or IPv6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The taxability override used for taxation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride? TaxabilityOverride { get => _explicitNullValueTaxabilityOverride; set { _explicitNullValueTaxabilityOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_override"); else _explicitNullProperties?.Remove("taxability_override"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride? TaxabilityOverride { get => _explicitNullValueTaxabilityOverride; set { _explicitNullValueTaxabilityOverride = value; AdditionalData?.Remove("taxability_override"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_override"); else _explicitNullProperties?.Remove("taxability_override"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride? _explicitNullValueTaxabilityOverride = default!;
         /// <summary>The customer&apos;s tax IDs (for example, EU VAT numbers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>? TaxIds { get => _explicitNullValueTaxIds; set { _explicitNullValueTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_ids"); else _explicitNullProperties?.Remove("tax_ids"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>? TaxIds { get => _explicitNullValueTaxIds; set { _explicitNullValueTaxIds = value; AdditionalData?.Remove("tax_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_ids"); else _explicitNullProperties?.Remove("tax_ids"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>? _explicitNullValueTaxIds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId> TaxIds { get => _explicitNullValueTaxIds; set { _explicitNullValueTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_ids"); else _explicitNullProperties?.Remove("tax_ids"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId> TaxIds { get => _explicitNullValueTaxIds; set { _explicitNullValueTaxIds = value; AdditionalData?.Remove("tax_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_ids"); else _explicitNullProperties?.Remove("tax_ids"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId> _explicitNullValueTaxIds = default!;
 #endif
         /// <summary>
@@ -88,10 +93,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress.CreateFromDiscriminatorValue); } },
-                { "address_source", n => { AddressSource = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>(); } },
+                { "address_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressSource = default; _explicitNullProperties?.Remove("address_source"); AdditionalData["address_source"] = unknown; } else { AddressSource = parsed; AdditionalData.Remove("address_source"); } } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "tax_ids", n => { TaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "taxability_override", n => { TaxabilityOverride = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride>(); } },
+                { "taxability_override", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxabilityOverride = default; _explicitNullProperties?.Remove("taxability_override"); AdditionalData["taxability_override"] = unknown; } else { TaxabilityOverride = parsed; AdditionalData.Remove("taxability_override"); } } },
             };
         }
         /// <summary>

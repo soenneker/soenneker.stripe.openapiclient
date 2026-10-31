@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dispute_rate") is { } nullNodeDisputeRate && nullNodeDisputeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeRate = null;
-            if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("dispute_rate") is null) { _explicitNullValueDisputeRate = default!; _explicitNullProperties?.Remove("dispute_rate"); }
+            else if (parseNode.GetChildNode("dispute_rate") is { } nullNodeDisputeRate && nullNodeDisputeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeRate = null;
+            if (parseNode.GetChildNode("level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("level"); }
+            else if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dispute_rate property</summary>
-        public int? DisputeRate { get => _explicitNullValueDisputeRate; set { _explicitNullValueDisputeRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_rate"); else _explicitNullProperties?.Remove("dispute_rate"); } }
+        public int? DisputeRate { get => _explicitNullValueDisputeRate; set { _explicitNullValueDisputeRate = value; AdditionalData?.Remove("dispute_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_rate"); else _explicitNullProperties?.Remove("dispute_rate"); } }
         private int? _explicitNullValueDisputeRate = default!;
         /// <summary>The level property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel? _explicitNullValueLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRisk"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dispute_rate", n => { DisputeRate = n.GetIntValue(); } },
-                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel>(); } },
+                { "level", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestRiskAssessmentMerchantDisputeRiskLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLevel = default; _explicitNullProperties?.Remove("level"); AdditionalData["level"] = unknown; } else { Level = parsed; AdditionalData.Remove("level"); } } },
             };
         }
         /// <summary>

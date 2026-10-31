@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_countries") is { } nullNodeAllowedCountries && nullNodeAllowedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCountries = null;
+            if (parseNode.GetChildNode("allowed_countries") is null) { _explicitNullValueAllowedCountries = default!; _explicitNullProperties?.Remove("allowed_countries"); }
+            else if (parseNode.GetChildNode("allowed_countries") is { } nullNodeAllowedCountries && nullNodeAllowedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCountries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The allowed_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?>? AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_countries"); else _explicitNullProperties?.Remove("allowed_countries"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?>? AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; AdditionalData?.Remove("allowed_countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_countries"); else _explicitNullProperties?.Remove("allowed_countries"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?>? _explicitNullValueAllowedCountries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?> AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_countries"); else _explicitNullProperties?.Remove("allowed_countries"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?> AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; AdditionalData?.Remove("allowed_countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_countries"); else _explicitNullProperties?.Remove("allowed_countries"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestShippingAddressCollectionShippingAddressCollectionParamsAllowedCountriesItem?> _explicitNullValueAllowedCountries = default!;
 #endif
         /// <summary>

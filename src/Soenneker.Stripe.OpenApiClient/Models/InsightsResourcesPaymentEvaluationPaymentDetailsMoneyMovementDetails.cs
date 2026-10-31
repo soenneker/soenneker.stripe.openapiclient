@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
-            if (parseNode.GetChildNode("money_movement_type") is { } nullNodeMoneyMovementType && nullNodeMoneyMovementType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoneyMovementType = null;
+            if (parseNode.GetChildNode("card") is null) { _explicitNullValueCard = default!; _explicitNullProperties?.Remove("card"); }
+            else if (parseNode.GetChildNode("card") is { } nullNodeCard && nullNodeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Card = null;
+            if (parseNode.GetChildNode("money_movement_type") is null) { _explicitNullValueMoneyMovementType = default!; _explicitNullProperties?.Remove("money_movement_type"); }
+            else if (parseNode.GetChildNode("money_movement_type") is { } nullNodeMoneyMovementType && nullNodeMoneyMovementType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoneyMovementType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Describes card money movement details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Describes the type of money movement.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get => _explicitNullValueMoneyMovementType; set { _explicitNullValueMoneyMovementType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("money_movement_type"); else _explicitNullProperties?.Remove("money_movement_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get => _explicitNullValueMoneyMovementType; set { _explicitNullValueMoneyMovementType = value; AdditionalData?.Remove("money_movement_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("money_movement_type"); else _explicitNullProperties?.Remove("money_movement_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? _explicitNullValueMoneyMovementType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard.CreateFromDiscriminatorValue); } },
-                { "money_movement_type", n => { MoneyMovementType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>(); } },
+                { "money_movement_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMoneyMovementType = default; _explicitNullProperties?.Remove("money_movement_type"); AdditionalData["money_movement_type"] = unknown; } else { MoneyMovementType = parsed; AdditionalData.Remove("money_movement_type"); } } },
             };
         }
         /// <summary>

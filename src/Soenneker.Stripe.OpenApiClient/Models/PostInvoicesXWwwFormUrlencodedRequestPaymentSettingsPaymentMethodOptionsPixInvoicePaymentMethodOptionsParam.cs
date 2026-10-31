@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_includes_iof") is { } nullNodeAmountIncludesIof && nullNodeAmountIncludesIof.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountIncludesIof = null;
-            if (parseNode.GetChildNode("expires_after_seconds") is { } nullNodeExpiresAfterSeconds && nullNodeExpiresAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterSeconds = null;
+            if (parseNode.GetChildNode("amount_includes_iof") is null) { _explicitNullValueAmountIncludesIof = default!; _explicitNullProperties?.Remove("amount_includes_iof"); }
+            else if (parseNode.GetChildNode("amount_includes_iof") is { } nullNodeAmountIncludesIof && nullNodeAmountIncludesIof.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountIncludesIof = null;
+            if (parseNode.GetChildNode("expires_after_seconds") is null) { _explicitNullValueExpiresAfterSeconds = default!; _explicitNullProperties?.Remove("expires_after_seconds"); }
+            else if (parseNode.GetChildNode("expires_after_seconds") is { } nullNodeExpiresAfterSeconds && nullNodeExpiresAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAfterSeconds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_includes_iof property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? AmountIncludesIof { get => _explicitNullValueAmountIncludesIof; set { _explicitNullValueAmountIncludesIof = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_includes_iof"); else _explicitNullProperties?.Remove("amount_includes_iof"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? AmountIncludesIof { get => _explicitNullValueAmountIncludesIof; set { _explicitNullValueAmountIncludesIof = value; AdditionalData?.Remove("amount_includes_iof"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_includes_iof"); else _explicitNullProperties?.Remove("amount_includes_iof"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof? _explicitNullValueAmountIncludesIof = default!;
         /// <summary>The expires_after_seconds property</summary>
-        public int? ExpiresAfterSeconds { get => _explicitNullValueExpiresAfterSeconds; set { _explicitNullValueExpiresAfterSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_seconds"); else _explicitNullProperties?.Remove("expires_after_seconds"); } }
+        public int? ExpiresAfterSeconds { get => _explicitNullValueExpiresAfterSeconds; set { _explicitNullValueExpiresAfterSeconds = value; AdditionalData?.Remove("expires_after_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_seconds"); else _explicitNullProperties?.Remove("expires_after_seconds"); } }
         private int? _explicitNullValueExpiresAfterSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParam"/> and sets the default values.
@@ -54,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof>(); } },
+                { "amount_includes_iof", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAmountIncludesIof = default; _explicitNullProperties?.Remove("amount_includes_iof"); AdditionalData["amount_includes_iof"] = unknown; } else { AmountIncludesIof = parsed; AdditionalData.Remove("amount_includes_iof"); } } },
                 { "expires_after_seconds", n => { ExpiresAfterSeconds = n.GetIntValue(); } },
             };
         }

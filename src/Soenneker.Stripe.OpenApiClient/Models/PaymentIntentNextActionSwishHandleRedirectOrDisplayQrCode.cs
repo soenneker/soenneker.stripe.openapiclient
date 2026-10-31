@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
-            if (parseNode.GetChildNode("qr_code") is { } nullNodeQrCode && nullNodeQrCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCode = null;
+            if (parseNode.GetChildNode("hosted_instructions_url") is null) { _explicitNullValueHostedInstructionsUrl = default!; _explicitNullProperties?.Remove("hosted_instructions_url"); }
+            else if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
+            if (parseNode.GetChildNode("qr_code") is null) { _explicitNullValueQrCode = default!; _explicitNullProperties?.Remove("qr_code"); }
+            else if (parseNode.GetChildNode("qr_code") is { } nullNodeQrCode && nullNodeQrCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The URL to the hosted Swish instructions page, which allows customers to view the QR code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; AdditionalData?.Remove("hosted_instructions_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
         private string? _explicitNullValueHostedInstructionsUrl = default!;
 #nullable restore
 #else
-        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; AdditionalData?.Remove("hosted_instructions_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
         private string _explicitNullValueHostedInstructionsUrl = default!;
 #endif
         /// <summary>The qr_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode? QrCode { get => _explicitNullValueQrCode; set { _explicitNullValueQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code"); else _explicitNullProperties?.Remove("qr_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode? QrCode { get => _explicitNullValueQrCode; set { _explicitNullValueQrCode = value; AdditionalData?.Remove("qr_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code"); else _explicitNullProperties?.Remove("qr_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode? _explicitNullValueQrCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode QrCode { get => _explicitNullValueQrCode; set { _explicitNullValueQrCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code"); else _explicitNullProperties?.Remove("qr_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode QrCode { get => _explicitNullValueQrCode; set { _explicitNullValueQrCode = value; AdditionalData?.Remove("qr_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code"); else _explicitNullProperties?.Remove("qr_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionSwishQrCode _explicitNullValueQrCode = default!;
 #endif
         /// <summary>

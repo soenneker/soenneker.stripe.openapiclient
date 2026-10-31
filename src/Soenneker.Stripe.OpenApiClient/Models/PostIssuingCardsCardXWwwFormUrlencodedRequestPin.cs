@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("encrypted_number") is { } nullNodeEncryptedNumber && nullNodeEncryptedNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptedNumber = null;
+            if (parseNode.GetChildNode("encrypted_number") is null) { _explicitNullValueEncryptedNumber = default!; _explicitNullProperties?.Remove("encrypted_number"); }
+            else if (parseNode.GetChildNode("encrypted_number") is { } nullNodeEncryptedNumber && nullNodeEncryptedNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptedNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The encrypted_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EncryptedNumber { get => _explicitNullValueEncryptedNumber; set { _explicitNullValueEncryptedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypted_number"); else _explicitNullProperties?.Remove("encrypted_number"); } }
+        public string? EncryptedNumber { get => _explicitNullValueEncryptedNumber; set { _explicitNullValueEncryptedNumber = value; AdditionalData?.Remove("encrypted_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypted_number"); else _explicitNullProperties?.Remove("encrypted_number"); } }
         private string? _explicitNullValueEncryptedNumber = default!;
 #nullable restore
 #else
-        public string EncryptedNumber { get => _explicitNullValueEncryptedNumber; set { _explicitNullValueEncryptedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypted_number"); else _explicitNullProperties?.Remove("encrypted_number"); } }
+        public string EncryptedNumber { get => _explicitNullValueEncryptedNumber; set { _explicitNullValueEncryptedNumber = value; AdditionalData?.Remove("encrypted_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encrypted_number"); else _explicitNullProperties?.Remove("encrypted_number"); } }
         private string _explicitNullValueEncryptedNumber = default!;
 #endif
         /// <summary>

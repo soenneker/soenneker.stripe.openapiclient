@@ -17,12 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("amount_charged") is { } nullNodeAmountCharged && nullNodeAmountCharged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountCharged = null;
-            if (parseNode.GetChildNode("amount_received") is { } nullNodeAmountReceived && nullNodeAmountReceived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountReceived = null;
-            if (parseNode.GetChildNode("amount_returned") is { } nullNodeAmountReturned && nullNodeAmountReturned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountReturned = null;
-            if (parseNode.GetChildNode("refund_attributes_method") is { } nullNodeRefundAttributesMethod && nullNodeRefundAttributesMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesMethod = null;
-            if (parseNode.GetChildNode("refund_attributes_status") is { } nullNodeRefundAttributesStatus && nullNodeRefundAttributesStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesStatus = null;
+            if (parseNode.GetChildNode("address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("address"); }
+            else if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("amount_charged") is null) { _explicitNullValueAmountCharged = default!; _explicitNullProperties?.Remove("amount_charged"); }
+            else if (parseNode.GetChildNode("amount_charged") is { } nullNodeAmountCharged && nullNodeAmountCharged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountCharged = null;
+            if (parseNode.GetChildNode("amount_received") is null) { _explicitNullValueAmountReceived = default!; _explicitNullProperties?.Remove("amount_received"); }
+            else if (parseNode.GetChildNode("amount_received") is { } nullNodeAmountReceived && nullNodeAmountReceived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountReceived = null;
+            if (parseNode.GetChildNode("amount_returned") is null) { _explicitNullValueAmountReturned = default!; _explicitNullProperties?.Remove("amount_returned"); }
+            else if (parseNode.GetChildNode("amount_returned") is { } nullNodeAmountReturned && nullNodeAmountReturned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountReturned = null;
+            if (parseNode.GetChildNode("refund_attributes_method") is null) { _explicitNullValueRefundAttributesMethod = default!; _explicitNullProperties?.Remove("refund_attributes_method"); }
+            else if (parseNode.GetChildNode("refund_attributes_method") is { } nullNodeRefundAttributesMethod && nullNodeRefundAttributesMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesMethod = null;
+            if (parseNode.GetChildNode("refund_attributes_status") is null) { _explicitNullValueRefundAttributesStatus = default!; _explicitNullProperties?.Remove("refund_attributes_status"); }
+            else if (parseNode.GetChildNode("refund_attributes_status") is { } nullNodeRefundAttributesStatus && nullNodeRefundAttributesStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,40 +36,40 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The address of the receiver source. This is the value that should be communicated to the customer to send their funds to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>The total amount that was moved to your balance. This is almost always equal to the amount charged. In rare cases when customers deposit excess funds and we are unable to refund those, those funds get moved to your balance and show up in amount_charged as well. The amount charged is expressed in the source&apos;s currency.</summary>
-        public int? AmountCharged { get => _explicitNullValueAmountCharged; set { _explicitNullValueAmountCharged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_charged"); else _explicitNullProperties?.Remove("amount_charged"); } }
+        public int? AmountCharged { get => _explicitNullValueAmountCharged; set { _explicitNullValueAmountCharged = value; AdditionalData?.Remove("amount_charged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_charged"); else _explicitNullProperties?.Remove("amount_charged"); } }
         private int? _explicitNullValueAmountCharged = default!;
         /// <summary>The total amount received by the receiver source. `amount_received = amount_returned + amount_charged` should be true for consumed sources unless customers deposit excess funds. The amount received is expressed in the source&apos;s currency.</summary>
-        public int? AmountReceived { get => _explicitNullValueAmountReceived; set { _explicitNullValueAmountReceived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_received"); else _explicitNullProperties?.Remove("amount_received"); } }
+        public int? AmountReceived { get => _explicitNullValueAmountReceived; set { _explicitNullValueAmountReceived = value; AdditionalData?.Remove("amount_received"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_received"); else _explicitNullProperties?.Remove("amount_received"); } }
         private int? _explicitNullValueAmountReceived = default!;
         /// <summary>The total amount that was returned to the customer. The amount returned is expressed in the source&apos;s currency.</summary>
-        public int? AmountReturned { get => _explicitNullValueAmountReturned; set { _explicitNullValueAmountReturned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_returned"); else _explicitNullProperties?.Remove("amount_returned"); } }
+        public int? AmountReturned { get => _explicitNullValueAmountReturned; set { _explicitNullValueAmountReturned = value; AdditionalData?.Remove("amount_returned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_returned"); else _explicitNullProperties?.Remove("amount_returned"); } }
         private int? _explicitNullValueAmountReturned = default!;
         /// <summary>Type of refund attribute method, one of `email`, `manual`, or `none`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
+        public string? RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; AdditionalData?.Remove("refund_attributes_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
         private string? _explicitNullValueRefundAttributesMethod = default!;
 #nullable restore
 #else
-        public string RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
+        public string RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; AdditionalData?.Remove("refund_attributes_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
         private string _explicitNullValueRefundAttributesMethod = default!;
 #endif
         /// <summary>Type of refund attribute status, one of `missing`, `requested`, or `available`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundAttributesStatus { get => _explicitNullValueRefundAttributesStatus; set { _explicitNullValueRefundAttributesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_status"); else _explicitNullProperties?.Remove("refund_attributes_status"); } }
+        public string? RefundAttributesStatus { get => _explicitNullValueRefundAttributesStatus; set { _explicitNullValueRefundAttributesStatus = value; AdditionalData?.Remove("refund_attributes_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_status"); else _explicitNullProperties?.Remove("refund_attributes_status"); } }
         private string? _explicitNullValueRefundAttributesStatus = default!;
 #nullable restore
 #else
-        public string RefundAttributesStatus { get => _explicitNullValueRefundAttributesStatus; set { _explicitNullValueRefundAttributesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_status"); else _explicitNullProperties?.Remove("refund_attributes_status"); } }
+        public string RefundAttributesStatus { get => _explicitNullValueRefundAttributesStatus; set { _explicitNullValueRefundAttributesStatus = value; AdditionalData?.Remove("refund_attributes_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_status"); else _explicitNullProperties?.Remove("refund_attributes_status"); } }
         private string _explicitNullValueRefundAttributesStatus = default!;
 #endif
         /// <summary>

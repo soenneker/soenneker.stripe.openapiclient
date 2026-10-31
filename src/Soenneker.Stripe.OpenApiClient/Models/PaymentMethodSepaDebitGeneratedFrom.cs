@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("charge") is { } nullNodeCharge && nullNodeCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charge = null;
-            if (parseNode.GetChildNode("setup_attempt") is { } nullNodeSetupAttempt && nullNodeSetupAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupAttempt = null;
+            if (parseNode.GetChildNode("charge") is null) { _explicitNullValueCharge = default!; _explicitNullProperties?.Remove("charge"); }
+            else if (parseNode.GetChildNode("charge") is { } nullNodeCharge && nullNodeCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charge = null;
+            if (parseNode.GetChildNode("setup_attempt") is null) { _explicitNullValueSetupAttempt = default!; _explicitNullProperties?.Remove("setup_attempt"); }
+            else if (parseNode.GetChildNode("setup_attempt") is { } nullNodeSetupAttempt && nullNodeSetupAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupAttempt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,22 +29,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of the Charge that generated this PaymentMethod, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge? Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge? Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; AdditionalData?.Remove("charge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge? _explicitNullValueCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge Charge { get => _explicitNullValueCharge; set { _explicitNullValueCharge = value; AdditionalData?.Remove("charge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge"); else _explicitNullProperties?.Remove("charge"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>The ID of the SetupAttempt that generated this PaymentMethod, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt? SetupAttempt { get => _explicitNullValueSetupAttempt; set { _explicitNullValueSetupAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_attempt"); else _explicitNullProperties?.Remove("setup_attempt"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt? _explicitNullValueSetupAttempt = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt? SetupAttempt { get => _explicitNullValueSetupAttempt; set { _explicitNullValueSetupAttempt = value; AdditionalData?.Remove("setup_attempt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_attempt"); else _explicitNullProperties?.Remove("setup_attempt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt? _explicitNullValueSetupAttempt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt SetupAttempt { get => _explicitNullValueSetupAttempt; set { _explicitNullValueSetupAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_attempt"); else _explicitNullProperties?.Remove("setup_attempt"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt _explicitNullValueSetupAttempt = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt SetupAttempt { get => _explicitNullValueSetupAttempt; set { _explicitNullValueSetupAttempt = value; AdditionalData?.Remove("setup_attempt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_attempt"); else _explicitNullProperties?.Remove("setup_attempt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt _explicitNullValueSetupAttempt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom"/> and sets the default values.
@@ -70,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge>(global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge.CreateFromDiscriminatorValue); } },
-                { "setup_attempt", n => { SetupAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt.CreateFromDiscriminatorValue); } },
+                { "setup_attempt", n => { SetupAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge>("charge", Charge);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt>("setup_attempt", SetupAttempt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt>("setup_attempt", SetupAttempt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

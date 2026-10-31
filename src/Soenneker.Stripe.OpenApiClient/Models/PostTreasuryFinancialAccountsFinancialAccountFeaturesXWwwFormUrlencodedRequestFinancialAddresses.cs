@@ -18,17 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
+            if (parseNode.GetChildNode("aba") is null) { _explicitNullValueAba = default!; _explicitNullProperties?.Remove("aba"); }
+            else if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
         }
 
         /// <summary>The aba property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba? _explicitNullValueAba = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountFeaturesXWwwFormUrlencodedRequestFinancialAddressesAba _explicitNullValueAba = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

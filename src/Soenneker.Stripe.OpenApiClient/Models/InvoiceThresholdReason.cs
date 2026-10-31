@@ -17,23 +17,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_gte") is { } nullNodeAmountGte && nullNodeAmountGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountGte = null;
-            if (parseNode.GetChildNode("item_reasons") is { } nullNodeItemReasons && nullNodeItemReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemReasons = null;
+            if (parseNode.GetChildNode("amount_gte") is null) { _explicitNullValueAmountGte = default!; _explicitNullProperties?.Remove("amount_gte"); }
+            else if (parseNode.GetChildNode("amount_gte") is { } nullNodeAmountGte && nullNodeAmountGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountGte = null;
+            if (parseNode.GetChildNode("item_reasons") is null) { _explicitNullValueItemReasons = default!; _explicitNullProperties?.Remove("item_reasons"); }
+            else if (parseNode.GetChildNode("item_reasons") is { } nullNodeItemReasons && nullNodeItemReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemReasons = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total invoice amount threshold boundary if it triggered the threshold invoice.</summary>
-        public int? AmountGte { get => _explicitNullValueAmountGte; set { _explicitNullValueAmountGte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_gte"); else _explicitNullProperties?.Remove("amount_gte"); } }
+        public int? AmountGte { get => _explicitNullValueAmountGte; set { _explicitNullValueAmountGte = value; AdditionalData?.Remove("amount_gte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_gte"); else _explicitNullProperties?.Remove("amount_gte"); } }
         private int? _explicitNullValueAmountGte = default!;
         /// <summary>Indicates which line items triggered a threshold invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason>? ItemReasons { get => _explicitNullValueItemReasons; set { _explicitNullValueItemReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_reasons"); else _explicitNullProperties?.Remove("item_reasons"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason>? ItemReasons { get => _explicitNullValueItemReasons; set { _explicitNullValueItemReasons = value; AdditionalData?.Remove("item_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_reasons"); else _explicitNullProperties?.Remove("item_reasons"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason>? _explicitNullValueItemReasons = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason> ItemReasons { get => _explicitNullValueItemReasons; set { _explicitNullValueItemReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_reasons"); else _explicitNullProperties?.Remove("item_reasons"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason> ItemReasons { get => _explicitNullValueItemReasons; set { _explicitNullValueItemReasons = value; AdditionalData?.Remove("item_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_reasons"); else _explicitNullProperties?.Remove("item_reasons"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason> _explicitNullValueItemReasons = default!;
 #endif
         /// <summary>

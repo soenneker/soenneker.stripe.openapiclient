@@ -18,50 +18,55 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("as_of") is { } nullNodeAsOf && nullNodeAsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsOf = null;
-            if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
-            if (parseNode.GetChildNode("credit") is { } nullNodeCredit && nullNodeCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Credit = null;
-            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("as_of") is null) { _explicitNullValueAsOf = default!; _explicitNullProperties?.Remove("as_of"); }
+            else if (parseNode.GetChildNode("as_of") is { } nullNodeAsOf && nullNodeAsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsOf = null;
+            if (parseNode.GetChildNode("cash") is null) { _explicitNullValueCash = default!; _explicitNullProperties?.Remove("cash"); }
+            else if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
+            if (parseNode.GetChildNode("credit") is null) { _explicitNullValueCredit = default!; _explicitNullProperties?.Remove("credit"); }
+            else if (parseNode.GetChildNode("credit") is { } nullNodeCredit && nullNodeCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Credit = null;
+            if (parseNode.GetChildNode("current") is null) { _explicitNullValueCurrent = default!; _explicitNullProperties?.Remove("current"); }
+            else if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the external institution calculated this balance. Measured in seconds since the Unix epoch.</summary>
-        public int? AsOf { get => _explicitNullValueAsOf; set { _explicitNullValueAsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("as_of"); else _explicitNullProperties?.Remove("as_of"); } }
+        public int? AsOf { get => _explicitNullValueAsOf; set { _explicitNullValueAsOf = value; AdditionalData?.Remove("as_of"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("as_of"); else _explicitNullProperties?.Remove("as_of"); } }
         private int? _explicitNullValueAsOf = default!;
         /// <summary>The cash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; AdditionalData?.Remove("cash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance? _explicitNullValueCash = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; AdditionalData?.Remove("cash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance _explicitNullValueCash = default!;
 #endif
         /// <summary>The credit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; AdditionalData?.Remove("credit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance? _explicitNullValueCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance Credit { get => _explicitNullValueCredit; set { _explicitNullValueCredit = value; AdditionalData?.Remove("credit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit"); else _explicitNullProperties?.Remove("credit"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance _explicitNullValueCredit = default!;
 #endif
         /// <summary>The balances owed to (or by) the account holder, before subtracting any outbound pending transactions or adding any inbound pending transactions.Each key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.Each value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; AdditionalData?.Remove("current"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty? _explicitNullValueCurrent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; AdditionalData?.Remove("current"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty _explicitNullValueCurrent = default!;
 #endif
         /// <summary>The `type` of the balance. An additional hash is included on the balance with a name matching this value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance"/> and sets the default values.
@@ -92,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "cash", n => { Cash = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance.CreateFromDiscriminatorValue); } },
                 { "credit", n => { Credit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance.CreateFromDiscriminatorValue); } },
                 { "current", n => { Current = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

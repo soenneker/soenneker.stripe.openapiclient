@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("divide_by") is { } nullNodeDivideBy && nullNodeDivideBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DivideBy = null;
-            if (parseNode.GetChildNode("round") is { } nullNodeRound && nullNodeRound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Round = null;
+            if (parseNode.GetChildNode("divide_by") is null) { _explicitNullValueDivideBy = default!; _explicitNullProperties?.Remove("divide_by"); }
+            else if (parseNode.GetChildNode("divide_by") is { } nullNodeDivideBy && nullNodeDivideBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DivideBy = null;
+            if (parseNode.GetChildNode("round") is null) { _explicitNullValueRound = default!; _explicitNullProperties?.Remove("round"); }
+            else if (parseNode.GetChildNode("round") is { } nullNodeRound && nullNodeRound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Round = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Divide usage by this number.</summary>
-        public int? DivideBy { get => _explicitNullValueDivideBy; set { _explicitNullValueDivideBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("divide_by"); else _explicitNullProperties?.Remove("divide_by"); } }
+        public int? DivideBy { get => _explicitNullValueDivideBy; set { _explicitNullValueDivideBy = value; AdditionalData?.Remove("divide_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("divide_by"); else _explicitNullProperties?.Remove("divide_by"); } }
         private int? _explicitNullValueDivideBy = default!;
         /// <summary>After division, either round the result `up` or `down`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantityRound? Round { get => _explicitNullValueRound; set { _explicitNullValueRound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("round"); else _explicitNullProperties?.Remove("round"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantityRound? Round { get => _explicitNullValueRound; set { _explicitNullValueRound = value; AdditionalData?.Remove("round"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("round"); else _explicitNullProperties?.Remove("round"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantityRound? _explicitNullValueRound = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity"/> and sets the default values.
@@ -56,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "divide_by", n => { DivideBy = n.GetIntValue(); } },
-                { "round", n => { Round = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantityRound>(); } },
+                { "round", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantityRound>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRound = default; _explicitNullProperties?.Remove("round"); AdditionalData["round"] = unknown; } else { Round = parsed; AdditionalData.Remove("round"); } } },
             };
         }
         /// <summary>

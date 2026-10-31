@@ -18,11 +18,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("industry_product_code") is { } nullNodeIndustryProductCode && nullNodeIndustryProductCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndustryProductCode = null;
-            if (parseNode.GetChildNode("quantity_decimal") is { } nullNodeQuantityDecimal && nullNodeQuantityDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantityDecimal = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("unit") is { } nullNodeUnit && nullNodeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unit = null;
-            if (parseNode.GetChildNode("unit_cost_decimal") is { } nullNodeUnitCostDecimal && nullNodeUnitCostDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitCostDecimal = null;
+            if (parseNode.GetChildNode("industry_product_code") is null) { _explicitNullValueIndustryProductCode = default!; _explicitNullProperties?.Remove("industry_product_code"); }
+            else if (parseNode.GetChildNode("industry_product_code") is { } nullNodeIndustryProductCode && nullNodeIndustryProductCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndustryProductCode = null;
+            if (parseNode.GetChildNode("quantity_decimal") is null) { _explicitNullValueQuantityDecimal = default!; _explicitNullProperties?.Remove("quantity_decimal"); }
+            else if (parseNode.GetChildNode("quantity_decimal") is { } nullNodeQuantityDecimal && nullNodeQuantityDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantityDecimal = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("unit") is null) { _explicitNullValueUnit = default!; _explicitNullProperties?.Remove("unit"); }
+            else if (parseNode.GetChildNode("unit") is { } nullNodeUnit && nullNodeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unit = null;
+            if (parseNode.GetChildNode("unit_cost_decimal") is null) { _explicitNullValueUnitCostDecimal = default!; _explicitNullProperties?.Remove("unit_cost_decimal"); }
+            else if (parseNode.GetChildNode("unit_cost_decimal") is { } nullNodeUnitCostDecimal && nullNodeUnitCostDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitCostDecimal = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Conexxus Payment System Product Code](https://www.conexxus.org/conexxus-payment-system-product-codes) identifying the primary fuel product purchased.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IndustryProductCode { get => _explicitNullValueIndustryProductCode; set { _explicitNullValueIndustryProductCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("industry_product_code"); else _explicitNullProperties?.Remove("industry_product_code"); } }
+        public string? IndustryProductCode { get => _explicitNullValueIndustryProductCode; set { _explicitNullValueIndustryProductCode = value; AdditionalData?.Remove("industry_product_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("industry_product_code"); else _explicitNullProperties?.Remove("industry_product_code"); } }
         private string? _explicitNullValueIndustryProductCode = default!;
 #nullable restore
 #else
-        public string IndustryProductCode { get => _explicitNullValueIndustryProductCode; set { _explicitNullValueIndustryProductCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("industry_product_code"); else _explicitNullProperties?.Remove("industry_product_code"); } }
+        public string IndustryProductCode { get => _explicitNullValueIndustryProductCode; set { _explicitNullValueIndustryProductCode = value; AdditionalData?.Remove("industry_product_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("industry_product_code"); else _explicitNullProperties?.Remove("industry_product_code"); } }
         private string _explicitNullValueIndustryProductCode = default!;
 #endif
         /// <summary>The quantity of `unit`s of fuel that was dispensed, represented as a decimal string with at most 12 decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
+        public string? QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; AdditionalData?.Remove("quantity_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
         private string? _explicitNullValueQuantityDecimal = default!;
 #nullable restore
 #else
-        public string QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
+        public string QuantityDecimal { get => _explicitNullValueQuantityDecimal; set { _explicitNullValueQuantityDecimal = value; AdditionalData?.Remove("quantity_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity_decimal"); else _explicitNullProperties?.Remove("quantity_decimal"); } }
         private string _explicitNullValueQuantityDecimal = default!;
 #endif
         /// <summary>The type of fuel that was purchased. One of `diesel`, `unleaded_plus`, `unleaded_regular`, `unleaded_super`, or `other`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>The units for `quantity_decimal`. One of `charging_minute`, `imperial_gallon`, `kilogram`, `kilowatt_hour`, `liter`, `pound`, `us_gallon`, or `other`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
+        public string? Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; AdditionalData?.Remove("unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
         private string? _explicitNullValueUnit = default!;
 #nullable restore
 #else
-        public string Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
+        public string Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; AdditionalData?.Remove("unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
         private string _explicitNullValueUnit = default!;
 #endif
         /// <summary>The cost in cents per each unit of fuel, represented as a decimal string with at most 12 decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitCostDecimal { get => _explicitNullValueUnitCostDecimal; set { _explicitNullValueUnitCostDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_cost_decimal"); else _explicitNullProperties?.Remove("unit_cost_decimal"); } }
+        public string? UnitCostDecimal { get => _explicitNullValueUnitCostDecimal; set { _explicitNullValueUnitCostDecimal = value; AdditionalData?.Remove("unit_cost_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_cost_decimal"); else _explicitNullProperties?.Remove("unit_cost_decimal"); } }
         private string? _explicitNullValueUnitCostDecimal = default!;
 #nullable restore
 #else
-        public string UnitCostDecimal { get => _explicitNullValueUnitCostDecimal; set { _explicitNullValueUnitCostDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_cost_decimal"); else _explicitNullProperties?.Remove("unit_cost_decimal"); } }
+        public string UnitCostDecimal { get => _explicitNullValueUnitCostDecimal; set { _explicitNullValueUnitCostDecimal = value; AdditionalData?.Remove("unit_cost_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_cost_decimal"); else _explicitNullProperties?.Remove("unit_cost_decimal"); } }
         private string _explicitNullValueUnitCostDecimal = default!;
 #endif
         /// <summary>

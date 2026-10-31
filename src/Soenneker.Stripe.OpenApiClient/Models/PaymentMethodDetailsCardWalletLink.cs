@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("funding_source_group") is { } nullNodeFundingSourceGroup && nullNodeFundingSourceGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingSourceGroup = null;
+            if (parseNode.GetChildNode("funding_source_group") is null) { _explicitNullValueFundingSourceGroup = default!; _explicitNullProperties?.Remove("funding_source_group"); }
+            else if (parseNode.GetChildNode("funding_source_group") is { } nullNodeFundingSourceGroup && nullNodeFundingSourceGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingSourceGroup = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The [funding source group code](https://docs.stripe.com/payments/link/link-payment-methods) applied to this Link payment at confirmation time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FundingSourceGroup { get => _explicitNullValueFundingSourceGroup; set { _explicitNullValueFundingSourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source_group"); else _explicitNullProperties?.Remove("funding_source_group"); } }
+        public string? FundingSourceGroup { get => _explicitNullValueFundingSourceGroup; set { _explicitNullValueFundingSourceGroup = value; AdditionalData?.Remove("funding_source_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source_group"); else _explicitNullProperties?.Remove("funding_source_group"); } }
         private string? _explicitNullValueFundingSourceGroup = default!;
 #nullable restore
 #else
-        public string FundingSourceGroup { get => _explicitNullValueFundingSourceGroup; set { _explicitNullValueFundingSourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source_group"); else _explicitNullProperties?.Remove("funding_source_group"); } }
+        public string FundingSourceGroup { get => _explicitNullValueFundingSourceGroup; set { _explicitNullValueFundingSourceGroup = value; AdditionalData?.Remove("funding_source_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_source_group"); else _explicitNullProperties?.Remove("funding_source_group"); } }
         private string _explicitNullValueFundingSourceGroup = default!;
 #endif
         /// <summary>

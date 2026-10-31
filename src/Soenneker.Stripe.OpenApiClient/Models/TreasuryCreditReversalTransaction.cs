@@ -52,9 +52,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("amount") != null && parseNode.GetChildNode("balance_impact") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("currency") != null && parseNode.GetChildNode("description") != null && parseNode.GetChildNode("financial_account") != null && parseNode.GetChildNode("flow_type") != null && (parseNode.GetChildNode("flow_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag7 && ("credit_reversal".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "debit_reversal".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "inbound_transfer".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "issuing_authorization".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "other".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "outbound_payment".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "outbound_transfer".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "received_credit".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "received_debit".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag11 && ("treasury.transaction".Equals(tag11.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status") != null && (parseNode.GetChildNode("status")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag13 && ("open".Equals(tag13.GetValue(), global::System.StringComparison.Ordinal) || "posted".Equals(tag13.GetValue(), global::System.StringComparison.Ordinal) || "void".Equals(tag13.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("status_transitions") != null))();
-            if (result.String == null && result.TreasuryTransaction == null && matchesUnionBranch0) result.TreasuryTransaction = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction(), parseNode);
-            if (result.String == null && result.TreasuryTransaction == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.TreasuryTransaction = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction(), parseNode);
             if (result.String == null && result.TreasuryTransaction == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -64,6 +61,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(TreasuryTransaction != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TreasuryTransaction);
@@ -78,7 +77,10 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (String == null && TreasuryTransaction == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (TreasuryTransaction != null && String == null) { if (TreasuryTransaction is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TreasuryTransaction); return; }
+            int selectedUnionBranches = 0;
+            if (String != null) selectedUnionBranches++;
+            if (TreasuryTransaction != null) selectedUnionBranches++;
+            if (TreasuryTransaction != null && selectedUnionBranches == 1) { if (TreasuryTransaction is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TreasuryTransaction); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(String != null)

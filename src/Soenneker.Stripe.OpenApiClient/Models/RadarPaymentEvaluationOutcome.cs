@@ -18,11 +18,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("merchant_blocked") is { } nullNodeMerchantBlocked && nullNodeMerchantBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantBlocked = null;
-            if (parseNode.GetChildNode("payment_intent_id") is { } nullNodePaymentIntentId && nullNodePaymentIntentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntentId = null;
-            if (parseNode.GetChildNode("rejected") is { } nullNodeRejected && nullNodeRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rejected = null;
-            if (parseNode.GetChildNode("succeeded") is { } nullNodeSucceeded && nullNodeSucceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Succeeded = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("merchant_blocked") is null) { _explicitNullValueMerchantBlocked = default!; _explicitNullProperties?.Remove("merchant_blocked"); }
+            else if (parseNode.GetChildNode("merchant_blocked") is { } nullNodeMerchantBlocked && nullNodeMerchantBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantBlocked = null;
+            if (parseNode.GetChildNode("payment_intent_id") is null) { _explicitNullValuePaymentIntentId = default!; _explicitNullProperties?.Remove("payment_intent_id"); }
+            else if (parseNode.GetChildNode("payment_intent_id") is { } nullNodePaymentIntentId && nullNodePaymentIntentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntentId = null;
+            if (parseNode.GetChildNode("rejected") is null) { _explicitNullValueRejected = default!; _explicitNullProperties?.Remove("rejected"); }
+            else if (parseNode.GetChildNode("rejected") is { } nullNodeRejected && nullNodeRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rejected = null;
+            if (parseNode.GetChildNode("succeeded") is null) { _explicitNullValueSucceeded = default!; _explicitNullProperties?.Remove("succeeded"); }
+            else if (parseNode.GetChildNode("succeeded") is { } nullNodeSucceeded && nullNodeSucceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Succeeded = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,45 +35,45 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of a merchant_blocked outcome attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked? MerchantBlocked { get => _explicitNullValueMerchantBlocked; set { _explicitNullValueMerchantBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_blocked"); else _explicitNullProperties?.Remove("merchant_blocked"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked? MerchantBlocked { get => _explicitNullValueMerchantBlocked; set { _explicitNullValueMerchantBlocked = value; AdditionalData?.Remove("merchant_blocked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_blocked"); else _explicitNullProperties?.Remove("merchant_blocked"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked? _explicitNullValueMerchantBlocked = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked MerchantBlocked { get => _explicitNullValueMerchantBlocked; set { _explicitNullValueMerchantBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_blocked"); else _explicitNullProperties?.Remove("merchant_blocked"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked MerchantBlocked { get => _explicitNullValueMerchantBlocked; set { _explicitNullValueMerchantBlocked = value; AdditionalData?.Remove("merchant_blocked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_blocked"); else _explicitNullProperties?.Remove("merchant_blocked"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMerchantBlocked _explicitNullValueMerchantBlocked = default!;
 #endif
         /// <summary>The PaymentIntent ID associated with the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_id"); else _explicitNullProperties?.Remove("payment_intent_id"); } }
+        public string? PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; AdditionalData?.Remove("payment_intent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_id"); else _explicitNullProperties?.Remove("payment_intent_id"); } }
         private string? _explicitNullValuePaymentIntentId = default!;
 #nullable restore
 #else
-        public string PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_id"); else _explicitNullProperties?.Remove("payment_intent_id"); } }
+        public string PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; AdditionalData?.Remove("payment_intent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent_id"); else _explicitNullProperties?.Remove("payment_intent_id"); } }
         private string _explicitNullValuePaymentIntentId = default!;
 #endif
         /// <summary>Details of an rejected outcome attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected? Rejected { get => _explicitNullValueRejected; set { _explicitNullValueRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejected"); else _explicitNullProperties?.Remove("rejected"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected? Rejected { get => _explicitNullValueRejected; set { _explicitNullValueRejected = value; AdditionalData?.Remove("rejected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejected"); else _explicitNullProperties?.Remove("rejected"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected? _explicitNullValueRejected = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected Rejected { get => _explicitNullValueRejected; set { _explicitNullValueRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejected"); else _explicitNullProperties?.Remove("rejected"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected Rejected { get => _explicitNullValueRejected; set { _explicitNullValueRejected = value; AdditionalData?.Remove("rejected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejected"); else _explicitNullProperties?.Remove("rejected"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected _explicitNullValueRejected = default!;
 #endif
         /// <summary>Details of a succeeded outcome attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded? Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded? Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; AdditionalData?.Remove("succeeded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded? _explicitNullValueSucceeded = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; AdditionalData?.Remove("succeeded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded _explicitNullValueSucceeded = default!;
 #endif
         /// <summary>Indicates the outcome of the payment evaluation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome"/> and sets the default values.
@@ -99,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_intent_id", n => { PaymentIntentId = n.GetStringValue(); } },
                 { "rejected", n => { Rejected = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected.CreateFromDiscriminatorValue); } },
                 { "succeeded", n => { Succeeded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

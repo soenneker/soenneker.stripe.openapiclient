@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billing_agreement_id") is { } nullNodeBillingAgreementId && nullNodeBillingAgreementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAgreementId = null;
+            if (parseNode.GetChildNode("billing_agreement_id") is null) { _explicitNullValueBillingAgreementId = default!; _explicitNullProperties?.Remove("billing_agreement_id"); }
+            else if (parseNode.GetChildNode("billing_agreement_id") is { } nullNodeBillingAgreementId && nullNodeBillingAgreementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAgreementId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The billing_agreement_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
+        public string? BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; AdditionalData?.Remove("billing_agreement_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
         private string? _explicitNullValueBillingAgreementId = default!;
 #nullable restore
 #else
-        public string BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
+        public string BillingAgreementId { get => _explicitNullValueBillingAgreementId; set { _explicitNullValueBillingAgreementId = value; AdditionalData?.Remove("billing_agreement_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_agreement_id"); else _explicitNullProperties?.Remove("billing_agreement_id"); } }
         private string _explicitNullValueBillingAgreementId = default!;
 #endif
         /// <summary>

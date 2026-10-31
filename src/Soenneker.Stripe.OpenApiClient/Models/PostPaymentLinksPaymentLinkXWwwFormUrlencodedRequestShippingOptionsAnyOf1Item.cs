@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shipping_rate") is { } nullNodeShippingRate && nullNodeShippingRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingRate = null;
+            if (parseNode.GetChildNode("shipping_rate") is null) { _explicitNullValueShippingRate = default!; _explicitNullProperties?.Remove("shipping_rate"); }
+            else if (parseNode.GetChildNode("shipping_rate") is { } nullNodeShippingRate && nullNodeShippingRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingRate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The shipping_rate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
+        public string? ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; AdditionalData?.Remove("shipping_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
         private string? _explicitNullValueShippingRate = default!;
 #nullable restore
 #else
-        public string ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
+        public string ShippingRate { get => _explicitNullValueShippingRate; set { _explicitNullValueShippingRate = value; AdditionalData?.Remove("shipping_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_rate"); else _explicitNullProperties?.Remove("shipping_rate"); } }
         private string _explicitNullValueShippingRate = default!;
 #endif
         /// <summary>

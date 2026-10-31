@@ -52,9 +52,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("amount") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("currency") != null && parseNode.GetChildNode("customer") != null && parseNode.GetChildNode("ending_balance") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag8 && ("customer_balance_transaction".Equals(tag8.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag10 && ("adjustment".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "applied_to_invoice".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "checkout_session_subscription_payment".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "checkout_session_subscription_payment_canceled".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "credit_note".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "initial".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "invoice_overpaid".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "invoice_too_large".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "invoice_too_small".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "migration".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "unapplied_from_invoice".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "unspent_receiver_credit".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal)))))();
-            if (result.CustomerBalanceTransaction == null && result.String == null && matchesUnionBranch0) result.CustomerBalanceTransaction = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction(), parseNode);
-            if (result.CustomerBalanceTransaction == null && result.String == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.CustomerBalanceTransaction = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction(), parseNode);
             if (result.CustomerBalanceTransaction == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -64,6 +61,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(CustomerBalanceTransaction != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CustomerBalanceTransaction);
@@ -78,7 +77,10 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (CustomerBalanceTransaction == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (CustomerBalanceTransaction != null && String == null) { if (CustomerBalanceTransaction is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CustomerBalanceTransaction); return; }
+            int selectedUnionBranches = 0;
+            if (CustomerBalanceTransaction != null) selectedUnionBranches++;
+            if (String != null) selectedUnionBranches++;
+            if (CustomerBalanceTransaction != null && selectedUnionBranches == 1) { if (CustomerBalanceTransaction is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CustomerBalanceTransaction); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(String != null)

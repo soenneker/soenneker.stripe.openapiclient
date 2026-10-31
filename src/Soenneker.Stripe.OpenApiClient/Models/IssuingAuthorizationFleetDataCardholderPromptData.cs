@@ -18,12 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alphanumeric_id") is { } nullNodeAlphanumericId && nullNodeAlphanumericId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlphanumericId = null;
-            if (parseNode.GetChildNode("driver_id") is { } nullNodeDriverId && nullNodeDriverId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriverId = null;
-            if (parseNode.GetChildNode("odometer") is { } nullNodeOdometer && nullNodeOdometer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Odometer = null;
-            if (parseNode.GetChildNode("unspecified_id") is { } nullNodeUnspecifiedId && nullNodeUnspecifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnspecifiedId = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
-            if (parseNode.GetChildNode("vehicle_number") is { } nullNodeVehicleNumber && nullNodeVehicleNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VehicleNumber = null;
+            if (parseNode.GetChildNode("alphanumeric_id") is null) { _explicitNullValueAlphanumericId = default!; _explicitNullProperties?.Remove("alphanumeric_id"); }
+            else if (parseNode.GetChildNode("alphanumeric_id") is { } nullNodeAlphanumericId && nullNodeAlphanumericId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlphanumericId = null;
+            if (parseNode.GetChildNode("driver_id") is null) { _explicitNullValueDriverId = default!; _explicitNullProperties?.Remove("driver_id"); }
+            else if (parseNode.GetChildNode("driver_id") is { } nullNodeDriverId && nullNodeDriverId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriverId = null;
+            if (parseNode.GetChildNode("odometer") is null) { _explicitNullValueOdometer = default!; _explicitNullProperties?.Remove("odometer"); }
+            else if (parseNode.GetChildNode("odometer") is { } nullNodeOdometer && nullNodeOdometer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Odometer = null;
+            if (parseNode.GetChildNode("unspecified_id") is null) { _explicitNullValueUnspecifiedId = default!; _explicitNullProperties?.Remove("unspecified_id"); }
+            else if (parseNode.GetChildNode("unspecified_id") is { } nullNodeUnspecifiedId && nullNodeUnspecifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnspecifiedId = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("vehicle_number") is null) { _explicitNullValueVehicleNumber = default!; _explicitNullProperties?.Remove("vehicle_number"); }
+            else if (parseNode.GetChildNode("vehicle_number") is { } nullNodeVehicleNumber && nullNodeVehicleNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VehicleNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,54 +37,54 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Deprecated] An alphanumeric ID, though typical point of sales only support numeric entry. The card program can be configured to prompt for a vehicle ID, driver ID, or generic ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
+        public string? AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; AdditionalData?.Remove("alphanumeric_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
         private string? _explicitNullValueAlphanumericId = default!;
 #nullable restore
 #else
-        public string AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
+        public string AlphanumericId { get => _explicitNullValueAlphanumericId; set { _explicitNullValueAlphanumericId = value; AdditionalData?.Remove("alphanumeric_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alphanumeric_id"); else _explicitNullProperties?.Remove("alphanumeric_id"); } }
         private string _explicitNullValueAlphanumericId = default!;
 #endif
         /// <summary>Driver ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
+        public string? DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; AdditionalData?.Remove("driver_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
         private string? _explicitNullValueDriverId = default!;
 #nullable restore
 #else
-        public string DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
+        public string DriverId { get => _explicitNullValueDriverId; set { _explicitNullValueDriverId = value; AdditionalData?.Remove("driver_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("driver_id"); else _explicitNullProperties?.Remove("driver_id"); } }
         private string _explicitNullValueDriverId = default!;
 #endif
         /// <summary>Odometer reading.</summary>
-        public int? Odometer { get => _explicitNullValueOdometer; set { _explicitNullValueOdometer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("odometer"); else _explicitNullProperties?.Remove("odometer"); } }
+        public int? Odometer { get => _explicitNullValueOdometer; set { _explicitNullValueOdometer = value; AdditionalData?.Remove("odometer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("odometer"); else _explicitNullProperties?.Remove("odometer"); } }
         private int? _explicitNullValueOdometer = default!;
         /// <summary>An alphanumeric ID. This field is used when a vehicle ID, driver ID, or generic ID is entered by the cardholder, but the merchant or card network did not specify the prompt type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
+        public string? UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; AdditionalData?.Remove("unspecified_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
         private string? _explicitNullValueUnspecifiedId = default!;
 #nullable restore
 #else
-        public string UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
+        public string UnspecifiedId { get => _explicitNullValueUnspecifiedId; set { _explicitNullValueUnspecifiedId = value; AdditionalData?.Remove("unspecified_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unspecified_id"); else _explicitNullProperties?.Remove("unspecified_id"); } }
         private string _explicitNullValueUnspecifiedId = default!;
 #endif
         /// <summary>User ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>Vehicle number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
+        public string? VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; AdditionalData?.Remove("vehicle_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
         private string? _explicitNullValueVehicleNumber = default!;
 #nullable restore
 #else
-        public string VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
+        public string VehicleNumber { get => _explicitNullValueVehicleNumber; set { _explicitNullValueVehicleNumber = value; AdditionalData?.Remove("vehicle_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_number"); else _explicitNullProperties?.Remove("vehicle_number"); } }
         private string _explicitNullValueVehicleNumber = default!;
 #endif
         /// <summary>

@@ -18,42 +18,47 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_redisplay") is { } nullNodeAllowRedisplay && nullNodeAllowRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRedisplay = null;
-            if (parseNode.GetChildNode("enable_customer_cancellation") is { } nullNodeEnableCustomerCancellation && nullNodeEnableCustomerCancellation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCustomerCancellation = null;
-            if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
-            if (parseNode.GetChildNode("skip_tipping") is { } nullNodeSkipTipping && nullNodeSkipTipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipTipping = null;
-            if (parseNode.GetChildNode("tipping") is { } nullNodeTipping && nullNodeTipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tipping = null;
+            if (parseNode.GetChildNode("allow_redisplay") is null) { _explicitNullValueAllowRedisplay = default!; _explicitNullProperties?.Remove("allow_redisplay"); }
+            else if (parseNode.GetChildNode("allow_redisplay") is { } nullNodeAllowRedisplay && nullNodeAllowRedisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRedisplay = null;
+            if (parseNode.GetChildNode("enable_customer_cancellation") is null) { _explicitNullValueEnableCustomerCancellation = default!; _explicitNullProperties?.Remove("enable_customer_cancellation"); }
+            else if (parseNode.GetChildNode("enable_customer_cancellation") is { } nullNodeEnableCustomerCancellation && nullNodeEnableCustomerCancellation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCustomerCancellation = null;
+            if (parseNode.GetChildNode("return_url") is null) { _explicitNullValueReturnUrl = default!; _explicitNullProperties?.Remove("return_url"); }
+            else if (parseNode.GetChildNode("return_url") is { } nullNodeReturnUrl && nullNodeReturnUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUrl = null;
+            if (parseNode.GetChildNode("skip_tipping") is null) { _explicitNullValueSkipTipping = default!; _explicitNullProperties?.Remove("skip_tipping"); }
+            else if (parseNode.GetChildNode("skip_tipping") is { } nullNodeSkipTipping && nullNodeSkipTipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipTipping = null;
+            if (parseNode.GetChildNode("tipping") is null) { _explicitNullValueTipping = default!; _explicitNullProperties?.Remove("tipping"); }
+            else if (parseNode.GetChildNode("tipping") is { } nullNodeTipping && nullNodeTipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tipping = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_redisplay property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigAllowRedisplay? AllowRedisplay { get => _explicitNullValueAllowRedisplay; set { _explicitNullValueAllowRedisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_redisplay"); else _explicitNullProperties?.Remove("allow_redisplay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigAllowRedisplay? AllowRedisplay { get => _explicitNullValueAllowRedisplay; set { _explicitNullValueAllowRedisplay = value; AdditionalData?.Remove("allow_redisplay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_redisplay"); else _explicitNullProperties?.Remove("allow_redisplay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigAllowRedisplay? _explicitNullValueAllowRedisplay = default!;
         /// <summary>The enable_customer_cancellation property</summary>
-        public bool? EnableCustomerCancellation { get => _explicitNullValueEnableCustomerCancellation; set { _explicitNullValueEnableCustomerCancellation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_customer_cancellation"); else _explicitNullProperties?.Remove("enable_customer_cancellation"); } }
+        public bool? EnableCustomerCancellation { get => _explicitNullValueEnableCustomerCancellation; set { _explicitNullValueEnableCustomerCancellation = value; AdditionalData?.Remove("enable_customer_cancellation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_customer_cancellation"); else _explicitNullProperties?.Remove("enable_customer_cancellation"); } }
         private bool? _explicitNullValueEnableCustomerCancellation = default!;
         /// <summary>The return_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public string? ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private string? _explicitNullValueReturnUrl = default!;
 #nullable restore
 #else
-        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
+        public string ReturnUrl { get => _explicitNullValueReturnUrl; set { _explicitNullValueReturnUrl = value; AdditionalData?.Remove("return_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_url"); else _explicitNullProperties?.Remove("return_url"); } }
         private string _explicitNullValueReturnUrl = default!;
 #endif
         /// <summary>The skip_tipping property</summary>
-        public bool? SkipTipping { get => _explicitNullValueSkipTipping; set { _explicitNullValueSkipTipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_tipping"); else _explicitNullProperties?.Remove("skip_tipping"); } }
+        public bool? SkipTipping { get => _explicitNullValueSkipTipping; set { _explicitNullValueSkipTipping = value; AdditionalData?.Remove("skip_tipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_tipping"); else _explicitNullProperties?.Remove("skip_tipping"); } }
         private bool? _explicitNullValueSkipTipping = default!;
         /// <summary>The tipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping? Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping? Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; AdditionalData?.Remove("tipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping? _explicitNullValueTipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping Tipping { get => _explicitNullValueTipping; set { _explicitNullValueTipping = value; AdditionalData?.Remove("tipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipping"); else _explicitNullProperties?.Remove("tipping"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigTipping _explicitNullValueTipping = default!;
 #endif
         /// <summary>
@@ -81,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allow_redisplay", n => { AllowRedisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigAllowRedisplay>(); } },
+                { "allow_redisplay", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessPaymentIntentXWwwFormUrlencodedRequestProcessConfigAllowRedisplay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAllowRedisplay = default; _explicitNullProperties?.Remove("allow_redisplay"); AdditionalData["allow_redisplay"] = unknown; } else { AllowRedisplay = parsed; AdditionalData.Remove("allow_redisplay"); } } },
                 { "enable_customer_cancellation", n => { EnableCustomerCancellation = n.GetBoolValue(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "skip_tipping", n => { SkipTipping = n.GetBoolValue(); } },

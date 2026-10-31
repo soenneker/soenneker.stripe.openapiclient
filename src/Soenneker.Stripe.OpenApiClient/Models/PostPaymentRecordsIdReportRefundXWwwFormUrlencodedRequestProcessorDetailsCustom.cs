@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("refund_reference") is { } nullNodeRefundReference && nullNodeRefundReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundReference = null;
+            if (parseNode.GetChildNode("refund_reference") is null) { _explicitNullValueRefundReference = default!; _explicitNullProperties?.Remove("refund_reference"); }
+            else if (parseNode.GetChildNode("refund_reference") is { } nullNodeRefundReference && nullNodeRefundReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The refund_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundReference { get => _explicitNullValueRefundReference; set { _explicitNullValueRefundReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_reference"); else _explicitNullProperties?.Remove("refund_reference"); } }
+        public string? RefundReference { get => _explicitNullValueRefundReference; set { _explicitNullValueRefundReference = value; AdditionalData?.Remove("refund_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_reference"); else _explicitNullProperties?.Remove("refund_reference"); } }
         private string? _explicitNullValueRefundReference = default!;
 #nullable restore
 #else
-        public string RefundReference { get => _explicitNullValueRefundReference; set { _explicitNullValueRefundReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_reference"); else _explicitNullProperties?.Remove("refund_reference"); } }
+        public string RefundReference { get => _explicitNullValueRefundReference; set { _explicitNullValueRefundReference = value; AdditionalData?.Remove("refund_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_reference"); else _explicitNullProperties?.Remove("refund_reference"); } }
         private string _explicitNullValueRefundReference = default!;
 #endif
         /// <summary>

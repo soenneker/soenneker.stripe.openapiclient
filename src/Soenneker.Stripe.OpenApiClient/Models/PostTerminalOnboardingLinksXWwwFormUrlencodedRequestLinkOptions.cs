@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apple_terms_and_conditions") is { } nullNodeAppleTermsAndConditions && nullNodeAppleTermsAndConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppleTermsAndConditions = null;
+            if (parseNode.GetChildNode("apple_terms_and_conditions") is null) { _explicitNullValueAppleTermsAndConditions = default!; _explicitNullProperties?.Remove("apple_terms_and_conditions"); }
+            else if (parseNode.GetChildNode("apple_terms_and_conditions") is { } nullNodeAppleTermsAndConditions && nullNodeAppleTermsAndConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppleTermsAndConditions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The apple_terms_and_conditions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions? AppleTermsAndConditions { get => _explicitNullValueAppleTermsAndConditions; set { _explicitNullValueAppleTermsAndConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_terms_and_conditions"); else _explicitNullProperties?.Remove("apple_terms_and_conditions"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions? AppleTermsAndConditions { get => _explicitNullValueAppleTermsAndConditions; set { _explicitNullValueAppleTermsAndConditions = value; AdditionalData?.Remove("apple_terms_and_conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_terms_and_conditions"); else _explicitNullProperties?.Remove("apple_terms_and_conditions"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions? _explicitNullValueAppleTermsAndConditions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions AppleTermsAndConditions { get => _explicitNullValueAppleTermsAndConditions; set { _explicitNullValueAppleTermsAndConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_terms_and_conditions"); else _explicitNullProperties?.Remove("apple_terms_and_conditions"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions AppleTermsAndConditions { get => _explicitNullValueAppleTermsAndConditions; set { _explicitNullValueAppleTermsAndConditions = value; AdditionalData?.Remove("apple_terms_and_conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_terms_and_conditions"); else _explicitNullProperties?.Remove("apple_terms_and_conditions"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptionsAppleTermsAndConditions _explicitNullValueAppleTermsAndConditions = default!;
 #endif
         /// <summary>

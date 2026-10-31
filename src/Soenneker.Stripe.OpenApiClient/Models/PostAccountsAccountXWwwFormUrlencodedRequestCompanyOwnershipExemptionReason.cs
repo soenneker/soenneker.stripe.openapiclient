@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostAccountsAccountXWwwFormUrlencodedRequestCompanyOwnershipExemptionReason
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "qualified_entity_exceeds_ownership_threshold")]
         #pragma warning disable CS1591
         QualifiedEntityExceedsOwnershipThreshold,

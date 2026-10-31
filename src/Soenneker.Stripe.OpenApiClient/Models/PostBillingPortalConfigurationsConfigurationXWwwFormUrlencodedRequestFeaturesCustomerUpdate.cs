@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_updates") is { } nullNodeAllowedUpdates && nullNodeAllowedUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedUpdates = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("allowed_updates") is null) { _explicitNullValueAllowedUpdates = default!; _explicitNullProperties?.Remove("allowed_updates"); }
+            else if (parseNode.GetChildNode("allowed_updates") is { } nullNodeAllowedUpdates && nullNodeAllowedUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedUpdates = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The allowed_updates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates? AllowedUpdates { get => _explicitNullValueAllowedUpdates; set { _explicitNullValueAllowedUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_updates"); else _explicitNullProperties?.Remove("allowed_updates"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates? AllowedUpdates { get => _explicitNullValueAllowedUpdates; set { _explicitNullValueAllowedUpdates = value; AdditionalData?.Remove("allowed_updates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_updates"); else _explicitNullProperties?.Remove("allowed_updates"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates? _explicitNullValueAllowedUpdates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates AllowedUpdates { get => _explicitNullValueAllowedUpdates; set { _explicitNullValueAllowedUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_updates"); else _explicitNullProperties?.Remove("allowed_updates"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates AllowedUpdates { get => _explicitNullValueAllowedUpdates; set { _explicitNullValueAllowedUpdates = value; AdditionalData?.Remove("allowed_updates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_updates"); else _explicitNullProperties?.Remove("allowed_updates"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdateAllowedUpdates _explicitNullValueAllowedUpdates = default!;
 #endif
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesCustomerUpdate"/> and sets the default values.

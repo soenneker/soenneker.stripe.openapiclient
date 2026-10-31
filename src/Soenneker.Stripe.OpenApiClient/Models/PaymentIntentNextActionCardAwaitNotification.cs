@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("charge_attempt_at") is { } nullNodeChargeAttemptAt && nullNodeChargeAttemptAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeAttemptAt = null;
-            if (parseNode.GetChildNode("customer_approval_required") is { } nullNodeCustomerApprovalRequired && nullNodeCustomerApprovalRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerApprovalRequired = null;
+            if (parseNode.GetChildNode("charge_attempt_at") is null) { _explicitNullValueChargeAttemptAt = default!; _explicitNullProperties?.Remove("charge_attempt_at"); }
+            else if (parseNode.GetChildNode("charge_attempt_at") is { } nullNodeChargeAttemptAt && nullNodeChargeAttemptAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeAttemptAt = null;
+            if (parseNode.GetChildNode("customer_approval_required") is null) { _explicitNullValueCustomerApprovalRequired = default!; _explicitNullProperties?.Remove("customer_approval_required"); }
+            else if (parseNode.GetChildNode("customer_approval_required") is { } nullNodeCustomerApprovalRequired && nullNodeCustomerApprovalRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerApprovalRequired = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that payment will be attempted. If customer approval is required, they need to provide approval before this time.</summary>
-        public int? ChargeAttemptAt { get => _explicitNullValueChargeAttemptAt; set { _explicitNullValueChargeAttemptAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_attempt_at"); else _explicitNullProperties?.Remove("charge_attempt_at"); } }
+        public int? ChargeAttemptAt { get => _explicitNullValueChargeAttemptAt; set { _explicitNullValueChargeAttemptAt = value; AdditionalData?.Remove("charge_attempt_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_attempt_at"); else _explicitNullProperties?.Remove("charge_attempt_at"); } }
         private int? _explicitNullValueChargeAttemptAt = default!;
         /// <summary>For payments greater than INR 15000, the customer must provide explicit approval of the payment with their bank. For payments of lower amount, no customer action is required.</summary>
-        public bool? CustomerApprovalRequired { get => _explicitNullValueCustomerApprovalRequired; set { _explicitNullValueCustomerApprovalRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_approval_required"); else _explicitNullProperties?.Remove("customer_approval_required"); } }
+        public bool? CustomerApprovalRequired { get => _explicitNullValueCustomerApprovalRequired; set { _explicitNullValueCustomerApprovalRequired = value; AdditionalData?.Remove("customer_approval_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_approval_required"); else _explicitNullProperties?.Remove("customer_approval_required"); } }
         private bool? _explicitNullValueCustomerApprovalRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionCardAwaitNotification"/> and sets the default values.

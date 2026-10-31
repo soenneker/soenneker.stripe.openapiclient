@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("credited_items") is { } nullNodeCreditedItems && nullNodeCreditedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditedItems = null;
+            if (parseNode.GetChildNode("credited_items") is null) { _explicitNullValueCreditedItems = default!; _explicitNullProperties?.Remove("credited_items"); }
+            else if (parseNode.GetChildNode("credited_items") is { } nullNodeCreditedItems && nullNodeCreditedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditedItems = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For a credit proration `line_item`, the original debit line_items to which the credit proration applies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems? _explicitNullValueCreditedItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems _explicitNullValueCreditedItems = default!;
 #endif
         /// <summary>

@@ -18,54 +18,62 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authorizer") is { } nullNodeAuthorizer && nullNodeAuthorizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorizer = null;
-            if (parseNode.GetChildNode("director") is { } nullNodeDirector && nullNodeDirector.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Director = null;
-            if (parseNode.GetChildNode("executive") is { } nullNodeExecutive && nullNodeExecutive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Executive = null;
-            if (parseNode.GetChildNode("legal_guardian") is { } nullNodeLegalGuardian && nullNodeLegalGuardian.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalGuardian = null;
-            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
-            if (parseNode.GetChildNode("percent_ownership") is { } nullNodePercentOwnership && nullNodePercentOwnership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentOwnership = null;
-            if (parseNode.GetChildNode("representative") is { } nullNodeRepresentative && nullNodeRepresentative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Representative = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("authorizer") is null) { _explicitNullValueAuthorizer = default!; _explicitNullProperties?.Remove("authorizer"); }
+            else if (parseNode.GetChildNode("authorizer") is { } nullNodeAuthorizer && nullNodeAuthorizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorizer = null;
+            if (parseNode.GetChildNode("director") is null) { _explicitNullValueDirector = default!; _explicitNullProperties?.Remove("director"); }
+            else if (parseNode.GetChildNode("director") is { } nullNodeDirector && nullNodeDirector.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Director = null;
+            if (parseNode.GetChildNode("executive") is null) { _explicitNullValueExecutive = default!; _explicitNullProperties?.Remove("executive"); }
+            else if (parseNode.GetChildNode("executive") is { } nullNodeExecutive && nullNodeExecutive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Executive = null;
+            if (parseNode.GetChildNode("legal_guardian") is null) { _explicitNullValueLegalGuardian = default!; _explicitNullProperties?.Remove("legal_guardian"); }
+            else if (parseNode.GetChildNode("legal_guardian") is { } nullNodeLegalGuardian && nullNodeLegalGuardian.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalGuardian = null;
+            if (parseNode.GetChildNode("owner") is null) { _explicitNullValueOwner = default!; _explicitNullProperties?.Remove("owner"); }
+            else if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("percent_ownership") is null) { _explicitNullValuePercentOwnership = default!; _explicitNullProperties?.Remove("percent_ownership"); }
+            else if (parseNode.GetChildNode("percent_ownership") is { } nullNodePercentOwnership && nullNodePercentOwnership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentOwnership = null;
+            if (parseNode.GetChildNode("representative") is null) { _explicitNullValueRepresentative = default!; _explicitNullProperties?.Remove("representative"); }
+            else if (parseNode.GetChildNode("representative") is { } nullNodeRepresentative && nullNodeRepresentative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Representative = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authorizer property</summary>
-        public bool? Authorizer { get => _explicitNullValueAuthorizer; set { _explicitNullValueAuthorizer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizer"); else _explicitNullProperties?.Remove("authorizer"); } }
+        public bool? Authorizer { get => _explicitNullValueAuthorizer; set { _explicitNullValueAuthorizer = value; AdditionalData?.Remove("authorizer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizer"); else _explicitNullProperties?.Remove("authorizer"); } }
         private bool? _explicitNullValueAuthorizer = default!;
         /// <summary>The director property</summary>
-        public bool? Director { get => _explicitNullValueDirector; set { _explicitNullValueDirector = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("director"); else _explicitNullProperties?.Remove("director"); } }
+        public bool? Director { get => _explicitNullValueDirector; set { _explicitNullValueDirector = value; AdditionalData?.Remove("director"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("director"); else _explicitNullProperties?.Remove("director"); } }
         private bool? _explicitNullValueDirector = default!;
         /// <summary>The executive property</summary>
-        public bool? Executive { get => _explicitNullValueExecutive; set { _explicitNullValueExecutive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executive"); else _explicitNullProperties?.Remove("executive"); } }
+        public bool? Executive { get => _explicitNullValueExecutive; set { _explicitNullValueExecutive = value; AdditionalData?.Remove("executive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executive"); else _explicitNullProperties?.Remove("executive"); } }
         private bool? _explicitNullValueExecutive = default!;
         /// <summary>The legal_guardian property</summary>
-        public bool? LegalGuardian { get => _explicitNullValueLegalGuardian; set { _explicitNullValueLegalGuardian = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_guardian"); else _explicitNullProperties?.Remove("legal_guardian"); } }
+        public bool? LegalGuardian { get => _explicitNullValueLegalGuardian; set { _explicitNullValueLegalGuardian = value; AdditionalData?.Remove("legal_guardian"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_guardian"); else _explicitNullProperties?.Remove("legal_guardian"); } }
         private bool? _explicitNullValueLegalGuardian = default!;
         /// <summary>The owner property</summary>
-        public bool? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public bool? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private bool? _explicitNullValueOwner = default!;
         /// <summary>The percent_ownership property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership? PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership? PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; AdditionalData?.Remove("percent_ownership"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership? _explicitNullValuePercentOwnership = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership PercentOwnership { get => _explicitNullValuePercentOwnership; set { _explicitNullValuePercentOwnership = value; AdditionalData?.Remove("percent_ownership"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_ownership"); else _explicitNullProperties?.Remove("percent_ownership"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestRelationshipPercentOwnership _explicitNullValuePercentOwnership = default!;
 #endif
         /// <summary>The representative property</summary>
-        public bool? Representative { get => _explicitNullValueRepresentative; set { _explicitNullValueRepresentative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative"); else _explicitNullProperties?.Remove("representative"); } }
+        public bool? Representative { get => _explicitNullValueRepresentative; set { _explicitNullValueRepresentative = value; AdditionalData?.Remove("representative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative"); else _explicitNullProperties?.Remove("representative"); } }
         private bool? _explicitNullValueRepresentative = default!;
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>

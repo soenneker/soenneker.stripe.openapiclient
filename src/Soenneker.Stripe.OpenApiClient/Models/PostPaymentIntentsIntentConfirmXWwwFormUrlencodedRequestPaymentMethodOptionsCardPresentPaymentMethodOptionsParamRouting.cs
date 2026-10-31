@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("requested_priority") is { } nullNodeRequestedPriority && nullNodeRequestedPriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedPriority = null;
+            if (parseNode.GetChildNode("requested_priority") is null) { _explicitNullValueRequestedPriority = default!; _explicitNullProperties?.Remove("requested_priority"); }
+            else if (parseNode.GetChildNode("requested_priority") is { } nullNodeRequestedPriority && nullNodeRequestedPriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedPriority = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The requested_priority property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority? RequestedPriority { get => _explicitNullValueRequestedPriority; set { _explicitNullValueRequestedPriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_priority"); else _explicitNullProperties?.Remove("requested_priority"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority? RequestedPriority { get => _explicitNullValueRequestedPriority; set { _explicitNullValueRequestedPriority = value; AdditionalData?.Remove("requested_priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_priority"); else _explicitNullProperties?.Remove("requested_priority"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority? _explicitNullValueRequestedPriority = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRouting"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "requested_priority", n => { RequestedPriority = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority>(); } },
+                { "requested_priority", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestedPriority = default; _explicitNullProperties?.Remove("requested_priority"); AdditionalData["requested_priority"] = unknown; } else { RequestedPriority = parsed; AdditionalData.Remove("requested_priority"); } } },
             };
         }
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("monetary") is { } nullNodeMonetary && nullNodeMonetary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monetary = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("monetary") is null) { _explicitNullValueMonetary = default!; _explicitNullProperties?.Remove("monetary"); }
+            else if (parseNode.GetChildNode("monetary") is { } nullNodeMonetary && nullNodeMonetary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monetary = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The monetary amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary? Monetary { get => _explicitNullValueMonetary; set { _explicitNullValueMonetary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetary"); else _explicitNullProperties?.Remove("monetary"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary? Monetary { get => _explicitNullValueMonetary; set { _explicitNullValueMonetary = value; AdditionalData?.Remove("monetary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetary"); else _explicitNullProperties?.Remove("monetary"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary? _explicitNullValueMonetary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary Monetary { get => _explicitNullValueMonetary; set { _explicitNullValueMonetary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetary"); else _explicitNullProperties?.Remove("monetary"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary Monetary { get => _explicitNullValueMonetary; set { _explicitNullValueMonetary = value; AdditionalData?.Remove("monetary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetary"); else _explicitNullProperties?.Remove("monetary"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary _explicitNullValueMonetary = default!;
 #endif
         /// <summary>The type of this amount. We currently only support `monetary` billing credits.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "monetary", n => { Monetary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

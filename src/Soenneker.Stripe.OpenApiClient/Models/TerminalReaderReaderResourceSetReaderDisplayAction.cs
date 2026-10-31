@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cart") is { } nullNodeCart && nullNodeCart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cart = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("cart") is null) { _explicitNullValueCart = default!; _explicitNullProperties?.Remove("cart"); }
+            else if (parseNode.GetChildNode("cart") is { } nullNodeCart && nullNodeCart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cart = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Cart object to be displayed by the reader, including line items, amounts, and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? _explicitNullValueCart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart _explicitNullValueCart = default!;
 #endif
         /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CartType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CartType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CartType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

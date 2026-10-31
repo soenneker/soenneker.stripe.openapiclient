@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("guaranteed_at") is { } nullNodeGuaranteedAt && nullNodeGuaranteedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedAt = null;
+            if (parseNode.GetChildNode("guaranteed_at") is null) { _explicitNullValueGuaranteedAt = default!; _explicitNullProperties?.Remove("guaranteed_at"); }
+            else if (parseNode.GetChildNode("guaranteed_at") is { } nullNodeGuaranteedAt && nullNodeGuaranteedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The guaranteed_at property</summary>
-        public int? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
+        public int? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; AdditionalData?.Remove("guaranteed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
         private int? _explicitNullValueGuaranteedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed"/> and sets the default values.

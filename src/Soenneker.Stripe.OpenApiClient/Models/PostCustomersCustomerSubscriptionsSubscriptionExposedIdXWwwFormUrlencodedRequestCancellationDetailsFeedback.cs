@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsFeedback
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "customer_service")]
         #pragma warning disable CS1591
         CustomerService,

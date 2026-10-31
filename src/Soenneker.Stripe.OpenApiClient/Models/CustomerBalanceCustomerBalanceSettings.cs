@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reconciliation_mode") is { } nullNodeReconciliationMode && nullNodeReconciliationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconciliationMode = null;
-            if (parseNode.GetChildNode("using_merchant_default") is { } nullNodeUsingMerchantDefault && nullNodeUsingMerchantDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsingMerchantDefault = null;
+            if (parseNode.GetChildNode("reconciliation_mode") is null) { _explicitNullValueReconciliationMode = default!; _explicitNullProperties?.Remove("reconciliation_mode"); }
+            else if (parseNode.GetChildNode("reconciliation_mode") is { } nullNodeReconciliationMode && nullNodeReconciliationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconciliationMode = null;
+            if (parseNode.GetChildNode("using_merchant_default") is null) { _explicitNullValueUsingMerchantDefault = default!; _explicitNullProperties?.Remove("using_merchant_default"); }
+            else if (parseNode.GetChildNode("using_merchant_default") is { } nullNodeUsingMerchantDefault && nullNodeUsingMerchantDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsingMerchantDefault = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The configuration for how funds that land in the customer cash balance are reconciled.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode? ReconciliationMode { get => _explicitNullValueReconciliationMode; set { _explicitNullValueReconciliationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconciliation_mode"); else _explicitNullProperties?.Remove("reconciliation_mode"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode? ReconciliationMode { get => _explicitNullValueReconciliationMode; set { _explicitNullValueReconciliationMode = value; AdditionalData?.Remove("reconciliation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconciliation_mode"); else _explicitNullProperties?.Remove("reconciliation_mode"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode? _explicitNullValueReconciliationMode = default!;
         /// <summary>A flag to indicate if reconciliation mode returned is the user&apos;s default or is specific to this customer cash balance</summary>
-        public bool? UsingMerchantDefault { get => _explicitNullValueUsingMerchantDefault; set { _explicitNullValueUsingMerchantDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("using_merchant_default"); else _explicitNullProperties?.Remove("using_merchant_default"); } }
+        public bool? UsingMerchantDefault { get => _explicitNullValueUsingMerchantDefault; set { _explicitNullValueUsingMerchantDefault = value; AdditionalData?.Remove("using_merchant_default"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("using_merchant_default"); else _explicitNullProperties?.Remove("using_merchant_default"); } }
         private bool? _explicitNullValueUsingMerchantDefault = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings"/> and sets the default values.
@@ -54,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "reconciliation_mode", n => { ReconciliationMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode>(); } },
+                { "reconciliation_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReconciliationMode = default; _explicitNullProperties?.Remove("reconciliation_mode"); AdditionalData["reconciliation_mode"] = unknown; } else { ReconciliationMode = parsed; AdditionalData.Remove("reconciliation_mode"); } } },
                 { "using_merchant_default", n => { UsingMerchantDefault = n.GetBoolValue(); } },
             };
         }

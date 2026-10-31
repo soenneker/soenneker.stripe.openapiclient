@@ -18,10 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("footer_body") is { } nullNodeFooterBody && nullNodeFooterBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterBody = null;
-            if (parseNode.GetChildNode("footer_title") is { } nullNodeFooterTitle && nullNodeFooterTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterTitle = null;
-            if (parseNode.GetChildNode("header_body") is { } nullNodeHeaderBody && nullNodeHeaderBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderBody = null;
-            if (parseNode.GetChildNode("header_title") is { } nullNodeHeaderTitle && nullNodeHeaderTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderTitle = null;
+            if (parseNode.GetChildNode("footer_body") is null) { _explicitNullValueFooterBody = default!; _explicitNullProperties?.Remove("footer_body"); }
+            else if (parseNode.GetChildNode("footer_body") is { } nullNodeFooterBody && nullNodeFooterBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterBody = null;
+            if (parseNode.GetChildNode("footer_title") is null) { _explicitNullValueFooterTitle = default!; _explicitNullProperties?.Remove("footer_title"); }
+            else if (parseNode.GetChildNode("footer_title") is { } nullNodeFooterTitle && nullNodeFooterTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterTitle = null;
+            if (parseNode.GetChildNode("header_body") is null) { _explicitNullValueHeaderBody = default!; _explicitNullProperties?.Remove("header_body"); }
+            else if (parseNode.GetChildNode("header_body") is { } nullNodeHeaderBody && nullNodeHeaderBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderBody = null;
+            if (parseNode.GetChildNode("header_title") is null) { _explicitNullValueHeaderTitle = default!; _explicitNullProperties?.Remove("header_title"); }
+            else if (parseNode.GetChildNode("header_title") is { } nullNodeHeaderTitle && nullNodeHeaderTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderTitle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The footer body text of the carrier letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
+        public string? FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; AdditionalData?.Remove("footer_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
         private string? _explicitNullValueFooterBody = default!;
 #nullable restore
 #else
-        public string FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
+        public string FooterBody { get => _explicitNullValueFooterBody; set { _explicitNullValueFooterBody = value; AdditionalData?.Remove("footer_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_body"); else _explicitNullProperties?.Remove("footer_body"); } }
         private string _explicitNullValueFooterBody = default!;
 #endif
         /// <summary>The footer title text of the carrier letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
+        public string? FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; AdditionalData?.Remove("footer_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
         private string? _explicitNullValueFooterTitle = default!;
 #nullable restore
 #else
-        public string FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
+        public string FooterTitle { get => _explicitNullValueFooterTitle; set { _explicitNullValueFooterTitle = value; AdditionalData?.Remove("footer_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_title"); else _explicitNullProperties?.Remove("footer_title"); } }
         private string _explicitNullValueFooterTitle = default!;
 #endif
         /// <summary>The header body text of the carrier letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
+        public string? HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; AdditionalData?.Remove("header_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
         private string? _explicitNullValueHeaderBody = default!;
 #nullable restore
 #else
-        public string HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
+        public string HeaderBody { get => _explicitNullValueHeaderBody; set { _explicitNullValueHeaderBody = value; AdditionalData?.Remove("header_body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_body"); else _explicitNullProperties?.Remove("header_body"); } }
         private string _explicitNullValueHeaderBody = default!;
 #endif
         /// <summary>The header title text of the carrier letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
+        public string? HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; AdditionalData?.Remove("header_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
         private string? _explicitNullValueHeaderTitle = default!;
 #nullable restore
 #else
-        public string HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
+        public string HeaderTitle { get => _explicitNullValueHeaderTitle; set { _explicitNullValueHeaderTitle = value; AdditionalData?.Remove("header_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_title"); else _explicitNullProperties?.Remove("header_title"); } }
         private string _explicitNullValueHeaderTitle = default!;
 #endif
         /// <summary>

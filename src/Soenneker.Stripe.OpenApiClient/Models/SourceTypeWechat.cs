@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("prepay_id") is { } nullNodePrepayId && nullNodePrepayId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepayId = null;
-            if (parseNode.GetChildNode("qr_code_url") is { } nullNodeQrCodeUrl && nullNodeQrCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCodeUrl = null;
-            if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
+            if (parseNode.GetChildNode("prepay_id") is null) { _explicitNullValuePrepayId = default!; _explicitNullProperties?.Remove("prepay_id"); }
+            else if (parseNode.GetChildNode("prepay_id") is { } nullNodePrepayId && nullNodePrepayId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepayId = null;
+            if (parseNode.GetChildNode("qr_code_url") is null) { _explicitNullValueQrCodeUrl = default!; _explicitNullProperties?.Remove("qr_code_url"); }
+            else if (parseNode.GetChildNode("qr_code_url") is { } nullNodeQrCodeUrl && nullNodeQrCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCodeUrl = null;
+            if (parseNode.GetChildNode("statement_descriptor") is null) { _explicitNullValueStatementDescriptor = default!; _explicitNullProperties?.Remove("statement_descriptor"); }
+            else if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The prepay_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrepayId { get => _explicitNullValuePrepayId; set { _explicitNullValuePrepayId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepay_id"); else _explicitNullProperties?.Remove("prepay_id"); } }
+        public string? PrepayId { get => _explicitNullValuePrepayId; set { _explicitNullValuePrepayId = value; AdditionalData?.Remove("prepay_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepay_id"); else _explicitNullProperties?.Remove("prepay_id"); } }
         private string? _explicitNullValuePrepayId = default!;
 #nullable restore
 #else
-        public string PrepayId { get => _explicitNullValuePrepayId; set { _explicitNullValuePrepayId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepay_id"); else _explicitNullProperties?.Remove("prepay_id"); } }
+        public string PrepayId { get => _explicitNullValuePrepayId; set { _explicitNullValuePrepayId = value; AdditionalData?.Remove("prepay_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepay_id"); else _explicitNullProperties?.Remove("prepay_id"); } }
         private string _explicitNullValuePrepayId = default!;
 #endif
         /// <summary>The qr_code_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
+        public string? QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; AdditionalData?.Remove("qr_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
         private string? _explicitNullValueQrCodeUrl = default!;
 #nullable restore
 #else
-        public string QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
+        public string QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; AdditionalData?.Remove("qr_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
         private string _explicitNullValueQrCodeUrl = default!;
 #endif
         /// <summary>The statement_descriptor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string? _explicitNullValueStatementDescriptor = default!;
 #nullable restore
 #else
-        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string _explicitNullValueStatementDescriptor = default!;
 #endif
         /// <summary>

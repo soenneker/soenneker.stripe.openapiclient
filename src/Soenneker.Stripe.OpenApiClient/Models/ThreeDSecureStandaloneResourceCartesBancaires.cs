@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("avalgo") is { } nullNodeAvalgo && nullNodeAvalgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avalgo = null;
-            if (parseNode.GetChildNode("cb_exemption") is { } nullNodeCbExemption && nullNodeCbExemption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbExemption = null;
-            if (parseNode.GetChildNode("cb_score") is { } nullNodeCbScore && nullNodeCbScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbScore = null;
+            if (parseNode.GetChildNode("avalgo") is null) { _explicitNullValueAvalgo = default!; _explicitNullProperties?.Remove("avalgo"); }
+            else if (parseNode.GetChildNode("avalgo") is { } nullNodeAvalgo && nullNodeAvalgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avalgo = null;
+            if (parseNode.GetChildNode("cb_exemption") is null) { _explicitNullValueCbExemption = default!; _explicitNullProperties?.Remove("cb_exemption"); }
+            else if (parseNode.GetChildNode("cb_exemption") is { } nullNodeCbExemption && nullNodeCbExemption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbExemption = null;
+            if (parseNode.GetChildNode("cb_score") is null) { _explicitNullValueCbScore = default!; _explicitNullProperties?.Remove("cb_score"); }
+            else if (parseNode.GetChildNode("cb_score") is { } nullNodeCbScore && nullNodeCbScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CbScore = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The cryptogram calculation algorithm used by the card Issuer&apos;s ACS to calculate the Authentication cryptogram. Also known as cavvAlgorithm. ARes/RReq messageExtension: `CB-AVALGO`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
+        public string? Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; AdditionalData?.Remove("avalgo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
         private string? _explicitNullValueAvalgo = default!;
 #nullable restore
 #else
-        public string Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
+        public string Avalgo { get => _explicitNullValueAvalgo; set { _explicitNullValueAvalgo = value; AdditionalData?.Remove("avalgo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avalgo"); else _explicitNullProperties?.Remove("avalgo"); } }
         private string _explicitNullValueAvalgo = default!;
 #endif
         /// <summary>The exemption indicator returned from Cartes Bancaires in the ARes. This is a 3 byte bitmap (lowest significant byte first and most significant bit first) that has been Base64 encoded. String (4 characters). ARes message extension: `CB-EXEMPTION`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        public string? CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; AdditionalData?.Remove("cb_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
         private string? _explicitNullValueCbExemption = default!;
 #nullable restore
 #else
-        public string CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
+        public string CbExemption { get => _explicitNullValueCbExemption; set { _explicitNullValueCbExemption = value; AdditionalData?.Remove("cb_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_exemption"); else _explicitNullProperties?.Remove("cb_exemption"); } }
         private string _explicitNullValueCbExemption = default!;
 #endif
         /// <summary>The risk score returned from Cartes Bancaires in the ARes. Numeric value 0-99. ARes/RReq message extension: `CB-SCORE`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
+        public string? CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; AdditionalData?.Remove("cb_score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
         private string? _explicitNullValueCbScore = default!;
 #nullable restore
 #else
-        public string CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
+        public string CbScore { get => _explicitNullValueCbScore; set { _explicitNullValueCbScore = value; AdditionalData?.Remove("cb_score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cb_score"); else _explicitNullProperties?.Remove("cb_score"); } }
         private string _explicitNullValueCbScore = default!;
 #endif
         /// <summary>

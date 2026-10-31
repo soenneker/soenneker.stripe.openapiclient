@@ -18,14 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer_account_id") is { } nullNodeCustomerAccountId && nullNodeCustomerAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccountId = null;
-            if (parseNode.GetChildNode("customer_device_fingerprint") is { } nullNodeCustomerDeviceFingerprint && nullNodeCustomerDeviceFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceFingerprint = null;
-            if (parseNode.GetChildNode("customer_device_id") is { } nullNodeCustomerDeviceId && nullNodeCustomerDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceId = null;
-            if (parseNode.GetChildNode("customer_email_address") is { } nullNodeCustomerEmailAddress && nullNodeCustomerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerEmailAddress = null;
-            if (parseNode.GetChildNode("customer_purchase_ip") is { } nullNodeCustomerPurchaseIp && nullNodeCustomerPurchaseIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPurchaseIp = null;
-            if (parseNode.GetChildNode("merchandise_or_services") is { } nullNodeMerchandiseOrServices && nullNodeMerchandiseOrServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchandiseOrServices = null;
-            if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
-            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("customer_account_id") is null) { _explicitNullValueCustomerAccountId = default!; _explicitNullProperties?.Remove("customer_account_id"); }
+            else if (parseNode.GetChildNode("customer_account_id") is { } nullNodeCustomerAccountId && nullNodeCustomerAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccountId = null;
+            if (parseNode.GetChildNode("customer_device_fingerprint") is null) { _explicitNullValueCustomerDeviceFingerprint = default!; _explicitNullProperties?.Remove("customer_device_fingerprint"); }
+            else if (parseNode.GetChildNode("customer_device_fingerprint") is { } nullNodeCustomerDeviceFingerprint && nullNodeCustomerDeviceFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceFingerprint = null;
+            if (parseNode.GetChildNode("customer_device_id") is null) { _explicitNullValueCustomerDeviceId = default!; _explicitNullProperties?.Remove("customer_device_id"); }
+            else if (parseNode.GetChildNode("customer_device_id") is { } nullNodeCustomerDeviceId && nullNodeCustomerDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerDeviceId = null;
+            if (parseNode.GetChildNode("customer_email_address") is null) { _explicitNullValueCustomerEmailAddress = default!; _explicitNullProperties?.Remove("customer_email_address"); }
+            else if (parseNode.GetChildNode("customer_email_address") is { } nullNodeCustomerEmailAddress && nullNodeCustomerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerEmailAddress = null;
+            if (parseNode.GetChildNode("customer_purchase_ip") is null) { _explicitNullValueCustomerPurchaseIp = default!; _explicitNullProperties?.Remove("customer_purchase_ip"); }
+            else if (parseNode.GetChildNode("customer_purchase_ip") is { } nullNodeCustomerPurchaseIp && nullNodeCustomerPurchaseIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPurchaseIp = null;
+            if (parseNode.GetChildNode("merchandise_or_services") is null) { _explicitNullValueMerchandiseOrServices = default!; _explicitNullProperties?.Remove("merchandise_or_services"); }
+            else if (parseNode.GetChildNode("merchandise_or_services") is { } nullNodeMerchandiseOrServices && nullNodeMerchandiseOrServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchandiseOrServices = null;
+            if (parseNode.GetChildNode("product_description") is null) { _explicitNullValueProductDescription = default!; _explicitNullProperties?.Remove("product_description"); }
+            else if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("shipping_address") is null) { _explicitNullValueShippingAddress = default!; _explicitNullProperties?.Remove("shipping_address"); }
+            else if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,74 +41,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>User Account ID used to log into business platform. Must be recognizable by the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
+        public string? CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; AdditionalData?.Remove("customer_account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
         private string? _explicitNullValueCustomerAccountId = default!;
 #nullable restore
 #else
-        public string CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
+        public string CustomerAccountId { get => _explicitNullValueCustomerAccountId; set { _explicitNullValueCustomerAccountId = value; AdditionalData?.Remove("customer_account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_account_id"); else _explicitNullProperties?.Remove("customer_account_id"); } }
         private string _explicitNullValueCustomerAccountId = default!;
 #endif
         /// <summary>Unique identifier of the cardholder’s device derived from a combination of at least two hardware and software attributes. Must be at least 20 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
+        public string? CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; AdditionalData?.Remove("customer_device_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
         private string? _explicitNullValueCustomerDeviceFingerprint = default!;
 #nullable restore
 #else
-        public string CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
+        public string CustomerDeviceFingerprint { get => _explicitNullValueCustomerDeviceFingerprint; set { _explicitNullValueCustomerDeviceFingerprint = value; AdditionalData?.Remove("customer_device_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_fingerprint"); else _explicitNullProperties?.Remove("customer_device_fingerprint"); } }
         private string _explicitNullValueCustomerDeviceFingerprint = default!;
 #endif
         /// <summary>Unique identifier of the cardholder’s device such as a device serial number (e.g., International Mobile Equipment Identity [IMEI]). Must be at least 15 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
+        public string? CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; AdditionalData?.Remove("customer_device_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
         private string? _explicitNullValueCustomerDeviceId = default!;
 #nullable restore
 #else
-        public string CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
+        public string CustomerDeviceId { get => _explicitNullValueCustomerDeviceId; set { _explicitNullValueCustomerDeviceId = value; AdditionalData?.Remove("customer_device_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_device_id"); else _explicitNullProperties?.Remove("customer_device_id"); } }
         private string _explicitNullValueCustomerDeviceId = default!;
 #endif
         /// <summary>The email address of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
+        public string? CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; AdditionalData?.Remove("customer_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
         private string? _explicitNullValueCustomerEmailAddress = default!;
 #nullable restore
 #else
-        public string CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
+        public string CustomerEmailAddress { get => _explicitNullValueCustomerEmailAddress; set { _explicitNullValueCustomerEmailAddress = value; AdditionalData?.Remove("customer_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_email_address"); else _explicitNullProperties?.Remove("customer_email_address"); } }
         private string _explicitNullValueCustomerEmailAddress = default!;
 #endif
         /// <summary>The IP address that the customer used when making the purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
+        public string? CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; AdditionalData?.Remove("customer_purchase_ip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
         private string? _explicitNullValueCustomerPurchaseIp = default!;
 #nullable restore
 #else
-        public string CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
+        public string CustomerPurchaseIp { get => _explicitNullValueCustomerPurchaseIp; set { _explicitNullValueCustomerPurchaseIp = value; AdditionalData?.Remove("customer_purchase_ip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_purchase_ip"); else _explicitNullProperties?.Remove("customer_purchase_ip"); } }
         private string _explicitNullValueCustomerPurchaseIp = default!;
 #endif
         /// <summary>Categorization of disputed payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices? MerchandiseOrServices { get => _explicitNullValueMerchandiseOrServices; set { _explicitNullValueMerchandiseOrServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandise_or_services"); else _explicitNullProperties?.Remove("merchandise_or_services"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices? MerchandiseOrServices { get => _explicitNullValueMerchandiseOrServices; set { _explicitNullValueMerchandiseOrServices = value; AdditionalData?.Remove("merchandise_or_services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchandise_or_services"); else _explicitNullProperties?.Remove("merchandise_or_services"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices? _explicitNullValueMerchandiseOrServices = default!;
         /// <summary>A description of the product or service that was sold.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("product_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
         private string? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("product_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
         private string _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>The address to which a physical product was shipped. All fields are required for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>
@@ -133,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer_device_id", n => { CustomerDeviceId = n.GetStringValue(); } },
                 { "customer_email_address", n => { CustomerEmailAddress = n.GetStringValue(); } },
                 { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetStringValue(); } },
-                { "merchandise_or_services", n => { MerchandiseOrServices = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices>(); } },
+                { "merchandise_or_services", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMerchandiseOrServices = default; _explicitNullProperties?.Remove("merchandise_or_services"); AdditionalData["merchandise_or_services"] = unknown; } else { MerchandiseOrServices = parsed; AdditionalData.Remove("merchandise_or_services"); } } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
                 { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransactionShippingAddress.CreateFromDiscriminatorValue); } },
             };

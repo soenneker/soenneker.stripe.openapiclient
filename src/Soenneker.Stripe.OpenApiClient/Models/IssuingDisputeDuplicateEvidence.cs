@@ -17,12 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
-            if (parseNode.GetChildNode("card_statement") is { } nullNodeCardStatement && nullNodeCardStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardStatement = null;
-            if (parseNode.GetChildNode("cash_receipt") is { } nullNodeCashReceipt && nullNodeCashReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashReceipt = null;
-            if (parseNode.GetChildNode("check_image") is { } nullNodeCheckImage && nullNodeCheckImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckImage = null;
-            if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
-            if (parseNode.GetChildNode("original_transaction") is { } nullNodeOriginalTransaction && nullNodeOriginalTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTransaction = null;
+            if (parseNode.GetChildNode("additional_documentation") is null) { _explicitNullValueAdditionalDocumentation = default!; _explicitNullProperties?.Remove("additional_documentation"); }
+            else if (parseNode.GetChildNode("additional_documentation") is { } nullNodeAdditionalDocumentation && nullNodeAdditionalDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentation = null;
+            if (parseNode.GetChildNode("card_statement") is null) { _explicitNullValueCardStatement = default!; _explicitNullProperties?.Remove("card_statement"); }
+            else if (parseNode.GetChildNode("card_statement") is { } nullNodeCardStatement && nullNodeCardStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardStatement = null;
+            if (parseNode.GetChildNode("cash_receipt") is null) { _explicitNullValueCashReceipt = default!; _explicitNullProperties?.Remove("cash_receipt"); }
+            else if (parseNode.GetChildNode("cash_receipt") is { } nullNodeCashReceipt && nullNodeCashReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashReceipt = null;
+            if (parseNode.GetChildNode("check_image") is null) { _explicitNullValueCheckImage = default!; _explicitNullProperties?.Remove("check_image"); }
+            else if (parseNode.GetChildNode("check_image") is { } nullNodeCheckImage && nullNodeCheckImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckImage = null;
+            if (parseNode.GetChildNode("explanation") is null) { _explicitNullValueExplanation = default!; _explicitNullProperties?.Remove("explanation"); }
+            else if (parseNode.GetChildNode("explanation") is { } nullNodeExplanation && nullNodeExplanation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Explanation = null;
+            if (parseNode.GetChildNode("original_transaction") is null) { _explicitNullValueOriginalTransaction = default!; _explicitNullProperties?.Remove("original_transaction"); }
+            else if (parseNode.GetChildNode("original_transaction") is { } nullNodeOriginalTransaction && nullNodeOriginalTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTransaction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Additional documentation supporting the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation? AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; AdditionalData?.Remove("additional_documentation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation? _explicitNullValueAdditionalDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation AdditionalDocumentation { get => _explicitNullValueAdditionalDocumentation; set { _explicitNullValueAdditionalDocumentation = value; AdditionalData?.Remove("additional_documentation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_documentation"); else _explicitNullProperties?.Remove("additional_documentation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Copy of the card statement showing that the product had already been paid for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement? CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement? CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; AdditionalData?.Remove("card_statement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement? _explicitNullValueCardStatement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement CardStatement { get => _explicitNullValueCardStatement; set { _explicitNullValueCardStatement = value; AdditionalData?.Remove("card_statement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_statement"); else _explicitNullProperties?.Remove("card_statement"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement _explicitNullValueCardStatement = default!;
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Copy of the receipt showing that the product had been paid for in cash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt? CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt? CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; AdditionalData?.Remove("cash_receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt? _explicitNullValueCashReceipt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt CashReceipt { get => _explicitNullValueCashReceipt; set { _explicitNullValueCashReceipt = value; AdditionalData?.Remove("cash_receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_receipt"); else _explicitNullProperties?.Remove("cash_receipt"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt _explicitNullValueCashReceipt = default!;
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Image of the front and back of the check that was used to pay for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage? CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage? CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; AdditionalData?.Remove("check_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage? _explicitNullValueCheckImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage CheckImage { get => _explicitNullValueCheckImage; set { _explicitNullValueCheckImage = value; AdditionalData?.Remove("check_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_image"); else _explicitNullProperties?.Remove("check_image"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage _explicitNullValueCheckImage = default!;
 #endif
         /// <summary>Explanation of why the cardholder is disputing this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        public string? Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; AdditionalData?.Remove("explanation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
         private string? _explicitNullValueExplanation = default!;
 #nullable restore
 #else
-        public string Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
+        public string Explanation { get => _explicitNullValueExplanation; set { _explicitNullValueExplanation = value; AdditionalData?.Remove("explanation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explanation"); else _explicitNullProperties?.Remove("explanation"); } }
         private string _explicitNullValueExplanation = default!;
 #endif
         /// <summary>Transaction (e.g., ipi_...) that the disputed transaction is a duplicate of. Of the two or more transactions that are copies of each other, this is original undisputed one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        public string? OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; AdditionalData?.Remove("original_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
         private string? _explicitNullValueOriginalTransaction = default!;
 #nullable restore
 #else
-        public string OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
+        public string OriginalTransaction { get => _explicitNullValueOriginalTransaction; set { _explicitNullValueOriginalTransaction = value; AdditionalData?.Remove("original_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_transaction"); else _explicitNullProperties?.Remove("original_transaction"); } }
         private string _explicitNullValueOriginalTransaction = default!;
 #endif
         /// <summary>
@@ -112,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_documentation", n => { AdditionalDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation.CreateFromDiscriminatorValue); } },
+                { "additional_documentation", n => { AdditionalDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation.CreateFromDiscriminatorValue); } },
                 { "card_statement", n => { CardStatement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement.CreateFromDiscriminatorValue); } },
                 { "cash_receipt", n => { CashReceipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt.CreateFromDiscriminatorValue); } },
                 { "check_image", n => { CheckImage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage.CreateFromDiscriminatorValue); } },
@@ -127,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceAdditionalDocumentation>("additional_documentation", AdditionalDocumentation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>("additional_documentation", AdditionalDocumentation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCardStatement>("card_statement", CardStatement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCashReceipt>("cash_receipt", CashReceipt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeDuplicateEvidenceCheckImage>("check_image", CheckImage);

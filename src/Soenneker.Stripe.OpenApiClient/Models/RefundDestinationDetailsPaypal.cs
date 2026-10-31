@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("network_decline_code") is { } nullNodeNetworkDeclineCode && nullNodeNetworkDeclineCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkDeclineCode = null;
+            if (parseNode.GetChildNode("network_decline_code") is null) { _explicitNullValueNetworkDeclineCode = default!; _explicitNullProperties?.Remove("network_decline_code"); }
+            else if (parseNode.GetChildNode("network_decline_code") is { } nullNodeNetworkDeclineCode && nullNodeNetworkDeclineCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkDeclineCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For refunds declined by the network, a decline code provided by the network which indicates the reason the refund failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkDeclineCode { get => _explicitNullValueNetworkDeclineCode; set { _explicitNullValueNetworkDeclineCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_decline_code"); else _explicitNullProperties?.Remove("network_decline_code"); } }
+        public string? NetworkDeclineCode { get => _explicitNullValueNetworkDeclineCode; set { _explicitNullValueNetworkDeclineCode = value; AdditionalData?.Remove("network_decline_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_decline_code"); else _explicitNullProperties?.Remove("network_decline_code"); } }
         private string? _explicitNullValueNetworkDeclineCode = default!;
 #nullable restore
 #else
-        public string NetworkDeclineCode { get => _explicitNullValueNetworkDeclineCode; set { _explicitNullValueNetworkDeclineCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_decline_code"); else _explicitNullProperties?.Remove("network_decline_code"); } }
+        public string NetworkDeclineCode { get => _explicitNullValueNetworkDeclineCode; set { _explicitNullValueNetworkDeclineCode = value; AdditionalData?.Remove("network_decline_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_decline_code"); else _explicitNullProperties?.Remove("network_decline_code"); } }
         private string _explicitNullValueNetworkDeclineCode = default!;
 #endif
         /// <summary>

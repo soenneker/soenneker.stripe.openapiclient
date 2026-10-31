@@ -17,34 +17,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("from_postal_code") is { } nullNodeFromPostalCode && nullNodeFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPostalCode = null;
-            if (parseNode.GetChildNode("to_postal_code") is { } nullNodeToPostalCode && nullNodeToPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPostalCode = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("from_postal_code") is null) { _explicitNullValueFromPostalCode = default!; _explicitNullProperties?.Remove("from_postal_code"); }
+            else if (parseNode.GetChildNode("from_postal_code") is { } nullNodeFromPostalCode && nullNodeFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPostalCode = null;
+            if (parseNode.GetChildNode("to_postal_code") is null) { _explicitNullValueToPostalCode = default!; _explicitNullProperties?.Remove("to_postal_code"); }
+            else if (parseNode.GetChildNode("to_postal_code") is { } nullNodeToPostalCode && nullNodeToPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPostalCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If a physical good is being shipped, the cost of shipping represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). An integer greater than or equal to 0.</summary>
-        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>If a physical good is being shipped, the postal code of where it is being shipped from. At most 10 alphanumeric characters long, hyphens and spaces are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        public string? FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; AdditionalData?.Remove("from_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
         private string? _explicitNullValueFromPostalCode = default!;
 #nullable restore
 #else
-        public string FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        public string FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; AdditionalData?.Remove("from_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
         private string _explicitNullValueFromPostalCode = default!;
 #endif
         /// <summary>If a physical good is being shipped, the postal code of where it is being shipped to. At most 10 alphanumeric characters long, hyphens and spaces are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        public string? ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; AdditionalData?.Remove("to_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
         private string? _explicitNullValueToPostalCode = default!;
 #nullable restore
 #else
-        public string ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        public string ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; AdditionalData?.Remove("to_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
         private string _explicitNullValueToPostalCode = default!;
 #endif
         /// <summary>

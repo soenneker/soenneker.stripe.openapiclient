@@ -18,28 +18,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
-            if (parseNode.GetChildNode("normalized_address") is { } nullNodeNormalizedAddress && nullNodeNormalizedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedAddress = null;
-            if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("normalized_address") is null) { _explicitNullValueNormalizedAddress = default!; _explicitNullProperties?.Remove("normalized_address"); }
+            else if (parseNode.GetChildNode("normalized_address") is { } nullNodeNormalizedAddress && nullNodeNormalizedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedAddress = null;
+            if (parseNode.GetChildNode("result") is null) { _explicitNullValueResult = default!; _explicitNullProperties?.Remove("result"); }
+            else if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address validation capabilities to use.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode? _explicitNullValueMode = default!;
         /// <summary>The normalized shipping address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress? NormalizedAddress { get => _explicitNullValueNormalizedAddress; set { _explicitNullValueNormalizedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_address"); else _explicitNullProperties?.Remove("normalized_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress? NormalizedAddress { get => _explicitNullValueNormalizedAddress; set { _explicitNullValueNormalizedAddress = value; AdditionalData?.Remove("normalized_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_address"); else _explicitNullProperties?.Remove("normalized_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress? _explicitNullValueNormalizedAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress NormalizedAddress { get => _explicitNullValueNormalizedAddress; set { _explicitNullValueNormalizedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_address"); else _explicitNullProperties?.Remove("normalized_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress NormalizedAddress { get => _explicitNullValueNormalizedAddress; set { _explicitNullValueNormalizedAddress = value; AdditionalData?.Remove("normalized_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_address"); else _explicitNullProperties?.Remove("normalized_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress _explicitNullValueNormalizedAddress = default!;
 #endif
         /// <summary>The validation result for the shipping address.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult? _explicitNullValueResult = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed"/> and sets the default values.
@@ -66,9 +69,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode>(); } },
+                { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
                 { "normalized_address", n => { NormalizedAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress.CreateFromDiscriminatorValue); } },
-                { "result", n => { Result = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult>(); } },
+                { "result", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResult = default; _explicitNullProperties?.Remove("result"); AdditionalData["result"] = unknown; } else { Result = parsed; AdditionalData.Remove("result"); } } },
             };
         }
         /// <summary>

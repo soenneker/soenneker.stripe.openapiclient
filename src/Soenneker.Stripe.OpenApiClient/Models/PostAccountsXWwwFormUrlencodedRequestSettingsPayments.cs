@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
-            if (parseNode.GetChildNode("statement_descriptor_kana") is { } nullNodeStatementDescriptorKana && nullNodeStatementDescriptorKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorKana = null;
-            if (parseNode.GetChildNode("statement_descriptor_kanji") is { } nullNodeStatementDescriptorKanji && nullNodeStatementDescriptorKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorKanji = null;
+            if (parseNode.GetChildNode("statement_descriptor") is null) { _explicitNullValueStatementDescriptor = default!; _explicitNullProperties?.Remove("statement_descriptor"); }
+            else if (parseNode.GetChildNode("statement_descriptor") is { } nullNodeStatementDescriptor && nullNodeStatementDescriptor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptor = null;
+            if (parseNode.GetChildNode("statement_descriptor_kana") is null) { _explicitNullValueStatementDescriptorKana = default!; _explicitNullProperties?.Remove("statement_descriptor_kana"); }
+            else if (parseNode.GetChildNode("statement_descriptor_kana") is { } nullNodeStatementDescriptorKana && nullNodeStatementDescriptorKana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorKana = null;
+            if (parseNode.GetChildNode("statement_descriptor_kanji") is null) { _explicitNullValueStatementDescriptorKanji = default!; _explicitNullProperties?.Remove("statement_descriptor_kanji"); }
+            else if (parseNode.GetChildNode("statement_descriptor_kanji") is { } nullNodeStatementDescriptorKanji && nullNodeStatementDescriptorKanji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatementDescriptorKanji = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The statement_descriptor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string? StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string? _explicitNullValueStatementDescriptor = default!;
 #nullable restore
 #else
-        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
+        public string StatementDescriptor { get => _explicitNullValueStatementDescriptor; set { _explicitNullValueStatementDescriptor = value; AdditionalData?.Remove("statement_descriptor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor"); else _explicitNullProperties?.Remove("statement_descriptor"); } }
         private string _explicitNullValueStatementDescriptor = default!;
 #endif
         /// <summary>The statement_descriptor_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorKana { get => _explicitNullValueStatementDescriptorKana; set { _explicitNullValueStatementDescriptorKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kana"); else _explicitNullProperties?.Remove("statement_descriptor_kana"); } }
+        public string? StatementDescriptorKana { get => _explicitNullValueStatementDescriptorKana; set { _explicitNullValueStatementDescriptorKana = value; AdditionalData?.Remove("statement_descriptor_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kana"); else _explicitNullProperties?.Remove("statement_descriptor_kana"); } }
         private string? _explicitNullValueStatementDescriptorKana = default!;
 #nullable restore
 #else
-        public string StatementDescriptorKana { get => _explicitNullValueStatementDescriptorKana; set { _explicitNullValueStatementDescriptorKana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kana"); else _explicitNullProperties?.Remove("statement_descriptor_kana"); } }
+        public string StatementDescriptorKana { get => _explicitNullValueStatementDescriptorKana; set { _explicitNullValueStatementDescriptorKana = value; AdditionalData?.Remove("statement_descriptor_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kana"); else _explicitNullProperties?.Remove("statement_descriptor_kana"); } }
         private string _explicitNullValueStatementDescriptorKana = default!;
 #endif
         /// <summary>The statement_descriptor_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatementDescriptorKanji { get => _explicitNullValueStatementDescriptorKanji; set { _explicitNullValueStatementDescriptorKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_kanji"); } }
+        public string? StatementDescriptorKanji { get => _explicitNullValueStatementDescriptorKanji; set { _explicitNullValueStatementDescriptorKanji = value; AdditionalData?.Remove("statement_descriptor_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_kanji"); } }
         private string? _explicitNullValueStatementDescriptorKanji = default!;
 #nullable restore
 #else
-        public string StatementDescriptorKanji { get => _explicitNullValueStatementDescriptorKanji; set { _explicitNullValueStatementDescriptorKanji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_kanji"); } }
+        public string StatementDescriptorKanji { get => _explicitNullValueStatementDescriptorKanji; set { _explicitNullValueStatementDescriptorKanji = value; AdditionalData?.Remove("statement_descriptor_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statement_descriptor_kanji"); else _explicitNullProperties?.Remove("statement_descriptor_kanji"); } }
         private string _explicitNullValueStatementDescriptorKanji = default!;
 #endif
         /// <summary>

@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_eligible") is { } nullNodeAmountEligible && nullNodeAmountEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountEligible = null;
+            if (parseNode.GetChildNode("amount_eligible") is null) { _explicitNullValueAmountEligible = default!; _explicitNullProperties?.Remove("amount_eligible"); }
+            else if (parseNode.GetChildNode("amount_eligible") is { } nullNodeAmountEligible && nullNodeAmountEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountEligible = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_eligible property</summary>
-        public int? AmountEligible { get => _explicitNullValueAmountEligible; set { _explicitNullValueAmountEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_eligible"); else _explicitNullProperties?.Remove("amount_eligible"); } }
+        public int? AmountEligible { get => _explicitNullValueAmountEligible; set { _explicitNullValueAmountEligible = value; AdditionalData?.Remove("amount_eligible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_eligible"); else _explicitNullProperties?.Remove("amount_eligible"); } }
         private int? _explicitNullValueAmountEligible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethodXWwwFormUrlencodedRequestCollectConfigTipping"/> and sets the default values.

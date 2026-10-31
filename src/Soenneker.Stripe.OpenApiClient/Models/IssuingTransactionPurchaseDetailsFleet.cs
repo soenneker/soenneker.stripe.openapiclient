@@ -18,10 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cardholder_prompt_data") is { } nullNodeCardholderPromptData && nullNodeCardholderPromptData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderPromptData = null;
-            if (parseNode.GetChildNode("purchase_type") is { } nullNodePurchaseType && nullNodePurchaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseType = null;
-            if (parseNode.GetChildNode("reported_breakdown") is { } nullNodeReportedBreakdown && nullNodeReportedBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedBreakdown = null;
-            if (parseNode.GetChildNode("service_type") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+            if (parseNode.GetChildNode("cardholder_prompt_data") is null) { _explicitNullValueCardholderPromptData = default!; _explicitNullProperties?.Remove("cardholder_prompt_data"); }
+            else if (parseNode.GetChildNode("cardholder_prompt_data") is { } nullNodeCardholderPromptData && nullNodeCardholderPromptData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardholderPromptData = null;
+            if (parseNode.GetChildNode("purchase_type") is null) { _explicitNullValuePurchaseType = default!; _explicitNullProperties?.Remove("purchase_type"); }
+            else if (parseNode.GetChildNode("purchase_type") is { } nullNodePurchaseType && nullNodePurchaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseType = null;
+            if (parseNode.GetChildNode("reported_breakdown") is null) { _explicitNullValueReportedBreakdown = default!; _explicitNullProperties?.Remove("reported_breakdown"); }
+            else if (parseNode.GetChildNode("reported_breakdown") is { } nullNodeReportedBreakdown && nullNodeReportedBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedBreakdown = null;
+            if (parseNode.GetChildNode("service_type") is null) { _explicitNullValueServiceType = default!; _explicitNullProperties?.Remove("service_type"); }
+            else if (parseNode.GetChildNode("service_type") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Answers to prompts presented to cardholder at point of sale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData? CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData? CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; AdditionalData?.Remove("cardholder_prompt_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData? _explicitNullValueCardholderPromptData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData CardholderPromptData { get => _explicitNullValueCardholderPromptData; set { _explicitNullValueCardholderPromptData = value; AdditionalData?.Remove("cardholder_prompt_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardholder_prompt_data"); else _explicitNullProperties?.Remove("cardholder_prompt_data"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataCardholderPromptData _explicitNullValueCardholderPromptData = default!;
 #endif
         /// <summary>The type of purchase. One of `fuel_purchase`, `non_fuel_purchase`, or `fuel_and_non_fuel_purchase`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
+        public string? PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; AdditionalData?.Remove("purchase_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
         private string? _explicitNullValuePurchaseType = default!;
 #nullable restore
 #else
-        public string PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
+        public string PurchaseType { get => _explicitNullValuePurchaseType; set { _explicitNullValuePurchaseType = value; AdditionalData?.Remove("purchase_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_type"); else _explicitNullProperties?.Remove("purchase_type"); } }
         private string _explicitNullValuePurchaseType = default!;
 #endif
         /// <summary>More information about the total amount. This information is not guaranteed to be accurate as some merchants may provide unreliable data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown? ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown? ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; AdditionalData?.Remove("reported_breakdown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown? _explicitNullValueReportedBreakdown = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown ReportedBreakdown { get => _explicitNullValueReportedBreakdown; set { _explicitNullValueReportedBreakdown = value; AdditionalData?.Remove("reported_breakdown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reported_breakdown"); else _explicitNullProperties?.Remove("reported_breakdown"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown _explicitNullValueReportedBreakdown = default!;
 #endif
         /// <summary>The type of fuel service. One of `non_fuel_transaction`, `full_service`, or `self_service`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
+        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; AdditionalData?.Remove("service_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
         private string? _explicitNullValueServiceType = default!;
 #nullable restore
 #else
-        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
+        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; AdditionalData?.Remove("service_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_type"); else _explicitNullProperties?.Remove("service_type"); } }
         private string _explicitNullValueServiceType = default!;
 #endif
         /// <summary>

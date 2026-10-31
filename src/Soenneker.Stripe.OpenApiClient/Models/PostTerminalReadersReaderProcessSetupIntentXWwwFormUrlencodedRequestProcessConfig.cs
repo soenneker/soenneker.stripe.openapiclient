@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enable_customer_cancellation") is { } nullNodeEnableCustomerCancellation && nullNodeEnableCustomerCancellation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCustomerCancellation = null;
+            if (parseNode.GetChildNode("enable_customer_cancellation") is null) { _explicitNullValueEnableCustomerCancellation = default!; _explicitNullProperties?.Remove("enable_customer_cancellation"); }
+            else if (parseNode.GetChildNode("enable_customer_cancellation") is { } nullNodeEnableCustomerCancellation && nullNodeEnableCustomerCancellation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCustomerCancellation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enable_customer_cancellation property</summary>
-        public bool? EnableCustomerCancellation { get => _explicitNullValueEnableCustomerCancellation; set { _explicitNullValueEnableCustomerCancellation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_customer_cancellation"); else _explicitNullProperties?.Remove("enable_customer_cancellation"); } }
+        public bool? EnableCustomerCancellation { get => _explicitNullValueEnableCustomerCancellation; set { _explicitNullValueEnableCustomerCancellation = value; AdditionalData?.Remove("enable_customer_cancellation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_customer_cancellation"); else _explicitNullProperties?.Remove("enable_customer_cancellation"); } }
         private bool? _explicitNullValueEnableCustomerCancellation = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderProcessSetupIntentXWwwFormUrlencodedRequestProcessConfig"/> and sets the default values.

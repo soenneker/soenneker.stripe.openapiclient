@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reconciliation_mode") is { } nullNodeReconciliationMode && nullNodeReconciliationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconciliationMode = null;
+            if (parseNode.GetChildNode("reconciliation_mode") is null) { _explicitNullValueReconciliationMode = default!; _explicitNullProperties?.Remove("reconciliation_mode"); }
+            else if (parseNode.GetChildNode("reconciliation_mode") is { } nullNodeReconciliationMode && nullNodeReconciliationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconciliationMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reconciliation_mode property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettingsReconciliationMode? ReconciliationMode { get => _explicitNullValueReconciliationMode; set { _explicitNullValueReconciliationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconciliation_mode"); else _explicitNullProperties?.Remove("reconciliation_mode"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettingsReconciliationMode? ReconciliationMode { get => _explicitNullValueReconciliationMode; set { _explicitNullValueReconciliationMode = value; AdditionalData?.Remove("reconciliation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconciliation_mode"); else _explicitNullProperties?.Remove("reconciliation_mode"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettingsReconciliationMode? _explicitNullValueReconciliationMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettings"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "reconciliation_mode", n => { ReconciliationMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettingsReconciliationMode>(); } },
+                { "reconciliation_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestCashBalanceSettingsReconciliationMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReconciliationMode = default; _explicitNullProperties?.Remove("reconciliation_mode"); AdditionalData["reconciliation_mode"] = unknown; } else { ReconciliationMode = parsed; AdditionalData.Remove("reconciliation_mode"); } } },
             };
         }
         /// <summary>

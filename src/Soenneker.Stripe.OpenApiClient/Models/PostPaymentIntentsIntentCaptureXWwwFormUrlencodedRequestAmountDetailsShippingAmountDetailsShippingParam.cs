@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("from_postal_code") is { } nullNodeFromPostalCode && nullNodeFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPostalCode = null;
-            if (parseNode.GetChildNode("to_postal_code") is { } nullNodeToPostalCode && nullNodeToPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPostalCode = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("from_postal_code") is null) { _explicitNullValueFromPostalCode = default!; _explicitNullProperties?.Remove("from_postal_code"); }
+            else if (parseNode.GetChildNode("from_postal_code") is { } nullNodeFromPostalCode && nullNodeFromPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPostalCode = null;
+            if (parseNode.GetChildNode("to_postal_code") is null) { _explicitNullValueToPostalCode = default!; _explicitNullProperties?.Remove("to_postal_code"); }
+            else if (parseNode.GetChildNode("to_postal_code") is { } nullNodeToPostalCode && nullNodeToPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPostalCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamAmount _explicitNullValueAmount = default!;
 #endif
         /// <summary>The from_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; AdditionalData?.Remove("from_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode? _explicitNullValueFromPostalCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode FromPostalCode { get => _explicitNullValueFromPostalCode; set { _explicitNullValueFromPostalCode = value; AdditionalData?.Remove("from_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_postal_code"); else _explicitNullProperties?.Remove("from_postal_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamFromPostalCode _explicitNullValueFromPostalCode = default!;
 #endif
         /// <summary>The to_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; AdditionalData?.Remove("to_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode? _explicitNullValueToPostalCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode ToPostalCode { get => _explicitNullValueToPostalCode; set { _explicitNullValueToPostalCode = value; AdditionalData?.Remove("to_postal_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_postal_code"); else _explicitNullProperties?.Remove("to_postal_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestAmountDetailsShippingAmountDetailsShippingParamToPostalCode _explicitNullValueToPostalCode = default!;
 #endif
         /// <summary>

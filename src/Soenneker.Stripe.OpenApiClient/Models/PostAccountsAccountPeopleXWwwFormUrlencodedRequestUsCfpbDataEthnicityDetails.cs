@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ethnicity") is { } nullNodeEthnicity && nullNodeEthnicity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ethnicity = null;
-            if (parseNode.GetChildNode("ethnicity_other") is { } nullNodeEthnicityOther && nullNodeEthnicityOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EthnicityOther = null;
+            if (parseNode.GetChildNode("ethnicity") is null) { _explicitNullValueEthnicity = default!; _explicitNullProperties?.Remove("ethnicity"); }
+            else if (parseNode.GetChildNode("ethnicity") is { } nullNodeEthnicity && nullNodeEthnicity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ethnicity = null;
+            if (parseNode.GetChildNode("ethnicity_other") is null) { _explicitNullValueEthnicityOther = default!; _explicitNullProperties?.Remove("ethnicity_other"); }
+            else if (parseNode.GetChildNode("ethnicity_other") is { } nullNodeEthnicityOther && nullNodeEthnicityOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EthnicityOther = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ethnicity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?>? Ethnicity { get => _explicitNullValueEthnicity; set { _explicitNullValueEthnicity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity"); else _explicitNullProperties?.Remove("ethnicity"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?>? Ethnicity { get => _explicitNullValueEthnicity; set { _explicitNullValueEthnicity = value; AdditionalData?.Remove("ethnicity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity"); else _explicitNullProperties?.Remove("ethnicity"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?>? _explicitNullValueEthnicity = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?> Ethnicity { get => _explicitNullValueEthnicity; set { _explicitNullValueEthnicity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity"); else _explicitNullProperties?.Remove("ethnicity"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?> Ethnicity { get => _explicitNullValueEthnicity; set { _explicitNullValueEthnicity = value; AdditionalData?.Remove("ethnicity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity"); else _explicitNullProperties?.Remove("ethnicity"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeopleXWwwFormUrlencodedRequestUsCfpbDataEthnicityDetailsEthnicityItem?> _explicitNullValueEthnicity = default!;
 #endif
         /// <summary>The ethnicity_other property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EthnicityOther { get => _explicitNullValueEthnicityOther; set { _explicitNullValueEthnicityOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_other"); else _explicitNullProperties?.Remove("ethnicity_other"); } }
+        public string? EthnicityOther { get => _explicitNullValueEthnicityOther; set { _explicitNullValueEthnicityOther = value; AdditionalData?.Remove("ethnicity_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_other"); else _explicitNullProperties?.Remove("ethnicity_other"); } }
         private string? _explicitNullValueEthnicityOther = default!;
 #nullable restore
 #else
-        public string EthnicityOther { get => _explicitNullValueEthnicityOther; set { _explicitNullValueEthnicityOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_other"); else _explicitNullProperties?.Remove("ethnicity_other"); } }
+        public string EthnicityOther { get => _explicitNullValueEthnicityOther; set { _explicitNullValueEthnicityOther = value; AdditionalData?.Remove("ethnicity_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ethnicity_other"); else _explicitNullProperties?.Remove("ethnicity_other"); } }
         private string _explicitNullValueEthnicityOther = default!;
 #endif
         /// <summary>

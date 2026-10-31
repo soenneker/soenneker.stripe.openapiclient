@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("back") is { } nullNodeBack && nullNodeBack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Back = null;
-            if (parseNode.GetChildNode("front") is { } nullNodeFront && nullNodeFront.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Front = null;
+            if (parseNode.GetChildNode("back") is null) { _explicitNullValueBack = default!; _explicitNullProperties?.Remove("back"); }
+            else if (parseNode.GetChildNode("back") is { } nullNodeBack && nullNodeBack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Back = null;
+            if (parseNode.GetChildNode("front") is null) { _explicitNullValueFront = default!; _explicitNullProperties?.Remove("front"); }
+            else if (parseNode.GetChildNode("front") is { } nullNodeFront && nullNodeFront.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Front = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The back property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
+        public string? Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; AdditionalData?.Remove("back"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
         private string? _explicitNullValueBack = default!;
 #nullable restore
 #else
-        public string Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
+        public string Back { get => _explicitNullValueBack; set { _explicitNullValueBack = value; AdditionalData?.Remove("back"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("back"); else _explicitNullProperties?.Remove("back"); } }
         private string _explicitNullValueBack = default!;
 #endif
         /// <summary>The front property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
+        public string? Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; AdditionalData?.Remove("front"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
         private string? _explicitNullValueFront = default!;
 #nullable restore
 #else
-        public string Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
+        public string Front { get => _explicitNullValueFront; set { _explicitNullValueFront = value; AdditionalData?.Remove("front"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("front"); else _explicitNullProperties?.Remove("front"); } }
         private string _explicitNullValueFront = default!;
 #endif
         /// <summary>

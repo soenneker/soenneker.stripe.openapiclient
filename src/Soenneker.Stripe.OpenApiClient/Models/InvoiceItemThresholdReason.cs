@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("line_item_ids") is { } nullNodeLineItemIds && nullNodeLineItemIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItemIds = null;
-            if (parseNode.GetChildNode("usage_gte") is { } nullNodeUsageGte && nullNodeUsageGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageGte = null;
+            if (parseNode.GetChildNode("line_item_ids") is null) { _explicitNullValueLineItemIds = default!; _explicitNullProperties?.Remove("line_item_ids"); }
+            else if (parseNode.GetChildNode("line_item_ids") is { } nullNodeLineItemIds && nullNodeLineItemIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItemIds = null;
+            if (parseNode.GetChildNode("usage_gte") is null) { _explicitNullValueUsageGte = default!; _explicitNullProperties?.Remove("usage_gte"); }
+            else if (parseNode.GetChildNode("usage_gte") is { } nullNodeUsageGte && nullNodeUsageGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageGte = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The IDs of the line items that triggered the threshold invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LineItemIds { get => _explicitNullValueLineItemIds; set { _explicitNullValueLineItemIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_item_ids"); else _explicitNullProperties?.Remove("line_item_ids"); } }
+        public List<string>? LineItemIds { get => _explicitNullValueLineItemIds; set { _explicitNullValueLineItemIds = value; AdditionalData?.Remove("line_item_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_item_ids"); else _explicitNullProperties?.Remove("line_item_ids"); } }
         private List<string>? _explicitNullValueLineItemIds = default!;
 #nullable restore
 #else
-        public List<string> LineItemIds { get => _explicitNullValueLineItemIds; set { _explicitNullValueLineItemIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_item_ids"); else _explicitNullProperties?.Remove("line_item_ids"); } }
+        public List<string> LineItemIds { get => _explicitNullValueLineItemIds; set { _explicitNullValueLineItemIds = value; AdditionalData?.Remove("line_item_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_item_ids"); else _explicitNullProperties?.Remove("line_item_ids"); } }
         private List<string> _explicitNullValueLineItemIds = default!;
 #endif
         /// <summary>The quantity threshold boundary that applied to the given line item.</summary>
-        public int? UsageGte { get => _explicitNullValueUsageGte; set { _explicitNullValueUsageGte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_gte"); else _explicitNullProperties?.Remove("usage_gte"); } }
+        public int? UsageGte { get => _explicitNullValueUsageGte; set { _explicitNullValueUsageGte = value; AdditionalData?.Remove("usage_gte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_gte"); else _explicitNullProperties?.Remove("usage_gte"); } }
         private int? _explicitNullValueUsageGte = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemThresholdReason"/> and sets the default values.

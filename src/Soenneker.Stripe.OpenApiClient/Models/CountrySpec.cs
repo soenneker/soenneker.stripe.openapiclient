@@ -18,14 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_currency") is { } nullNodeDefaultCurrency && nullNodeDefaultCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCurrency = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
-            if (parseNode.GetChildNode("supported_bank_account_currencies") is { } nullNodeSupportedBankAccountCurrencies && nullNodeSupportedBankAccountCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedBankAccountCurrencies = null;
-            if (parseNode.GetChildNode("supported_payment_currencies") is { } nullNodeSupportedPaymentCurrencies && nullNodeSupportedPaymentCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedPaymentCurrencies = null;
-            if (parseNode.GetChildNode("supported_payment_methods") is { } nullNodeSupportedPaymentMethods && nullNodeSupportedPaymentMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedPaymentMethods = null;
-            if (parseNode.GetChildNode("supported_transfer_countries") is { } nullNodeSupportedTransferCountries && nullNodeSupportedTransferCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedTransferCountries = null;
-            if (parseNode.GetChildNode("verification_fields") is { } nullNodeVerificationFields && nullNodeVerificationFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationFields = null;
+            if (parseNode.GetChildNode("default_currency") is null) { _explicitNullValueDefaultCurrency = default!; _explicitNullProperties?.Remove("default_currency"); }
+            else if (parseNode.GetChildNode("default_currency") is { } nullNodeDefaultCurrency && nullNodeDefaultCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCurrency = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("object") is null) { _explicitNullValueObject = default!; _explicitNullProperties?.Remove("object"); }
+            else if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("supported_bank_account_currencies") is null) { _explicitNullValueSupportedBankAccountCurrencies = default!; _explicitNullProperties?.Remove("supported_bank_account_currencies"); }
+            else if (parseNode.GetChildNode("supported_bank_account_currencies") is { } nullNodeSupportedBankAccountCurrencies && nullNodeSupportedBankAccountCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedBankAccountCurrencies = null;
+            if (parseNode.GetChildNode("supported_payment_currencies") is null) { _explicitNullValueSupportedPaymentCurrencies = default!; _explicitNullProperties?.Remove("supported_payment_currencies"); }
+            else if (parseNode.GetChildNode("supported_payment_currencies") is { } nullNodeSupportedPaymentCurrencies && nullNodeSupportedPaymentCurrencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedPaymentCurrencies = null;
+            if (parseNode.GetChildNode("supported_payment_methods") is null) { _explicitNullValueSupportedPaymentMethods = default!; _explicitNullProperties?.Remove("supported_payment_methods"); }
+            else if (parseNode.GetChildNode("supported_payment_methods") is { } nullNodeSupportedPaymentMethods && nullNodeSupportedPaymentMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedPaymentMethods = null;
+            if (parseNode.GetChildNode("supported_transfer_countries") is null) { _explicitNullValueSupportedTransferCountries = default!; _explicitNullProperties?.Remove("supported_transfer_countries"); }
+            else if (parseNode.GetChildNode("supported_transfer_countries") is { } nullNodeSupportedTransferCountries && nullNodeSupportedTransferCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedTransferCountries = null;
+            if (parseNode.GetChildNode("verification_fields") is null) { _explicitNullValueVerificationFields = default!; _explicitNullProperties?.Remove("verification_fields"); }
+            else if (parseNode.GetChildNode("verification_fields") is { } nullNodeVerificationFields && nullNodeVerificationFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationFields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,74 +41,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The default currency for this country. This applies to both payment methods and bank accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
+        public string? DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; AdditionalData?.Remove("default_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
         private string? _explicitNullValueDefaultCurrency = default!;
 #nullable restore
 #else
-        public string DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
+        public string DefaultCurrency { get => _explicitNullValueDefaultCurrency; set { _explicitNullValueDefaultCurrency = value; AdditionalData?.Remove("default_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_currency"); else _explicitNullProperties?.Remove("default_currency"); } }
         private string _explicitNullValueDefaultCurrency = default!;
 #endif
         /// <summary>Unique identifier for the object. Represented as the ISO country code for this country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject? _explicitNullValueObject = default!;
         /// <summary>Currencies that can be accepted in the specific country (for transfers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty? SupportedBankAccountCurrencies { get => _explicitNullValueSupportedBankAccountCurrencies; set { _explicitNullValueSupportedBankAccountCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_bank_account_currencies"); else _explicitNullProperties?.Remove("supported_bank_account_currencies"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty? SupportedBankAccountCurrencies { get => _explicitNullValueSupportedBankAccountCurrencies; set { _explicitNullValueSupportedBankAccountCurrencies = value; AdditionalData?.Remove("supported_bank_account_currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_bank_account_currencies"); else _explicitNullProperties?.Remove("supported_bank_account_currencies"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty? _explicitNullValueSupportedBankAccountCurrencies = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty SupportedBankAccountCurrencies { get => _explicitNullValueSupportedBankAccountCurrencies; set { _explicitNullValueSupportedBankAccountCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_bank_account_currencies"); else _explicitNullProperties?.Remove("supported_bank_account_currencies"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty SupportedBankAccountCurrencies { get => _explicitNullValueSupportedBankAccountCurrencies; set { _explicitNullValueSupportedBankAccountCurrencies = value; AdditionalData?.Remove("supported_bank_account_currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_bank_account_currencies"); else _explicitNullProperties?.Remove("supported_bank_account_currencies"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty _explicitNullValueSupportedBankAccountCurrencies = default!;
 #endif
         /// <summary>Currencies that can be accepted in the specified country (for payments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SupportedPaymentCurrencies { get => _explicitNullValueSupportedPaymentCurrencies; set { _explicitNullValueSupportedPaymentCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_currencies"); else _explicitNullProperties?.Remove("supported_payment_currencies"); } }
+        public List<string>? SupportedPaymentCurrencies { get => _explicitNullValueSupportedPaymentCurrencies; set { _explicitNullValueSupportedPaymentCurrencies = value; AdditionalData?.Remove("supported_payment_currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_currencies"); else _explicitNullProperties?.Remove("supported_payment_currencies"); } }
         private List<string>? _explicitNullValueSupportedPaymentCurrencies = default!;
 #nullable restore
 #else
-        public List<string> SupportedPaymentCurrencies { get => _explicitNullValueSupportedPaymentCurrencies; set { _explicitNullValueSupportedPaymentCurrencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_currencies"); else _explicitNullProperties?.Remove("supported_payment_currencies"); } }
+        public List<string> SupportedPaymentCurrencies { get => _explicitNullValueSupportedPaymentCurrencies; set { _explicitNullValueSupportedPaymentCurrencies = value; AdditionalData?.Remove("supported_payment_currencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_currencies"); else _explicitNullProperties?.Remove("supported_payment_currencies"); } }
         private List<string> _explicitNullValueSupportedPaymentCurrencies = default!;
 #endif
         /// <summary>Payment methods available in the specified country. You may need to enable some payment methods (e.g., [ACH](https://stripe.com/docs/ach)) on your account before they appear in this list. The `stripe` payment method refers to [charging through your platform](https://stripe.com/docs/connect/destination-charges).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SupportedPaymentMethods { get => _explicitNullValueSupportedPaymentMethods; set { _explicitNullValueSupportedPaymentMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_methods"); else _explicitNullProperties?.Remove("supported_payment_methods"); } }
+        public List<string>? SupportedPaymentMethods { get => _explicitNullValueSupportedPaymentMethods; set { _explicitNullValueSupportedPaymentMethods = value; AdditionalData?.Remove("supported_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_methods"); else _explicitNullProperties?.Remove("supported_payment_methods"); } }
         private List<string>? _explicitNullValueSupportedPaymentMethods = default!;
 #nullable restore
 #else
-        public List<string> SupportedPaymentMethods { get => _explicitNullValueSupportedPaymentMethods; set { _explicitNullValueSupportedPaymentMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_methods"); else _explicitNullProperties?.Remove("supported_payment_methods"); } }
+        public List<string> SupportedPaymentMethods { get => _explicitNullValueSupportedPaymentMethods; set { _explicitNullValueSupportedPaymentMethods = value; AdditionalData?.Remove("supported_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_payment_methods"); else _explicitNullProperties?.Remove("supported_payment_methods"); } }
         private List<string> _explicitNullValueSupportedPaymentMethods = default!;
 #endif
         /// <summary>Countries that can accept transfers from the specified country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SupportedTransferCountries { get => _explicitNullValueSupportedTransferCountries; set { _explicitNullValueSupportedTransferCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_transfer_countries"); else _explicitNullProperties?.Remove("supported_transfer_countries"); } }
+        public List<string>? SupportedTransferCountries { get => _explicitNullValueSupportedTransferCountries; set { _explicitNullValueSupportedTransferCountries = value; AdditionalData?.Remove("supported_transfer_countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_transfer_countries"); else _explicitNullProperties?.Remove("supported_transfer_countries"); } }
         private List<string>? _explicitNullValueSupportedTransferCountries = default!;
 #nullable restore
 #else
-        public List<string> SupportedTransferCountries { get => _explicitNullValueSupportedTransferCountries; set { _explicitNullValueSupportedTransferCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_transfer_countries"); else _explicitNullProperties?.Remove("supported_transfer_countries"); } }
+        public List<string> SupportedTransferCountries { get => _explicitNullValueSupportedTransferCountries; set { _explicitNullValueSupportedTransferCountries = value; AdditionalData?.Remove("supported_transfer_countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_transfer_countries"); else _explicitNullProperties?.Remove("supported_transfer_countries"); } }
         private List<string> _explicitNullValueSupportedTransferCountries = default!;
 #endif
         /// <summary>The verification_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields? VerificationFields { get => _explicitNullValueVerificationFields; set { _explicitNullValueVerificationFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_fields"); else _explicitNullProperties?.Remove("verification_fields"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields? VerificationFields { get => _explicitNullValueVerificationFields; set { _explicitNullValueVerificationFields = value; AdditionalData?.Remove("verification_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_fields"); else _explicitNullProperties?.Remove("verification_fields"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields? _explicitNullValueVerificationFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields VerificationFields { get => _explicitNullValueVerificationFields; set { _explicitNullValueVerificationFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_fields"); else _explicitNullProperties?.Remove("verification_fields"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields VerificationFields { get => _explicitNullValueVerificationFields; set { _explicitNullValueVerificationFields = value; AdditionalData?.Remove("verification_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_fields"); else _explicitNullProperties?.Remove("verification_fields"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecVerificationFields _explicitNullValueVerificationFields = default!;
 #endif
         /// <summary>
@@ -130,7 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "default_currency", n => { DefaultCurrency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject>(); } },
+                { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "supported_bank_account_currencies", n => { SupportedBankAccountCurrencies = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty.CreateFromDiscriminatorValue); } },
                 { "supported_payment_currencies", n => { SupportedPaymentCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "supported_payment_methods", n => { SupportedPaymentMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

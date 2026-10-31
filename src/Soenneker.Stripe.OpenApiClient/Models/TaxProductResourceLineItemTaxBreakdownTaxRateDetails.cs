@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
-            if (parseNode.GetChildNode("percentage_decimal") is { } nullNodePercentageDecimal && nullNodePercentageDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageDecimal = null;
-            if (parseNode.GetChildNode("tax_type") is { } nullNodeTaxType && nullNodeTaxType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxType = null;
+            if (parseNode.GetChildNode("display_name") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("display_name"); }
+            else if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("percentage_decimal") is null) { _explicitNullValuePercentageDecimal = default!; _explicitNullProperties?.Remove("percentage_decimal"); }
+            else if (parseNode.GetChildNode("percentage_decimal") is { } nullNodePercentageDecimal && nullNodePercentageDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageDecimal = null;
+            if (parseNode.GetChildNode("tax_type") is null) { _explicitNullValueTaxType = default!; _explicitNullProperties?.Remove("tax_type"); }
+            else if (parseNode.GetChildNode("tax_type") is { } nullNodeTaxType && nullNodeTaxType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A localized display name for tax type, intended to be human-readable. For example, &quot;Local Sales and Use Tax&quot;, &quot;Value-added tax (VAT)&quot;, or &quot;Umsatzsteuer (USt.)&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("display_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
         private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("display_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
         private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The tax rate percentage as a string. For example, 8.5% is represented as &quot;8.5&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PercentageDecimal { get => _explicitNullValuePercentageDecimal; set { _explicitNullValuePercentageDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_decimal"); else _explicitNullProperties?.Remove("percentage_decimal"); } }
+        public string? PercentageDecimal { get => _explicitNullValuePercentageDecimal; set { _explicitNullValuePercentageDecimal = value; AdditionalData?.Remove("percentage_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_decimal"); else _explicitNullProperties?.Remove("percentage_decimal"); } }
         private string? _explicitNullValuePercentageDecimal = default!;
 #nullable restore
 #else
-        public string PercentageDecimal { get => _explicitNullValuePercentageDecimal; set { _explicitNullValuePercentageDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_decimal"); else _explicitNullProperties?.Remove("percentage_decimal"); } }
+        public string PercentageDecimal { get => _explicitNullValuePercentageDecimal; set { _explicitNullValuePercentageDecimal = value; AdditionalData?.Remove("percentage_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage_decimal"); else _explicitNullProperties?.Remove("percentage_decimal"); } }
         private string _explicitNullValuePercentageDecimal = default!;
 #endif
         /// <summary>The tax type, such as `vat` or `sales_tax`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType? TaxType { get => _explicitNullValueTaxType; set { _explicitNullValueTaxType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_type"); else _explicitNullProperties?.Remove("tax_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType? TaxType { get => _explicitNullValueTaxType; set { _explicitNullValueTaxType = value; AdditionalData?.Remove("tax_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_type"); else _explicitNullProperties?.Remove("tax_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType? _explicitNullValueTaxType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "percentage_decimal", n => { PercentageDecimal = n.GetStringValue(); } },
-                { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType>(); } },
+                { "tax_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxType = default; _explicitNullProperties?.Remove("tax_type"); AdditionalData["tax_type"] = unknown; } else { TaxType = parsed; AdditionalData.Remove("tax_type"); } } },
             };
         }
         /// <summary>

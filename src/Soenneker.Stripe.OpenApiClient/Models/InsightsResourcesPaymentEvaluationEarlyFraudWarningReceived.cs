@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fraud_type") is { } nullNodeFraudType && nullNodeFraudType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudType = null;
+            if (parseNode.GetChildNode("fraud_type") is null) { _explicitNullValueFraudType = default!; _explicitNullProperties?.Remove("fraud_type"); }
+            else if (parseNode.GetChildNode("fraud_type") is { } nullNodeFraudType && nullNodeFraudType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of fraud labeled by the issuer.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceivedFraudType? FraudType { get => _explicitNullValueFraudType; set { _explicitNullValueFraudType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_type"); else _explicitNullProperties?.Remove("fraud_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceivedFraudType? FraudType { get => _explicitNullValueFraudType; set { _explicitNullValueFraudType = value; AdditionalData?.Remove("fraud_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_type"); else _explicitNullProperties?.Remove("fraud_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceivedFraudType? _explicitNullValueFraudType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fraud_type", n => { FraudType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceivedFraudType>(); } },
+                { "fraud_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceivedFraudType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFraudType = default; _explicitNullProperties?.Remove("fraud_type"); AdditionalData["fraud_type"] = unknown; } else { FraudType = parsed; AdditionalData.Remove("fraud_type"); } } },
             };
         }
         /// <summary>

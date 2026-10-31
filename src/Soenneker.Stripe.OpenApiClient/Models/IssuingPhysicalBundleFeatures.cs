@@ -17,21 +17,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
-            if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
-            if (parseNode.GetChildNode("second_line") is { } nullNodeSecondLine && nullNodeSecondLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondLine = null;
+            if (parseNode.GetChildNode("card_logo") is null) { _explicitNullValueCardLogo = default!; _explicitNullProperties?.Remove("card_logo"); }
+            else if (parseNode.GetChildNode("card_logo") is { } nullNodeCardLogo && nullNodeCardLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLogo = null;
+            if (parseNode.GetChildNode("carrier_text") is null) { _explicitNullValueCarrierText = default!; _explicitNullProperties?.Remove("carrier_text"); }
+            else if (parseNode.GetChildNode("carrier_text") is { } nullNodeCarrierText && nullNodeCarrierText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierText = null;
+            if (parseNode.GetChildNode("second_line") is null) { _explicitNullValueSecondLine = default!; _explicitNullProperties?.Remove("second_line"); }
+            else if (parseNode.GetChildNode("second_line") is { } nullNodeSecondLine && nullNodeSecondLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondLine = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The policy for how to use card logo images in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? CardLogo { get => _explicitNullValueCardLogo; set { _explicitNullValueCardLogo = value; AdditionalData?.Remove("card_logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_logo"); else _explicitNullProperties?.Remove("card_logo"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? _explicitNullValueCardLogo = default!;
         /// <summary>The policy for how to use carrier letter text in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; AdditionalData?.Remove("carrier_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? _explicitNullValueCarrierText = default!;
         /// <summary>The policy for how to use a second line on a card with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? SecondLine { get => _explicitNullValueSecondLine; set { _explicitNullValueSecondLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second_line"); else _explicitNullProperties?.Remove("second_line"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? SecondLine { get => _explicitNullValueSecondLine; set { _explicitNullValueSecondLine = value; AdditionalData?.Remove("second_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("second_line"); else _explicitNullProperties?.Remove("second_line"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? _explicitNullValueSecondLine = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures"/> and sets the default values.
@@ -58,9 +61,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card_logo", n => { CardLogo = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo>(); } },
-                { "carrier_text", n => { CarrierText = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText>(); } },
-                { "second_line", n => { SecondLine = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine>(); } },
+                { "card_logo", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCardLogo = default; _explicitNullProperties?.Remove("card_logo"); AdditionalData["card_logo"] = unknown; } else { CardLogo = parsed; AdditionalData.Remove("card_logo"); } } },
+                { "carrier_text", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCarrierText = default; _explicitNullProperties?.Remove("carrier_text"); AdditionalData["carrier_text"] = unknown; } else { CarrierText = parsed; AdditionalData.Remove("carrier_text"); } } },
+                { "second_line", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSecondLine = default; _explicitNullProperties?.Remove("second_line"); AdditionalData["second_line"] = unknown; } else { SecondLine = parsed; AdditionalData.Remove("second_line"); } } },
             };
         }
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("committed") is { } nullNodeCommitted && nullNodeCommitted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Committed = null;
-            if (parseNode.GetChildNode("errored") is { } nullNodeErrored && nullNodeErrored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errored = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("committed") is null) { _explicitNullValueCommitted = default!; _explicitNullProperties?.Remove("committed"); }
+            else if (parseNode.GetChildNode("committed") is { } nullNodeCommitted && nullNodeCommitted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Committed = null;
+            if (parseNode.GetChildNode("errored") is null) { _explicitNullValueErrored = default!; _explicitNullProperties?.Remove("errored"); }
+            else if (parseNode.GetChildNode("errored") is { } nullNodeErrored && nullNodeErrored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errored = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The committed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted? Committed { get => _explicitNullValueCommitted; set { _explicitNullValueCommitted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed"); else _explicitNullProperties?.Remove("committed"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted? Committed { get => _explicitNullValueCommitted; set { _explicitNullValueCommitted = value; AdditionalData?.Remove("committed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed"); else _explicitNullProperties?.Remove("committed"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted? _explicitNullValueCommitted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted Committed { get => _explicitNullValueCommitted; set { _explicitNullValueCommitted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed"); else _explicitNullProperties?.Remove("committed"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted Committed { get => _explicitNullValueCommitted; set { _explicitNullValueCommitted = value; AdditionalData?.Remove("committed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed"); else _explicitNullProperties?.Remove("committed"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted _explicitNullValueCommitted = default!;
 #endif
         /// <summary>The errored property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored? Errored { get => _explicitNullValueErrored; set { _explicitNullValueErrored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errored"); else _explicitNullProperties?.Remove("errored"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored? Errored { get => _explicitNullValueErrored; set { _explicitNullValueErrored = value; AdditionalData?.Remove("errored"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errored"); else _explicitNullProperties?.Remove("errored"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored? _explicitNullValueErrored = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored Errored { get => _explicitNullValueErrored; set { _explicitNullValueErrored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errored"); else _explicitNullProperties?.Remove("errored"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored Errored { get => _explicitNullValueErrored; set { _explicitNullValueErrored = value; AdditionalData?.Remove("errored"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errored"); else _explicitNullProperties?.Remove("errored"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored _explicitNullValueErrored = default!;
 #endif
         /// <summary>The source of the tax transaction attempt. This is either a refund or a payment intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The status of the transaction attempt. This can be `errored` or `committed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>

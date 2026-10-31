@@ -18,21 +18,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
-            if (parseNode.GetChildNode("inbound_pending") is { } nullNodeInboundPending && nullNodeInboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundPending = null;
-            if (parseNode.GetChildNode("outbound_pending") is { } nullNodeOutboundPending && nullNodeOutboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPending = null;
+            if (parseNode.GetChildNode("cash") is null) { _explicitNullValueCash = default!; _explicitNullProperties?.Remove("cash"); }
+            else if (parseNode.GetChildNode("cash") is { } nullNodeCash && nullNodeCash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cash = null;
+            if (parseNode.GetChildNode("inbound_pending") is null) { _explicitNullValueInboundPending = default!; _explicitNullProperties?.Remove("inbound_pending"); }
+            else if (parseNode.GetChildNode("inbound_pending") is { } nullNodeInboundPending && nullNodeInboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundPending = null;
+            if (parseNode.GetChildNode("outbound_pending") is null) { _explicitNullValueOutboundPending = default!; _explicitNullProperties?.Remove("outbound_pending"); }
+            else if (parseNode.GetChildNode("outbound_pending") is { } nullNodeOutboundPending && nullNodeOutboundPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundPending = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The change made to funds the user can spend right now.</summary>
-        public int? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
+        public int? Cash { get => _explicitNullValueCash; set { _explicitNullValueCash = value; AdditionalData?.Remove("cash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash"); else _explicitNullProperties?.Remove("cash"); } }
         private int? _explicitNullValueCash = default!;
         /// <summary>The change made to funds that are not spendable yet, but will become available at a later time.</summary>
-        public int? InboundPending { get => _explicitNullValueInboundPending; set { _explicitNullValueInboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_pending"); else _explicitNullProperties?.Remove("inbound_pending"); } }
+        public int? InboundPending { get => _explicitNullValueInboundPending; set { _explicitNullValueInboundPending = value; AdditionalData?.Remove("inbound_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_pending"); else _explicitNullProperties?.Remove("inbound_pending"); } }
         private int? _explicitNullValueInboundPending = default!;
         /// <summary>The change made to funds in the account, but not spendable because they are being held for pending outbound flows.</summary>
-        public int? OutboundPending { get => _explicitNullValueOutboundPending; set { _explicitNullValueOutboundPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_pending"); else _explicitNullProperties?.Remove("outbound_pending"); } }
+        public int? OutboundPending { get => _explicitNullValueOutboundPending; set { _explicitNullValueOutboundPending = value; AdditionalData?.Remove("outbound_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_pending"); else _explicitNullProperties?.Remove("outbound_pending"); } }
         private int? _explicitNullValueOutboundPending = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact"/> and sets the default values.

@@ -17,23 +17,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("disabled_reason") is { } nullNodeDisabledReason && nullNodeDisabledReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledReason = null;
-            if (parseNode.GetChildNode("past_due") is { } nullNodePastDue && nullNodePastDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PastDue = null;
+            if (parseNode.GetChildNode("disabled_reason") is null) { _explicitNullValueDisabledReason = default!; _explicitNullProperties?.Remove("disabled_reason"); }
+            else if (parseNode.GetChildNode("disabled_reason") is { } nullNodeDisabledReason && nullNodeDisabledReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledReason = null;
+            if (parseNode.GetChildNode("past_due") is null) { _explicitNullValuePastDue = default!; _explicitNullProperties?.Remove("past_due"); }
+            else if (parseNode.GetChildNode("past_due") is { } nullNodePastDue && nullNodePastDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PastDue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `disabled_reason` is present, all cards will decline authorizations with `cardholder_verification_required` reason.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsDisabledReason? DisabledReason { get => _explicitNullValueDisabledReason; set { _explicitNullValueDisabledReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_reason"); else _explicitNullProperties?.Remove("disabled_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsDisabledReason? DisabledReason { get => _explicitNullValueDisabledReason; set { _explicitNullValueDisabledReason = value; AdditionalData?.Remove("disabled_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_reason"); else _explicitNullProperties?.Remove("disabled_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsDisabledReason? _explicitNullValueDisabledReason = default!;
         /// <summary>Array of fields that need to be collected in order to verify and re-enable the cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?>? PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?>? PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; AdditionalData?.Remove("past_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?>? _explicitNullValuePastDue = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?> PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?> PastDue { get => _explicitNullValuePastDue; set { _explicitNullValuePastDue = value; AdditionalData?.Remove("past_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("past_due"); else _explicitNullProperties?.Remove("past_due"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem?> _explicitNullValuePastDue = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsDisabledReason>(); } },
+                { "disabled_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsDisabledReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisabledReason = default; _explicitNullProperties?.Remove("disabled_reason"); AdditionalData["disabled_reason"] = unknown; } else { DisabledReason = parsed; AdditionalData.Remove("disabled_reason"); } } },
                 { "past_due", n => { PastDue = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirementsPastDueItem>()?.AsList(); } },
             };
         }

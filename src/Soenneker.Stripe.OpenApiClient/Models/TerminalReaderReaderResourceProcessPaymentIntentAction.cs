@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
-            if (parseNode.GetChildNode("process_config") is { } nullNodeProcessConfig && nullNodeProcessConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessConfig = null;
+            if (parseNode.GetChildNode("payment_intent") is null) { _explicitNullValuePaymentIntent = default!; _explicitNullProperties?.Remove("payment_intent"); }
+            else if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
+            if (parseNode.GetChildNode("process_config") is null) { _explicitNullValueProcessConfig = default!; _explicitNullProperties?.Remove("process_config"); }
+            else if (parseNode.GetChildNode("process_config") is { } nullNodeProcessConfig && nullNodeProcessConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessConfig = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Most recent PaymentIntent processed by the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent? _explicitNullValuePaymentIntent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; AdditionalData?.Remove("payment_intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent? _explicitNullValuePaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent _explicitNullValuePaymentIntent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; AdditionalData?.Remove("payment_intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent _explicitNullValuePaymentIntent = default!;
 #endif
         /// <summary>Represents a per-transaction override of a reader configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig? ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig? ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; AdditionalData?.Remove("process_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig? _explicitNullValueProcessConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig ProcessConfig { get => _explicitNullValueProcessConfig; set { _explicitNullValueProcessConfig = value; AdditionalData?.Remove("process_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_config"); else _explicitNullProperties?.Remove("process_config"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig _explicitNullValueProcessConfig = default!;
 #endif
         /// <summary>
@@ -69,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent.CreateFromDiscriminatorValue); } },
                 { "process_config", n => { ProcessConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig.CreateFromDiscriminatorValue); } },
             };
         }
@@ -80,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessPaymentIntentActionPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent>("payment_intent", PaymentIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceProcessConfig>("process_config", ProcessConfig);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -18,19 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_subcategories") is { } nullNodeAccountSubcategories && nullNodeAccountSubcategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSubcategories = null;
-            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
-            if (parseNode.GetChildNode("require_payment_method_support") is { } nullNodeRequirePaymentMethodSupport && nullNodeRequirePaymentMethodSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirePaymentMethodSupport = null;
+            if (parseNode.GetChildNode("account_subcategories") is null) { _explicitNullValueAccountSubcategories = default!; _explicitNullProperties?.Remove("account_subcategories"); }
+            else if (parseNode.GetChildNode("account_subcategories") is { } nullNodeAccountSubcategories && nullNodeAccountSubcategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSubcategories = null;
+            if (parseNode.GetChildNode("country") is null) { _explicitNullValueCountry = default!; _explicitNullProperties?.Remove("country"); }
+            else if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("require_payment_method_support") is null) { _explicitNullValueRequirePaymentMethodSupport = default!; _explicitNullProperties?.Remove("require_payment_method_support"); }
+            else if (parseNode.GetChildNode("require_payment_method_support") is { } nullNodeRequirePaymentMethodSupport && nullNodeRequirePaymentMethodSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirePaymentMethodSupport = null;
         }
 
         /// <summary>The account_subcategories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?>? AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?>? AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; AdditionalData?.Remove("account_subcategories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?>? _explicitNullValueAccountSubcategories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?> AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?> AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; AdditionalData?.Remove("account_subcategories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem?> _explicitNullValueAccountSubcategories = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,15 +41,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; AdditionalData?.Remove("country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
         private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; AdditionalData?.Remove("country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>The require_payment_method_support property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport? RequirePaymentMethodSupport { get => _explicitNullValueRequirePaymentMethodSupport; set { _explicitNullValueRequirePaymentMethodSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_payment_method_support"); else _explicitNullProperties?.Remove("require_payment_method_support"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport? RequirePaymentMethodSupport { get => _explicitNullValueRequirePaymentMethodSupport; set { _explicitNullValueRequirePaymentMethodSupport = value; AdditionalData?.Remove("require_payment_method_support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_payment_method_support"); else _explicitNullProperties?.Remove("require_payment_method_support"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport? _explicitNullValueRequirePaymentMethodSupport = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFilters"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem>()?.AsList(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "require_payment_method_support", n => { RequirePaymentMethodSupport = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport>(); } },
+                { "require_payment_method_support", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequirePaymentMethodSupport = default; _explicitNullProperties?.Remove("require_payment_method_support"); AdditionalData["require_payment_method_support"] = unknown; } else { RequirePaymentMethodSupport = parsed; AdditionalData.Remove("require_payment_method_support"); } } },
             };
         }
         /// <summary>

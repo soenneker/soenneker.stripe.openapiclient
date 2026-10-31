@@ -17,17 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_subcategories") is { } nullNodeAccountSubcategories && nullNodeAccountSubcategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSubcategories = null;
+            if (parseNode.GetChildNode("account_subcategories") is null) { _explicitNullValueAccountSubcategories = default!; _explicitNullProperties?.Remove("account_subcategories"); }
+            else if (parseNode.GetChildNode("account_subcategories") is { } nullNodeAccountSubcategories && nullNodeAccountSubcategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSubcategories = null;
         }
 
         /// <summary>The account_subcategories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?>? AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?>? AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; AdditionalData?.Remove("account_subcategories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?>? _explicitNullValueAccountSubcategories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?> AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?> AccountSubcategories { get => _explicitNullValueAccountSubcategories; set { _explicitNullValueAccountSubcategories = value; AdditionalData?.Remove("account_subcategories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_subcategories"); else _explicitNullProperties?.Remove("account_subcategories"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem?> _explicitNullValueAccountSubcategories = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

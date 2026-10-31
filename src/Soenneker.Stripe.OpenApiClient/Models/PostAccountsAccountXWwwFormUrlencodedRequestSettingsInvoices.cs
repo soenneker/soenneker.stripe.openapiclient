@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_account_tax_ids") is { } nullNodeDefaultAccountTaxIds && nullNodeDefaultAccountTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccountTaxIds = null;
-            if (parseNode.GetChildNode("hosted_payment_method_save") is { } nullNodeHostedPaymentMethodSave && nullNodeHostedPaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedPaymentMethodSave = null;
+            if (parseNode.GetChildNode("default_account_tax_ids") is null) { _explicitNullValueDefaultAccountTaxIds = default!; _explicitNullProperties?.Remove("default_account_tax_ids"); }
+            else if (parseNode.GetChildNode("default_account_tax_ids") is { } nullNodeDefaultAccountTaxIds && nullNodeDefaultAccountTaxIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccountTaxIds = null;
+            if (parseNode.GetChildNode("hosted_payment_method_save") is null) { _explicitNullValueHostedPaymentMethodSave = default!; _explicitNullProperties?.Remove("hosted_payment_method_save"); }
+            else if (parseNode.GetChildNode("hosted_payment_method_save") is { } nullNodeHostedPaymentMethodSave && nullNodeHostedPaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedPaymentMethodSave = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The default_account_tax_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds? DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds? DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; AdditionalData?.Remove("default_account_tax_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds? _explicitNullValueDefaultAccountTaxIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds DefaultAccountTaxIds { get => _explicitNullValueDefaultAccountTaxIds; set { _explicitNullValueDefaultAccountTaxIds = value; AdditionalData?.Remove("default_account_tax_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_account_tax_ids"); else _explicitNullProperties?.Remove("default_account_tax_ids"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds _explicitNullValueDefaultAccountTaxIds = default!;
 #endif
         /// <summary>The hosted_payment_method_save property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? HostedPaymentMethodSave { get => _explicitNullValueHostedPaymentMethodSave; set { _explicitNullValueHostedPaymentMethodSave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_payment_method_save"); else _explicitNullProperties?.Remove("hosted_payment_method_save"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? HostedPaymentMethodSave { get => _explicitNullValueHostedPaymentMethodSave; set { _explicitNullValueHostedPaymentMethodSave = value; AdditionalData?.Remove("hosted_payment_method_save"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_payment_method_save"); else _explicitNullProperties?.Remove("hosted_payment_method_save"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? _explicitNullValueHostedPaymentMethodSave = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoices"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesDefaultAccountTaxIds.CreateFromDiscriminatorValue); } },
-                { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave>(); } },
+                { "hosted_payment_method_save", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHostedPaymentMethodSave = default; _explicitNullProperties?.Remove("hosted_payment_method_save"); AdditionalData["hosted_payment_method_save"] = unknown; } else { HostedPaymentMethodSave = parsed; AdditionalData.Remove("hosted_payment_method_save"); } } },
             };
         }
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bank_account_ownership_verification") is { } nullNodeBankAccountOwnershipVerification && nullNodeBankAccountOwnershipVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankAccountOwnershipVerification = null;
+            if (parseNode.GetChildNode("bank_account_ownership_verification") is null) { _explicitNullValueBankAccountOwnershipVerification = default!; _explicitNullProperties?.Remove("bank_account_ownership_verification"); }
+            else if (parseNode.GetChildNode("bank_account_ownership_verification") is { } nullNodeBankAccountOwnershipVerification && nullNodeBankAccountOwnershipVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankAccountOwnershipVerification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bank_account_ownership_verification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification? BankAccountOwnershipVerification { get => _explicitNullValueBankAccountOwnershipVerification; set { _explicitNullValueBankAccountOwnershipVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_ownership_verification"); else _explicitNullProperties?.Remove("bank_account_ownership_verification"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification? BankAccountOwnershipVerification { get => _explicitNullValueBankAccountOwnershipVerification; set { _explicitNullValueBankAccountOwnershipVerification = value; AdditionalData?.Remove("bank_account_ownership_verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_ownership_verification"); else _explicitNullProperties?.Remove("bank_account_ownership_verification"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification? _explicitNullValueBankAccountOwnershipVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification BankAccountOwnershipVerification { get => _explicitNullValueBankAccountOwnershipVerification; set { _explicitNullValueBankAccountOwnershipVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_ownership_verification"); else _explicitNullProperties?.Remove("bank_account_ownership_verification"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification BankAccountOwnershipVerification { get => _explicitNullValueBankAccountOwnershipVerification; set { _explicitNullValueBankAccountOwnershipVerification = value; AdditionalData?.Remove("bank_account_ownership_verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_account_ownership_verification"); else _explicitNullProperties?.Remove("bank_account_ownership_verification"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocumentsBankAccountOwnershipVerification _explicitNullValueBankAccountOwnershipVerification = default!;
 #endif
         /// <summary>

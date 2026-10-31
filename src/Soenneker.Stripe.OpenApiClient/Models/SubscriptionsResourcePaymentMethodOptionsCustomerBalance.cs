@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bank_transfer") is { } nullNodeBankTransfer && nullNodeBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTransfer = null;
-            if (parseNode.GetChildNode("funding_type") is { } nullNodeFundingType && nullNodeFundingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingType = null;
+            if (parseNode.GetChildNode("bank_transfer") is null) { _explicitNullValueBankTransfer = default!; _explicitNullProperties?.Remove("bank_transfer"); }
+            else if (parseNode.GetChildNode("bank_transfer") is { } nullNodeBankTransfer && nullNodeBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTransfer = null;
+            if (parseNode.GetChildNode("funding_type") is null) { _explicitNullValueFundingType = default!; _explicitNullProperties?.Remove("funding_type"); }
+            else if (parseNode.GetChildNode("funding_type") is { } nullNodeFundingType && nullNodeFundingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FundingType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer? BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer? BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; AdditionalData?.Remove("bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer? _explicitNullValueBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; AdditionalData?.Remove("bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer _explicitNullValueBankTransfer = default!;
 #endif
         /// <summary>The funding method type to be used when there are not enough funds in the customer balance. Permitted values include: `bank_transfer`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? FundingType { get => _explicitNullValueFundingType; set { _explicitNullValueFundingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_type"); else _explicitNullProperties?.Remove("funding_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? FundingType { get => _explicitNullValueFundingType; set { _explicitNullValueFundingType = value; AdditionalData?.Remove("funding_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding_type"); else _explicitNullProperties?.Remove("funding_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? _explicitNullValueFundingType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCustomerBalance"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bank_transfer", n => { BankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer.CreateFromDiscriminatorValue); } },
-                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>(); } },
+                { "funding_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFundingType = default; _explicitNullProperties?.Remove("funding_type"); AdditionalData["funding_type"] = unknown; } else { FundingType = parsed; AdditionalData.Remove("funding_type"); } } },
             };
         }
         /// <summary>

@@ -17,21 +17,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overridable") is { } nullNodeOverridable && nullNodeOverridable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overridable = null;
-            if (parseNode.GetChildNode("preference") is { } nullNodePreference && nullNodePreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preference = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("overridable") is null) { _explicitNullValueOverridable = default!; _explicitNullProperties?.Remove("overridable"); }
+            else if (parseNode.GetChildNode("overridable") is { } nullNodeOverridable && nullNodeOverridable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overridable = null;
+            if (parseNode.GetChildNode("preference") is null) { _explicitNullValuePreference = default!; _explicitNullProperties?.Remove("preference"); }
+            else if (parseNode.GetChildNode("preference") is { } nullNodePreference && nullNodePreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preference = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For child configs, whether or not the account&apos;s preference will be observed. If `false`, the parent configuration&apos;s default is used.</summary>
-        public bool? Overridable { get => _explicitNullValueOverridable; set { _explicitNullValueOverridable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overridable"); else _explicitNullProperties?.Remove("overridable"); } }
+        public bool? Overridable { get => _explicitNullValueOverridable; set { _explicitNullValueOverridable = value; AdditionalData?.Remove("overridable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overridable"); else _explicitNullProperties?.Remove("overridable"); } }
         private bool? _explicitNullValueOverridable = default!;
         /// <summary>The account&apos;s display preference.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference? Preference { get => _explicitNullValuePreference; set { _explicitNullValuePreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preference"); else _explicitNullProperties?.Remove("preference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference? Preference { get => _explicitNullValuePreference; set { _explicitNullValuePreference = value; AdditionalData?.Remove("preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preference"); else _explicitNullProperties?.Remove("preference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference? _explicitNullValuePreference = default!;
         /// <summary>The effective display preference value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue? _explicitNullValueValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference"/> and sets the default values.
@@ -59,8 +62,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "overridable", n => { Overridable = n.GetBoolValue(); } },
-                { "preference", n => { Preference = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference>(); } },
-                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue>(); } },
+                { "preference", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreference = default; _explicitNullProperties?.Remove("preference"); AdditionalData["preference"] = unknown; } else { Preference = parsed; AdditionalData.Remove("preference"); } } },
+                { "value", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueValue = default; _explicitNullProperties?.Remove("value"); AdditionalData["value"] = unknown; } else { Value = parsed; AdditionalData.Remove("value"); } } },
             };
         }
         /// <summary>

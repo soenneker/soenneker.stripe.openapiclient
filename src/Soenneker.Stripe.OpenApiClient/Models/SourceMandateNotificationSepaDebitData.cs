@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("creditor_identifier") is { } nullNodeCreditorIdentifier && nullNodeCreditorIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditorIdentifier = null;
-            if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
-            if (parseNode.GetChildNode("mandate_reference") is { } nullNodeMandateReference && nullNodeMandateReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MandateReference = null;
+            if (parseNode.GetChildNode("creditor_identifier") is null) { _explicitNullValueCreditorIdentifier = default!; _explicitNullProperties?.Remove("creditor_identifier"); }
+            else if (parseNode.GetChildNode("creditor_identifier") is { } nullNodeCreditorIdentifier && nullNodeCreditorIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditorIdentifier = null;
+            if (parseNode.GetChildNode("last4") is null) { _explicitNullValueLast4 = default!; _explicitNullProperties?.Remove("last4"); }
+            else if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
+            if (parseNode.GetChildNode("mandate_reference") is null) { _explicitNullValueMandateReference = default!; _explicitNullProperties?.Remove("mandate_reference"); }
+            else if (parseNode.GetChildNode("mandate_reference") is { } nullNodeMandateReference && nullNodeMandateReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MandateReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>SEPA creditor ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditorIdentifier { get => _explicitNullValueCreditorIdentifier; set { _explicitNullValueCreditorIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_identifier"); else _explicitNullProperties?.Remove("creditor_identifier"); } }
+        public string? CreditorIdentifier { get => _explicitNullValueCreditorIdentifier; set { _explicitNullValueCreditorIdentifier = value; AdditionalData?.Remove("creditor_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_identifier"); else _explicitNullProperties?.Remove("creditor_identifier"); } }
         private string? _explicitNullValueCreditorIdentifier = default!;
 #nullable restore
 #else
-        public string CreditorIdentifier { get => _explicitNullValueCreditorIdentifier; set { _explicitNullValueCreditorIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_identifier"); else _explicitNullProperties?.Remove("creditor_identifier"); } }
+        public string CreditorIdentifier { get => _explicitNullValueCreditorIdentifier; set { _explicitNullValueCreditorIdentifier = value; AdditionalData?.Remove("creditor_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditor_identifier"); else _explicitNullProperties?.Remove("creditor_identifier"); } }
         private string _explicitNullValueCreditorIdentifier = default!;
 #endif
         /// <summary>Last 4 digits of the account number associated with the debit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; AdditionalData?.Remove("last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
         private string? _explicitNullValueLast4 = default!;
 #nullable restore
 #else
-        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; AdditionalData?.Remove("last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
         private string _explicitNullValueLast4 = default!;
 #endif
         /// <summary>Mandate reference associated with the debit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MandateReference { get => _explicitNullValueMandateReference; set { _explicitNullValueMandateReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_reference"); else _explicitNullProperties?.Remove("mandate_reference"); } }
+        public string? MandateReference { get => _explicitNullValueMandateReference; set { _explicitNullValueMandateReference = value; AdditionalData?.Remove("mandate_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_reference"); else _explicitNullProperties?.Remove("mandate_reference"); } }
         private string? _explicitNullValueMandateReference = default!;
 #nullable restore
 #else
-        public string MandateReference { get => _explicitNullValueMandateReference; set { _explicitNullValueMandateReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_reference"); else _explicitNullProperties?.Remove("mandate_reference"); } }
+        public string MandateReference { get => _explicitNullValueMandateReference; set { _explicitNullValueMandateReference = value; AdditionalData?.Remove("mandate_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_reference"); else _explicitNullProperties?.Remove("mandate_reference"); } }
         private string _explicitNullValueMandateReference = default!;
 #endif
         /// <summary>

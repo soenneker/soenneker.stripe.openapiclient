@@ -17,10 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
-            if (parseNode.GetChildNode("logo") is { } nullNodeLogo && nullNodeLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logo = null;
-            if (parseNode.GetChildNode("primary_color") is { } nullNodePrimaryColor && nullNodePrimaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryColor = null;
-            if (parseNode.GetChildNode("secondary_color") is { } nullNodeSecondaryColor && nullNodeSecondaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryColor = null;
+            if (parseNode.GetChildNode("icon") is null) { _explicitNullValueIcon = default!; _explicitNullProperties?.Remove("icon"); }
+            else if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("logo") is null) { _explicitNullValueLogo = default!; _explicitNullProperties?.Remove("logo"); }
+            else if (parseNode.GetChildNode("logo") is { } nullNodeLogo && nullNodeLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logo = null;
+            if (parseNode.GetChildNode("primary_color") is null) { _explicitNullValuePrimaryColor = default!; _explicitNullProperties?.Remove("primary_color"); }
+            else if (parseNode.GetChildNode("primary_color") is { } nullNodePrimaryColor && nullNodePrimaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryColor = null;
+            if (parseNode.GetChildNode("secondary_color") is null) { _explicitNullValueSecondaryColor = default!; _explicitNullProperties?.Remove("secondary_color"); }
+            else if (parseNode.GetChildNode("secondary_color") is { } nullNodeSecondaryColor && nullNodeSecondaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryColor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) An icon for the account. Must be square and at least 128px x 128px.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon _explicitNullValueIcon = default!;
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) A logo for the account that will be used in Checkout instead of the icon and without the account&apos;s name next to it if provided. Must be at least 128px x 128px.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo? _explicitNullValueLogo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo _explicitNullValueLogo = default!;
 #endif
         /// <summary>A CSS hex color value representing the primary branding color for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
+        public string? PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; AdditionalData?.Remove("primary_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
         private string? _explicitNullValuePrimaryColor = default!;
 #nullable restore
 #else
-        public string PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
+        public string PrimaryColor { get => _explicitNullValuePrimaryColor; set { _explicitNullValuePrimaryColor = value; AdditionalData?.Remove("primary_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_color"); else _explicitNullProperties?.Remove("primary_color"); } }
         private string _explicitNullValuePrimaryColor = default!;
 #endif
         /// <summary>A CSS hex color value representing the secondary branding color for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
+        public string? SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; AdditionalData?.Remove("secondary_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
         private string? _explicitNullValueSecondaryColor = default!;
 #nullable restore
 #else
-        public string SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
+        public string SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; AdditionalData?.Remove("secondary_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_color"); else _explicitNullProperties?.Remove("secondary_color"); } }
         private string _explicitNullValueSecondaryColor = default!;
 #endif
         /// <summary>

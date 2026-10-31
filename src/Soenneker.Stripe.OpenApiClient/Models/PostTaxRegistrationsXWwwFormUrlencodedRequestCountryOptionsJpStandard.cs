@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("place_of_supply_scheme") is { } nullNodePlaceOfSupplyScheme && nullNodePlaceOfSupplyScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaceOfSupplyScheme = null;
+            if (parseNode.GetChildNode("place_of_supply_scheme") is null) { _explicitNullValuePlaceOfSupplyScheme = default!; _explicitNullProperties?.Remove("place_of_supply_scheme"); }
+            else if (parseNode.GetChildNode("place_of_supply_scheme") is { } nullNodePlaceOfSupplyScheme && nullNodePlaceOfSupplyScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaceOfSupplyScheme = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The place_of_supply_scheme property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandardPlaceOfSupplyScheme? PlaceOfSupplyScheme { get => _explicitNullValuePlaceOfSupplyScheme; set { _explicitNullValuePlaceOfSupplyScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_of_supply_scheme"); else _explicitNullProperties?.Remove("place_of_supply_scheme"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandardPlaceOfSupplyScheme? PlaceOfSupplyScheme { get => _explicitNullValuePlaceOfSupplyScheme; set { _explicitNullValuePlaceOfSupplyScheme = value; AdditionalData?.Remove("place_of_supply_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_of_supply_scheme"); else _explicitNullProperties?.Remove("place_of_supply_scheme"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandardPlaceOfSupplyScheme? _explicitNullValuePlaceOfSupplyScheme = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandard"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "place_of_supply_scheme", n => { PlaceOfSupplyScheme = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandardPlaceOfSupplyScheme>(); } },
+                { "place_of_supply_scheme", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsJpStandardPlaceOfSupplyScheme>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePlaceOfSupplyScheme = default; _explicitNullProperties?.Remove("place_of_supply_scheme"); AdditionalData["place_of_supply_scheme"] = unknown; } else { PlaceOfSupplyScheme = parsed; AdditionalData.Remove("place_of_supply_scheme"); } } },
             };
         }
         /// <summary>

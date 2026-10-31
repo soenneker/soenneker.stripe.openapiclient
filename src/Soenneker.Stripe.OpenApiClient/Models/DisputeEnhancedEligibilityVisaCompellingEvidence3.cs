@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("required_actions") is { } nullNodeRequiredActions && nullNodeRequiredActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredActions = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("required_actions") is null) { _explicitNullValueRequiredActions = default!; _explicitNullProperties?.Remove("required_actions"); }
+            else if (parseNode.GetChildNode("required_actions") is { } nullNodeRequiredActions && nullNodeRequiredActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredActions = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>List of actions required to qualify dispute for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?>? RequiredActions { get => _explicitNullValueRequiredActions; set { _explicitNullValueRequiredActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_actions"); else _explicitNullProperties?.Remove("required_actions"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?>? RequiredActions { get => _explicitNullValueRequiredActions; set { _explicitNullValueRequiredActions = value; AdditionalData?.Remove("required_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_actions"); else _explicitNullProperties?.Remove("required_actions"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?>? _explicitNullValueRequiredActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?> RequiredActions { get => _explicitNullValueRequiredActions; set { _explicitNullValueRequiredActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_actions"); else _explicitNullProperties?.Remove("required_actions"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?> RequiredActions { get => _explicitNullValueRequiredActions; set { _explicitNullValueRequiredActions = value; AdditionalData?.Remove("required_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_actions"); else _explicitNullProperties?.Remove("required_actions"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?> _explicitNullValueRequiredActions = default!;
 #endif
         /// <summary>Visa Compelling Evidence 3.0 eligibility status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "required_actions", n => { RequiredActions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

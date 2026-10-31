@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
-            if (parseNode.GetChildNode("price_type") is { } nullNodePriceType && nullNodePriceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceType = null;
+            if (parseNode.GetChildNode("prices") is null) { _explicitNullValuePrices = default!; _explicitNullProperties?.Remove("prices"); }
+            else if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
+            if (parseNode.GetChildNode("price_type") is null) { _explicitNullValuePriceType = default!; _explicitNullProperties?.Remove("price_type"); }
+            else if (parseNode.GetChildNode("price_type") is { } nullNodePriceType && nullNodePriceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The prices that credit grants can apply to. We currently only support `metered` prices. This refers to prices that have a [Billing Meter](https://docs.stripe.com/api/billing/meter) attached to them. Cannot be used in combination with `price_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>? _explicitNullValuePrices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice> Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice> Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice> _explicitNullValuePrices = default!;
 #endif
         /// <summary>The price type that credit grants can apply to. We currently only support the `metered` price type. This refers to prices that have a [Billing Meter](https://docs.stripe.com/api/billing/meter) attached to them. Cannot be used in combination with `prices`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? PriceType { get => _explicitNullValuePriceType; set { _explicitNullValuePriceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_type"); else _explicitNullProperties?.Remove("price_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? PriceType { get => _explicitNullValuePriceType; set { _explicitNullValuePriceType = value; AdditionalData?.Remove("price_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_type"); else _explicitNullProperties?.Remove("price_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? _explicitNullValuePriceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceScope"/> and sets the default values.
@@ -61,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "price_type", n => { PriceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType>(); } },
+                { "price_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePriceType = default; _explicitNullProperties?.Remove("price_type"); AdditionalData["price_type"] = unknown; } else { PriceType = parsed; AdditionalData.Remove("price_type"); } } },
                 { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

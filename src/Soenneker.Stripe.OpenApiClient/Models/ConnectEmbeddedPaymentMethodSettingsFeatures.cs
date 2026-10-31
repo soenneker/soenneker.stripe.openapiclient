@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("disable_stripe_user_authentication") is { } nullNodeDisableStripeUserAuthentication && nullNodeDisableStripeUserAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableStripeUserAuthentication = null;
+            if (parseNode.GetChildNode("disable_stripe_user_authentication") is null) { _explicitNullValueDisableStripeUserAuthentication = default!; _explicitNullProperties?.Remove("disable_stripe_user_authentication"); }
+            else if (parseNode.GetChildNode("disable_stripe_user_authentication") is { } nullNodeDisableStripeUserAuthentication && nullNodeDisableStripeUserAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableStripeUserAuthentication = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether Stripe user authentication is disabled. This value can only be `true` for accounts where `controller.requirement_collection` is `application` for the account. This is `false` by default.</summary>
-        public bool? DisableStripeUserAuthentication { get => _explicitNullValueDisableStripeUserAuthentication; set { _explicitNullValueDisableStripeUserAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_stripe_user_authentication"); else _explicitNullProperties?.Remove("disable_stripe_user_authentication"); } }
+        public bool? DisableStripeUserAuthentication { get => _explicitNullValueDisableStripeUserAuthentication; set { _explicitNullValueDisableStripeUserAuthentication = value; AdditionalData?.Remove("disable_stripe_user_authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_stripe_user_authentication"); else _explicitNullProperties?.Remove("disable_stripe_user_authentication"); } }
         private bool? _explicitNullValueDisableStripeUserAuthentication = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsFeatures"/> and sets the default values.

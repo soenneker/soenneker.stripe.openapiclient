@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_tax_display") is { } nullNodeAmountTaxDisplay && nullNodeAmountTaxDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTaxDisplay = null;
-            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("amount_tax_display") is null) { _explicitNullValueAmountTaxDisplay = default!; _explicitNullProperties?.Remove("amount_tax_display"); }
+            else if (parseNode.GetChildNode("amount_tax_display") is { } nullNodeAmountTaxDisplay && nullNodeAmountTaxDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountTaxDisplay = null;
+            if (parseNode.GetChildNode("template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("template"); }
+            else if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>How line-item prices and amounts will be displayed with respect to tax on invoice PDFs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AmountTaxDisplay { get => _explicitNullValueAmountTaxDisplay; set { _explicitNullValueAmountTaxDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tax_display"); else _explicitNullProperties?.Remove("amount_tax_display"); } }
+        public string? AmountTaxDisplay { get => _explicitNullValueAmountTaxDisplay; set { _explicitNullValueAmountTaxDisplay = value; AdditionalData?.Remove("amount_tax_display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tax_display"); else _explicitNullProperties?.Remove("amount_tax_display"); } }
         private string? _explicitNullValueAmountTaxDisplay = default!;
 #nullable restore
 #else
-        public string AmountTaxDisplay { get => _explicitNullValueAmountTaxDisplay; set { _explicitNullValueAmountTaxDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tax_display"); else _explicitNullProperties?.Remove("amount_tax_display"); } }
+        public string AmountTaxDisplay { get => _explicitNullValueAmountTaxDisplay; set { _explicitNullValueAmountTaxDisplay = value; AdditionalData?.Remove("amount_tax_display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_tax_display"); else _explicitNullProperties?.Remove("amount_tax_display"); } }
         private string _explicitNullValueAmountTaxDisplay = default!;
 #endif
         /// <summary>ID of the invoice rendering template to be used for this customer&apos;s invoices. If set, the template will be used on all invoices for this customer unless a template is set directly on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private string? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private string _explicitNullValueTemplate = default!;
 #endif
         /// <summary>

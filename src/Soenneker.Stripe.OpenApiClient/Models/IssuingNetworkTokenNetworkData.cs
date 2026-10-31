@@ -17,11 +17,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
-            if (parseNode.GetChildNode("mastercard") is { } nullNodeMastercard && nullNodeMastercard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mastercard = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
-            if (parseNode.GetChildNode("wallet_provider") is { } nullNodeWalletProvider && nullNodeWalletProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WalletProvider = null;
+            if (parseNode.GetChildNode("device") is null) { _explicitNullValueDevice = default!; _explicitNullProperties?.Remove("device"); }
+            else if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
+            if (parseNode.GetChildNode("mastercard") is null) { _explicitNullValueMastercard = default!; _explicitNullProperties?.Remove("mastercard"); }
+            else if (parseNode.GetChildNode("mastercard") is { } nullNodeMastercard && nullNodeMastercard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mastercard = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visa") is null) { _explicitNullValueVisa = default!; _explicitNullProperties?.Remove("visa"); }
+            else if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
+            if (parseNode.GetChildNode("wallet_provider") is null) { _explicitNullValueWalletProvider = default!; _explicitNullProperties?.Remove("wallet_provider"); }
+            else if (parseNode.GetChildNode("wallet_provider") is { } nullNodeWalletProvider && nullNodeWalletProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WalletProvider = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The device property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; AdditionalData?.Remove("device"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice? _explicitNullValueDevice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; AdditionalData?.Remove("device"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice _explicitNullValueDevice = default!;
 #endif
         /// <summary>The mastercard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard? Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard? Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; AdditionalData?.Remove("mastercard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard? _explicitNullValueMastercard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; AdditionalData?.Remove("mastercard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard _explicitNullValueMastercard = default!;
 #endif
         /// <summary>The network that the token is associated with. An additional hash is included with a name matching this value, containing tokenization data specific to the card network.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType? _explicitNullValueType = default!;
         /// <summary>The visa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; AdditionalData?.Remove("visa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa? _explicitNullValueVisa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; AdditionalData?.Remove("visa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa _explicitNullValueVisa = default!;
 #endif
         /// <summary>The wallet_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider? WalletProvider { get => _explicitNullValueWalletProvider; set { _explicitNullValueWalletProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_provider"); else _explicitNullProperties?.Remove("wallet_provider"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider? WalletProvider { get => _explicitNullValueWalletProvider; set { _explicitNullValueWalletProvider = value; AdditionalData?.Remove("wallet_provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_provider"); else _explicitNullProperties?.Remove("wallet_provider"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider? _explicitNullValueWalletProvider = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider WalletProvider { get => _explicitNullValueWalletProvider; set { _explicitNullValueWalletProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_provider"); else _explicitNullProperties?.Remove("wallet_provider"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider WalletProvider { get => _explicitNullValueWalletProvider; set { _explicitNullValueWalletProvider = value; AdditionalData?.Remove("wallet_provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet_provider"); else _explicitNullProperties?.Remove("wallet_provider"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider _explicitNullValueWalletProvider = default!;
 #endif
         /// <summary>
@@ -96,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "device", n => { Device = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice.CreateFromDiscriminatorValue); } },
                 { "mastercard", n => { Mastercard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "visa", n => { Visa = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa.CreateFromDiscriminatorValue); } },
                 { "wallet_provider", n => { WalletProvider = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider.CreateFromDiscriminatorValue); } },
             };

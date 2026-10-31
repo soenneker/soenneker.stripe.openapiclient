@@ -17,11 +17,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ca_certificate_file") is { } nullNodeCaCertificateFile && nullNodeCaCertificateFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaCertificateFile = null;
-            if (parseNode.GetChildNode("client_certificate_file") is { } nullNodeClientCertificateFile && nullNodeClientCertificateFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientCertificateFile = null;
-            if (parseNode.GetChildNode("private_key_file") is { } nullNodePrivateKeyFile && nullNodePrivateKeyFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateKeyFile = null;
-            if (parseNode.GetChildNode("private_key_file_password") is { } nullNodePrivateKeyFilePassword && nullNodePrivateKeyFilePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateKeyFilePassword = null;
-            if (parseNode.GetChildNode("ssid") is { } nullNodeSsid && nullNodeSsid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ssid = null;
+            if (parseNode.GetChildNode("ca_certificate_file") is null) { _explicitNullValueCaCertificateFile = default!; _explicitNullProperties?.Remove("ca_certificate_file"); }
+            else if (parseNode.GetChildNode("ca_certificate_file") is { } nullNodeCaCertificateFile && nullNodeCaCertificateFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaCertificateFile = null;
+            if (parseNode.GetChildNode("client_certificate_file") is null) { _explicitNullValueClientCertificateFile = default!; _explicitNullProperties?.Remove("client_certificate_file"); }
+            else if (parseNode.GetChildNode("client_certificate_file") is { } nullNodeClientCertificateFile && nullNodeClientCertificateFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientCertificateFile = null;
+            if (parseNode.GetChildNode("private_key_file") is null) { _explicitNullValuePrivateKeyFile = default!; _explicitNullProperties?.Remove("private_key_file"); }
+            else if (parseNode.GetChildNode("private_key_file") is { } nullNodePrivateKeyFile && nullNodePrivateKeyFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateKeyFile = null;
+            if (parseNode.GetChildNode("private_key_file_password") is null) { _explicitNullValuePrivateKeyFilePassword = default!; _explicitNullProperties?.Remove("private_key_file_password"); }
+            else if (parseNode.GetChildNode("private_key_file_password") is { } nullNodePrivateKeyFilePassword && nullNodePrivateKeyFilePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateKeyFilePassword = null;
+            if (parseNode.GetChildNode("ssid") is null) { _explicitNullValueSsid = default!; _explicitNullProperties?.Remove("ssid"); }
+            else if (parseNode.GetChildNode("ssid") is { } nullNodeSsid && nullNodeSsid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ssid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A File ID representing a PEM file containing the server certificate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaCertificateFile { get => _explicitNullValueCaCertificateFile; set { _explicitNullValueCaCertificateFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_certificate_file"); else _explicitNullProperties?.Remove("ca_certificate_file"); } }
+        public string? CaCertificateFile { get => _explicitNullValueCaCertificateFile; set { _explicitNullValueCaCertificateFile = value; AdditionalData?.Remove("ca_certificate_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_certificate_file"); else _explicitNullProperties?.Remove("ca_certificate_file"); } }
         private string? _explicitNullValueCaCertificateFile = default!;
 #nullable restore
 #else
-        public string CaCertificateFile { get => _explicitNullValueCaCertificateFile; set { _explicitNullValueCaCertificateFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_certificate_file"); else _explicitNullProperties?.Remove("ca_certificate_file"); } }
+        public string CaCertificateFile { get => _explicitNullValueCaCertificateFile; set { _explicitNullValueCaCertificateFile = value; AdditionalData?.Remove("ca_certificate_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_certificate_file"); else _explicitNullProperties?.Remove("ca_certificate_file"); } }
         private string _explicitNullValueCaCertificateFile = default!;
 #endif
         /// <summary>A File ID representing a PEM file containing the client certificate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientCertificateFile { get => _explicitNullValueClientCertificateFile; set { _explicitNullValueClientCertificateFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_certificate_file"); else _explicitNullProperties?.Remove("client_certificate_file"); } }
+        public string? ClientCertificateFile { get => _explicitNullValueClientCertificateFile; set { _explicitNullValueClientCertificateFile = value; AdditionalData?.Remove("client_certificate_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_certificate_file"); else _explicitNullProperties?.Remove("client_certificate_file"); } }
         private string? _explicitNullValueClientCertificateFile = default!;
 #nullable restore
 #else
-        public string ClientCertificateFile { get => _explicitNullValueClientCertificateFile; set { _explicitNullValueClientCertificateFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_certificate_file"); else _explicitNullProperties?.Remove("client_certificate_file"); } }
+        public string ClientCertificateFile { get => _explicitNullValueClientCertificateFile; set { _explicitNullValueClientCertificateFile = value; AdditionalData?.Remove("client_certificate_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_certificate_file"); else _explicitNullProperties?.Remove("client_certificate_file"); } }
         private string _explicitNullValueClientCertificateFile = default!;
 #endif
         /// <summary>A File ID representing a PEM file containing the client RSA private key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivateKeyFile { get => _explicitNullValuePrivateKeyFile; set { _explicitNullValuePrivateKeyFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file"); else _explicitNullProperties?.Remove("private_key_file"); } }
+        public string? PrivateKeyFile { get => _explicitNullValuePrivateKeyFile; set { _explicitNullValuePrivateKeyFile = value; AdditionalData?.Remove("private_key_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file"); else _explicitNullProperties?.Remove("private_key_file"); } }
         private string? _explicitNullValuePrivateKeyFile = default!;
 #nullable restore
 #else
-        public string PrivateKeyFile { get => _explicitNullValuePrivateKeyFile; set { _explicitNullValuePrivateKeyFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file"); else _explicitNullProperties?.Remove("private_key_file"); } }
+        public string PrivateKeyFile { get => _explicitNullValuePrivateKeyFile; set { _explicitNullValuePrivateKeyFile = value; AdditionalData?.Remove("private_key_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file"); else _explicitNullProperties?.Remove("private_key_file"); } }
         private string _explicitNullValuePrivateKeyFile = default!;
 #endif
         /// <summary>Password for the private key file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivateKeyFilePassword { get => _explicitNullValuePrivateKeyFilePassword; set { _explicitNullValuePrivateKeyFilePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file_password"); else _explicitNullProperties?.Remove("private_key_file_password"); } }
+        public string? PrivateKeyFilePassword { get => _explicitNullValuePrivateKeyFilePassword; set { _explicitNullValuePrivateKeyFilePassword = value; AdditionalData?.Remove("private_key_file_password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file_password"); else _explicitNullProperties?.Remove("private_key_file_password"); } }
         private string? _explicitNullValuePrivateKeyFilePassword = default!;
 #nullable restore
 #else
-        public string PrivateKeyFilePassword { get => _explicitNullValuePrivateKeyFilePassword; set { _explicitNullValuePrivateKeyFilePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file_password"); else _explicitNullProperties?.Remove("private_key_file_password"); } }
+        public string PrivateKeyFilePassword { get => _explicitNullValuePrivateKeyFilePassword; set { _explicitNullValuePrivateKeyFilePassword = value; AdditionalData?.Remove("private_key_file_password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_key_file_password"); else _explicitNullProperties?.Remove("private_key_file_password"); } }
         private string _explicitNullValuePrivateKeyFilePassword = default!;
 #endif
         /// <summary>Name of the WiFi network</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ssid { get => _explicitNullValueSsid; set { _explicitNullValueSsid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssid"); else _explicitNullProperties?.Remove("ssid"); } }
+        public string? Ssid { get => _explicitNullValueSsid; set { _explicitNullValueSsid = value; AdditionalData?.Remove("ssid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssid"); else _explicitNullProperties?.Remove("ssid"); } }
         private string? _explicitNullValueSsid = default!;
 #nullable restore
 #else
-        public string Ssid { get => _explicitNullValueSsid; set { _explicitNullValueSsid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssid"); else _explicitNullProperties?.Remove("ssid"); } }
+        public string Ssid { get => _explicitNullValueSsid; set { _explicitNullValueSsid = value; AdditionalData?.Remove("ssid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssid"); else _explicitNullProperties?.Remove("ssid"); } }
         private string _explicitNullValueSsid = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("vpa") is { } nullNodeVpa && nullNodeVpa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vpa = null;
+            if (parseNode.GetChildNode("vpa") is null) { _explicitNullValueVpa = default!; _explicitNullProperties?.Remove("vpa"); }
+            else if (parseNode.GetChildNode("vpa") is { } nullNodeVpa && nullNodeVpa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vpa = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Customer&apos;s unique Virtual Payment Address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Vpa { get => _explicitNullValueVpa; set { _explicitNullValueVpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vpa"); else _explicitNullProperties?.Remove("vpa"); } }
+        public string? Vpa { get => _explicitNullValueVpa; set { _explicitNullValueVpa = value; AdditionalData?.Remove("vpa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vpa"); else _explicitNullProperties?.Remove("vpa"); } }
         private string? _explicitNullValueVpa = default!;
 #nullable restore
 #else
-        public string Vpa { get => _explicitNullValueVpa; set { _explicitNullValueVpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vpa"); else _explicitNullProperties?.Remove("vpa"); } }
+        public string Vpa { get => _explicitNullValueVpa; set { _explicitNullValueVpa = value; AdditionalData?.Remove("vpa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vpa"); else _explicitNullProperties?.Remove("vpa"); } }
         private string _explicitNullValueVpa = default!;
 #endif
         /// <summary>

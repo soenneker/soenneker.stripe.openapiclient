@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_message") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
+            if (parseNode.GetChildNode("custom_message") is null) { _explicitNullValueCustomMessage = default!; _explicitNullProperties?.Remove("custom_message"); }
+            else if (parseNode.GetChildNode("custom_message") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The custom message that is displayed to the customer after the purchase is complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
+        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("custom_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
         private string? _explicitNullValueCustomMessage = default!;
 #nullable restore
 #else
-        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
+        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("custom_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
         private string _explicitNullValueCustomMessage = default!;
 #endif
         /// <summary>

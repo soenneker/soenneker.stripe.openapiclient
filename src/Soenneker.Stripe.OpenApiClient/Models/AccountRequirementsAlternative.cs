@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alternative_fields_due") is { } nullNodeAlternativeFieldsDue && nullNodeAlternativeFieldsDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternativeFieldsDue = null;
-            if (parseNode.GetChildNode("original_fields_due") is { } nullNodeOriginalFieldsDue && nullNodeOriginalFieldsDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalFieldsDue = null;
+            if (parseNode.GetChildNode("alternative_fields_due") is null) { _explicitNullValueAlternativeFieldsDue = default!; _explicitNullProperties?.Remove("alternative_fields_due"); }
+            else if (parseNode.GetChildNode("alternative_fields_due") is { } nullNodeAlternativeFieldsDue && nullNodeAlternativeFieldsDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternativeFieldsDue = null;
+            if (parseNode.GetChildNode("original_fields_due") is null) { _explicitNullValueOriginalFieldsDue = default!; _explicitNullProperties?.Remove("original_fields_due"); }
+            else if (parseNode.GetChildNode("original_fields_due") is { } nullNodeOriginalFieldsDue && nullNodeOriginalFieldsDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalFieldsDue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Fields that can be provided to resolve all fields in `original_fields_due`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AlternativeFieldsDue { get => _explicitNullValueAlternativeFieldsDue; set { _explicitNullValueAlternativeFieldsDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_fields_due"); else _explicitNullProperties?.Remove("alternative_fields_due"); } }
+        public List<string>? AlternativeFieldsDue { get => _explicitNullValueAlternativeFieldsDue; set { _explicitNullValueAlternativeFieldsDue = value; AdditionalData?.Remove("alternative_fields_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_fields_due"); else _explicitNullProperties?.Remove("alternative_fields_due"); } }
         private List<string>? _explicitNullValueAlternativeFieldsDue = default!;
 #nullable restore
 #else
-        public List<string> AlternativeFieldsDue { get => _explicitNullValueAlternativeFieldsDue; set { _explicitNullValueAlternativeFieldsDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_fields_due"); else _explicitNullProperties?.Remove("alternative_fields_due"); } }
+        public List<string> AlternativeFieldsDue { get => _explicitNullValueAlternativeFieldsDue; set { _explicitNullValueAlternativeFieldsDue = value; AdditionalData?.Remove("alternative_fields_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_fields_due"); else _explicitNullProperties?.Remove("alternative_fields_due"); } }
         private List<string> _explicitNullValueAlternativeFieldsDue = default!;
 #endif
         /// <summary>Fields that are due and can be resolved by providing all fields in `alternative_fields_due`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OriginalFieldsDue { get => _explicitNullValueOriginalFieldsDue; set { _explicitNullValueOriginalFieldsDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_fields_due"); else _explicitNullProperties?.Remove("original_fields_due"); } }
+        public List<string>? OriginalFieldsDue { get => _explicitNullValueOriginalFieldsDue; set { _explicitNullValueOriginalFieldsDue = value; AdditionalData?.Remove("original_fields_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_fields_due"); else _explicitNullProperties?.Remove("original_fields_due"); } }
         private List<string>? _explicitNullValueOriginalFieldsDue = default!;
 #nullable restore
 #else
-        public List<string> OriginalFieldsDue { get => _explicitNullValueOriginalFieldsDue; set { _explicitNullValueOriginalFieldsDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_fields_due"); else _explicitNullProperties?.Remove("original_fields_due"); } }
+        public List<string> OriginalFieldsDue { get => _explicitNullValueOriginalFieldsDue; set { _explicitNullValueOriginalFieldsDue = value; AdditionalData?.Remove("original_fields_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_fields_due"); else _explicitNullProperties?.Remove("original_fields_due"); } }
         private List<string> _explicitNullValueOriginalFieldsDue = default!;
 #endif
         /// <summary>

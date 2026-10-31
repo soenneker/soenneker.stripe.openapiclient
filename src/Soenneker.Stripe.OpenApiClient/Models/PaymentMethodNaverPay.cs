@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyer_id") is { } nullNodeBuyerId && nullNodeBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerId = null;
-            if (parseNode.GetChildNode("funding") is { } nullNodeFunding && nullNodeFunding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Funding = null;
+            if (parseNode.GetChildNode("buyer_id") is null) { _explicitNullValueBuyerId = default!; _explicitNullProperties?.Remove("buyer_id"); }
+            else if (parseNode.GetChildNode("buyer_id") is { } nullNodeBuyerId && nullNodeBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerId = null;
+            if (parseNode.GetChildNode("funding") is null) { _explicitNullValueFunding = default!; _explicitNullProperties?.Remove("funding"); }
+            else if (parseNode.GetChildNode("funding") is { } nullNodeFunding && nullNodeFunding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Funding = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Uniquely identifies this particular Naver Pay account. You can use this attribute to check whether two Naver Pay accounts are the same.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
+        public string? BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; AdditionalData?.Remove("buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
         private string? _explicitNullValueBuyerId = default!;
 #nullable restore
 #else
-        public string BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
+        public string BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; AdditionalData?.Remove("buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
         private string _explicitNullValueBuyerId = default!;
 #endif
         /// <summary>Whether to fund this transaction with Naver Pay points or a card.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding? Funding { get => _explicitNullValueFunding; set { _explicitNullValueFunding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding"); else _explicitNullProperties?.Remove("funding"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding? Funding { get => _explicitNullValueFunding; set { _explicitNullValueFunding = value; AdditionalData?.Remove("funding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funding"); else _explicitNullProperties?.Remove("funding"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding? _explicitNullValueFunding = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buyer_id", n => { BuyerId = n.GetStringValue(); } },
-                { "funding", n => { Funding = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding>(); } },
+                { "funding", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFunding = default; _explicitNullProperties?.Remove("funding"); AdditionalData["funding"] = unknown; } else { Funding = parsed; AdditionalData.Remove("funding"); } } },
             };
         }
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address_line1_check") is { } nullNodeAddressLine1Check && nullNodeAddressLine1Check.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine1Check = null;
-            if (parseNode.GetChildNode("address_postal_code_check") is { } nullNodeAddressPostalCodeCheck && nullNodeAddressPostalCodeCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressPostalCodeCheck = null;
-            if (parseNode.GetChildNode("cvc_check") is { } nullNodeCvcCheck && nullNodeCvcCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcCheck = null;
+            if (parseNode.GetChildNode("address_line1_check") is null) { _explicitNullValueAddressLine1Check = default!; _explicitNullProperties?.Remove("address_line1_check"); }
+            else if (parseNode.GetChildNode("address_line1_check") is { } nullNodeAddressLine1Check && nullNodeAddressLine1Check.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLine1Check = null;
+            if (parseNode.GetChildNode("address_postal_code_check") is null) { _explicitNullValueAddressPostalCodeCheck = default!; _explicitNullProperties?.Remove("address_postal_code_check"); }
+            else if (parseNode.GetChildNode("address_postal_code_check") is { } nullNodeAddressPostalCodeCheck && nullNodeAddressPostalCodeCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressPostalCodeCheck = null;
+            if (parseNode.GetChildNode("cvc_check") is null) { _explicitNullValueCvcCheck = default!; _explicitNullProperties?.Remove("cvc_check"); }
+            else if (parseNode.GetChildNode("cvc_check") is { } nullNodeCvcCheck && nullNodeCvcCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcCheck = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If a address line1 was provided, results of the check, one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
+        public string? AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; AdditionalData?.Remove("address_line1_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
         private string? _explicitNullValueAddressLine1Check = default!;
 #nullable restore
 #else
-        public string AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
+        public string AddressLine1Check { get => _explicitNullValueAddressLine1Check; set { _explicitNullValueAddressLine1Check = value; AdditionalData?.Remove("address_line1_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_line1_check"); else _explicitNullProperties?.Remove("address_line1_check"); } }
         private string _explicitNullValueAddressLine1Check = default!;
 #endif
         /// <summary>If a address postal code was provided, results of the check, one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
+        public string? AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; AdditionalData?.Remove("address_postal_code_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
         private string? _explicitNullValueAddressPostalCodeCheck = default!;
 #nullable restore
 #else
-        public string AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
+        public string AddressPostalCodeCheck { get => _explicitNullValueAddressPostalCodeCheck; set { _explicitNullValueAddressPostalCodeCheck = value; AdditionalData?.Remove("address_postal_code_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_postal_code_check"); else _explicitNullProperties?.Remove("address_postal_code_check"); } }
         private string _explicitNullValueAddressPostalCodeCheck = default!;
 #endif
         /// <summary>If a CVC was provided, results of the check, one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
+        public string? CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; AdditionalData?.Remove("cvc_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
         private string? _explicitNullValueCvcCheck = default!;
 #nullable restore
 #else
-        public string CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
+        public string CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; AdditionalData?.Remove("cvc_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
         private string _explicitNullValueCvcCheck = default!;
 #endif
         /// <summary>

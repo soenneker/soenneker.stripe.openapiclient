@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCardNetworksPreferred
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "cartes_bancaires")]
         #pragma warning disable CS1591
         CartesBancaires,

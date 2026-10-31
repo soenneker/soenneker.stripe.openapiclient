@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamTransactionPurpose
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "goods")]
         #pragma warning disable CS1591
         Goods,

@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sender_bank") is { } nullNodeSenderBank && nullNodeSenderBank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBank = null;
-            if (parseNode.GetChildNode("sender_branch") is { } nullNodeSenderBranch && nullNodeSenderBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBranch = null;
-            if (parseNode.GetChildNode("sender_name") is { } nullNodeSenderName && nullNodeSenderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderName = null;
+            if (parseNode.GetChildNode("sender_bank") is null) { _explicitNullValueSenderBank = default!; _explicitNullProperties?.Remove("sender_bank"); }
+            else if (parseNode.GetChildNode("sender_bank") is { } nullNodeSenderBank && nullNodeSenderBank.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBank = null;
+            if (parseNode.GetChildNode("sender_branch") is null) { _explicitNullValueSenderBranch = default!; _explicitNullProperties?.Remove("sender_branch"); }
+            else if (parseNode.GetChildNode("sender_branch") is { } nullNodeSenderBranch && nullNodeSenderBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderBranch = null;
+            if (parseNode.GetChildNode("sender_name") is null) { _explicitNullValueSenderName = default!; _explicitNullProperties?.Remove("sender_name"); }
+            else if (parseNode.GetChildNode("sender_name") is { } nullNodeSenderName && nullNodeSenderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The name of the bank of the sender of the funding.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderBank { get => _explicitNullValueSenderBank; set { _explicitNullValueSenderBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_bank"); else _explicitNullProperties?.Remove("sender_bank"); } }
+        public string? SenderBank { get => _explicitNullValueSenderBank; set { _explicitNullValueSenderBank = value; AdditionalData?.Remove("sender_bank"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_bank"); else _explicitNullProperties?.Remove("sender_bank"); } }
         private string? _explicitNullValueSenderBank = default!;
 #nullable restore
 #else
-        public string SenderBank { get => _explicitNullValueSenderBank; set { _explicitNullValueSenderBank = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_bank"); else _explicitNullProperties?.Remove("sender_bank"); } }
+        public string SenderBank { get => _explicitNullValueSenderBank; set { _explicitNullValueSenderBank = value; AdditionalData?.Remove("sender_bank"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_bank"); else _explicitNullProperties?.Remove("sender_bank"); } }
         private string _explicitNullValueSenderBank = default!;
 #endif
         /// <summary>The name of the bank branch of the sender of the funding.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderBranch { get => _explicitNullValueSenderBranch; set { _explicitNullValueSenderBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_branch"); else _explicitNullProperties?.Remove("sender_branch"); } }
+        public string? SenderBranch { get => _explicitNullValueSenderBranch; set { _explicitNullValueSenderBranch = value; AdditionalData?.Remove("sender_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_branch"); else _explicitNullProperties?.Remove("sender_branch"); } }
         private string? _explicitNullValueSenderBranch = default!;
 #nullable restore
 #else
-        public string SenderBranch { get => _explicitNullValueSenderBranch; set { _explicitNullValueSenderBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_branch"); else _explicitNullProperties?.Remove("sender_branch"); } }
+        public string SenderBranch { get => _explicitNullValueSenderBranch; set { _explicitNullValueSenderBranch = value; AdditionalData?.Remove("sender_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_branch"); else _explicitNullProperties?.Remove("sender_branch"); } }
         private string _explicitNullValueSenderBranch = default!;
 #endif
         /// <summary>The full name of the sender, as supplied by the sending bank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
+        public string? SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; AdditionalData?.Remove("sender_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
         private string? _explicitNullValueSenderName = default!;
 #nullable restore
 #else
-        public string SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
+        public string SenderName { get => _explicitNullValueSenderName; set { _explicitNullValueSenderName = value; AdditionalData?.Remove("sender_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_name"); else _explicitNullProperties?.Remove("sender_name"); } }
         private string _explicitNullValueSenderName = default!;
 #endif
         /// <summary>

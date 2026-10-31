@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("card_spend_dispute_management") is { } nullNodeCardSpendDisputeManagement && nullNodeCardSpendDisputeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardSpendDisputeManagement = null;
+            if (parseNode.GetChildNode("card_spend_dispute_management") is null) { _explicitNullValueCardSpendDisputeManagement = default!; _explicitNullProperties?.Remove("card_spend_dispute_management"); }
+            else if (parseNode.GetChildNode("card_spend_dispute_management") is { } nullNodeCardSpendDisputeManagement && nullNodeCardSpendDisputeManagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardSpendDisputeManagement = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card_spend_dispute_management property</summary>
-        public bool? CardSpendDisputeManagement { get => _explicitNullValueCardSpendDisputeManagement; set { _explicitNullValueCardSpendDisputeManagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_spend_dispute_management"); else _explicitNullProperties?.Remove("card_spend_dispute_management"); } }
+        public bool? CardSpendDisputeManagement { get => _explicitNullValueCardSpendDisputeManagement; set { _explicitNullValueCardSpendDisputeManagement = value; AdditionalData?.Remove("card_spend_dispute_management"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_spend_dispute_management"); else _explicitNullProperties?.Remove("card_spend_dispute_management"); } }
         private bool? _explicitNullValueCardSpendDisputeManagement = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsFinancialAccountTransactionsFeatures"/> and sets the default values.

@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fuel") is { } nullNodeFuel && nullNodeFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fuel = null;
-            if (parseNode.GetChildNode("non_fuel") is { } nullNodeNonFuel && nullNodeNonFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonFuel = null;
-            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("fuel") is null) { _explicitNullValueFuel = default!; _explicitNullProperties?.Remove("fuel"); }
+            else if (parseNode.GetChildNode("fuel") is { } nullNodeFuel && nullNodeFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fuel = null;
+            if (parseNode.GetChildNode("non_fuel") is null) { _explicitNullValueNonFuel = default!; _explicitNullProperties?.Remove("non_fuel"); }
+            else if (parseNode.GetChildNode("non_fuel") is { } nullNodeNonFuel && nullNodeNonFuel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonFuel = null;
+            if (parseNode.GetChildNode("tax") is null) { _explicitNullValueTax = default!; _explicitNullProperties?.Remove("tax"); }
+            else if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Breakdown of fuel portion of the purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel? _explicitNullValueFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownFuel _explicitNullValueFuel = default!;
 #endif
         /// <summary>Breakdown of non-fuel portion of the purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel? NonFuel { get => _explicitNullValueNonFuel; set { _explicitNullValueNonFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_fuel"); else _explicitNullProperties?.Remove("non_fuel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel? NonFuel { get => _explicitNullValueNonFuel; set { _explicitNullValueNonFuel = value; AdditionalData?.Remove("non_fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_fuel"); else _explicitNullProperties?.Remove("non_fuel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel? _explicitNullValueNonFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel NonFuel { get => _explicitNullValueNonFuel; set { _explicitNullValueNonFuel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_fuel"); else _explicitNullProperties?.Remove("non_fuel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel NonFuel { get => _explicitNullValueNonFuel; set { _explicitNullValueNonFuel = value; AdditionalData?.Remove("non_fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("non_fuel"); else _explicitNullProperties?.Remove("non_fuel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownNonFuel _explicitNullValueNonFuel = default!;
 #endif
         /// <summary>Information about tax included in this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetReportedBreakdownTax _explicitNullValueTax = default!;
 #endif
         /// <summary>

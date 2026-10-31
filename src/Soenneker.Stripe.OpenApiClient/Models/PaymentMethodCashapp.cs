@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyer_id") is { } nullNodeBuyerId && nullNodeBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerId = null;
-            if (parseNode.GetChildNode("cashtag") is { } nullNodeCashtag && nullNodeCashtag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cashtag = null;
+            if (parseNode.GetChildNode("buyer_id") is null) { _explicitNullValueBuyerId = default!; _explicitNullProperties?.Remove("buyer_id"); }
+            else if (parseNode.GetChildNode("buyer_id") is { } nullNodeBuyerId && nullNodeBuyerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerId = null;
+            if (parseNode.GetChildNode("cashtag") is null) { _explicitNullValueCashtag = default!; _explicitNullProperties?.Remove("cashtag"); }
+            else if (parseNode.GetChildNode("cashtag") is { } nullNodeCashtag && nullNodeCashtag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cashtag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A unique and immutable identifier assigned by Cash App to every buyer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
+        public string? BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; AdditionalData?.Remove("buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
         private string? _explicitNullValueBuyerId = default!;
 #nullable restore
 #else
-        public string BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
+        public string BuyerId { get => _explicitNullValueBuyerId; set { _explicitNullValueBuyerId = value; AdditionalData?.Remove("buyer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_id"); else _explicitNullProperties?.Remove("buyer_id"); } }
         private string _explicitNullValueBuyerId = default!;
 #endif
         /// <summary>A public identifier for buyers using Cash App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cashtag { get => _explicitNullValueCashtag; set { _explicitNullValueCashtag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashtag"); else _explicitNullProperties?.Remove("cashtag"); } }
+        public string? Cashtag { get => _explicitNullValueCashtag; set { _explicitNullValueCashtag = value; AdditionalData?.Remove("cashtag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashtag"); else _explicitNullProperties?.Remove("cashtag"); } }
         private string? _explicitNullValueCashtag = default!;
 #nullable restore
 #else
-        public string Cashtag { get => _explicitNullValueCashtag; set { _explicitNullValueCashtag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashtag"); else _explicitNullProperties?.Remove("cashtag"); } }
+        public string Cashtag { get => _explicitNullValueCashtag; set { _explicitNullValueCashtag = value; AdditionalData?.Remove("cashtag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashtag"); else _explicitNullProperties?.Remove("cashtag"); } }
         private string _explicitNullValueCashtag = default!;
 #endif
         /// <summary>

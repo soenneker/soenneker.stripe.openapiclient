@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("public_name") is { } nullNodePublicName && nullNodePublicName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicName = null;
+            if (parseNode.GetChildNode("public_name") is null) { _explicitNullValuePublicName = default!; _explicitNullProperties?.Remove("public_name"); }
+            else if (parseNode.GetChildNode("public_name") is { } nullNodePublicName && nullNodePublicName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The public_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName? PublicName { get => _explicitNullValuePublicName; set { _explicitNullValuePublicName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_name"); else _explicitNullProperties?.Remove("public_name"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName? PublicName { get => _explicitNullValuePublicName; set { _explicitNullValuePublicName = value; AdditionalData?.Remove("public_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_name"); else _explicitNullProperties?.Remove("public_name"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName? _explicitNullValuePublicName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName PublicName { get => _explicitNullValuePublicName; set { _explicitNullValuePublicName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_name"); else _explicitNullProperties?.Remove("public_name"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName PublicName { get => _explicitNullValuePublicName; set { _explicitNullValuePublicName = value; AdditionalData?.Remove("public_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_name"); else _explicitNullProperties?.Remove("public_name"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostClimateOrdersOrderXWwwFormUrlencodedRequestBeneficiaryBeneficiaryParamsPublicName _explicitNullValuePublicName = default!;
 #endif
         /// <summary>

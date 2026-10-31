@@ -17,20 +17,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accessible") is { } nullNodeAccessible && nullNodeAccessible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessible = null;
-            if (parseNode.GetChildNode("in_development") is { } nullNodeInDevelopment && nullNodeInDevelopment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InDevelopment = null;
-            if (parseNode.GetChildNode("restricted") is { } nullNodeRestricted && nullNodeRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Restricted = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("accessible") is null) { _explicitNullValueAccessible = default!; _explicitNullProperties?.Remove("accessible"); }
+            else if (parseNode.GetChildNode("accessible") is { } nullNodeAccessible && nullNodeAccessible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessible = null;
+            if (parseNode.GetChildNode("in_development") is null) { _explicitNullValueInDevelopment = default!; _explicitNullProperties?.Remove("in_development"); }
+            else if (parseNode.GetChildNode("in_development") is { } nullNodeInDevelopment && nullNodeInDevelopment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InDevelopment = null;
+            if (parseNode.GetChildNode("restricted") is null) { _explicitNullValueRestricted = default!; _explicitNullProperties?.Remove("restricted"); }
+            else if (parseNode.GetChildNode("restricted") is { } nullNodeRestricted && nullNodeRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Restricted = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>The accessible property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible? Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible? Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; AdditionalData?.Remove("accessible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible? _explicitNullValueAccessible = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; AdditionalData?.Remove("accessible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible _explicitNullValueAccessible = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,25 +42,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The in_development property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings? InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings? InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; AdditionalData?.Remove("in_development"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings? _explicitNullValueInDevelopment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings InDevelopment { get => _explicitNullValueInDevelopment; set { _explicitNullValueInDevelopment = value; AdditionalData?.Remove("in_development"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_development"); else _explicitNullProperties?.Remove("in_development"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings _explicitNullValueInDevelopment = default!;
 #endif
         /// <summary>The restricted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings? Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings? Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; AdditionalData?.Remove("restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings? _explicitNullValueRestricted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings Restricted { get => _explicitNullValueRestricted; set { _explicitNullValueRestricted = value; AdditionalData?.Remove("restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted"); else _explicitNullProperties?.Remove("restricted"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings _explicitNullValueRestricted = default!;
 #endif
         /// <summary>The status of your business&apos;s website.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettings"/> and sets the default values.
@@ -86,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "accessible", n => { Accessible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsAccessible.CreateFromDiscriminatorValue); } },
                 { "in_development", n => { InDevelopment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteInDevelopmentSettings.CreateFromDiscriminatorValue); } },
                 { "restricted", n => { Restricted = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteRestrictedSettings.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypaySiteSettingsType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

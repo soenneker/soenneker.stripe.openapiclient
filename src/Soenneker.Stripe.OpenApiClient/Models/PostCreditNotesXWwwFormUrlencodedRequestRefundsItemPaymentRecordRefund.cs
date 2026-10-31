@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payment_record") is { } nullNodePaymentRecord && nullNodePaymentRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentRecord = null;
-            if (parseNode.GetChildNode("refund_group") is { } nullNodeRefundGroup && nullNodeRefundGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundGroup = null;
+            if (parseNode.GetChildNode("payment_record") is null) { _explicitNullValuePaymentRecord = default!; _explicitNullProperties?.Remove("payment_record"); }
+            else if (parseNode.GetChildNode("payment_record") is { } nullNodePaymentRecord && nullNodePaymentRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentRecord = null;
+            if (parseNode.GetChildNode("refund_group") is null) { _explicitNullValueRefundGroup = default!; _explicitNullProperties?.Remove("refund_group"); }
+            else if (parseNode.GetChildNode("refund_group") is { } nullNodeRefundGroup && nullNodeRefundGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundGroup = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment_record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
+        public string? PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; AdditionalData?.Remove("payment_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
         private string? _explicitNullValuePaymentRecord = default!;
 #nullable restore
 #else
-        public string PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
+        public string PaymentRecord { get => _explicitNullValuePaymentRecord; set { _explicitNullValuePaymentRecord = value; AdditionalData?.Remove("payment_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record"); else _explicitNullProperties?.Remove("payment_record"); } }
         private string _explicitNullValuePaymentRecord = default!;
 #endif
         /// <summary>The refund_group property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundGroup { get => _explicitNullValueRefundGroup; set { _explicitNullValueRefundGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_group"); else _explicitNullProperties?.Remove("refund_group"); } }
+        public string? RefundGroup { get => _explicitNullValueRefundGroup; set { _explicitNullValueRefundGroup = value; AdditionalData?.Remove("refund_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_group"); else _explicitNullProperties?.Remove("refund_group"); } }
         private string? _explicitNullValueRefundGroup = default!;
 #nullable restore
 #else
-        public string RefundGroup { get => _explicitNullValueRefundGroup; set { _explicitNullValueRefundGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_group"); else _explicitNullProperties?.Remove("refund_group"); } }
+        public string RefundGroup { get => _explicitNullValueRefundGroup; set { _explicitNullValueRefundGroup = value; AdditionalData?.Remove("refund_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_group"); else _explicitNullProperties?.Remove("refund_group"); } }
         private string _explicitNullValueRefundGroup = default!;
 #endif
         /// <summary>

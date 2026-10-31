@@ -18,24 +18,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
-            if (parseNode.GetChildNode("iban") is { } nullNodeIban && nullNodeIban.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iban = null;
-            if (parseNode.GetChildNode("sort_code") is { } nullNodeSortCode && nullNodeSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCode = null;
-            if (parseNode.GetChildNode("spei") is { } nullNodeSpei && nullNodeSpei.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spei = null;
-            if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
-            if (parseNode.GetChildNode("swift") is { } nullNodeSwift && nullNodeSwift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Swift = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("zengin") is { } nullNodeZengin && nullNodeZengin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zengin = null;
+            if (parseNode.GetChildNode("aba") is null) { _explicitNullValueAba = default!; _explicitNullProperties?.Remove("aba"); }
+            else if (parseNode.GetChildNode("aba") is { } nullNodeAba && nullNodeAba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aba = null;
+            if (parseNode.GetChildNode("iban") is null) { _explicitNullValueIban = default!; _explicitNullProperties?.Remove("iban"); }
+            else if (parseNode.GetChildNode("iban") is { } nullNodeIban && nullNodeIban.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iban = null;
+            if (parseNode.GetChildNode("sort_code") is null) { _explicitNullValueSortCode = default!; _explicitNullProperties?.Remove("sort_code"); }
+            else if (parseNode.GetChildNode("sort_code") is { } nullNodeSortCode && nullNodeSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCode = null;
+            if (parseNode.GetChildNode("spei") is null) { _explicitNullValueSpei = default!; _explicitNullProperties?.Remove("spei"); }
+            else if (parseNode.GetChildNode("spei") is { } nullNodeSpei && nullNodeSpei.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spei = null;
+            if (parseNode.GetChildNode("supported_networks") is null) { _explicitNullValueSupportedNetworks = default!; _explicitNullProperties?.Remove("supported_networks"); }
+            else if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
+            if (parseNode.GetChildNode("swift") is null) { _explicitNullValueSwift = default!; _explicitNullProperties?.Remove("swift"); }
+            else if (parseNode.GetChildNode("swift") is { } nullNodeSwift && nullNodeSwift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Swift = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("zengin") is null) { _explicitNullValueZengin = default!; _explicitNullProperties?.Remove("zengin"); }
+            else if (parseNode.GetChildNode("zengin") is { } nullNodeZengin && nullNodeZengin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zengin = null;
         }
 
         /// <summary>ABA Records contain U.S. bank account details per the ABA format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord? Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord? _explicitNullValueAba = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord Aba { get => _explicitNullValueAba; set { _explicitNullValueAba = value; AdditionalData?.Remove("aba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aba"); else _explicitNullProperties?.Remove("aba"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferAbaRecord _explicitNullValueAba = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,64 +51,64 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Iban Records contain E.U. bank account details per the SEPA format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord? Iban { get => _explicitNullValueIban; set { _explicitNullValueIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban"); else _explicitNullProperties?.Remove("iban"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord? Iban { get => _explicitNullValueIban; set { _explicitNullValueIban = value; AdditionalData?.Remove("iban"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban"); else _explicitNullProperties?.Remove("iban"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord? _explicitNullValueIban = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord Iban { get => _explicitNullValueIban; set { _explicitNullValueIban = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban"); else _explicitNullProperties?.Remove("iban"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord Iban { get => _explicitNullValueIban; set { _explicitNullValueIban = value; AdditionalData?.Remove("iban"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban"); else _explicitNullProperties?.Remove("iban"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord _explicitNullValueIban = default!;
 #endif
         /// <summary>Sort Code Records contain U.K. bank account details per the sort code format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord? SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_code"); else _explicitNullProperties?.Remove("sort_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord? SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; AdditionalData?.Remove("sort_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_code"); else _explicitNullProperties?.Remove("sort_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord? _explicitNullValueSortCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_code"); else _explicitNullProperties?.Remove("sort_code"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; AdditionalData?.Remove("sort_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_code"); else _explicitNullProperties?.Remove("sort_code"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord _explicitNullValueSortCode = default!;
 #endif
         /// <summary>SPEI Records contain Mexico bank account details per the SPEI format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord? Spei { get => _explicitNullValueSpei; set { _explicitNullValueSpei = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spei"); else _explicitNullProperties?.Remove("spei"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord? Spei { get => _explicitNullValueSpei; set { _explicitNullValueSpei = value; AdditionalData?.Remove("spei"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spei"); else _explicitNullProperties?.Remove("spei"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord? _explicitNullValueSpei = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord Spei { get => _explicitNullValueSpei; set { _explicitNullValueSpei = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spei"); else _explicitNullProperties?.Remove("spei"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord Spei { get => _explicitNullValueSpei; set { _explicitNullValueSpei = value; AdditionalData?.Remove("spei"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spei"); else _explicitNullProperties?.Remove("spei"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord _explicitNullValueSpei = default!;
 #endif
         /// <summary>The payment networks supported by this FinancialAddress</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?>? _explicitNullValueSupportedNetworks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?> _explicitNullValueSupportedNetworks = default!;
 #endif
         /// <summary>SWIFT Records contain U.S. bank account details per the SWIFT format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord? Swift { get => _explicitNullValueSwift; set { _explicitNullValueSwift = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swift"); else _explicitNullProperties?.Remove("swift"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord? Swift { get => _explicitNullValueSwift; set { _explicitNullValueSwift = value; AdditionalData?.Remove("swift"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swift"); else _explicitNullProperties?.Remove("swift"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord? _explicitNullValueSwift = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord Swift { get => _explicitNullValueSwift; set { _explicitNullValueSwift = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swift"); else _explicitNullProperties?.Remove("swift"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord Swift { get => _explicitNullValueSwift; set { _explicitNullValueSwift = value; AdditionalData?.Remove("swift"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swift"); else _explicitNullProperties?.Remove("swift"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord _explicitNullValueSwift = default!;
 #endif
         /// <summary>The type of financial address</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType? _explicitNullValueType = default!;
         /// <summary>Zengin Records contain Japan bank account details per the Zengin format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord? Zengin { get => _explicitNullValueZengin; set { _explicitNullValueZengin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zengin"); else _explicitNullProperties?.Remove("zengin"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord? Zengin { get => _explicitNullValueZengin; set { _explicitNullValueZengin = value; AdditionalData?.Remove("zengin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zengin"); else _explicitNullProperties?.Remove("zengin"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord? _explicitNullValueZengin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord Zengin { get => _explicitNullValueZengin; set { _explicitNullValueZengin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zengin"); else _explicitNullProperties?.Remove("zengin"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord Zengin { get => _explicitNullValueZengin; set { _explicitNullValueZengin = value; AdditionalData?.Remove("zengin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zengin"); else _explicitNullProperties?.Remove("zengin"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord _explicitNullValueZengin = default!;
 #endif
         /// <summary>
@@ -134,7 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "spei", n => { Spei = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord.CreateFromDiscriminatorValue); } },
                 { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem>()?.AsList(); } },
                 { "swift", n => { Swift = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "zengin", n => { Zengin = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord.CreateFromDiscriminatorValue); } },
             };
         }

@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("india") is { } nullNodeIndia && nullNodeIndia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) India = null;
+            if (parseNode.GetChildNode("india") is null) { _explicitNullValueIndia = default!; _explicitNullProperties?.Remove("india"); }
+            else if (parseNode.GetChildNode("india") is { } nullNodeIndia && nullNodeIndia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) India = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The india property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia? India { get => _explicitNullValueIndia; set { _explicitNullValueIndia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india"); else _explicitNullProperties?.Remove("india"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia? India { get => _explicitNullValueIndia; set { _explicitNullValueIndia = value; AdditionalData?.Remove("india"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india"); else _explicitNullProperties?.Remove("india"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia? _explicitNullValueIndia = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia India { get => _explicitNullValueIndia; set { _explicitNullValueIndia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india"); else _explicitNullProperties?.Remove("india"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia India { get => _explicitNullValueIndia; set { _explicitNullValueIndia = value; AdditionalData?.Remove("india"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india"); else _explicitNullProperties?.Remove("india"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia _explicitNullValueIndia = default!;
 #endif
         /// <summary>

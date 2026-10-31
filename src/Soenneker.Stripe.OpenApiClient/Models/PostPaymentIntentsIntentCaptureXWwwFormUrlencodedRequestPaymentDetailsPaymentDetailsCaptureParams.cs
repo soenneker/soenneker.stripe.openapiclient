@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer_reference") is { } nullNodeCustomerReference && nullNodeCustomerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerReference = null;
-            if (parseNode.GetChildNode("order_reference") is { } nullNodeOrderReference && nullNodeOrderReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderReference = null;
+            if (parseNode.GetChildNode("customer_reference") is null) { _explicitNullValueCustomerReference = default!; _explicitNullProperties?.Remove("customer_reference"); }
+            else if (parseNode.GetChildNode("customer_reference") is { } nullNodeCustomerReference && nullNodeCustomerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerReference = null;
+            if (parseNode.GetChildNode("order_reference") is null) { _explicitNullValueOrderReference = default!; _explicitNullProperties?.Remove("order_reference"); }
+            else if (parseNode.GetChildNode("order_reference") is { } nullNodeOrderReference && nullNodeOrderReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference? CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference? CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; AdditionalData?.Remove("customer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference? _explicitNullValueCustomerReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; AdditionalData?.Remove("customer_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsCustomerReference _explicitNullValueCustomerReference = default!;
 #endif
         /// <summary>The order_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference? OrderReference { get => _explicitNullValueOrderReference; set { _explicitNullValueOrderReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_reference"); else _explicitNullProperties?.Remove("order_reference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference? OrderReference { get => _explicitNullValueOrderReference; set { _explicitNullValueOrderReference = value; AdditionalData?.Remove("order_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_reference"); else _explicitNullProperties?.Remove("order_reference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference? _explicitNullValueOrderReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference OrderReference { get => _explicitNullValueOrderReference; set { _explicitNullValueOrderReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_reference"); else _explicitNullProperties?.Remove("order_reference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference OrderReference { get => _explicitNullValueOrderReference; set { _explicitNullValueOrderReference = value; AdditionalData?.Remove("order_reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_reference"); else _explicitNullProperties?.Remove("order_reference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCaptureXWwwFormUrlencodedRequestPaymentDetailsPaymentDetailsCaptureParamsOrderReference _explicitNullValueOrderReference = default!;
 #endif
         /// <summary>

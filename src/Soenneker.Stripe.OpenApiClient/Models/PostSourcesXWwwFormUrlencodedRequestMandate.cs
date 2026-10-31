@@ -18,21 +18,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acceptance") is { } nullNodeAcceptance && nullNodeAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Acceptance = null;
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
-            if (parseNode.GetChildNode("notification_method") is { } nullNodeNotificationMethod && nullNodeNotificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMethod = null;
+            if (parseNode.GetChildNode("acceptance") is null) { _explicitNullValueAcceptance = default!; _explicitNullProperties?.Remove("acceptance"); }
+            else if (parseNode.GetChildNode("acceptance") is { } nullNodeAcceptance && nullNodeAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Acceptance = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("interval") is null) { _explicitNullValueInterval = default!; _explicitNullProperties?.Remove("interval"); }
+            else if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("notification_method") is null) { _explicitNullValueNotificationMethod = default!; _explicitNullProperties?.Remove("notification_method"); }
+            else if (parseNode.GetChildNode("notification_method") is { } nullNodeNotificationMethod && nullNodeNotificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMethod = null;
         }
 
         /// <summary>The acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance? Acceptance { get => _explicitNullValueAcceptance; set { _explicitNullValueAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance"); else _explicitNullProperties?.Remove("acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance? Acceptance { get => _explicitNullValueAcceptance; set { _explicitNullValueAcceptance = value; AdditionalData?.Remove("acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance"); else _explicitNullProperties?.Remove("acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance? _explicitNullValueAcceptance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance Acceptance { get => _explicitNullValueAcceptance; set { _explicitNullValueAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance"); else _explicitNullProperties?.Remove("acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance Acceptance { get => _explicitNullValueAcceptance; set { _explicitNullValueAcceptance = value; AdditionalData?.Remove("acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance"); else _explicitNullProperties?.Remove("acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance _explicitNullValueAcceptance = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,28 +45,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount _explicitNullValueAmount = default!;
 #endif
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The interval property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateInterval? _explicitNullValueInterval = default!;
         /// <summary>The notification_method property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateNotificationMethod? NotificationMethod { get => _explicitNullValueNotificationMethod; set { _explicitNullValueNotificationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_method"); else _explicitNullProperties?.Remove("notification_method"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateNotificationMethod? NotificationMethod { get => _explicitNullValueNotificationMethod; set { _explicitNullValueNotificationMethod = value; AdditionalData?.Remove("notification_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_method"); else _explicitNullProperties?.Remove("notification_method"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateNotificationMethod? _explicitNullValueNotificationMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandate"/> and sets the default values.
@@ -91,8 +96,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acceptance", n => { Acceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAcceptance.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateAmount.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateInterval>(); } },
-                { "notification_method", n => { NotificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateNotificationMethod>(); } },
+                { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
+                { "notification_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestMandateNotificationMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationMethod = default; _explicitNullProperties?.Remove("notification_method"); AdditionalData["notification_method"] = unknown; } else { NotificationMethod = parsed; AdditionalData.Remove("notification_method"); } } },
             };
         }
         /// <summary>

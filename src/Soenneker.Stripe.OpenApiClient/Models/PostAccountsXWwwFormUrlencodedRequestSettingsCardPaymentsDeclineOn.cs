@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("avs_failure") is { } nullNodeAvsFailure && nullNodeAvsFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvsFailure = null;
-            if (parseNode.GetChildNode("cvc_failure") is { } nullNodeCvcFailure && nullNodeCvcFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcFailure = null;
+            if (parseNode.GetChildNode("avs_failure") is null) { _explicitNullValueAvsFailure = default!; _explicitNullProperties?.Remove("avs_failure"); }
+            else if (parseNode.GetChildNode("avs_failure") is { } nullNodeAvsFailure && nullNodeAvsFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvsFailure = null;
+            if (parseNode.GetChildNode("cvc_failure") is null) { _explicitNullValueCvcFailure = default!; _explicitNullProperties?.Remove("cvc_failure"); }
+            else if (parseNode.GetChildNode("cvc_failure") is { } nullNodeCvcFailure && nullNodeCvcFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcFailure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The avs_failure property</summary>
-        public bool? AvsFailure { get => _explicitNullValueAvsFailure; set { _explicitNullValueAvsFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avs_failure"); else _explicitNullProperties?.Remove("avs_failure"); } }
+        public bool? AvsFailure { get => _explicitNullValueAvsFailure; set { _explicitNullValueAvsFailure = value; AdditionalData?.Remove("avs_failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avs_failure"); else _explicitNullProperties?.Remove("avs_failure"); } }
         private bool? _explicitNullValueAvsFailure = default!;
         /// <summary>The cvc_failure property</summary>
-        public bool? CvcFailure { get => _explicitNullValueCvcFailure; set { _explicitNullValueCvcFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_failure"); else _explicitNullProperties?.Remove("cvc_failure"); } }
+        public bool? CvcFailure { get => _explicitNullValueCvcFailure; set { _explicitNullValueCvcFailure = value; AdditionalData?.Remove("cvc_failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_failure"); else _explicitNullProperties?.Remove("cvc_failure"); } }
         private bool? _explicitNullValueCvcFailure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsCardPaymentsDeclineOn"/> and sets the default values.

@@ -52,9 +52,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("billing_mode") != null && parseNode.GetChildNode("created") != null && parseNode.GetChildNode("customer") != null && parseNode.GetChildNode("default_settings") != null && parseNode.GetChildNode("end_behavior") != null && (parseNode.GetChildNode("end_behavior")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("cancel".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "none".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "release".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "renew".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("livemode") != null && parseNode.GetChildNode("object") != null && (parseNode.GetChildNode("object")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag9 && ("subscription_schedule".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("phases") != null && parseNode.GetChildNode("status") != null && (parseNode.GetChildNode("status")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag12 && ("active".Equals(tag12.GetValue(), global::System.StringComparison.Ordinal) || "canceled".Equals(tag12.GetValue(), global::System.StringComparison.Ordinal) || "completed".Equals(tag12.GetValue(), global::System.StringComparison.Ordinal) || "not_started".Equals(tag12.GetValue(), global::System.StringComparison.Ordinal) || "released".Equals(tag12.GetValue(), global::System.StringComparison.Ordinal)))))();
-            if (result.String == null && result.SubscriptionSchedule == null && matchesUnionBranch0) result.SubscriptionSchedule = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule(), parseNode);
-            if (result.String == null && result.SubscriptionSchedule == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.SubscriptionSchedule = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule(), parseNode);
             if (result.String == null && result.SubscriptionSchedule == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -64,6 +61,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(SubscriptionSchedule != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SubscriptionSchedule);
@@ -78,7 +77,10 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (String == null && SubscriptionSchedule == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (SubscriptionSchedule != null && String == null) { if (SubscriptionSchedule is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SubscriptionSchedule); return; }
+            int selectedUnionBranches = 0;
+            if (String != null) selectedUnionBranches++;
+            if (SubscriptionSchedule != null) selectedUnionBranches++;
+            if (SubscriptionSchedule != null && selectedUnionBranches == 1) { if (SubscriptionSchedule is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SubscriptionSchedule); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(String != null)

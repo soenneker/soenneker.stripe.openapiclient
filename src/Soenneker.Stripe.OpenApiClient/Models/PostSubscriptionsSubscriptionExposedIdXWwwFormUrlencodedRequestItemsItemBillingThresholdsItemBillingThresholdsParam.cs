@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("usage_gte") is { } nullNodeUsageGte && nullNodeUsageGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageGte = null;
+            if (parseNode.GetChildNode("usage_gte") is null) { _explicitNullValueUsageGte = default!; _explicitNullProperties?.Remove("usage_gte"); }
+            else if (parseNode.GetChildNode("usage_gte") is { } nullNodeUsageGte && nullNodeUsageGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageGte = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The usage_gte property</summary>
-        public int? UsageGte { get => _explicitNullValueUsageGte; set { _explicitNullValueUsageGte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_gte"); else _explicitNullProperties?.Remove("usage_gte"); } }
+        public int? UsageGte { get => _explicitNullValueUsageGte; set { _explicitNullValueUsageGte = value; AdditionalData?.Remove("usage_gte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_gte"); else _explicitNullProperties?.Remove("usage_gte"); } }
         private int? _explicitNullValueUsageGte = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestItemsItemBillingThresholdsItemBillingThresholdsParam"/> and sets the default values.

@@ -17,23 +17,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("presentment_amount") is { } nullNodePresentmentAmount && nullNodePresentmentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentmentAmount = null;
-            if (parseNode.GetChildNode("presentment_currency") is { } nullNodePresentmentCurrency && nullNodePresentmentCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentmentCurrency = null;
+            if (parseNode.GetChildNode("presentment_amount") is null) { _explicitNullValuePresentmentAmount = default!; _explicitNullProperties?.Remove("presentment_amount"); }
+            else if (parseNode.GetChildNode("presentment_amount") is { } nullNodePresentmentAmount && nullNodePresentmentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentmentAmount = null;
+            if (parseNode.GetChildNode("presentment_currency") is null) { _explicitNullValuePresentmentCurrency = default!; _explicitNullProperties?.Remove("presentment_currency"); }
+            else if (parseNode.GetChildNode("presentment_currency") is { } nullNodePresentmentCurrency && nullNodePresentmentCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresentmentCurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Amount intended to be collected by this payment, denominated in `presentment_currency`.</summary>
-        public int? PresentmentAmount { get => _explicitNullValuePresentmentAmount; set { _explicitNullValuePresentmentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_amount"); else _explicitNullProperties?.Remove("presentment_amount"); } }
+        public int? PresentmentAmount { get => _explicitNullValuePresentmentAmount; set { _explicitNullValuePresentmentAmount = value; AdditionalData?.Remove("presentment_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_amount"); else _explicitNullProperties?.Remove("presentment_amount"); } }
         private int? _explicitNullValuePresentmentAmount = default!;
         /// <summary>Currency presented to the customer during payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PresentmentCurrency { get => _explicitNullValuePresentmentCurrency; set { _explicitNullValuePresentmentCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_currency"); else _explicitNullProperties?.Remove("presentment_currency"); } }
+        public string? PresentmentCurrency { get => _explicitNullValuePresentmentCurrency; set { _explicitNullValuePresentmentCurrency = value; AdditionalData?.Remove("presentment_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_currency"); else _explicitNullProperties?.Remove("presentment_currency"); } }
         private string? _explicitNullValuePresentmentCurrency = default!;
 #nullable restore
 #else
-        public string PresentmentCurrency { get => _explicitNullValuePresentmentCurrency; set { _explicitNullValuePresentmentCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_currency"); else _explicitNullProperties?.Remove("presentment_currency"); } }
+        public string PresentmentCurrency { get => _explicitNullValuePresentmentCurrency; set { _explicitNullValuePresentmentCurrency = value; AdditionalData?.Remove("presentment_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presentment_currency"); else _explicitNullProperties?.Remove("presentment_currency"); } }
         private string _explicitNullValuePresentmentCurrency = default!;
 #endif
         /// <summary>

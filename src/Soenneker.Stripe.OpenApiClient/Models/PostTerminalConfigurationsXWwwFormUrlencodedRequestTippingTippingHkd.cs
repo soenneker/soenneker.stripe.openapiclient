@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fixed_amounts") is { } nullNodeFixedAmounts && nullNodeFixedAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedAmounts = null;
-            if (parseNode.GetChildNode("percentages") is { } nullNodePercentages && nullNodePercentages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentages = null;
-            if (parseNode.GetChildNode("smart_tip_threshold") is { } nullNodeSmartTipThreshold && nullNodeSmartTipThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartTipThreshold = null;
+            if (parseNode.GetChildNode("fixed_amounts") is null) { _explicitNullValueFixedAmounts = default!; _explicitNullProperties?.Remove("fixed_amounts"); }
+            else if (parseNode.GetChildNode("fixed_amounts") is { } nullNodeFixedAmounts && nullNodeFixedAmounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedAmounts = null;
+            if (parseNode.GetChildNode("percentages") is null) { _explicitNullValuePercentages = default!; _explicitNullProperties?.Remove("percentages"); }
+            else if (parseNode.GetChildNode("percentages") is { } nullNodePercentages && nullNodePercentages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentages = null;
+            if (parseNode.GetChildNode("smart_tip_threshold") is null) { _explicitNullValueSmartTipThreshold = default!; _explicitNullProperties?.Remove("smart_tip_threshold"); }
+            else if (parseNode.GetChildNode("smart_tip_threshold") is { } nullNodeSmartTipThreshold && nullNodeSmartTipThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartTipThreshold = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The fixed_amounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
+        public List<int?>? FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; AdditionalData?.Remove("fixed_amounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
         private List<int?>? _explicitNullValueFixedAmounts = default!;
 #nullable restore
 #else
-        public List<int?> FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
+        public List<int?> FixedAmounts { get => _explicitNullValueFixedAmounts; set { _explicitNullValueFixedAmounts = value; AdditionalData?.Remove("fixed_amounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_amounts"); else _explicitNullProperties?.Remove("fixed_amounts"); } }
         private List<int?> _explicitNullValueFixedAmounts = default!;
 #endif
         /// <summary>The percentages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
+        public List<int?>? Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; AdditionalData?.Remove("percentages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
         private List<int?>? _explicitNullValuePercentages = default!;
 #nullable restore
 #else
-        public List<int?> Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
+        public List<int?> Percentages { get => _explicitNullValuePercentages; set { _explicitNullValuePercentages = value; AdditionalData?.Remove("percentages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentages"); else _explicitNullProperties?.Remove("percentages"); } }
         private List<int?> _explicitNullValuePercentages = default!;
 #endif
         /// <summary>The smart_tip_threshold property</summary>
-        public int? SmartTipThreshold { get => _explicitNullValueSmartTipThreshold; set { _explicitNullValueSmartTipThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_tip_threshold"); else _explicitNullProperties?.Remove("smart_tip_threshold"); } }
+        public int? SmartTipThreshold { get => _explicitNullValueSmartTipThreshold; set { _explicitNullValueSmartTipThreshold = value; AdditionalData?.Remove("smart_tip_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smart_tip_threshold"); else _explicitNullProperties?.Remove("smart_tip_threshold"); } }
         private int? _explicitNullValueSmartTipThreshold = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestTippingTippingHkd"/> and sets the default values.

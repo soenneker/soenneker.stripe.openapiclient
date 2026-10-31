@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tos_acceptance") is { } nullNodeTosAcceptance && nullNodeTosAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TosAcceptance = null;
+            if (parseNode.GetChildNode("tos_acceptance") is null) { _explicitNullValueTosAcceptance = default!; _explicitNullProperties?.Remove("tos_acceptance"); }
+            else if (parseNode.GetChildNode("tos_acceptance") is { } nullNodeTosAcceptance && nullNodeTosAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TosAcceptance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The tos_acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance? TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance? TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; AdditionalData?.Remove("tos_acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance? _explicitNullValueTosAcceptance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance TosAcceptance { get => _explicitNullValueTosAcceptance; set { _explicitNullValueTosAcceptance = value; AdditionalData?.Remove("tos_acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_acceptance"); else _explicitNullProperties?.Remove("tos_acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountXWwwFormUrlencodedRequestSettingsCardIssuingTosAcceptance _explicitNullValueTosAcceptance = default!;
 #endif
         /// <summary>

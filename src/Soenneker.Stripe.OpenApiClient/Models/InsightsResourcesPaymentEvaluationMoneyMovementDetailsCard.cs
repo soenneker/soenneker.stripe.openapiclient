@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer_presence") is { } nullNodeCustomerPresence && nullNodeCustomerPresence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPresence = null;
-            if (parseNode.GetChildNode("payment_type") is { } nullNodePaymentType && nullNodePaymentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentType = null;
+            if (parseNode.GetChildNode("customer_presence") is null) { _explicitNullValueCustomerPresence = default!; _explicitNullProperties?.Remove("customer_presence"); }
+            else if (parseNode.GetChildNode("customer_presence") is { } nullNodeCustomerPresence && nullNodeCustomerPresence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPresence = null;
+            if (parseNode.GetChildNode("payment_type") is null) { _explicitNullValuePaymentType = default!; _explicitNullProperties?.Remove("payment_type"); }
+            else if (parseNode.GetChildNode("payment_type") is { } nullNodePaymentType && nullNodePaymentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Describes the presence of the customer during the payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardCustomerPresence? CustomerPresence { get => _explicitNullValueCustomerPresence; set { _explicitNullValueCustomerPresence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_presence"); else _explicitNullProperties?.Remove("customer_presence"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardCustomerPresence? CustomerPresence { get => _explicitNullValueCustomerPresence; set { _explicitNullValueCustomerPresence = value; AdditionalData?.Remove("customer_presence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_presence"); else _explicitNullProperties?.Remove("customer_presence"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardCustomerPresence? _explicitNullValueCustomerPresence = default!;
         /// <summary>Describes the type of payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardPaymentType? PaymentType { get => _explicitNullValuePaymentType; set { _explicitNullValuePaymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_type"); else _explicitNullProperties?.Remove("payment_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardPaymentType? PaymentType { get => _explicitNullValuePaymentType; set { _explicitNullValuePaymentType = value; AdditionalData?.Remove("payment_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_type"); else _explicitNullProperties?.Remove("payment_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardPaymentType? _explicitNullValuePaymentType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer_presence", n => { CustomerPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardCustomerPresence>(); } },
-                { "payment_type", n => { PaymentType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardPaymentType>(); } },
+                { "customer_presence", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardCustomerPresence>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCustomerPresence = default; _explicitNullProperties?.Remove("customer_presence"); AdditionalData["customer_presence"] = unknown; } else { CustomerPresence = parsed; AdditionalData.Remove("customer_presence"); } } },
+                { "payment_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementCardPaymentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentType = default; _explicitNullProperties?.Remove("payment_type"); AdditionalData["payment_type"] = unknown; } else { PaymentType = parsed; AdditionalData.Remove("payment_type"); } } },
             };
         }
         /// <summary>

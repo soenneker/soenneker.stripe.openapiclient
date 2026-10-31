@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
+            if (parseNode.GetChildNode("transition") is null) { _explicitNullValueTransition = default!; _explicitNullProperties?.Remove("transition"); }
+            else if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The transition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; AdditionalData?.Remove("transition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition? _explicitNullValueTransition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; AdditionalData?.Remove("transition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostProductCatalogTrialOffersXWwwFormUrlencodedRequestEndBehaviorTransition _explicitNullValueTransition = default!;
 #endif
         /// <summary>

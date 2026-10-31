@@ -17,23 +17,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_sent_at") is { } nullNodeEmailSentAt && nullNodeEmailSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSentAt = null;
-            if (parseNode.GetChildNode("email_sent_to") is { } nullNodeEmailSentTo && nullNodeEmailSentTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSentTo = null;
+            if (parseNode.GetChildNode("email_sent_at") is null) { _explicitNullValueEmailSentAt = default!; _explicitNullProperties?.Remove("email_sent_at"); }
+            else if (parseNode.GetChildNode("email_sent_at") is { } nullNodeEmailSentAt && nullNodeEmailSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSentAt = null;
+            if (parseNode.GetChildNode("email_sent_to") is null) { _explicitNullValueEmailSentTo = default!; _explicitNullProperties?.Remove("email_sent_to"); }
+            else if (parseNode.GetChildNode("email_sent_to") is { } nullNodeEmailSentTo && nullNodeEmailSentTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSentTo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the email was sent.</summary>
-        public int? EmailSentAt { get => _explicitNullValueEmailSentAt; set { _explicitNullValueEmailSentAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_at"); else _explicitNullProperties?.Remove("email_sent_at"); } }
+        public int? EmailSentAt { get => _explicitNullValueEmailSentAt; set { _explicitNullValueEmailSentAt = value; AdditionalData?.Remove("email_sent_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_at"); else _explicitNullProperties?.Remove("email_sent_at"); } }
         private int? _explicitNullValueEmailSentAt = default!;
         /// <summary>The recipient&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSentTo { get => _explicitNullValueEmailSentTo; set { _explicitNullValueEmailSentTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_to"); else _explicitNullProperties?.Remove("email_sent_to"); } }
+        public string? EmailSentTo { get => _explicitNullValueEmailSentTo; set { _explicitNullValueEmailSentTo = value; AdditionalData?.Remove("email_sent_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_to"); else _explicitNullProperties?.Remove("email_sent_to"); } }
         private string? _explicitNullValueEmailSentTo = default!;
 #nullable restore
 #else
-        public string EmailSentTo { get => _explicitNullValueEmailSentTo; set { _explicitNullValueEmailSentTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_to"); else _explicitNullProperties?.Remove("email_sent_to"); } }
+        public string EmailSentTo { get => _explicitNullValueEmailSentTo; set { _explicitNullValueEmailSentTo = value; AdditionalData?.Remove("email_sent_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_to"); else _explicitNullProperties?.Remove("email_sent_to"); } }
         private string _explicitNullValueEmailSentTo = default!;
 #endif
         /// <summary>

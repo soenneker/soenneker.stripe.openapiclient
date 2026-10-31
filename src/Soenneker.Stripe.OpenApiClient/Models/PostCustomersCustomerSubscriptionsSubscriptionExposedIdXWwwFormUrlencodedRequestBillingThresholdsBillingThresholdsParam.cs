@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_gte") is { } nullNodeAmountGte && nullNodeAmountGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountGte = null;
-            if (parseNode.GetChildNode("reset_billing_cycle_anchor") is { } nullNodeResetBillingCycleAnchor && nullNodeResetBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetBillingCycleAnchor = null;
+            if (parseNode.GetChildNode("amount_gte") is null) { _explicitNullValueAmountGte = default!; _explicitNullProperties?.Remove("amount_gte"); }
+            else if (parseNode.GetChildNode("amount_gte") is { } nullNodeAmountGte && nullNodeAmountGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountGte = null;
+            if (parseNode.GetChildNode("reset_billing_cycle_anchor") is null) { _explicitNullValueResetBillingCycleAnchor = default!; _explicitNullProperties?.Remove("reset_billing_cycle_anchor"); }
+            else if (parseNode.GetChildNode("reset_billing_cycle_anchor") is { } nullNodeResetBillingCycleAnchor && nullNodeResetBillingCycleAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetBillingCycleAnchor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_gte property</summary>
-        public int? AmountGte { get => _explicitNullValueAmountGte; set { _explicitNullValueAmountGte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_gte"); else _explicitNullProperties?.Remove("amount_gte"); } }
+        public int? AmountGte { get => _explicitNullValueAmountGte; set { _explicitNullValueAmountGte = value; AdditionalData?.Remove("amount_gte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_gte"); else _explicitNullProperties?.Remove("amount_gte"); } }
         private int? _explicitNullValueAmountGte = default!;
         /// <summary>The reset_billing_cycle_anchor property</summary>
-        public bool? ResetBillingCycleAnchor { get => _explicitNullValueResetBillingCycleAnchor; set { _explicitNullValueResetBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_billing_cycle_anchor"); else _explicitNullProperties?.Remove("reset_billing_cycle_anchor"); } }
+        public bool? ResetBillingCycleAnchor { get => _explicitNullValueResetBillingCycleAnchor; set { _explicitNullValueResetBillingCycleAnchor = value; AdditionalData?.Remove("reset_billing_cycle_anchor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_billing_cycle_anchor"); else _explicitNullProperties?.Remove("reset_billing_cycle_anchor"); } }
         private bool? _explicitNullValueResetBillingCycleAnchor = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestBillingThresholdsBillingThresholdsParam"/> and sets the default values.

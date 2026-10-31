@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("user_terms_acceptance") is { } nullNodeUserTermsAcceptance && nullNodeUserTermsAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserTermsAcceptance = null;
+            if (parseNode.GetChildNode("user_terms_acceptance") is null) { _explicitNullValueUserTermsAcceptance = default!; _explicitNullProperties?.Remove("user_terms_acceptance"); }
+            else if (parseNode.GetChildNode("user_terms_acceptance") is { } nullNodeUserTermsAcceptance && nullNodeUserTermsAcceptance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserTermsAcceptance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about cardholder acceptance of Celtic [Authorized User Terms](https://docs.stripe.com/issuing/compliance-us#issuing-terms). Required for cards backed by a Celtic program.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance? UserTermsAcceptance { get => _explicitNullValueUserTermsAcceptance; set { _explicitNullValueUserTermsAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_terms_acceptance"); else _explicitNullProperties?.Remove("user_terms_acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance? UserTermsAcceptance { get => _explicitNullValueUserTermsAcceptance; set { _explicitNullValueUserTermsAcceptance = value; AdditionalData?.Remove("user_terms_acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_terms_acceptance"); else _explicitNullProperties?.Remove("user_terms_acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance? _explicitNullValueUserTermsAcceptance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance UserTermsAcceptance { get => _explicitNullValueUserTermsAcceptance; set { _explicitNullValueUserTermsAcceptance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_terms_acceptance"); else _explicitNullProperties?.Remove("user_terms_acceptance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance UserTermsAcceptance { get => _explicitNullValueUserTermsAcceptance; set { _explicitNullValueUserTermsAcceptance = value; AdditionalData?.Remove("user_terms_acceptance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_terms_acceptance"); else _explicitNullProperties?.Remove("user_terms_acceptance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCardIssuingUserTermsAcceptance _explicitNullValueUserTermsAcceptance = default!;
 #endif
         /// <summary>

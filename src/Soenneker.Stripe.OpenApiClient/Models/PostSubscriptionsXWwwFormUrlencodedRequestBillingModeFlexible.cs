@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("proration_discounts") is { } nullNodeProrationDiscounts && nullNodeProrationDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationDiscounts = null;
+            if (parseNode.GetChildNode("proration_discounts") is null) { _explicitNullValueProrationDiscounts = default!; _explicitNullProperties?.Remove("proration_discounts"); }
+            else if (parseNode.GetChildNode("proration_discounts") is { } nullNodeProrationDiscounts && nullNodeProrationDiscounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationDiscounts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The proration_discounts property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexibleProrationDiscounts? ProrationDiscounts { get => _explicitNullValueProrationDiscounts; set { _explicitNullValueProrationDiscounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_discounts"); else _explicitNullProperties?.Remove("proration_discounts"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexibleProrationDiscounts? ProrationDiscounts { get => _explicitNullValueProrationDiscounts; set { _explicitNullValueProrationDiscounts = value; AdditionalData?.Remove("proration_discounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_discounts"); else _explicitNullProperties?.Remove("proration_discounts"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexibleProrationDiscounts? _explicitNullValueProrationDiscounts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexible"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "proration_discounts", n => { ProrationDiscounts = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexibleProrationDiscounts>(); } },
+                { "proration_discounts", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestBillingModeFlexibleProrationDiscounts>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProrationDiscounts = default; _explicitNullProperties?.Remove("proration_discounts"); AdditionalData["proration_discounts"] = unknown; } else { ProrationDiscounts = parsed; AdditionalData.Remove("proration_discounts"); } } },
             };
         }
         /// <summary>

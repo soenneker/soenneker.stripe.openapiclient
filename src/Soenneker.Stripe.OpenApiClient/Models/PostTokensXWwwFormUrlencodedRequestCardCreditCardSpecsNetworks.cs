@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("preferred") is { } nullNodePreferred && nullNodePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferred = null;
+            if (parseNode.GetChildNode("preferred") is null) { _explicitNullValuePreferred = default!; _explicitNullProperties?.Remove("preferred"); }
+            else if (parseNode.GetChildNode("preferred") is { } nullNodePreferred && nullNodePreferred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preferred = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The preferred property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworksPreferred? Preferred { get => _explicitNullValuePreferred; set { _explicitNullValuePreferred = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred"); else _explicitNullProperties?.Remove("preferred"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworksPreferred? Preferred { get => _explicitNullValuePreferred; set { _explicitNullValuePreferred = value; AdditionalData?.Remove("preferred"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred"); else _explicitNullProperties?.Remove("preferred"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworksPreferred? _explicitNullValuePreferred = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworks"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "preferred", n => { Preferred = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworksPreferred>(); } },
+                { "preferred", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestCardCreditCardSpecsNetworksPreferred>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreferred = default; _explicitNullProperties?.Remove("preferred"); AdditionalData["preferred"] = unknown; } else { Preferred = parsed; AdditionalData.Remove("preferred"); } } },
             };
         }
         /// <summary>

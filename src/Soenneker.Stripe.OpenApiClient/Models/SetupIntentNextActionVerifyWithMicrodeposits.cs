@@ -17,28 +17,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("arrival_date") is { } nullNodeArrivalDate && nullNodeArrivalDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArrivalDate = null;
-            if (parseNode.GetChildNode("hosted_verification_url") is { } nullNodeHostedVerificationUrl && nullNodeHostedVerificationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedVerificationUrl = null;
-            if (parseNode.GetChildNode("microdeposit_type") is { } nullNodeMicrodepositType && nullNodeMicrodepositType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MicrodepositType = null;
+            if (parseNode.GetChildNode("arrival_date") is null) { _explicitNullValueArrivalDate = default!; _explicitNullProperties?.Remove("arrival_date"); }
+            else if (parseNode.GetChildNode("arrival_date") is { } nullNodeArrivalDate && nullNodeArrivalDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArrivalDate = null;
+            if (parseNode.GetChildNode("hosted_verification_url") is null) { _explicitNullValueHostedVerificationUrl = default!; _explicitNullProperties?.Remove("hosted_verification_url"); }
+            else if (parseNode.GetChildNode("hosted_verification_url") is { } nullNodeHostedVerificationUrl && nullNodeHostedVerificationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedVerificationUrl = null;
+            if (parseNode.GetChildNode("microdeposit_type") is null) { _explicitNullValueMicrodepositType = default!; _explicitNullProperties?.Remove("microdeposit_type"); }
+            else if (parseNode.GetChildNode("microdeposit_type") is { } nullNodeMicrodepositType && nullNodeMicrodepositType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MicrodepositType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the microdeposits are expected to land.</summary>
-        public int? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
+        public int? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; AdditionalData?.Remove("arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
         private int? _explicitNullValueArrivalDate = default!;
         /// <summary>The URL for the hosted verification page, which allows customers to verify their bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedVerificationUrl { get => _explicitNullValueHostedVerificationUrl; set { _explicitNullValueHostedVerificationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_verification_url"); else _explicitNullProperties?.Remove("hosted_verification_url"); } }
+        public string? HostedVerificationUrl { get => _explicitNullValueHostedVerificationUrl; set { _explicitNullValueHostedVerificationUrl = value; AdditionalData?.Remove("hosted_verification_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_verification_url"); else _explicitNullProperties?.Remove("hosted_verification_url"); } }
         private string? _explicitNullValueHostedVerificationUrl = default!;
 #nullable restore
 #else
-        public string HostedVerificationUrl { get => _explicitNullValueHostedVerificationUrl; set { _explicitNullValueHostedVerificationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_verification_url"); else _explicitNullProperties?.Remove("hosted_verification_url"); } }
+        public string HostedVerificationUrl { get => _explicitNullValueHostedVerificationUrl; set { _explicitNullValueHostedVerificationUrl = value; AdditionalData?.Remove("hosted_verification_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_verification_url"); else _explicitNullProperties?.Remove("hosted_verification_url"); } }
         private string _explicitNullValueHostedVerificationUrl = default!;
 #endif
         /// <summary>The type of the microdeposit sent to the customer. Used to distinguish between different verification methods.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType? MicrodepositType { get => _explicitNullValueMicrodepositType; set { _explicitNullValueMicrodepositType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("microdeposit_type"); else _explicitNullProperties?.Remove("microdeposit_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType? MicrodepositType { get => _explicitNullValueMicrodepositType; set { _explicitNullValueMicrodepositType = value; AdditionalData?.Remove("microdeposit_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("microdeposit_type"); else _explicitNullProperties?.Remove("microdeposit_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType? _explicitNullValueMicrodepositType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits"/> and sets the default values.
@@ -67,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "arrival_date", n => { ArrivalDate = n.GetIntValue(); } },
                 { "hosted_verification_url", n => { HostedVerificationUrl = n.GetStringValue(); } },
-                { "microdeposit_type", n => { MicrodepositType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>(); } },
+                { "microdeposit_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMicrodepositType = default; _explicitNullProperties?.Remove("microdeposit_type"); AdditionalData["microdeposit_type"] = unknown; } else { MicrodepositType = parsed; AdditionalData.Remove("microdeposit_type"); } } },
             };
         }
         /// <summary>

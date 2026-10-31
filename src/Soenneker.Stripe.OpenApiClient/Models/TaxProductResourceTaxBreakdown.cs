@@ -17,35 +17,40 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("inclusive") is { } nullNodeInclusive && nullNodeInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inclusive = null;
-            if (parseNode.GetChildNode("taxability_reason") is { } nullNodeTaxabilityReason && nullNodeTaxabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityReason = null;
-            if (parseNode.GetChildNode("taxable_amount") is { } nullNodeTaxableAmount && nullNodeTaxableAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxableAmount = null;
-            if (parseNode.GetChildNode("tax_rate_details") is { } nullNodeTaxRateDetails && nullNodeTaxRateDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRateDetails = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("inclusive") is null) { _explicitNullValueInclusive = default!; _explicitNullProperties?.Remove("inclusive"); }
+            else if (parseNode.GetChildNode("inclusive") is { } nullNodeInclusive && nullNodeInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inclusive = null;
+            if (parseNode.GetChildNode("taxability_reason") is null) { _explicitNullValueTaxabilityReason = default!; _explicitNullProperties?.Remove("taxability_reason"); }
+            else if (parseNode.GetChildNode("taxability_reason") is { } nullNodeTaxabilityReason && nullNodeTaxabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxabilityReason = null;
+            if (parseNode.GetChildNode("taxable_amount") is null) { _explicitNullValueTaxableAmount = default!; _explicitNullProperties?.Remove("taxable_amount"); }
+            else if (parseNode.GetChildNode("taxable_amount") is { } nullNodeTaxableAmount && nullNodeTaxableAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxableAmount = null;
+            if (parseNode.GetChildNode("tax_rate_details") is null) { _explicitNullValueTaxRateDetails = default!; _explicitNullProperties?.Remove("tax_rate_details"); }
+            else if (parseNode.GetChildNode("tax_rate_details") is { } nullNodeTaxRateDetails && nullNodeTaxRateDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRateDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
-        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>Specifies whether the tax amount is included in the line item amount.</summary>
-        public bool? Inclusive { get => _explicitNullValueInclusive; set { _explicitNullValueInclusive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusive"); else _explicitNullProperties?.Remove("inclusive"); } }
+        public bool? Inclusive { get => _explicitNullValueInclusive; set { _explicitNullValueInclusive = value; AdditionalData?.Remove("inclusive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusive"); else _explicitNullProperties?.Remove("inclusive"); } }
         private bool? _explicitNullValueInclusive = default!;
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. We might extend the possible values for this field to support new tax rules.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason? TaxabilityReason { get => _explicitNullValueTaxabilityReason; set { _explicitNullValueTaxabilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_reason"); else _explicitNullProperties?.Remove("taxability_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason? TaxabilityReason { get => _explicitNullValueTaxabilityReason; set { _explicitNullValueTaxabilityReason = value; AdditionalData?.Remove("taxability_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxability_reason"); else _explicitNullProperties?.Remove("taxability_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason? _explicitNullValueTaxabilityReason = default!;
         /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
-        public int? TaxableAmount { get => _explicitNullValueTaxableAmount; set { _explicitNullValueTaxableAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxable_amount"); else _explicitNullProperties?.Remove("taxable_amount"); } }
+        public int? TaxableAmount { get => _explicitNullValueTaxableAmount; set { _explicitNullValueTaxableAmount = value; AdditionalData?.Remove("taxable_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxable_amount"); else _explicitNullProperties?.Remove("taxable_amount"); } }
         private int? _explicitNullValueTaxableAmount = default!;
         /// <summary>The tax_rate_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails? _explicitNullValueTaxRateDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails _explicitNullValueTaxRateDetails = default!;
 #endif
         /// <summary>
@@ -76,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "inclusive", n => { Inclusive = n.GetBoolValue(); } },
                 { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails.CreateFromDiscriminatorValue); } },
-                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason>(); } },
+                { "taxability_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxabilityReason = default; _explicitNullProperties?.Remove("taxability_reason"); AdditionalData["taxability_reason"] = unknown; } else { TaxabilityReason = parsed; AdditionalData.Remove("taxability_reason"); } } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
             };
         }

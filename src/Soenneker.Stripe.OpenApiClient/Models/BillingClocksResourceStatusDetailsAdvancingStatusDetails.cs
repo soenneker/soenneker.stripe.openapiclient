@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("target_frozen_time") is { } nullNodeTargetFrozenTime && nullNodeTargetFrozenTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetFrozenTime = null;
+            if (parseNode.GetChildNode("target_frozen_time") is null) { _explicitNullValueTargetFrozenTime = default!; _explicitNullProperties?.Remove("target_frozen_time"); }
+            else if (parseNode.GetChildNode("target_frozen_time") is { } nullNodeTargetFrozenTime && nullNodeTargetFrozenTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetFrozenTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The `frozen_time` that the Test Clock is advancing towards.</summary>
-        public int? TargetFrozenTime { get => _explicitNullValueTargetFrozenTime; set { _explicitNullValueTargetFrozenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_frozen_time"); else _explicitNullProperties?.Remove("target_frozen_time"); } }
+        public int? TargetFrozenTime { get => _explicitNullValueTargetFrozenTime; set { _explicitNullValueTargetFrozenTime = value; AdditionalData?.Remove("target_frozen_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_frozen_time"); else _explicitNullProperties?.Remove("target_frozen_time"); } }
         private int? _explicitNullValueTargetFrozenTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingClocksResourceStatusDetailsAdvancingStatusDetails"/> and sets the default values.

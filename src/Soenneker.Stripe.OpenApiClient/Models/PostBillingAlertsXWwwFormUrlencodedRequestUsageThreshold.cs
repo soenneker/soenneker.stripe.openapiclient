@@ -18,10 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
-            if (parseNode.GetChildNode("gte") is { } nullNodeGte && nullNodeGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gte = null;
-            if (parseNode.GetChildNode("meter") is { } nullNodeMeter && nullNodeMeter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meter = null;
-            if (parseNode.GetChildNode("recurrence") is { } nullNodeRecurrence && nullNodeRecurrence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurrence = null;
+            if (parseNode.GetChildNode("filters") is null) { _explicitNullValueFilters = default!; _explicitNullProperties?.Remove("filters"); }
+            else if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("gte") is null) { _explicitNullValueGte = default!; _explicitNullProperties?.Remove("gte"); }
+            else if (parseNode.GetChildNode("gte") is { } nullNodeGte && nullNodeGte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gte = null;
+            if (parseNode.GetChildNode("meter") is null) { _explicitNullValueMeter = default!; _explicitNullProperties?.Remove("meter"); }
+            else if (parseNode.GetChildNode("meter") is { } nullNodeMeter && nullNodeMeter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meter = null;
+            if (parseNode.GetChildNode("recurrence") is null) { _explicitNullValueRecurrence = default!; _explicitNullProperties?.Remove("recurrence"); }
+            else if (parseNode.GetChildNode("recurrence") is { } nullNodeRecurrence && nullNodeRecurrence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurrence = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem> Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; AdditionalData?.Remove("filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem> _explicitNullValueFilters = default!;
 #endif
         /// <summary>The gte property</summary>
-        public int? Gte { get => _explicitNullValueGte; set { _explicitNullValueGte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gte"); else _explicitNullProperties?.Remove("gte"); } }
+        public int? Gte { get => _explicitNullValueGte; set { _explicitNullValueGte = value; AdditionalData?.Remove("gte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gte"); else _explicitNullProperties?.Remove("gte"); } }
         private int? _explicitNullValueGte = default!;
         /// <summary>The meter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Meter { get => _explicitNullValueMeter; set { _explicitNullValueMeter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meter"); else _explicitNullProperties?.Remove("meter"); } }
+        public string? Meter { get => _explicitNullValueMeter; set { _explicitNullValueMeter = value; AdditionalData?.Remove("meter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meter"); else _explicitNullProperties?.Remove("meter"); } }
         private string? _explicitNullValueMeter = default!;
 #nullable restore
 #else
-        public string Meter { get => _explicitNullValueMeter; set { _explicitNullValueMeter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meter"); else _explicitNullProperties?.Remove("meter"); } }
+        public string Meter { get => _explicitNullValueMeter; set { _explicitNullValueMeter = value; AdditionalData?.Remove("meter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meter"); else _explicitNullProperties?.Remove("meter"); } }
         private string _explicitNullValueMeter = default!;
 #endif
         /// <summary>Defines how the alert will behave.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence? Recurrence { get => _explicitNullValueRecurrence; set { _explicitNullValueRecurrence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence"); else _explicitNullProperties?.Remove("recurrence"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence? Recurrence { get => _explicitNullValueRecurrence; set { _explicitNullValueRecurrence = value; AdditionalData?.Remove("recurrence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence"); else _explicitNullProperties?.Remove("recurrence"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence? _explicitNullValueRecurrence = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThreshold"/> and sets the default values.
@@ -80,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gte", n => { Gte = n.GetIntValue(); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
-                { "recurrence", n => { Recurrence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>(); } },
+                { "recurrence", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecurrence = default; _explicitNullProperties?.Remove("recurrence"); AdditionalData["recurrence"] = unknown; } else { Recurrence = parsed; AdditionalData.Remove("recurrence"); } } },
             };
         }
         /// <summary>

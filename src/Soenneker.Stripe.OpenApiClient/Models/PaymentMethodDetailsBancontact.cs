@@ -17,14 +17,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bank_code") is { } nullNodeBankCode && nullNodeBankCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankCode = null;
-            if (parseNode.GetChildNode("bank_name") is { } nullNodeBankName && nullNodeBankName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankName = null;
-            if (parseNode.GetChildNode("bic") is { } nullNodeBic && nullNodeBic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bic = null;
-            if (parseNode.GetChildNode("generated_sepa_debit") is { } nullNodeGeneratedSepaDebit && nullNodeGeneratedSepaDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeneratedSepaDebit = null;
-            if (parseNode.GetChildNode("generated_sepa_debit_mandate") is { } nullNodeGeneratedSepaDebitMandate && nullNodeGeneratedSepaDebitMandate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeneratedSepaDebitMandate = null;
-            if (parseNode.GetChildNode("iban_last4") is { } nullNodeIbanLast4 && nullNodeIbanLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IbanLast4 = null;
-            if (parseNode.GetChildNode("preferred_language") is { } nullNodePreferredLanguage && nullNodePreferredLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLanguage = null;
-            if (parseNode.GetChildNode("verified_name") is { } nullNodeVerifiedName && nullNodeVerifiedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedName = null;
+            if (parseNode.GetChildNode("bank_code") is null) { _explicitNullValueBankCode = default!; _explicitNullProperties?.Remove("bank_code"); }
+            else if (parseNode.GetChildNode("bank_code") is { } nullNodeBankCode && nullNodeBankCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankCode = null;
+            if (parseNode.GetChildNode("bank_name") is null) { _explicitNullValueBankName = default!; _explicitNullProperties?.Remove("bank_name"); }
+            else if (parseNode.GetChildNode("bank_name") is { } nullNodeBankName && nullNodeBankName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankName = null;
+            if (parseNode.GetChildNode("bic") is null) { _explicitNullValueBic = default!; _explicitNullProperties?.Remove("bic"); }
+            else if (parseNode.GetChildNode("bic") is { } nullNodeBic && nullNodeBic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bic = null;
+            if (parseNode.GetChildNode("generated_sepa_debit") is null) { _explicitNullValueGeneratedSepaDebit = default!; _explicitNullProperties?.Remove("generated_sepa_debit"); }
+            else if (parseNode.GetChildNode("generated_sepa_debit") is { } nullNodeGeneratedSepaDebit && nullNodeGeneratedSepaDebit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeneratedSepaDebit = null;
+            if (parseNode.GetChildNode("generated_sepa_debit_mandate") is null) { _explicitNullValueGeneratedSepaDebitMandate = default!; _explicitNullProperties?.Remove("generated_sepa_debit_mandate"); }
+            else if (parseNode.GetChildNode("generated_sepa_debit_mandate") is { } nullNodeGeneratedSepaDebitMandate && nullNodeGeneratedSepaDebitMandate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeneratedSepaDebitMandate = null;
+            if (parseNode.GetChildNode("iban_last4") is null) { _explicitNullValueIbanLast4 = default!; _explicitNullProperties?.Remove("iban_last4"); }
+            else if (parseNode.GetChildNode("iban_last4") is { } nullNodeIbanLast4 && nullNodeIbanLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IbanLast4 = null;
+            if (parseNode.GetChildNode("preferred_language") is null) { _explicitNullValuePreferredLanguage = default!; _explicitNullProperties?.Remove("preferred_language"); }
+            else if (parseNode.GetChildNode("preferred_language") is { } nullNodePreferredLanguage && nullNodePreferredLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLanguage = null;
+            if (parseNode.GetChildNode("verified_name") is null) { _explicitNullValueVerifiedName = default!; _explicitNullProperties?.Remove("verified_name"); }
+            else if (parseNode.GetChildNode("verified_name") is { } nullNodeVerifiedName && nullNodeVerifiedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,74 +40,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Bank code of bank associated with the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BankCode { get => _explicitNullValueBankCode; set { _explicitNullValueBankCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_code"); else _explicitNullProperties?.Remove("bank_code"); } }
+        public string? BankCode { get => _explicitNullValueBankCode; set { _explicitNullValueBankCode = value; AdditionalData?.Remove("bank_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_code"); else _explicitNullProperties?.Remove("bank_code"); } }
         private string? _explicitNullValueBankCode = default!;
 #nullable restore
 #else
-        public string BankCode { get => _explicitNullValueBankCode; set { _explicitNullValueBankCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_code"); else _explicitNullProperties?.Remove("bank_code"); } }
+        public string BankCode { get => _explicitNullValueBankCode; set { _explicitNullValueBankCode = value; AdditionalData?.Remove("bank_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_code"); else _explicitNullProperties?.Remove("bank_code"); } }
         private string _explicitNullValueBankCode = default!;
 #endif
         /// <summary>Name of the bank associated with the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BankName { get => _explicitNullValueBankName; set { _explicitNullValueBankName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_name"); else _explicitNullProperties?.Remove("bank_name"); } }
+        public string? BankName { get => _explicitNullValueBankName; set { _explicitNullValueBankName = value; AdditionalData?.Remove("bank_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_name"); else _explicitNullProperties?.Remove("bank_name"); } }
         private string? _explicitNullValueBankName = default!;
 #nullable restore
 #else
-        public string BankName { get => _explicitNullValueBankName; set { _explicitNullValueBankName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_name"); else _explicitNullProperties?.Remove("bank_name"); } }
+        public string BankName { get => _explicitNullValueBankName; set { _explicitNullValueBankName = value; AdditionalData?.Remove("bank_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_name"); else _explicitNullProperties?.Remove("bank_name"); } }
         private string _explicitNullValueBankName = default!;
 #endif
         /// <summary>Bank Identifier Code of the bank associated with the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bic { get => _explicitNullValueBic; set { _explicitNullValueBic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bic"); else _explicitNullProperties?.Remove("bic"); } }
+        public string? Bic { get => _explicitNullValueBic; set { _explicitNullValueBic = value; AdditionalData?.Remove("bic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bic"); else _explicitNullProperties?.Remove("bic"); } }
         private string? _explicitNullValueBic = default!;
 #nullable restore
 #else
-        public string Bic { get => _explicitNullValueBic; set { _explicitNullValueBic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bic"); else _explicitNullProperties?.Remove("bic"); } }
+        public string Bic { get => _explicitNullValueBic; set { _explicitNullValueBic = value; AdditionalData?.Remove("bic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bic"); else _explicitNullProperties?.Remove("bic"); } }
         private string _explicitNullValueBic = default!;
 #endif
         /// <summary>The ID of the SEPA Direct Debit PaymentMethod which was generated by this Charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit? GeneratedSepaDebit { get => _explicitNullValueGeneratedSepaDebit; set { _explicitNullValueGeneratedSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit"); else _explicitNullProperties?.Remove("generated_sepa_debit"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit? GeneratedSepaDebit { get => _explicitNullValueGeneratedSepaDebit; set { _explicitNullValueGeneratedSepaDebit = value; AdditionalData?.Remove("generated_sepa_debit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit"); else _explicitNullProperties?.Remove("generated_sepa_debit"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit? _explicitNullValueGeneratedSepaDebit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit GeneratedSepaDebit { get => _explicitNullValueGeneratedSepaDebit; set { _explicitNullValueGeneratedSepaDebit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit"); else _explicitNullProperties?.Remove("generated_sepa_debit"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit GeneratedSepaDebit { get => _explicitNullValueGeneratedSepaDebit; set { _explicitNullValueGeneratedSepaDebit = value; AdditionalData?.Remove("generated_sepa_debit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit"); else _explicitNullProperties?.Remove("generated_sepa_debit"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit _explicitNullValueGeneratedSepaDebit = default!;
 #endif
         /// <summary>The mandate for the SEPA Direct Debit PaymentMethod which was generated by this Charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate? GeneratedSepaDebitMandate { get => _explicitNullValueGeneratedSepaDebitMandate; set { _explicitNullValueGeneratedSepaDebitMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit_mandate"); else _explicitNullProperties?.Remove("generated_sepa_debit_mandate"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate? GeneratedSepaDebitMandate { get => _explicitNullValueGeneratedSepaDebitMandate; set { _explicitNullValueGeneratedSepaDebitMandate = value; AdditionalData?.Remove("generated_sepa_debit_mandate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit_mandate"); else _explicitNullProperties?.Remove("generated_sepa_debit_mandate"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate? _explicitNullValueGeneratedSepaDebitMandate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate GeneratedSepaDebitMandate { get => _explicitNullValueGeneratedSepaDebitMandate; set { _explicitNullValueGeneratedSepaDebitMandate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit_mandate"); else _explicitNullProperties?.Remove("generated_sepa_debit_mandate"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate GeneratedSepaDebitMandate { get => _explicitNullValueGeneratedSepaDebitMandate; set { _explicitNullValueGeneratedSepaDebitMandate = value; AdditionalData?.Remove("generated_sepa_debit_mandate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_sepa_debit_mandate"); else _explicitNullProperties?.Remove("generated_sepa_debit_mandate"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate _explicitNullValueGeneratedSepaDebitMandate = default!;
 #endif
         /// <summary>Last four characters of the IBAN.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IbanLast4 { get => _explicitNullValueIbanLast4; set { _explicitNullValueIbanLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban_last4"); else _explicitNullProperties?.Remove("iban_last4"); } }
+        public string? IbanLast4 { get => _explicitNullValueIbanLast4; set { _explicitNullValueIbanLast4 = value; AdditionalData?.Remove("iban_last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban_last4"); else _explicitNullProperties?.Remove("iban_last4"); } }
         private string? _explicitNullValueIbanLast4 = default!;
 #nullable restore
 #else
-        public string IbanLast4 { get => _explicitNullValueIbanLast4; set { _explicitNullValueIbanLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban_last4"); else _explicitNullProperties?.Remove("iban_last4"); } }
+        public string IbanLast4 { get => _explicitNullValueIbanLast4; set { _explicitNullValueIbanLast4 = value; AdditionalData?.Remove("iban_last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iban_last4"); else _explicitNullProperties?.Remove("iban_last4"); } }
         private string _explicitNullValueIbanLast4 = default!;
 #endif
         /// <summary>Preferred language of the Bancontact authorization page that the customer is redirected to.Can be one of `en`, `de`, `fr`, or `nl`</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactPreferredLanguage? PreferredLanguage { get => _explicitNullValuePreferredLanguage; set { _explicitNullValuePreferredLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language"); else _explicitNullProperties?.Remove("preferred_language"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactPreferredLanguage? PreferredLanguage { get => _explicitNullValuePreferredLanguage; set { _explicitNullValuePreferredLanguage = value; AdditionalData?.Remove("preferred_language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language"); else _explicitNullProperties?.Remove("preferred_language"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactPreferredLanguage? _explicitNullValuePreferredLanguage = default!;
         /// <summary>Owner&apos;s verified full name. Values are verified or provided by Bancontact directly(if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
+        public string? VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; AdditionalData?.Remove("verified_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
         private string? _explicitNullValueVerifiedName = default!;
 #nullable restore
 #else
-        public string VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
+        public string VerifiedName { get => _explicitNullValueVerifiedName; set { _explicitNullValueVerifiedName = value; AdditionalData?.Remove("verified_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_name"); else _explicitNullProperties?.Remove("verified_name"); } }
         private string _explicitNullValueVerifiedName = default!;
 #endif
         /// <summary>
@@ -133,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "generated_sepa_debit", n => { GeneratedSepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebit.CreateFromDiscriminatorValue); } },
                 { "generated_sepa_debit_mandate", n => { GeneratedSepaDebitMandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactGeneratedSepaDebitMandate.CreateFromDiscriminatorValue); } },
                 { "iban_last4", n => { IbanLast4 = n.GetStringValue(); } },
-                { "preferred_language", n => { PreferredLanguage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactPreferredLanguage>(); } },
+                { "preferred_language", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsBancontactPreferredLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreferredLanguage = default; _explicitNullProperties?.Remove("preferred_language"); AdditionalData["preferred_language"] = unknown; } else { PreferredLanguage = parsed; AdditionalData.Remove("preferred_language"); } } },
                 { "verified_name", n => { VerifiedName = n.GetStringValue(); } },
             };
         }

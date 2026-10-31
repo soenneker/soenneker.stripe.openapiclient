@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inbound_flows") is { } nullNodeInboundFlows && nullNodeInboundFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundFlows = null;
-            if (parseNode.GetChildNode("outbound_flows") is { } nullNodeOutboundFlows && nullNodeOutboundFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundFlows = null;
+            if (parseNode.GetChildNode("inbound_flows") is null) { _explicitNullValueInboundFlows = default!; _explicitNullProperties?.Remove("inbound_flows"); }
+            else if (parseNode.GetChildNode("inbound_flows") is { } nullNodeInboundFlows && nullNodeInboundFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundFlows = null;
+            if (parseNode.GetChildNode("outbound_flows") is null) { _explicitNullValueOutboundFlows = default!; _explicitNullProperties?.Remove("outbound_flows"); }
+            else if (parseNode.GetChildNode("outbound_flows") is { } nullNodeOutboundFlows && nullNodeOutboundFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundFlows = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The inbound_flows property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsInboundFlows? InboundFlows { get => _explicitNullValueInboundFlows; set { _explicitNullValueInboundFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_flows"); else _explicitNullProperties?.Remove("inbound_flows"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsInboundFlows? InboundFlows { get => _explicitNullValueInboundFlows; set { _explicitNullValueInboundFlows = value; AdditionalData?.Remove("inbound_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_flows"); else _explicitNullProperties?.Remove("inbound_flows"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsInboundFlows? _explicitNullValueInboundFlows = default!;
         /// <summary>The outbound_flows property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsOutboundFlows? OutboundFlows { get => _explicitNullValueOutboundFlows; set { _explicitNullValueOutboundFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_flows"); else _explicitNullProperties?.Remove("outbound_flows"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsOutboundFlows? OutboundFlows { get => _explicitNullValueOutboundFlows; set { _explicitNullValueOutboundFlows = value; AdditionalData?.Remove("outbound_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_flows"); else _explicitNullProperties?.Remove("outbound_flows"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsOutboundFlows? _explicitNullValueOutboundFlows = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictions"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inbound_flows", n => { InboundFlows = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsInboundFlows>(); } },
-                { "outbound_flows", n => { OutboundFlows = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsOutboundFlows>(); } },
+                { "inbound_flows", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsInboundFlows>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInboundFlows = default; _explicitNullProperties?.Remove("inbound_flows"); AdditionalData["inbound_flows"] = unknown; } else { InboundFlows = parsed; AdditionalData.Remove("inbound_flows"); } } },
+                { "outbound_flows", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestPlatformRestrictionsOutboundFlows>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOutboundFlows = default; _explicitNullProperties?.Remove("outbound_flows"); AdditionalData["outbound_flows"] = unknown; } else { OutboundFlows = parsed; AdditionalData.Remove("outbound_flows"); } } },
             };
         }
         /// <summary>

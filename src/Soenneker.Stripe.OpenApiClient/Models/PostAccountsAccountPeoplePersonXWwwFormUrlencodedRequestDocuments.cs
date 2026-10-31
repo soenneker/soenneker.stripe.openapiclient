@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("company_authorization") is { } nullNodeCompanyAuthorization && nullNodeCompanyAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyAuthorization = null;
-            if (parseNode.GetChildNode("passport") is { } nullNodePassport && nullNodePassport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Passport = null;
-            if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
+            if (parseNode.GetChildNode("company_authorization") is null) { _explicitNullValueCompanyAuthorization = default!; _explicitNullProperties?.Remove("company_authorization"); }
+            else if (parseNode.GetChildNode("company_authorization") is { } nullNodeCompanyAuthorization && nullNodeCompanyAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyAuthorization = null;
+            if (parseNode.GetChildNode("passport") is null) { _explicitNullValuePassport = default!; _explicitNullProperties?.Remove("passport"); }
+            else if (parseNode.GetChildNode("passport") is { } nullNodePassport && nullNodePassport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Passport = null;
+            if (parseNode.GetChildNode("visa") is null) { _explicitNullValueVisa = default!; _explicitNullProperties?.Remove("visa"); }
+            else if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The company_authorization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization? CompanyAuthorization { get => _explicitNullValueCompanyAuthorization; set { _explicitNullValueCompanyAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company_authorization"); else _explicitNullProperties?.Remove("company_authorization"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization? CompanyAuthorization { get => _explicitNullValueCompanyAuthorization; set { _explicitNullValueCompanyAuthorization = value; AdditionalData?.Remove("company_authorization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company_authorization"); else _explicitNullProperties?.Remove("company_authorization"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization? _explicitNullValueCompanyAuthorization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization CompanyAuthorization { get => _explicitNullValueCompanyAuthorization; set { _explicitNullValueCompanyAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company_authorization"); else _explicitNullProperties?.Remove("company_authorization"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization CompanyAuthorization { get => _explicitNullValueCompanyAuthorization; set { _explicitNullValueCompanyAuthorization = value; AdditionalData?.Remove("company_authorization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company_authorization"); else _explicitNullProperties?.Remove("company_authorization"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsCompanyAuthorization _explicitNullValueCompanyAuthorization = default!;
 #endif
         /// <summary>The passport property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport? Passport { get => _explicitNullValuePassport; set { _explicitNullValuePassport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passport"); else _explicitNullProperties?.Remove("passport"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport? Passport { get => _explicitNullValuePassport; set { _explicitNullValuePassport = value; AdditionalData?.Remove("passport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passport"); else _explicitNullProperties?.Remove("passport"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport? _explicitNullValuePassport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport Passport { get => _explicitNullValuePassport; set { _explicitNullValuePassport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passport"); else _explicitNullProperties?.Remove("passport"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport Passport { get => _explicitNullValuePassport; set { _explicitNullValuePassport = value; AdditionalData?.Remove("passport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passport"); else _explicitNullProperties?.Remove("passport"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsPassport _explicitNullValuePassport = default!;
 #endif
         /// <summary>The visa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; AdditionalData?.Remove("visa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa? _explicitNullValueVisa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; AdditionalData?.Remove("visa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPeoplePersonXWwwFormUrlencodedRequestDocumentsVisa _explicitNullValueVisa = default!;
 #endif
         /// <summary>

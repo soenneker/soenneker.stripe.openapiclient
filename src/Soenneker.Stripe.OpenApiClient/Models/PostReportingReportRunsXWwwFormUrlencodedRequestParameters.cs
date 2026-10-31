@@ -18,14 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
-            if (parseNode.GetChildNode("connected_account") is { } nullNodeConnectedAccount && nullNodeConnectedAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectedAccount = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("interval_end") is { } nullNodeIntervalEnd && nullNodeIntervalEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalEnd = null;
-            if (parseNode.GetChildNode("interval_start") is { } nullNodeIntervalStart && nullNodeIntervalStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalStart = null;
-            if (parseNode.GetChildNode("payout") is { } nullNodePayout && nullNodePayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payout = null;
-            if (parseNode.GetChildNode("reporting_category") is { } nullNodeReportingCategory && nullNodeReportingCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportingCategory = null;
-            if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("columns") is null) { _explicitNullValueColumns = default!; _explicitNullProperties?.Remove("columns"); }
+            else if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
+            if (parseNode.GetChildNode("connected_account") is null) { _explicitNullValueConnectedAccount = default!; _explicitNullProperties?.Remove("connected_account"); }
+            else if (parseNode.GetChildNode("connected_account") is { } nullNodeConnectedAccount && nullNodeConnectedAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectedAccount = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("interval_end") is null) { _explicitNullValueIntervalEnd = default!; _explicitNullProperties?.Remove("interval_end"); }
+            else if (parseNode.GetChildNode("interval_end") is { } nullNodeIntervalEnd && nullNodeIntervalEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalEnd = null;
+            if (parseNode.GetChildNode("interval_start") is null) { _explicitNullValueIntervalStart = default!; _explicitNullProperties?.Remove("interval_start"); }
+            else if (parseNode.GetChildNode("interval_start") is { } nullNodeIntervalStart && nullNodeIntervalStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalStart = null;
+            if (parseNode.GetChildNode("payout") is null) { _explicitNullValuePayout = default!; _explicitNullProperties?.Remove("payout"); }
+            else if (parseNode.GetChildNode("payout") is { } nullNodePayout && nullNodePayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payout = null;
+            if (parseNode.GetChildNode("reporting_category") is null) { _explicitNullValueReportingCategory = default!; _explicitNullProperties?.Remove("reporting_category"); }
+            else if (parseNode.GetChildNode("reporting_category") is { } nullNodeReportingCategory && nullNodeReportingCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportingCategory = null;
+            if (parseNode.GetChildNode("timezone") is null) { _explicitNullValueTimezone = default!; _explicitNullProperties?.Remove("timezone"); }
+            else if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,55 +41,55 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        public List<string>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
         private List<string>? _explicitNullValueColumns = default!;
 #nullable restore
 #else
-        public List<string> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        public List<string> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; AdditionalData?.Remove("columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
         private List<string> _explicitNullValueColumns = default!;
 #endif
         /// <summary>The connected_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectedAccount { get => _explicitNullValueConnectedAccount; set { _explicitNullValueConnectedAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_account"); else _explicitNullProperties?.Remove("connected_account"); } }
+        public string? ConnectedAccount { get => _explicitNullValueConnectedAccount; set { _explicitNullValueConnectedAccount = value; AdditionalData?.Remove("connected_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_account"); else _explicitNullProperties?.Remove("connected_account"); } }
         private string? _explicitNullValueConnectedAccount = default!;
 #nullable restore
 #else
-        public string ConnectedAccount { get => _explicitNullValueConnectedAccount; set { _explicitNullValueConnectedAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_account"); else _explicitNullProperties?.Remove("connected_account"); } }
+        public string ConnectedAccount { get => _explicitNullValueConnectedAccount; set { _explicitNullValueConnectedAccount = value; AdditionalData?.Remove("connected_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_account"); else _explicitNullProperties?.Remove("connected_account"); } }
         private string _explicitNullValueConnectedAccount = default!;
 #endif
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The interval_end property</summary>
-        public int? IntervalEnd { get => _explicitNullValueIntervalEnd; set { _explicitNullValueIntervalEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_end"); else _explicitNullProperties?.Remove("interval_end"); } }
+        public int? IntervalEnd { get => _explicitNullValueIntervalEnd; set { _explicitNullValueIntervalEnd = value; AdditionalData?.Remove("interval_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_end"); else _explicitNullProperties?.Remove("interval_end"); } }
         private int? _explicitNullValueIntervalEnd = default!;
         /// <summary>The interval_start property</summary>
-        public int? IntervalStart { get => _explicitNullValueIntervalStart; set { _explicitNullValueIntervalStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_start"); else _explicitNullProperties?.Remove("interval_start"); } }
+        public int? IntervalStart { get => _explicitNullValueIntervalStart; set { _explicitNullValueIntervalStart = value; AdditionalData?.Remove("interval_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_start"); else _explicitNullProperties?.Remove("interval_start"); } }
         private int? _explicitNullValueIntervalStart = default!;
         /// <summary>The payout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
+        public string? Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; AdditionalData?.Remove("payout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
         private string? _explicitNullValuePayout = default!;
 #nullable restore
 #else
-        public string Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
+        public string Payout { get => _explicitNullValuePayout; set { _explicitNullValuePayout = value; AdditionalData?.Remove("payout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout"); else _explicitNullProperties?.Remove("payout"); } }
         private string _explicitNullValuePayout = default!;
 #endif
         /// <summary>The reporting_category property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory? ReportingCategory { get => _explicitNullValueReportingCategory; set { _explicitNullValueReportingCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporting_category"); else _explicitNullProperties?.Remove("reporting_category"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory? ReportingCategory { get => _explicitNullValueReportingCategory; set { _explicitNullValueReportingCategory = value; AdditionalData?.Remove("reporting_category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporting_category"); else _explicitNullProperties?.Remove("reporting_category"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory? _explicitNullValueReportingCategory = default!;
         /// <summary>The timezone property</summary>
 #nullable enable
-        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; AdditionalData?.Remove("timezone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
         private string? _explicitNullValueTimezone = default!;
 #nullable restore
         /// <summary>
@@ -115,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "interval_end", n => { IntervalEnd = n.GetIntValue(); } },
                 { "interval_start", n => { IntervalStart = n.GetIntValue(); } },
                 { "payout", n => { Payout = n.GetStringValue(); } },
-                { "reporting_category", n => { ReportingCategory = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory>(); } },
+                { "reporting_category", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReportingCategory = default; _explicitNullProperties?.Remove("reporting_category"); AdditionalData["reporting_category"] = unknown; } else { ReportingCategory = parsed; AdditionalData.Remove("reporting_category"); } } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
             };
         }

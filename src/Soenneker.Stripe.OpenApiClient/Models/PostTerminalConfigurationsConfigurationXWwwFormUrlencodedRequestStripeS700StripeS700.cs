@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("splashscreen") is { } nullNodeSplashscreen && nullNodeSplashscreen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Splashscreen = null;
+            if (parseNode.GetChildNode("splashscreen") is null) { _explicitNullValueSplashscreen = default!; _explicitNullProperties?.Remove("splashscreen"); }
+            else if (parseNode.GetChildNode("splashscreen") is { } nullNodeSplashscreen && nullNodeSplashscreen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Splashscreen = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,12 +26,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The splashscreen property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen? Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen? _explicitNullValueSplashscreen = default!;
+        public string? Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; AdditionalData?.Remove("splashscreen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
+        private string? _explicitNullValueSplashscreen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen _explicitNullValueSplashscreen = default!;
+        public string Splashscreen { get => _explicitNullValueSplashscreen; set { _explicitNullValueSplashscreen = value; AdditionalData?.Remove("splashscreen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("splashscreen"); else _explicitNullProperties?.Remove("splashscreen"); } }
+        private string _explicitNullValueSplashscreen = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700"/> and sets the default values.
@@ -57,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "splashscreen", n => { Splashscreen = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen.CreateFromDiscriminatorValue); } },
+                { "splashscreen", n => { Splashscreen = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestStripeS700StripeS700Splashscreen>("splashscreen", Splashscreen);
+            writer.WriteStringValue("splashscreen", Splashscreen);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

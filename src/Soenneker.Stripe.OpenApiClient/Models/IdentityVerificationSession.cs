@@ -18,26 +18,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("client_reference_id") is { } nullNodeClientReferenceId && nullNodeClientReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientReferenceId = null;
-            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
-            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("last_error") is { } nullNodeLastError && nullNodeLastError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastError = null;
-            if (parseNode.GetChildNode("last_verification_report") is { } nullNodeLastVerificationReport && nullNodeLastVerificationReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerificationReport = null;
-            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
-            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
-            if (parseNode.GetChildNode("provided_details") is { } nullNodeProvidedDetails && nullNodeProvidedDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvidedDetails = null;
-            if (parseNode.GetChildNode("redaction") is { } nullNodeRedaction && nullNodeRedaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Redaction = null;
-            if (parseNode.GetChildNode("related_customer") is { } nullNodeRelatedCustomer && nullNodeRelatedCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedCustomer = null;
-            if (parseNode.GetChildNode("related_customer_account") is { } nullNodeRelatedCustomerAccount && nullNodeRelatedCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedCustomerAccount = null;
-            if (parseNode.GetChildNode("related_person") is { } nullNodeRelatedPerson && nullNodeRelatedPerson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedPerson = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("verification_flow") is { } nullNodeVerificationFlow && nullNodeVerificationFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationFlow = null;
-            if (parseNode.GetChildNode("verified_outputs") is { } nullNodeVerifiedOutputs && nullNodeVerifiedOutputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedOutputs = null;
+            if (parseNode.GetChildNode("client_reference_id") is null) { _explicitNullValueClientReferenceId = default!; _explicitNullProperties?.Remove("client_reference_id"); }
+            else if (parseNode.GetChildNode("client_reference_id") is { } nullNodeClientReferenceId && nullNodeClientReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientReferenceId = null;
+            if (parseNode.GetChildNode("client_secret") is null) { _explicitNullValueClientSecret = default!; _explicitNullProperties?.Remove("client_secret"); }
+            else if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
+            else if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("last_error") is null) { _explicitNullValueLastError = default!; _explicitNullProperties?.Remove("last_error"); }
+            else if (parseNode.GetChildNode("last_error") is { } nullNodeLastError && nullNodeLastError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastError = null;
+            if (parseNode.GetChildNode("last_verification_report") is null) { _explicitNullValueLastVerificationReport = default!; _explicitNullProperties?.Remove("last_verification_report"); }
+            else if (parseNode.GetChildNode("last_verification_report") is { } nullNodeLastVerificationReport && nullNodeLastVerificationReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerificationReport = null;
+            if (parseNode.GetChildNode("livemode") is null) { _explicitNullValueLivemode = default!; _explicitNullProperties?.Remove("livemode"); }
+            else if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object") is null) { _explicitNullValueObject = default!; _explicitNullProperties?.Remove("object"); }
+            else if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("provided_details") is null) { _explicitNullValueProvidedDetails = default!; _explicitNullProperties?.Remove("provided_details"); }
+            else if (parseNode.GetChildNode("provided_details") is { } nullNodeProvidedDetails && nullNodeProvidedDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvidedDetails = null;
+            if (parseNode.GetChildNode("redaction") is null) { _explicitNullValueRedaction = default!; _explicitNullProperties?.Remove("redaction"); }
+            else if (parseNode.GetChildNode("redaction") is { } nullNodeRedaction && nullNodeRedaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Redaction = null;
+            if (parseNode.GetChildNode("related_customer") is null) { _explicitNullValueRelatedCustomer = default!; _explicitNullProperties?.Remove("related_customer"); }
+            else if (parseNode.GetChildNode("related_customer") is { } nullNodeRelatedCustomer && nullNodeRelatedCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedCustomer = null;
+            if (parseNode.GetChildNode("related_customer_account") is null) { _explicitNullValueRelatedCustomerAccount = default!; _explicitNullProperties?.Remove("related_customer_account"); }
+            else if (parseNode.GetChildNode("related_customer_account") is { } nullNodeRelatedCustomerAccount && nullNodeRelatedCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedCustomerAccount = null;
+            if (parseNode.GetChildNode("related_person") is null) { _explicitNullValueRelatedPerson = default!; _explicitNullProperties?.Remove("related_person"); }
+            else if (parseNode.GetChildNode("related_person") is { } nullNodeRelatedPerson && nullNodeRelatedPerson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedPerson = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("verification_flow") is null) { _explicitNullValueVerificationFlow = default!; _explicitNullProperties?.Remove("verification_flow"); }
+            else if (parseNode.GetChildNode("verification_flow") is { } nullNodeVerificationFlow && nullNodeVerificationFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationFlow = null;
+            if (parseNode.GetChildNode("verified_outputs") is null) { _explicitNullValueVerifiedOutputs = default!; _explicitNullProperties?.Remove("verified_outputs"); }
+            else if (parseNode.GetChildNode("verified_outputs") is { } nullNodeVerifiedOutputs && nullNodeVerifiedOutputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedOutputs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -45,166 +65,166 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A string to reference this user. This can be a customer ID, a session ID, or similar, and can be used to reconcile this verification with your internal systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
+        public string? ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; AdditionalData?.Remove("client_reference_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
         private string? _explicitNullValueClientReferenceId = default!;
 #nullable restore
 #else
-        public string ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
+        public string ClientReferenceId { get => _explicitNullValueClientReferenceId; set { _explicitNullValueClientReferenceId = value; AdditionalData?.Remove("client_reference_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_reference_id"); else _explicitNullProperties?.Remove("client_reference_id"); } }
         private string _explicitNullValueClientReferenceId = default!;
 #endif
         /// <summary>The short-lived client secret used by Stripe.js to [show a verification modal](https://docs.stripe.com/js/identity/modal) inside your app. This client secret expires after 24 hours and can only be used once. Don’t store it, log it, embed it in a URL, or expose it to anyone other than the user. Make sure that you have TLS enabled on any page that includes the client secret. Refer to our docs on [passing the client secret to the frontend](https://docs.stripe.com/identity/verification-sessions#client-secret) to learn more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
         private int? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>If present, this property tells you the last error encountered when processing the verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? _explicitNullValueLastError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError _explicitNullValueLastError = default!;
 #endif
         /// <summary>ID of the most recent VerificationReport. [Learn more about accessing detailed verification results.](https://docs.stripe.com/identity/verification-sessions#results)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport? LastVerificationReport { get => _explicitNullValueLastVerificationReport; set { _explicitNullValueLastVerificationReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verification_report"); else _explicitNullProperties?.Remove("last_verification_report"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport? LastVerificationReport { get => _explicitNullValueLastVerificationReport; set { _explicitNullValueLastVerificationReport = value; AdditionalData?.Remove("last_verification_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verification_report"); else _explicitNullProperties?.Remove("last_verification_report"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport? _explicitNullValueLastVerificationReport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport LastVerificationReport { get => _explicitNullValueLastVerificationReport; set { _explicitNullValueLastVerificationReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verification_report"); else _explicitNullProperties?.Remove("last_verification_report"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport LastVerificationReport { get => _explicitNullValueLastVerificationReport; set { _explicitNullValueLastVerificationReport = value; AdditionalData?.Remove("last_verification_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verification_report"); else _explicitNullProperties?.Remove("last_verification_report"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport _explicitNullValueLastVerificationReport = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
         private bool? _explicitNullValueLivemode = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject? _explicitNullValueObject = default!;
         /// <summary>A set of options for the session’s verification checks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>Details provided about the user being verified. These details may be shown to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? _explicitNullValueProvidedDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails _explicitNullValueProvidedDetails = default!;
 #endif
         /// <summary>Redaction status of this VerificationSession. If the VerificationSession is not redacted, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? _explicitNullValueRedaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction _explicitNullValueRedaction = default!;
 #endif
         /// <summary>Customer ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RelatedCustomer { get => _explicitNullValueRelatedCustomer; set { _explicitNullValueRelatedCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer"); else _explicitNullProperties?.Remove("related_customer"); } }
+        public string? RelatedCustomer { get => _explicitNullValueRelatedCustomer; set { _explicitNullValueRelatedCustomer = value; AdditionalData?.Remove("related_customer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer"); else _explicitNullProperties?.Remove("related_customer"); } }
         private string? _explicitNullValueRelatedCustomer = default!;
 #nullable restore
 #else
-        public string RelatedCustomer { get => _explicitNullValueRelatedCustomer; set { _explicitNullValueRelatedCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer"); else _explicitNullProperties?.Remove("related_customer"); } }
+        public string RelatedCustomer { get => _explicitNullValueRelatedCustomer; set { _explicitNullValueRelatedCustomer = value; AdditionalData?.Remove("related_customer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer"); else _explicitNullProperties?.Remove("related_customer"); } }
         private string _explicitNullValueRelatedCustomer = default!;
 #endif
         /// <summary>The ID of the Account representing a customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RelatedCustomerAccount { get => _explicitNullValueRelatedCustomerAccount; set { _explicitNullValueRelatedCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer_account"); else _explicitNullProperties?.Remove("related_customer_account"); } }
+        public string? RelatedCustomerAccount { get => _explicitNullValueRelatedCustomerAccount; set { _explicitNullValueRelatedCustomerAccount = value; AdditionalData?.Remove("related_customer_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer_account"); else _explicitNullProperties?.Remove("related_customer_account"); } }
         private string? _explicitNullValueRelatedCustomerAccount = default!;
 #nullable restore
 #else
-        public string RelatedCustomerAccount { get => _explicitNullValueRelatedCustomerAccount; set { _explicitNullValueRelatedCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer_account"); else _explicitNullProperties?.Remove("related_customer_account"); } }
+        public string RelatedCustomerAccount { get => _explicitNullValueRelatedCustomerAccount; set { _explicitNullValueRelatedCustomerAccount = value; AdditionalData?.Remove("related_customer_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_customer_account"); else _explicitNullProperties?.Remove("related_customer_account"); } }
         private string _explicitNullValueRelatedCustomerAccount = default!;
 #endif
         /// <summary>The related_person property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson? RelatedPerson { get => _explicitNullValueRelatedPerson; set { _explicitNullValueRelatedPerson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_person"); else _explicitNullProperties?.Remove("related_person"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson? RelatedPerson { get => _explicitNullValueRelatedPerson; set { _explicitNullValueRelatedPerson = value; AdditionalData?.Remove("related_person"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_person"); else _explicitNullProperties?.Remove("related_person"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson? _explicitNullValueRelatedPerson = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson RelatedPerson { get => _explicitNullValueRelatedPerson; set { _explicitNullValueRelatedPerson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_person"); else _explicitNullProperties?.Remove("related_person"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson RelatedPerson { get => _explicitNullValueRelatedPerson; set { _explicitNullValueRelatedPerson = value; AdditionalData?.Remove("related_person"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_person"); else _explicitNullProperties?.Remove("related_person"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson _explicitNullValueRelatedPerson = default!;
 #endif
         /// <summary>Status of this VerificationSession. [Learn more about the lifecycle of sessions](https://docs.stripe.com/identity/how-sessions-work).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus? _explicitNullValueStatus = default!;
         /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType? _explicitNullValueType = default!;
         /// <summary>The short-lived URL that you use to redirect a user to Stripe to submit their identity information. This URL expires after 48 hours and can only be used once. Don’t store it, log it, send it in emails or expose it to anyone other than the user. Refer to our docs on [verifying identity documents](https://docs.stripe.com/identity/verify-identity-documents?platform=web&amp;type=redirect) to learn how to redirect users to Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The configuration token of a verification flow from the dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationFlow { get => _explicitNullValueVerificationFlow; set { _explicitNullValueVerificationFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_flow"); else _explicitNullProperties?.Remove("verification_flow"); } }
+        public string? VerificationFlow { get => _explicitNullValueVerificationFlow; set { _explicitNullValueVerificationFlow = value; AdditionalData?.Remove("verification_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_flow"); else _explicitNullProperties?.Remove("verification_flow"); } }
         private string? _explicitNullValueVerificationFlow = default!;
 #nullable restore
 #else
-        public string VerificationFlow { get => _explicitNullValueVerificationFlow; set { _explicitNullValueVerificationFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_flow"); else _explicitNullProperties?.Remove("verification_flow"); } }
+        public string VerificationFlow { get => _explicitNullValueVerificationFlow; set { _explicitNullValueVerificationFlow = value; AdditionalData?.Remove("verification_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_flow"); else _explicitNullProperties?.Remove("verification_flow"); } }
         private string _explicitNullValueVerificationFlow = default!;
 #endif
         /// <summary>The user’s verified data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? _explicitNullValueVerifiedOutputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs _explicitNullValueVerifiedOutputs = default!;
 #endif
         /// <summary>
@@ -240,15 +260,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "last_verification_report", n => { LastVerificationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>(); } },
+                { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions.CreateFromDiscriminatorValue); } },
                 { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails.CreateFromDiscriminatorValue); } },
                 { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction.CreateFromDiscriminatorValue); } },
                 { "related_customer", n => { RelatedCustomer = n.GetStringValue(); } },
                 { "related_customer_account", n => { RelatedCustomerAccount = n.GetStringValue(); } },
                 { "related_person", n => { RelatedPerson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verification_flow", n => { VerificationFlow = n.GetStringValue(); } },
                 { "verified_outputs", n => { VerifiedOutputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs.CreateFromDiscriminatorValue); } },

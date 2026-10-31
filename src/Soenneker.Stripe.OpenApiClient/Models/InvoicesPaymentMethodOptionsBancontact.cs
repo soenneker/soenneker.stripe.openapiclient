@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("preferred_language") is { } nullNodePreferredLanguage && nullNodePreferredLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLanguage = null;
+            if (parseNode.GetChildNode("preferred_language") is null) { _explicitNullValuePreferredLanguage = default!; _explicitNullProperties?.Remove("preferred_language"); }
+            else if (parseNode.GetChildNode("preferred_language") is { } nullNodePreferredLanguage && nullNodePreferredLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLanguage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Preferred language of the Bancontact authorization page that the customer is redirected to.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBancontactPreferredLanguage? PreferredLanguage { get => _explicitNullValuePreferredLanguage; set { _explicitNullValuePreferredLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language"); else _explicitNullProperties?.Remove("preferred_language"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBancontactPreferredLanguage? PreferredLanguage { get => _explicitNullValuePreferredLanguage; set { _explicitNullValuePreferredLanguage = value; AdditionalData?.Remove("preferred_language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_language"); else _explicitNullProperties?.Remove("preferred_language"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBancontactPreferredLanguage? _explicitNullValuePreferredLanguage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBancontact"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "preferred_language", n => { PreferredLanguage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBancontactPreferredLanguage>(); } },
+                { "preferred_language", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBancontactPreferredLanguage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreferredLanguage = default; _explicitNullProperties?.Remove("preferred_language"); AdditionalData["preferred_language"] = unknown; } else { PreferredLanguage = parsed; AdditionalData.Remove("preferred_language"); } } },
             };
         }
         /// <summary>

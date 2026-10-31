@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hosted_payment_method_save") is { } nullNodeHostedPaymentMethodSave && nullNodeHostedPaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedPaymentMethodSave = null;
+            if (parseNode.GetChildNode("hosted_payment_method_save") is null) { _explicitNullValueHostedPaymentMethodSave = default!; _explicitNullProperties?.Remove("hosted_payment_method_save"); }
+            else if (parseNode.GetChildNode("hosted_payment_method_save") is { } nullNodeHostedPaymentMethodSave && nullNodeHostedPaymentMethodSave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedPaymentMethodSave = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The hosted_payment_method_save property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? HostedPaymentMethodSave { get => _explicitNullValueHostedPaymentMethodSave; set { _explicitNullValueHostedPaymentMethodSave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_payment_method_save"); else _explicitNullProperties?.Remove("hosted_payment_method_save"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? HostedPaymentMethodSave { get => _explicitNullValueHostedPaymentMethodSave; set { _explicitNullValueHostedPaymentMethodSave = value; AdditionalData?.Remove("hosted_payment_method_save"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_payment_method_save"); else _explicitNullProperties?.Remove("hosted_payment_method_save"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave? _explicitNullValueHostedPaymentMethodSave = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoices"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave>(); } },
+                { "hosted_payment_method_save", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoicesHostedPaymentMethodSave>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHostedPaymentMethodSave = default; _explicitNullProperties?.Remove("hosted_payment_method_save"); AdditionalData["hosted_payment_method_save"] = unknown; } else { HostedPaymentMethodSave = parsed; AdditionalData.Remove("hosted_payment_method_save"); } } },
             };
         }
         /// <summary>

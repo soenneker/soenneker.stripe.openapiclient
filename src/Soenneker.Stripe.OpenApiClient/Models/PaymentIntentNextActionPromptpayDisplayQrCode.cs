@@ -17,10 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
-            if (parseNode.GetChildNode("image_url_png") is { } nullNodeImageUrlPng && nullNodeImageUrlPng.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlPng = null;
-            if (parseNode.GetChildNode("image_url_svg") is { } nullNodeImageUrlSvg && nullNodeImageUrlSvg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlSvg = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("hosted_instructions_url") is null) { _explicitNullValueHostedInstructionsUrl = default!; _explicitNullProperties?.Remove("hosted_instructions_url"); }
+            else if (parseNode.GetChildNode("hosted_instructions_url") is { } nullNodeHostedInstructionsUrl && nullNodeHostedInstructionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedInstructionsUrl = null;
+            if (parseNode.GetChildNode("image_url_png") is null) { _explicitNullValueImageUrlPng = default!; _explicitNullProperties?.Remove("image_url_png"); }
+            else if (parseNode.GetChildNode("image_url_png") is { } nullNodeImageUrlPng && nullNodeImageUrlPng.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlPng = null;
+            if (parseNode.GetChildNode("image_url_svg") is null) { _explicitNullValueImageUrlSvg = default!; _explicitNullProperties?.Remove("image_url_svg"); }
+            else if (parseNode.GetChildNode("image_url_svg") is { } nullNodeImageUrlSvg && nullNodeImageUrlSvg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrlSvg = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The raw data string used to generate QR code, it should be used together with QR code library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string _explicitNullValueData = default!;
 #endif
         /// <summary>The URL to the hosted PromptPay instructions page, which allows customers to view the PromptPay QR code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        public string? HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; AdditionalData?.Remove("hosted_instructions_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
         private string? _explicitNullValueHostedInstructionsUrl = default!;
 #nullable restore
 #else
-        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
+        public string HostedInstructionsUrl { get => _explicitNullValueHostedInstructionsUrl; set { _explicitNullValueHostedInstructionsUrl = value; AdditionalData?.Remove("hosted_instructions_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_instructions_url"); else _explicitNullProperties?.Remove("hosted_instructions_url"); } }
         private string _explicitNullValueHostedInstructionsUrl = default!;
 #endif
         /// <summary>The PNG path used to render the QR code, can be used as the source in an HTML img tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
+        public string? ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; AdditionalData?.Remove("image_url_png"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
         private string? _explicitNullValueImageUrlPng = default!;
 #nullable restore
 #else
-        public string ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
+        public string ImageUrlPng { get => _explicitNullValueImageUrlPng; set { _explicitNullValueImageUrlPng = value; AdditionalData?.Remove("image_url_png"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_png"); else _explicitNullProperties?.Remove("image_url_png"); } }
         private string _explicitNullValueImageUrlPng = default!;
 #endif
         /// <summary>The SVG path used to render the QR code, can be used as the source in an HTML img tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
+        public string? ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; AdditionalData?.Remove("image_url_svg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
         private string? _explicitNullValueImageUrlSvg = default!;
 #nullable restore
 #else
-        public string ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
+        public string ImageUrlSvg { get => _explicitNullValueImageUrlSvg; set { _explicitNullValueImageUrlSvg = value; AdditionalData?.Remove("image_url_svg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url_svg"); else _explicitNullProperties?.Remove("image_url_svg"); } }
         private string _explicitNullValueImageUrlSvg = default!;
 #endif
         /// <summary>

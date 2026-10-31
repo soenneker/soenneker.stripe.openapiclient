@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mastercard_compliance") is { } nullNodeMastercardCompliance && nullNodeMastercardCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MastercardCompliance = null;
-            if (parseNode.GetChildNode("visa_compelling_evidence_3") is { } nullNodeVisaCompellingEvidence3 && nullNodeVisaCompellingEvidence3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCompellingEvidence3 = null;
-            if (parseNode.GetChildNode("visa_compliance") is { } nullNodeVisaCompliance && nullNodeVisaCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCompliance = null;
+            if (parseNode.GetChildNode("mastercard_compliance") is null) { _explicitNullValueMastercardCompliance = default!; _explicitNullProperties?.Remove("mastercard_compliance"); }
+            else if (parseNode.GetChildNode("mastercard_compliance") is { } nullNodeMastercardCompliance && nullNodeMastercardCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MastercardCompliance = null;
+            if (parseNode.GetChildNode("visa_compelling_evidence_3") is null) { _explicitNullValueVisaCompellingEvidence3 = default!; _explicitNullProperties?.Remove("visa_compelling_evidence_3"); }
+            else if (parseNode.GetChildNode("visa_compelling_evidence_3") is { } nullNodeVisaCompellingEvidence3 && nullNodeVisaCompellingEvidence3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCompellingEvidence3 = null;
+            if (parseNode.GetChildNode("visa_compliance") is null) { _explicitNullValueVisaCompliance = default!; _explicitNullProperties?.Remove("visa_compliance"); }
+            else if (parseNode.GetChildNode("visa_compliance") is { } nullNodeVisaCompliance && nullNodeVisaCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCompliance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The mastercard_compliance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance? MastercardCompliance { get => _explicitNullValueMastercardCompliance; set { _explicitNullValueMastercardCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard_compliance"); else _explicitNullProperties?.Remove("mastercard_compliance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance? MastercardCompliance { get => _explicitNullValueMastercardCompliance; set { _explicitNullValueMastercardCompliance = value; AdditionalData?.Remove("mastercard_compliance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard_compliance"); else _explicitNullProperties?.Remove("mastercard_compliance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance? _explicitNullValueMastercardCompliance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance MastercardCompliance { get => _explicitNullValueMastercardCompliance; set { _explicitNullValueMastercardCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard_compliance"); else _explicitNullProperties?.Remove("mastercard_compliance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance MastercardCompliance { get => _explicitNullValueMastercardCompliance; set { _explicitNullValueMastercardCompliance = value; AdditionalData?.Remove("mastercard_compliance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard_compliance"); else _explicitNullProperties?.Remove("mastercard_compliance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityMastercardCompliance _explicitNullValueMastercardCompliance = default!;
 #endif
         /// <summary>The visa_compelling_evidence_3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3? VisaCompellingEvidence3 { get => _explicitNullValueVisaCompellingEvidence3; set { _explicitNullValueVisaCompellingEvidence3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compelling_evidence_3"); else _explicitNullProperties?.Remove("visa_compelling_evidence_3"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3? VisaCompellingEvidence3 { get => _explicitNullValueVisaCompellingEvidence3; set { _explicitNullValueVisaCompellingEvidence3 = value; AdditionalData?.Remove("visa_compelling_evidence_3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compelling_evidence_3"); else _explicitNullProperties?.Remove("visa_compelling_evidence_3"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3? _explicitNullValueVisaCompellingEvidence3 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3 VisaCompellingEvidence3 { get => _explicitNullValueVisaCompellingEvidence3; set { _explicitNullValueVisaCompellingEvidence3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compelling_evidence_3"); else _explicitNullProperties?.Remove("visa_compelling_evidence_3"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3 VisaCompellingEvidence3 { get => _explicitNullValueVisaCompellingEvidence3; set { _explicitNullValueVisaCompellingEvidence3 = value; AdditionalData?.Remove("visa_compelling_evidence_3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compelling_evidence_3"); else _explicitNullProperties?.Remove("visa_compelling_evidence_3"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3 _explicitNullValueVisaCompellingEvidence3 = default!;
 #endif
         /// <summary>The visa_compliance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance? VisaCompliance { get => _explicitNullValueVisaCompliance; set { _explicitNullValueVisaCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compliance"); else _explicitNullProperties?.Remove("visa_compliance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance? VisaCompliance { get => _explicitNullValueVisaCompliance; set { _explicitNullValueVisaCompliance = value; AdditionalData?.Remove("visa_compliance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compliance"); else _explicitNullProperties?.Remove("visa_compliance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance? _explicitNullValueVisaCompliance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance VisaCompliance { get => _explicitNullValueVisaCompliance; set { _explicitNullValueVisaCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compliance"); else _explicitNullProperties?.Remove("visa_compliance"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance VisaCompliance { get => _explicitNullValueVisaCompliance; set { _explicitNullValueVisaCompliance = value; AdditionalData?.Remove("visa_compliance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_compliance"); else _explicitNullProperties?.Remove("visa_compliance"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompliance _explicitNullValueVisaCompliance = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("confirm_config") is { } nullNodeConfirmConfig && nullNodeConfirmConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmConfig = null;
-            if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
+            if (parseNode.GetChildNode("confirm_config") is null) { _explicitNullValueConfirmConfig = default!; _explicitNullProperties?.Remove("confirm_config"); }
+            else if (parseNode.GetChildNode("confirm_config") is { } nullNodeConfirmConfig && nullNodeConfirmConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmConfig = null;
+            if (parseNode.GetChildNode("payment_intent") is null) { _explicitNullValuePaymentIntent = default!; _explicitNullProperties?.Remove("payment_intent"); }
+            else if (parseNode.GetChildNode("payment_intent") is { } nullNodePaymentIntent && nullNodePaymentIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,22 +29,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Represents a per-transaction override of a reader configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig? ConfirmConfig { get => _explicitNullValueConfirmConfig; set { _explicitNullValueConfirmConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_config"); else _explicitNullProperties?.Remove("confirm_config"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig? ConfirmConfig { get => _explicitNullValueConfirmConfig; set { _explicitNullValueConfirmConfig = value; AdditionalData?.Remove("confirm_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_config"); else _explicitNullProperties?.Remove("confirm_config"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig? _explicitNullValueConfirmConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig ConfirmConfig { get => _explicitNullValueConfirmConfig; set { _explicitNullValueConfirmConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_config"); else _explicitNullProperties?.Remove("confirm_config"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig ConfirmConfig { get => _explicitNullValueConfirmConfig; set { _explicitNullValueConfirmConfig = value; AdditionalData?.Remove("confirm_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm_config"); else _explicitNullProperties?.Remove("confirm_config"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig _explicitNullValueConfirmConfig = default!;
 #endif
         /// <summary>Most recent PaymentIntent processed by the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent? _explicitNullValuePaymentIntent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent? PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; AdditionalData?.Remove("payment_intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent? _explicitNullValuePaymentIntent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent _explicitNullValuePaymentIntent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent PaymentIntent { get => _explicitNullValuePaymentIntent; set { _explicitNullValuePaymentIntent = value; AdditionalData?.Remove("payment_intent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_intent"); else _explicitNullProperties?.Remove("payment_intent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent _explicitNullValuePaymentIntent = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentAction"/> and sets the default values.
@@ -70,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "confirm_config", n => { ConfirmConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig.CreateFromDiscriminatorValue); } },
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmConfig>("confirm_config", ConfirmConfig);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceConfirmPaymentIntentActionPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCollectPaymentMethodActionPaymentIntent>("payment_intent", PaymentIntent);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

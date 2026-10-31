@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eligible") is { } nullNodeEligible && nullNodeEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eligible = null;
-            if (parseNode.GetChildNode("ineligible_reason") is { } nullNodeIneligibleReason && nullNodeIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReason = null;
+            if (parseNode.GetChildNode("eligible") is null) { _explicitNullValueEligible = default!; _explicitNullProperties?.Remove("eligible"); }
+            else if (parseNode.GetChildNode("eligible") is { } nullNodeEligible && nullNodeEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eligible = null;
+            if (parseNode.GetChildNode("ineligible_reason") is null) { _explicitNullValueIneligibleReason = default!; _explicitNullProperties?.Remove("ineligible_reason"); }
+            else if (parseNode.GetChildNode("ineligible_reason") is { } nullNodeIneligibleReason && nullNodeIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibleReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Apple Pay Eligibility</summary>
-        public bool? Eligible { get => _explicitNullValueEligible; set { _explicitNullValueEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible"); else _explicitNullProperties?.Remove("eligible"); } }
+        public bool? Eligible { get => _explicitNullValueEligible; set { _explicitNullValueEligible = value; AdditionalData?.Remove("eligible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible"); else _explicitNullProperties?.Remove("eligible"); } }
         private bool? _explicitNullValueEligible = default!;
         /// <summary>Reason the card is ineligible for Apple Pay</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePayIneligibleReason? IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePayIneligibleReason? IneligibleReason { get => _explicitNullValueIneligibleReason; set { _explicitNullValueIneligibleReason = value; AdditionalData?.Remove("ineligible_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligible_reason"); else _explicitNullProperties?.Remove("ineligible_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePayIneligibleReason? _explicitNullValueIneligibleReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePay"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "eligible", n => { Eligible = n.GetBoolValue(); } },
-                { "ineligible_reason", n => { IneligibleReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePayIneligibleReason>(); } },
+                { "ineligible_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePayIneligibleReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIneligibleReason = default; _explicitNullProperties?.Remove("ineligible_reason"); AdditionalData["ineligible_reason"] = unknown; } else { IneligibleReason = parsed; AdditionalData.Remove("ineligible_reason"); } } },
             };
         }
         /// <summary>

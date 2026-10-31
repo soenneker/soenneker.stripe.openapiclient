@@ -17,17 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ach") is { } nullNodeAch && nullNodeAch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ach = null;
+            if (parseNode.GetChildNode("ach") is null) { _explicitNullValueAch = default!; _explicitNullProperties?.Remove("ach"); }
+            else if (parseNode.GetChildNode("ach") is { } nullNodeAch && nullNodeAch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ach = null;
         }
 
         /// <summary>The ach property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch? Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch? Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; AdditionalData?.Remove("ach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch? _explicitNullValueAch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch Ach { get => _explicitNullValueAch; set { _explicitNullValueAch = value; AdditionalData?.Remove("ach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ach"); else _explicitNullProperties?.Remove("ach"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesInboundTransfersAch _explicitNullValueAch = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

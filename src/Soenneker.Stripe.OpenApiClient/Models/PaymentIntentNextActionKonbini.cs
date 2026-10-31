@@ -17,34 +17,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("hosted_voucher_url") is { } nullNodeHostedVoucherUrl && nullNodeHostedVoucherUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedVoucherUrl = null;
-            if (parseNode.GetChildNode("stores") is { } nullNodeStores && nullNodeStores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stores = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("hosted_voucher_url") is null) { _explicitNullValueHostedVoucherUrl = default!; _explicitNullProperties?.Remove("hosted_voucher_url"); }
+            else if (parseNode.GetChildNode("hosted_voucher_url") is { } nullNodeHostedVoucherUrl && nullNodeHostedVoucherUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedVoucherUrl = null;
+            if (parseNode.GetChildNode("stores") is null) { _explicitNullValueStores = default!; _explicitNullProperties?.Remove("stores"); }
+            else if (parseNode.GetChildNode("stores") is { } nullNodeStores && nullNodeStores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stores = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp at which the pending Konbini payment expires.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private int? _explicitNullValueExpiresAt = default!;
         /// <summary>The URL for the Konbini payment instructions page, which allows customers to view and print a Konbini voucher.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedVoucherUrl { get => _explicitNullValueHostedVoucherUrl; set { _explicitNullValueHostedVoucherUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_voucher_url"); else _explicitNullProperties?.Remove("hosted_voucher_url"); } }
+        public string? HostedVoucherUrl { get => _explicitNullValueHostedVoucherUrl; set { _explicitNullValueHostedVoucherUrl = value; AdditionalData?.Remove("hosted_voucher_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_voucher_url"); else _explicitNullProperties?.Remove("hosted_voucher_url"); } }
         private string? _explicitNullValueHostedVoucherUrl = default!;
 #nullable restore
 #else
-        public string HostedVoucherUrl { get => _explicitNullValueHostedVoucherUrl; set { _explicitNullValueHostedVoucherUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_voucher_url"); else _explicitNullProperties?.Remove("hosted_voucher_url"); } }
+        public string HostedVoucherUrl { get => _explicitNullValueHostedVoucherUrl; set { _explicitNullValueHostedVoucherUrl = value; AdditionalData?.Remove("hosted_voucher_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_voucher_url"); else _explicitNullProperties?.Remove("hosted_voucher_url"); } }
         private string _explicitNullValueHostedVoucherUrl = default!;
 #endif
         /// <summary>The stores property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores? Stores { get => _explicitNullValueStores; set { _explicitNullValueStores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stores"); else _explicitNullProperties?.Remove("stores"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores? Stores { get => _explicitNullValueStores; set { _explicitNullValueStores = value; AdditionalData?.Remove("stores"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stores"); else _explicitNullProperties?.Remove("stores"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores? _explicitNullValueStores = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores Stores { get => _explicitNullValueStores; set { _explicitNullValueStores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stores"); else _explicitNullProperties?.Remove("stores"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores Stores { get => _explicitNullValueStores; set { _explicitNullValueStores = value; AdditionalData?.Remove("stores"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stores"); else _explicitNullProperties?.Remove("stores"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores _explicitNullValueStores = default!;
 #endif
         /// <summary>

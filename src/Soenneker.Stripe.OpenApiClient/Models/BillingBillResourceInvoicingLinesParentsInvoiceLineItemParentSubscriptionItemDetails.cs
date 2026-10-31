@@ -18,11 +18,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invoice_item") is { } nullNodeInvoiceItem && nullNodeInvoiceItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceItem = null;
-            if (parseNode.GetChildNode("proration") is { } nullNodeProration && nullNodeProration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proration = null;
-            if (parseNode.GetChildNode("proration_details") is { } nullNodeProrationDetails && nullNodeProrationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationDetails = null;
-            if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
-            if (parseNode.GetChildNode("subscription_item") is { } nullNodeSubscriptionItem && nullNodeSubscriptionItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionItem = null;
+            if (parseNode.GetChildNode("invoice_item") is null) { _explicitNullValueInvoiceItem = default!; _explicitNullProperties?.Remove("invoice_item"); }
+            else if (parseNode.GetChildNode("invoice_item") is { } nullNodeInvoiceItem && nullNodeInvoiceItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceItem = null;
+            if (parseNode.GetChildNode("proration") is null) { _explicitNullValueProration = default!; _explicitNullProperties?.Remove("proration"); }
+            else if (parseNode.GetChildNode("proration") is { } nullNodeProration && nullNodeProration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Proration = null;
+            if (parseNode.GetChildNode("proration_details") is null) { _explicitNullValueProrationDetails = default!; _explicitNullProperties?.Remove("proration_details"); }
+            else if (parseNode.GetChildNode("proration_details") is { } nullNodeProrationDetails && nullNodeProrationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProrationDetails = null;
+            if (parseNode.GetChildNode("subscription") is null) { _explicitNullValueSubscription = default!; _explicitNullProperties?.Remove("subscription"); }
+            else if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
+            if (parseNode.GetChildNode("subscription_item") is null) { _explicitNullValueSubscriptionItem = default!; _explicitNullProperties?.Remove("subscription_item"); }
+            else if (parseNode.GetChildNode("subscription_item") is { } nullNodeSubscriptionItem && nullNodeSubscriptionItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionItem = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,44 +35,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The invoice item that generated this line item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
+        public string? InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; AdditionalData?.Remove("invoice_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
         private string? _explicitNullValueInvoiceItem = default!;
 #nullable restore
 #else
-        public string InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
+        public string InvoiceItem { get => _explicitNullValueInvoiceItem; set { _explicitNullValueInvoiceItem = value; AdditionalData?.Remove("invoice_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_item"); else _explicitNullProperties?.Remove("invoice_item"); } }
         private string _explicitNullValueInvoiceItem = default!;
 #endif
         /// <summary>Whether this is a proration</summary>
-        public bool? Proration { get => _explicitNullValueProration; set { _explicitNullValueProration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration"); else _explicitNullProperties?.Remove("proration"); } }
+        public bool? Proration { get => _explicitNullValueProration; set { _explicitNullValueProration = value; AdditionalData?.Remove("proration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration"); else _explicitNullProperties?.Remove("proration"); } }
         private bool? _explicitNullValueProration = default!;
         /// <summary>Additional details for proration line items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails? ProrationDetails { get => _explicitNullValueProrationDetails; set { _explicitNullValueProrationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_details"); else _explicitNullProperties?.Remove("proration_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails? ProrationDetails { get => _explicitNullValueProrationDetails; set { _explicitNullValueProrationDetails = value; AdditionalData?.Remove("proration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_details"); else _explicitNullProperties?.Remove("proration_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails? _explicitNullValueProrationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails ProrationDetails { get => _explicitNullValueProrationDetails; set { _explicitNullValueProrationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_details"); else _explicitNullProperties?.Remove("proration_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails ProrationDetails { get => _explicitNullValueProrationDetails; set { _explicitNullValueProrationDetails = value; AdditionalData?.Remove("proration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_details"); else _explicitNullProperties?.Remove("proration_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails _explicitNullValueProrationDetails = default!;
 #endif
         /// <summary>The subscription that the subscription item belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        public string? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; AdditionalData?.Remove("subscription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
         private string? _explicitNullValueSubscription = default!;
 #nullable restore
 #else
-        public string Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        public string Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; AdditionalData?.Remove("subscription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
         private string _explicitNullValueSubscription = default!;
 #endif
         /// <summary>The subscription item that generated this line item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionItem { get => _explicitNullValueSubscriptionItem; set { _explicitNullValueSubscriptionItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_item"); else _explicitNullProperties?.Remove("subscription_item"); } }
+        public string? SubscriptionItem { get => _explicitNullValueSubscriptionItem; set { _explicitNullValueSubscriptionItem = value; AdditionalData?.Remove("subscription_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_item"); else _explicitNullProperties?.Remove("subscription_item"); } }
         private string? _explicitNullValueSubscriptionItem = default!;
 #nullable restore
 #else
-        public string SubscriptionItem { get => _explicitNullValueSubscriptionItem; set { _explicitNullValueSubscriptionItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_item"); else _explicitNullProperties?.Remove("subscription_item"); } }
+        public string SubscriptionItem { get => _explicitNullValueSubscriptionItem; set { _explicitNullValueSubscriptionItem = value; AdditionalData?.Remove("subscription_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_item"); else _explicitNullProperties?.Remove("subscription_item"); } }
         private string _explicitNullValueSubscriptionItem = default!;
 #endif
         /// <summary>

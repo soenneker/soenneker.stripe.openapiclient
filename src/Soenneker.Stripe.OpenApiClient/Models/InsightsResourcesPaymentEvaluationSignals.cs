@@ -18,9 +18,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("early_fraud_warning") is { } nullNodeEarlyFraudWarning && nullNodeEarlyFraudWarning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarlyFraudWarning = null;
-            if (parseNode.GetChildNode("fraudulent_dispute") is { } nullNodeFraudulentDispute && nullNodeFraudulentDispute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudulentDispute = null;
-            if (parseNode.GetChildNode("fraudulent_payment") is { } nullNodeFraudulentPayment && nullNodeFraudulentPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudulentPayment = null;
+            if (parseNode.GetChildNode("early_fraud_warning") is null) { _explicitNullValueEarlyFraudWarning = default!; _explicitNullProperties?.Remove("early_fraud_warning"); }
+            else if (parseNode.GetChildNode("early_fraud_warning") is { } nullNodeEarlyFraudWarning && nullNodeEarlyFraudWarning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarlyFraudWarning = null;
+            if (parseNode.GetChildNode("fraudulent_dispute") is null) { _explicitNullValueFraudulentDispute = default!; _explicitNullProperties?.Remove("fraudulent_dispute"); }
+            else if (parseNode.GetChildNode("fraudulent_dispute") is { } nullNodeFraudulentDispute && nullNodeFraudulentDispute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudulentDispute = null;
+            if (parseNode.GetChildNode("fraudulent_payment") is null) { _explicitNullValueFraudulentPayment = default!; _explicitNullProperties?.Remove("fraudulent_payment"); }
+            else if (parseNode.GetChildNode("fraudulent_payment") is { } nullNodeFraudulentPayment && nullNodeFraudulentPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FraudulentPayment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The likelihood that this `PaymentEvaluation` results in an early fraud warning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning? EarlyFraudWarning { get => _explicitNullValueEarlyFraudWarning; set { _explicitNullValueEarlyFraudWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("early_fraud_warning"); else _explicitNullProperties?.Remove("early_fraud_warning"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning? EarlyFraudWarning { get => _explicitNullValueEarlyFraudWarning; set { _explicitNullValueEarlyFraudWarning = value; AdditionalData?.Remove("early_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("early_fraud_warning"); else _explicitNullProperties?.Remove("early_fraud_warning"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning? _explicitNullValueEarlyFraudWarning = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning EarlyFraudWarning { get => _explicitNullValueEarlyFraudWarning; set { _explicitNullValueEarlyFraudWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("early_fraud_warning"); else _explicitNullProperties?.Remove("early_fraud_warning"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning EarlyFraudWarning { get => _explicitNullValueEarlyFraudWarning; set { _explicitNullValueEarlyFraudWarning = value; AdditionalData?.Remove("early_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("early_fraud_warning"); else _explicitNullProperties?.Remove("early_fraud_warning"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning _explicitNullValueEarlyFraudWarning = default!;
 #endif
         /// <summary>The likelihood that this `PaymentEvaluation` results in a dispute with reason code `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute? FraudulentDispute { get => _explicitNullValueFraudulentDispute; set { _explicitNullValueFraudulentDispute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_dispute"); else _explicitNullProperties?.Remove("fraudulent_dispute"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute? FraudulentDispute { get => _explicitNullValueFraudulentDispute; set { _explicitNullValueFraudulentDispute = value; AdditionalData?.Remove("fraudulent_dispute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_dispute"); else _explicitNullProperties?.Remove("fraudulent_dispute"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute? _explicitNullValueFraudulentDispute = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute FraudulentDispute { get => _explicitNullValueFraudulentDispute; set { _explicitNullValueFraudulentDispute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_dispute"); else _explicitNullProperties?.Remove("fraudulent_dispute"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute FraudulentDispute { get => _explicitNullValueFraudulentDispute; set { _explicitNullValueFraudulentDispute = value; AdditionalData?.Remove("fraudulent_dispute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_dispute"); else _explicitNullProperties?.Remove("fraudulent_dispute"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute _explicitNullValueFraudulentDispute = default!;
 #endif
         /// <summary>A payment evaluation signal with evaluated_at, risk_level, and score fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2? FraudulentPayment { get => _explicitNullValueFraudulentPayment; set { _explicitNullValueFraudulentPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_payment"); else _explicitNullProperties?.Remove("fraudulent_payment"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2? FraudulentPayment { get => _explicitNullValueFraudulentPayment; set { _explicitNullValueFraudulentPayment = value; AdditionalData?.Remove("fraudulent_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_payment"); else _explicitNullProperties?.Remove("fraudulent_payment"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2? _explicitNullValueFraudulentPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2 FraudulentPayment { get => _explicitNullValueFraudulentPayment; set { _explicitNullValueFraudulentPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_payment"); else _explicitNullProperties?.Remove("fraudulent_payment"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2 FraudulentPayment { get => _explicitNullValueFraudulentPayment; set { _explicitNullValueFraudulentPayment = value; AdditionalData?.Remove("fraudulent_payment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraudulent_payment"); else _explicitNullProperties?.Remove("fraudulent_payment"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2 _explicitNullValueFraudulentPayment = default!;
 #endif
         /// <summary>

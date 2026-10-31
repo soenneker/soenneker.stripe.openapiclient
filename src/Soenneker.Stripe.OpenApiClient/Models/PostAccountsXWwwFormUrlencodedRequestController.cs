@@ -18,10 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
-            if (parseNode.GetChildNode("losses") is { } nullNodeLosses && nullNodeLosses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Losses = null;
-            if (parseNode.GetChildNode("requirement_collection") is { } nullNodeRequirementCollection && nullNodeRequirementCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementCollection = null;
-            if (parseNode.GetChildNode("stripe_dashboard") is { } nullNodeStripeDashboard && nullNodeStripeDashboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeDashboard = null;
+            if (parseNode.GetChildNode("fees") is null) { _explicitNullValueFees = default!; _explicitNullProperties?.Remove("fees"); }
+            else if (parseNode.GetChildNode("fees") is { } nullNodeFees && nullNodeFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fees = null;
+            if (parseNode.GetChildNode("losses") is null) { _explicitNullValueLosses = default!; _explicitNullProperties?.Remove("losses"); }
+            else if (parseNode.GetChildNode("losses") is { } nullNodeLosses && nullNodeLosses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Losses = null;
+            if (parseNode.GetChildNode("requirement_collection") is null) { _explicitNullValueRequirementCollection = default!; _explicitNullProperties?.Remove("requirement_collection"); }
+            else if (parseNode.GetChildNode("requirement_collection") is { } nullNodeRequirementCollection && nullNodeRequirementCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementCollection = null;
+            if (parseNode.GetChildNode("stripe_dashboard") is null) { _explicitNullValueStripeDashboard = default!; _explicitNullProperties?.Remove("stripe_dashboard"); }
+            else if (parseNode.GetChildNode("stripe_dashboard") is { } nullNodeStripeDashboard && nullNodeStripeDashboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeDashboard = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,34 +33,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The fees property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; AdditionalData?.Remove("fees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees? _explicitNullValueFees = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees Fees { get => _explicitNullValueFees; set { _explicitNullValueFees = value; AdditionalData?.Remove("fees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fees"); else _explicitNullProperties?.Remove("fees"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees _explicitNullValueFees = default!;
 #endif
         /// <summary>The losses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; AdditionalData?.Remove("losses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses? _explicitNullValueLosses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses Losses { get => _explicitNullValueLosses; set { _explicitNullValueLosses = value; AdditionalData?.Remove("losses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losses"); else _explicitNullProperties?.Remove("losses"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses _explicitNullValueLosses = default!;
 #endif
         /// <summary>The requirement_collection property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? RequirementCollection { get => _explicitNullValueRequirementCollection; set { _explicitNullValueRequirementCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement_collection"); else _explicitNullProperties?.Remove("requirement_collection"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? RequirementCollection { get => _explicitNullValueRequirementCollection; set { _explicitNullValueRequirementCollection = value; AdditionalData?.Remove("requirement_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement_collection"); else _explicitNullProperties?.Remove("requirement_collection"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection? _explicitNullValueRequirementCollection = default!;
         /// <summary>The stripe_dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; AdditionalData?.Remove("stripe_dashboard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard? _explicitNullValueStripeDashboard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard StripeDashboard { get => _explicitNullValueStripeDashboard; set { _explicitNullValueStripeDashboard = value; AdditionalData?.Remove("stripe_dashboard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_dashboard"); else _explicitNullProperties?.Remove("stripe_dashboard"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard _explicitNullValueStripeDashboard = default!;
 #endif
         /// <summary>
@@ -86,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "fees", n => { Fees = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerFees.CreateFromDiscriminatorValue); } },
                 { "losses", n => { Losses = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerLosses.CreateFromDiscriminatorValue); } },
-                { "requirement_collection", n => { RequirementCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection>(); } },
+                { "requirement_collection", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerRequirementCollection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequirementCollection = default; _explicitNullProperties?.Remove("requirement_collection"); AdditionalData["requirement_collection"] = unknown; } else { RequirementCollection = parsed; AdditionalData.Remove("requirement_collection"); } } },
                 { "stripe_dashboard", n => { StripeDashboard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestControllerStripeDashboard.CreateFromDiscriminatorValue); } },
             };
         }

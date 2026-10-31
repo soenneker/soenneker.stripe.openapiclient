@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chain") is { } nullNodeChain && nullNodeChain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chain = null;
+            if (parseNode.GetChildNode("chain") is null) { _explicitNullValueChain = default!; _explicitNullProperties?.Remove("chain"); }
+            else if (parseNode.GetChildNode("chain") is { } nullNodeChain && nullNodeChain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chain = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the convenience store chain where the payment was completed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain? Chain { get => _explicitNullValueChain; set { _explicitNullValueChain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chain"); else _explicitNullProperties?.Remove("chain"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain? Chain { get => _explicitNullValueChain; set { _explicitNullValueChain = value; AdditionalData?.Remove("chain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chain"); else _explicitNullProperties?.Remove("chain"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain? _explicitNullValueChain = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "chain", n => { Chain = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain>(); } },
+                { "chain", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChain = default; _explicitNullProperties?.Remove("chain"); AdditionalData["chain"] = unknown; } else { Chain = parsed; AdditionalData.Remove("chain"); } } },
             };
         }
         /// <summary>

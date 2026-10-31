@@ -18,17 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acquiring_institution_id") is { } nullNodeAcquiringInstitutionId && nullNodeAcquiringInstitutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquiringInstitutionId = null;
+            if (parseNode.GetChildNode("acquiring_institution_id") is null) { _explicitNullValueAcquiringInstitutionId = default!; _explicitNullProperties?.Remove("acquiring_institution_id"); }
+            else if (parseNode.GetChildNode("acquiring_institution_id") is { } nullNodeAcquiringInstitutionId && nullNodeAcquiringInstitutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquiringInstitutionId = null;
         }
 
         /// <summary>The acquiring_institution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        public string? AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; AdditionalData?.Remove("acquiring_institution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
         private string? _explicitNullValueAcquiringInstitutionId = default!;
 #nullable restore
 #else
-        public string AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        public string AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; AdditionalData?.Remove("acquiring_institution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
         private string _explicitNullValueAcquiringInstitutionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

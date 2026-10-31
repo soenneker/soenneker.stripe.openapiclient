@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("confirmation_number") is { } nullNodeConfirmationNumber && nullNodeConfirmationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationNumber = null;
-            if (parseNode.GetChildNode("payment_code") is { } nullNodePaymentCode && nullNodePaymentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentCode = null;
+            if (parseNode.GetChildNode("confirmation_number") is null) { _explicitNullValueConfirmationNumber = default!; _explicitNullProperties?.Remove("confirmation_number"); }
+            else if (parseNode.GetChildNode("confirmation_number") is { } nullNodeConfirmationNumber && nullNodeConfirmationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationNumber = null;
+            if (parseNode.GetChildNode("payment_code") is null) { _explicitNullValuePaymentCode = default!; _explicitNullProperties?.Remove("payment_code"); }
+            else if (parseNode.GetChildNode("payment_code") is { } nullNodePaymentCode && nullNodePaymentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The confirmation number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfirmationNumber { get => _explicitNullValueConfirmationNumber; set { _explicitNullValueConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_number"); else _explicitNullProperties?.Remove("confirmation_number"); } }
+        public string? ConfirmationNumber { get => _explicitNullValueConfirmationNumber; set { _explicitNullValueConfirmationNumber = value; AdditionalData?.Remove("confirmation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_number"); else _explicitNullProperties?.Remove("confirmation_number"); } }
         private string? _explicitNullValueConfirmationNumber = default!;
 #nullable restore
 #else
-        public string ConfirmationNumber { get => _explicitNullValueConfirmationNumber; set { _explicitNullValueConfirmationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_number"); else _explicitNullProperties?.Remove("confirmation_number"); } }
+        public string ConfirmationNumber { get => _explicitNullValueConfirmationNumber; set { _explicitNullValueConfirmationNumber = value; AdditionalData?.Remove("confirmation_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_number"); else _explicitNullProperties?.Remove("confirmation_number"); } }
         private string _explicitNullValueConfirmationNumber = default!;
 #endif
         /// <summary>The payment code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentCode { get => _explicitNullValuePaymentCode; set { _explicitNullValuePaymentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_code"); else _explicitNullProperties?.Remove("payment_code"); } }
+        public string? PaymentCode { get => _explicitNullValuePaymentCode; set { _explicitNullValuePaymentCode = value; AdditionalData?.Remove("payment_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_code"); else _explicitNullProperties?.Remove("payment_code"); } }
         private string? _explicitNullValuePaymentCode = default!;
 #nullable restore
 #else
-        public string PaymentCode { get => _explicitNullValuePaymentCode; set { _explicitNullValuePaymentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_code"); else _explicitNullProperties?.Remove("payment_code"); } }
+        public string PaymentCode { get => _explicitNullValuePaymentCode; set { _explicitNullValuePaymentCode = value; AdditionalData?.Remove("payment_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_code"); else _explicitNullProperties?.Remove("payment_code"); } }
         private string _explicitNullValuePaymentCode = default!;
 #endif
         /// <summary>

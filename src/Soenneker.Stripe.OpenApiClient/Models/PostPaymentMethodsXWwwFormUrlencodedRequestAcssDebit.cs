@@ -18,19 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("institution_number") is { } nullNodeInstitutionNumber && nullNodeInstitutionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstitutionNumber = null;
-            if (parseNode.GetChildNode("transit_number") is { } nullNodeTransitNumber && nullNodeTransitNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitNumber = null;
+            if (parseNode.GetChildNode("account_number") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("account_number"); }
+            else if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("institution_number") is null) { _explicitNullValueInstitutionNumber = default!; _explicitNullProperties?.Remove("institution_number"); }
+            else if (parseNode.GetChildNode("institution_number") is { } nullNodeInstitutionNumber && nullNodeInstitutionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstitutionNumber = null;
+            if (parseNode.GetChildNode("transit_number") is null) { _explicitNullValueTransitNumber = default!; _explicitNullProperties?.Remove("transit_number"); }
+            else if (parseNode.GetChildNode("transit_number") is { } nullNodeTransitNumber && nullNodeTransitNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitNumber = null;
         }
 
         /// <summary>The account_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("account_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("account_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,21 +41,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The institution_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstitutionNumber { get => _explicitNullValueInstitutionNumber; set { _explicitNullValueInstitutionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("institution_number"); else _explicitNullProperties?.Remove("institution_number"); } }
+        public string? InstitutionNumber { get => _explicitNullValueInstitutionNumber; set { _explicitNullValueInstitutionNumber = value; AdditionalData?.Remove("institution_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("institution_number"); else _explicitNullProperties?.Remove("institution_number"); } }
         private string? _explicitNullValueInstitutionNumber = default!;
 #nullable restore
 #else
-        public string InstitutionNumber { get => _explicitNullValueInstitutionNumber; set { _explicitNullValueInstitutionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("institution_number"); else _explicitNullProperties?.Remove("institution_number"); } }
+        public string InstitutionNumber { get => _explicitNullValueInstitutionNumber; set { _explicitNullValueInstitutionNumber = value; AdditionalData?.Remove("institution_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("institution_number"); else _explicitNullProperties?.Remove("institution_number"); } }
         private string _explicitNullValueInstitutionNumber = default!;
 #endif
         /// <summary>The transit_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitNumber { get => _explicitNullValueTransitNumber; set { _explicitNullValueTransitNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transit_number"); else _explicitNullProperties?.Remove("transit_number"); } }
+        public string? TransitNumber { get => _explicitNullValueTransitNumber; set { _explicitNullValueTransitNumber = value; AdditionalData?.Remove("transit_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transit_number"); else _explicitNullProperties?.Remove("transit_number"); } }
         private string? _explicitNullValueTransitNumber = default!;
 #nullable restore
 #else
-        public string TransitNumber { get => _explicitNullValueTransitNumber; set { _explicitNullValueTransitNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transit_number"); else _explicitNullProperties?.Remove("transit_number"); } }
+        public string TransitNumber { get => _explicitNullValueTransitNumber; set { _explicitNullValueTransitNumber = value; AdditionalData?.Remove("transit_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transit_number"); else _explicitNullProperties?.Remove("transit_number"); } }
         private string _explicitNullValueTransitNumber = default!;
 #endif
         /// <summary>

@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("missing_payment_method") is { } nullNodeMissingPaymentMethod && nullNodeMissingPaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingPaymentMethod = null;
+            if (parseNode.GetChildNode("missing_payment_method") is null) { _explicitNullValueMissingPaymentMethod = default!; _explicitNullProperties?.Remove("missing_payment_method"); }
+            else if (parseNode.GetChildNode("missing_payment_method") is { } nullNodeMissingPaymentMethod && nullNodeMissingPaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingPaymentMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates how the subscription should change when the trial ends if the user did not provide a payment method.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get => _explicitNullValueMissingPaymentMethod; set { _explicitNullValueMissingPaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_payment_method"); else _explicitNullProperties?.Remove("missing_payment_method"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get => _explicitNullValueMissingPaymentMethod; set { _explicitNullValueMissingPaymentMethod = value; AdditionalData?.Remove("missing_payment_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_payment_method"); else _explicitNullProperties?.Remove("missing_payment_method"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? _explicitNullValueMissingPaymentMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "missing_payment_method", n => { MissingPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod>(); } },
+                { "missing_payment_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMissingPaymentMethod = default; _explicitNullProperties?.Remove("missing_payment_method"); AdditionalData["missing_payment_method"] = unknown; } else { MissingPaymentMethod = parsed; AdditionalData.Remove("missing_payment_method"); } } },
             };
         }
         /// <summary>

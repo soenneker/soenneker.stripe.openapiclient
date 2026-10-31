@@ -17,34 +17,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("debit_negative_balances") is { } nullNodeDebitNegativeBalances && nullNodeDebitNegativeBalances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitNegativeBalances = null;
-            if (parseNode.GetChildNode("payouts") is { } nullNodePayouts && nullNodePayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payouts = null;
-            if (parseNode.GetChildNode("settlement_timing") is { } nullNodeSettlementTiming && nullNodeSettlementTiming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SettlementTiming = null;
+            if (parseNode.GetChildNode("debit_negative_balances") is null) { _explicitNullValueDebitNegativeBalances = default!; _explicitNullProperties?.Remove("debit_negative_balances"); }
+            else if (parseNode.GetChildNode("debit_negative_balances") is { } nullNodeDebitNegativeBalances && nullNodeDebitNegativeBalances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DebitNegativeBalances = null;
+            if (parseNode.GetChildNode("payouts") is null) { _explicitNullValuePayouts = default!; _explicitNullProperties?.Remove("payouts"); }
+            else if (parseNode.GetChildNode("payouts") is { } nullNodePayouts && nullNodePayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payouts = null;
+            if (parseNode.GetChildNode("settlement_timing") is null) { _explicitNullValueSettlementTiming = default!; _explicitNullProperties?.Remove("settlement_timing"); }
+            else if (parseNode.GetChildNode("settlement_timing") is { } nullNodeSettlementTiming && nullNodeSettlementTiming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SettlementTiming = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A Boolean indicating if Stripe should try to reclaim negative balances from an attached bank account. See [Understanding Connect account balances](/connect/account-balances) for details. The default value is `false` when [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts, otherwise `true`.</summary>
-        public bool? DebitNegativeBalances { get => _explicitNullValueDebitNegativeBalances; set { _explicitNullValueDebitNegativeBalances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_negative_balances"); else _explicitNullProperties?.Remove("debit_negative_balances"); } }
+        public bool? DebitNegativeBalances { get => _explicitNullValueDebitNegativeBalances; set { _explicitNullValueDebitNegativeBalances = value; AdditionalData?.Remove("debit_negative_balances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("debit_negative_balances"); else _explicitNullProperties?.Remove("debit_negative_balances"); } }
         private bool? _explicitNullValueDebitNegativeBalances = default!;
         /// <summary>Settings specific to the account&apos;s payouts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? _explicitNullValuePayouts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts _explicitNullValuePayouts = default!;
 #endif
         /// <summary>The settlement_timing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming? SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming? SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; AdditionalData?.Remove("settlement_timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming? _explicitNullValueSettlementTiming = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming SettlementTiming { get => _explicitNullValueSettlementTiming; set { _explicitNullValueSettlementTiming = value; AdditionalData?.Remove("settlement_timing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settlement_timing"); else _explicitNullProperties?.Remove("settlement_timing"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming _explicitNullValueSettlementTiming = default!;
 #endif
         /// <summary>

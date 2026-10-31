@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("stripe_report") is { } nullNodeStripeReport && nullNodeStripeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeReport = null;
-            if (parseNode.GetChildNode("user_report") is { } nullNodeUserReport && nullNodeUserReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserReport = null;
+            if (parseNode.GetChildNode("stripe_report") is null) { _explicitNullValueStripeReport = default!; _explicitNullProperties?.Remove("stripe_report"); }
+            else if (parseNode.GetChildNode("stripe_report") is { } nullNodeStripeReport && nullNodeStripeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeReport = null;
+            if (parseNode.GetChildNode("user_report") is null) { _explicitNullValueUserReport = default!; _explicitNullProperties?.Remove("user_report"); }
+            else if (parseNode.GetChildNode("user_report") is { } nullNodeUserReport && nullNodeUserReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserReport = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Assessments from Stripe. If set, the value is `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
+        public string? StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; AdditionalData?.Remove("stripe_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
         private string? _explicitNullValueStripeReport = default!;
 #nullable restore
 #else
-        public string StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
+        public string StripeReport { get => _explicitNullValueStripeReport; set { _explicitNullValueStripeReport = value; AdditionalData?.Remove("stripe_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_report"); else _explicitNullProperties?.Remove("stripe_report"); } }
         private string _explicitNullValueStripeReport = default!;
 #endif
         /// <summary>Assessments reported by you. If set, possible values of are `safe` and `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
+        public string? UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; AdditionalData?.Remove("user_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
         private string? _explicitNullValueUserReport = default!;
 #nullable restore
 #else
-        public string UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
+        public string UserReport { get => _explicitNullValueUserReport; set { _explicitNullValueUserReport = value; AdditionalData?.Remove("user_report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_report"); else _explicitNullProperties?.Remove("user_report"); } }
         private string _explicitNullValueUserReport = default!;
 #endif
         /// <summary>

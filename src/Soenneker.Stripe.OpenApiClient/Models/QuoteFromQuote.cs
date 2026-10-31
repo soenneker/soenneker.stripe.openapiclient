@@ -18,23 +18,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_revision") is { } nullNodeIsRevision && nullNodeIsRevision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRevision = null;
-            if (parseNode.GetChildNode("quote") is { } nullNodeQuote && nullNodeQuote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quote = null;
+            if (parseNode.GetChildNode("is_revision") is null) { _explicitNullValueIsRevision = default!; _explicitNullProperties?.Remove("is_revision"); }
+            else if (parseNode.GetChildNode("is_revision") is { } nullNodeIsRevision && nullNodeIsRevision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRevision = null;
+            if (parseNode.GetChildNode("quote") is null) { _explicitNullValueQuote = default!; _explicitNullProperties?.Remove("quote"); }
+            else if (parseNode.GetChildNode("quote") is { } nullNodeQuote && nullNodeQuote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quote = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this quote is a revision of a different quote.</summary>
-        public bool? IsRevision { get => _explicitNullValueIsRevision; set { _explicitNullValueIsRevision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_revision"); else _explicitNullProperties?.Remove("is_revision"); } }
+        public bool? IsRevision { get => _explicitNullValueIsRevision; set { _explicitNullValueIsRevision = value; AdditionalData?.Remove("is_revision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_revision"); else _explicitNullProperties?.Remove("is_revision"); } }
         private bool? _explicitNullValueIsRevision = default!;
         /// <summary>The quote that was cloned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote? Quote { get => _explicitNullValueQuote; set { _explicitNullValueQuote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quote"); else _explicitNullProperties?.Remove("quote"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote? Quote { get => _explicitNullValueQuote; set { _explicitNullValueQuote = value; AdditionalData?.Remove("quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quote"); else _explicitNullProperties?.Remove("quote"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote? _explicitNullValueQuote = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote Quote { get => _explicitNullValueQuote; set { _explicitNullValueQuote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quote"); else _explicitNullProperties?.Remove("quote"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote Quote { get => _explicitNullValueQuote; set { _explicitNullValueQuote = value; AdditionalData?.Remove("quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quote"); else _explicitNullProperties?.Remove("quote"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuoteQuote _explicitNullValueQuote = default!;
 #endif
         /// <summary>

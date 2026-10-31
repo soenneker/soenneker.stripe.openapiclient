@@ -17,31 +17,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expected_expiry_date") is { } nullNodeExpectedExpiryDate && nullNodeExpectedExpiryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedExpiryDate = null;
-            if (parseNode.GetChildNode("identifier_type") is { } nullNodeIdentifierType && nullNodeIdentifierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierType = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
+            if (parseNode.GetChildNode("expected_expiry_date") is null) { _explicitNullValueExpectedExpiryDate = default!; _explicitNullProperties?.Remove("expected_expiry_date"); }
+            else if (parseNode.GetChildNode("expected_expiry_date") is { } nullNodeExpectedExpiryDate && nullNodeExpectedExpiryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedExpiryDate = null;
+            if (parseNode.GetChildNode("identifier_type") is null) { _explicitNullValueIdentifierType = default!; _explicitNullProperties?.Remove("identifier_type"); }
+            else if (parseNode.GetChildNode("identifier_type") is { } nullNodeIdentifierType && nullNodeIdentifierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierType = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("supported_networks") is null) { _explicitNullValueSupportedNetworks = default!; _explicitNullProperties?.Remove("supported_networks"); }
+            else if (parseNode.GetChildNode("supported_networks") is { } nullNodeSupportedNetworks && nullNodeSupportedNetworks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedNetworks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the account number is expected to expire, if applicable.</summary>
-        public int? ExpectedExpiryDate { get => _explicitNullValueExpectedExpiryDate; set { _explicitNullValueExpectedExpiryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_expiry_date"); else _explicitNullProperties?.Remove("expected_expiry_date"); } }
+        public int? ExpectedExpiryDate { get => _explicitNullValueExpectedExpiryDate; set { _explicitNullValueExpectedExpiryDate = value; AdditionalData?.Remove("expected_expiry_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_expiry_date"); else _explicitNullProperties?.Remove("expected_expiry_date"); } }
         private int? _explicitNullValueExpectedExpiryDate = default!;
         /// <summary>The type of account number associated with the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get => _explicitNullValueIdentifierType; set { _explicitNullValueIdentifierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifier_type"); else _explicitNullProperties?.Remove("identifier_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get => _explicitNullValueIdentifierType; set { _explicitNullValueIdentifierType = value; AdditionalData?.Remove("identifier_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifier_type"); else _explicitNullProperties?.Remove("identifier_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? _explicitNullValueIdentifierType = default!;
         /// <summary>Whether the account number is currently active and usable for transactions.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? _explicitNullValueStatus = default!;
         /// <summary>The payment networks that the account number can be used for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?>? _explicitNullValueSupportedNetworks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> SupportedNetworks { get => _explicitNullValueSupportedNetworks; set { _explicitNullValueSupportedNetworks = value; AdditionalData?.Remove("supported_networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supported_networks"); else _explicitNullProperties?.Remove("supported_networks"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.AchItem?> _explicitNullValueSupportedNetworks = default!;
 #endif
         /// <summary>
@@ -70,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expected_expiry_date", n => { ExpectedExpiryDate = n.GetIntValue(); } },
-                { "identifier_type", n => { IdentifierType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>(); } },
+                { "identifier_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIdentifierType = default; _explicitNullProperties?.Remove("identifier_type"); AdditionalData["identifier_type"] = unknown; } else { IdentifierType = parsed; AdditionalData.Remove("identifier_type"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.AchItem>()?.AsList(); } },
             };
         }

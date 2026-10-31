@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("race") is { } nullNodeRace && nullNodeRace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Race = null;
-            if (parseNode.GetChildNode("race_other") is { } nullNodeRaceOther && nullNodeRaceOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RaceOther = null;
+            if (parseNode.GetChildNode("race") is null) { _explicitNullValueRace = default!; _explicitNullProperties?.Remove("race"); }
+            else if (parseNode.GetChildNode("race") is { } nullNodeRace && nullNodeRace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Race = null;
+            if (parseNode.GetChildNode("race_other") is null) { _explicitNullValueRaceOther = default!; _explicitNullProperties?.Remove("race_other"); }
+            else if (parseNode.GetChildNode("race_other") is { } nullNodeRaceOther && nullNodeRaceOther.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RaceOther = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The race property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?>? Race { get => _explicitNullValueRace; set { _explicitNullValueRace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race"); else _explicitNullProperties?.Remove("race"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?>? Race { get => _explicitNullValueRace; set { _explicitNullValueRace = value; AdditionalData?.Remove("race"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race"); else _explicitNullProperties?.Remove("race"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?>? _explicitNullValueRace = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?> Race { get => _explicitNullValueRace; set { _explicitNullValueRace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race"); else _explicitNullProperties?.Remove("race"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?> Race { get => _explicitNullValueRace; set { _explicitNullValueRace = value; AdditionalData?.Remove("race"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race"); else _explicitNullProperties?.Remove("race"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestUsCfpbDataRaceDetailsRaceItem?> _explicitNullValueRace = default!;
 #endif
         /// <summary>The race_other property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RaceOther { get => _explicitNullValueRaceOther; set { _explicitNullValueRaceOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_other"); else _explicitNullProperties?.Remove("race_other"); } }
+        public string? RaceOther { get => _explicitNullValueRaceOther; set { _explicitNullValueRaceOther = value; AdditionalData?.Remove("race_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_other"); else _explicitNullProperties?.Remove("race_other"); } }
         private string? _explicitNullValueRaceOther = default!;
 #nullable restore
 #else
-        public string RaceOther { get => _explicitNullValueRaceOther; set { _explicitNullValueRaceOther = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_other"); else _explicitNullProperties?.Remove("race_other"); } }
+        public string RaceOther { get => _explicitNullValueRaceOther; set { _explicitNullValueRaceOther = value; AdditionalData?.Remove("race_other"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("race_other"); else _explicitNullProperties?.Remove("race_other"); } }
         private string _explicitNullValueRaceOther = default!;
 #endif
         /// <summary>

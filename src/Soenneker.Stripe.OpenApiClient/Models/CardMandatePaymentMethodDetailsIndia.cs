@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inactive_reason") is { } nullNodeInactiveReason && nullNodeInactiveReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveReason = null;
+            if (parseNode.GetChildNode("inactive_reason") is null) { _explicitNullValueInactiveReason = default!; _explicitNullProperties?.Remove("inactive_reason"); }
+            else if (parseNode.GetChildNode("inactive_reason") is { } nullNodeInactiveReason && nullNodeInactiveReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reason why the mandate has an `inactive` status. This field is only populated if the mandate is inactive.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndiaInactiveReason? InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndiaInactiveReason? InactiveReason { get => _explicitNullValueInactiveReason; set { _explicitNullValueInactiveReason = value; AdditionalData?.Remove("inactive_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inactive_reason"); else _explicitNullProperties?.Remove("inactive_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndiaInactiveReason? _explicitNullValueInactiveReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndia"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inactive_reason", n => { InactiveReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndiaInactiveReason>(); } },
+                { "inactive_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMandatePaymentMethodDetailsIndiaInactiveReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInactiveReason = default; _explicitNullProperties?.Remove("inactive_reason"); AdditionalData["inactive_reason"] = unknown; } else { InactiveReason = parsed; AdditionalData.Remove("inactive_reason"); } } },
             };
         }
         /// <summary>

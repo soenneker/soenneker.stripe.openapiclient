@@ -7,6 +7,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostCustomersCustomerXWwwFormUrlencodedRequestTaxExempt
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "exempt")]
         #pragma warning disable CS1591
         Exempt,

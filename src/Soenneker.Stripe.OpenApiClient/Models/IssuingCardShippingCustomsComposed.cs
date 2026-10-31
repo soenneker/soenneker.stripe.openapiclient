@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eori_number") is { } nullNodeEoriNumber && nullNodeEoriNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EoriNumber = null;
+            if (parseNode.GetChildNode("eori_number") is null) { _explicitNullValueEoriNumber = default!; _explicitNullProperties?.Remove("eori_number"); }
+            else if (parseNode.GetChildNode("eori_number") is { } nullNodeEoriNumber && nullNodeEoriNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EoriNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A registration number used for customs in Europe. See [https://www.gov.uk/eori](https://www.gov.uk/eori) for the UK and [https://ec.europa.eu/taxation_customs/business/customs-procedures-import-and-export/customs-procedures/economic-operators-registration-and-identification-number-eori_en](https://ec.europa.eu/taxation_customs/business/customs-procedures-import-and-export/customs-procedures/economic-operators-registration-and-identification-number-eori_en) for the EU.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
+        public string? EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; AdditionalData?.Remove("eori_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
         private string? _explicitNullValueEoriNumber = default!;
 #nullable restore
 #else
-        public string EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
+        public string EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; AdditionalData?.Remove("eori_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
         private string _explicitNullValueEoriNumber = default!;
 #endif
         /// <summary>

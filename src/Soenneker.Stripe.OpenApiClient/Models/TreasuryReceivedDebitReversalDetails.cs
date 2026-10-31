@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("deadline") is { } nullNodeDeadline && nullNodeDeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deadline = null;
-            if (parseNode.GetChildNode("restricted_reason") is { } nullNodeRestrictedReason && nullNodeRestrictedReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedReason = null;
+            if (parseNode.GetChildNode("deadline") is null) { _explicitNullValueDeadline = default!; _explicitNullProperties?.Remove("deadline"); }
+            else if (parseNode.GetChildNode("deadline") is { } nullNodeDeadline && nullNodeDeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deadline = null;
+            if (parseNode.GetChildNode("restricted_reason") is null) { _explicitNullValueRestrictedReason = default!; _explicitNullProperties?.Remove("restricted_reason"); }
+            else if (parseNode.GetChildNode("restricted_reason") is { } nullNodeRestrictedReason && nullNodeRestrictedReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time before which a ReceivedDebit can be reversed.</summary>
-        public int? Deadline { get => _explicitNullValueDeadline; set { _explicitNullValueDeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deadline"); else _explicitNullProperties?.Remove("deadline"); } }
+        public int? Deadline { get => _explicitNullValueDeadline; set { _explicitNullValueDeadline = value; AdditionalData?.Remove("deadline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deadline"); else _explicitNullProperties?.Remove("deadline"); } }
         private int? _explicitNullValueDeadline = default!;
         /// <summary>Set if a ReceivedDebit can&apos;t be reversed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetailsRestrictedReason? RestrictedReason { get => _explicitNullValueRestrictedReason; set { _explicitNullValueRestrictedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_reason"); else _explicitNullProperties?.Remove("restricted_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetailsRestrictedReason? RestrictedReason { get => _explicitNullValueRestrictedReason; set { _explicitNullValueRestrictedReason = value; AdditionalData?.Remove("restricted_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_reason"); else _explicitNullProperties?.Remove("restricted_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetailsRestrictedReason? _explicitNullValueRestrictedReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails"/> and sets the default values.
@@ -56,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "deadline", n => { Deadline = n.GetIntValue(); } },
-                { "restricted_reason", n => { RestrictedReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetailsRestrictedReason>(); } },
+                { "restricted_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetailsRestrictedReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRestrictedReason = default; _explicitNullProperties?.Remove("restricted_reason"); AdditionalData["restricted_reason"] = unknown; } else { RestrictedReason = parsed; AdditionalData.Remove("restricted_reason"); } } },
             };
         }
         /// <summary>

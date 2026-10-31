@@ -17,17 +17,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("approval_requested") is { } nullNodeApprovalRequested && nullNodeApprovalRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalRequested = null;
-            if (parseNode.GetChildNode("completes_at") is { } nullNodeCompletesAt && nullNodeCompletesAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletesAt = null;
+            if (parseNode.GetChildNode("approval_requested") is null) { _explicitNullValueApprovalRequested = default!; _explicitNullProperties?.Remove("approval_requested"); }
+            else if (parseNode.GetChildNode("approval_requested") is { } nullNodeApprovalRequested && nullNodeApprovalRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalRequested = null;
+            if (parseNode.GetChildNode("completes_at") is null) { _explicitNullValueCompletesAt = default!; _explicitNullProperties?.Remove("completes_at"); }
+            else if (parseNode.GetChildNode("completes_at") is { } nullNodeCompletesAt && nullNodeCompletesAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletesAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether customer approval has been requested for this payment. For payments greater than INR 15000 or mandate amount, the customer must provide explicit approval of the payment with their bank.</summary>
-        public bool? ApprovalRequested { get => _explicitNullValueApprovalRequested; set { _explicitNullValueApprovalRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_requested"); else _explicitNullProperties?.Remove("approval_requested"); } }
+        public bool? ApprovalRequested { get => _explicitNullValueApprovalRequested; set { _explicitNullValueApprovalRequested = value; AdditionalData?.Remove("approval_requested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_requested"); else _explicitNullProperties?.Remove("approval_requested"); } }
         private bool? _explicitNullValueApprovalRequested = default!;
         /// <summary>If customer approval is required, they need to provide approval before this time.</summary>
-        public int? CompletesAt { get => _explicitNullValueCompletesAt; set { _explicitNullValueCompletesAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completes_at"); else _explicitNullProperties?.Remove("completes_at"); } }
+        public int? CompletesAt { get => _explicitNullValueCompletesAt; set { _explicitNullValueCompletesAt = value; AdditionalData?.Remove("completes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completes_at"); else _explicitNullProperties?.Remove("completes_at"); } }
         private int? _explicitNullValueCompletesAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification"/> and sets the default values.

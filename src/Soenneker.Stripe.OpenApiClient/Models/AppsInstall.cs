@@ -18,33 +18,50 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
-            if (parseNode.GetChildNode("approval_required") is { } nullNodeApprovalRequired && nullNodeApprovalRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalRequired = null;
-            if (parseNode.GetChildNode("auth_code") is { } nullNodeAuthCode && nullNodeAuthCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthCode = null;
-            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
-            if (parseNode.GetChildNode("content_security_policy_granted") is { } nullNodeContentSecurityPolicyGranted && nullNodeContentSecurityPolicyGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentSecurityPolicyGranted = null;
-            if (parseNode.GetChildNode("content_security_policy_pending") is { } nullNodeContentSecurityPolicyPending && nullNodeContentSecurityPolicyPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentSecurityPolicyPending = null;
-            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
-            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
-            if (parseNode.GetChildNode("endpoints_granted") is { } nullNodeEndpointsGranted && nullNodeEndpointsGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointsGranted = null;
-            if (parseNode.GetChildNode("endpoints_pending") is { } nullNodeEndpointsPending && nullNodeEndpointsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointsPending = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
-            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
-            if (parseNode.GetChildNode("permissions_granted") is { } nullNodePermissionsGranted && nullNodePermissionsGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionsGranted = null;
-            if (parseNode.GetChildNode("permissions_pending") is { } nullNodePermissionsPending && nullNodePermissionsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionsPending = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("app") is null) { _explicitNullValueApp = default!; _explicitNullProperties?.Remove("app"); }
+            else if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
+            if (parseNode.GetChildNode("approval_required") is null) { _explicitNullValueApprovalRequired = default!; _explicitNullProperties?.Remove("approval_required"); }
+            else if (parseNode.GetChildNode("approval_required") is { } nullNodeApprovalRequired && nullNodeApprovalRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalRequired = null;
+            if (parseNode.GetChildNode("auth_code") is null) { _explicitNullValueAuthCode = default!; _explicitNullProperties?.Remove("auth_code"); }
+            else if (parseNode.GetChildNode("auth_code") is { } nullNodeAuthCode && nullNodeAuthCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthCode = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("content_security_policy_granted") is null) { _explicitNullValueContentSecurityPolicyGranted = default!; _explicitNullProperties?.Remove("content_security_policy_granted"); }
+            else if (parseNode.GetChildNode("content_security_policy_granted") is { } nullNodeContentSecurityPolicyGranted && nullNodeContentSecurityPolicyGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentSecurityPolicyGranted = null;
+            if (parseNode.GetChildNode("content_security_policy_pending") is null) { _explicitNullValueContentSecurityPolicyPending = default!; _explicitNullProperties?.Remove("content_security_policy_pending"); }
+            else if (parseNode.GetChildNode("content_security_policy_pending") is { } nullNodeContentSecurityPolicyPending && nullNodeContentSecurityPolicyPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentSecurityPolicyPending = null;
+            if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
+            else if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("created_by") is null) { _explicitNullValueCreatedBy = default!; _explicitNullProperties?.Remove("created_by"); }
+            else if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("endpoints_granted") is null) { _explicitNullValueEndpointsGranted = default!; _explicitNullProperties?.Remove("endpoints_granted"); }
+            else if (parseNode.GetChildNode("endpoints_granted") is { } nullNodeEndpointsGranted && nullNodeEndpointsGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointsGranted = null;
+            if (parseNode.GetChildNode("endpoints_pending") is null) { _explicitNullValueEndpointsPending = default!; _explicitNullProperties?.Remove("endpoints_pending"); }
+            else if (parseNode.GetChildNode("endpoints_pending") is { } nullNodeEndpointsPending && nullNodeEndpointsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointsPending = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("livemode") is null) { _explicitNullValueLivemode = default!; _explicitNullProperties?.Remove("livemode"); }
+            else if (parseNode.GetChildNode("livemode") is { } nullNodeLivemode && nullNodeLivemode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Livemode = null;
+            if (parseNode.GetChildNode("object") is null) { _explicitNullValueObject = default!; _explicitNullProperties?.Remove("object"); }
+            else if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("permissions_granted") is null) { _explicitNullValuePermissionsGranted = default!; _explicitNullProperties?.Remove("permissions_granted"); }
+            else if (parseNode.GetChildNode("permissions_granted") is { } nullNodePermissionsGranted && nullNodePermissionsGranted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionsGranted = null;
+            if (parseNode.GetChildNode("permissions_pending") is null) { _explicitNullValuePermissionsPending = default!; _explicitNullProperties?.Remove("permissions_pending"); }
+            else if (parseNode.GetChildNode("permissions_pending") is { } nullNodePermissionsPending && nullNodePermissionsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionsPending = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>The ID of the account that the app install belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -52,120 +69,120 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of the app installed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public string? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private string? _explicitNullValueApp = default!;
 #nullable restore
 #else
-        public string App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public string App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private string _explicitNullValueApp = default!;
 #endif
         /// <summary>Whether the installer must authorize pending permissions, content security policy entries, or endpoints. For private apps, `approval_required` stays `false`; creating or reauthorizing the install through the API installs the newest completed upload and grants its permissions.</summary>
-        public bool? ApprovalRequired { get => _explicitNullValueApprovalRequired; set { _explicitNullValueApprovalRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_required"); else _explicitNullProperties?.Remove("approval_required"); } }
+        public bool? ApprovalRequired { get => _explicitNullValueApprovalRequired; set { _explicitNullValueApprovalRequired = value; AdditionalData?.Remove("approval_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_required"); else _explicitNullProperties?.Remove("approval_required"); } }
         private bool? _explicitNullValueApprovalRequired = default!;
         /// <summary>The authorization code for an oauth app install.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
+        public string? AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; AdditionalData?.Remove("auth_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
         private string? _explicitNullValueAuthCode = default!;
 #nullable restore
 #else
-        public string AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
+        public string AuthCode { get => _explicitNullValueAuthCode; set { _explicitNullValueAuthCode = value; AdditionalData?.Remove("auth_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_code"); else _explicitNullProperties?.Remove("auth_code"); } }
         private string _explicitNullValueAuthCode = default!;
 #endif
         /// <summary>The distribution channel associated with the app install.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel? _explicitNullValueChannel = default!;
         /// <summary>The content_security_policy_granted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? ContentSecurityPolicyGranted { get => _explicitNullValueContentSecurityPolicyGranted; set { _explicitNullValueContentSecurityPolicyGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_granted"); else _explicitNullProperties?.Remove("content_security_policy_granted"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? ContentSecurityPolicyGranted { get => _explicitNullValueContentSecurityPolicyGranted; set { _explicitNullValueContentSecurityPolicyGranted = value; AdditionalData?.Remove("content_security_policy_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_granted"); else _explicitNullProperties?.Remove("content_security_policy_granted"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? _explicitNullValueContentSecurityPolicyGranted = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy ContentSecurityPolicyGranted { get => _explicitNullValueContentSecurityPolicyGranted; set { _explicitNullValueContentSecurityPolicyGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_granted"); else _explicitNullProperties?.Remove("content_security_policy_granted"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy ContentSecurityPolicyGranted { get => _explicitNullValueContentSecurityPolicyGranted; set { _explicitNullValueContentSecurityPolicyGranted = value; AdditionalData?.Remove("content_security_policy_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_granted"); else _explicitNullProperties?.Remove("content_security_policy_granted"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy _explicitNullValueContentSecurityPolicyGranted = default!;
 #endif
         /// <summary>The content_security_policy_pending property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? ContentSecurityPolicyPending { get => _explicitNullValueContentSecurityPolicyPending; set { _explicitNullValueContentSecurityPolicyPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_pending"); else _explicitNullProperties?.Remove("content_security_policy_pending"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? ContentSecurityPolicyPending { get => _explicitNullValueContentSecurityPolicyPending; set { _explicitNullValueContentSecurityPolicyPending = value; AdditionalData?.Remove("content_security_policy_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_pending"); else _explicitNullProperties?.Remove("content_security_policy_pending"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy? _explicitNullValueContentSecurityPolicyPending = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy ContentSecurityPolicyPending { get => _explicitNullValueContentSecurityPolicyPending; set { _explicitNullValueContentSecurityPolicyPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_pending"); else _explicitNullProperties?.Remove("content_security_policy_pending"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy ContentSecurityPolicyPending { get => _explicitNullValueContentSecurityPolicyPending; set { _explicitNullValueContentSecurityPolicyPending = value; AdditionalData?.Remove("content_security_policy_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_security_policy_pending"); else _explicitNullProperties?.Remove("content_security_policy_pending"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy _explicitNullValueContentSecurityPolicyPending = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
         private int? _explicitNullValueCreated = default!;
         /// <summary>The ID of the embedding platform that created the install, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public string? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private string? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public string CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public string CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private string _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The endpoint URLs authorized by the installer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EndpointsGranted { get => _explicitNullValueEndpointsGranted; set { _explicitNullValueEndpointsGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_granted"); else _explicitNullProperties?.Remove("endpoints_granted"); } }
+        public List<string>? EndpointsGranted { get => _explicitNullValueEndpointsGranted; set { _explicitNullValueEndpointsGranted = value; AdditionalData?.Remove("endpoints_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_granted"); else _explicitNullProperties?.Remove("endpoints_granted"); } }
         private List<string>? _explicitNullValueEndpointsGranted = default!;
 #nullable restore
 #else
-        public List<string> EndpointsGranted { get => _explicitNullValueEndpointsGranted; set { _explicitNullValueEndpointsGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_granted"); else _explicitNullProperties?.Remove("endpoints_granted"); } }
+        public List<string> EndpointsGranted { get => _explicitNullValueEndpointsGranted; set { _explicitNullValueEndpointsGranted = value; AdditionalData?.Remove("endpoints_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_granted"); else _explicitNullProperties?.Remove("endpoints_granted"); } }
         private List<string> _explicitNullValueEndpointsGranted = default!;
 #endif
         /// <summary>The endpoint URLs requested by the latest app version that the installer has not authorized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EndpointsPending { get => _explicitNullValueEndpointsPending; set { _explicitNullValueEndpointsPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_pending"); else _explicitNullProperties?.Remove("endpoints_pending"); } }
+        public List<string>? EndpointsPending { get => _explicitNullValueEndpointsPending; set { _explicitNullValueEndpointsPending = value; AdditionalData?.Remove("endpoints_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_pending"); else _explicitNullProperties?.Remove("endpoints_pending"); } }
         private List<string>? _explicitNullValueEndpointsPending = default!;
 #nullable restore
 #else
-        public List<string> EndpointsPending { get => _explicitNullValueEndpointsPending; set { _explicitNullValueEndpointsPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_pending"); else _explicitNullProperties?.Remove("endpoints_pending"); } }
+        public List<string> EndpointsPending { get => _explicitNullValueEndpointsPending; set { _explicitNullValueEndpointsPending = value; AdditionalData?.Remove("endpoints_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints_pending"); else _explicitNullProperties?.Remove("endpoints_pending"); } }
         private List<string> _explicitNullValueEndpointsPending = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
-        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
+        public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
         private bool? _explicitNullValueLivemode = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallObject? _explicitNullValueObject = default!;
         /// <summary>The permissions authorized by the installer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PermissionsGranted { get => _explicitNullValuePermissionsGranted; set { _explicitNullValuePermissionsGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_granted"); else _explicitNullProperties?.Remove("permissions_granted"); } }
+        public List<string>? PermissionsGranted { get => _explicitNullValuePermissionsGranted; set { _explicitNullValuePermissionsGranted = value; AdditionalData?.Remove("permissions_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_granted"); else _explicitNullProperties?.Remove("permissions_granted"); } }
         private List<string>? _explicitNullValuePermissionsGranted = default!;
 #nullable restore
 #else
-        public List<string> PermissionsGranted { get => _explicitNullValuePermissionsGranted; set { _explicitNullValuePermissionsGranted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_granted"); else _explicitNullProperties?.Remove("permissions_granted"); } }
+        public List<string> PermissionsGranted { get => _explicitNullValuePermissionsGranted; set { _explicitNullValuePermissionsGranted = value; AdditionalData?.Remove("permissions_granted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_granted"); else _explicitNullProperties?.Remove("permissions_granted"); } }
         private List<string> _explicitNullValuePermissionsGranted = default!;
 #endif
         /// <summary>The permissions requested by the latest app version that the installer has not authorized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PermissionsPending { get => _explicitNullValuePermissionsPending; set { _explicitNullValuePermissionsPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_pending"); else _explicitNullProperties?.Remove("permissions_pending"); } }
+        public List<string>? PermissionsPending { get => _explicitNullValuePermissionsPending; set { _explicitNullValuePermissionsPending = value; AdditionalData?.Remove("permissions_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_pending"); else _explicitNullProperties?.Remove("permissions_pending"); } }
         private List<string>? _explicitNullValuePermissionsPending = default!;
 #nullable restore
 #else
-        public List<string> PermissionsPending { get => _explicitNullValuePermissionsPending; set { _explicitNullValuePermissionsPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_pending"); else _explicitNullProperties?.Remove("permissions_pending"); } }
+        public List<string> PermissionsPending { get => _explicitNullValuePermissionsPending; set { _explicitNullValuePermissionsPending = value; AdditionalData?.Remove("permissions_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions_pending"); else _explicitNullProperties?.Remove("permissions_pending"); } }
         private List<string> _explicitNullValuePermissionsPending = default!;
 #endif
         /// <summary>The status of the app install.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AppsInstall"/> and sets the default values.
@@ -196,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "app", n => { App = n.GetStringValue(); } },
                 { "approval_required", n => { ApprovalRequired = n.GetBoolValue(); } },
                 { "auth_code", n => { AuthCode = n.GetStringValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel>(); } },
+                { "channel", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannel = default; _explicitNullProperties?.Remove("channel"); AdditionalData["channel"] = unknown; } else { Channel = parsed; AdditionalData.Remove("channel"); } } },
                 { "content_security_policy_granted", n => { ContentSecurityPolicyGranted = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy.CreateFromDiscriminatorValue); } },
                 { "content_security_policy_pending", n => { ContentSecurityPolicyPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
@@ -205,10 +222,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "endpoints_pending", n => { EndpointsPending = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallObject>(); } },
+                { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "permissions_granted", n => { PermissionsGranted = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "permissions_pending", n => { PermissionsPending = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

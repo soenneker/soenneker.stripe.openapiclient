@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
-            if (parseNode.GetChildNode("previous_attributes") is { } nullNodePreviousAttributes && nullNodePreviousAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousAttributes = null;
+            if (parseNode.GetChildNode("object") is null) { _explicitNullValueObject = default!; _explicitNullProperties?.Remove("object"); }
+            else if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("previous_attributes") is null) { _explicitNullValuePreviousAttributes = default!; _explicitNullProperties?.Remove("previous_attributes"); }
+            else if (parseNode.GetChildNode("previous_attributes") is { } nullNodePreviousAttributes && nullNodePreviousAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousAttributes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Object containing the API resource relevant to the event. For example, an `invoice.created` event will have a full [invoice object](https://docs.stripe.com/api#invoice_object) as the value of the object key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty? _explicitNullValueObject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty _explicitNullValueObject = default!;
 #endif
         /// <summary>Object containing the names of the updated attributes and their values prior to the event (only included in events of type `*.updated`). If an array attribute has any updated elements, this object contains the entire array. In Stripe API versions 2017-04-06 or earlier, an updated array attribute in this object includes only the updated array elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty? PreviousAttributes { get => _explicitNullValuePreviousAttributes; set { _explicitNullValuePreviousAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_attributes"); else _explicitNullProperties?.Remove("previous_attributes"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty? PreviousAttributes { get => _explicitNullValuePreviousAttributes; set { _explicitNullValuePreviousAttributes = value; AdditionalData?.Remove("previous_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_attributes"); else _explicitNullProperties?.Remove("previous_attributes"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty? _explicitNullValuePreviousAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty PreviousAttributes { get => _explicitNullValuePreviousAttributes; set { _explicitNullValuePreviousAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_attributes"); else _explicitNullProperties?.Remove("previous_attributes"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty PreviousAttributes { get => _explicitNullValuePreviousAttributes; set { _explicitNullValuePreviousAttributes = value; AdditionalData?.Remove("previous_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_attributes"); else _explicitNullProperties?.Remove("previous_attributes"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty _explicitNullValuePreviousAttributes = default!;
 #endif
         /// <summary>

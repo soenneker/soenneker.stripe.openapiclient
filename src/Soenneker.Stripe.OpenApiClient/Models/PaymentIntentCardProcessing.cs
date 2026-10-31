@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer_notification") is { } nullNodeCustomerNotification && nullNodeCustomerNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerNotification = null;
+            if (parseNode.GetChildNode("customer_notification") is null) { _explicitNullValueCustomerNotification = default!; _explicitNullProperties?.Remove("customer_notification"); }
+            else if (parseNode.GetChildNode("customer_notification") is { } nullNodeCustomerNotification && nullNodeCustomerNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerNotification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_notification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification? CustomerNotification { get => _explicitNullValueCustomerNotification; set { _explicitNullValueCustomerNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_notification"); else _explicitNullProperties?.Remove("customer_notification"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification? CustomerNotification { get => _explicitNullValueCustomerNotification; set { _explicitNullValueCustomerNotification = value; AdditionalData?.Remove("customer_notification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_notification"); else _explicitNullProperties?.Remove("customer_notification"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification? _explicitNullValueCustomerNotification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification CustomerNotification { get => _explicitNullValueCustomerNotification; set { _explicitNullValueCustomerNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_notification"); else _explicitNullProperties?.Remove("customer_notification"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification CustomerNotification { get => _explicitNullValueCustomerNotification; set { _explicitNullValueCustomerNotification = value; AdditionalData?.Remove("customer_notification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_notification"); else _explicitNullProperties?.Remove("customer_notification"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification _explicitNullValueCustomerNotification = default!;
 #endif
         /// <summary>

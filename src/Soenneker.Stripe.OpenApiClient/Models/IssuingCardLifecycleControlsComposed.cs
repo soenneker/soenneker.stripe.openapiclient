@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancel_after") is { } nullNodeCancelAfter && nullNodeCancelAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelAfter = null;
+            if (parseNode.GetChildNode("cancel_after") is null) { _explicitNullValueCancelAfter = default!; _explicitNullProperties?.Remove("cancel_after"); }
+            else if (parseNode.GetChildNode("cancel_after") is { } nullNodeCancelAfter && nullNodeCancelAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelAfter = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The cancel_after property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions? CancelAfter { get => _explicitNullValueCancelAfter; set { _explicitNullValueCancelAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_after"); else _explicitNullProperties?.Remove("cancel_after"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions? CancelAfter { get => _explicitNullValueCancelAfter; set { _explicitNullValueCancelAfter = value; AdditionalData?.Remove("cancel_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_after"); else _explicitNullProperties?.Remove("cancel_after"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions? _explicitNullValueCancelAfter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions CancelAfter { get => _explicitNullValueCancelAfter; set { _explicitNullValueCancelAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_after"); else _explicitNullProperties?.Remove("cancel_after"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions CancelAfter { get => _explicitNullValueCancelAfter; set { _explicitNullValueCancelAfter = value; AdditionalData?.Remove("cancel_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_after"); else _explicitNullProperties?.Remove("cancel_after"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleConditions _explicitNullValueCancelAfter = default!;
 #endif
         /// <summary>

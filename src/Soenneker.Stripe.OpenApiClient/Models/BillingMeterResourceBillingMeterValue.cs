@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_payload_key") is { } nullNodeEventPayloadKey && nullNodeEventPayloadKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventPayloadKey = null;
+            if (parseNode.GetChildNode("event_payload_key") is null) { _explicitNullValueEventPayloadKey = default!; _explicitNullProperties?.Remove("event_payload_key"); }
+            else if (parseNode.GetChildNode("event_payload_key") is { } nullNodeEventPayloadKey && nullNodeEventPayloadKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventPayloadKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The key in the meter event payload to use as the value for this meter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventPayloadKey { get => _explicitNullValueEventPayloadKey; set { _explicitNullValueEventPayloadKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload_key"); else _explicitNullProperties?.Remove("event_payload_key"); } }
+        public string? EventPayloadKey { get => _explicitNullValueEventPayloadKey; set { _explicitNullValueEventPayloadKey = value; AdditionalData?.Remove("event_payload_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload_key"); else _explicitNullProperties?.Remove("event_payload_key"); } }
         private string? _explicitNullValueEventPayloadKey = default!;
 #nullable restore
 #else
-        public string EventPayloadKey { get => _explicitNullValueEventPayloadKey; set { _explicitNullValueEventPayloadKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload_key"); else _explicitNullProperties?.Remove("event_payload_key"); } }
+        public string EventPayloadKey { get => _explicitNullValueEventPayloadKey; set { _explicitNullValueEventPayloadKey = value; AdditionalData?.Remove("event_payload_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload_key"); else _explicitNullProperties?.Remove("event_payload_key"); } }
         private string _explicitNullValueEventPayloadKey = default!;
 #endif
         /// <summary>

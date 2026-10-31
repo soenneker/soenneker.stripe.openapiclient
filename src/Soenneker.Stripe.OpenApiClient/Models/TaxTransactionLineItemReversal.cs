@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("original_line_item") is { } nullNodeOriginalLineItem && nullNodeOriginalLineItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalLineItem = null;
+            if (parseNode.GetChildNode("original_line_item") is null) { _explicitNullValueOriginalLineItem = default!; _explicitNullProperties?.Remove("original_line_item"); }
+            else if (parseNode.GetChildNode("original_line_item") is { } nullNodeOriginalLineItem && nullNodeOriginalLineItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalLineItem = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The `id` of the line item to reverse in the original transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalLineItem { get => _explicitNullValueOriginalLineItem; set { _explicitNullValueOriginalLineItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_line_item"); else _explicitNullProperties?.Remove("original_line_item"); } }
+        public string? OriginalLineItem { get => _explicitNullValueOriginalLineItem; set { _explicitNullValueOriginalLineItem = value; AdditionalData?.Remove("original_line_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_line_item"); else _explicitNullProperties?.Remove("original_line_item"); } }
         private string? _explicitNullValueOriginalLineItem = default!;
 #nullable restore
 #else
-        public string OriginalLineItem { get => _explicitNullValueOriginalLineItem; set { _explicitNullValueOriginalLineItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_line_item"); else _explicitNullProperties?.Remove("original_line_item"); } }
+        public string OriginalLineItem { get => _explicitNullValueOriginalLineItem; set { _explicitNullValueOriginalLineItem = value; AdditionalData?.Remove("original_line_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_line_item"); else _explicitNullProperties?.Remove("original_line_item"); } }
         private string _explicitNullValueOriginalLineItem = default!;
 #endif
         /// <summary>

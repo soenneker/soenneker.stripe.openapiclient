@@ -17,21 +17,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("undeliverable_reason") is { } nullNodeUndeliverableReason && nullNodeUndeliverableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableReason = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("undeliverable_reason") is null) { _explicitNullValueUndeliverableReason = default!; _explicitNullProperties?.Remove("undeliverable_reason"); }
+            else if (parseNode.GetChildNode("undeliverable_reason") is { } nullNodeUndeliverableReason && nullNodeUndeliverableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method by which the fraud challenge was delivered to the cardholder.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel? _explicitNullValueChannel = default!;
         /// <summary>The status of the fraud challenge.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus? _explicitNullValueStatus = default!;
         /// <summary>If the challenge is not deliverable, the reason why.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason? UndeliverableReason { get => _explicitNullValueUndeliverableReason; set { _explicitNullValueUndeliverableReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("undeliverable_reason"); else _explicitNullProperties?.Remove("undeliverable_reason"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason? UndeliverableReason { get => _explicitNullValueUndeliverableReason; set { _explicitNullValueUndeliverableReason = value; AdditionalData?.Remove("undeliverable_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("undeliverable_reason"); else _explicitNullProperties?.Remove("undeliverable_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason? _explicitNullValueUndeliverableReason = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge"/> and sets the default values.
@@ -58,9 +61,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>(); } },
-                { "undeliverable_reason", n => { UndeliverableReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>(); } },
+                { "channel", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannel = default; _explicitNullProperties?.Remove("channel"); AdditionalData["channel"] = unknown; } else { Channel = parsed; AdditionalData.Remove("channel"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "undeliverable_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUndeliverableReason = default; _explicitNullProperties?.Remove("undeliverable_reason"); AdditionalData["undeliverable_reason"] = unknown; } else { UndeliverableReason = parsed; AdditionalData.Remove("undeliverable_reason"); } } },
             };
         }
         /// <summary>

@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("atm_fee") is { } nullNodeAtmFee && nullNodeAtmFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtmFee = null;
-            if (parseNode.GetChildNode("cashback_amount") is { } nullNodeCashbackAmount && nullNodeCashbackAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashbackAmount = null;
+            if (parseNode.GetChildNode("atm_fee") is null) { _explicitNullValueAtmFee = default!; _explicitNullProperties?.Remove("atm_fee"); }
+            else if (parseNode.GetChildNode("atm_fee") is { } nullNodeAtmFee && nullNodeAtmFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtmFee = null;
+            if (parseNode.GetChildNode("cashback_amount") is null) { _explicitNullValueCashbackAmount = default!; _explicitNullProperties?.Remove("cashback_amount"); }
+            else if (parseNode.GetChildNode("cashback_amount") is { } nullNodeCashbackAmount && nullNodeCashbackAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashbackAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The atm_fee property</summary>
-        public int? AtmFee { get => _explicitNullValueAtmFee; set { _explicitNullValueAtmFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("atm_fee"); else _explicitNullProperties?.Remove("atm_fee"); } }
+        public int? AtmFee { get => _explicitNullValueAtmFee; set { _explicitNullValueAtmFee = value; AdditionalData?.Remove("atm_fee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("atm_fee"); else _explicitNullProperties?.Remove("atm_fee"); } }
         private int? _explicitNullValueAtmFee = default!;
         /// <summary>The cashback_amount property</summary>
-        public int? CashbackAmount { get => _explicitNullValueCashbackAmount; set { _explicitNullValueCashbackAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashback_amount"); else _explicitNullProperties?.Remove("cashback_amount"); } }
+        public int? CashbackAmount { get => _explicitNullValueCashbackAmount; set { _explicitNullValueCashbackAmount = value; AdditionalData?.Remove("cashback_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cashback_amount"); else _explicitNullProperties?.Remove("cashback_amount"); } }
         private int? _explicitNullValueCashbackAmount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestAmountDetails"/> and sets the default values.

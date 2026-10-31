@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("delay_days_override") is { } nullNodeDelayDaysOverride && nullNodeDelayDaysOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayDaysOverride = null;
-            if (parseNode.GetChildNode("start_of_day") is { } nullNodeStartOfDay && nullNodeStartOfDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOfDay = null;
+            if (parseNode.GetChildNode("delay_days_override") is null) { _explicitNullValueDelayDaysOverride = default!; _explicitNullProperties?.Remove("delay_days_override"); }
+            else if (parseNode.GetChildNode("delay_days_override") is { } nullNodeDelayDaysOverride && nullNodeDelayDaysOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayDaysOverride = null;
+            if (parseNode.GetChildNode("start_of_day") is null) { _explicitNullValueStartOfDay = default!; _explicitNullProperties?.Remove("start_of_day"); }
+            else if (parseNode.GetChildNode("start_of_day") is { } nullNodeStartOfDay && nullNodeStartOfDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOfDay = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The delay_days_override property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride? DelayDaysOverride { get => _explicitNullValueDelayDaysOverride; set { _explicitNullValueDelayDaysOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay_days_override"); else _explicitNullProperties?.Remove("delay_days_override"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride? DelayDaysOverride { get => _explicitNullValueDelayDaysOverride; set { _explicitNullValueDelayDaysOverride = value; AdditionalData?.Remove("delay_days_override"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay_days_override"); else _explicitNullProperties?.Remove("delay_days_override"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride? _explicitNullValueDelayDaysOverride = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride DelayDaysOverride { get => _explicitNullValueDelayDaysOverride; set { _explicitNullValueDelayDaysOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay_days_override"); else _explicitNullProperties?.Remove("delay_days_override"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride DelayDaysOverride { get => _explicitNullValueDelayDaysOverride; set { _explicitNullValueDelayDaysOverride = value; AdditionalData?.Remove("delay_days_override"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay_days_override"); else _explicitNullProperties?.Remove("delay_days_override"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingDelayDaysOverride _explicitNullValueDelayDaysOverride = default!;
 #endif
         /// <summary>The start_of_day property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay? StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay? StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay? _explicitNullValueStartOfDay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsSettlementTimingStartOfDay _explicitNullValueStartOfDay = default!;
 #endif
         /// <summary>

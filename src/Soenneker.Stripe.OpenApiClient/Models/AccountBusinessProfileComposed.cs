@@ -18,19 +18,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("annual_revenue") is { } nullNodeAnnualRevenue && nullNodeAnnualRevenue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnualRevenue = null;
-            if (parseNode.GetChildNode("estimated_worker_count") is { } nullNodeEstimatedWorkerCount && nullNodeEstimatedWorkerCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedWorkerCount = null;
-            if (parseNode.GetChildNode("mcc") is { } nullNodeMcc && nullNodeMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mcc = null;
-            if (parseNode.GetChildNode("minority_owned_business_designation") is { } nullNodeMinorityOwnedBusinessDesignation && nullNodeMinorityOwnedBusinessDesignation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinorityOwnedBusinessDesignation = null;
-            if (parseNode.GetChildNode("monthly_estimated_revenue") is { } nullNodeMonthlyEstimatedRevenue && nullNodeMonthlyEstimatedRevenue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyEstimatedRevenue = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
-            if (parseNode.GetChildNode("specified_commercial_transactions_act_url") is { } nullNodeSpecifiedCommercialTransactionsActUrl && nullNodeSpecifiedCommercialTransactionsActUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecifiedCommercialTransactionsActUrl = null;
-            if (parseNode.GetChildNode("support_address") is { } nullNodeSupportAddress && nullNodeSupportAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportAddress = null;
-            if (parseNode.GetChildNode("support_email") is { } nullNodeSupportEmail && nullNodeSupportEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportEmail = null;
-            if (parseNode.GetChildNode("support_phone") is { } nullNodeSupportPhone && nullNodeSupportPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportPhone = null;
-            if (parseNode.GetChildNode("support_url") is { } nullNodeSupportUrl && nullNodeSupportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportUrl = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("annual_revenue") is null) { _explicitNullValueAnnualRevenue = default!; _explicitNullProperties?.Remove("annual_revenue"); }
+            else if (parseNode.GetChildNode("annual_revenue") is { } nullNodeAnnualRevenue && nullNodeAnnualRevenue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnualRevenue = null;
+            if (parseNode.GetChildNode("estimated_worker_count") is null) { _explicitNullValueEstimatedWorkerCount = default!; _explicitNullProperties?.Remove("estimated_worker_count"); }
+            else if (parseNode.GetChildNode("estimated_worker_count") is { } nullNodeEstimatedWorkerCount && nullNodeEstimatedWorkerCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedWorkerCount = null;
+            if (parseNode.GetChildNode("mcc") is null) { _explicitNullValueMcc = default!; _explicitNullProperties?.Remove("mcc"); }
+            else if (parseNode.GetChildNode("mcc") is { } nullNodeMcc && nullNodeMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mcc = null;
+            if (parseNode.GetChildNode("minority_owned_business_designation") is null) { _explicitNullValueMinorityOwnedBusinessDesignation = default!; _explicitNullProperties?.Remove("minority_owned_business_designation"); }
+            else if (parseNode.GetChildNode("minority_owned_business_designation") is { } nullNodeMinorityOwnedBusinessDesignation && nullNodeMinorityOwnedBusinessDesignation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinorityOwnedBusinessDesignation = null;
+            if (parseNode.GetChildNode("monthly_estimated_revenue") is null) { _explicitNullValueMonthlyEstimatedRevenue = default!; _explicitNullProperties?.Remove("monthly_estimated_revenue"); }
+            else if (parseNode.GetChildNode("monthly_estimated_revenue") is { } nullNodeMonthlyEstimatedRevenue && nullNodeMonthlyEstimatedRevenue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyEstimatedRevenue = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("product_description") is null) { _explicitNullValueProductDescription = default!; _explicitNullProperties?.Remove("product_description"); }
+            else if (parseNode.GetChildNode("product_description") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("specified_commercial_transactions_act_url") is null) { _explicitNullValueSpecifiedCommercialTransactionsActUrl = default!; _explicitNullProperties?.Remove("specified_commercial_transactions_act_url"); }
+            else if (parseNode.GetChildNode("specified_commercial_transactions_act_url") is { } nullNodeSpecifiedCommercialTransactionsActUrl && nullNodeSpecifiedCommercialTransactionsActUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecifiedCommercialTransactionsActUrl = null;
+            if (parseNode.GetChildNode("support_address") is null) { _explicitNullValueSupportAddress = default!; _explicitNullProperties?.Remove("support_address"); }
+            else if (parseNode.GetChildNode("support_address") is { } nullNodeSupportAddress && nullNodeSupportAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportAddress = null;
+            if (parseNode.GetChildNode("support_email") is null) { _explicitNullValueSupportEmail = default!; _explicitNullProperties?.Remove("support_email"); }
+            else if (parseNode.GetChildNode("support_email") is { } nullNodeSupportEmail && nullNodeSupportEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportEmail = null;
+            if (parseNode.GetChildNode("support_phone") is null) { _explicitNullValueSupportPhone = default!; _explicitNullProperties?.Remove("support_phone"); }
+            else if (parseNode.GetChildNode("support_phone") is { } nullNodeSupportPhone && nullNodeSupportPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportPhone = null;
+            if (parseNode.GetChildNode("support_url") is null) { _explicitNullValueSupportUrl = default!; _explicitNullProperties?.Remove("support_url"); }
+            else if (parseNode.GetChildNode("support_url") is { } nullNodeSupportUrl && nullNodeSupportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportUrl = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,124 +51,124 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The applicant&apos;s gross annual revenue for its preceding fiscal year.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue? AnnualRevenue { get => _explicitNullValueAnnualRevenue; set { _explicitNullValueAnnualRevenue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annual_revenue"); else _explicitNullProperties?.Remove("annual_revenue"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue? AnnualRevenue { get => _explicitNullValueAnnualRevenue; set { _explicitNullValueAnnualRevenue = value; AdditionalData?.Remove("annual_revenue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annual_revenue"); else _explicitNullProperties?.Remove("annual_revenue"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue? _explicitNullValueAnnualRevenue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue AnnualRevenue { get => _explicitNullValueAnnualRevenue; set { _explicitNullValueAnnualRevenue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annual_revenue"); else _explicitNullProperties?.Remove("annual_revenue"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue AnnualRevenue { get => _explicitNullValueAnnualRevenue; set { _explicitNullValueAnnualRevenue = value; AdditionalData?.Remove("annual_revenue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annual_revenue"); else _explicitNullProperties?.Remove("annual_revenue"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileAnnualRevenue _explicitNullValueAnnualRevenue = default!;
 #endif
         /// <summary>An estimated upper bound of employees, contractors, vendors, etc. currently working for the business.</summary>
-        public int? EstimatedWorkerCount { get => _explicitNullValueEstimatedWorkerCount; set { _explicitNullValueEstimatedWorkerCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_worker_count"); else _explicitNullProperties?.Remove("estimated_worker_count"); } }
+        public int? EstimatedWorkerCount { get => _explicitNullValueEstimatedWorkerCount; set { _explicitNullValueEstimatedWorkerCount = value; AdditionalData?.Remove("estimated_worker_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_worker_count"); else _explicitNullProperties?.Remove("estimated_worker_count"); } }
         private int? _explicitNullValueEstimatedWorkerCount = default!;
         /// <summary>[The merchant category code for the account](/connect/setting-mcc). MCCs are used to classify businesses based on the goods or services they provide.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
+        public string? Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; AdditionalData?.Remove("mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
         private string? _explicitNullValueMcc = default!;
 #nullable restore
 #else
-        public string Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
+        public string Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; AdditionalData?.Remove("mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
         private string _explicitNullValueMcc = default!;
 #endif
         /// <summary>Whether the business is a minority-owned, women-owned, and/or LGBTQI+ -owned business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?>? MinorityOwnedBusinessDesignation { get => _explicitNullValueMinorityOwnedBusinessDesignation; set { _explicitNullValueMinorityOwnedBusinessDesignation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minority_owned_business_designation"); else _explicitNullProperties?.Remove("minority_owned_business_designation"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?>? MinorityOwnedBusinessDesignation { get => _explicitNullValueMinorityOwnedBusinessDesignation; set { _explicitNullValueMinorityOwnedBusinessDesignation = value; AdditionalData?.Remove("minority_owned_business_designation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minority_owned_business_designation"); else _explicitNullProperties?.Remove("minority_owned_business_designation"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?>? _explicitNullValueMinorityOwnedBusinessDesignation = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?> MinorityOwnedBusinessDesignation { get => _explicitNullValueMinorityOwnedBusinessDesignation; set { _explicitNullValueMinorityOwnedBusinessDesignation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minority_owned_business_designation"); else _explicitNullProperties?.Remove("minority_owned_business_designation"); } }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?> MinorityOwnedBusinessDesignation { get => _explicitNullValueMinorityOwnedBusinessDesignation; set { _explicitNullValueMinorityOwnedBusinessDesignation = value; AdditionalData?.Remove("minority_owned_business_designation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minority_owned_business_designation"); else _explicitNullProperties?.Remove("minority_owned_business_designation"); } }
         private List<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileMinorityOwnedBusinessDesignationItem?> _explicitNullValueMinorityOwnedBusinessDesignation = default!;
 #endif
         /// <summary>The monthly_estimated_revenue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue? MonthlyEstimatedRevenue { get => _explicitNullValueMonthlyEstimatedRevenue; set { _explicitNullValueMonthlyEstimatedRevenue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_estimated_revenue"); else _explicitNullProperties?.Remove("monthly_estimated_revenue"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue? MonthlyEstimatedRevenue { get => _explicitNullValueMonthlyEstimatedRevenue; set { _explicitNullValueMonthlyEstimatedRevenue = value; AdditionalData?.Remove("monthly_estimated_revenue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_estimated_revenue"); else _explicitNullProperties?.Remove("monthly_estimated_revenue"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue? _explicitNullValueMonthlyEstimatedRevenue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue MonthlyEstimatedRevenue { get => _explicitNullValueMonthlyEstimatedRevenue; set { _explicitNullValueMonthlyEstimatedRevenue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_estimated_revenue"); else _explicitNullProperties?.Remove("monthly_estimated_revenue"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue MonthlyEstimatedRevenue { get => _explicitNullValueMonthlyEstimatedRevenue; set { _explicitNullValueMonthlyEstimatedRevenue = value; AdditionalData?.Remove("monthly_estimated_revenue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_estimated_revenue"); else _explicitNullProperties?.Remove("monthly_estimated_revenue"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue _explicitNullValueMonthlyEstimatedRevenue = default!;
 #endif
         /// <summary>The customer-facing business name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Internal-only description of the product sold or service provided by the business. It&apos;s used by Stripe for risk and underwriting purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("product_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
         private string? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
+        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("product_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_description"); else _explicitNullProperties?.Remove("product_description"); } }
         private string _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>A link to the business&apos;s publicly available terms related to the Specified Commercial Transaction Act. Only used for accounts in Japan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecifiedCommercialTransactionsActUrl { get => _explicitNullValueSpecifiedCommercialTransactionsActUrl; set { _explicitNullValueSpecifiedCommercialTransactionsActUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specified_commercial_transactions_act_url"); else _explicitNullProperties?.Remove("specified_commercial_transactions_act_url"); } }
+        public string? SpecifiedCommercialTransactionsActUrl { get => _explicitNullValueSpecifiedCommercialTransactionsActUrl; set { _explicitNullValueSpecifiedCommercialTransactionsActUrl = value; AdditionalData?.Remove("specified_commercial_transactions_act_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specified_commercial_transactions_act_url"); else _explicitNullProperties?.Remove("specified_commercial_transactions_act_url"); } }
         private string? _explicitNullValueSpecifiedCommercialTransactionsActUrl = default!;
 #nullable restore
 #else
-        public string SpecifiedCommercialTransactionsActUrl { get => _explicitNullValueSpecifiedCommercialTransactionsActUrl; set { _explicitNullValueSpecifiedCommercialTransactionsActUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specified_commercial_transactions_act_url"); else _explicitNullProperties?.Remove("specified_commercial_transactions_act_url"); } }
+        public string SpecifiedCommercialTransactionsActUrl { get => _explicitNullValueSpecifiedCommercialTransactionsActUrl; set { _explicitNullValueSpecifiedCommercialTransactionsActUrl = value; AdditionalData?.Remove("specified_commercial_transactions_act_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specified_commercial_transactions_act_url"); else _explicitNullProperties?.Remove("specified_commercial_transactions_act_url"); } }
         private string _explicitNullValueSpecifiedCommercialTransactionsActUrl = default!;
 #endif
         /// <summary>A publicly available mailing address for sending support issues to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress? SupportAddress { get => _explicitNullValueSupportAddress; set { _explicitNullValueSupportAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_address"); else _explicitNullProperties?.Remove("support_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress? SupportAddress { get => _explicitNullValueSupportAddress; set { _explicitNullValueSupportAddress = value; AdditionalData?.Remove("support_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_address"); else _explicitNullProperties?.Remove("support_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress? _explicitNullValueSupportAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress SupportAddress { get => _explicitNullValueSupportAddress; set { _explicitNullValueSupportAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_address"); else _explicitNullProperties?.Remove("support_address"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress SupportAddress { get => _explicitNullValueSupportAddress; set { _explicitNullValueSupportAddress = value; AdditionalData?.Remove("support_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_address"); else _explicitNullProperties?.Remove("support_address"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress _explicitNullValueSupportAddress = default!;
 #endif
         /// <summary>A publicly available email address for sending support issues to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportEmail { get => _explicitNullValueSupportEmail; set { _explicitNullValueSupportEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_email"); else _explicitNullProperties?.Remove("support_email"); } }
+        public string? SupportEmail { get => _explicitNullValueSupportEmail; set { _explicitNullValueSupportEmail = value; AdditionalData?.Remove("support_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_email"); else _explicitNullProperties?.Remove("support_email"); } }
         private string? _explicitNullValueSupportEmail = default!;
 #nullable restore
 #else
-        public string SupportEmail { get => _explicitNullValueSupportEmail; set { _explicitNullValueSupportEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_email"); else _explicitNullProperties?.Remove("support_email"); } }
+        public string SupportEmail { get => _explicitNullValueSupportEmail; set { _explicitNullValueSupportEmail = value; AdditionalData?.Remove("support_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_email"); else _explicitNullProperties?.Remove("support_email"); } }
         private string _explicitNullValueSupportEmail = default!;
 #endif
         /// <summary>A publicly available phone number to call with support issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportPhone { get => _explicitNullValueSupportPhone; set { _explicitNullValueSupportPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_phone"); else _explicitNullProperties?.Remove("support_phone"); } }
+        public string? SupportPhone { get => _explicitNullValueSupportPhone; set { _explicitNullValueSupportPhone = value; AdditionalData?.Remove("support_phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_phone"); else _explicitNullProperties?.Remove("support_phone"); } }
         private string? _explicitNullValueSupportPhone = default!;
 #nullable restore
 #else
-        public string SupportPhone { get => _explicitNullValueSupportPhone; set { _explicitNullValueSupportPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_phone"); else _explicitNullProperties?.Remove("support_phone"); } }
+        public string SupportPhone { get => _explicitNullValueSupportPhone; set { _explicitNullValueSupportPhone = value; AdditionalData?.Remove("support_phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_phone"); else _explicitNullProperties?.Remove("support_phone"); } }
         private string _explicitNullValueSupportPhone = default!;
 #endif
         /// <summary>A publicly available website for handling support issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportUrl { get => _explicitNullValueSupportUrl; set { _explicitNullValueSupportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_url"); else _explicitNullProperties?.Remove("support_url"); } }
+        public string? SupportUrl { get => _explicitNullValueSupportUrl; set { _explicitNullValueSupportUrl = value; AdditionalData?.Remove("support_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_url"); else _explicitNullProperties?.Remove("support_url"); } }
         private string? _explicitNullValueSupportUrl = default!;
 #nullable restore
 #else
-        public string SupportUrl { get => _explicitNullValueSupportUrl; set { _explicitNullValueSupportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_url"); else _explicitNullProperties?.Remove("support_url"); } }
+        public string SupportUrl { get => _explicitNullValueSupportUrl; set { _explicitNullValueSupportUrl = value; AdditionalData?.Remove("support_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_url"); else _explicitNullProperties?.Remove("support_url"); } }
         private string _explicitNullValueSupportUrl = default!;
 #endif
         /// <summary>The business&apos;s publicly available website.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

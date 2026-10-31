@@ -18,17 +18,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
-            if (parseNode.GetChildNode("future_requirements") is { } nullNodeFutureRequirements && nullNodeFutureRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureRequirements = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("future_requirements") is null) { _explicitNullValueFutureRequirements = default!; _explicitNullProperties?.Remove("future_requirements"); }
+            else if (parseNode.GetChildNode("future_requirements") is { } nullNodeFutureRequirements && nullNodeFutureRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureRequirements = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fields property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFields? _explicitNullValueFields = default!;
         /// <summary>The future_requirements property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFutureRequirements? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFutureRequirements? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFutureRequirements? _explicitNullValueFutureRequirements = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptions"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFields>(); } },
-                { "future_requirements", n => { FutureRequirements = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFutureRequirements>(); } },
+                { "fields", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFields>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFields = default; _explicitNullProperties?.Remove("fields"); AdditionalData["fields"] = unknown; } else { Fields = parsed; AdditionalData.Remove("fields"); } } },
+                { "future_requirements", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountLinksXWwwFormUrlencodedRequestCollectionOptionsFutureRequirements>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFutureRequirements = default; _explicitNullProperties?.Remove("future_requirements"); AdditionalData["future_requirements"] = unknown; } else { FutureRequirements = parsed; AdditionalData.Remove("future_requirements"); } } },
             };
         }
         /// <summary>

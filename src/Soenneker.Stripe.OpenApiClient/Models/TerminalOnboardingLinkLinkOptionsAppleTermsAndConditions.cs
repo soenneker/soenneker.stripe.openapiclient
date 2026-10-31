@@ -18,23 +18,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_relinking") is { } nullNodeAllowRelinking && nullNodeAllowRelinking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRelinking = null;
-            if (parseNode.GetChildNode("merchant_display_name") is { } nullNodeMerchantDisplayName && nullNodeMerchantDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantDisplayName = null;
+            if (parseNode.GetChildNode("allow_relinking") is null) { _explicitNullValueAllowRelinking = default!; _explicitNullProperties?.Remove("allow_relinking"); }
+            else if (parseNode.GetChildNode("allow_relinking") is { } nullNodeAllowRelinking && nullNodeAllowRelinking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowRelinking = null;
+            if (parseNode.GetChildNode("merchant_display_name") is null) { _explicitNullValueMerchantDisplayName = default!; _explicitNullProperties?.Remove("merchant_display_name"); }
+            else if (parseNode.GetChildNode("merchant_display_name") is { } nullNodeMerchantDisplayName && nullNodeMerchantDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantDisplayName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the link should also support users relinking their Apple account.</summary>
-        public bool? AllowRelinking { get => _explicitNullValueAllowRelinking; set { _explicitNullValueAllowRelinking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_relinking"); else _explicitNullProperties?.Remove("allow_relinking"); } }
+        public bool? AllowRelinking { get => _explicitNullValueAllowRelinking; set { _explicitNullValueAllowRelinking = value; AdditionalData?.Remove("allow_relinking"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_relinking"); else _explicitNullProperties?.Remove("allow_relinking"); } }
         private bool? _explicitNullValueAllowRelinking = default!;
         /// <summary>The business name of the merchant accepting Apple&apos;s Terms and Conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
+        public string? MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; AdditionalData?.Remove("merchant_display_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
         private string? _explicitNullValueMerchantDisplayName = default!;
 #nullable restore
 #else
-        public string MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
+        public string MerchantDisplayName { get => _explicitNullValueMerchantDisplayName; set { _explicitNullValueMerchantDisplayName = value; AdditionalData?.Remove("merchant_display_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_display_name"); else _explicitNullProperties?.Remove("merchant_display_name"); } }
         private string _explicitNullValueMerchantDisplayName = default!;
 #endif
         /// <summary>

@@ -18,19 +18,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acquiring_institution_id") is { } nullNodeAcquiringInstitutionId && nullNodeAcquiringInstitutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquiringInstitutionId = null;
-            if (parseNode.GetChildNode("system_trace_audit_number") is { } nullNodeSystemTraceAuditNumber && nullNodeSystemTraceAuditNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemTraceAuditNumber = null;
-            if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+            if (parseNode.GetChildNode("acquiring_institution_id") is null) { _explicitNullValueAcquiringInstitutionId = default!; _explicitNullProperties?.Remove("acquiring_institution_id"); }
+            else if (parseNode.GetChildNode("acquiring_institution_id") is { } nullNodeAcquiringInstitutionId && nullNodeAcquiringInstitutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquiringInstitutionId = null;
+            if (parseNode.GetChildNode("system_trace_audit_number") is null) { _explicitNullValueSystemTraceAuditNumber = default!; _explicitNullProperties?.Remove("system_trace_audit_number"); }
+            else if (parseNode.GetChildNode("system_trace_audit_number") is { } nullNodeSystemTraceAuditNumber && nullNodeSystemTraceAuditNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemTraceAuditNumber = null;
+            if (parseNode.GetChildNode("transaction_id") is null) { _explicitNullValueTransactionId = default!; _explicitNullProperties?.Remove("transaction_id"); }
+            else if (parseNode.GetChildNode("transaction_id") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
         }
 
         /// <summary>Identifier assigned to the acquirer by the card network. Sometimes this value is not provided by the network; in this case, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        public string? AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; AdditionalData?.Remove("acquiring_institution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
         private string? _explicitNullValueAcquiringInstitutionId = default!;
 #nullable restore
 #else
-        public string AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
+        public string AcquiringInstitutionId { get => _explicitNullValueAcquiringInstitutionId; set { _explicitNullValueAcquiringInstitutionId = value; AdditionalData?.Remove("acquiring_institution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquiring_institution_id"); else _explicitNullProperties?.Remove("acquiring_institution_id"); } }
         private string _explicitNullValueAcquiringInstitutionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,21 +41,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The System Trace Audit Number (STAN) is a 6-digit identifier assigned by the acquirer. Prefer `network_data.transaction_id` if present, unless you have special requirements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
+        public string? SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; AdditionalData?.Remove("system_trace_audit_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
         private string? _explicitNullValueSystemTraceAuditNumber = default!;
 #nullable restore
 #else
-        public string SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
+        public string SystemTraceAuditNumber { get => _explicitNullValueSystemTraceAuditNumber; set { _explicitNullValueSystemTraceAuditNumber = value; AdditionalData?.Remove("system_trace_audit_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_trace_audit_number"); else _explicitNullProperties?.Remove("system_trace_audit_number"); } }
         private string _explicitNullValueSystemTraceAuditNumber = default!;
 #endif
         /// <summary>Unique identifier for the authorization assigned by the card network used to match subsequent messages, disputes, and transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; AdditionalData?.Remove("transaction_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
         private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; AdditionalData?.Remove("transaction_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_id"); else _explicitNullProperties?.Remove("transaction_id"); } }
         private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>

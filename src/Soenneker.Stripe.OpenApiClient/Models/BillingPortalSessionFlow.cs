@@ -18,12 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("after_completion") is { } nullNodeAfterCompletion && nullNodeAfterCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterCompletion = null;
-            if (parseNode.GetChildNode("customer_update") is { } nullNodeCustomerUpdate && nullNodeCustomerUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerUpdate = null;
-            if (parseNode.GetChildNode("subscription_cancel") is { } nullNodeSubscriptionCancel && nullNodeSubscriptionCancel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionCancel = null;
-            if (parseNode.GetChildNode("subscription_update") is { } nullNodeSubscriptionUpdate && nullNodeSubscriptionUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUpdate = null;
-            if (parseNode.GetChildNode("subscription_update_confirm") is { } nullNodeSubscriptionUpdateConfirm && nullNodeSubscriptionUpdateConfirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUpdateConfirm = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("after_completion") is null) { _explicitNullValueAfterCompletion = default!; _explicitNullProperties?.Remove("after_completion"); }
+            else if (parseNode.GetChildNode("after_completion") is { } nullNodeAfterCompletion && nullNodeAfterCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterCompletion = null;
+            if (parseNode.GetChildNode("customer_update") is null) { _explicitNullValueCustomerUpdate = default!; _explicitNullProperties?.Remove("customer_update"); }
+            else if (parseNode.GetChildNode("customer_update") is { } nullNodeCustomerUpdate && nullNodeCustomerUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerUpdate = null;
+            if (parseNode.GetChildNode("subscription_cancel") is null) { _explicitNullValueSubscriptionCancel = default!; _explicitNullProperties?.Remove("subscription_cancel"); }
+            else if (parseNode.GetChildNode("subscription_cancel") is { } nullNodeSubscriptionCancel && nullNodeSubscriptionCancel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionCancel = null;
+            if (parseNode.GetChildNode("subscription_update") is null) { _explicitNullValueSubscriptionUpdate = default!; _explicitNullProperties?.Remove("subscription_update"); }
+            else if (parseNode.GetChildNode("subscription_update") is { } nullNodeSubscriptionUpdate && nullNodeSubscriptionUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUpdate = null;
+            if (parseNode.GetChildNode("subscription_update_confirm") is null) { _explicitNullValueSubscriptionUpdateConfirm = default!; _explicitNullProperties?.Remove("subscription_update_confirm"); }
+            else if (parseNode.GetChildNode("subscription_update_confirm") is { } nullNodeSubscriptionUpdateConfirm && nullNodeSubscriptionUpdateConfirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUpdateConfirm = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,55 +37,55 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The after_completion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion? AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion? AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; AdditionalData?.Remove("after_completion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion? _explicitNullValueAfterCompletion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion AfterCompletion { get => _explicitNullValueAfterCompletion; set { _explicitNullValueAfterCompletion = value; AdditionalData?.Remove("after_completion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_completion"); else _explicitNullProperties?.Remove("after_completion"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion _explicitNullValueAfterCompletion = default!;
 #endif
         /// <summary>Configuration when `flow.type=customer_update`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed? CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed? CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; AdditionalData?.Remove("customer_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed? _explicitNullValueCustomerUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed CustomerUpdate { get => _explicitNullValueCustomerUpdate; set { _explicitNullValueCustomerUpdate = value; AdditionalData?.Remove("customer_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_update"); else _explicitNullProperties?.Remove("customer_update"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed _explicitNullValueCustomerUpdate = default!;
 #endif
         /// <summary>Configuration when `flow.type=subscription_cancel`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed? SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed? SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; AdditionalData?.Remove("subscription_cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed? _explicitNullValueSubscriptionCancel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed SubscriptionCancel { get => _explicitNullValueSubscriptionCancel; set { _explicitNullValueSubscriptionCancel = value; AdditionalData?.Remove("subscription_cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_cancel"); else _explicitNullProperties?.Remove("subscription_cancel"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed _explicitNullValueSubscriptionCancel = default!;
 #endif
         /// <summary>Configuration when `flow.type=subscription_update`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed? SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed? SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; AdditionalData?.Remove("subscription_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed? _explicitNullValueSubscriptionUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed SubscriptionUpdate { get => _explicitNullValueSubscriptionUpdate; set { _explicitNullValueSubscriptionUpdate = value; AdditionalData?.Remove("subscription_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update"); else _explicitNullProperties?.Remove("subscription_update"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed _explicitNullValueSubscriptionUpdate = default!;
 #endif
         /// <summary>Configuration when `flow.type=subscription_update_confirm`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed? SubscriptionUpdateConfirm { get => _explicitNullValueSubscriptionUpdateConfirm; set { _explicitNullValueSubscriptionUpdateConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update_confirm"); else _explicitNullProperties?.Remove("subscription_update_confirm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed? SubscriptionUpdateConfirm { get => _explicitNullValueSubscriptionUpdateConfirm; set { _explicitNullValueSubscriptionUpdateConfirm = value; AdditionalData?.Remove("subscription_update_confirm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update_confirm"); else _explicitNullProperties?.Remove("subscription_update_confirm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed? _explicitNullValueSubscriptionUpdateConfirm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed SubscriptionUpdateConfirm { get => _explicitNullValueSubscriptionUpdateConfirm; set { _explicitNullValueSubscriptionUpdateConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update_confirm"); else _explicitNullProperties?.Remove("subscription_update_confirm"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed SubscriptionUpdateConfirm { get => _explicitNullValueSubscriptionUpdateConfirm; set { _explicitNullValueSubscriptionUpdateConfirm = value; AdditionalData?.Remove("subscription_update_confirm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_update_confirm"); else _explicitNullProperties?.Remove("subscription_update_confirm"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed _explicitNullValueSubscriptionUpdateConfirm = default!;
 #endif
         /// <summary>Type of flow that the customer will go through.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow"/> and sets the default values.
@@ -111,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "subscription_cancel", n => { SubscriptionCancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed.CreateFromDiscriminatorValue); } },
                 { "subscription_update", n => { SubscriptionUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed.CreateFromDiscriminatorValue); } },
                 { "subscription_update_confirm", n => { SubscriptionUpdateConfirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

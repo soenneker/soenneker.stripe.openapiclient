@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("local_amount_decimal") is { } nullNodeLocalAmountDecimal && nullNodeLocalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalAmountDecimal = null;
-            if (parseNode.GetChildNode("national_amount_decimal") is { } nullNodeNationalAmountDecimal && nullNodeNationalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalAmountDecimal = null;
+            if (parseNode.GetChildNode("local_amount_decimal") is null) { _explicitNullValueLocalAmountDecimal = default!; _explicitNullProperties?.Remove("local_amount_decimal"); }
+            else if (parseNode.GetChildNode("local_amount_decimal") is { } nullNodeLocalAmountDecimal && nullNodeLocalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalAmountDecimal = null;
+            if (parseNode.GetChildNode("national_amount_decimal") is null) { _explicitNullValueNationalAmountDecimal = default!; _explicitNullProperties?.Remove("national_amount_decimal"); }
+            else if (parseNode.GetChildNode("national_amount_decimal") is { } nullNodeNationalAmountDecimal && nullNodeNationalAmountDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalAmountDecimal = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount of state or provincial Sales Tax included in the transaction amount. Null if not reported by merchant or not subject to tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
+        public string? LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; AdditionalData?.Remove("local_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
         private string? _explicitNullValueLocalAmountDecimal = default!;
 #nullable restore
 #else
-        public string LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
+        public string LocalAmountDecimal { get => _explicitNullValueLocalAmountDecimal; set { _explicitNullValueLocalAmountDecimal = value; AdditionalData?.Remove("local_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_amount_decimal"); else _explicitNullProperties?.Remove("local_amount_decimal"); } }
         private string _explicitNullValueLocalAmountDecimal = default!;
 #endif
         /// <summary>Amount of national Sales Tax or VAT included in the transaction amount. Null if not reported by merchant or not subject to tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
+        public string? NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; AdditionalData?.Remove("national_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
         private string? _explicitNullValueNationalAmountDecimal = default!;
 #nullable restore
 #else
-        public string NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
+        public string NationalAmountDecimal { get => _explicitNullValueNationalAmountDecimal; set { _explicitNullValueNationalAmountDecimal = value; AdditionalData?.Remove("national_amount_decimal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_amount_decimal"); else _explicitNullProperties?.Remove("national_amount_decimal"); } }
         private string _explicitNullValueNationalAmountDecimal = default!;
 #endif
         /// <summary>

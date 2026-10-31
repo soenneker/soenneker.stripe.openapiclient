@@ -17,9 +17,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_files") is { } nullNodeAdditionalFiles && nullNodeAdditionalFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalFiles = null;
-            if (parseNode.GetChildNode("goods_type") is { } nullNodeGoodsType && nullNodeGoodsType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoodsType = null;
-            if (parseNode.GetChildNode("site") is { } nullNodeSite && nullNodeSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Site = null;
+            if (parseNode.GetChildNode("additional_files") is null) { _explicitNullValueAdditionalFiles = default!; _explicitNullProperties?.Remove("additional_files"); }
+            else if (parseNode.GetChildNode("additional_files") is { } nullNodeAdditionalFiles && nullNodeAdditionalFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalFiles = null;
+            if (parseNode.GetChildNode("goods_type") is null) { _explicitNullValueGoodsType = default!; _explicitNullProperties?.Remove("goods_type"); }
+            else if (parseNode.GetChildNode("goods_type") is { } nullNodeGoodsType && nullNodeGoodsType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoodsType = null;
+            if (parseNode.GetChildNode("site") is null) { _explicitNullValueSite = default!; _explicitNullProperties?.Remove("site"); }
+            else if (parseNode.GetChildNode("site") is { } nullNodeSite && nullNodeSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Site = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The additional_files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdditionalFiles { get => _explicitNullValueAdditionalFiles; set { _explicitNullValueAdditionalFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_files"); else _explicitNullProperties?.Remove("additional_files"); } }
+        public List<string>? AdditionalFiles { get => _explicitNullValueAdditionalFiles; set { _explicitNullValueAdditionalFiles = value; AdditionalData?.Remove("additional_files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_files"); else _explicitNullProperties?.Remove("additional_files"); } }
         private List<string>? _explicitNullValueAdditionalFiles = default!;
 #nullable restore
 #else
-        public List<string> AdditionalFiles { get => _explicitNullValueAdditionalFiles; set { _explicitNullValueAdditionalFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_files"); else _explicitNullProperties?.Remove("additional_files"); } }
+        public List<string> AdditionalFiles { get => _explicitNullValueAdditionalFiles; set { _explicitNullValueAdditionalFiles = value; AdditionalData?.Remove("additional_files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_files"); else _explicitNullProperties?.Remove("additional_files"); } }
         private List<string> _explicitNullValueAdditionalFiles = default!;
 #endif
         /// <summary>The goods_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsGoodsType? GoodsType { get => _explicitNullValueGoodsType; set { _explicitNullValueGoodsType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goods_type"); else _explicitNullProperties?.Remove("goods_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsGoodsType? GoodsType { get => _explicitNullValueGoodsType; set { _explicitNullValueGoodsType = value; AdditionalData?.Remove("goods_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goods_type"); else _explicitNullProperties?.Remove("goods_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsGoodsType? _explicitNullValueGoodsType = default!;
         /// <summary>The site property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite? Site { get => _explicitNullValueSite; set { _explicitNullValueSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site"); else _explicitNullProperties?.Remove("site"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite? Site { get => _explicitNullValueSite; set { _explicitNullValueSite = value; AdditionalData?.Remove("site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site"); else _explicitNullProperties?.Remove("site"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite? _explicitNullValueSite = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite Site { get => _explicitNullValueSite; set { _explicitNullValueSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site"); else _explicitNullProperties?.Remove("site"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite Site { get => _explicitNullValueSite; set { _explicitNullValueSite = value; AdditionalData?.Remove("site"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site"); else _explicitNullProperties?.Remove("site"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite _explicitNullValueSite = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_files", n => { AdditionalFiles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "goods_type", n => { GoodsType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsGoodsType>(); } },
+                { "goods_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsGoodsType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueGoodsType = default; _explicitNullProperties?.Remove("goods_type"); AdditionalData["goods_type"] = unknown; } else { GoodsType = parsed; AdditionalData.Remove("goods_type"); } } },
                 { "site", n => { Site = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPaymentsSite.CreateFromDiscriminatorValue); } },
             };
         }

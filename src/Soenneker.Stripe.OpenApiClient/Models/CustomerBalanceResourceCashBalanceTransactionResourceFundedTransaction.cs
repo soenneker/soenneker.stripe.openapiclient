@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bank_transfer") is { } nullNodeBankTransfer && nullNodeBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTransfer = null;
+            if (parseNode.GetChildNode("bank_transfer") is null) { _explicitNullValueBankTransfer = default!; _explicitNullProperties?.Remove("bank_transfer"); }
+            else if (parseNode.GetChildNode("bank_transfer") is { } nullNodeBankTransfer && nullNodeBankTransfer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTransfer = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer? BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer? BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; AdditionalData?.Remove("bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer? _explicitNullValueBankTransfer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer BankTransfer { get => _explicitNullValueBankTransfer; set { _explicitNullValueBankTransfer = value; AdditionalData?.Remove("bank_transfer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bank_transfer"); else _explicitNullProperties?.Remove("bank_transfer"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer _explicitNullValueBankTransfer = default!;
 #endif
         /// <summary>

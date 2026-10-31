@@ -18,15 +18,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amex_express_checkout") is { } nullNodeAmexExpressCheckout && nullNodeAmexExpressCheckout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmexExpressCheckout = null;
-            if (parseNode.GetChildNode("apple_pay") is { } nullNodeApplePay && nullNodeApplePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePay = null;
-            if (parseNode.GetChildNode("dynamic_last4") is { } nullNodeDynamicLast4 && nullNodeDynamicLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicLast4 = null;
-            if (parseNode.GetChildNode("google_pay") is { } nullNodeGooglePay && nullNodeGooglePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePay = null;
-            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
-            if (parseNode.GetChildNode("masterpass") is { } nullNodeMasterpass && nullNodeMasterpass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Masterpass = null;
-            if (parseNode.GetChildNode("samsung_pay") is { } nullNodeSamsungPay && nullNodeSamsungPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamsungPay = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("visa_checkout") is { } nullNodeVisaCheckout && nullNodeVisaCheckout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCheckout = null;
+            if (parseNode.GetChildNode("amex_express_checkout") is null) { _explicitNullValueAmexExpressCheckout = default!; _explicitNullProperties?.Remove("amex_express_checkout"); }
+            else if (parseNode.GetChildNode("amex_express_checkout") is { } nullNodeAmexExpressCheckout && nullNodeAmexExpressCheckout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmexExpressCheckout = null;
+            if (parseNode.GetChildNode("apple_pay") is null) { _explicitNullValueApplePay = default!; _explicitNullProperties?.Remove("apple_pay"); }
+            else if (parseNode.GetChildNode("apple_pay") is { } nullNodeApplePay && nullNodeApplePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplePay = null;
+            if (parseNode.GetChildNode("dynamic_last4") is null) { _explicitNullValueDynamicLast4 = default!; _explicitNullProperties?.Remove("dynamic_last4"); }
+            else if (parseNode.GetChildNode("dynamic_last4") is { } nullNodeDynamicLast4 && nullNodeDynamicLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicLast4 = null;
+            if (parseNode.GetChildNode("google_pay") is null) { _explicitNullValueGooglePay = default!; _explicitNullProperties?.Remove("google_pay"); }
+            else if (parseNode.GetChildNode("google_pay") is { } nullNodeGooglePay && nullNodeGooglePay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePay = null;
+            if (parseNode.GetChildNode("link") is null) { _explicitNullValueLink = default!; _explicitNullProperties?.Remove("link"); }
+            else if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("masterpass") is null) { _explicitNullValueMasterpass = default!; _explicitNullProperties?.Remove("masterpass"); }
+            else if (parseNode.GetChildNode("masterpass") is { } nullNodeMasterpass && nullNodeMasterpass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Masterpass = null;
+            if (parseNode.GetChildNode("samsung_pay") is null) { _explicitNullValueSamsungPay = default!; _explicitNullProperties?.Remove("samsung_pay"); }
+            else if (parseNode.GetChildNode("samsung_pay") is { } nullNodeSamsungPay && nullNodeSamsungPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamsungPay = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visa_checkout") is null) { _explicitNullValueVisaCheckout = default!; _explicitNullProperties?.Remove("visa_checkout"); }
+            else if (parseNode.GetChildNode("visa_checkout") is { } nullNodeVisaCheckout && nullNodeVisaCheckout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisaCheckout = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,84 +43,84 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amex_express_checkout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty? AmexExpressCheckout { get => _explicitNullValueAmexExpressCheckout; set { _explicitNullValueAmexExpressCheckout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex_express_checkout"); else _explicitNullProperties?.Remove("amex_express_checkout"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty? AmexExpressCheckout { get => _explicitNullValueAmexExpressCheckout; set { _explicitNullValueAmexExpressCheckout = value; AdditionalData?.Remove("amex_express_checkout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex_express_checkout"); else _explicitNullProperties?.Remove("amex_express_checkout"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty? _explicitNullValueAmexExpressCheckout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty AmexExpressCheckout { get => _explicitNullValueAmexExpressCheckout; set { _explicitNullValueAmexExpressCheckout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex_express_checkout"); else _explicitNullProperties?.Remove("amex_express_checkout"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty AmexExpressCheckout { get => _explicitNullValueAmexExpressCheckout; set { _explicitNullValueAmexExpressCheckout = value; AdditionalData?.Remove("amex_express_checkout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex_express_checkout"); else _explicitNullProperties?.Remove("amex_express_checkout"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletAmexExpressCheckoutProperty _explicitNullValueAmexExpressCheckout = default!;
 #endif
         /// <summary>The apple_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty? ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty? ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; AdditionalData?.Remove("apple_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty? _explicitNullValueApplePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty ApplePay { get => _explicitNullValueApplePay; set { _explicitNullValueApplePay = value; AdditionalData?.Remove("apple_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_pay"); else _explicitNullProperties?.Remove("apple_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty _explicitNullValueApplePay = default!;
 #endif
         /// <summary>(For tokenized numbers only.) The last four digits of the device account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DynamicLast4 { get => _explicitNullValueDynamicLast4; set { _explicitNullValueDynamicLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_last4"); else _explicitNullProperties?.Remove("dynamic_last4"); } }
+        public string? DynamicLast4 { get => _explicitNullValueDynamicLast4; set { _explicitNullValueDynamicLast4 = value; AdditionalData?.Remove("dynamic_last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_last4"); else _explicitNullProperties?.Remove("dynamic_last4"); } }
         private string? _explicitNullValueDynamicLast4 = default!;
 #nullable restore
 #else
-        public string DynamicLast4 { get => _explicitNullValueDynamicLast4; set { _explicitNullValueDynamicLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_last4"); else _explicitNullProperties?.Remove("dynamic_last4"); } }
+        public string DynamicLast4 { get => _explicitNullValueDynamicLast4; set { _explicitNullValueDynamicLast4 = value; AdditionalData?.Remove("dynamic_last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_last4"); else _explicitNullProperties?.Remove("dynamic_last4"); } }
         private string _explicitNullValueDynamicLast4 = default!;
 #endif
         /// <summary>The google_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty? GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty? GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; AdditionalData?.Remove("google_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty? _explicitNullValueGooglePay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty GooglePay { get => _explicitNullValueGooglePay; set { _explicitNullValueGooglePay = value; AdditionalData?.Remove("google_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_pay"); else _explicitNullProperties?.Remove("google_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty _explicitNullValueGooglePay = default!;
 #endif
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; AdditionalData?.Remove("link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; AdditionalData?.Remove("link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink _explicitNullValueLink = default!;
 #endif
         /// <summary>The masterpass property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass? Masterpass { get => _explicitNullValueMasterpass; set { _explicitNullValueMasterpass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterpass"); else _explicitNullProperties?.Remove("masterpass"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass? Masterpass { get => _explicitNullValueMasterpass; set { _explicitNullValueMasterpass = value; AdditionalData?.Remove("masterpass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterpass"); else _explicitNullProperties?.Remove("masterpass"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass? _explicitNullValueMasterpass = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass Masterpass { get => _explicitNullValueMasterpass; set { _explicitNullValueMasterpass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterpass"); else _explicitNullProperties?.Remove("masterpass"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass Masterpass { get => _explicitNullValueMasterpass; set { _explicitNullValueMasterpass = value; AdditionalData?.Remove("masterpass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterpass"); else _explicitNullProperties?.Remove("masterpass"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass _explicitNullValueMasterpass = default!;
 #endif
         /// <summary>The samsung_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty? SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty? SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; AdditionalData?.Remove("samsung_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty? _explicitNullValueSamsungPay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty SamsungPay { get => _explicitNullValueSamsungPay; set { _explicitNullValueSamsungPay = value; AdditionalData?.Remove("samsung_pay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("samsung_pay"); else _explicitNullProperties?.Remove("samsung_pay"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty _explicitNullValueSamsungPay = default!;
 #endif
         /// <summary>The type of the card wallet, one of `amex_express_checkout`, `apple_pay`, `google_pay`, `masterpass`, `samsung_pay`, `visa_checkout`, or `link`. An additional hash is included on the Wallet subhash with a name matching this value. It contains additional information specific to the card wallet type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType? _explicitNullValueType = default!;
         /// <summary>The visa_checkout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout? VisaCheckout { get => _explicitNullValueVisaCheckout; set { _explicitNullValueVisaCheckout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_checkout"); else _explicitNullProperties?.Remove("visa_checkout"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout? VisaCheckout { get => _explicitNullValueVisaCheckout; set { _explicitNullValueVisaCheckout = value; AdditionalData?.Remove("visa_checkout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_checkout"); else _explicitNullProperties?.Remove("visa_checkout"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout? _explicitNullValueVisaCheckout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout VisaCheckout { get => _explicitNullValueVisaCheckout; set { _explicitNullValueVisaCheckout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_checkout"); else _explicitNullProperties?.Remove("visa_checkout"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout VisaCheckout { get => _explicitNullValueVisaCheckout; set { _explicitNullValueVisaCheckout = value; AdditionalData?.Remove("visa_checkout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa_checkout"); else _explicitNullProperties?.Remove("visa_checkout"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout _explicitNullValueVisaCheckout = default!;
 #endif
         /// <summary>
@@ -146,7 +155,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink.CreateFromDiscriminatorValue); } },
                 { "masterpass", n => { Masterpass = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "visa_checkout", n => { VisaCheckout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout.CreateFromDiscriminatorValue); } },
             };
         }

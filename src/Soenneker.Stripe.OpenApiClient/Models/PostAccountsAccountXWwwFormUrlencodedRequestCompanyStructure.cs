@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostAccountsAccountXWwwFormUrlencodedRequestCompanyStructure
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "free_zone_establishment")]
         #pragma warning disable CS1591
         FreeZoneEstablishment,

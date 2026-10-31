@@ -17,8 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chargeback_loss_reason_code") is { } nullNodeChargebackLossReasonCode && nullNodeChargebackLossReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargebackLossReasonCode = null;
-            if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
+            if (parseNode.GetChildNode("chargeback_loss_reason_code") is null) { _explicitNullValueChargebackLossReasonCode = default!; _explicitNullProperties?.Remove("chargeback_loss_reason_code"); }
+            else if (parseNode.GetChildNode("chargeback_loss_reason_code") is { } nullNodeChargebackLossReasonCode && nullNodeChargebackLossReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargebackLossReasonCode = null;
+            if (parseNode.GetChildNode("reason_code") is null) { _explicitNullValueReasonCode = default!; _explicitNullProperties?.Remove("reason_code"); }
+            else if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Chargeback loss reason mapped by Stripe from Klarna&apos;s chargeback loss reason</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
+        public string? ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; AdditionalData?.Remove("chargeback_loss_reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
         private string? _explicitNullValueChargebackLossReasonCode = default!;
 #nullable restore
 #else
-        public string ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
+        public string ChargebackLossReasonCode { get => _explicitNullValueChargebackLossReasonCode; set { _explicitNullValueChargebackLossReasonCode = value; AdditionalData?.Remove("chargeback_loss_reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeback_loss_reason_code"); else _explicitNullProperties?.Remove("chargeback_loss_reason_code"); } }
         private string _explicitNullValueChargebackLossReasonCode = default!;
 #endif
         /// <summary>The reason for the dispute as defined by Klarna</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
         private string? _explicitNullValueReasonCode = default!;
 #nullable restore
 #else
-        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
         private string _explicitNullValueReasonCode = default!;
 #endif
         /// <summary>

@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dispute_type") is { } nullNodeDisputeType && nullNodeDisputeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeType = null;
+            if (parseNode.GetChildNode("dispute_type") is null) { _explicitNullValueDisputeType = default!; _explicitNullProperties?.Remove("dispute_type"); }
+            else if (parseNode.GetChildNode("dispute_type") is { } nullNodeDisputeType && nullNodeDisputeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AmazonPay dispute type, chargeback or claim</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType? DisputeType { get => _explicitNullValueDisputeType; set { _explicitNullValueDisputeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_type"); else _explicitNullProperties?.Remove("dispute_type"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType? DisputeType { get => _explicitNullValueDisputeType; set { _explicitNullValueDisputeType = value; AdditionalData?.Remove("dispute_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispute_type"); else _explicitNullProperties?.Remove("dispute_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType? _explicitNullValueDisputeType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPay"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dispute_type", n => { DisputeType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType>(); } },
+                { "dispute_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisputeType = default; _explicitNullProperties?.Remove("dispute_type"); AdditionalData["dispute_type"] = unknown; } else { DisputeType = parsed; AdditionalData.Remove("dispute_type"); } } },
             };
         }
         /// <summary>

@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Pdf
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Pdf.PdfRequestBuilder.PdfRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://files.stripe.com", "/v1/quotes/{quote}/pdf", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/pdf, application/json");
             return requestInfo;

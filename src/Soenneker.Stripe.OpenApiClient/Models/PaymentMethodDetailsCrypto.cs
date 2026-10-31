@@ -17,10 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyer_address") is { } nullNodeBuyerAddress && nullNodeBuyerAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerAddress = null;
-            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
-            if (parseNode.GetChildNode("token_currency") is { } nullNodeTokenCurrency && nullNodeTokenCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenCurrency = null;
-            if (parseNode.GetChildNode("transaction_hash") is { } nullNodeTransactionHash && nullNodeTransactionHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionHash = null;
+            if (parseNode.GetChildNode("buyer_address") is null) { _explicitNullValueBuyerAddress = default!; _explicitNullProperties?.Remove("buyer_address"); }
+            else if (parseNode.GetChildNode("buyer_address") is { } nullNodeBuyerAddress && nullNodeBuyerAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerAddress = null;
+            if (parseNode.GetChildNode("network") is null) { _explicitNullValueNetwork = default!; _explicitNullProperties?.Remove("network"); }
+            else if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("token_currency") is null) { _explicitNullValueTokenCurrency = default!; _explicitNullProperties?.Remove("token_currency"); }
+            else if (parseNode.GetChildNode("token_currency") is { } nullNodeTokenCurrency && nullNodeTokenCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenCurrency = null;
+            if (parseNode.GetChildNode("transaction_hash") is null) { _explicitNullValueTransactionHash = default!; _explicitNullProperties?.Remove("transaction_hash"); }
+            else if (parseNode.GetChildNode("transaction_hash") is { } nullNodeTransactionHash && nullNodeTransactionHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionHash = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The wallet address of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerAddress { get => _explicitNullValueBuyerAddress; set { _explicitNullValueBuyerAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_address"); else _explicitNullProperties?.Remove("buyer_address"); } }
+        public string? BuyerAddress { get => _explicitNullValueBuyerAddress; set { _explicitNullValueBuyerAddress = value; AdditionalData?.Remove("buyer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_address"); else _explicitNullProperties?.Remove("buyer_address"); } }
         private string? _explicitNullValueBuyerAddress = default!;
 #nullable restore
 #else
-        public string BuyerAddress { get => _explicitNullValueBuyerAddress; set { _explicitNullValueBuyerAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_address"); else _explicitNullProperties?.Remove("buyer_address"); } }
+        public string BuyerAddress { get => _explicitNullValueBuyerAddress; set { _explicitNullValueBuyerAddress = value; AdditionalData?.Remove("buyer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyer_address"); else _explicitNullProperties?.Remove("buyer_address"); } }
         private string _explicitNullValueBuyerAddress = default!;
 #endif
         /// <summary>The blockchain network that the transaction was sent on.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; AdditionalData?.Remove("network"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork? _explicitNullValueNetwork = default!;
         /// <summary>The token currency that the transaction was sent with.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency? TokenCurrency { get => _explicitNullValueTokenCurrency; set { _explicitNullValueTokenCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_currency"); else _explicitNullProperties?.Remove("token_currency"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency? TokenCurrency { get => _explicitNullValueTokenCurrency; set { _explicitNullValueTokenCurrency = value; AdditionalData?.Remove("token_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_currency"); else _explicitNullProperties?.Remove("token_currency"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency? _explicitNullValueTokenCurrency = default!;
         /// <summary>The blockchain transaction hash of the crypto payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionHash { get => _explicitNullValueTransactionHash; set { _explicitNullValueTransactionHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_hash"); else _explicitNullProperties?.Remove("transaction_hash"); } }
+        public string? TransactionHash { get => _explicitNullValueTransactionHash; set { _explicitNullValueTransactionHash = value; AdditionalData?.Remove("transaction_hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_hash"); else _explicitNullProperties?.Remove("transaction_hash"); } }
         private string? _explicitNullValueTransactionHash = default!;
 #nullable restore
 #else
-        public string TransactionHash { get => _explicitNullValueTransactionHash; set { _explicitNullValueTransactionHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_hash"); else _explicitNullProperties?.Remove("transaction_hash"); } }
+        public string TransactionHash { get => _explicitNullValueTransactionHash; set { _explicitNullValueTransactionHash = value; AdditionalData?.Remove("transaction_hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_hash"); else _explicitNullProperties?.Remove("transaction_hash"); } }
         private string _explicitNullValueTransactionHash = default!;
 #endif
         /// <summary>
@@ -77,8 +81,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buyer_address", n => { BuyerAddress = n.GetStringValue(); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork>(); } },
-                { "token_currency", n => { TokenCurrency = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency>(); } },
+                { "network", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNetwork = default; _explicitNullProperties?.Remove("network"); AdditionalData["network"] = unknown; } else { Network = parsed; AdditionalData.Remove("network"); } } },
+                { "token_currency", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTokenCurrency = default; _explicitNullProperties?.Remove("token_currency"); AdditionalData["token_currency"] = unknown; } else { TokenCurrency = parsed; AdditionalData.Remove("token_currency"); } } },
                 { "transaction_hash", n => { TransactionHash = n.GetStringValue(); } },
             };
         }

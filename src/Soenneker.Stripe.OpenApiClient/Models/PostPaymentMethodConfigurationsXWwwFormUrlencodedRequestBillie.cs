@@ -18,7 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display_preference") is { } nullNodeDisplayPreference && nullNodeDisplayPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayPreference = null;
+            if (parseNode.GetChildNode("display_preference") is null) { _explicitNullValueDisplayPreference = default!; _explicitNullProperties?.Remove("display_preference"); }
+            else if (parseNode.GetChildNode("display_preference") is { } nullNodeDisplayPreference && nullNodeDisplayPreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayPreference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The display_preference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference? DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference? DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; AdditionalData?.Remove("display_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference? _explicitNullValueDisplayPreference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference DisplayPreference { get => _explicitNullValueDisplayPreference; set { _explicitNullValueDisplayPreference = value; AdditionalData?.Remove("display_preference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_preference"); else _explicitNullProperties?.Remove("display_preference"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsXWwwFormUrlencodedRequestBillieDisplayPreference _explicitNullValueDisplayPreference = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("missing_fields") is { } nullNodeMissingFields && nullNodeMissingFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingFields = null;
+            if (parseNode.GetChildNode("missing_fields") is null) { _explicitNullValueMissingFields = default!; _explicitNullProperties?.Remove("missing_fields"); }
+            else if (parseNode.GetChildNode("missing_fields") is { } nullNodeMissingFields && nullNodeMissingFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingFields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of missing fields that are required to perform calculations. It includes the entry `head_office` when the status is `pending`. It is recommended to set the optional values even if they aren&apos;t listed as required for calculating taxes. Calculations can fail if missing fields aren&apos;t explicitly provided on every call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MissingFields { get => _explicitNullValueMissingFields; set { _explicitNullValueMissingFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_fields"); else _explicitNullProperties?.Remove("missing_fields"); } }
+        public List<string>? MissingFields { get => _explicitNullValueMissingFields; set { _explicitNullValueMissingFields = value; AdditionalData?.Remove("missing_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_fields"); else _explicitNullProperties?.Remove("missing_fields"); } }
         private List<string>? _explicitNullValueMissingFields = default!;
 #nullable restore
 #else
-        public List<string> MissingFields { get => _explicitNullValueMissingFields; set { _explicitNullValueMissingFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_fields"); else _explicitNullProperties?.Remove("missing_fields"); } }
+        public List<string> MissingFields { get => _explicitNullValueMissingFields; set { _explicitNullValueMissingFields = value; AdditionalData?.Remove("missing_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_fields"); else _explicitNullProperties?.Remove("missing_fields"); } }
         private List<string> _explicitNullValueMissingFields = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currency_options") is { } nullNodeCurrencyOptions && nullNodeCurrencyOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOptions = null;
-            if (parseNode.GetChildNode("first_time_transaction") is { } nullNodeFirstTimeTransaction && nullNodeFirstTimeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstTimeTransaction = null;
-            if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
-            if (parseNode.GetChildNode("minimum_amount_currency") is { } nullNodeMinimumAmountCurrency && nullNodeMinimumAmountCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmountCurrency = null;
+            if (parseNode.GetChildNode("currency_options") is null) { _explicitNullValueCurrencyOptions = default!; _explicitNullProperties?.Remove("currency_options"); }
+            else if (parseNode.GetChildNode("currency_options") is { } nullNodeCurrencyOptions && nullNodeCurrencyOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOptions = null;
+            if (parseNode.GetChildNode("first_time_transaction") is null) { _explicitNullValueFirstTimeTransaction = default!; _explicitNullProperties?.Remove("first_time_transaction"); }
+            else if (parseNode.GetChildNode("first_time_transaction") is { } nullNodeFirstTimeTransaction && nullNodeFirstTimeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstTimeTransaction = null;
+            if (parseNode.GetChildNode("minimum_amount") is null) { _explicitNullValueMinimumAmount = default!; _explicitNullProperties?.Remove("minimum_amount"); }
+            else if (parseNode.GetChildNode("minimum_amount") is { } nullNodeMinimumAmount && nullNodeMinimumAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmount = null;
+            if (parseNode.GetChildNode("minimum_amount_currency") is null) { _explicitNullValueMinimumAmountCurrency = default!; _explicitNullProperties?.Remove("minimum_amount_currency"); }
+            else if (parseNode.GetChildNode("minimum_amount_currency") is { } nullNodeMinimumAmountCurrency && nullNodeMinimumAmountCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAmountCurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,27 +33,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The currency_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions? CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions? CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; AdditionalData?.Remove("currency_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions? _explicitNullValueCurrencyOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions CurrencyOptions { get => _explicitNullValueCurrencyOptions; set { _explicitNullValueCurrencyOptions = value; AdditionalData?.Remove("currency_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_options"); else _explicitNullProperties?.Remove("currency_options"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestRestrictionsCurrencyOptions _explicitNullValueCurrencyOptions = default!;
 #endif
         /// <summary>The first_time_transaction property</summary>
-        public bool? FirstTimeTransaction { get => _explicitNullValueFirstTimeTransaction; set { _explicitNullValueFirstTimeTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_time_transaction"); else _explicitNullProperties?.Remove("first_time_transaction"); } }
+        public bool? FirstTimeTransaction { get => _explicitNullValueFirstTimeTransaction; set { _explicitNullValueFirstTimeTransaction = value; AdditionalData?.Remove("first_time_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_time_transaction"); else _explicitNullProperties?.Remove("first_time_transaction"); } }
         private bool? _explicitNullValueFirstTimeTransaction = default!;
         /// <summary>The minimum_amount property</summary>
-        public int? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
+        public int? MinimumAmount { get => _explicitNullValueMinimumAmount; set { _explicitNullValueMinimumAmount = value; AdditionalData?.Remove("minimum_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount"); else _explicitNullProperties?.Remove("minimum_amount"); } }
         private int? _explicitNullValueMinimumAmount = default!;
         /// <summary>The minimum_amount_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumAmountCurrency { get => _explicitNullValueMinimumAmountCurrency; set { _explicitNullValueMinimumAmountCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_currency"); else _explicitNullProperties?.Remove("minimum_amount_currency"); } }
+        public string? MinimumAmountCurrency { get => _explicitNullValueMinimumAmountCurrency; set { _explicitNullValueMinimumAmountCurrency = value; AdditionalData?.Remove("minimum_amount_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_currency"); else _explicitNullProperties?.Remove("minimum_amount_currency"); } }
         private string? _explicitNullValueMinimumAmountCurrency = default!;
 #nullable restore
 #else
-        public string MinimumAmountCurrency { get => _explicitNullValueMinimumAmountCurrency; set { _explicitNullValueMinimumAmountCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_currency"); else _explicitNullProperties?.Remove("minimum_amount_currency"); } }
+        public string MinimumAmountCurrency { get => _explicitNullValueMinimumAmountCurrency; set { _explicitNullValueMinimumAmountCurrency = value; AdditionalData?.Remove("minimum_amount_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_amount_currency"); else _explicitNullProperties?.Remove("minimum_amount_currency"); } }
         private string _explicitNullValueMinimumAmountCurrency = default!;
 #endif
         /// <summary>

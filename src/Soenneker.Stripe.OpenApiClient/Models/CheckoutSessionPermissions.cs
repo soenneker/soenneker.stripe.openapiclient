@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("update_shipping_details") is { } nullNodeUpdateShippingDetails && nullNodeUpdateShippingDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateShippingDetails = null;
+            if (parseNode.GetChildNode("update_shipping_details") is null) { _explicitNullValueUpdateShippingDetails = default!; _explicitNullProperties?.Remove("update_shipping_details"); }
+            else if (parseNode.GetChildNode("update_shipping_details") is { } nullNodeUpdateShippingDetails && nullNodeUpdateShippingDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateShippingDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines which entity is allowed to update the shipping details.Default is `client_only`. Stripe Checkout client will automatically update the shipping details. If set to `server_only`, only your server is allowed to update the shipping details.This parameter is only supported when `ui_mode=elements`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails? UpdateShippingDetails { get => _explicitNullValueUpdateShippingDetails; set { _explicitNullValueUpdateShippingDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_shipping_details"); else _explicitNullProperties?.Remove("update_shipping_details"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails? UpdateShippingDetails { get => _explicitNullValueUpdateShippingDetails; set { _explicitNullValueUpdateShippingDetails = value; AdditionalData?.Remove("update_shipping_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_shipping_details"); else _explicitNullProperties?.Remove("update_shipping_details"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails? _explicitNullValueUpdateShippingDetails = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "update_shipping_details", n => { UpdateShippingDetails = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails>(); } },
+                { "update_shipping_details", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUpdateShippingDetails = default; _explicitNullProperties?.Remove("update_shipping_details"); AdditionalData["update_shipping_details"] = unknown; } else { UpdateShippingDetails = parsed; AdditionalData.Remove("update_shipping_details"); } } },
             };
         }
         /// <summary>

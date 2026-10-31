@@ -17,13 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("deactivated_at") is { } nullNodeDeactivatedAt && nullNodeDeactivatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeactivatedAt = null;
+            if (parseNode.GetChildNode("deactivated_at") is null) { _explicitNullValueDeactivatedAt = default!; _explicitNullProperties?.Remove("deactivated_at"); }
+            else if (parseNode.GetChildNode("deactivated_at") is { } nullNodeDeactivatedAt && nullNodeDeactivatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeactivatedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time the feedback option was deactivated, if any. Measured in seconds since Unix epoch.</summary>
-        public int? DeactivatedAt { get => _explicitNullValueDeactivatedAt; set { _explicitNullValueDeactivatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deactivated_at"); else _explicitNullProperties?.Remove("deactivated_at"); } }
+        public int? DeactivatedAt { get => _explicitNullValueDeactivatedAt; set { _explicitNullValueDeactivatedAt = value; AdditionalData?.Remove("deactivated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deactivated_at"); else _explicitNullProperties?.Remove("deactivated_at"); } }
         private int? _explicitNullValueDeactivatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsStatusTransitions"/> and sets the default values.

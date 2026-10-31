@@ -18,8 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cvc_token") is { } nullNodeCvcToken && nullNodeCvcToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcToken = null;
-            if (parseNode.GetChildNode("installments") is { } nullNodeInstallments && nullNodeInstallments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installments = null;
+            if (parseNode.GetChildNode("cvc_token") is null) { _explicitNullValueCvcToken = default!; _explicitNullProperties?.Remove("cvc_token"); }
+            else if (parseNode.GetChildNode("cvc_token") is { } nullNodeCvcToken && nullNodeCvcToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvcToken = null;
+            if (parseNode.GetChildNode("installments") is null) { _explicitNullValueInstallments = default!; _explicitNullProperties?.Remove("installments"); }
+            else if (parseNode.GetChildNode("installments") is { } nullNodeInstallments && nullNodeInstallments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Installments = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The `cvc_update` Token collected from the Payment Element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CvcToken { get => _explicitNullValueCvcToken; set { _explicitNullValueCvcToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_token"); else _explicitNullProperties?.Remove("cvc_token"); } }
+        public string? CvcToken { get => _explicitNullValueCvcToken; set { _explicitNullValueCvcToken = value; AdditionalData?.Remove("cvc_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_token"); else _explicitNullProperties?.Remove("cvc_token"); } }
         private string? _explicitNullValueCvcToken = default!;
 #nullable restore
 #else
-        public string CvcToken { get => _explicitNullValueCvcToken; set { _explicitNullValueCvcToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_token"); else _explicitNullProperties?.Remove("cvc_token"); } }
+        public string CvcToken { get => _explicitNullValueCvcToken; set { _explicitNullValueCvcToken = value; AdditionalData?.Remove("cvc_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_token"); else _explicitNullProperties?.Remove("cvc_token"); } }
         private string _explicitNullValueCvcToken = default!;
 #endif
         /// <summary>Installment configuration for payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment? _explicitNullValueInstallments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment _explicitNullValueInstallments = default!;
 #endif
         /// <summary>

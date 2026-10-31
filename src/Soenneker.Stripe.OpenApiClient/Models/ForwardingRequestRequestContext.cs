@@ -18,23 +18,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("destination_duration") is { } nullNodeDestinationDuration && nullNodeDestinationDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationDuration = null;
-            if (parseNode.GetChildNode("destination_ip_address") is { } nullNodeDestinationIpAddress && nullNodeDestinationIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationIpAddress = null;
+            if (parseNode.GetChildNode("destination_duration") is null) { _explicitNullValueDestinationDuration = default!; _explicitNullProperties?.Remove("destination_duration"); }
+            else if (parseNode.GetChildNode("destination_duration") is { } nullNodeDestinationDuration && nullNodeDestinationDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationDuration = null;
+            if (parseNode.GetChildNode("destination_ip_address") is null) { _explicitNullValueDestinationIpAddress = default!; _explicitNullProperties?.Remove("destination_ip_address"); }
+            else if (parseNode.GetChildNode("destination_ip_address") is { } nullNodeDestinationIpAddress && nullNodeDestinationIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationIpAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time it took in milliseconds for the destination endpoint to respond.</summary>
-        public int? DestinationDuration { get => _explicitNullValueDestinationDuration; set { _explicitNullValueDestinationDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_duration"); else _explicitNullProperties?.Remove("destination_duration"); } }
+        public int? DestinationDuration { get => _explicitNullValueDestinationDuration; set { _explicitNullValueDestinationDuration = value; AdditionalData?.Remove("destination_duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_duration"); else _explicitNullProperties?.Remove("destination_duration"); } }
         private int? _explicitNullValueDestinationDuration = default!;
         /// <summary>The IP address of the destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
+        public string? DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; AdditionalData?.Remove("destination_ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
         private string? _explicitNullValueDestinationIpAddress = default!;
 #nullable restore
 #else
-        public string DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
+        public string DestinationIpAddress { get => _explicitNullValueDestinationIpAddress; set { _explicitNullValueDestinationIpAddress = value; AdditionalData?.Remove("destination_ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_ip_address"); else _explicitNullProperties?.Remove("destination_ip_address"); } }
         private string _explicitNullValueDestinationIpAddress = default!;
 #endif
         /// <summary>

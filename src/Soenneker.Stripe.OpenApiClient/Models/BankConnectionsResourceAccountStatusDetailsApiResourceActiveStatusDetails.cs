@@ -17,21 +17,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
-            if (parseNode.GetChildNode("expected_deactivation_date") is { } nullNodeExpectedDeactivationDate && nullNodeExpectedDeactivationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedDeactivationDate = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("cause") is null) { _explicitNullValueCause = default!; _explicitNullProperties?.Remove("cause"); }
+            else if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
+            if (parseNode.GetChildNode("expected_deactivation_date") is null) { _explicitNullValueExpectedDeactivationDate = default!; _explicitNullProperties?.Remove("expected_deactivation_date"); }
+            else if (parseNode.GetChildNode("expected_deactivation_date") is { } nullNodeExpectedDeactivationDate && nullNodeExpectedDeactivationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedDeactivationDate = null;
         }
 
         /// <summary>The action (if any) to proactively relink the Account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The underlying cause of the Account becoming inactive.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; AdditionalData?.Remove("cause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause? _explicitNullValueCause = default!;
         /// <summary>When the Account is expected to become inactive, if applicable.</summary>
-        public int? ExpectedDeactivationDate { get => _explicitNullValueExpectedDeactivationDate; set { _explicitNullValueExpectedDeactivationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_deactivation_date"); else _explicitNullProperties?.Remove("expected_deactivation_date"); } }
+        public int? ExpectedDeactivationDate { get => _explicitNullValueExpectedDeactivationDate; set { _explicitNullValueExpectedDeactivationDate = value; AdditionalData?.Remove("expected_deactivation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_deactivation_date"); else _explicitNullProperties?.Remove("expected_deactivation_date"); } }
         private int? _explicitNullValueExpectedDeactivationDate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetails"/> and sets the default values.
@@ -58,8 +61,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction>(); } },
-                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause>(); } },
+                { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
+                { "cause", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCause = default; _explicitNullProperties?.Remove("cause"); AdditionalData["cause"] = unknown; } else { Cause = parsed; AdditionalData.Remove("cause"); } } },
                 { "expected_deactivation_date", n => { ExpectedDeactivationDate = n.GetIntValue(); } },
             };
         }

@@ -18,13 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("refund_attributes_method") is { } nullNodeRefundAttributesMethod && nullNodeRefundAttributesMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesMethod = null;
+            if (parseNode.GetChildNode("refund_attributes_method") is null) { _explicitNullValueRefundAttributesMethod = default!; _explicitNullProperties?.Remove("refund_attributes_method"); }
+            else if (parseNode.GetChildNode("refund_attributes_method") is { } nullNodeRefundAttributesMethod && nullNodeRefundAttributesMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundAttributesMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The refund_attributes_method property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiverRefundAttributesMethod? RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiverRefundAttributesMethod? RefundAttributesMethod { get => _explicitNullValueRefundAttributesMethod; set { _explicitNullValueRefundAttributesMethod = value; AdditionalData?.Remove("refund_attributes_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_attributes_method"); else _explicitNullProperties?.Remove("refund_attributes_method"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiverRefundAttributesMethod? _explicitNullValueRefundAttributesMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiver"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "refund_attributes_method", n => { RefundAttributesMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiverRefundAttributesMethod>(); } },
+                { "refund_attributes_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesXWwwFormUrlencodedRequestReceiverRefundAttributesMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRefundAttributesMethod = default; _explicitNullProperties?.Remove("refund_attributes_method"); AdditionalData["refund_attributes_method"] = unknown; } else { RefundAttributesMethod = parsed; AdditionalData.Remove("refund_attributes_method"); } } },
             };
         }
         /// <summary>

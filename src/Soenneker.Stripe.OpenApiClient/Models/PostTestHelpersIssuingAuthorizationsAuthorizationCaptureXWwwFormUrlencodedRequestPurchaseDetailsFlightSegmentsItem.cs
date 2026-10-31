@@ -17,12 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("arrival_airport_code") is { } nullNodeArrivalAirportCode && nullNodeArrivalAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArrivalAirportCode = null;
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("departure_airport_code") is { } nullNodeDepartureAirportCode && nullNodeDepartureAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAirportCode = null;
-            if (parseNode.GetChildNode("flight_number") is { } nullNodeFlightNumber && nullNodeFlightNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightNumber = null;
-            if (parseNode.GetChildNode("service_class") is { } nullNodeServiceClass && nullNodeServiceClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceClass = null;
-            if (parseNode.GetChildNode("stopover_allowed") is { } nullNodeStopoverAllowed && nullNodeStopoverAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopoverAllowed = null;
+            if (parseNode.GetChildNode("arrival_airport_code") is null) { _explicitNullValueArrivalAirportCode = default!; _explicitNullProperties?.Remove("arrival_airport_code"); }
+            else if (parseNode.GetChildNode("arrival_airport_code") is { } nullNodeArrivalAirportCode && nullNodeArrivalAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArrivalAirportCode = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("departure_airport_code") is null) { _explicitNullValueDepartureAirportCode = default!; _explicitNullProperties?.Remove("departure_airport_code"); }
+            else if (parseNode.GetChildNode("departure_airport_code") is { } nullNodeDepartureAirportCode && nullNodeDepartureAirportCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepartureAirportCode = null;
+            if (parseNode.GetChildNode("flight_number") is null) { _explicitNullValueFlightNumber = default!; _explicitNullProperties?.Remove("flight_number"); }
+            else if (parseNode.GetChildNode("flight_number") is { } nullNodeFlightNumber && nullNodeFlightNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightNumber = null;
+            if (parseNode.GetChildNode("service_class") is null) { _explicitNullValueServiceClass = default!; _explicitNullProperties?.Remove("service_class"); }
+            else if (parseNode.GetChildNode("service_class") is { } nullNodeServiceClass && nullNodeServiceClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceClass = null;
+            if (parseNode.GetChildNode("stopover_allowed") is null) { _explicitNullValueStopoverAllowed = default!; _explicitNullProperties?.Remove("stopover_allowed"); }
+            else if (parseNode.GetChildNode("stopover_allowed") is { } nullNodeStopoverAllowed && nullNodeStopoverAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopoverAllowed = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,55 +36,55 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The arrival_airport_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
+        public string? ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; AdditionalData?.Remove("arrival_airport_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
         private string? _explicitNullValueArrivalAirportCode = default!;
 #nullable restore
 #else
-        public string ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
+        public string ArrivalAirportCode { get => _explicitNullValueArrivalAirportCode; set { _explicitNullValueArrivalAirportCode = value; AdditionalData?.Remove("arrival_airport_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_airport_code"); else _explicitNullProperties?.Remove("arrival_airport_code"); } }
         private string _explicitNullValueArrivalAirportCode = default!;
 #endif
         /// <summary>The carrier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>The departure_airport_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
+        public string? DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; AdditionalData?.Remove("departure_airport_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
         private string? _explicitNullValueDepartureAirportCode = default!;
 #nullable restore
 #else
-        public string DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
+        public string DepartureAirportCode { get => _explicitNullValueDepartureAirportCode; set { _explicitNullValueDepartureAirportCode = value; AdditionalData?.Remove("departure_airport_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_airport_code"); else _explicitNullProperties?.Remove("departure_airport_code"); } }
         private string _explicitNullValueDepartureAirportCode = default!;
 #endif
         /// <summary>The flight_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
+        public string? FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; AdditionalData?.Remove("flight_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
         private string? _explicitNullValueFlightNumber = default!;
 #nullable restore
 #else
-        public string FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
+        public string FlightNumber { get => _explicitNullValueFlightNumber; set { _explicitNullValueFlightNumber = value; AdditionalData?.Remove("flight_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_number"); else _explicitNullProperties?.Remove("flight_number"); } }
         private string _explicitNullValueFlightNumber = default!;
 #endif
         /// <summary>The service_class property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
+        public string? ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; AdditionalData?.Remove("service_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
         private string? _explicitNullValueServiceClass = default!;
 #nullable restore
 #else
-        public string ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
+        public string ServiceClass { get => _explicitNullValueServiceClass; set { _explicitNullValueServiceClass = value; AdditionalData?.Remove("service_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_class"); else _explicitNullProperties?.Remove("service_class"); } }
         private string _explicitNullValueServiceClass = default!;
 #endif
         /// <summary>The stopover_allowed property</summary>
-        public bool? StopoverAllowed { get => _explicitNullValueStopoverAllowed; set { _explicitNullValueStopoverAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopover_allowed"); else _explicitNullProperties?.Remove("stopover_allowed"); } }
+        public bool? StopoverAllowed { get => _explicitNullValueStopoverAllowed; set { _explicitNullValueStopoverAllowed = value; AdditionalData?.Remove("stopover_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopover_allowed"); else _explicitNullProperties?.Remove("stopover_allowed"); } }
         private bool? _explicitNullValueStopoverAllowed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem"/> and sets the default values.

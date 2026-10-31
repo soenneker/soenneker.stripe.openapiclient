@@ -18,42 +18,48 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acquirer_bin") is { } nullNodeAcquirerBin && nullNodeAcquirerBin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerBin = null;
-            if (parseNode.GetChildNode("acquirer_country") is { } nullNodeAcquirerCountry && nullNodeAcquirerCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerCountry = null;
-            if (parseNode.GetChildNode("acquirer_merchant_id") is { } nullNodeAcquirerMerchantId && nullNodeAcquirerMerchantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerMerchantId = null;
-            if (parseNode.GetChildNode("mcc") is { } nullNodeMcc && nullNodeMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mcc = null;
-            if (parseNode.GetChildNode("merchant_name") is { } nullNodeMerchantName && nullNodeMerchantName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantName = null;
-            if (parseNode.GetChildNode("requestor_id") is { } nullNodeRequestorId && nullNodeRequestorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestorId = null;
+            if (parseNode.GetChildNode("acquirer_bin") is null) { _explicitNullValueAcquirerBin = default!; _explicitNullProperties?.Remove("acquirer_bin"); }
+            else if (parseNode.GetChildNode("acquirer_bin") is { } nullNodeAcquirerBin && nullNodeAcquirerBin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerBin = null;
+            if (parseNode.GetChildNode("acquirer_country") is null) { _explicitNullValueAcquirerCountry = default!; _explicitNullProperties?.Remove("acquirer_country"); }
+            else if (parseNode.GetChildNode("acquirer_country") is { } nullNodeAcquirerCountry && nullNodeAcquirerCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerCountry = null;
+            if (parseNode.GetChildNode("acquirer_merchant_id") is null) { _explicitNullValueAcquirerMerchantId = default!; _explicitNullProperties?.Remove("acquirer_merchant_id"); }
+            else if (parseNode.GetChildNode("acquirer_merchant_id") is { } nullNodeAcquirerMerchantId && nullNodeAcquirerMerchantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcquirerMerchantId = null;
+            if (parseNode.GetChildNode("mcc") is null) { _explicitNullValueMcc = default!; _explicitNullProperties?.Remove("mcc"); }
+            else if (parseNode.GetChildNode("mcc") is { } nullNodeMcc && nullNodeMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mcc = null;
+            if (parseNode.GetChildNode("merchant_name") is null) { _explicitNullValueMerchantName = default!; _explicitNullProperties?.Remove("merchant_name"); }
+            else if (parseNode.GetChildNode("merchant_name") is { } nullNodeMerchantName && nullNodeMerchantName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantName = null;
+            if (parseNode.GetChildNode("requestor_id") is null) { _explicitNullValueRequestorId = default!; _explicitNullProperties?.Remove("requestor_id"); }
+            else if (parseNode.GetChildNode("requestor_id") is { } nullNodeRequestorId && nullNodeRequestorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestorId = null;
         }
 
         /// <summary>The Acquirer BIN (specific to the directory_server).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquirerBin { get => _explicitNullValueAcquirerBin; set { _explicitNullValueAcquirerBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_bin"); else _explicitNullProperties?.Remove("acquirer_bin"); } }
+        public string? AcquirerBin { get => _explicitNullValueAcquirerBin; set { _explicitNullValueAcquirerBin = value; AdditionalData?.Remove("acquirer_bin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_bin"); else _explicitNullProperties?.Remove("acquirer_bin"); } }
         private string? _explicitNullValueAcquirerBin = default!;
 #nullable restore
 #else
-        public string AcquirerBin { get => _explicitNullValueAcquirerBin; set { _explicitNullValueAcquirerBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_bin"); else _explicitNullProperties?.Remove("acquirer_bin"); } }
+        public string AcquirerBin { get => _explicitNullValueAcquirerBin; set { _explicitNullValueAcquirerBin = value; AdditionalData?.Remove("acquirer_bin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_bin"); else _explicitNullProperties?.Remove("acquirer_bin"); } }
         private string _explicitNullValueAcquirerBin = default!;
 #endif
         /// <summary>The two-letter country code of the acquirer ([ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquirerCountry { get => _explicitNullValueAcquirerCountry; set { _explicitNullValueAcquirerCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_country"); else _explicitNullProperties?.Remove("acquirer_country"); } }
+        public string? AcquirerCountry { get => _explicitNullValueAcquirerCountry; set { _explicitNullValueAcquirerCountry = value; AdditionalData?.Remove("acquirer_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_country"); else _explicitNullProperties?.Remove("acquirer_country"); } }
         private string? _explicitNullValueAcquirerCountry = default!;
 #nullable restore
 #else
-        public string AcquirerCountry { get => _explicitNullValueAcquirerCountry; set { _explicitNullValueAcquirerCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_country"); else _explicitNullProperties?.Remove("acquirer_country"); } }
+        public string AcquirerCountry { get => _explicitNullValueAcquirerCountry; set { _explicitNullValueAcquirerCountry = value; AdditionalData?.Remove("acquirer_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_country"); else _explicitNullProperties?.Remove("acquirer_country"); } }
         private string _explicitNullValueAcquirerCountry = default!;
 #endif
         /// <summary>The Merchant ID (or Card Acceptor ID) that your acquirer assigned you (specific to the directory_server).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcquirerMerchantId { get => _explicitNullValueAcquirerMerchantId; set { _explicitNullValueAcquirerMerchantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_merchant_id"); else _explicitNullProperties?.Remove("acquirer_merchant_id"); } }
+        public string? AcquirerMerchantId { get => _explicitNullValueAcquirerMerchantId; set { _explicitNullValueAcquirerMerchantId = value; AdditionalData?.Remove("acquirer_merchant_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_merchant_id"); else _explicitNullProperties?.Remove("acquirer_merchant_id"); } }
         private string? _explicitNullValueAcquirerMerchantId = default!;
 #nullable restore
 #else
-        public string AcquirerMerchantId { get => _explicitNullValueAcquirerMerchantId; set { _explicitNullValueAcquirerMerchantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_merchant_id"); else _explicitNullProperties?.Remove("acquirer_merchant_id"); } }
+        public string AcquirerMerchantId { get => _explicitNullValueAcquirerMerchantId; set { _explicitNullValueAcquirerMerchantId = value; AdditionalData?.Remove("acquirer_merchant_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acquirer_merchant_id"); else _explicitNullProperties?.Remove("acquirer_merchant_id"); } }
         private string _explicitNullValueAcquirerMerchantId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -61,31 +67,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The [merchant category code](https://en.wikipedia.org/wiki/Merchant_category_code) as defined by each payment system or directory server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
+        public string? Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; AdditionalData?.Remove("mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
         private string? _explicitNullValueMcc = default!;
 #nullable restore
 #else
-        public string Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
+        public string Mcc { get => _explicitNullValueMcc; set { _explicitNullValueMcc = value; AdditionalData?.Remove("mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcc"); else _explicitNullProperties?.Remove("mcc"); } }
         private string _explicitNullValueMcc = default!;
 #endif
         /// <summary>The merchant name assigned by the acquirer or payment system. Same name used in the authorization message as defined in [ISO 8583](https://en.wikipedia.org/wiki/ISO_8583).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantName { get => _explicitNullValueMerchantName; set { _explicitNullValueMerchantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_name"); else _explicitNullProperties?.Remove("merchant_name"); } }
+        public string? MerchantName { get => _explicitNullValueMerchantName; set { _explicitNullValueMerchantName = value; AdditionalData?.Remove("merchant_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_name"); else _explicitNullProperties?.Remove("merchant_name"); } }
         private string? _explicitNullValueMerchantName = default!;
 #nullable restore
 #else
-        public string MerchantName { get => _explicitNullValueMerchantName; set { _explicitNullValueMerchantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_name"); else _explicitNullProperties?.Remove("merchant_name"); } }
+        public string MerchantName { get => _explicitNullValueMerchantName; set { _explicitNullValueMerchantName = value; AdditionalData?.Remove("merchant_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_name"); else _explicitNullProperties?.Remove("merchant_name"); } }
         private string _explicitNullValueMerchantName = default!;
 #endif
         /// <summary>Requestor ID if you’re enrolled in the card network’s 3DS program. Otherwise, you can omit this field because Stripe assigns a Requestor ID with the card networks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestorId { get => _explicitNullValueRequestorId; set { _explicitNullValueRequestorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_id"); else _explicitNullProperties?.Remove("requestor_id"); } }
+        public string? RequestorId { get => _explicitNullValueRequestorId; set { _explicitNullValueRequestorId = value; AdditionalData?.Remove("requestor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_id"); else _explicitNullProperties?.Remove("requestor_id"); } }
         private string? _explicitNullValueRequestorId = default!;
 #nullable restore
 #else
-        public string RequestorId { get => _explicitNullValueRequestorId; set { _explicitNullValueRequestorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_id"); else _explicitNullProperties?.Remove("requestor_id"); } }
+        public string RequestorId { get => _explicitNullValueRequestorId; set { _explicitNullValueRequestorId = value; AdditionalData?.Remove("requestor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestor_id"); else _explicitNullProperties?.Remove("requestor_id"); } }
         private string _explicitNullValueRequestorId = default!;
 #endif
         /// <summary>

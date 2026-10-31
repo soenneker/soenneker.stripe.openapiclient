@@ -8,6 +8,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoMandateOptionsPurpose
     #pragma warning restore CS1591
     {
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "dependant_support")]
         #pragma warning disable CS1591
         DependantSupport,
