@@ -98,8 +98,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,12 +113,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Polymorphic source of the application fee. Includes the ID of the object the application fee was created from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource? FeeSource { get => _explicitNullValueFeeSource; set { _explicitNullValueFeeSource = value; AdditionalData?.Remove("fee_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fee_source"); else _explicitNullProperties?.Remove("fee_source"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource? _explicitNullValueFeeSource = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource? FeeSource { get => _explicitNullValueFeeSource; set { _explicitNullValueFeeSource = value; AdditionalData?.Remove("fee_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fee_source"); else _explicitNullProperties?.Remove("fee_source"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource? _explicitNullValueFeeSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource FeeSource { get => _explicitNullValueFeeSource; set { _explicitNullValueFeeSource = value; AdditionalData?.Remove("fee_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fee_source"); else _explicitNullProperties?.Remove("fee_source"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource _explicitNullValueFeeSource = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource FeeSource { get => _explicitNullValueFeeSource; set { _explicitNullValueFeeSource = value; AdditionalData?.Remove("fee_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fee_source"); else _explicitNullProperties?.Remove("fee_source"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource _explicitNullValueFeeSource = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,9 +190,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication.CreateFromDiscriminatorValue); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "fee_source", n => { FeeSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource.CreateFromDiscriminatorValue); } },
+                { "fee_source", n => { FeeSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource>(global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
@@ -214,9 +214,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction>("balance_transaction", BalanceTransaction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge>("charge", Charge);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource>("fee_source", FeeSource);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource>("fee_source", FeeSource);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeObject>("object", Object);

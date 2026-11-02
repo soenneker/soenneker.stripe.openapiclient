@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,12 +101,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Other flows linked to a DebitReversal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows? LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; AdditionalData?.Remove("linked_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows? _explicitNullValueLinkedFlows = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows? LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; AdditionalData?.Remove("linked_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows? _explicitNullValueLinkedFlows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; AdditionalData?.Remove("linked_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows _explicitNullValueLinkedFlows = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows LinkedFlows { get => _explicitNullValueLinkedFlows; set { _explicitNullValueLinkedFlows = value; AdditionalData?.Remove("linked_flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_flows"); else _explicitNullProperties?.Remove("linked_flows"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows _explicitNullValueLinkedFlows = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
@@ -186,12 +186,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "hosted_regulatory_receipt_url", n => { HostedRegulatoryReceiptUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "linked_flows", n => { LinkedFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows.CreateFromDiscriminatorValue); } },
+                { "linked_flows", n => { LinkedFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "network", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalNetwork>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNetwork = default; _explicitNullProperties?.Remove("network"); AdditionalData["network"] = unknown; } else { Network = parsed; AdditionalData.Remove("network"); } } },
@@ -210,12 +210,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("hosted_regulatory_receipt_url", HostedRegulatoryReceiptUrl);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows>("linked_flows", LinkedFlows);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows>("linked_flows", LinkedFlows);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalNetwork>("network", Network);

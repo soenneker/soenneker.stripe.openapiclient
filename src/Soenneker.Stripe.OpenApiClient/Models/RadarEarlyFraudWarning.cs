@@ -52,8 +52,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The type of fraud labelled by the issuer. One of `card_never_received`, `fraudulent_card_application`, `made_with_counterfeit_card`, `made_with_lost_card`, `made_with_stolen_card`, `misc`, `unauthorized_use_of_card`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "actionable", n => { Actionable = n.GetBoolValue(); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge>(global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "fraud_type", n => { FraudType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("actionable", Actionable);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge>("charge", Charge);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("fraud_type", FraudType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);

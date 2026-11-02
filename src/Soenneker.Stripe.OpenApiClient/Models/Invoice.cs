@@ -248,8 +248,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? AutoAdvance { get => _explicitNullValueAutoAdvance; set { _explicitNullValueAutoAdvance = value; AdditionalData?.Remove("auto_advance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_advance"); else _explicitNullProperties?.Remove("auto_advance"); } }
         private bool? _explicitNullValueAutoAdvance = default!;
         /// <summary>The time when this invoice is currently scheduled to be automatically finalized. The field will be `null` if the invoice is not scheduled to finalize in the future. If the invoice is not in the draft state, this field will always be `null` - see `finalized_at` for the time when an already-finalized invoice was finalized.</summary>
-        public int? AutomaticallyFinalizesAt { get => _explicitNullValueAutomaticallyFinalizesAt; set { _explicitNullValueAutomaticallyFinalizesAt = value; AdditionalData?.Remove("automatically_finalizes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatically_finalizes_at"); else _explicitNullProperties?.Remove("automatically_finalizes_at"); } }
-        private int? _explicitNullValueAutomaticallyFinalizesAt = default!;
+        public long? AutomaticallyFinalizesAt { get => _explicitNullValueAutomaticallyFinalizesAt; set { _explicitNullValueAutomaticallyFinalizesAt = value; AdditionalData?.Remove("automatically_finalizes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatically_finalizes_at"); else _explicitNullProperties?.Remove("automatically_finalizes_at"); } }
+        private long? _explicitNullValueAutomaticallyFinalizesAt = default!;
         /// <summary>The automatic_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,16 +269,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The confirmation secret associated with this invoice. Currently, this contains the client_secret of the PaymentIntent that Stripe creates during invoice finalization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret? ConfirmationSecret { get => _explicitNullValueConfirmationSecret; set { _explicitNullValueConfirmationSecret = value; AdditionalData?.Remove("confirmation_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_secret"); else _explicitNullProperties?.Remove("confirmation_secret"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret? _explicitNullValueConfirmationSecret = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret? ConfirmationSecret { get => _explicitNullValueConfirmationSecret; set { _explicitNullValueConfirmationSecret = value; AdditionalData?.Remove("confirmation_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_secret"); else _explicitNullProperties?.Remove("confirmation_secret"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret? _explicitNullValueConfirmationSecret = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret ConfirmationSecret { get => _explicitNullValueConfirmationSecret; set { _explicitNullValueConfirmationSecret = value; AdditionalData?.Remove("confirmation_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_secret"); else _explicitNullProperties?.Remove("confirmation_secret"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret _explicitNullValueConfirmationSecret = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret ConfirmationSecret { get => _explicitNullValueConfirmationSecret; set { _explicitNullValueConfirmationSecret = value; AdditionalData?.Remove("confirmation_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmation_secret"); else _explicitNullProperties?.Remove("confirmation_secret"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret _explicitNullValueConfirmationSecret = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -312,12 +312,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s address. Until the invoice is finalized, this field will equal `customer.address`. Once the invoice is finalized, this field will no longer be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress? CustomerAddress { get => _explicitNullValueCustomerAddress; set { _explicitNullValueCustomerAddress = value; AdditionalData?.Remove("customer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_address"); else _explicitNullProperties?.Remove("customer_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress? _explicitNullValueCustomerAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? CustomerAddress { get => _explicitNullValueCustomerAddress; set { _explicitNullValueCustomerAddress = value; AdditionalData?.Remove("customer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_address"); else _explicitNullProperties?.Remove("customer_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueCustomerAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress CustomerAddress { get => _explicitNullValueCustomerAddress; set { _explicitNullValueCustomerAddress = value; AdditionalData?.Remove("customer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_address"); else _explicitNullProperties?.Remove("customer_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress _explicitNullValueCustomerAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address CustomerAddress { get => _explicitNullValueCustomerAddress; set { _explicitNullValueCustomerAddress = value; AdditionalData?.Remove("customer_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_address"); else _explicitNullProperties?.Remove("customer_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueCustomerAddress = default!;
 #endif
         /// <summary>The customer&apos;s email. Until the invoice is finalized, this field will equal `customer.email`. Once the invoice is finalized, this field will no longer be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -352,12 +352,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s shipping information. Until the invoice is finalized, this field will equal `customer.shipping`. Once the invoice is finalized, this field will no longer be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping? CustomerShipping { get => _explicitNullValueCustomerShipping; set { _explicitNullValueCustomerShipping = value; AdditionalData?.Remove("customer_shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_shipping"); else _explicitNullProperties?.Remove("customer_shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping? _explicitNullValueCustomerShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping? CustomerShipping { get => _explicitNullValueCustomerShipping; set { _explicitNullValueCustomerShipping = value; AdditionalData?.Remove("customer_shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_shipping"); else _explicitNullProperties?.Remove("customer_shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping? _explicitNullValueCustomerShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping CustomerShipping { get => _explicitNullValueCustomerShipping; set { _explicitNullValueCustomerShipping = value; AdditionalData?.Remove("customer_shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_shipping"); else _explicitNullProperties?.Remove("customer_shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping _explicitNullValueCustomerShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping CustomerShipping { get => _explicitNullValueCustomerShipping; set { _explicitNullValueCustomerShipping = value; AdditionalData?.Remove("customer_shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_shipping"); else _explicitNullProperties?.Remove("customer_shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping _explicitNullValueCustomerShipping = default!;
 #endif
         /// <summary>The customer&apos;s tax exempt status. Until the invoice is finalized, this field will equal `customer.tax_exempt`. Once the invoice is finalized, this field will no longer be updated.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerTaxExempt? CustomerTaxExempt { get => _explicitNullValueCustomerTaxExempt; set { _explicitNullValueCustomerTaxExempt = value; AdditionalData?.Remove("customer_tax_exempt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_tax_exempt"); else _explicitNullProperties?.Remove("customer_tax_exempt"); } }
@@ -433,11 +433,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>The date on which payment for this invoice is due. This value will be `null` for invoices where `collection_method=charge_automatically`.</summary>
-        public int? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; AdditionalData?.Remove("due_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
-        private int? _explicitNullValueDueDate = default!;
+        public long? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; AdditionalData?.Remove("due_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private long? _explicitNullValueDueDate = default!;
         /// <summary>The date when this invoice is in effect. Same as `finalized_at` unless overwritten. When defined, this value replaces the system-generated &apos;Date of issue&apos; printed on the invoice PDF and receipt.</summary>
-        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
-        private int? _explicitNullValueEffectiveAt = default!;
+        public long? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private long? _explicitNullValueEffectiveAt = default!;
         /// <summary>Ending customer balance after the invoice is finalized. Invoices are finalized approximately an hour after successful webhook delivery or when payment collection is attempted for the invoice. If the invoice has not been finalized yet, this will be null.</summary>
         public int? EndingBalance { get => _explicitNullValueEndingBalance; set { _explicitNullValueEndingBalance = value; AdditionalData?.Remove("ending_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ending_balance"); else _explicitNullProperties?.Remove("ending_balance"); } }
         private int? _explicitNullValueEndingBalance = default!;
@@ -454,12 +454,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the invoice that was cloned. See the [revision documentation](https://docs.stripe.com/invoicing/invoice-revisions) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice? FromInvoice { get => _explicitNullValueFromInvoice; set { _explicitNullValueFromInvoice = value; AdditionalData?.Remove("from_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_invoice"); else _explicitNullProperties?.Remove("from_invoice"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice? _explicitNullValueFromInvoice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice? FromInvoice { get => _explicitNullValueFromInvoice; set { _explicitNullValueFromInvoice = value; AdditionalData?.Remove("from_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_invoice"); else _explicitNullProperties?.Remove("from_invoice"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice? _explicitNullValueFromInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice FromInvoice { get => _explicitNullValueFromInvoice; set { _explicitNullValueFromInvoice = value; AdditionalData?.Remove("from_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_invoice"); else _explicitNullProperties?.Remove("from_invoice"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice _explicitNullValueFromInvoice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice FromInvoice { get => _explicitNullValueFromInvoice; set { _explicitNullValueFromInvoice = value; AdditionalData?.Remove("from_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_invoice"); else _explicitNullProperties?.Remove("from_invoice"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice _explicitNullValueFromInvoice = default!;
 #endif
         /// <summary>The URL for the hosted invoice page, which allows customers to view and pay an invoice. If the invoice has not been finalized yet, this will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -504,12 +504,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The error encountered during the previous attempt to finalize the invoice. This field is cleared when the invoice is successfully finalized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError? LastFinalizationError { get => _explicitNullValueLastFinalizationError; set { _explicitNullValueLastFinalizationError = value; AdditionalData?.Remove("last_finalization_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_finalization_error"); else _explicitNullProperties?.Remove("last_finalization_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError? _explicitNullValueLastFinalizationError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? LastFinalizationError { get => _explicitNullValueLastFinalizationError; set { _explicitNullValueLastFinalizationError = value; AdditionalData?.Remove("last_finalization_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_finalization_error"); else _explicitNullProperties?.Remove("last_finalization_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? _explicitNullValueLastFinalizationError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError LastFinalizationError { get => _explicitNullValueLastFinalizationError; set { _explicitNullValueLastFinalizationError = value; AdditionalData?.Remove("last_finalization_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_finalization_error"); else _explicitNullProperties?.Remove("last_finalization_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError _explicitNullValueLastFinalizationError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors LastFinalizationError { get => _explicitNullValueLastFinalizationError; set { _explicitNullValueLastFinalizationError = value; AdditionalData?.Remove("last_finalization_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_finalization_error"); else _explicitNullProperties?.Remove("last_finalization_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors _explicitNullValueLastFinalizationError = default!;
 #endif
         /// <summary>The ID of the most recent non-draft revision of this invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -545,8 +545,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The time at which payment will next be attempted. This value will be `null` for invoices where `collection_method=send_invoice`.</summary>
-        public int? NextPaymentAttempt { get => _explicitNullValueNextPaymentAttempt; set { _explicitNullValueNextPaymentAttempt = value; AdditionalData?.Remove("next_payment_attempt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_payment_attempt"); else _explicitNullProperties?.Remove("next_payment_attempt"); } }
-        private int? _explicitNullValueNextPaymentAttempt = default!;
+        public long? NextPaymentAttempt { get => _explicitNullValueNextPaymentAttempt; set { _explicitNullValueNextPaymentAttempt = value; AdditionalData?.Remove("next_payment_attempt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_payment_attempt"); else _explicitNullProperties?.Remove("next_payment_attempt"); } }
+        private long? _explicitNullValueNextPaymentAttempt = default!;
         /// <summary>A unique, identifying string that appears on emails sent to the customer for this invoice. This starts with the customer&apos;s unique invoice_prefix if it is specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -573,12 +573,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The parent that generated this invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent? _explicitNullValueParent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent _explicitNullValueParent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent _explicitNullValueParent = default!;
 #endif
         /// <summary>Payments for this invoice. Use [invoice payment](/api/invoice-payment) to get more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -601,11 +601,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings _explicitNullValuePaymentSettings = default!;
 #endif
         /// <summary>The latest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
-        public int? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; AdditionalData?.Remove("period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_end"); else _explicitNullProperties?.Remove("period_end"); } }
-        private int? _explicitNullValuePeriodEnd = default!;
+        public long? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; AdditionalData?.Remove("period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_end"); else _explicitNullProperties?.Remove("period_end"); } }
+        private long? _explicitNullValuePeriodEnd = default!;
         /// <summary>The earliest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
-        public int? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; AdditionalData?.Remove("period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_start"); else _explicitNullProperties?.Remove("period_start"); } }
-        private int? _explicitNullValuePeriodStart = default!;
+        public long? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; AdditionalData?.Remove("period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_start"); else _explicitNullProperties?.Remove("period_start"); } }
+        private long? _explicitNullValuePeriodStart = default!;
         /// <summary>Total amount of all post-payment credit notes issued for this invoice.</summary>
         public int? PostPaymentCreditNotesAmount { get => _explicitNullValuePostPaymentCreditNotesAmount; set { _explicitNullValuePostPaymentCreditNotesAmount = value; AdditionalData?.Remove("post_payment_credit_notes_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_payment_credit_notes_amount"); else _explicitNullProperties?.Remove("post_payment_credit_notes_amount"); } }
         private int? _explicitNullValuePostPaymentCreditNotesAmount = default!;
@@ -625,32 +625,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The rendering-related settings that control how invoices render in customer-facing interfaces such as the PDF or hosted invoice page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering? Rendering { get => _explicitNullValueRendering; set { _explicitNullValueRendering = value; AdditionalData?.Remove("rendering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering"); else _explicitNullProperties?.Remove("rendering"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering? _explicitNullValueRendering = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering? Rendering { get => _explicitNullValueRendering; set { _explicitNullValueRendering = value; AdditionalData?.Remove("rendering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering"); else _explicitNullProperties?.Remove("rendering"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering? _explicitNullValueRendering = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering Rendering { get => _explicitNullValueRendering; set { _explicitNullValueRendering = value; AdditionalData?.Remove("rendering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering"); else _explicitNullProperties?.Remove("rendering"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering _explicitNullValueRendering = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering Rendering { get => _explicitNullValueRendering; set { _explicitNullValueRendering = value; AdditionalData?.Remove("rendering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering"); else _explicitNullProperties?.Remove("rendering"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering _explicitNullValueRendering = default!;
 #endif
         /// <summary>The details of the cost of shipping, including the ShippingRate applied on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost? _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost? _explicitNullValueShippingCost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost _explicitNullValueShippingCost = default!;
 #endif
         /// <summary>Shipping details for the invoice. The Invoice PDF will use the `shipping_details` value if it is set, otherwise the PDF will render the shipping address from the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails? ShippingDetails { get => _explicitNullValueShippingDetails; set { _explicitNullValueShippingDetails = value; AdditionalData?.Remove("shipping_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_details"); else _explicitNullProperties?.Remove("shipping_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails? _explicitNullValueShippingDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping? ShippingDetails { get => _explicitNullValueShippingDetails; set { _explicitNullValueShippingDetails = value; AdditionalData?.Remove("shipping_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_details"); else _explicitNullProperties?.Remove("shipping_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping? _explicitNullValueShippingDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails ShippingDetails { get => _explicitNullValueShippingDetails; set { _explicitNullValueShippingDetails = value; AdditionalData?.Remove("shipping_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_details"); else _explicitNullProperties?.Remove("shipping_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails _explicitNullValueShippingDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping ShippingDetails { get => _explicitNullValueShippingDetails; set { _explicitNullValueShippingDetails = value; AdditionalData?.Remove("shipping_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_details"); else _explicitNullProperties?.Remove("shipping_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping _explicitNullValueShippingDetails = default!;
 #endif
         /// <summary>Starting customer balance before the invoice is finalized. If the invoice has not been finalized yet, this will be the current customer balance. For revision invoices, this also includes any customer balance that was applied to the original invoice.</summary>
         public int? StartingBalance { get => _explicitNullValueStartingBalance; set { _explicitNullValueStartingBalance = value; AdditionalData?.Remove("starting_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_balance"); else _explicitNullProperties?.Remove("starting_balance"); } }
@@ -751,8 +751,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax> _explicitNullValueTotalTaxes = default!;
 #endif
         /// <summary>Invoices are automatically paid or sent 1 hour after webhooks are delivered, or until all webhook delivery attempts have [been exhausted](https://docs.stripe.com/billing/webhooks#understand). This field tracks the time when webhooks for this invoice were successfully delivered. If the invoice had no webhooks to deliver, this will be set while the invoice is being created.</summary>
-        public int? WebhooksDeliveredAt { get => _explicitNullValueWebhooksDeliveredAt; set { _explicitNullValueWebhooksDeliveredAt = value; AdditionalData?.Remove("webhooks_delivered_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_delivered_at"); else _explicitNullProperties?.Remove("webhooks_delivered_at"); } }
-        private int? _explicitNullValueWebhooksDeliveredAt = default!;
+        public long? WebhooksDeliveredAt { get => _explicitNullValueWebhooksDeliveredAt; set { _explicitNullValueWebhooksDeliveredAt = value; AdditionalData?.Remove("webhooks_delivered_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks_delivered_at"); else _explicitNullProperties?.Remove("webhooks_delivered_at"); } }
+        private long? _explicitNullValueWebhooksDeliveredAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/> and sets the default values.
         /// </summary>
@@ -792,20 +792,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "attempted", n => { Attempted = n.GetBoolValue(); } },
                 { "auto_advance", n => { AutoAdvance = n.GetBoolValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax.CreateFromDiscriminatorValue); } },
-                { "automatically_finalizes_at", n => { AutomaticallyFinalizesAt = n.GetIntValue(); } },
+                { "automatically_finalizes_at", n => { AutomaticallyFinalizesAt = n.GetLongValue(); } },
                 { "billing_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceBillingReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingReason = default; _explicitNullProperties?.Remove("billing_reason"); AdditionalData["billing_reason"] = unknown; } else { BillingReason = parsed; AdditionalData.Remove("billing_reason"); } } },
                 { "collection_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCollectionMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCollectionMethod = default; _explicitNullProperties?.Remove("collection_method"); AdditionalData["collection_method"] = unknown; } else { CollectionMethod = parsed; AdditionalData.Remove("collection_method"); } } },
-                { "confirmation_secret", n => { ConfirmationSecret = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "confirmation_secret", n => { ConfirmationSecret = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "customer_address", n => { CustomerAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress.CreateFromDiscriminatorValue); } },
+                { "customer_address", n => { CustomerAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
                 { "customer_name", n => { CustomerName = n.GetStringValue(); } },
                 { "customer_phone", n => { CustomerPhone = n.GetStringValue(); } },
-                { "customer_shipping", n => { CustomerShipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping.CreateFromDiscriminatorValue); } },
+                { "customer_shipping", n => { CustomerShipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Shipping.CreateFromDiscriminatorValue); } },
                 { "customer_tax_exempt", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerTaxExempt>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCustomerTaxExempt = default; _explicitNullProperties?.Remove("customer_tax_exempt"); AdditionalData["customer_tax_exempt"] = unknown; } else { CustomerTaxExempt = parsed; AdditionalData.Remove("customer_tax_exempt"); } } },
                 { "customer_tax_ids", n => { CustomerTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceTaxId>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceTaxId.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethod.CreateFromDiscriminatorValue); } },
@@ -813,35 +813,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "due_date", n => { DueDate = n.GetIntValue(); } },
-                { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
+                { "due_date", n => { DueDate = n.GetLongValue(); } },
+                { "effective_at", n => { EffectiveAt = n.GetLongValue(); } },
                 { "ending_balance", n => { EndingBalance = n.GetIntValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "from_invoice", n => { FromInvoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice.CreateFromDiscriminatorValue); } },
+                { "from_invoice", n => { FromInvoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice.CreateFromDiscriminatorValue); } },
                 { "hosted_invoice_url", n => { HostedInvoiceUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_pdf", n => { InvoicePdf = n.GetStringValue(); } },
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
-                { "last_finalization_error", n => { LastFinalizationError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError.CreateFromDiscriminatorValue); } },
+                { "last_finalization_error", n => { LastFinalizationError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.CreateFromDiscriminatorValue); } },
                 { "latest_revision", n => { LatestRevision = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision.CreateFromDiscriminatorValue); } },
                 { "lines", n => { Lines = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "next_payment_attempt", n => { NextPaymentAttempt = n.GetIntValue(); } },
+                { "next_payment_attempt", n => { NextPaymentAttempt = n.GetLongValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceOnBehalfOf.CreateFromDiscriminatorValue); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent.CreateFromDiscriminatorValue); } },
                 { "payment_settings", n => { PaymentSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayments>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayments.CreateFromDiscriminatorValue); } },
-                { "period_end", n => { PeriodEnd = n.GetIntValue(); } },
-                { "period_start", n => { PeriodStart = n.GetIntValue(); } },
+                { "period_end", n => { PeriodEnd = n.GetLongValue(); } },
+                { "period_start", n => { PeriodStart = n.GetLongValue(); } },
                 { "post_payment_credit_notes_amount", n => { PostPaymentCreditNotesAmount = n.GetIntValue(); } },
                 { "pre_payment_credit_notes_amount", n => { PrePaymentCreditNotesAmount = n.GetIntValue(); } },
                 { "receipt_number", n => { ReceiptNumber = n.GetStringValue(); } },
-                { "rendering", n => { Rendering = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost.CreateFromDiscriminatorValue); } },
-                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails.CreateFromDiscriminatorValue); } },
+                { "rendering", n => { Rendering = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost.CreateFromDiscriminatorValue); } },
+                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Shipping.CreateFromDiscriminatorValue); } },
                 { "starting_balance", n => { StartingBalance = n.GetIntValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
@@ -856,7 +856,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "total_excluding_tax", n => { TotalExcludingTax = n.GetIntValue(); } },
                 { "total_pretax_credit_amounts", n => { TotalPretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_taxes", n => { TotalTaxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "webhooks_delivered_at", n => { WebhooksDeliveredAt = n.GetIntValue(); } },
+                { "webhooks_delivered_at", n => { WebhooksDeliveredAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -879,20 +879,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("attempt_count", AttemptCount);
             writer.WriteBoolValue("attempted", Attempted);
             writer.WriteBoolValue("auto_advance", AutoAdvance);
-            writer.WriteIntValue("automatically_finalizes_at", AutomaticallyFinalizesAt);
+            writer.WriteLongValue("automatically_finalizes_at", AutomaticallyFinalizesAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceBillingReason>("billing_reason", BillingReason);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCollectionMethod>("collection_method", CollectionMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceConfirmationSecret>("confirmation_secret", ConfirmationSecret);
-            writer.WriteIntValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceConfirmationSecret>("confirmation_secret", ConfirmationSecret);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerAddress>("customer_address", CustomerAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("customer_address", CustomerAddress);
             writer.WriteStringValue("customer_email", CustomerEmail);
             writer.WriteStringValue("customer_name", CustomerName);
             writer.WriteStringValue("customer_phone", CustomerPhone);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerShipping>("customer_shipping", CustomerShipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>("customer_shipping", CustomerShipping);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceCustomerTaxExempt>("customer_tax_exempt", CustomerTaxExempt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceTaxId>("customer_tax_ids", CustomerTaxIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
@@ -901,35 +901,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("discounts", Discounts);
-            writer.WriteIntValue("due_date", DueDate);
-            writer.WriteIntValue("effective_at", EffectiveAt);
+            writer.WriteLongValue("due_date", DueDate);
+            writer.WriteLongValue("effective_at", EffectiveAt);
             writer.WriteIntValue("ending_balance", EndingBalance);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceFromInvoice>("from_invoice", FromInvoice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceFromInvoice>("from_invoice", FromInvoice);
             writer.WriteStringValue("hosted_invoice_url", HostedInvoiceUrl);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice_pdf", InvoicePdf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("issuer", Issuer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLastFinalizationError>("last_finalization_error", LastFinalizationError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>("last_finalization_error", LastFinalizationError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision>("latest_revision", LatestRevision);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines>("lines", Lines);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty>("metadata", Metadata);
-            writer.WriteIntValue("next_payment_attempt", NextPaymentAttempt);
+            writer.WriteLongValue("next_payment_attempt", NextPaymentAttempt);
             writer.WriteStringValue("number", Number);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceOnBehalfOf>("on_behalf_of", OnBehalfOf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceParent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceParent>("parent", Parent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayments>("payments", Payments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings>("payment_settings", PaymentSettings);
-            writer.WriteIntValue("period_end", PeriodEnd);
-            writer.WriteIntValue("period_start", PeriodStart);
+            writer.WriteLongValue("period_end", PeriodEnd);
+            writer.WriteLongValue("period_start", PeriodStart);
             writer.WriteIntValue("post_payment_credit_notes_amount", PostPaymentCreditNotesAmount);
             writer.WriteIntValue("pre_payment_credit_notes_amount", PrePaymentCreditNotesAmount);
             writer.WriteStringValue("receipt_number", ReceiptNumber);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering>("rendering", Rendering);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingCost>("shipping_cost", ShippingCost);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceShippingDetails>("shipping_details", ShippingDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRendering>("rendering", Rendering);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>("shipping_details", ShippingDetails);
             writer.WriteIntValue("starting_balance", StartingBalance);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceStatus>("status", Status);
@@ -944,7 +944,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("total_excluding_tax", TotalExcludingTax);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount>("total_pretax_credit_amounts", TotalPretaxCreditAmounts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>("total_taxes", TotalTaxes);
-            writer.WriteIntValue("webhooks_delivered_at", WebhooksDeliveredAt);
+            writer.WriteLongValue("webhooks_delivered_at", WebhooksDeliveredAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

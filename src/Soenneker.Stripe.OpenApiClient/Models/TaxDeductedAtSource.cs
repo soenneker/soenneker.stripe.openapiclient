@@ -45,11 +45,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject? _explicitNullValueObject = default!;
         /// <summary>The end of the invoicing period. This TDS applies to Stripe fees collected during this invoicing period.</summary>
-        public int? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; AdditionalData?.Remove("period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_end"); else _explicitNullProperties?.Remove("period_end"); } }
-        private int? _explicitNullValuePeriodEnd = default!;
+        public long? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; AdditionalData?.Remove("period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_end"); else _explicitNullProperties?.Remove("period_end"); } }
+        private long? _explicitNullValuePeriodEnd = default!;
         /// <summary>The start of the invoicing period. This TDS applies to Stripe fees collected during this invoicing period.</summary>
-        public int? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; AdditionalData?.Remove("period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_start"); else _explicitNullProperties?.Remove("period_start"); } }
-        private int? _explicitNullValuePeriodStart = default!;
+        public long? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; AdditionalData?.Remove("period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period_start"); else _explicitNullProperties?.Remove("period_start"); } }
+        private long? _explicitNullValuePeriodStart = default!;
         /// <summary>The TAN that was supplied to Stripe when TDS was assessed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "period_end", n => { PeriodEnd = n.GetIntValue(); } },
-                { "period_start", n => { PeriodStart = n.GetIntValue(); } },
+                { "period_end", n => { PeriodEnd = n.GetLongValue(); } },
+                { "period_start", n => { PeriodStart = n.GetLongValue(); } },
                 { "tax_deduction_account_number", n => { TaxDeductionAccountNumber = n.GetStringValue(); } },
             };
         }
@@ -101,8 +101,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject>("object", Object);
-            writer.WriteIntValue("period_end", PeriodEnd);
-            writer.WriteIntValue("period_start", PeriodStart);
+            writer.WriteLongValue("period_end", PeriodEnd);
+            writer.WriteLongValue("period_start", PeriodStart);
             writer.WriteStringValue("tax_deduction_account_number", TaxDeductionAccountNumber);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

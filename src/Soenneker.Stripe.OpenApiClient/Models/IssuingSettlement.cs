@@ -67,11 +67,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueBin = default!;
 #endif
         /// <summary>The date that the transactions are cleared and posted to user&apos;s accounts.</summary>
-        public int? ClearingDate { get => _explicitNullValueClearingDate; set { _explicitNullValueClearingDate = value; AdditionalData?.Remove("clearing_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clearing_date"); else _explicitNullProperties?.Remove("clearing_date"); } }
-        private int? _explicitNullValueClearingDate = default!;
+        public long? ClearingDate { get => _explicitNullValueClearingDate; set { _explicitNullValueClearingDate = value; AdditionalData?.Remove("clearing_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clearing_date"); else _explicitNullProperties?.Remove("clearing_date"); } }
+        private long? _explicitNullValueClearingDate = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -175,8 +175,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bin", n => { Bin = n.GetStringValue(); } },
-                { "clearing_date", n => { ClearingDate = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "clearing_date", n => { ClearingDate = n.GetLongValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interchange_fees_amount", n => { InterchangeFeesAmount = n.GetIntValue(); } },
@@ -201,8 +201,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bin", Bin);
-            writer.WriteIntValue("clearing_date", ClearingDate);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("clearing_date", ClearingDate);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("interchange_fees_amount", InterchangeFeesAmount);

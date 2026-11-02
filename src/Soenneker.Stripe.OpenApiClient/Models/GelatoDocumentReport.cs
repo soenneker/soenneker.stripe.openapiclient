@@ -55,42 +55,42 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Address as it appears in the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress? _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueAddress = default!;
 #endif
         /// <summary>Date of birth as it appears in the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob? _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth? _explicitNullValueDob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth _explicitNullValueDob = default!;
 #endif
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed? _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError _explicitNullValueError = default!;
 #endif
         /// <summary>Expiration date of the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate? ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("expiration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_date"); else _explicitNullProperties?.Remove("expiration_date"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate? _explicitNullValueExpirationDate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate? ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("expiration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_date"); else _explicitNullProperties?.Remove("expiration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate? _explicitNullValueExpirationDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("expiration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_date"); else _explicitNullProperties?.Remove("expiration_date"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate _explicitNullValueExpirationDate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("expiration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_date"); else _explicitNullProperties?.Remove("expiration_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate _explicitNullValueExpirationDate = default!;
 #endif
         /// <summary>Array of [File](https://docs.stripe.com/api/files) ids containing images for this document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,12 +115,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Issued date of the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate? IssuedDate { get => _explicitNullValueIssuedDate; set { _explicitNullValueIssuedDate = value; AdditionalData?.Remove("issued_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_date"); else _explicitNullProperties?.Remove("issued_date"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate? _explicitNullValueIssuedDate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate? IssuedDate { get => _explicitNullValueIssuedDate; set { _explicitNullValueIssuedDate = value; AdditionalData?.Remove("issued_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_date"); else _explicitNullProperties?.Remove("issued_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate? _explicitNullValueIssuedDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate IssuedDate { get => _explicitNullValueIssuedDate; set { _explicitNullValueIssuedDate = value; AdditionalData?.Remove("issued_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_date"); else _explicitNullProperties?.Remove("issued_date"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate _explicitNullValueIssuedDate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate IssuedDate { get => _explicitNullValueIssuedDate; set { _explicitNullValueIssuedDate = value; AdditionalData?.Remove("issued_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_date"); else _explicitNullProperties?.Remove("issued_date"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate _explicitNullValueIssuedDate = default!;
 #endif
         /// <summary>Issuing country of the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -206,13 +206,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress.CreateFromDiscriminatorValue); } },
-                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob.CreateFromDiscriminatorValue); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed.CreateFromDiscriminatorValue); } },
-                { "expiration_date", n => { ExpirationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError.CreateFromDiscriminatorValue); } },
+                { "expiration_date", n => { ExpirationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate.CreateFromDiscriminatorValue); } },
                 { "files", n => { Files = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
-                { "issued_date", n => { IssuedDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate.CreateFromDiscriminatorValue); } },
+                { "issued_date", n => { IssuedDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate.CreateFromDiscriminatorValue); } },
                 { "issuing_country", n => { IssuingCountry = n.GetStringValue(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
@@ -230,13 +230,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportAddress>("address", Address);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportDob>("dob", Dob);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportErrorComposed>("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportExpirationDate>("expiration_date", ExpirationDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportDateOfBirth>("dob", Dob);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportError>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportExpirationDate>("expiration_date", ExpirationDate);
             writer.WriteCollectionOfPrimitiveValues<string>("files", Files);
             writer.WriteStringValue("first_name", FirstName);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReportIssuedDate>("issued_date", IssuedDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataDocumentReportIssuedDate>("issued_date", IssuedDate);
             writer.WriteStringValue("issuing_country", IssuingCountry);
             writer.WriteStringValue("last_name", LastName);
             writer.WriteStringValue("number", Number);

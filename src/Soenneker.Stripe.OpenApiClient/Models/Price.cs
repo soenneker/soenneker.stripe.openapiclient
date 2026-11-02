@@ -71,8 +71,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PriceBillingScheme? BillingScheme { get => _explicitNullValueBillingScheme; set { _explicitNullValueBillingScheme = value; AdditionalData?.Remove("billing_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_scheme"); else _explicitNullProperties?.Remove("billing_scheme"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PriceBillingScheme? _explicitNullValueBillingScheme = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,12 +96,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>When set, provides configuration for the amount to be adjusted by the customer during Checkout Sessions and Payment Links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount? CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; AdditionalData?.Remove("custom_unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount? _explicitNullValueCustomUnitAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount? CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; AdditionalData?.Remove("custom_unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount? _explicitNullValueCustomUnitAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; AdditionalData?.Remove("custom_unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount _explicitNullValueCustomUnitAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount CustomUnitAmount { get => _explicitNullValueCustomUnitAmount; set { _explicitNullValueCustomUnitAmount = value; AdditionalData?.Remove("custom_unit_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_unit_amount"); else _explicitNullProperties?.Remove("custom_unit_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount _explicitNullValueCustomUnitAmount = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -162,12 +162,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The recurring components of a price such as `interval` and `usage_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring? _explicitNullValueRecurring = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Recurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Recurring? _explicitNullValueRecurring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring _explicitNullValueRecurring = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Recurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Recurring _explicitNullValueRecurring = default!;
 #endif
         /// <summary>Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PriceTaxBehavior? TaxBehavior { get => _explicitNullValueTaxBehavior; set { _explicitNullValueTaxBehavior = value; AdditionalData?.Remove("tax_behavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_behavior"); else _explicitNullProperties?.Remove("tax_behavior"); } }
@@ -188,12 +188,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Apply a transformation to the reported usage or set quantity before computing the amount billed. Cannot be combined with `tiers`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity? TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; AdditionalData?.Remove("transform_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity? _explicitNullValueTransformQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity? TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; AdditionalData?.Remove("transform_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity? _explicitNullValueTransformQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; AdditionalData?.Remove("transform_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity _explicitNullValueTransformQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity TransformQuantity { get => _explicitNullValueTransformQuantity; set { _explicitNullValueTransformQuantity = value; AdditionalData?.Remove("transform_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_quantity"); else _explicitNullProperties?.Remove("transform_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity _explicitNullValueTransformQuantity = default!;
 #endif
         /// <summary>One of `one_time` or `recurring` depending on whether the price is for a one-time purchase or a recurring (subscription) purchase.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PriceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -238,10 +238,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "billing_scheme", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceBillingScheme>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingScheme = default; _explicitNullProperties?.Remove("billing_scheme"); AdditionalData["billing_scheme"] = unknown; } else { BillingScheme = parsed; AdditionalData.Remove("billing_scheme"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceCurrencyOptionsProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PriceCurrencyOptionsProperty.CreateFromDiscriminatorValue); } },
-                { "custom_unit_amount", n => { CustomUnitAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount.CreateFromDiscriminatorValue); } },
+                { "custom_unit_amount", n => { CustomUnitAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount>(global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "lookup_key", n => { LookupKey = n.GetStringValue(); } },
@@ -249,11 +249,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceProduct>(global::Soenneker.Stripe.OpenApiClient.Models.PriceProduct.CreateFromDiscriminatorValue); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring>(global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Recurring>(global::Soenneker.Stripe.OpenApiClient.Models.Recurring.CreateFromDiscriminatorValue); } },
                 { "tax_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTaxBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxBehavior = default; _explicitNullProperties?.Remove("tax_behavior"); AdditionalData["tax_behavior"] = unknown; } else { TaxBehavior = parsed; AdditionalData.Remove("tax_behavior"); } } },
                 { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PriceTier>(global::Soenneker.Stripe.OpenApiClient.Models.PriceTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tiers_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTiersMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTiersMode = default; _explicitNullProperties?.Remove("tiers_mode"); AdditionalData["tiers_mode"] = unknown; } else { TiersMode = parsed; AdditionalData.Remove("tiers_mode"); } } },
-                { "transform_quantity", n => { TransformQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity.CreateFromDiscriminatorValue); } },
+                { "transform_quantity", n => { TransformQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "unit_amount", n => { UnitAmount = n.GetIntValue(); } },
                 { "unit_amount_decimal", n => { UnitAmountDecimal = n.GetStringValue(); } },
@@ -268,10 +268,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceBillingScheme>("billing_scheme", BillingScheme);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceCurrencyOptionsProperty>("currency_options", CurrencyOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount>("custom_unit_amount", CustomUnitAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomUnitAmount>("custom_unit_amount", CustomUnitAmount);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("lookup_key", LookupKey);
@@ -279,11 +279,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("nickname", Nickname);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceProduct>("product", Product);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceRecurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Recurring>("recurring", Recurring);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PriceTier>("tiers", Tiers);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTiersMode>("tiers_mode", TiersMode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity>("transform_quantity", TransformQuantity);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformQuantity>("transform_quantity", TransformQuantity);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceType>("type", Type);
             writer.WriteIntValue("unit_amount", UnitAmount);
             writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);

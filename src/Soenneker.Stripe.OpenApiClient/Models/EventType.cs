@@ -75,8 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueContext = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,12 +109,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information on the API request that triggers the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest? _explicitNullValueRequest = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest _explicitNullValueRequest = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Description of the event (for example, `invoice.created` or `charge.refunded`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -154,13 +154,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "context", n => { Context = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventValueObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "pending_webhooks", n => { PendingWebhooks = n.GetIntValue(); } },
-                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest>(global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest.CreateFromDiscriminatorValue); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -174,13 +174,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteStringValue("context", Context);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>("data", Data);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventValueObject>("object", Object);
             writer.WriteIntValue("pending_webhooks", PendingWebhooks);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest>("request", Request);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

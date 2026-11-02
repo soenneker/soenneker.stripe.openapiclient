@@ -70,8 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventsXWwwFormUrlencodedRequestPayload _explicitNullValuePayload = default!;
 #endif
         /// <summary>The time of the event. Measured in seconds since the Unix epoch. Must be within the past 35 calendar days or up to 5 minutes in the future. Defaults to current timestamp if not specified.</summary>
-        public int? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
-        private int? _explicitNullValueTimestamp = default!;
+        public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private long? _explicitNullValueTimestamp = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
                 { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventsXWwwFormUrlencodedRequestPayload>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventsXWwwFormUrlencodedRequestPayload.CreateFromDiscriminatorValue); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("identifier", Identifier);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventsXWwwFormUrlencodedRequestPayload>("payload", Payload);
-            writer.WriteIntValue("timestamp", Timestamp);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("timestamp", Timestamp);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

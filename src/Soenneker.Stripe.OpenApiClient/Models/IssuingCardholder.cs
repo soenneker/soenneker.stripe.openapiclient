@@ -67,16 +67,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional information about a `company` cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed? Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; AdditionalData?.Remove("company"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed? _explicitNullValueCompany = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany? Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; AdditionalData?.Remove("company"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany? _explicitNullValueCompany = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; AdditionalData?.Remove("company"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed _explicitNullValueCompany = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; AdditionalData?.Remove("company"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany _explicitNullValueCompany = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The cardholder&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,12 +100,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional information about an `individual` cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed? Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; AdditionalData?.Remove("individual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed? _explicitNullValueIndividual = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual? Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; AdditionalData?.Remove("individual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual? _explicitNullValueIndividual = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; AdditionalData?.Remove("individual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed _explicitNullValueIndividual = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual Individual { get => _explicitNullValueIndividual; set { _explicitNullValueIndividual = value; AdditionalData?.Remove("individual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual"); else _explicitNullProperties?.Remove("individual"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual _explicitNullValueIndividual = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
@@ -166,12 +166,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls? SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; AdditionalData?.Remove("spending_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls? _explicitNullValueSpendingControls = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls? SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; AdditionalData?.Remove("spending_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls? _explicitNullValueSpendingControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; AdditionalData?.Remove("spending_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls _explicitNullValueSpendingControls = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls SpendingControls { get => _explicitNullValueSpendingControls; set { _explicitNullValueSpendingControls = value; AdditionalData?.Remove("spending_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spending_controls"); else _explicitNullProperties?.Remove("spending_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls _explicitNullValueSpendingControls = default!;
 #endif
         /// <summary>Specifies whether to permit authorizations on this cardholder&apos;s cards.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -205,11 +205,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress.CreateFromDiscriminatorValue); } },
-                { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed.CreateFromDiscriminatorValue); } },
+                { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -217,7 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem>()?.AsList(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements.CreateFromDiscriminatorValue); } },
-                { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls.CreateFromDiscriminatorValue); } },
+                { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -230,11 +230,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress>("billing", Billing);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed>("company", Company);
-            writer.WriteIntValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany>("company", Company);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed>("individual", Individual);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual>("individual", Individual);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
@@ -242,7 +242,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem>("preferred_locales", PreferredLocales);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements>("requirements", Requirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls>("spending_controls", SpendingControls);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls>("spending_controls", SpendingControls);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

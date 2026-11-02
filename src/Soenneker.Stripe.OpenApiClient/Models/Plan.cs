@@ -82,8 +82,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PlanBillingScheme? BillingScheme { get => _explicitNullValueBillingScheme; set { _explicitNullValueBillingScheme = value; AdditionalData?.Remove("billing_scheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_scheme"); else _explicitNullProperties?.Remove("billing_scheme"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PlanBillingScheme? _explicitNullValueBillingScheme = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,12 +172,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Apply a transformation to the reported usage or set quantity before computing the amount billed. Cannot be combined with `tiers`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage? TransformUsage { get => _explicitNullValueTransformUsage; set { _explicitNullValueTransformUsage = value; AdditionalData?.Remove("transform_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_usage"); else _explicitNullProperties?.Remove("transform_usage"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage? _explicitNullValueTransformUsage = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage? TransformUsage { get => _explicitNullValueTransformUsage; set { _explicitNullValueTransformUsage = value; AdditionalData?.Remove("transform_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_usage"); else _explicitNullProperties?.Remove("transform_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage? _explicitNullValueTransformUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage TransformUsage { get => _explicitNullValueTransformUsage; set { _explicitNullValueTransformUsage = value; AdditionalData?.Remove("transform_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_usage"); else _explicitNullProperties?.Remove("transform_usage"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage _explicitNullValueTransformUsage = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage TransformUsage { get => _explicitNullValueTransformUsage; set { _explicitNullValueTransformUsage = value; AdditionalData?.Remove("transform_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transform_usage"); else _explicitNullProperties?.Remove("transform_usage"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage _explicitNullValueTransformUsage = default!;
 #endif
         /// <summary>Default number of trial days when subscribing a customer to this plan using [`trial_from_plan=true`](https://docs.stripe.com/api#create_subscription-trial_from_plan).</summary>
         public int? TrialPeriodDays { get => _explicitNullValueTrialPeriodDays; set { _explicitNullValueTrialPeriodDays = value; AdditionalData?.Remove("trial_period_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_period_days"); else _explicitNullProperties?.Remove("trial_period_days"); } }
@@ -214,7 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_decimal", n => { AmountDecimal = n.GetStringValue(); } },
                 { "billing_scheme", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanBillingScheme>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingScheme = default; _explicitNullProperties?.Remove("billing_scheme"); AdditionalData["billing_scheme"] = unknown; } else { BillingScheme = parsed; AdditionalData.Remove("billing_scheme"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
@@ -227,7 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanProduct>(global::Soenneker.Stripe.OpenApiClient.Models.PlanProduct.CreateFromDiscriminatorValue); } },
                 { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier>(global::Soenneker.Stripe.OpenApiClient.Models.PlanTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tiers_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanTiersMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTiersMode = default; _explicitNullProperties?.Remove("tiers_mode"); AdditionalData["tiers_mode"] = unknown; } else { TiersMode = parsed; AdditionalData.Remove("tiers_mode"); } } },
-                { "transform_usage", n => { TransformUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage>(global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage.CreateFromDiscriminatorValue); } },
+                { "transform_usage", n => { TransformUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage>(global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage.CreateFromDiscriminatorValue); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
                 { "usage_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanUsageType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUsageType = default; _explicitNullProperties?.Remove("usage_type"); AdditionalData["usage_type"] = unknown; } else { UsageType = parsed; AdditionalData.Remove("usage_type"); } } },
             };
@@ -243,7 +243,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteStringValue("amount_decimal", AmountDecimal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanBillingScheme>("billing_scheme", BillingScheme);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanInterval>("interval", Interval);
@@ -256,7 +256,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanProduct>("product", Product);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier>("tiers", Tiers);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanTiersMode>("tiers_mode", TiersMode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanTransformUsage>("transform_usage", TransformUsage);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage>("transform_usage", TransformUsage);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanUsageType>("usage_type", UsageType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

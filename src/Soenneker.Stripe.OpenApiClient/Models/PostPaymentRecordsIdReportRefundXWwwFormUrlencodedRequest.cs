@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>When the reported refund was initiated. Measured in seconds since the Unix epoch.</summary>
-        public int? InitiatedAt { get => _explicitNullValueInitiatedAt; set { _explicitNullValueInitiatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiated_at"); else _explicitNullProperties?.Remove("initiated_at"); } }
-        private int? _explicitNullValueInitiatedAt = default!;
+        public long? InitiatedAt { get => _explicitNullValueInitiatedAt; set { _explicitNullValueInitiatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiated_at"); else _explicitNullProperties?.Remove("initiated_at"); } }
+        private long? _explicitNullValueInitiatedAt = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestAmount.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "initiated_at", n => { InitiatedAt = n.GetIntValue(); } },
+                { "initiated_at", n => { InitiatedAt = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundedOutcome>(); } },
                 { "processor_details", n => { ProcessorDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails.CreateFromDiscriminatorValue); } },
@@ -125,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestAmount>("amount", Amount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("initiated_at", InitiatedAt);
+            writer.WriteLongValue("initiated_at", InitiatedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundedOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails>("processor_details", ProcessorDetails);

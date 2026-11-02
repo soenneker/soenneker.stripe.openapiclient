@@ -73,8 +73,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.TransferBalanceTransaction _explicitNullValueBalanceTransaction = default!;
 #endif
         /// <summary>Time that this record of the transfer was first created.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,7 +212,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_reversed", n => { AmountReversed = n.GetIntValue(); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TransferBalanceTransaction.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferDestination>(global::Soenneker.Stripe.OpenApiClient.Models.TransferDestination.CreateFromDiscriminatorValue); } },
@@ -238,7 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("amount_reversed", AmountReversed);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferBalanceTransaction>("balance_transaction", BalanceTransaction);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferDestination>("destination", Destination);

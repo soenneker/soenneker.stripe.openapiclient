@@ -61,16 +61,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Hash containing carrier text, for use with physical bundles that support carrier text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; AdditionalData?.Remove("carrier_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed? _explicitNullValueCarrierText = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText? CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; AdditionalData?.Remove("carrier_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText? _explicitNullValueCarrierText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; AdditionalData?.Remove("carrier_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed _explicitNullValueCarrierText = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText CarrierText { get => _explicitNullValueCarrierText; set { _explicitNullValueCarrierText = value; AdditionalData?.Remove("carrier_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_text"); else _explicitNullProperties?.Remove("carrier_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText _explicitNullValueCarrierText = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -176,8 +176,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card_logo", n => { CardLogo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo.CreateFromDiscriminatorValue); } },
-                { "carrier_text", n => { CarrierText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "carrier_text", n => { CarrierText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "lookup_key", n => { LookupKey = n.GetStringValue(); } },
@@ -198,8 +198,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo>("card_logo", CardLogo);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed>("carrier_text", CarrierText);
-            writer.WriteIntValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText>("carrier_text", CarrierText);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("lookup_key", LookupKey);

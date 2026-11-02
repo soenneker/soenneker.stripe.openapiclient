@@ -46,8 +46,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The end_date property</summary>
-        public int? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
-        private int? _explicitNullValueEndDate = default!;
+        public long? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        private long? _explicitNullValueEndDate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataUpiMandateOptions"/> and sets the default values.
         /// </summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataUpiMandateOptionsAmountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAmountType = default; _explicitNullProperties?.Remove("amount_type"); AdditionalData["amount_type"] = unknown; } else { AmountType = parsed; AdditionalData.Remove("amount_type"); } } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "end_date", n => { EndDate = n.GetIntValue(); } },
+                { "end_date", n => { EndDate = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataUpiMandateOptionsAmountType>("amount_type", AmountType);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("end_date", EndDate);
+            writer.WriteLongValue("end_date", EndDate);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -85,23 +85,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode _explicitNullValueBillingMode = default!;
 #endif
         /// <summary>Time at which the subscription schedule was canceled. Measured in seconds since the Unix epoch.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Time at which the subscription schedule was completed. Measured in seconds since the Unix epoch.</summary>
-        public int? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
-        private int? _explicitNullValueCompletedAt = default!;
+        public long? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
+        private long? _explicitNullValueCompletedAt = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Object representing the start and end dates for the current phase of the subscription schedule, if it is `active`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed? CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; AdditionalData?.Remove("current_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed? _explicitNullValueCurrentPhase = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase? CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; AdditionalData?.Remove("current_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase? _explicitNullValueCurrentPhase = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; AdditionalData?.Remove("current_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed _explicitNullValueCurrentPhase = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase CurrentPhase { get => _explicitNullValueCurrentPhase; set { _explicitNullValueCurrentPhase = value; AdditionalData?.Remove("current_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_phase"); else _explicitNullProperties?.Remove("current_phase"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase _explicitNullValueCurrentPhase = default!;
 #endif
         /// <summary>ID of the customer who owns the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -183,8 +183,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration> _explicitNullValuePhases = default!;
 #endif
         /// <summary>Time at which the subscription schedule was released. Measured in seconds since the Unix epoch.</summary>
-        public int? ReleasedAt { get => _explicitNullValueReleasedAt; set { _explicitNullValueReleasedAt = value; AdditionalData?.Remove("released_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_at"); else _explicitNullProperties?.Remove("released_at"); } }
-        private int? _explicitNullValueReleasedAt = default!;
+        public long? ReleasedAt { get => _explicitNullValueReleasedAt; set { _explicitNullValueReleasedAt = value; AdditionalData?.Remove("released_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_at"); else _explicitNullProperties?.Remove("released_at"); } }
+        private long? _explicitNullValueReleasedAt = default!;
         /// <summary>ID of the subscription once managed by the subscription schedule (if it is released).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -245,10 +245,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode.CreateFromDiscriminatorValue); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "completed_at", n => { CompletedAt = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "current_phase", n => { CurrentPhase = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed.CreateFromDiscriminatorValue); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
+                { "completed_at", n => { CompletedAt = n.GetLongValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "current_phase", n => { CurrentPhase = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_settings", n => { DefaultSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings.CreateFromDiscriminatorValue); } },
@@ -259,7 +259,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "pause_schedules", n => { PauseSchedules = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "phases", n => { Phases = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "released_at", n => { ReleasedAt = n.GetIntValue(); } },
+                { "released_at", n => { ReleasedAt = n.GetLongValue(); } },
                 { "released_subscription", n => { ReleasedSubscription = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription.CreateFromDiscriminatorValue); } },
@@ -275,10 +275,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleApplication>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode>("billing_mode", BillingMode);
-            writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteIntValue("completed_at", CompletedAt);
-            writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed>("current_phase", CurrentPhase);
+            writer.WriteLongValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("completed_at", CompletedAt);
+            writer.WriteLongValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhase>("current_phase", CurrentPhase);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings>("default_settings", DefaultSettings);
@@ -289,7 +289,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>("pause_schedules", PauseSchedules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>("phases", Phases);
-            writer.WriteIntValue("released_at", ReleasedAt);
+            writer.WriteLongValue("released_at", ReleasedAt);
             writer.WriteStringValue("released_subscription", ReleasedSubscription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleSubscription>("subscription", Subscription);

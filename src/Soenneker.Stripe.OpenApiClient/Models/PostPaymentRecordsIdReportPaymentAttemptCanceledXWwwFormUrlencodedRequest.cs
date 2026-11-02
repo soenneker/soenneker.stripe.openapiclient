@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         }
 
         /// <summary>When the reported payment was canceled. Measured in seconds since the Unix epoch.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptCanceledXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptCanceledXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
             };
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptCanceledXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

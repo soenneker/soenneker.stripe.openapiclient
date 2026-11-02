@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date at which the mandate expires.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Type of the mandate.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.OffSessionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.OffSessionType? _explicitNullValueType = default!;
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OffSessionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OffSessionType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

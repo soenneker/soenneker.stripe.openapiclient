@@ -28,12 +28,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Disputed transaction details for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction? DisputedTransaction { get => _explicitNullValueDisputedTransaction; set { _explicitNullValueDisputedTransaction = value; AdditionalData?.Remove("disputed_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputed_transaction"); else _explicitNullProperties?.Remove("disputed_transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction? _explicitNullValueDisputedTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction? DisputedTransaction { get => _explicitNullValueDisputedTransaction; set { _explicitNullValueDisputedTransaction = value; AdditionalData?.Remove("disputed_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputed_transaction"); else _explicitNullProperties?.Remove("disputed_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction? _explicitNullValueDisputedTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction DisputedTransaction { get => _explicitNullValueDisputedTransaction; set { _explicitNullValueDisputedTransaction = value; AdditionalData?.Remove("disputed_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputed_transaction"); else _explicitNullProperties?.Remove("disputed_transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction _explicitNullValueDisputedTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction DisputedTransaction { get => _explicitNullValueDisputedTransaction; set { _explicitNullValueDisputedTransaction = value; AdditionalData?.Remove("disputed_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputed_transaction"); else _explicitNullProperties?.Remove("disputed_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction _explicitNullValueDisputedTransaction = default!;
 #endif
         /// <summary>List of exactly two prior undisputed transaction objects for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disputed_transaction", n => { DisputedTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction.CreateFromDiscriminatorValue); } },
+                { "disputed_transaction", n => { DisputedTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction.CreateFromDiscriminatorValue); } },
                 { "prior_undisputed_transactions", n => { PriorUndisputedTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction>("disputed_transaction", DisputedTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction>("disputed_transaction", DisputedTransaction);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction>("prior_undisputed_transactions", PriorUndisputedTransactions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

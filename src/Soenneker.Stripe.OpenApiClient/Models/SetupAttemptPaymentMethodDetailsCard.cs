@@ -56,12 +56,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Check results by Card networks on Card address and CVC at the time of authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed? Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed? _explicitNullValueChecks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks? Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks? _explicitNullValueChecks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed _explicitNullValueChecks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks _explicitNullValueChecks = default!;
 #endif
         /// <summary>Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you&apos;ve collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,22 +122,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Populated if this authorization used 3D Secure authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure? _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>If this Card is part of a card wallet, this contains the details of the card wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed? Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed? _explicitNullValueWallet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet? Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet? _explicitNullValueWallet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed _explicitNullValueWallet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet _explicitNullValueWallet = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard"/> and sets the default values.
@@ -165,7 +165,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
-                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed.CreateFromDiscriminatorValue); } },
+                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
@@ -173,8 +173,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "funding", n => { Funding = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "network", n => { Network = n.GetStringValue(); } },
-                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure.CreateFromDiscriminatorValue); } },
-                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed.CreateFromDiscriminatorValue); } },
+                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails.CreateFromDiscriminatorValue); } },
+                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -185,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand", Brand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecksComposed>("checks", Checks);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardChecks>("checks", Checks);
             writer.WriteStringValue("country", Country);
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
@@ -193,8 +193,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("funding", Funding);
             writer.WriteStringValue("last4", Last4);
             writer.WriteStringValue("network", Network);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardThreeDSecure>("three_d_secure", ThreeDSecure);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWalletComposed>("wallet", Wallet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetails>("three_d_secure", ThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardWallet>("wallet", Wallet);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

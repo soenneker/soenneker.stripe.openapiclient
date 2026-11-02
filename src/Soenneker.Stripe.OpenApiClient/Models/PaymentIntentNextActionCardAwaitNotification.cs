@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that payment will be attempted. If customer approval is required, they need to provide approval before this time.</summary>
-        public int? ChargeAttemptAt { get => _explicitNullValueChargeAttemptAt; set { _explicitNullValueChargeAttemptAt = value; AdditionalData?.Remove("charge_attempt_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_attempt_at"); else _explicitNullProperties?.Remove("charge_attempt_at"); } }
-        private int? _explicitNullValueChargeAttemptAt = default!;
+        public long? ChargeAttemptAt { get => _explicitNullValueChargeAttemptAt; set { _explicitNullValueChargeAttemptAt = value; AdditionalData?.Remove("charge_attempt_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charge_attempt_at"); else _explicitNullProperties?.Remove("charge_attempt_at"); } }
+        private long? _explicitNullValueChargeAttemptAt = default!;
         /// <summary>For payments greater than INR 15000, the customer must provide explicit approval of the payment with their bank. For payments of lower amount, no customer action is required.</summary>
         public bool? CustomerApprovalRequired { get => _explicitNullValueCustomerApprovalRequired; set { _explicitNullValueCustomerApprovalRequired = value; AdditionalData?.Remove("customer_approval_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_approval_required"); else _explicitNullProperties?.Remove("customer_approval_required"); } }
         private bool? _explicitNullValueCustomerApprovalRequired = default!;
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "charge_attempt_at", n => { ChargeAttemptAt = n.GetIntValue(); } },
+                { "charge_attempt_at", n => { ChargeAttemptAt = n.GetLongValue(); } },
                 { "customer_approval_required", n => { CustomerApprovalRequired = n.GetBoolValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("charge_attempt_at", ChargeAttemptAt);
+            writer.WriteLongValue("charge_attempt_at", ChargeAttemptAt);
             writer.WriteBoolValue("customer_approval_required", CustomerApprovalRequired);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

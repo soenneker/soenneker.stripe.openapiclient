@@ -52,11 +52,350 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("active") && shapeMembers1.ContainsKey("created") && shapeMembers1.ContainsKey("id") && shapeMembers1.ContainsKey("livemode") && shapeMembers1.ContainsKey("metadata") && shapeMembers1.ContainsKey("object") && shapeMembers1.ContainsKey("type") && (!shapeMembers1.ContainsKey("active") || (((shapeMembers1["active"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean)))) && (!shapeMembers1.ContainsKey("created") || ((((shapeMembers1["created"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers1["created"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral4 && integral4.GetValue() % 1 == 0) || (shapeMembers1["created"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral5 && integral5.GetValue() % 1 == 0) || (shapeMembers1["created"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral6 && integral6.GetValue() % 1 == 0)))))) && (!shapeMembers1.ContainsKey("delivery_estimate") || (((shapeMembers1["delivery_estimate"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["delivery_estimate"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject9 || (shapeObject9.GetValue() is var shapeMembers10 && ((!shapeMembers10.ContainsKey("maximum") || (((shapeMembers10["maximum"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers10["maximum"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject11 || (shapeObject11.GetValue() is var shapeMembers12 && (shapeMembers12.ContainsKey("unit") && shapeMembers12.ContainsKey("value") && (!shapeMembers12.ContainsKey("unit") || (((shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal13 && "business_day".Equals(literal13.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal14 && "day".Equals(literal14.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal15 && "hour".Equals(literal15.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal16 && "month".Equals(literal16.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers12["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal17 && "week".Equals(literal17.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers12.ContainsKey("value") || ((((shapeMembers12["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers12["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral20 && integral20.GetValue() % 1 == 0) || (shapeMembers12["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral21 && integral21.GetValue() % 1 == 0) || (shapeMembers12["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral22 && integral22.GetValue() % 1 == 0))))))))))) && (!shapeMembers10.ContainsKey("minimum") || (((shapeMembers10["minimum"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers10["minimum"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject25 || (shapeObject25.GetValue() is var shapeMembers26 && (shapeMembers26.ContainsKey("unit") && shapeMembers26.ContainsKey("value") && (!shapeMembers26.ContainsKey("unit") || (((shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal27 && "business_day".Equals(literal27.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal28 && "day".Equals(literal28.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal29 && "hour".Equals(literal29.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal30 && "month".Equals(literal30.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers26["unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal31 && "week".Equals(literal31.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers26.ContainsKey("value") || ((((shapeMembers26["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers26["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral34 && integral34.GetValue() % 1 == 0) || (shapeMembers26["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral35 && integral35.GetValue() % 1 == 0) || (shapeMembers26["value"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral36 && integral36.GetValue() % 1 == 0)))))))))))))))) && (!shapeMembers1.ContainsKey("display_name") || (((shapeMembers1["display_name"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString) || ((shapeMembers1["display_name"] == null || shapeMembers1["display_name"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull))))) && (!shapeMembers1.ContainsKey("fixed_amount") || (((shapeMembers1["fixed_amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["fixed_amount"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject41 || (shapeObject41.GetValue() is var shapeMembers42 && (shapeMembers42.ContainsKey("amount") && shapeMembers42.ContainsKey("currency") && (!shapeMembers42.ContainsKey("amount") || ((((shapeMembers42["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong || (shapeMembers42["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble integral43 && integral43.GetValue() % 1 == 0) || (shapeMembers42["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal integral44 && integral44.GetValue() % 1 == 0) || (shapeMembers42["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat integral45 && integral45.GetValue() % 1 == 0)))))) && (!shapeMembers42.ContainsKey("currency") || (((shapeMembers42["currency"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers42.ContainsKey("currency_options") || (((shapeMembers42["currency_options"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))))))))) && (!shapeMembers1.ContainsKey("id") || (((shapeMembers1["id"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("livemode") || (((shapeMembers1["livemode"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean)))) && (!shapeMembers1.ContainsKey("metadata") || (((shapeMembers1["metadata"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)))) && (!shapeMembers1.ContainsKey("object") || (((shapeMembers1["object"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["object"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal58 && "shipping_rate".Equals(literal58.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("tax_behavior") || (((shapeMembers1["tax_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString) || ((shapeMembers1["tax_behavior"] == null || shapeMembers1["tax_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull))) && ((shapeMembers1["tax_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal61 && "exclusive".Equals(literal61.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["tax_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal62 && "inclusive".Equals(literal62.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["tax_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal63 && "unspecified".Equals(literal63.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("tax_code") || (((((shapeMembers1["tax_code"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))) || (((shapeMembers1["tax_code"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["tax_code"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject70 || (shapeObject70.GetValue() is var shapeMembers71 && (shapeMembers71.ContainsKey("description") && shapeMembers71.ContainsKey("id") && shapeMembers71.ContainsKey("name") && shapeMembers71.ContainsKey("object") && (!shapeMembers71.ContainsKey("description") || (((shapeMembers71["description"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers71.ContainsKey("id") || (((shapeMembers71["id"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers71.ContainsKey("name") || (((shapeMembers71["name"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers71.ContainsKey("object") || (((shapeMembers71["object"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers71["object"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal78 && "tax_code".Equals(literal78.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers71.ContainsKey("requirements") || (((shapeMembers71["requirements"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers71["requirements"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject81 || (shapeObject81.GetValue() is var shapeMembers82 && (shapeMembers82.ContainsKey("performance_location") && (!shapeMembers82.ContainsKey("performance_location") || (((shapeMembers82["performance_location"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers82["performance_location"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal83 && "optional".Equals(literal83.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers82["performance_location"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal84 && "required".Equals(literal84.GetValue(), global::System.StringComparison.Ordinal))))))))))))))))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal87 && "fixed_amount".Equals(literal87.GetValue(), global::System.StringComparison.Ordinal))))))))))();
+            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? ((global::System.Func<bool?[]>)(() => { int remaining = 10000;
+bool IsNumber(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal;
+int StringLength(string text) { int count = 0; for (int i = 0; i < text.Length; i++, count++) if (char.IsHighSurrogate(text[i]) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1])) i++; return count; }
+bool? Any(params bool?[] values) { bool? result = false; foreach (var item in values) result |= item; return result; }
+decimal? Number(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node) {
+    try { return node switch {
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger n => n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong n => n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat n => (decimal)n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble n => (decimal)n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal n => n.GetValue(), _ => null }; }
+    catch (global::System.OverflowException) { return null; }
+}
+bool? MatchSchema0(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("active")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("created")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("id")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("livemode")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("metadata")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("object")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("type")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("active") ? (bool?)true : MatchSchema1(fields["active"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("created") ? (bool?)true : MatchSchema2(fields["created"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("delivery_estimate") ? (bool?)true : MatchSchema3(fields["delivery_estimate"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("display_name") ? (bool?)true : MatchSchema4(fields["display_name"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("fixed_amount") ? (bool?)true : MatchSchema5(fields["fixed_amount"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema6(fields["id"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("livemode") ? (bool?)true : MatchSchema7(fields["livemode"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("metadata") ? (bool?)true : MatchSchema8(fields["metadata"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("object") ? (bool?)true : MatchSchema9(fields["object"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("tax_behavior") ? (bool?)true : MatchSchema10(fields["tax_behavior"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("tax_code") ? (bool?)true : MatchSchema11(fields["tax_code"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema12(fields["type"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema1(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema2(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema3(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (Any(MatchSchema13(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema4(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema5(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("amount")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("currency")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("amount") ? (bool?)true : MatchSchema14(fields["amount"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("currency") ? (bool?)true : MatchSchema15(fields["currency"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("currency_options") ? (bool?)true : MatchSchema16(fields["currency_options"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema6(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema7(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema8(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+foreach (var field in fields) {
+{ result &= (MatchSchema17(field.Value, depth + 1)); if (result == false) return false; }
+}
+}
+return result;
+}
+bool? MatchSchema9(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "shipping_rate".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema10(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "exclusive".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "inclusive".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "unspecified".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema11(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (Any(MatchSchema18(node, depth + 1),MatchSchema19(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema12(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "fixed_amount".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema13(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (!fields.ContainsKey("maximum") ? (bool?)true : MatchSchema20(fields["maximum"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("minimum") ? (bool?)true : MatchSchema21(fields["minimum"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema14(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema15(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema16(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+foreach (var field in fields) {
+{ result &= (MatchSchema22(field.Value, depth + 1)); if (result == false) return false; }
+}
+}
+return result;
+}
+bool? MatchSchema17(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 500m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema18(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema19(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("description")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("id")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("name")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("object")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema23(fields["description"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("id") ? (bool?)true : MatchSchema24(fields["id"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("name") ? (bool?)true : MatchSchema25(fields["name"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("object") ? (bool?)true : MatchSchema26(fields["object"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("requirements") ? (bool?)true : MatchSchema27(fields["requirements"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema20(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (Any(MatchSchema28(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema21(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (Any(MatchSchema28(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema22(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("amount")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("tax_behavior")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("amount") ? (bool?)true : MatchSchema29(fields["amount"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("tax_behavior") ? (bool?)true : MatchSchema30(fields["tax_behavior"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema23(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema24(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema25(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema26(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "tax_code".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema27(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+if (node == null || node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return true;
+{ result &= (Any(MatchSchema31(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema28(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("unit")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("value")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("unit") ? (bool?)true : MatchSchema32(fields["unit"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("value") ? (bool?)true : MatchSchema33(fields["value"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema29(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema30(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "exclusive".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "inclusive".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "unspecified".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema31(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("performance_location")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("performance_location") ? (bool?)true : MatchSchema34(fields["performance_location"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema32(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "business_day".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "day".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "hour".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "month".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "week".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema33(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (Number(node) is decimal integer ? integer % 1 == 0 : IsNumber(node) ? (bool?)null : false); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema34(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "optional".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "required".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+var matches = new bool?[1];
+remaining = 10000; matches[0] = MatchSchema0(unionPayload, 0);
+return matches; }))() : null;
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![0] : (bool?)false;
             int matchingUnionBranches = 0;
-            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
             bool noSelectedUnionBranch = result.ShippingRate == null && result.String == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.ShippingRate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ShippingRate(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.ShippingRate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.ShippingRate(), parseNode);
             if (result.ShippingRate == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }

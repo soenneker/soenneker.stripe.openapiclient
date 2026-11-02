@@ -43,8 +43,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>If something should go wrong during the run, a message about the failure (populated when `status=failed`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,12 +94,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The file object representing the result of the report run (populated when `status=succeeded`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult? _explicitNullValueResult = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject1? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FileObject1? _explicitNullValueResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult _explicitNullValueResult = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject1 Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FileObject1 _explicitNullValueResult = default!;
 #endif
         /// <summary>Status of this report run. This will be `pending` when the run is initially created. When the run finishes, this will be set to `succeeded` and the `result` field will be populated. Rarely, we may encounter an error, at which point this will be set to `failed` and the `error` field will be populated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,8 +112,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>Timestamp at which this run successfully finished (populated when `status=succeeded`). Measured in seconds since the Unix epoch.</summary>
-        public int? SucceededAt { get => _explicitNullValueSucceededAt; set { _explicitNullValueSucceededAt = value; AdditionalData?.Remove("succeeded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded_at"); else _explicitNullProperties?.Remove("succeeded_at"); } }
-        private int? _explicitNullValueSucceededAt = default!;
+        public long? SucceededAt { get => _explicitNullValueSucceededAt; set { _explicitNullValueSucceededAt = value; AdditionalData?.Remove("succeeded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded_at"); else _explicitNullProperties?.Remove("succeeded_at"); } }
+        private long? _explicitNullValueSucceededAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRun"/> and sets the default values.
         /// </summary>
@@ -139,16 +139,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters.CreateFromDiscriminatorValue); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult>(global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject1>(global::Soenneker.Stripe.OpenApiClient.Models.FileObject1.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "succeeded_at", n => { SucceededAt = n.GetIntValue(); } },
+                { "succeeded_at", n => { SucceededAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -158,16 +158,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters>("parameters", Parameters);
             writer.WriteStringValue("report_type", ReportType);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject1>("result", Result);
             writer.WriteStringValue("status", Status);
-            writer.WriteIntValue("succeeded_at", SucceededAt);
+            writer.WriteLongValue("succeeded_at", SucceededAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

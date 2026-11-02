@@ -30,12 +30,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configuration options for setting up an eMandate for cards issued in India.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed? MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; AdditionalData?.Remove("mandate_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed? _explicitNullValueMandateOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions? MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; AdditionalData?.Remove("mandate_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions? _explicitNullValueMandateOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; AdditionalData?.Remove("mandate_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed _explicitNullValueMandateOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions MandateOptions { get => _explicitNullValueMandateOptions; set { _explicitNullValueMandateOptions = value; AdditionalData?.Remove("mandate_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_options"); else _explicitNullProperties?.Remove("mandate_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions _explicitNullValueMandateOptions = default!;
 #endif
         /// <summary>Selected network to process this SetupIntent on. Depends on the available networks of the card attached to the setup intent. Can be only set confirm-time.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; AdditionalData?.Remove("network"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed.CreateFromDiscriminatorValue); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions.CreateFromDiscriminatorValue); } },
                 { "network", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNetwork = default; _explicitNullProperties?.Remove("network"); AdditionalData["network"] = unknown; } else { Network = parsed; AdditionalData.Remove("network"); } } },
                 { "request_three_d_secure", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardRequestThreeDSecure>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestThreeDSecure = default; _explicitNullProperties?.Remove("request_three_d_secure"); AdditionalData["request_three_d_secure"] = unknown; } else { RequestThreeDSecure = parsed; AdditionalData.Remove("request_three_d_secure"); } } },
             };
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed>("mandate_options", MandateOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions>("mandate_options", MandateOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork>("network", Network);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardRequestThreeDSecure>("request_three_d_secure", RequestThreeDSecure);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

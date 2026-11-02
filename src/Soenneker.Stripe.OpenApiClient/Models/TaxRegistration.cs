@@ -39,8 +39,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         }
 
         /// <summary>Time at which the registration becomes active. Measured in seconds since the Unix epoch.</summary>
-        public int? ActiveFrom { get => _explicitNullValueActiveFrom; set { _explicitNullValueActiveFrom = value; AdditionalData?.Remove("active_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_from"); else _explicitNullProperties?.Remove("active_from"); } }
-        private int? _explicitNullValueActiveFrom = default!;
+        public long? ActiveFrom { get => _explicitNullValueActiveFrom; set { _explicitNullValueActiveFrom = value; AdditionalData?.Remove("active_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_from"); else _explicitNullProperties?.Remove("active_from"); } }
+        private long? _explicitNullValueActiveFrom = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Two-letter country code ([ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)).</summary>
@@ -64,11 +64,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptions _explicitNullValueCountryOptions = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>If set, the registration stops being active at this time. If not set, the registration will be active indefinitely. Measured in seconds since the Unix epoch.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,11 +113,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active_from", n => { ActiveFrom = n.GetIntValue(); } },
+                { "active_from", n => { ActiveFrom = n.GetLongValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "country_options", n => { CountryOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptions>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptions.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
@@ -131,11 +131,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("active_from", ActiveFrom);
+            writer.WriteLongValue("active_from", ActiveFrom);
             writer.WriteStringValue("country", Country);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptions>("country_options", CountryOptions);
-            writer.WriteIntValue("created", Created);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("created", Created);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationObject>("object", Object);

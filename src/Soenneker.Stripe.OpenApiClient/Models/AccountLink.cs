@@ -31,11 +31,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The timestamp at which this account link will expire.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject? _explicitNullValueObject = default!;
@@ -74,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("created", Created);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject>("object", Object);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

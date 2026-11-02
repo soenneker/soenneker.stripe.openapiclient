@@ -66,8 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact _explicitNullValueBalanceImpact = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,12 +121,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the flow that created the Transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails? FlowDetails { get => _explicitNullValueFlowDetails; set { _explicitNullValueFlowDetails = value; AdditionalData?.Remove("flow_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_details"); else _explicitNullProperties?.Remove("flow_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails? _explicitNullValueFlowDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails? FlowDetails { get => _explicitNullValueFlowDetails; set { _explicitNullValueFlowDetails = value; AdditionalData?.Remove("flow_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_details"); else _explicitNullProperties?.Remove("flow_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails? _explicitNullValueFlowDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails FlowDetails { get => _explicitNullValueFlowDetails; set { _explicitNullValueFlowDetails = value; AdditionalData?.Remove("flow_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_details"); else _explicitNullProperties?.Remove("flow_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails _explicitNullValueFlowDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails FlowDetails { get => _explicitNullValueFlowDetails; set { _explicitNullValueFlowDetails = value; AdditionalData?.Remove("flow_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_details"); else _explicitNullProperties?.Remove("flow_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails _explicitNullValueFlowDetails = default!;
 #endif
         /// <summary>Type of the flow that created the Transaction.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType? FlowType { get => _explicitNullValueFlowType; set { _explicitNullValueFlowType = value; AdditionalData?.Remove("flow_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_type"); else _explicitNullProperties?.Remove("flow_type"); } }
@@ -187,13 +187,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "balance_impact", n => { BalanceImpact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "entries", n => { Entries = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "flow", n => { Flow = n.GetStringValue(); } },
-                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails.CreateFromDiscriminatorValue); } },
+                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails.CreateFromDiscriminatorValue); } },
                 { "flow_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlowType = default; _explicitNullProperties?.Remove("flow_type"); AdditionalData["flow_type"] = unknown; } else { FlowType = parsed; AdditionalData.Remove("flow_type"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -211,13 +211,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceBalanceImpact>("balance_impact", BalanceImpact);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries>("entries", Entries);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("flow", Flow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails>("flow_details", FlowDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>("flow_details", FlowDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType>("flow_type", FlowType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);

@@ -33,12 +33,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings specific to the account&apos;s payouts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? _explicitNullValuePayouts = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts? Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts? _explicitNullValuePayouts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts _explicitNullValuePayouts = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts Payouts { get => _explicitNullValuePayouts; set { _explicitNullValuePayouts = value; AdditionalData?.Remove("payouts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payouts"); else _explicitNullProperties?.Remove("payouts"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts _explicitNullValuePayouts = default!;
 #endif
         /// <summary>The settlement_timing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "debit_negative_balances", n => { DebitNegativeBalances = n.GetBoolValue(); } },
-                { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts.CreateFromDiscriminatorValue); } },
+                { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts.CreateFromDiscriminatorValue); } },
                 { "settlement_timing", n => { SettlementTiming = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming.CreateFromDiscriminatorValue); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("debit_negative_balances", DebitNegativeBalances);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts>("payouts", Payouts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts>("payouts", Payouts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming>("settlement_timing", SettlementTiming);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

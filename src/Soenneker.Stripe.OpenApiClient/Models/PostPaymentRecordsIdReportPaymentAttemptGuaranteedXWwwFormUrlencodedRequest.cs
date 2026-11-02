@@ -36,8 +36,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>When the reported payment was guaranteed. Measured in seconds since the Unix epoch.</summary>
-        public int? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
-        private int? _explicitNullValueGuaranteedAt = default!;
+        public long? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
+        private long? _explicitNullValueGuaranteedAt = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "guaranteed_at", n => { GuaranteedAt = n.GetIntValue(); } },
+                { "guaranteed_at", n => { GuaranteedAt = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptGuaranteedXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptGuaranteedXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
             };
         }
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("guaranteed_at", GuaranteedAt);
+            writer.WriteLongValue("guaranteed_at", GuaranteedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptGuaranteedXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

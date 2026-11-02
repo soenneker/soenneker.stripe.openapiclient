@@ -336,8 +336,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp _explicitNullValueCashapp = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The crypto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -870,7 +870,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty.CreateFromDiscriminatorValue); } },
                 { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewCustomer.CreateFromDiscriminatorValue); } },
@@ -949,7 +949,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp>("cashapp", Cashapp);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom>("custom", Custom);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewCustomer>("customer", Customer);

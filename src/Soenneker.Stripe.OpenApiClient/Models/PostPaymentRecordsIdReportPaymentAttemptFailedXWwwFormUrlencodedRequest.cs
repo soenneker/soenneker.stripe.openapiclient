@@ -36,8 +36,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>When the reported payment failed. Measured in seconds since the Unix epoch.</summary>
-        public int? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
-        private int? _explicitNullValueFailedAt = default!;
+        public long? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
+        private long? _explicitNullValueFailedAt = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "failed_at", n => { FailedAt = n.GetIntValue(); } },
+                { "failed_at", n => { FailedAt = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptFailedXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptFailedXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
             };
         }
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("failed_at", FailedAt);
+            writer.WriteLongValue("failed_at", FailedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptFailedXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

@@ -34,8 +34,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; AdditionalData?.Remove("cause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause? _explicitNullValueCause = default!;
         /// <summary>When the Account is expected to become inactive, if applicable.</summary>
-        public int? ExpectedDeactivationDate { get => _explicitNullValueExpectedDeactivationDate; set { _explicitNullValueExpectedDeactivationDate = value; AdditionalData?.Remove("expected_deactivation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_deactivation_date"); else _explicitNullProperties?.Remove("expected_deactivation_date"); } }
-        private int? _explicitNullValueExpectedDeactivationDate = default!;
+        public long? ExpectedDeactivationDate { get => _explicitNullValueExpectedDeactivationDate; set { _explicitNullValueExpectedDeactivationDate = value; AdditionalData?.Remove("expected_deactivation_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_deactivation_date"); else _explicitNullProperties?.Remove("expected_deactivation_date"); } }
+        private long? _explicitNullValueExpectedDeactivationDate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetails"/> and sets the default values.
         /// </summary>
@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
                 { "cause", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCause = default; _explicitNullProperties?.Remove("cause"); AdditionalData["cause"] = unknown; } else { Cause = parsed; AdditionalData.Remove("cause"); } } },
-                { "expected_deactivation_date", n => { ExpectedDeactivationDate = n.GetIntValue(); } },
+                { "expected_deactivation_date", n => { ExpectedDeactivationDate = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction>("action", Action);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause>("cause", Cause);
-            writer.WriteIntValue("expected_deactivation_date", ExpectedDeactivationDate);
+            writer.WriteLongValue("expected_deactivation_date", ExpectedDeactivationDate);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

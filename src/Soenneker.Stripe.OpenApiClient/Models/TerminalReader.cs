@@ -49,12 +49,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The most recent action performed by the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction? _explicitNullValueAction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction? _explicitNullValueAction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction _explicitNullValueAction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction _explicitNullValueAction = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -102,8 +102,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The last time this reader reported to Stripe backend. Timestamp is measured in milliseconds since the Unix epoch. Unlike most other Stripe timestamp fields which use seconds, this field uses milliseconds.</summary>
-        public int? LastSeenAt { get => _explicitNullValueLastSeenAt; set { _explicitNullValueLastSeenAt = value; AdditionalData?.Remove("last_seen_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_seen_at"); else _explicitNullProperties?.Remove("last_seen_at"); } }
-        private int? _explicitNullValueLastSeenAt = default!;
+        public long? LastSeenAt { get => _explicitNullValueLastSeenAt; set { _explicitNullValueLastSeenAt = value; AdditionalData?.Remove("last_seen_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_seen_at"); else _explicitNullProperties?.Remove("last_seen_at"); } }
+        private long? _explicitNullValueLastSeenAt = default!;
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
         private bool? _explicitNullValueLivemode = default!;
@@ -168,13 +168,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction.CreateFromDiscriminatorValue); } },
+                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction.CreateFromDiscriminatorValue); } },
                 { "device_sw_version", n => { DeviceSwVersion = n.GetStringValue(); } },
                 { "device_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderDeviceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeviceType = default; _explicitNullProperties?.Remove("device_type"); AdditionalData["device_type"] = unknown; } else { DeviceType = parsed; AdditionalData.Remove("device_type"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "last_seen_at", n => { LastSeenAt = n.GetIntValue(); } },
+                { "last_seen_at", n => { LastSeenAt = n.GetLongValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -190,13 +190,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction>("action", Action);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction>("action", Action);
             writer.WriteStringValue("device_sw_version", DeviceSwVersion);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderDeviceType>("device_type", DeviceType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteStringValue("label", Label);
-            writer.WriteIntValue("last_seen_at", LastSeenAt);
+            writer.WriteLongValue("last_seen_at", LastSeenAt);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation>("location", Location);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty>("metadata", Metadata);

@@ -81,22 +81,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The icon for the Checkout Session. You cannot set both `logo` and `icon`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed? _explicitNullValueIcon = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed _explicitNullValueIcon = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon _explicitNullValueIcon = default!;
 #endif
         /// <summary>The logo for the Checkout Session. You cannot set both `logo` and `icon`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed? _explicitNullValueLogo = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo? _explicitNullValueLogo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed _explicitNullValueLogo = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo _explicitNullValueLogo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings"/> and sets the default values.
@@ -128,8 +128,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "button_color", n => { ButtonColor = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "font_family", n => { FontFamily = n.GetStringValue(); } },
-                { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed.CreateFromDiscriminatorValue); } },
-                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed.CreateFromDiscriminatorValue); } },
+                { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon.CreateFromDiscriminatorValue); } },
+                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -144,8 +144,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("button_color", ButtonColor);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("font_family", FontFamily);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIconComposed>("icon", Icon);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogoComposed>("logo", Logo);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsIcon>("icon", Icon);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettingsLogo>("logo", Logo);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

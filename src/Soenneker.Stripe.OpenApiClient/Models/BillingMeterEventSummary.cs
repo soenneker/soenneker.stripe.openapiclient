@@ -40,8 +40,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? AggregatedValue { get => _explicitNullValueAggregatedValue; set { _explicitNullValueAggregatedValue = value; AdditionalData?.Remove("aggregated_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregated_value"); else _explicitNullProperties?.Remove("aggregated_value"); } }
         private double? _explicitNullValueAggregatedValue = default!;
         /// <summary>End timestamp for this event summary (exclusive). Must be aligned with minute boundaries.</summary>
-        public int? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
-        private int? _explicitNullValueEndTime = default!;
+        public long? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        private long? _explicitNullValueEndTime = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,8 +69,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject? _explicitNullValueObject = default!;
         /// <summary>Start timestamp for this event summary (inclusive). Must be aligned with minute boundaries.</summary>
-        public int? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
-        private int? _explicitNullValueStartTime = default!;
+        public long? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        private long? _explicitNullValueStartTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummary"/> and sets the default values.
         /// </summary>
@@ -97,12 +97,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "aggregated_value", n => { AggregatedValue = n.GetDoubleValue(); } },
-                { "end_time", n => { EndTime = n.GetIntValue(); } },
+                { "end_time", n => { EndTime = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "start_time", n => { StartTime = n.GetIntValue(); } },
+                { "start_time", n => { StartTime = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -113,12 +113,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("aggregated_value", AggregatedValue);
-            writer.WriteIntValue("end_time", EndTime);
+            writer.WriteLongValue("end_time", EndTime);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("meter", Meter);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject>("object", Object);
-            writer.WriteIntValue("start_time", StartTime);
+            writer.WriteLongValue("start_time", StartTime);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

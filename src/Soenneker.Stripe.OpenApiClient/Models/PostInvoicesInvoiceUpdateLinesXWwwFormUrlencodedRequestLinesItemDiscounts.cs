@@ -47,7 +47,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.String = stringValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && global::System.Linq.Enumerable.All(((global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)).GetValue(), item => ((item is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (item is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && ((!shapeMembers1.ContainsKey("coupon") || (((shapeMembers1["coupon"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("discount") || (((shapeMembers1["discount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("promotion_code") || (((shapeMembers1["promotion_code"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))))))) && parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item> postInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1ItemValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && global::System.Linq.Enumerable.All(((global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)).GetValue(), item => (((global::System.Func<bool?[]>)(() => { int remaining = 10000;
+int StringLength(string text) { int count = 0; for (int i = 0; i < text.Length; i++, count++) if (char.IsHighSurrogate(text[i]) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1])) i++; return count; }
+
+bool? MatchSchema0(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (!fields.ContainsKey("coupon") ? (bool?)true : MatchSchema1(fields["coupon"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("discount") ? (bool?)true : MatchSchema2(fields["discount"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("promotion_code") ? (bool?)true : MatchSchema3(fields["promotion_code"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema1(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema2(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema3(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text ? (bool?)true : text.GetValue() is string textValue ? StringLength(textValue) <= 5000m : null); if (result == false) return false; }
+return result;
+}
+var matches = new bool?[1];
+remaining = 10000; matches[0] = MatchSchema0(item, 0);
+return matches; }))()[0]) == true) && parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item> postInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1ItemValue)
             {
                 result.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1Item = postInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemDiscountsAnyOf1ItemValue;
             }

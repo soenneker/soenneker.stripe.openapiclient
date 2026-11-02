@@ -68,8 +68,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? AttachToSelf { get => _explicitNullValueAttachToSelf; set { _explicitNullValueAttachToSelf = value; AdditionalData?.Remove("attach_to_self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attach_to_self"); else _explicitNullProperties?.Remove("attach_to_self"); } }
         private bool? _explicitNullValueAttachToSelf = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The value of [customer](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-customer) on the SetupIntent at the time of this confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,12 +149,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The error encountered during this attempt to confirm the SetupIntent, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError? SetupError { get => _explicitNullValueSetupError; set { _explicitNullValueSetupError = value; AdditionalData?.Remove("setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_error"); else _explicitNullProperties?.Remove("setup_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError? _explicitNullValueSetupError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? SetupError { get => _explicitNullValueSetupError; set { _explicitNullValueSetupError = value; AdditionalData?.Remove("setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_error"); else _explicitNullProperties?.Remove("setup_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? _explicitNullValueSetupError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError SetupError { get => _explicitNullValueSetupError; set { _explicitNullValueSetupError = value; AdditionalData?.Remove("setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_error"); else _explicitNullProperties?.Remove("setup_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError _explicitNullValueSetupError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors SetupError { get => _explicitNullValueSetupError; set { _explicitNullValueSetupError = value; AdditionalData?.Remove("setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup_error"); else _explicitNullProperties?.Remove("setup_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors _explicitNullValueSetupError = default!;
 #endif
         /// <summary>ID of the SetupIntent that this attempt belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptApplication.CreateFromDiscriminatorValue); } },
                 { "attach_to_self", n => { AttachToSelf = n.GetBoolValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptFlowDirectionsItem>()?.AsList(); } },
@@ -223,7 +223,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptOnBehalfOf.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails.CreateFromDiscriminatorValue); } },
-                { "setup_error", n => { SetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError.CreateFromDiscriminatorValue); } },
+                { "setup_error", n => { SetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.CreateFromDiscriminatorValue); } },
                 { "setup_intent", n => { SetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupIntent.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "usage", n => { Usage = n.GetStringValue(); } },
@@ -238,7 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptApplication>("application", Application);
             writer.WriteBoolValue("attach_to_self", AttachToSelf);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptFlowDirectionsItem>("flow_directions", FlowDirections);
@@ -248,7 +248,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptOnBehalfOf>("on_behalf_of", OnBehalfOf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupError>("setup_error", SetupError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>("setup_error", SetupError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptSetupIntent>("setup_intent", SetupIntent);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("usage", Usage);

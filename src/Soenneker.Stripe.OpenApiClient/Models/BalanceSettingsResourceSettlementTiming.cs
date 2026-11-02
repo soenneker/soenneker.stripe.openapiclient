@@ -36,12 +36,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Customized start of day configuration for automatic payouts to group and send payments in local timezones with a customized day starting time. For details, see our [Customized start of day](/connect/customized-start-of-day) documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay? StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay? _explicitNullValueStartOfDay = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay? StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay? _explicitNullValueStartOfDay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay _explicitNullValueStartOfDay = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay StartOfDay { get => _explicitNullValueStartOfDay; set { _explicitNullValueStartOfDay = value; AdditionalData?.Remove("start_of_day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_of_day"); else _explicitNullProperties?.Remove("start_of_day"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay _explicitNullValueStartOfDay = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming"/> and sets the default values.
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "delay_days", n => { DelayDays = n.GetIntValue(); } },
                 { "delay_days_override", n => { DelayDaysOverride = n.GetIntValue(); } },
-                { "start_of_day", n => { StartOfDay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay.CreateFromDiscriminatorValue); } },
+                { "start_of_day", n => { StartOfDay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("delay_days", DelayDays);
             writer.WriteIntValue("delay_days_override", DelayDaysOverride);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTimingStartOfDay>("start_of_day", StartOfDay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceStartOfDay>("start_of_day", StartOfDay);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

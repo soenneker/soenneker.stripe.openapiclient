@@ -52,11 +52,47 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("end_behavior") && (!shapeMembers1.ContainsKey("end_behavior") || (((shapeMembers1["end_behavior"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["end_behavior"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject2 || (shapeObject2.GetValue() is var shapeMembers3 && (shapeMembers3.ContainsKey("missing_payment_method") && (!shapeMembers3.ContainsKey("missing_payment_method") || (((shapeMembers3["missing_payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers3["missing_payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "cancel".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["missing_payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal5 && "create_invoice".Equals(literal5.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers3["missing_payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal6 && "pause".Equals(literal6.GetValue(), global::System.StringComparison.Ordinal)))))))))))))))();
+            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? ((global::System.Func<bool?[]>)(() => { int remaining = 10000;
+
+bool? MatchSchema0(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("end_behavior")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("end_behavior") ? (bool?)true : MatchSchema1(fields["end_behavior"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema1(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("missing_payment_method")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("missing_payment_method") ? (bool?)true : MatchSchema2(fields["missing_payment_method"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema2(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "cancel".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "create_invoice".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "pause".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+var matches = new bool?[1];
+remaining = 10000; matches[0] = MatchSchema0(unionPayload, 0);
+return matches; }))() : null;
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![0] : (bool?)false;
             int matchingUnionBranches = 0;
-            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
             bool noSelectedUnionBranch = result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig == null && result.String == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig(), parseNode);
             if (result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfig == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }

@@ -47,12 +47,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Default text of input being collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText? CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; AdditionalData?.Remove("custom_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText? _explicitNullValueCustomText = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText? CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; AdditionalData?.Remove("custom_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText? _explicitNullValueCustomText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; AdditionalData?.Remove("custom_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText _explicitNullValueCustomText = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText CustomText { get => _explicitNullValueCustomText; set { _explicitNullValueCustomText = value; AdditionalData?.Remove("custom_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text"); else _explicitNullProperties?.Remove("custom_text"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText _explicitNullValueCustomText = default!;
 #endif
         /// <summary>Information about a email being collected using a reader</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,7 +158,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_text", n => { CustomText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText.CreateFromDiscriminatorValue); } },
+                { "custom_text", n => { CustomText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceEmail>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceEmail.CreateFromDiscriminatorValue); } },
                 { "numeric", n => { Numeric = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceNumeric>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceNumeric.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePhone>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePhone.CreateFromDiscriminatorValue); } },
@@ -178,7 +178,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceInputCustomText>("custom_text", CustomText);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCustomText>("custom_text", CustomText);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceEmail>("email", Email);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceNumeric>("numeric", Numeric);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourcePhone>("phone", Phone);

@@ -34,8 +34,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The time to advance the test clock. Must be after the test clock&apos;s current frozen time. Cannot be more than two intervals in the future from the shortest subscription in this test clock. If there are no subscriptions in this test clock, it cannot be more than two years in the future.</summary>
-        public int? FrozenTime { get => _explicitNullValueFrozenTime; set { _explicitNullValueFrozenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frozen_time"); else _explicitNullProperties?.Remove("frozen_time"); } }
-        private int? _explicitNullValueFrozenTime = default!;
+        public long? FrozenTime { get => _explicitNullValueFrozenTime; set { _explicitNullValueFrozenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frozen_time"); else _explicitNullProperties?.Remove("frozen_time"); } }
+        private long? _explicitNullValueFrozenTime = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "frozen_time", n => { FrozenTime = n.GetIntValue(); } },
+                { "frozen_time", n => { FrozenTime = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("frozen_time", FrozenTime);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("frozen_time", FrozenTime);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

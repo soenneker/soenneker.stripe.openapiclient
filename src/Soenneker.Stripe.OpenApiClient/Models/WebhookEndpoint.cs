@@ -67,8 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueApplication = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>An optional description of what the webhook is used for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "application", n => { Application = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "enabled_events", n => { EnabledEvents = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -193,7 +193,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteStringValue("application", Application);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("enabled_events", EnabledEvents);
             writer.WriteStringValue("id", Id);

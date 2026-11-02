@@ -49,8 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The customer_mapping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,8 +124,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions _explicitNullValueStatusTransitions = default!;
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>The value_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,7 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer_mapping", n => { CustomerMapping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings.CreateFromDiscriminatorValue); } },
                 { "default_aggregation", n => { DefaultAggregation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions.CreateFromDiscriminatorValue); } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
                 { "value_settings", n => { ValueSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue.CreateFromDiscriminatorValue); } },
             };
         }
@@ -183,7 +183,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings>("customer_mapping", CustomerMapping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings>("default_aggregation", DefaultAggregation);
             writer.WriteStringValue("display_name", DisplayName);
@@ -194,7 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions>("status_transitions", StatusTransitions);
-            writer.WriteIntValue("updated", Updated);
+            writer.WriteLongValue("updated", Updated);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue>("value_settings", ValueSettings);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

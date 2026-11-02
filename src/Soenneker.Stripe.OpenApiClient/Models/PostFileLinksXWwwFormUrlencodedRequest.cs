@@ -38,8 +38,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The link isn&apos;t usable after this future timestamp.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>The ID of the file. The file&apos;s `purpose` must be one of the following: `business_icon`, `business_logo`, `customer_signature`, `dispute_evidence`, `finance_report_run`, `financial_account_statement`, `identity_document_downloadable`, `issuing_regulatory_reporting`, `pci_document`, `selfie`, `sigma_scheduled_query`, `tax_document_user_upload`, `terminal_android_apk`, or `terminal_reader_splashscreen`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "file", n => { File = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
             };
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("file", File);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

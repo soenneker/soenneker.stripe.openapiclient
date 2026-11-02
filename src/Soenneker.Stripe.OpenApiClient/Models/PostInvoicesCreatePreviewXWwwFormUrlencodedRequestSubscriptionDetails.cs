@@ -142,14 +142,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; AdditionalData?.Remove("proration_behavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>The proration_date property</summary>
-        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; AdditionalData?.Remove("proration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
-        private int? _explicitNullValueProrationDate = default!;
+        public long? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; AdditionalData?.Remove("proration_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private long? _explicitNullValueProrationDate = default!;
         /// <summary>The resume_at property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt? ResumeAt { get => _explicitNullValueResumeAt; set { _explicitNullValueResumeAt = value; AdditionalData?.Remove("resume_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resume_at"); else _explicitNullProperties?.Remove("resume_at"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt? _explicitNullValueResumeAt = default!;
         /// <summary>The start_date property</summary>
-        public int? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
-        private int? _explicitNullValueStartDate = default!;
+        public long? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private long? _explicitNullValueStartDate = default!;
         /// <summary>The trial_end property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -196,9 +196,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata.CreateFromDiscriminatorValue); } },
                 { "pause", n => { Pause = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProrationBehavior = default; _explicitNullProperties?.Remove("proration_behavior"); AdditionalData["proration_behavior"] = unknown; } else { ProrationBehavior = parsed; AdditionalData.Remove("proration_behavior"); } } },
-                { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
+                { "proration_date", n => { ProrationDate = n.GetLongValue(); } },
                 { "resume_at", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResumeAt = default; _explicitNullProperties?.Remove("resume_at"); AdditionalData["resume_at"] = unknown; } else { ResumeAt = parsed; AdditionalData.Remove("resume_at"); } } },
-                { "start_date", n => { StartDate = n.GetIntValue(); } },
+                { "start_date", n => { StartDate = n.GetLongValue(); } },
                 { "trial_end", n => { TrialEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd.CreateFromDiscriminatorValue); } },
             };
         }
@@ -220,9 +220,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause>("pause", Pause);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);
+            writer.WriteLongValue("proration_date", ProrationDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>("resume_at", ResumeAt);
-            writer.WriteIntValue("start_date", StartDate);
+            writer.WriteLongValue("start_date", StartDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd>("trial_end", TrialEnd);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

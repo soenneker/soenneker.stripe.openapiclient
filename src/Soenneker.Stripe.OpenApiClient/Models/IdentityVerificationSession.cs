@@ -83,8 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,12 +98,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If present, this property tells you the last error encountered when processing the verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? _explicitNullValueLastError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError? _explicitNullValueLastError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError _explicitNullValueLastError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError _explicitNullValueLastError = default!;
 #endif
         /// <summary>ID of the most recent VerificationReport. [Learn more about accessing detailed verification results.](https://docs.stripe.com/identity/verification-sessions#results)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,32 +134,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A set of options for the session’s verification checks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? _explicitNullValueOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions _explicitNullValueOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>Details provided about the user being verified. These details may be shown to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? _explicitNullValueProvidedDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails? ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails? _explicitNullValueProvidedDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails _explicitNullValueProvidedDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails ProvidedDetails { get => _explicitNullValueProvidedDetails; set { _explicitNullValueProvidedDetails = value; AdditionalData?.Remove("provided_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided_details"); else _explicitNullProperties?.Remove("provided_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails _explicitNullValueProvidedDetails = default!;
 #endif
         /// <summary>Redaction status of this VerificationSession. If the VerificationSession is not redacted, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? _explicitNullValueRedaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction? Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction? _explicitNullValueRedaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction _explicitNullValueRedaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction Redaction { get => _explicitNullValueRedaction; set { _explicitNullValueRedaction = value; AdditionalData?.Remove("redaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redaction"); else _explicitNullProperties?.Remove("redaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction _explicitNullValueRedaction = default!;
 #endif
         /// <summary>Customer ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -220,12 +220,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The user’s verified data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? _explicitNullValueVerifiedOutputs = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs? VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs? _explicitNullValueVerifiedOutputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs _explicitNullValueVerifiedOutputs = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs VerifiedOutputs { get => _explicitNullValueVerifiedOutputs; set { _explicitNullValueVerifiedOutputs = value; AdditionalData?.Remove("verified_outputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified_outputs"); else _explicitNullProperties?.Remove("verified_outputs"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs _explicitNullValueVerifiedOutputs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession"/> and sets the default values.
@@ -254,16 +254,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "client_reference_id", n => { ClientReferenceId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_error", n => { LastError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError.CreateFromDiscriminatorValue); } },
+                { "last_error", n => { LastError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError.CreateFromDiscriminatorValue); } },
                 { "last_verification_report", n => { LastVerificationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions.CreateFromDiscriminatorValue); } },
-                { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails.CreateFromDiscriminatorValue); } },
-                { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions.CreateFromDiscriminatorValue); } },
+                { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails.CreateFromDiscriminatorValue); } },
+                { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction>(global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction.CreateFromDiscriminatorValue); } },
                 { "related_customer", n => { RelatedCustomer = n.GetStringValue(); } },
                 { "related_customer_account", n => { RelatedCustomerAccount = n.GetStringValue(); } },
                 { "related_person", n => { RelatedPerson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson.CreateFromDiscriminatorValue); } },
@@ -271,7 +271,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verification_flow", n => { VerificationFlow = n.GetStringValue(); } },
-                { "verified_outputs", n => { VerifiedOutputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs.CreateFromDiscriminatorValue); } },
+                { "verified_outputs", n => { VerifiedOutputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -283,16 +283,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("client_reference_id", ClientReferenceId);
             writer.WriteStringValue("client_secret", ClientSecret);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError>("last_error", LastError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError>("last_error", LastError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport>("last_verification_report", LastVerificationReport);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails>("provided_details", ProvidedDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction>("redaction", Redaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails>("provided_details", ProvidedDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction>("redaction", Redaction);
             writer.WriteStringValue("related_customer", RelatedCustomer);
             writer.WriteStringValue("related_customer_account", RelatedCustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson>("related_person", RelatedPerson);
@@ -300,7 +300,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("verification_flow", VerificationFlow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs>("verified_outputs", VerifiedOutputs);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs>("verified_outputs", VerifiedOutputs);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

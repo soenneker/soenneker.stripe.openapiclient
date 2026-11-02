@@ -25,8 +25,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The guaranteed_at property</summary>
-        public int? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; AdditionalData?.Remove("guaranteed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
-        private int? _explicitNullValueGuaranteedAt = default!;
+        public long? GuaranteedAt { get => _explicitNullValueGuaranteedAt; set { _explicitNullValueGuaranteedAt = value; AdditionalData?.Remove("guaranteed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteed_at"); else _explicitNullProperties?.Remove("guaranteed_at"); } }
+        private long? _explicitNullValueGuaranteedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed"/> and sets the default values.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "guaranteed_at", n => { GuaranteedAt = n.GetIntValue(); } },
+                { "guaranteed_at", n => { GuaranteedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("guaranteed_at", GuaranteedAt);
+            writer.WriteLongValue("guaranteed_at", GuaranteedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -49,12 +49,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account holder for whom accounts are collected in this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? _explicitNullValueAccountHolder = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? _explicitNullValueAccountHolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder _explicitNullValueAccountHolder = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder _explicitNullValueAccountHolder = default!;
 #endif
         /// <summary>The accounts that were collected as part of this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -189,7 +189,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder.CreateFromDiscriminatorValue); } },
+                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder.CreateFromDiscriminatorValue); } },
                 { "accounts", n => { Accounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts.CreateFromDiscriminatorValue); } },
                 { "bank_account_token", n => { BankAccountToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Token>(global::Soenneker.Stripe.OpenApiClient.Models.Token.CreateFromDiscriminatorValue); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
@@ -211,7 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>("account_holder", AccountHolder);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>("account_holder", AccountHolder);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>("accounts", Accounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Token>("bank_account_token", BankAccountToken);
             writer.WriteStringValue("client_secret", ClientSecret);

@@ -45,12 +45,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The identified tax location of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed? _explicitNullValueLocation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed _explicitNullValueLocation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation _explicitNullValueLocation = default!;
 #endif
         /// <summary>The tax calculation provider used for location resolution. Defaults to `stripe` when not using a [third-party provider](/tax/third-party-apps).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "automatic_tax", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAutomaticTax = default; _explicitNullProperties?.Remove("automatic_tax"); AdditionalData["automatic_tax"] = unknown; } else { AutomaticTax = parsed; AdditionalData.Remove("automatic_tax"); } } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation.CreateFromDiscriminatorValue); } },
                 { "provider", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProvider = default; _explicitNullProperties?.Remove("provider"); AdditionalData["provider"] = unknown; } else { Provider = parsed; AdditionalData.Remove("provider"); } } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation>("location", Location);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider>("provider", Provider);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

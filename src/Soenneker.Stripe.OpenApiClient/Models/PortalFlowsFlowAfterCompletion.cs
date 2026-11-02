@@ -30,22 +30,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configuration when `after_completion.type=hosted_confirmation`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation? HostedConfirmation { get => _explicitNullValueHostedConfirmation; set { _explicitNullValueHostedConfirmation = value; AdditionalData?.Remove("hosted_confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_confirmation"); else _explicitNullProperties?.Remove("hosted_confirmation"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation? _explicitNullValueHostedConfirmation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation? HostedConfirmation { get => _explicitNullValueHostedConfirmation; set { _explicitNullValueHostedConfirmation = value; AdditionalData?.Remove("hosted_confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_confirmation"); else _explicitNullProperties?.Remove("hosted_confirmation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation? _explicitNullValueHostedConfirmation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation HostedConfirmation { get => _explicitNullValueHostedConfirmation; set { _explicitNullValueHostedConfirmation = value; AdditionalData?.Remove("hosted_confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_confirmation"); else _explicitNullProperties?.Remove("hosted_confirmation"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation _explicitNullValueHostedConfirmation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation HostedConfirmation { get => _explicitNullValueHostedConfirmation; set { _explicitNullValueHostedConfirmation = value; AdditionalData?.Remove("hosted_confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hosted_confirmation"); else _explicitNullProperties?.Remove("hosted_confirmation"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation _explicitNullValueHostedConfirmation = default!;
 #endif
         /// <summary>Configuration when `after_completion.type=redirect`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect? Redirect { get => _explicitNullValueRedirect; set { _explicitNullValueRedirect = value; AdditionalData?.Remove("redirect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect"); else _explicitNullProperties?.Remove("redirect"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect? _explicitNullValueRedirect = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect? Redirect { get => _explicitNullValueRedirect; set { _explicitNullValueRedirect = value; AdditionalData?.Remove("redirect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect"); else _explicitNullProperties?.Remove("redirect"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect? _explicitNullValueRedirect = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect Redirect { get => _explicitNullValueRedirect; set { _explicitNullValueRedirect = value; AdditionalData?.Remove("redirect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect"); else _explicitNullProperties?.Remove("redirect"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect _explicitNullValueRedirect = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect Redirect { get => _explicitNullValueRedirect; set { _explicitNullValueRedirect = value; AdditionalData?.Remove("redirect"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect"); else _explicitNullProperties?.Remove("redirect"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect _explicitNullValueRedirect = default!;
 #endif
         /// <summary>The specified type of behavior after the flow is completed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -75,8 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "hosted_confirmation", n => { HostedConfirmation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation.CreateFromDiscriminatorValue); } },
-                { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect.CreateFromDiscriminatorValue); } },
+                { "hosted_confirmation", n => { HostedConfirmation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation.CreateFromDiscriminatorValue); } },
+                { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation>("hosted_confirmation", HostedConfirmation);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect>("redirect", Redirect);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation>("hosted_confirmation", HostedConfirmation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect>("redirect", Redirect);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

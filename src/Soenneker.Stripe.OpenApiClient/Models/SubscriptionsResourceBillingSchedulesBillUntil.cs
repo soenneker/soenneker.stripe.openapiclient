@@ -31,21 +31,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp the billing schedule will apply until.</summary>
-        public int? ComputedTimestamp { get => _explicitNullValueComputedTimestamp; set { _explicitNullValueComputedTimestamp = value; AdditionalData?.Remove("computed_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computed_timestamp"); else _explicitNullProperties?.Remove("computed_timestamp"); } }
-        private int? _explicitNullValueComputedTimestamp = default!;
+        public long? ComputedTimestamp { get => _explicitNullValueComputedTimestamp; set { _explicitNullValueComputedTimestamp = value; AdditionalData?.Remove("computed_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computed_timestamp"); else _explicitNullProperties?.Remove("computed_timestamp"); } }
+        private long? _explicitNullValueComputedTimestamp = default!;
         /// <summary>Specifies the billing period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed? _explicitNullValueDuration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration? _explicitNullValueDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed _explicitNullValueDuration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration _explicitNullValueDuration = default!;
 #endif
         /// <summary>If specified, the billing schedule will apply until the specified timestamp.</summary>
-        public int? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
-        private int? _explicitNullValueTimestamp = default!;
+        public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private long? _explicitNullValueTimestamp = default!;
         /// <summary>Describes how the billing schedule will determine the end date. Either `duration` or `timestamp`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType? _explicitNullValueType = default!;
@@ -74,9 +74,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "computed_timestamp", n => { ComputedTimestamp = n.GetIntValue(); } },
-                { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed.CreateFromDiscriminatorValue); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "computed_timestamp", n => { ComputedTimestamp = n.GetLongValue(); } },
+                { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration.CreateFromDiscriminatorValue); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -87,9 +87,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("computed_timestamp", ComputedTimestamp);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed>("duration", Duration);
-            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteLongValue("computed_timestamp", ComputedTimestamp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration>("duration", Duration);
+            writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

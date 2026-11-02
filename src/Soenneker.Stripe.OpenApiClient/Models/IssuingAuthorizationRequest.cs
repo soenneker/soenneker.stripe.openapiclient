@@ -51,12 +51,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails? _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>Whether this request was approved.</summary>
         public bool? Approved { get => _explicitNullValueApproved; set { _explicitNullValueApproved = value; AdditionalData?.Remove("approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved"); else _explicitNullProperties?.Remove("approved"); } }
@@ -72,8 +72,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueAuthorizationCode = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,8 +114,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueReasonMessage = default!;
 #endif
         /// <summary>Time when the card network received an authorization request from the acquirer in UTC. Referred to by networks as transmission time.</summary>
-        public int? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
-        private int? _explicitNullValueRequestedAt = default!;
+        public long? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
+        private long? _explicitNullValueRequestedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest"/> and sets the default values.
         /// </summary>
@@ -142,17 +142,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails.CreateFromDiscriminatorValue); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails.CreateFromDiscriminatorValue); } },
                 { "approved", n => { Approved = n.GetBoolValue(); } },
                 { "authorization_code", n => { AuthorizationCode = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "network_risk_score", n => { NetworkRiskScore = n.GetIntValue(); } },
                 { "reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReason = default; _explicitNullProperties?.Remove("reason"); AdditionalData["reason"] = unknown; } else { Reason = parsed; AdditionalData.Remove("reason"); } } },
                 { "reason_message", n => { ReasonMessage = n.GetStringValue(); } },
-                { "requested_at", n => { RequestedAt = n.GetIntValue(); } },
+                { "requested_at", n => { RequestedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -163,17 +163,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails>("amount_details", AmountDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>("amount_details", AmountDetails);
             writer.WriteBoolValue("approved", Approved);
             writer.WriteStringValue("authorization_code", AuthorizationCode);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteIntValue("network_risk_score", NetworkRiskScore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestReason>("reason", Reason);
             writer.WriteStringValue("reason_message", ReasonMessage);
-            writer.WriteIntValue("requested_at", RequestedAt);
+            writer.WriteLongValue("requested_at", RequestedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

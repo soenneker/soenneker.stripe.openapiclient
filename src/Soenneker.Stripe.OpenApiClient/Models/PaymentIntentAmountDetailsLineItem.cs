@@ -60,12 +60,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment method-specific information for line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>The product code of the line item, such as an SKU. Required for L3 rates. At most 12 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,12 +93,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the tax on the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax? _explicitNullValueTax = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax? _explicitNullValueTax = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax _explicitNullValueTax = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; AdditionalData?.Remove("tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax _explicitNullValueTax = default!;
 #endif
         /// <summary>The unit cost of the line item represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). Required for L3 rates. An integer greater than or equal to 0.</summary>
         public int? UnitCost { get => _explicitNullValueUnitCost; set { _explicitNullValueUnitCost = value; AdditionalData?.Remove("unit_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit_cost"); else _explicitNullProperties?.Remove("unit_cost"); } }
@@ -141,11 +141,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "product_code", n => { ProductCode = n.GetStringValue(); } },
                 { "product_name", n => { ProductName = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
-                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax.CreateFromDiscriminatorValue); } },
+                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax.CreateFromDiscriminatorValue); } },
                 { "unit_cost", n => { UnitCost = n.GetIntValue(); } },
                 { "unit_of_measure", n => { UnitOfMeasure = n.GetStringValue(); } },
             };
@@ -160,11 +160,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("discount_amount", DiscountAmount);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteStringValue("product_code", ProductCode);
             writer.WriteStringValue("product_name", ProductName);
             writer.WriteIntValue("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax>("tax", Tax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax>("tax", Tax);
             writer.WriteIntValue("unit_cost", UnitCost);
             writer.WriteStringValue("unit_of_measure", UnitOfMeasure);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

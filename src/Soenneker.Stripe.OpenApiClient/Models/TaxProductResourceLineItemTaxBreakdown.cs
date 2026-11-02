@@ -58,12 +58,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details regarding the rate for this tax. This field will be `null` when the tax is not imposed, for example if the product is exempt from tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails? _explicitNullValueTaxRateDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails? _explicitNullValueTaxRateDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails _explicitNullValueTaxRateDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails _explicitNullValueTaxRateDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown"/> and sets the default values.
@@ -93,7 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "jurisdiction", n => { Jurisdiction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdiction>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdiction.CreateFromDiscriminatorValue); } },
                 { "sourcing", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownSourcing>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSourcing = default; _explicitNullProperties?.Remove("sourcing"); AdditionalData["sourcing"] = unknown; } else { Sourcing = parsed; AdditionalData.Remove("sourcing"); } } },
-                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails.CreateFromDiscriminatorValue); } },
+                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails.CreateFromDiscriminatorValue); } },
                 { "taxability_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxabilityReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxabilityReason = default; _explicitNullProperties?.Remove("taxability_reason"); AdditionalData["taxability_reason"] = unknown; } else { TaxabilityReason = parsed; AdditionalData.Remove("taxability_reason"); } } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
             };
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownSourcing>("sourcing", Sourcing);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxabilityReason>("taxability_reason", TaxabilityReason);
             writer.WriteIntValue("taxable_amount", TaxableAmount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails>("tax_rate_details", TaxRateDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetails>("tax_rate_details", TaxRateDetails);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

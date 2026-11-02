@@ -28,8 +28,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the microdeposits are expected to land.</summary>
-        public int? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; AdditionalData?.Remove("arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
-        private int? _explicitNullValueArrivalDate = default!;
+        public long? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; AdditionalData?.Remove("arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
+        private long? _explicitNullValueArrivalDate = default!;
         /// <summary>The URL for the hosted verification page, which allows customers to verify their bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "arrival_date", n => { ArrivalDate = n.GetIntValue(); } },
+                { "arrival_date", n => { ArrivalDate = n.GetLongValue(); } },
                 { "hosted_verification_url", n => { HostedVerificationUrl = n.GetStringValue(); } },
                 { "microdeposit_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMicrodepositType = default; _explicitNullProperties?.Remove("microdeposit_type"); AdditionalData["microdeposit_type"] = unknown; } else { MicrodepositType = parsed; AdditionalData.Remove("microdeposit_type"); } } },
             };
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("arrival_date", ArrivalDate);
+            writer.WriteLongValue("arrival_date", ArrivalDate);
             writer.WriteStringValue("hosted_verification_url", HostedVerificationUrl);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>("microdeposit_type", MicrodepositType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

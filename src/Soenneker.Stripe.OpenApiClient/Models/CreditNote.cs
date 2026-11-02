@@ -97,8 +97,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? AmountShipping { get => _explicitNullValueAmountShipping; set { _explicitNullValueAmountShipping = value; AdditionalData?.Remove("amount_shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_shipping"); else _explicitNullProperties?.Remove("amount_shipping"); } }
         private int? _explicitNullValueAmountShipping = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,8 +153,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount> _explicitNullValueDiscountAmounts = default!;
 #endif
         /// <summary>The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated &apos;Date of issue&apos; printed on the credit note PDF.</summary>
-        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
-        private int? _explicitNullValueEffectiveAt = default!;
+        public long? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private long? _explicitNullValueEffectiveAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -266,12 +266,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The details of the cost of shipping, including the ShippingRate applied to the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost? _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost? _explicitNullValueShippingCost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost _explicitNullValueShippingCost = default!;
 #endif
         /// <summary>Status of this credit note, one of `issued` or `void`. Learn more about [voiding credit notes](https://docs.stripe.com/billing/invoices/credit-notes#voiding).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -302,8 +302,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType? _explicitNullValueType = default!;
         /// <summary>The time that the credit note was voided.</summary>
-        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
-        private int? _explicitNullValueVoidedAt = default!;
+        public long? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
+        private long? _explicitNullValueVoidedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote"/> and sets the default values.
         /// </summary>
@@ -331,14 +331,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_shipping", n => { AmountShipping = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_balance_transaction", n => { CustomerBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
+                { "effective_at", n => { EffectiveAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice.CreateFromDiscriminatorValue); } },
                 { "lines", n => { Lines = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines.CreateFromDiscriminatorValue); } },
@@ -354,7 +354,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReason = default; _explicitNullProperties?.Remove("reason"); AdditionalData["reason"] = unknown; } else { Reason = parsed; AdditionalData.Remove("reason"); } } },
                 { "refunds", n => { Refunds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "subtotal", n => { Subtotal = n.GetIntValue(); } },
                 { "subtotal_excluding_tax", n => { SubtotalExcludingTax = n.GetIntValue(); } },
@@ -362,7 +362,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "total_excluding_tax", n => { TotalExcludingTax = n.GetIntValue(); } },
                 { "total_taxes", n => { TotalTaxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
-                { "voided_at", n => { VoidedAt = n.GetIntValue(); } },
+                { "voided_at", n => { VoidedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -374,14 +374,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("amount_shipping", AmountShipping);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction>("customer_balance_transaction", CustomerBalanceTransaction);
             writer.WriteIntValue("discount_amount", DiscountAmount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
-            writer.WriteIntValue("effective_at", EffectiveAt);
+            writer.WriteLongValue("effective_at", EffectiveAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice>("invoice", Invoice);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>("lines", Lines);
@@ -397,7 +397,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>("pretax_credit_amounts", PretaxCreditAmounts);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteReason>("reason", Reason);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund>("refunds", Refunds);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>("shipping_cost", ShippingCost);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus>("status", Status);
             writer.WriteIntValue("subtotal", Subtotal);
             writer.WriteIntValue("subtotal_excluding_tax", SubtotalExcludingTax);
@@ -405,7 +405,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("total_excluding_tax", TotalExcludingTax);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>("total_taxes", TotalTaxes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType>("type", Type);
-            writer.WriteIntValue("voided_at", VoidedAt);
+            writer.WriteLongValue("voided_at", VoidedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

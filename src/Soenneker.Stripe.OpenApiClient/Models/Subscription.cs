@@ -144,17 +144,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTax _explicitNullValueAutomaticTax = default!;
 #endif
         /// <summary>The reference point that aligns future [billing cycle](https://docs.stripe.com/subscriptions/billing-cycle) dates. It sets the day of week for `week` intervals, the day of month for `month` and `year` intervals, and the month of year for `year` intervals. The timestamp is in UTC format.</summary>
-        public int? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; AdditionalData?.Remove("billing_cycle_anchor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
-        private int? _explicitNullValueBillingCycleAnchor = default!;
+        public long? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; AdditionalData?.Remove("billing_cycle_anchor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private long? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>The fixed values used to calculate the `billing_cycle_anchor`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig? BillingCycleAnchorConfig { get => _explicitNullValueBillingCycleAnchorConfig; set { _explicitNullValueBillingCycleAnchorConfig = value; AdditionalData?.Remove("billing_cycle_anchor_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor_config"); else _explicitNullProperties?.Remove("billing_cycle_anchor_config"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig? _explicitNullValueBillingCycleAnchorConfig = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig? BillingCycleAnchorConfig { get => _explicitNullValueBillingCycleAnchorConfig; set { _explicitNullValueBillingCycleAnchorConfig = value; AdditionalData?.Remove("billing_cycle_anchor_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor_config"); else _explicitNullProperties?.Remove("billing_cycle_anchor_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig? _explicitNullValueBillingCycleAnchorConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig BillingCycleAnchorConfig { get => _explicitNullValueBillingCycleAnchorConfig; set { _explicitNullValueBillingCycleAnchorConfig = value; AdditionalData?.Remove("billing_cycle_anchor_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor_config"); else _explicitNullProperties?.Remove("billing_cycle_anchor_config"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig _explicitNullValueBillingCycleAnchorConfig = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig BillingCycleAnchorConfig { get => _explicitNullValueBillingCycleAnchorConfig; set { _explicitNullValueBillingCycleAnchorConfig = value; AdditionalData?.Remove("billing_cycle_anchor_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor_config"); else _explicitNullProperties?.Remove("billing_cycle_anchor_config"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig _explicitNullValueBillingCycleAnchorConfig = default!;
 #endif
         /// <summary>The billing mode of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,38 +179,38 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed? _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds? _explicitNullValueBillingThresholds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds _explicitNullValueBillingThresholds = default!;
 #endif
         /// <summary>A date in the future at which the subscription will automatically get canceled</summary>
-        public int? CancelAt { get => _explicitNullValueCancelAt; set { _explicitNullValueCancelAt = value; AdditionalData?.Remove("cancel_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_at"); else _explicitNullProperties?.Remove("cancel_at"); } }
-        private int? _explicitNullValueCancelAt = default!;
+        public long? CancelAt { get => _explicitNullValueCancelAt; set { _explicitNullValueCancelAt = value; AdditionalData?.Remove("cancel_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_at"); else _explicitNullProperties?.Remove("cancel_at"); } }
+        private long? _explicitNullValueCancelAt = default!;
         /// <summary>Whether this subscription will (if `status=active`) or did (if `status=canceled`) cancel at the end of the current billing period.</summary>
         public bool? CancelAtPeriodEnd { get => _explicitNullValueCancelAtPeriodEnd; set { _explicitNullValueCancelAtPeriodEnd = value; AdditionalData?.Remove("cancel_at_period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel_at_period_end"); else _explicitNullProperties?.Remove("cancel_at_period_end"); } }
         private bool? _explicitNullValueCancelAtPeriodEnd = default!;
         /// <summary>If the subscription has been canceled, the date of that cancellation. If the subscription was canceled with `cancel_at_period_end`, `canceled_at` will reflect the time of the most recent update request, not the end of the subscription period when the subscription is automatically moved to a canceled state.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Details about why this subscription was cancelled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails? _explicitNullValueCancellationDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails? CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails? _explicitNullValueCancellationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails _explicitNullValueCancellationDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails CancellationDetails { get => _explicitNullValueCancellationDetails; set { _explicitNullValueCancellationDetails = value; AdditionalData?.Remove("cancellation_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_details"); else _explicitNullProperties?.Remove("cancellation_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails _explicitNullValueCancellationDetails = default!;
 #endif
         /// <summary>Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCollectionMethod? CollectionMethod { get => _explicitNullValueCollectionMethod; set { _explicitNullValueCollectionMethod = value; AdditionalData?.Remove("collection_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collection_method"); else _explicitNullProperties?.Remove("collection_method"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCollectionMethod? _explicitNullValueCollectionMethod = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -295,8 +295,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>If the subscription has ended, the date the subscription ended.</summary>
-        public int? EndedAt { get => _explicitNullValueEndedAt; set { _explicitNullValueEndedAt = value; AdditionalData?.Remove("ended_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ended_at"); else _explicitNullProperties?.Remove("ended_at"); } }
-        private int? _explicitNullValueEndedAt = default!;
+        public long? EndedAt { get => _explicitNullValueEndedAt; set { _explicitNullValueEndedAt = value; AdditionalData?.Remove("ended_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ended_at"); else _explicitNullProperties?.Remove("ended_at"); } }
+        private long? _explicitNullValueEndedAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -343,12 +343,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings for Managed Payments for this Subscription and resulting [Invoices](/api/invoices/object) and [PaymentIntents](/api/payment_intents/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments? _explicitNullValueManagedPayments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments? _explicitNullValueManagedPayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments _explicitNullValueManagedPayments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments _explicitNullValueManagedPayments = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -361,8 +361,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Specifies the approximate timestamp on which any pending invoice items will be billed according to the schedule provided at `pending_invoice_item_interval`.</summary>
-        public int? NextPendingInvoiceItemInvoice { get => _explicitNullValueNextPendingInvoiceItemInvoice; set { _explicitNullValueNextPendingInvoiceItemInvoice = value; AdditionalData?.Remove("next_pending_invoice_item_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_pending_invoice_item_invoice"); else _explicitNullProperties?.Remove("next_pending_invoice_item_invoice"); } }
-        private int? _explicitNullValueNextPendingInvoiceItemInvoice = default!;
+        public long? NextPendingInvoiceItemInvoice { get => _explicitNullValueNextPendingInvoiceItemInvoice; set { _explicitNullValueNextPendingInvoiceItemInvoice = value; AdditionalData?.Remove("next_pending_invoice_item_invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_pending_invoice_item_invoice"); else _explicitNullProperties?.Remove("next_pending_invoice_item_invoice"); } }
+        private long? _explicitNullValueNextPendingInvoiceItemInvoice = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionObject? _explicitNullValueObject = default!;
@@ -379,32 +379,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If specified, payment collection for this subscription will be paused. Note that the subscription status will be unchanged and will not be updated to `paused`. Learn more about [pausing collection](https://docs.stripe.com/billing/subscriptions/pause-payment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection? PauseCollection { get => _explicitNullValuePauseCollection; set { _explicitNullValuePauseCollection = value; AdditionalData?.Remove("pause_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_collection"); else _explicitNullProperties?.Remove("pause_collection"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection? _explicitNullValuePauseCollection = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection? PauseCollection { get => _explicitNullValuePauseCollection; set { _explicitNullValuePauseCollection = value; AdditionalData?.Remove("pause_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_collection"); else _explicitNullProperties?.Remove("pause_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection? _explicitNullValuePauseCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection PauseCollection { get => _explicitNullValuePauseCollection; set { _explicitNullValuePauseCollection = value; AdditionalData?.Remove("pause_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_collection"); else _explicitNullProperties?.Remove("pause_collection"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection _explicitNullValuePauseCollection = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection PauseCollection { get => _explicitNullValuePauseCollection; set { _explicitNullValuePauseCollection = value; AdditionalData?.Remove("pause_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_collection"); else _explicitNullProperties?.Remove("pause_collection"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection _explicitNullValuePauseCollection = default!;
 #endif
         /// <summary>Payment settings passed on to invoices created by the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings? PaymentSettings { get => _explicitNullValuePaymentSettings; set { _explicitNullValuePaymentSettings = value; AdditionalData?.Remove("payment_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_settings"); else _explicitNullProperties?.Remove("payment_settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings? _explicitNullValuePaymentSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings? PaymentSettings { get => _explicitNullValuePaymentSettings; set { _explicitNullValuePaymentSettings = value; AdditionalData?.Remove("payment_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_settings"); else _explicitNullProperties?.Remove("payment_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings? _explicitNullValuePaymentSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings PaymentSettings { get => _explicitNullValuePaymentSettings; set { _explicitNullValuePaymentSettings = value; AdditionalData?.Remove("payment_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_settings"); else _explicitNullProperties?.Remove("payment_settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings _explicitNullValuePaymentSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings PaymentSettings { get => _explicitNullValuePaymentSettings; set { _explicitNullValuePaymentSettings = value; AdditionalData?.Remove("payment_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_settings"); else _explicitNullProperties?.Remove("payment_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings _explicitNullValuePaymentSettings = default!;
 #endif
         /// <summary>Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed? PendingInvoiceItemInterval { get => _explicitNullValuePendingInvoiceItemInterval; set { _explicitNullValuePendingInvoiceItemInterval = value; AdditionalData?.Remove("pending_invoice_item_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_invoice_item_interval"); else _explicitNullProperties?.Remove("pending_invoice_item_interval"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed? _explicitNullValuePendingInvoiceItemInterval = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval? PendingInvoiceItemInterval { get => _explicitNullValuePendingInvoiceItemInterval; set { _explicitNullValuePendingInvoiceItemInterval = value; AdditionalData?.Remove("pending_invoice_item_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_invoice_item_interval"); else _explicitNullProperties?.Remove("pending_invoice_item_interval"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval? _explicitNullValuePendingInvoiceItemInterval = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed PendingInvoiceItemInterval { get => _explicitNullValuePendingInvoiceItemInterval; set { _explicitNullValuePendingInvoiceItemInterval = value; AdditionalData?.Remove("pending_invoice_item_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_invoice_item_interval"); else _explicitNullProperties?.Remove("pending_invoice_item_interval"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed _explicitNullValuePendingInvoiceItemInterval = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval PendingInvoiceItemInterval { get => _explicitNullValuePendingInvoiceItemInterval; set { _explicitNullValuePendingInvoiceItemInterval = value; AdditionalData?.Remove("pending_invoice_item_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_invoice_item_interval"); else _explicitNullProperties?.Remove("pending_invoice_item_interval"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval _explicitNullValuePendingInvoiceItemInterval = default!;
 #endif
         /// <summary>You can use this [SetupIntent](https://docs.stripe.com/api/setup_intents) to collect user authentication when creating a subscription without immediate payment or updating a subscription&apos;s payment method, allowing you to optimize for off-session payments. Learn more in the [SCA Migration Guide](https://docs.stripe.com/billing/migration/strong-customer-authentication#scenario-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -419,12 +419,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If specified, [pending updates](https://docs.stripe.com/billing/subscriptions/pending-updates) that will be applied to the subscription once the `latest_invoice` has been paid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate? PendingUpdate { get => _explicitNullValuePendingUpdate; set { _explicitNullValuePendingUpdate = value; AdditionalData?.Remove("pending_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_update"); else _explicitNullProperties?.Remove("pending_update"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate? _explicitNullValuePendingUpdate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate? PendingUpdate { get => _explicitNullValuePendingUpdate; set { _explicitNullValuePendingUpdate = value; AdditionalData?.Remove("pending_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_update"); else _explicitNullProperties?.Remove("pending_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate? _explicitNullValuePendingUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate PendingUpdate { get => _explicitNullValuePendingUpdate; set { _explicitNullValuePendingUpdate = value; AdditionalData?.Remove("pending_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_update"); else _explicitNullProperties?.Remove("pending_update"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate _explicitNullValuePendingUpdate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate PendingUpdate { get => _explicitNullValuePendingUpdate; set { _explicitNullValuePendingUpdate = value; AdditionalData?.Remove("pending_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_update"); else _explicitNullProperties?.Remove("pending_update"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate _explicitNullValuePendingUpdate = default!;
 #endif
         /// <summary>The presentment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -447,8 +447,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleComposed _explicitNullValueSchedule = default!;
 #endif
         /// <summary>Date when the subscription was first created. The date might differ from the `created` date due to backdating.</summary>
-        public int? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
-        private int? _explicitNullValueStartDate = default!;
+        public long? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private long? _explicitNullValueStartDate = default!;
         /// <summary>Possible values are `incomplete`, `incomplete_expired`, `trialing`, `active`, `past_due`, `canceled`, `unpaid`, or `paused`. For `collection_method=charge_automatically` a subscription moves into `incomplete` if the initial payment attempt fails. A subscription in this status can only have metadata and default_source updated. Once the first invoice is paid, the subscription moves into an `active` status. If the first invoice is not paid within 23 hours, the subscription transitions to `incomplete_expired`. This is a terminal status, the open invoice will be voided and no further invoices will be generated. A subscription that is currently in a trial period is `trialing` and moves to `active` when the trial period is over. A subscription can only enter a `paused` status [when a trial ends without a payment method](https://docs.stripe.com/billing/subscriptions/trials/free-trials#create-free-trials-without-payment). A `paused` subscription doesn&apos;t generate invoices and can be resumed after your customer adds their payment method. The `paused` status is different from [pausing collection](https://docs.stripe.com/billing/subscriptions/pause-payment), which still generates invoices and leaves the subscription&apos;s status unchanged. If subscription `collection_method=charge_automatically`, it becomes `past_due` when payment is required but cannot be paid (due to failed payment or awaiting additional user actions). Once Stripe has exhausted all payment retry attempts, the subscription will become `canceled` or `unpaid` (depending on your subscriptions settings). If subscription `collection_method=send_invoice` it becomes `past_due` when its invoice is not paid by the due date, and `canceled` or `unpaid` if it is still not paid by an additional deadline after that. Note that when a subscription has a status of `unpaid`, no subsequent invoices will be attempted (invoices will be created, but then immediately automatically closed). After receiving updated payment information from a customer, you may choose to reopen and pay their closed invoices.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionStatus? _explicitNullValueStatus = default!;
@@ -475,29 +475,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account (if any) the subscription&apos;s payments will be attributed to for tax reporting, and where funds from each payment will be transferred to for each of the subscription&apos;s invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed? _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>If the subscription has a trial, the end of that trial.</summary>
-        public int? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
-        private int? _explicitNullValueTrialEnd = default!;
+        public long? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
+        private long? _explicitNullValueTrialEnd = default!;
         /// <summary>Settings related to subscription trials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings? TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; AdditionalData?.Remove("trial_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings? _explicitNullValueTrialSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings? TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; AdditionalData?.Remove("trial_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings? _explicitNullValueTrialSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; AdditionalData?.Remove("trial_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings _explicitNullValueTrialSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings TrialSettings { get => _explicitNullValueTrialSettings; set { _explicitNullValueTrialSettings = value; AdditionalData?.Remove("trial_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_settings"); else _explicitNullProperties?.Remove("trial_settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings _explicitNullValueTrialSettings = default!;
 #endif
         /// <summary>If the subscription has a trial, the beginning of that trial.</summary>
-        public int? TrialStart { get => _explicitNullValueTrialStart; set { _explicitNullValueTrialStart = value; AdditionalData?.Remove("trial_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_start"); else _explicitNullProperties?.Remove("trial_start"); } }
-        private int? _explicitNullValueTrialStart = default!;
+        public long? TrialStart { get => _explicitNullValueTrialStart; set { _explicitNullValueTrialStart = value; AdditionalData?.Remove("trial_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_start"); else _explicitNullProperties?.Remove("trial_start"); } }
+        private long? _explicitNullValueTrialStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscription"/> and sets the default values.
         /// </summary>
@@ -526,17 +526,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionApplication.CreateFromDiscriminatorValue); } },
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetDoubleValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTax.CreateFromDiscriminatorValue); } },
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
-                { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig.CreateFromDiscriminatorValue); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetLongValue(); } },
+                { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode.CreateFromDiscriminatorValue); } },
                 { "billing_schedules", n => { BillingSchedules = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedules>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedules.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed.CreateFromDiscriminatorValue); } },
-                { "cancel_at", n => { CancelAt = n.GetIntValue(); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "cancel_at", n => { CancelAt = n.GetLongValue(); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails.CreateFromDiscriminatorValue); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
+                { "cancellation_details", n => { CancellationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails.CreateFromDiscriminatorValue); } },
                 { "collection_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCollectionMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCollectionMethod = default; _explicitNullProperties?.Remove("collection_method"); AdditionalData["collection_method"] = unknown; } else { CollectionMethod = parsed; AdditionalData.Remove("collection_method"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
@@ -546,32 +546,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "ended_at", n => { EndedAt = n.GetIntValue(); } },
+                { "ended_at", n => { EndedAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItems>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItems.CreateFromDiscriminatorValue); } },
                 { "latest_invoice", n => { LatestInvoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionLatestInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionLatestInvoice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments.CreateFromDiscriminatorValue); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "next_pending_invoice_item_invoice", n => { NextPendingInvoiceItemInvoice = n.GetIntValue(); } },
+                { "next_pending_invoice_item_invoice", n => { NextPendingInvoiceItemInvoice = n.GetLongValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionOnBehalfOf.CreateFromDiscriminatorValue); } },
-                { "pause_collection", n => { PauseCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection.CreateFromDiscriminatorValue); } },
-                { "payment_settings", n => { PaymentSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings.CreateFromDiscriminatorValue); } },
-                { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed.CreateFromDiscriminatorValue); } },
+                { "pause_collection", n => { PauseCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection.CreateFromDiscriminatorValue); } },
+                { "payment_settings", n => { PaymentSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings.CreateFromDiscriminatorValue); } },
+                { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval.CreateFromDiscriminatorValue); } },
                 { "pending_setup_intent", n => { PendingSetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingSetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingSetupIntent.CreateFromDiscriminatorValue); } },
-                { "pending_update", n => { PendingUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate.CreateFromDiscriminatorValue); } },
+                { "pending_update", n => { PendingUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate.CreateFromDiscriminatorValue); } },
                 { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionPresentmentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionPresentmentDetails.CreateFromDiscriminatorValue); } },
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleComposed.CreateFromDiscriminatorValue); } },
-                { "start_date", n => { StartDate = n.GetIntValue(); } },
+                { "start_date", n => { StartDate = n.GetLongValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceStatusDetailsPublic>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceStatusDetailsPublic.CreateFromDiscriminatorValue); } },
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTestClock>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTestClock.CreateFromDiscriminatorValue); } },
-                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed.CreateFromDiscriminatorValue); } },
-                { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
-                { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings.CreateFromDiscriminatorValue); } },
-                { "trial_start", n => { TrialStart = n.GetIntValue(); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData.CreateFromDiscriminatorValue); } },
+                { "trial_end", n => { TrialEnd = n.GetLongValue(); } },
+                { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings.CreateFromDiscriminatorValue); } },
+                { "trial_start", n => { TrialStart = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -584,17 +584,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionApplication>("application", Application);
             writer.WriteDoubleValue("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTax>("automatic_tax", AutomaticTax);
-            writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingCycleAnchorConfig>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
+            writer.WriteLongValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingCycleAnchorConfig>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode>("billing_mode", BillingMode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedules>("billing_schedules", BillingSchedules);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholdsComposed>("billing_thresholds", BillingThresholds);
-            writer.WriteIntValue("cancel_at", CancelAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteLongValue("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
-            writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails>("cancellation_details", CancellationDetails);
+            writer.WriteLongValue("canceled_at", CanceledAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetails>("cancellation_details", CancellationDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCollectionMethod>("collection_method", CollectionMethod);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
@@ -604,32 +604,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("discounts", Discounts);
-            writer.WriteIntValue("ended_at", EndedAt);
+            writer.WriteLongValue("ended_at", EndedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings>("invoice_settings", InvoiceSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItems>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionLatestInvoice>("latest_invoice", LatestInvoice);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionManagedPayments>("managed_payments", ManagedPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionMetadataProperty>("metadata", Metadata);
-            writer.WriteIntValue("next_pending_invoice_item_invoice", NextPendingInvoiceItemInvoice);
+            writer.WriteLongValue("next_pending_invoice_item_invoice", NextPendingInvoiceItemInvoice);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionOnBehalfOf>("on_behalf_of", OnBehalfOf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection>("pause_collection", PauseCollection);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings>("payment_settings", PaymentSettings);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemIntervalComposed>("pending_invoice_item_interval", PendingInvoiceItemInterval);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollection>("pause_collection", PauseCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettings>("payment_settings", PaymentSettings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingInvoiceItemInterval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingSetupIntent>("pending_setup_intent", PendingSetupIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate>("pending_update", PendingUpdate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdate>("pending_update", PendingUpdate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionPresentmentDetails>("presentment_details", PresentmentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleComposed>("schedule", Schedule);
-            writer.WriteIntValue("start_date", StartDate);
+            writer.WriteLongValue("start_date", StartDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceStatusDetailsPublic>("status_details", StatusDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTestClock>("test_clock", TestClock);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferDataComposed>("transfer_data", TransferData);
-            writer.WriteIntValue("trial_end", TrialEnd);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTrialSettings>("trial_settings", TrialSettings);
-            writer.WriteIntValue("trial_start", TrialStart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>("transfer_data", TransferData);
+            writer.WriteLongValue("trial_end", TrialEnd);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsTrialSettings>("trial_settings", TrialSettings);
+            writer.WriteLongValue("trial_start", TrialStart);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

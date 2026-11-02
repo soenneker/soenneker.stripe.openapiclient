@@ -35,12 +35,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The credit balance transaction that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; AdditionalData?.Remove("credit_balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? _explicitNullValueCreditBalanceTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction? CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; AdditionalData?.Remove("credit_balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction? _explicitNullValueCreditBalanceTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; AdditionalData?.Remove("credit_balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction _explicitNullValueCreditBalanceTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction CreditBalanceTransaction { get => _explicitNullValueCreditBalanceTransaction; set { _explicitNullValueCreditBalanceTransaction = value; AdditionalData?.Remove("credit_balance_transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_balance_transaction"); else _explicitNullProperties?.Remove("credit_balance_transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction _explicitNullValueCreditBalanceTransaction = default!;
 #endif
         /// <summary>The discount that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "credit_balance_transaction", n => { CreditBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction.CreateFromDiscriminatorValue); } },
+                { "credit_balance_transaction", n => { CreditBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction>("credit_balance_transaction", CreditBalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountCreditBalanceTransaction>("credit_balance_transaction", CreditBalanceTransaction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount>("discount", Discount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmountType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

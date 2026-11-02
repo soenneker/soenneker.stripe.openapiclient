@@ -57,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationClientDeviceMetadata _explicitNullValueClientDeviceMetadataDetails = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
-        private int? _explicitNullValueCreatedAt = default!;
+        public long? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private long? _explicitNullValueCreatedAt = default!;
         /// <summary>Customer details attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,12 +108,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Indicates the final outcome for the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome? _explicitNullValueOutcome = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome? _explicitNullValueOutcome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome _explicitNullValueOutcome = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome _explicitNullValueOutcome = default!;
 #endif
         /// <summary>Payment details attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,14 +164,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "client_device_metadata_details", n => { ClientDeviceMetadataDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationClientDeviceMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationClientDeviceMetadata.CreateFromDiscriminatorValue); } },
-                { "created_at", n => { CreatedAt = n.GetIntValue(); } },
+                { "created_at", n => { CreatedAt = n.GetLongValue(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationCustomerDetails.CreateFromDiscriminatorValue); } },
                 { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome.CreateFromDiscriminatorValue); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails.CreateFromDiscriminatorValue); } },
                 { "recommended_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationRecommendedAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecommendedAction = default; _explicitNullProperties?.Remove("recommended_action"); AdditionalData["recommended_action"] = unknown; } else { RecommendedAction = parsed; AdditionalData.Remove("recommended_action"); } } },
                 { "signals", n => { Signals = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals.CreateFromDiscriminatorValue); } },
@@ -185,14 +185,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationClientDeviceMetadata>("client_device_metadata_details", ClientDeviceMetadataDetails);
-            writer.WriteIntValue("created_at", CreatedAt);
+            writer.WriteLongValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>("events", Events);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>("outcome", Outcome);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>("payment_details", PaymentDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationRecommendedAction>("recommended_action", RecommendedAction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals>("signals", Signals);

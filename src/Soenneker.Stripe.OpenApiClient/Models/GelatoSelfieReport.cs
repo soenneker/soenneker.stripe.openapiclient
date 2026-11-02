@@ -43,12 +43,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed? _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError _explicitNullValueError = default!;
 #endif
         /// <summary>ID of the [File](https://docs.stripe.com/api/files) holding the image of the selfie used in this check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "document", n => { Document = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError.CreateFromDiscriminatorValue); } },
                 { "selfie", n => { Selfie = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("document", Document);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError>("error", Error);
             writer.WriteStringValue("selfie", Selfie);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

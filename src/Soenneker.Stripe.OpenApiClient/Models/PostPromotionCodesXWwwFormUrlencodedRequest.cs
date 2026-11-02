@@ -83,8 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The timestamp at which this promotion code will expire. If the coupon has specified a `redeems_by`, then this value cannot be after the coupon&apos;s `redeems_by`.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>A positive integer specifying the number of times the promotion code can be redeemed. If the coupon has specified a `max_redemptions`, then this value cannot be greater than the coupon&apos;s `max_redemptions`.</summary>
         public int? MaxRedemptions { get => _explicitNullValueMaxRedemptions; set { _explicitNullValueMaxRedemptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_redemptions"); else _explicitNullProperties?.Remove("max_redemptions"); } }
         private int? _explicitNullValueMaxRedemptions = default!;
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "promotion", n => { Promotion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestPromotion>(global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestPromotion.CreateFromDiscriminatorValue); } },
@@ -160,7 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteIntValue("max_redemptions", MaxRedemptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPromotionCodesXWwwFormUrlencodedRequestPromotion>("promotion", Promotion);

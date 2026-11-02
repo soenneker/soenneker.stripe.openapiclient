@@ -55,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,8 +124,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject? _explicitNullValueObject = default!;
         /// <summary>The Unix timestamp representing when the tax liability is assumed or reduced.</summary>
-        public int? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; AdditionalData?.Remove("posted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
-        private int? _explicitNullValuePostedAt = default!;
+        public long? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; AdditionalData?.Remove("posted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
+        private long? _explicitNullValuePostedAt = default!;
         /// <summary>A custom unique identifier, such as &apos;myOrder_123&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -139,36 +139,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If `type=reversal`, contains information about what was reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal? Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal? _explicitNullValueReversal = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal? Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal? _explicitNullValueReversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal _explicitNullValueReversal = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal _explicitNullValueReversal = default!;
 #endif
         /// <summary>The details of the ship from location, such as the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails? ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails? _explicitNullValueShipFromDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? _explicitNullValueShipFromDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails _explicitNullValueShipFromDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails _explicitNullValueShipFromDetails = default!;
 #endif
         /// <summary>The shipping cost details for the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost? _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost? _explicitNullValueShippingCost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost _explicitNullValueShippingCost = default!;
 #endif
         /// <summary>The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn&apos;t guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.</summary>
-        public int? TaxDate { get => _explicitNullValueTaxDate; set { _explicitNullValueTaxDate = value; AdditionalData?.Remove("tax_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_date"); else _explicitNullProperties?.Remove("tax_date"); } }
-        private int? _explicitNullValueTaxDate = default!;
+        public long? TaxDate { get => _explicitNullValueTaxDate; set { _explicitNullValueTaxDate = value; AdditionalData?.Remove("tax_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_date"); else _explicitNullProperties?.Remove("tax_date"); } }
+        private long? _explicitNullValueTaxDate = default!;
         /// <summary>If `reversal`, this transaction reverses an earlier transaction.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType? _explicitNullValueType = default!;
@@ -197,7 +197,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails.CreateFromDiscriminatorValue); } },
@@ -206,12 +206,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "posted_at", n => { PostedAt = n.GetIntValue(); } },
+                { "posted_at", n => { PostedAt = n.GetLongValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal.CreateFromDiscriminatorValue); } },
-                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost.CreateFromDiscriminatorValue); } },
-                { "tax_date", n => { TaxDate = n.GetIntValue(); } },
+                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal.CreateFromDiscriminatorValue); } },
+                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost.CreateFromDiscriminatorValue); } },
+                { "tax_date", n => { TaxDate = n.GetLongValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -222,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>("customer_details", CustomerDetails);
@@ -231,12 +231,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>("object", Object);
-            writer.WriteIntValue("posted_at", PostedAt);
+            writer.WriteLongValue("posted_at", PostedAt);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal>("reversal", Reversal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails>("ship_from_details", ShipFromDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost>("shipping_cost", ShippingCost);
-            writer.WriteIntValue("tax_date", TaxDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal>("reversal", Reversal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>("ship_from_details", ShipFromDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteLongValue("tax_date", TaxDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

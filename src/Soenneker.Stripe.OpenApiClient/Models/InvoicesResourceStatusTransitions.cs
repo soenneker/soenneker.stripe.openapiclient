@@ -30,17 +30,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the invoice draft was finalized.</summary>
-        public int? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; AdditionalData?.Remove("finalized_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
-        private int? _explicitNullValueFinalizedAt = default!;
+        public long? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; AdditionalData?.Remove("finalized_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
+        private long? _explicitNullValueFinalizedAt = default!;
         /// <summary>The time that the invoice was marked uncollectible.</summary>
-        public int? MarkedUncollectibleAt { get => _explicitNullValueMarkedUncollectibleAt; set { _explicitNullValueMarkedUncollectibleAt = value; AdditionalData?.Remove("marked_uncollectible_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marked_uncollectible_at"); else _explicitNullProperties?.Remove("marked_uncollectible_at"); } }
-        private int? _explicitNullValueMarkedUncollectibleAt = default!;
+        public long? MarkedUncollectibleAt { get => _explicitNullValueMarkedUncollectibleAt; set { _explicitNullValueMarkedUncollectibleAt = value; AdditionalData?.Remove("marked_uncollectible_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marked_uncollectible_at"); else _explicitNullProperties?.Remove("marked_uncollectible_at"); } }
+        private long? _explicitNullValueMarkedUncollectibleAt = default!;
         /// <summary>The time that the invoice was paid.</summary>
-        public int? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; AdditionalData?.Remove("paid_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
-        private int? _explicitNullValuePaidAt = default!;
+        public long? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; AdditionalData?.Remove("paid_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
+        private long? _explicitNullValuePaidAt = default!;
         /// <summary>The time that the invoice was voided.</summary>
-        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
-        private int? _explicitNullValueVoidedAt = default!;
+        public long? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
+        private long? _explicitNullValueVoidedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -66,10 +66,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "finalized_at", n => { FinalizedAt = n.GetIntValue(); } },
-                { "marked_uncollectible_at", n => { MarkedUncollectibleAt = n.GetIntValue(); } },
-                { "paid_at", n => { PaidAt = n.GetIntValue(); } },
-                { "voided_at", n => { VoidedAt = n.GetIntValue(); } },
+                { "finalized_at", n => { FinalizedAt = n.GetLongValue(); } },
+                { "marked_uncollectible_at", n => { MarkedUncollectibleAt = n.GetLongValue(); } },
+                { "paid_at", n => { PaidAt = n.GetLongValue(); } },
+                { "voided_at", n => { VoidedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -79,10 +79,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("finalized_at", FinalizedAt);
-            writer.WriteIntValue("marked_uncollectible_at", MarkedUncollectibleAt);
-            writer.WriteIntValue("paid_at", PaidAt);
-            writer.WriteIntValue("voided_at", VoidedAt);
+            writer.WriteLongValue("finalized_at", FinalizedAt);
+            writer.WriteLongValue("marked_uncollectible_at", MarkedUncollectibleAt);
+            writer.WriteLongValue("paid_at", PaidAt);
+            writer.WriteLongValue("voided_at", VoidedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

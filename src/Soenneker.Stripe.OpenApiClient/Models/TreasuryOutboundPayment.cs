@@ -73,8 +73,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Cancelable { get => _explicitNullValueCancelable; set { _explicitNullValueCancelable = value; AdditionalData?.Remove("cancelable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelable"); else _explicitNullProperties?.Remove("cancelable"); } }
         private bool? _explicitNullValueCancelable = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,26 +118,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the PaymentMethod for an OutboundPayment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails? DestinationPaymentMethodDetails { get => _explicitNullValueDestinationPaymentMethodDetails; set { _explicitNullValueDestinationPaymentMethodDetails = value; AdditionalData?.Remove("destination_payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_payment_method_details"); else _explicitNullProperties?.Remove("destination_payment_method_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails? _explicitNullValueDestinationPaymentMethodDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails? DestinationPaymentMethodDetails { get => _explicitNullValueDestinationPaymentMethodDetails; set { _explicitNullValueDestinationPaymentMethodDetails = value; AdditionalData?.Remove("destination_payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_payment_method_details"); else _explicitNullProperties?.Remove("destination_payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails? _explicitNullValueDestinationPaymentMethodDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails DestinationPaymentMethodDetails { get => _explicitNullValueDestinationPaymentMethodDetails; set { _explicitNullValueDestinationPaymentMethodDetails = value; AdditionalData?.Remove("destination_payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_payment_method_details"); else _explicitNullProperties?.Remove("destination_payment_method_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails _explicitNullValueDestinationPaymentMethodDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails DestinationPaymentMethodDetails { get => _explicitNullValueDestinationPaymentMethodDetails; set { _explicitNullValueDestinationPaymentMethodDetails = value; AdditionalData?.Remove("destination_payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_payment_method_details"); else _explicitNullProperties?.Remove("destination_payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails _explicitNullValueDestinationPaymentMethodDetails = default!;
 #endif
         /// <summary>Details about the end user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails? EndUserDetails { get => _explicitNullValueEndUserDetails; set { _explicitNullValueEndUserDetails = value; AdditionalData?.Remove("end_user_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_user_details"); else _explicitNullProperties?.Remove("end_user_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails? _explicitNullValueEndUserDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails? EndUserDetails { get => _explicitNullValueEndUserDetails; set { _explicitNullValueEndUserDetails = value; AdditionalData?.Remove("end_user_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_user_details"); else _explicitNullProperties?.Remove("end_user_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails? _explicitNullValueEndUserDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails EndUserDetails { get => _explicitNullValueEndUserDetails; set { _explicitNullValueEndUserDetails = value; AdditionalData?.Remove("end_user_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_user_details"); else _explicitNullProperties?.Remove("end_user_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails _explicitNullValueEndUserDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails EndUserDetails { get => _explicitNullValueEndUserDetails; set { _explicitNullValueEndUserDetails = value; AdditionalData?.Remove("end_user_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_user_details"); else _explicitNullProperties?.Remove("end_user_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails _explicitNullValueEndUserDetails = default!;
 #endif
         /// <summary>The date when funds are expected to arrive in the destination account.</summary>
-        public int? ExpectedArrivalDate { get => _explicitNullValueExpectedArrivalDate; set { _explicitNullValueExpectedArrivalDate = value; AdditionalData?.Remove("expected_arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_arrival_date"); else _explicitNullProperties?.Remove("expected_arrival_date"); } }
-        private int? _explicitNullValueExpectedArrivalDate = default!;
+        public long? ExpectedArrivalDate { get => _explicitNullValueExpectedArrivalDate; set { _explicitNullValueExpectedArrivalDate = value; AdditionalData?.Remove("expected_arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_arrival_date"); else _explicitNullProperties?.Remove("expected_arrival_date"); } }
+        private long? _explicitNullValueExpectedArrivalDate = default!;
         /// <summary>The FinancialAccount that funds were pulled from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -187,12 +187,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about a returned OutboundPayment. Only set when the status is `returned`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails? ReturnedDetails { get => _explicitNullValueReturnedDetails; set { _explicitNullValueReturnedDetails = value; AdditionalData?.Remove("returned_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_details"); else _explicitNullProperties?.Remove("returned_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails? _explicitNullValueReturnedDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus? ReturnedDetails { get => _explicitNullValueReturnedDetails; set { _explicitNullValueReturnedDetails = value; AdditionalData?.Remove("returned_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_details"); else _explicitNullProperties?.Remove("returned_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus? _explicitNullValueReturnedDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails ReturnedDetails { get => _explicitNullValueReturnedDetails; set { _explicitNullValueReturnedDetails = value; AdditionalData?.Remove("returned_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_details"); else _explicitNullProperties?.Remove("returned_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails _explicitNullValueReturnedDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus ReturnedDetails { get => _explicitNullValueReturnedDetails; set { _explicitNullValueReturnedDetails = value; AdditionalData?.Remove("returned_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_details"); else _explicitNullProperties?.Remove("returned_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus _explicitNullValueReturnedDetails = default!;
 #endif
         /// <summary>The description that appears on the receiving end for an OutboundPayment (for example, bank statement for external bank transfer).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -220,22 +220,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about network-specific tracking information if available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails? TrackingDetails { get => _explicitNullValueTrackingDetails; set { _explicitNullValueTrackingDetails = value; AdditionalData?.Remove("tracking_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_details"); else _explicitNullProperties?.Remove("tracking_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails? _explicitNullValueTrackingDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails? TrackingDetails { get => _explicitNullValueTrackingDetails; set { _explicitNullValueTrackingDetails = value; AdditionalData?.Remove("tracking_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_details"); else _explicitNullProperties?.Remove("tracking_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails? _explicitNullValueTrackingDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails TrackingDetails { get => _explicitNullValueTrackingDetails; set { _explicitNullValueTrackingDetails = value; AdditionalData?.Remove("tracking_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_details"); else _explicitNullProperties?.Remove("tracking_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails _explicitNullValueTrackingDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails TrackingDetails { get => _explicitNullValueTrackingDetails; set { _explicitNullValueTrackingDetails = value; AdditionalData?.Remove("tracking_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_details"); else _explicitNullProperties?.Remove("tracking_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails _explicitNullValueTrackingDetails = default!;
 #endif
         /// <summary>The Transaction associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction? _explicitNullValueTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction _explicitNullValueTransaction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment"/> and sets the default values.
@@ -264,26 +264,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "cancelable", n => { Cancelable = n.GetBoolValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destination_payment_method", n => { DestinationPaymentMethod = n.GetStringValue(); } },
-                { "destination_payment_method_details", n => { DestinationPaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails.CreateFromDiscriminatorValue); } },
-                { "end_user_details", n => { EndUserDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails.CreateFromDiscriminatorValue); } },
-                { "expected_arrival_date", n => { ExpectedArrivalDate = n.GetIntValue(); } },
+                { "destination_payment_method_details", n => { DestinationPaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails.CreateFromDiscriminatorValue); } },
+                { "end_user_details", n => { EndUserDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails.CreateFromDiscriminatorValue); } },
+                { "expected_arrival_date", n => { ExpectedArrivalDate = n.GetLongValue(); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "hosted_regulatory_receipt_url", n => { HostedRegulatoryReceiptUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "returned_details", n => { ReturnedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails.CreateFromDiscriminatorValue); } },
+                { "returned_details", n => { ReturnedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceStatusTransitions.CreateFromDiscriminatorValue); } },
-                { "tracking_details", n => { TrackingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails.CreateFromDiscriminatorValue); } },
-                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction.CreateFromDiscriminatorValue); } },
+                { "tracking_details", n => { TrackingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails.CreateFromDiscriminatorValue); } },
+                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -295,26 +295,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteBoolValue("cancelable", Cancelable);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("destination_payment_method", DestinationPaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentDestinationPaymentMethodDetails>("destination_payment_method_details", DestinationPaymentMethodDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentEndUserDetails>("end_user_details", EndUserDetails);
-            writer.WriteIntValue("expected_arrival_date", ExpectedArrivalDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetails>("destination_payment_method_details", DestinationPaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceEndUserDetails>("end_user_details", EndUserDetails);
+            writer.WriteLongValue("expected_arrival_date", ExpectedArrivalDate);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("hosted_regulatory_receipt_url", HostedRegulatoryReceiptUrl);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentReturnedDetails>("returned_details", ReturnedDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceReturnedStatus>("returned_details", ReturnedDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceStatusTransitions>("status_transitions", StatusTransitions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTrackingDetails>("tracking_details", TrackingDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction>("transaction", Transaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentsResourceOutboundPaymentResourceTrackingDetails>("tracking_details", TrackingDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPaymentTransaction>("transaction", Transaction);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

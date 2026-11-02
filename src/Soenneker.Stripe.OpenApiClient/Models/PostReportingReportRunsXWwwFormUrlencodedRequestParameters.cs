@@ -69,11 +69,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The interval_end property</summary>
-        public int? IntervalEnd { get => _explicitNullValueIntervalEnd; set { _explicitNullValueIntervalEnd = value; AdditionalData?.Remove("interval_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_end"); else _explicitNullProperties?.Remove("interval_end"); } }
-        private int? _explicitNullValueIntervalEnd = default!;
+        public long? IntervalEnd { get => _explicitNullValueIntervalEnd; set { _explicitNullValueIntervalEnd = value; AdditionalData?.Remove("interval_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_end"); else _explicitNullProperties?.Remove("interval_end"); } }
+        private long? _explicitNullValueIntervalEnd = default!;
         /// <summary>The interval_start property</summary>
-        public int? IntervalStart { get => _explicitNullValueIntervalStart; set { _explicitNullValueIntervalStart = value; AdditionalData?.Remove("interval_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_start"); else _explicitNullProperties?.Remove("interval_start"); } }
-        private int? _explicitNullValueIntervalStart = default!;
+        public long? IntervalStart { get => _explicitNullValueIntervalStart; set { _explicitNullValueIntervalStart = value; AdditionalData?.Remove("interval_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval_start"); else _explicitNullProperties?.Remove("interval_start"); } }
+        private long? _explicitNullValueIntervalStart = default!;
         /// <summary>The payout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,8 +120,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "columns", n => { Columns = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "connected_account", n => { ConnectedAccount = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "interval_end", n => { IntervalEnd = n.GetIntValue(); } },
-                { "interval_start", n => { IntervalStart = n.GetIntValue(); } },
+                { "interval_end", n => { IntervalEnd = n.GetLongValue(); } },
+                { "interval_start", n => { IntervalStart = n.GetLongValue(); } },
                 { "payout", n => { Payout = n.GetStringValue(); } },
                 { "reporting_category", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReportingCategory = default; _explicitNullProperties?.Remove("reporting_category"); AdditionalData["reporting_category"] = unknown; } else { ReportingCategory = parsed; AdditionalData.Remove("reporting_category"); } } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
@@ -137,8 +137,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("columns", Columns);
             writer.WriteStringValue("connected_account", ConnectedAccount);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteIntValue("interval_end", IntervalEnd);
-            writer.WriteIntValue("interval_start", IntervalStart);
+            writer.WriteLongValue("interval_end", IntervalEnd);
+            writer.WriteLongValue("interval_start", IntervalStart);
             writer.WriteStringValue("payout", Payout);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostReportingReportRunsXWwwFormUrlencodedRequestParametersReportingCategory>("reporting_category", ReportingCategory);
             writer.WriteStringValue("timezone", Timezone);

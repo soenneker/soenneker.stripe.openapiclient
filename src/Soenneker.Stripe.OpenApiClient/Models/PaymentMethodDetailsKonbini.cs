@@ -26,12 +26,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the payment succeeded, this contains the details of the convenience store where the payment was completed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore? Store { get => _explicitNullValueStore; set { _explicitNullValueStore = value; AdditionalData?.Remove("store"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store"); else _explicitNullProperties?.Remove("store"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore? _explicitNullValueStore = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore? Store { get => _explicitNullValueStore; set { _explicitNullValueStore = value; AdditionalData?.Remove("store"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store"); else _explicitNullProperties?.Remove("store"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore? _explicitNullValueStore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore Store { get => _explicitNullValueStore; set { _explicitNullValueStore = value; AdditionalData?.Remove("store"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store"); else _explicitNullProperties?.Remove("store"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore _explicitNullValueStore = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore Store { get => _explicitNullValueStore; set { _explicitNullValueStore = value; AdditionalData?.Remove("store"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store"); else _explicitNullProperties?.Remove("store"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore _explicitNullValueStore = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbini"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "store", n => { Store = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore.CreateFromDiscriminatorValue); } },
+                { "store", n => { Store = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStore>("store", Store);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStore>("store", Store);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -38,12 +38,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about payments collected offline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline? Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline? _explicitNullValueOffline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline? Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline? _explicitNullValueOffline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline _explicitNullValueOffline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline _explicitNullValueOffline = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "generated_card", n => { GeneratedCard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentGeneratedCard>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentGeneratedCard.CreateFromDiscriminatorValue); } },
-                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline.CreateFromDiscriminatorValue); } },
+                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentGeneratedCard>("generated_card", GeneratedCard);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresentOffline>("offline", Offline);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>("offline", Offline);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

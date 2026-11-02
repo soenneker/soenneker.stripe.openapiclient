@@ -51,36 +51,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time period the subscription item has been billed for.</summary>
-        public int? BilledUntil { get => _explicitNullValueBilledUntil; set { _explicitNullValueBilledUntil = value; AdditionalData?.Remove("billed_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_until"); else _explicitNullProperties?.Remove("billed_until"); } }
-        private int? _explicitNullValueBilledUntil = default!;
+        public long? BilledUntil { get => _explicitNullValueBilledUntil; set { _explicitNullValueBilledUntil = value; AdditionalData?.Remove("billed_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_until"); else _explicitNullProperties?.Remove("billed_until"); } }
+        private long? _explicitNullValueBilledUntil = default!;
         /// <summary>Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed? _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds? _explicitNullValueBillingThresholds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds _explicitNullValueBillingThresholds = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
         private int? _explicitNullValueCreated = default!;
         /// <summary>The end time of this subscription item&apos;s current billing period.</summary>
-        public int? CurrentPeriodEnd { get => _explicitNullValueCurrentPeriodEnd; set { _explicitNullValueCurrentPeriodEnd = value; AdditionalData?.Remove("current_period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_period_end"); else _explicitNullProperties?.Remove("current_period_end"); } }
-        private int? _explicitNullValueCurrentPeriodEnd = default!;
+        public long? CurrentPeriodEnd { get => _explicitNullValueCurrentPeriodEnd; set { _explicitNullValueCurrentPeriodEnd = value; AdditionalData?.Remove("current_period_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_period_end"); else _explicitNullProperties?.Remove("current_period_end"); } }
+        private long? _explicitNullValueCurrentPeriodEnd = default!;
         /// <summary>The start time of this subscription item&apos;s current billing period.</summary>
-        public int? CurrentPeriodStart { get => _explicitNullValueCurrentPeriodStart; set { _explicitNullValueCurrentPeriodStart = value; AdditionalData?.Remove("current_period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_period_start"); else _explicitNullProperties?.Remove("current_period_start"); } }
-        private int? _explicitNullValueCurrentPeriodStart = default!;
+        public long? CurrentPeriodStart { get => _explicitNullValueCurrentPeriodStart; set { _explicitNullValueCurrentPeriodStart = value; AdditionalData?.Remove("current_period_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_period_start"); else _explicitNullProperties?.Remove("current_period_start"); } }
+        private long? _explicitNullValueCurrentPeriodStart = default!;
         /// <summary>The current trial that is applied to this subscription item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial? CurrentTrial { get => _explicitNullValueCurrentTrial; set { _explicitNullValueCurrentTrial = value; AdditionalData?.Remove("current_trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_trial"); else _explicitNullProperties?.Remove("current_trial"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial? _explicitNullValueCurrentTrial = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial? CurrentTrial { get => _explicitNullValueCurrentTrial; set { _explicitNullValueCurrentTrial = value; AdditionalData?.Remove("current_trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_trial"); else _explicitNullProperties?.Remove("current_trial"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial? _explicitNullValueCurrentTrial = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial CurrentTrial { get => _explicitNullValueCurrentTrial; set { _explicitNullValueCurrentTrial = value; AdditionalData?.Remove("current_trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_trial"); else _explicitNullProperties?.Remove("current_trial"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial _explicitNullValueCurrentTrial = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial CurrentTrial { get => _explicitNullValueCurrentTrial; set { _explicitNullValueCurrentTrial = value; AdditionalData?.Remove("current_trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_trial"); else _explicitNullProperties?.Remove("current_trial"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial _explicitNullValueCurrentTrial = default!;
 #endif
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,12 +173,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billed_until", n => { BilledUntil = n.GetIntValue(); } },
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed.CreateFromDiscriminatorValue); } },
+                { "billed_until", n => { BilledUntil = n.GetLongValue(); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "current_period_end", n => { CurrentPeriodEnd = n.GetIntValue(); } },
-                { "current_period_start", n => { CurrentPeriodStart = n.GetIntValue(); } },
-                { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial.CreateFromDiscriminatorValue); } },
+                { "current_period_end", n => { CurrentPeriodEnd = n.GetLongValue(); } },
+                { "current_period_start", n => { CurrentPeriodStart = n.GetLongValue(); } },
+                { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -196,12 +196,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("billed_until", BilledUntil);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed>("billing_thresholds", BillingThresholds);
+            writer.WriteLongValue("billed_until", BilledUntil);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>("billing_thresholds", BillingThresholds);
             writer.WriteIntValue("created", Created);
-            writer.WriteIntValue("current_period_end", CurrentPeriodEnd);
-            writer.WriteIntValue("current_period_start", CurrentPeriodStart);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>("current_trial", CurrentTrial);
+            writer.WriteLongValue("current_period_end", CurrentPeriodEnd);
+            writer.WriteLongValue("current_period_start", CurrentPeriodStart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceCurrentTrial>("current_trial", CurrentTrial);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>("metadata", Metadata);

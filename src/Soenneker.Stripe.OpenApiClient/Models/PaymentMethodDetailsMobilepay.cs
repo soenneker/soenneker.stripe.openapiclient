@@ -26,12 +26,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Internal card details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard? _explicitNullValueCard = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InternalCard? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InternalCard? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard _explicitNullValueCard = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InternalCard Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InternalCard _explicitNullValueCard = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepay"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InternalCard>(global::Soenneker.Stripe.OpenApiClient.Models.InternalCard.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsMobilepayCard>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InternalCard>("card", Card);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -125,8 +125,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.</summary>
-        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
-        private int? _explicitNullValueProrationDate = default!;
+        public long? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private long? _explicitNullValueProrationDate = default!;
         /// <summary>The quantity you&apos;d like to apply to the subscription item you&apos;re creating.</summary>
         public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private int? _explicitNullValueQuantity = default!;
@@ -168,7 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestPriceData>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestPriceData.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior>(); } },
-                { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
+                { "proration_date", n => { ProrationDate = n.GetLongValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "tax_rates", n => { TaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestTaxRates>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestTaxRates.CreateFromDiscriminatorValue); } },
             };
@@ -190,7 +190,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("price", Price);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestPriceData>("price_data", PriceData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);
+            writer.WriteLongValue("proration_date", ProrationDate);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestTaxRates>("tax_rates", TaxRates);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

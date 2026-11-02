@@ -60,12 +60,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds? _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds? _explicitNullValueBillingThresholds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds _explicitNullValueBillingThresholds = default!;
 #endif
         /// <summary>Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay the underlying subscription at the end of each billing cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsCollectionMethod? CollectionMethod { get => _explicitNullValueCollectionMethod; set { _explicitNullValueCollectionMethod = value; AdditionalData?.Remove("collection_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collection_method"); else _explicitNullProperties?.Remove("collection_method"); } }
@@ -113,12 +113,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account (if any) the associated subscription&apos;s payments will be attributed to for tax reporting, and where funds from each payment will be transferred to for each of the subscription&apos;s invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData? _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettings"/> and sets the default values.
@@ -148,13 +148,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetDoubleValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsAutomaticTax.CreateFromDiscriminatorValue); } },
                 { "billing_cycle_anchor", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingCycleAnchor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingCycleAnchor = default; _explicitNullProperties?.Remove("billing_cycle_anchor"); AdditionalData["billing_cycle_anchor"] = unknown; } else { BillingCycleAnchor = parsed; AdditionalData.Remove("billing_cycle_anchor"); } } },
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds.CreateFromDiscriminatorValue); } },
                 { "collection_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsCollectionMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCollectionMethod = default; _explicitNullProperties?.Remove("collection_method"); AdditionalData["collection_method"] = unknown; } else { CollectionMethod = parsed; AdditionalData.Remove("collection_method"); } } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsDefaultPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsDefaultPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionScheduleSetting>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionScheduleSetting.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf.CreateFromDiscriminatorValue); } },
-                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData.CreateFromDiscriminatorValue); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -167,13 +167,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteDoubleValue("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>("billing_thresholds", BillingThresholds);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsCollectionMethod>("collection_method", CollectionMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsDefaultPaymentMethod>("default_payment_method", DefaultPaymentMethod);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionScheduleSetting>("invoice_settings", InvoiceSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>("on_behalf_of", OnBehalfOf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceDefaultSettingsTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>("transfer_data", TransferData);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

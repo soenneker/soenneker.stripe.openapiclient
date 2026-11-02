@@ -70,8 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>If set, the Tax Registration stops being active at this time. If not set, the Tax Registration will be active indefinitely. Timestamp measured in seconds since the Unix epoch.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "country_options", n => { CountryOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptions.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("country", Country);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptions>("country_options", CountryOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("expires_at", ExpiresAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

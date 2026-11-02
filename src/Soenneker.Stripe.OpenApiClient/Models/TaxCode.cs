@@ -68,12 +68,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>An object that describes more information about the tax location required for this tax code. Some tax codes require a [performance location](/tax/location-sales#required-versus-optional-performance-locations) to calculate tax correctly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed? _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements? _explicitNullValueRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements _explicitNullValueRequirements = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCode"/> and sets the default values.
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirements>("requirements", Requirements);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

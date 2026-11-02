@@ -42,8 +42,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueData = default!;
 #endif
         /// <summary>The date (unix timestamp) when the PIX expires.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>The URL to the hosted pix instructions page, which allows customers to view the pix QR code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "hosted_instructions_url", n => { HostedInstructionsUrl = n.GetStringValue(); } },
                 { "image_url_png", n => { ImageUrlPng = n.GetStringValue(); } },
                 { "image_url_svg", n => { ImageUrlSvg = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("data", Data);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("hosted_instructions_url", HostedInstructionsUrl);
             writer.WriteStringValue("image_url_png", ImageUrlPng);
             writer.WriteStringValue("image_url_svg", ImageUrlSvg);

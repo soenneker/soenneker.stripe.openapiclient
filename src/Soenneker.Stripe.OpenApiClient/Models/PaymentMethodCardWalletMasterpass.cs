@@ -32,12 +32,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Owner&apos;s verified billing address. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress? BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress? _explicitNullValueBillingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueBillingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress _explicitNullValueBillingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; AdditionalData?.Remove("billing_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address"); else _explicitNullProperties?.Remove("billing_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueBillingAddress = default!;
 #endif
         /// <summary>Owner&apos;s verified email. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,12 +62,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Owner&apos;s verified shipping address. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress? _explicitNullValueShippingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress _explicitNullValueShippingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpass"/> and sets the default values.
@@ -94,10 +94,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -107,10 +107,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassBillingAddress>("billing_address", BillingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("billing_address", BillingAddress);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("shipping_address", ShippingAddress);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

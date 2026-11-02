@@ -37,8 +37,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.</summary>
-        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
-        private int? _explicitNullValueProrationDate = default!;
+        public long? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private long? _explicitNullValueProrationDate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "clear_usage", n => { ClearUsage = n.GetBoolValue(); } },
                 { "payment_behavior", n => { PaymentBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior>(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior>(); } },
-                { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
+                { "proration_date", n => { ProrationDate = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("clear_usage", ClearUsage);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionItemsItemXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("proration_date", ProrationDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

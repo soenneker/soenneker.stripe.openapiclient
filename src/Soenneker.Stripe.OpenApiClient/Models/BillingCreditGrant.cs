@@ -80,8 +80,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory? _explicitNullValueCategory = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>ID of the customer receiving the billing credits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,11 +103,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>The time when the billing credits become effective-when they&apos;re eligible for use.</summary>
-        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
-        private int? _explicitNullValueEffectiveAt = default!;
+        public long? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; AdditionalData?.Remove("effective_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private long? _explicitNullValueEffectiveAt = default!;
         /// <summary>The time when the billing credits expire. If not present, the billing credits don&apos;t expire.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,11 +158,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock _explicitNullValueTestClock = default!;
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>The time when this credit grant was voided. If not present, the credit grant hasn&apos;t been voided.</summary>
-        public int? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
-        private int? _explicitNullValueVoidedAt = default!;
+        public long? VoidedAt { get => _explicitNullValueVoidedAt; set { _explicitNullValueVoidedAt = value; AdditionalData?.Remove("voided_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voided_at"); else _explicitNullProperties?.Remove("voided_at"); } }
+        private long? _explicitNullValueVoidedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant"/> and sets the default values.
         /// </summary>
@@ -191,11 +191,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount.CreateFromDiscriminatorValue); } },
                 { "applicability_config", n => { ApplicabilityConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig.CreateFromDiscriminatorValue); } },
                 { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "effective_at", n => { EffectiveAt = n.GetLongValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -203,8 +203,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock.CreateFromDiscriminatorValue); } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
-                { "voided_at", n => { VoidedAt = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
+                { "voided_at", n => { VoidedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -217,11 +217,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig>("applicability_config", ApplicabilityConfig);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory>("category", Category);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteIntValue("effective_at", EffectiveAt);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("effective_at", EffectiveAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty>("metadata", Metadata);
@@ -229,8 +229,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantObject>("object", Object);
             writer.WriteIntValue("priority", Priority);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock>("test_clock", TestClock);
-            writer.WriteIntValue("updated", Updated);
-            writer.WriteIntValue("voided_at", VoidedAt);
+            writer.WriteLongValue("updated", Updated);
+            writer.WriteLongValue("voided_at", VoidedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

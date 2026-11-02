@@ -34,12 +34,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Billing address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress? _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueAddress = default!;
 #endif
         /// <summary>Email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress>(global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetailsAddress>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);

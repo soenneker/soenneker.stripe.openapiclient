@@ -30,8 +30,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the account number is expected to expire, if applicable.</summary>
-        public int? ExpectedExpiryDate { get => _explicitNullValueExpectedExpiryDate; set { _explicitNullValueExpectedExpiryDate = value; AdditionalData?.Remove("expected_expiry_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_expiry_date"); else _explicitNullProperties?.Remove("expected_expiry_date"); } }
-        private int? _explicitNullValueExpectedExpiryDate = default!;
+        public long? ExpectedExpiryDate { get => _explicitNullValueExpectedExpiryDate; set { _explicitNullValueExpectedExpiryDate = value; AdditionalData?.Remove("expected_expiry_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_expiry_date"); else _explicitNullProperties?.Remove("expected_expiry_date"); } }
+        private long? _explicitNullValueExpectedExpiryDate = default!;
         /// <summary>The type of account number associated with the account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get => _explicitNullValueIdentifierType; set { _explicitNullValueIdentifierType = value; AdditionalData?.Remove("identifier_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifier_type"); else _explicitNullProperties?.Remove("identifier_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? _explicitNullValueIdentifierType = default!;
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expected_expiry_date", n => { ExpectedExpiryDate = n.GetIntValue(); } },
+                { "expected_expiry_date", n => { ExpectedExpiryDate = n.GetLongValue(); } },
                 { "identifier_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIdentifierType = default; _explicitNullProperties?.Remove("identifier_type"); AdditionalData["identifier_type"] = unknown; } else { IdentifierType = parsed; AdditionalData.Remove("identifier_type"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.AchItem>()?.AsList(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("expected_expiry_date", ExpectedExpiryDate);
+            writer.WriteLongValue("expected_expiry_date", ExpectedExpiryDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>("identifier_type", IdentifierType);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>("status", Status);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.AchItem>("supported_networks", SupportedNetworks);

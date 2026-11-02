@@ -26,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The end property</summary>
-        public int? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
-        private int? _explicitNullValueEnd = default!;
+        public long? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        private long? _explicitNullValueEnd = default!;
         /// <summary>The start property</summary>
-        public int? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
-        private int? _explicitNullValueStart = default!;
+        public long? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        private long? _explicitNullValueStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceUpdateLinesXWwwFormUrlencodedRequestLinesItemPeriod"/> and sets the default values.
         /// </summary>
@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "end", n => { End = n.GetIntValue(); } },
-                { "start", n => { Start = n.GetIntValue(); } },
+                { "end", n => { End = n.GetLongValue(); } },
+                { "start", n => { Start = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("end", End);
-            writer.WriteIntValue("start", Start);
+            writer.WriteLongValue("end", End);
+            writer.WriteLongValue("start", Start);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

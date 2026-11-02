@@ -26,11 +26,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the payment was canceled.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>The time that the payment succeeded.</summary>
-        public int? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; AdditionalData?.Remove("paid_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
-        private int? _explicitNullValuePaidAt = default!;
+        public long? PaidAt { get => _explicitNullValuePaidAt; set { _explicitNullValuePaidAt = value; AdditionalData?.Remove("paid_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_at"); else _explicitNullProperties?.Remove("paid_at"); } }
+        private long? _explicitNullValuePaidAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "paid_at", n => { PaidAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
+                { "paid_at", n => { PaidAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteIntValue("paid_at", PaidAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("paid_at", PaidAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -57,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The ID of the customer for this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,12 +82,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://docs.stripe.com/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow? Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; AdditionalData?.Remove("flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow? _explicitNullValueFlow = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow? Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; AdditionalData?.Remove("flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow? _explicitNullValueFlow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; AdditionalData?.Remove("flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow _explicitNullValueFlow = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; AdditionalData?.Remove("flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow _explicitNullValueFlow = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,10 +164,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow.CreateFromDiscriminatorValue); } },
+                { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
@@ -185,10 +185,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration>("configuration", Configuration);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow>("flow", Flow);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow>("flow", Flow);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionLocale>("locale", Locale);

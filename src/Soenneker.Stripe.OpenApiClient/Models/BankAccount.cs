@@ -166,12 +166,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the [upcoming new requirements for the bank account](https://docs.stripe.com/connect/custom-accounts/future-requirements), including what information needs to be collected, and by when.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements? _explicitNullValueFutureRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? _explicitNullValueFutureRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements _explicitNullValueFutureRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements _explicitNullValueFutureRequirements = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,12 +209,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the requirements for the bank account, including what information needs to be collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements? _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? _explicitNullValueRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements _explicitNullValueRequirements = default!;
 #endif
         /// <summary>The routing transit number for the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -272,12 +272,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer.CreateFromDiscriminatorValue); } },
                 { "default_for_currency", n => { DefaultForCurrency = n.GetBoolValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
-                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements.CreateFromDiscriminatorValue); } },
+                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements.CreateFromDiscriminatorValue); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
@@ -300,12 +300,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>("customer", Customer);
             writer.WriteBoolValue("default_for_currency", DefaultForCurrency);
             writer.WriteStringValue("fingerprint", Fingerprint);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>("future_requirements", FutureRequirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>("future_requirements", FutureRequirements);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>("requirements", Requirements);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteStringValue("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

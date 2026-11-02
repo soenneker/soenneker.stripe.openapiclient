@@ -50,17 +50,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The estimated range for how long shipping will take, meant to be displayable to the customer. This will appear on CheckoutSessions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed? DeliveryEstimate { get => _explicitNullValueDeliveryEstimate; set { _explicitNullValueDeliveryEstimate = value; AdditionalData?.Remove("delivery_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_estimate"); else _explicitNullProperties?.Remove("delivery_estimate"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed? _explicitNullValueDeliveryEstimate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate? DeliveryEstimate { get => _explicitNullValueDeliveryEstimate; set { _explicitNullValueDeliveryEstimate = value; AdditionalData?.Remove("delivery_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_estimate"); else _explicitNullProperties?.Remove("delivery_estimate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate? _explicitNullValueDeliveryEstimate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed DeliveryEstimate { get => _explicitNullValueDeliveryEstimate; set { _explicitNullValueDeliveryEstimate = value; AdditionalData?.Remove("delivery_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_estimate"); else _explicitNullProperties?.Remove("delivery_estimate"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed _explicitNullValueDeliveryEstimate = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate DeliveryEstimate { get => _explicitNullValueDeliveryEstimate; set { _explicitNullValueDeliveryEstimate = value; AdditionalData?.Remove("delivery_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_estimate"); else _explicitNullProperties?.Remove("delivery_estimate"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate _explicitNullValueDeliveryEstimate = default!;
 #endif
         /// <summary>The name of the shipping rate, meant to be displayable to the customer. This will appear on CheckoutSessions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,8 +150,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "delivery_estimate", n => { DeliveryEstimate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed>(global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "delivery_estimate", n => { DeliveryEstimate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate>(global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "fixed_amount", n => { FixedAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount>(global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -171,8 +171,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateComposed>("delivery_estimate", DeliveryEstimate);
+            writer.WriteLongValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimate>("delivery_estimate", DeliveryEstimate);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount>("fixed_amount", FixedAmount);
             writer.WriteStringValue("id", Id);

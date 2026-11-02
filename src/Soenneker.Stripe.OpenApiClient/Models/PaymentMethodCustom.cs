@@ -40,12 +40,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the Dashboard-only CustomPaymentMethodType logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo? _explicitNullValueLogo = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo? _explicitNullValueLogo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo _explicitNullValueLogo = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; AdditionalData?.Remove("logo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo _explicitNullValueLogo = default!;
 #endif
         /// <summary>ID of the Dashboard-only CustomPaymentMethodType. Not expandable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo.CreateFromDiscriminatorValue); } },
+                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo>(global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo>("logo", Logo);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo>("logo", Logo);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

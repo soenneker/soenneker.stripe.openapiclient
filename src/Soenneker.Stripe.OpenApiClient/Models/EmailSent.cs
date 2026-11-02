@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the email was sent.</summary>
-        public int? EmailSentAt { get => _explicitNullValueEmailSentAt; set { _explicitNullValueEmailSentAt = value; AdditionalData?.Remove("email_sent_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_at"); else _explicitNullProperties?.Remove("email_sent_at"); } }
-        private int? _explicitNullValueEmailSentAt = default!;
+        public long? EmailSentAt { get => _explicitNullValueEmailSentAt; set { _explicitNullValueEmailSentAt = value; AdditionalData?.Remove("email_sent_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_sent_at"); else _explicitNullProperties?.Remove("email_sent_at"); } }
+        private long? _explicitNullValueEmailSentAt = default!;
         /// <summary>The recipient&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email_sent_at", n => { EmailSentAt = n.GetIntValue(); } },
+                { "email_sent_at", n => { EmailSentAt = n.GetLongValue(); } },
                 { "email_sent_to", n => { EmailSentTo = n.GetStringValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("email_sent_at", EmailSentAt);
+            writer.WriteLongValue("email_sent_at", EmailSentAt);
             writer.WriteStringValue("email_sent_to", EmailSentTo);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

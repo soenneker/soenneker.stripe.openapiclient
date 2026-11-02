@@ -102,8 +102,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueRawAddress = default!;
 #endif
         /// <summary>The timestamp of the refresh that updated this owner.</summary>
-        public int? RefreshedAt { get => _explicitNullValueRefreshedAt; set { _explicitNullValueRefreshedAt = value; AdditionalData?.Remove("refreshed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refreshed_at"); else _explicitNullProperties?.Remove("refreshed_at"); } }
-        private int? _explicitNullValueRefreshedAt = default!;
+        public long? RefreshedAt { get => _explicitNullValueRefreshedAt; set { _explicitNullValueRefreshedAt = value; AdditionalData?.Remove("refreshed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refreshed_at"); else _explicitNullProperties?.Remove("refreshed_at"); } }
+        private long? _explicitNullValueRefreshedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwner"/> and sets the default values.
         /// </summary>
@@ -136,7 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ownership", n => { Ownership = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "raw_address", n => { RawAddress = n.GetStringValue(); } },
-                { "refreshed_at", n => { RefreshedAt = n.GetIntValue(); } },
+                { "refreshed_at", n => { RefreshedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -153,7 +153,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("ownership", Ownership);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("raw_address", RawAddress);
-            writer.WriteIntValue("refreshed_at", RefreshedAt);
+            writer.WriteLongValue("refreshed_at", RefreshedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

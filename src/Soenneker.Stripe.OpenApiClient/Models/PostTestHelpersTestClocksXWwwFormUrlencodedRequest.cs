@@ -48,8 +48,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The initial frozen time for this test clock.</summary>
-        public int? FrozenTime { get => _explicitNullValueFrozenTime; set { _explicitNullValueFrozenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frozen_time"); else _explicitNullProperties?.Remove("frozen_time"); } }
-        private int? _explicitNullValueFrozenTime = default!;
+        public long? FrozenTime { get => _explicitNullValueFrozenTime; set { _explicitNullValueFrozenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frozen_time"); else _explicitNullProperties?.Remove("frozen_time"); } }
+        private long? _explicitNullValueFrozenTime = default!;
         /// <summary>The name for this test clock.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "frozen_time", n => { FrozenTime = n.GetIntValue(); } },
+                { "frozen_time", n => { FrozenTime = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -93,7 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("customer", Customer);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("frozen_time", FrozenTime);
+            writer.WriteLongValue("frozen_time", FrozenTime);
             writer.WriteStringValue("name", Name);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

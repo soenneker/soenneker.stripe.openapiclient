@@ -24,8 +24,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time the meter was deactivated, if any. Measured in seconds since Unix epoch.</summary>
-        public int? DeactivatedAt { get => _explicitNullValueDeactivatedAt; set { _explicitNullValueDeactivatedAt = value; AdditionalData?.Remove("deactivated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deactivated_at"); else _explicitNullProperties?.Remove("deactivated_at"); } }
-        private int? _explicitNullValueDeactivatedAt = default!;
+        public long? DeactivatedAt { get => _explicitNullValueDeactivatedAt; set { _explicitNullValueDeactivatedAt = value; AdditionalData?.Remove("deactivated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deactivated_at"); else _explicitNullProperties?.Remove("deactivated_at"); } }
+        private long? _explicitNullValueDeactivatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "deactivated_at", n => { DeactivatedAt = n.GetIntValue(); } },
+                { "deactivated_at", n => { DeactivatedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("deactivated_at", DeactivatedAt);
+            writer.WriteLongValue("deactivated_at", DeactivatedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

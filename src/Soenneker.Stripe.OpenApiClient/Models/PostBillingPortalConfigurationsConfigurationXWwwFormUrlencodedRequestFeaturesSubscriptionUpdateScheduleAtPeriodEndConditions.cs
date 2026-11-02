@@ -47,7 +47,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.String = stringValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && global::System.Linq.Enumerable.All(((global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)).GetValue(), item => ((item is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (item is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("type") && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal2 && "decreasing_item_amount".Equals(literal2.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal3 && "shortening_interval".Equals(literal3.GetValue(), global::System.StringComparison.Ordinal))))))))) && parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item> postBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1ItemValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && global::System.Linq.Enumerable.All(((global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)).GetValue(), item => (((global::System.Func<bool?[]>)(() => { int remaining = 10000;
+
+bool? MatchSchema0(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("type")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("type") ? (bool?)true : MatchSchema1(fields["type"], depth + 1)); if (result == false) return false; }
+}
+return result;
+}
+bool? MatchSchema1(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+bool? enumMatch = false;
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "decreasing_item_amount".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ enumMatch |= ((node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "shortening_interval".Equals(text.GetValue(), global::System.StringComparison.Ordinal))); }
+{ result &= (enumMatch); if (result == false) return false; }
+return result;
+}
+var matches = new bool?[1];
+remaining = 10000; matches[0] = MatchSchema0(item, 0);
+return matches; }))()[0]) == true) && parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item> postBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1ItemValue)
             {
                 result.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1Item = postBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1ItemValue;
             }

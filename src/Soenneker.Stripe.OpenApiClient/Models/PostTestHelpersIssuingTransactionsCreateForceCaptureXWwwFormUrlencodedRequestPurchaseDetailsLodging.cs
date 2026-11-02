@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The check_in_at property</summary>
-        public int? CheckInAt { get => _explicitNullValueCheckInAt; set { _explicitNullValueCheckInAt = value; AdditionalData?.Remove("check_in_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_in_at"); else _explicitNullProperties?.Remove("check_in_at"); } }
-        private int? _explicitNullValueCheckInAt = default!;
+        public long? CheckInAt { get => _explicitNullValueCheckInAt; set { _explicitNullValueCheckInAt = value; AdditionalData?.Remove("check_in_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("check_in_at"); else _explicitNullProperties?.Remove("check_in_at"); } }
+        private long? _explicitNullValueCheckInAt = default!;
         /// <summary>The nights property</summary>
         public int? Nights { get => _explicitNullValueNights; set { _explicitNullValueNights = value; AdditionalData?.Remove("nights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nights"); else _explicitNullProperties?.Remove("nights"); } }
         private int? _explicitNullValueNights = default!;
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "check_in_at", n => { CheckInAt = n.GetIntValue(); } },
+                { "check_in_at", n => { CheckInAt = n.GetLongValue(); } },
                 { "nights", n => { Nights = n.GetIntValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("check_in_at", CheckInAt);
+            writer.WriteLongValue("check_in_at", CheckInAt);
             writer.WriteIntValue("nights", Nights);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

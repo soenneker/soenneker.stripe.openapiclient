@@ -24,8 +24,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp describing when the DebitReversal changed status to `completed`.</summary>
-        public int? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
-        private int? _explicitNullValueCompletedAt = default!;
+        public long? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
+        private long? _explicitNullValueCompletedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "completed_at", n => { CompletedAt = n.GetIntValue(); } },
+                { "completed_at", n => { CompletedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("completed_at", CompletedAt);
+            writer.WriteLongValue("completed_at", CompletedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -53,11 +53,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Time at which this ConfirmationToken expires and can no longer be used to confirm a PaymentIntent or SetupIntent.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,12 +74,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Data used for generating a Mandate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData? MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; AdditionalData?.Remove("mandate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData? _explicitNullValueMandateData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData? MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; AdditionalData?.Remove("mandate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData? _explicitNullValueMandateData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; AdditionalData?.Remove("mandate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData _explicitNullValueMandateData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData MandateData { get => _explicitNullValueMandateData; set { _explicitNullValueMandateData = value; AdditionalData?.Remove("mandate_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mandate_data"); else _explicitNullProperties?.Remove("mandate_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData _explicitNullValueMandateData = default!;
 #endif
         /// <summary>Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,22 +107,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment-method-specific configuration for this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>Payment details collected by the Payment Element, used to create a PaymentMethod when a PaymentIntent or SetupIntent is confirmed with this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview? PaymentMethodPreview { get => _explicitNullValuePaymentMethodPreview; set { _explicitNullValuePaymentMethodPreview = value; AdditionalData?.Remove("payment_method_preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_preview"); else _explicitNullProperties?.Remove("payment_method_preview"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview? _explicitNullValuePaymentMethodPreview = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview? PaymentMethodPreview { get => _explicitNullValuePaymentMethodPreview; set { _explicitNullValuePaymentMethodPreview = value; AdditionalData?.Remove("payment_method_preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_preview"); else _explicitNullProperties?.Remove("payment_method_preview"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview? _explicitNullValuePaymentMethodPreview = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview PaymentMethodPreview { get => _explicitNullValuePaymentMethodPreview; set { _explicitNullValuePaymentMethodPreview = value; AdditionalData?.Remove("payment_method_preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_preview"); else _explicitNullProperties?.Remove("payment_method_preview"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview _explicitNullValuePaymentMethodPreview = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview PaymentMethodPreview { get => _explicitNullValuePaymentMethodPreview; set { _explicitNullValuePaymentMethodPreview = value; AdditionalData?.Remove("payment_method_preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_preview"); else _explicitNullProperties?.Remove("payment_method_preview"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview _explicitNullValuePaymentMethodPreview = default!;
 #endif
         /// <summary>Return URL used to confirm the Intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,12 +150,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Shipping information collected on this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping? _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>Indicates whether the Stripe SDK is used to handle confirmation flow. Defaults to `true` on ConfirmationToken.</summary>
         public bool? UseStripeSdk { get => _explicitNullValueUseStripeSdk; set { _explicitNullValueUseStripeSdk = value; AdditionalData?.Remove("use_stripe_sdk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_stripe_sdk"); else _explicitNullProperties?.Remove("use_stripe_sdk"); } }
@@ -185,20 +185,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData.CreateFromDiscriminatorValue); } },
+                { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_preview", n => { PaymentMethodPreview = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "payment_method_preview", n => { PaymentMethodPreview = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "setup_future_usage", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenSetupFutureUsage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetupFutureUsage = default; _explicitNullProperties?.Remove("setup_future_usage"); AdditionalData["setup_future_usage"] = unknown; } else { SetupFutureUsage = parsed; AdditionalData.Remove("setup_future_usage"); } } },
                 { "setup_intent", n => { SetupIntent = n.GetStringValue(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping.CreateFromDiscriminatorValue); } },
                 { "use_stripe_sdk", n => { UseStripeSdk = n.GetBoolValue(); } },
             };
         }
@@ -209,20 +209,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("created", Created);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>("mandate_data", MandateData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData>("mandate_data", MandateData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>("object", Object);
             writer.WriteStringValue("payment_intent", PaymentIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview>("payment_method_preview", PaymentMethodPreview);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview>("payment_method_preview", PaymentMethodPreview);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("setup_intent", SetupIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping>("shipping", Shipping);
             writer.WriteBoolValue("use_stripe_sdk", UseStripeSdk);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

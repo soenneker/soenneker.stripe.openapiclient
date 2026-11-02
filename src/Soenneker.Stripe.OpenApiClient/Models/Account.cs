@@ -71,12 +71,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Business information about the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed? BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; AdditionalData?.Remove("business_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed? _explicitNullValueBusinessProfile = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile? BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; AdditionalData?.Remove("business_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile? _explicitNullValueBusinessProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; AdditionalData?.Remove("business_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed _explicitNullValueBusinessProfile = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile BusinessProfile { get => _explicitNullValueBusinessProfile; set { _explicitNullValueBusinessProfile = value; AdditionalData?.Remove("business_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_profile"); else _explicitNullProperties?.Remove("business_profile"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile _explicitNullValueBusinessProfile = default!;
 #endif
         /// <summary>The business type.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType? BusinessType { get => _explicitNullValueBusinessType; set { _explicitNullValueBusinessType = value; AdditionalData?.Remove("business_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_type"); else _explicitNullProperties?.Remove("business_type"); } }
@@ -125,8 +125,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>Time at which the account was connected. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter ISO currency code representing the default currency for the account. This must be a currency that [Stripe supports in the account&apos;s country](https://stripe.com/docs/payouts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -173,12 +173,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The groups associated with the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; AdditionalData?.Remove("groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups? _explicitNullValueGroups = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; AdditionalData?.Remove("groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership? _explicitNullValueGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; AdditionalData?.Remove("groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups _explicitNullValueGroups = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; AdditionalData?.Remove("groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership _explicitNullValueGroups = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -229,12 +229,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Options for customizing how the account functions within Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed? _explicitNullValueSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed _explicitNullValueSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings _explicitNullValueSettings = default!;
 #endif
         /// <summary>The tos_acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -274,27 +274,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed.CreateFromDiscriminatorValue); } },
+                { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile.CreateFromDiscriminatorValue); } },
                 { "business_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBusinessType = default; _explicitNullProperties?.Remove("business_type"); AdditionalData["business_type"] = unknown; } else { BusinessType = parsed; AdditionalData.Remove("business_type"); } } },
                 { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>(global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities.CreateFromDiscriminatorValue); } },
                 { "charges_enabled", n => { ChargesEnabled = n.GetBoolValue(); } },
                 { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany.CreateFromDiscriminatorValue); } },
                 { "controller", n => { Controller = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController>(global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "default_currency", n => { DefaultCurrency = n.GetStringValue(); } },
                 { "details_submitted", n => { DetailsSubmitted = n.GetBoolValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "external_accounts", n => { ExternalAccounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>(global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts.CreateFromDiscriminatorValue); } },
                 { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements.CreateFromDiscriminatorValue); } },
-                { "groups", n => { Groups = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>(global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups.CreateFromDiscriminatorValue); } },
+                { "groups", n => { Groups = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership>(global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>(global::Soenneker.Stripe.OpenApiClient.Models.Person.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "payouts_enabled", n => { PayoutsEnabled = n.GetBoolValue(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements.CreateFromDiscriminatorValue); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings.CreateFromDiscriminatorValue); } },
                 { "tos_acceptance", n => { TosAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -306,27 +306,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>("business_profile", BusinessProfile);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile>("business_profile", BusinessProfile);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>("business_type", BusinessType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>("capabilities", Capabilities);
             writer.WriteBoolValue("charges_enabled", ChargesEnabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>("company", Company);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController>("controller", Controller);
             writer.WriteStringValue("country", Country);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("default_currency", DefaultCurrency);
             writer.WriteBoolValue("details_submitted", DetailsSubmitted);
             writer.WriteStringValue("email", Email);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>("external_accounts", ExternalAccounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>("future_requirements", FutureRequirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>("groups", Groups);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership>("groups", Groups);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>("individual", Individual);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>("object", Object);
             writer.WriteBoolValue("payouts_enabled", PayoutsEnabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>("requirements", Requirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>("tos_acceptance", TosAcceptance);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

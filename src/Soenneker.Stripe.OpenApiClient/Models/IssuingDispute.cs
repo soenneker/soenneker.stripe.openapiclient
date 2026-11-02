@@ -62,8 +62,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> _explicitNullValueBalanceTransactions = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The currency the `transaction` was made in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,12 +129,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this dispute if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed? _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury? _explicitNullValueTreasury = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury _explicitNullValueTreasury = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute"/> and sets the default values.
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "evidence", n => { Evidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction.CreateFromDiscriminatorValue); } },
-                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed.CreateFromDiscriminatorValue); } },
+                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -185,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>("balance_transactions", BalanceTransactions);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence>("evidence", Evidence);
             writer.WriteStringValue("id", Id);
@@ -195,7 +195,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction>("transaction", Transaction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed>("treasury", Treasury);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury>("treasury", Treasury);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

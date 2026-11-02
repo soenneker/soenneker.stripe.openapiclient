@@ -163,8 +163,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDuration _explicitNullValueDuration = default!;
 #endif
         /// <summary>The end_date property</summary>
-        public int? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
-        private int? _explicitNullValueEndDate = default!;
+        public long? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        private long? _explicitNullValueEndDate = default!;
         /// <summary>The invoice_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -222,8 +222,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; AdditionalData?.Remove("trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
         private bool? _explicitNullValueTrial = default!;
         /// <summary>The trial_end property</summary>
-        public int? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
-        private int? _explicitNullValueTrialEnd = default!;
+        public long? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
+        private long? _explicitNullValueTrialEnd = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItem"/> and sets the default values.
         /// </summary>
@@ -261,7 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDescription>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDescription.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDiscounts.CreateFromDiscriminatorValue); } },
                 { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDuration>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDuration.CreateFromDiscriminatorValue); } },
-                { "end_date", n => { EndDate = n.GetIntValue(); } },
+                { "end_date", n => { EndDate = n.GetLongValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemInvoiceSettings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemItemsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemMetadata.CreateFromDiscriminatorValue); } },
@@ -269,7 +269,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "proration_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemProrationBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProrationBehavior = default; _explicitNullProperties?.Remove("proration_behavior"); AdditionalData["proration_behavior"] = unknown; } else { ProrationBehavior = parsed; AdditionalData.Remove("proration_behavior"); } } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemTransferData.CreateFromDiscriminatorValue); } },
                 { "trial", n => { Trial = n.GetBoolValue(); } },
-                { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
+                { "trial_end", n => { TrialEnd = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -291,7 +291,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDescription>("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDiscounts>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemDuration>("duration", Duration);
-            writer.WriteIntValue("end_date", EndDate);
+            writer.WriteLongValue("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemInvoiceSettings>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemItemsItem>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemMetadata>("metadata", Metadata);
@@ -299,7 +299,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesXWwwFormUrlencodedRequestPhasesItemTransferData>("transfer_data", TransferData);
             writer.WriteBoolValue("trial", Trial);
-            writer.WriteIntValue("trial_end", TrialEnd);
+            writer.WriteLongValue("trial_end", TrialEnd);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

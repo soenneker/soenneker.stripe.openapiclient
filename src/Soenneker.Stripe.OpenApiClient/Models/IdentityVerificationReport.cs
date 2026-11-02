@@ -61,8 +61,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueClientReferenceId = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Result from a document check</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,7 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "client_reference_id", n => { ClientReferenceId = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "document", n => { Document = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReport>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReport.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -211,7 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("client_reference_id", ClientReferenceId);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDocumentReport>("document", Document);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport>("email", Email);
             writer.WriteStringValue("id", Id);

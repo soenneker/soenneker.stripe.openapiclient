@@ -62,12 +62,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Default options for invoice PDF rendering for this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions? RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions? _explicitNullValueRenderingOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions? RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions? _explicitNullValueRenderingOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions _explicitNullValueRenderingOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions _explicitNullValueRenderingOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting"/> and sets the default values.
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions.CreateFromDiscriminatorValue); } },
+                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod>("default_payment_method", DefaultPaymentMethod);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions>("rendering_options", RenderingOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions>("rendering_options", RenderingOptions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

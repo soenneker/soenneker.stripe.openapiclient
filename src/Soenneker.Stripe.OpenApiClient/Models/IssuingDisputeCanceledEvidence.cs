@@ -52,8 +52,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>Date when order was canceled.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Whether the cardholder was provided with a cancellation policy.</summary>
         public bool? CancellationPolicyProvided { get => _explicitNullValueCancellationPolicyProvided; set { _explicitNullValueCancellationPolicyProvided = value; AdditionalData?.Remove("cancellation_policy_provided"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_policy_provided"); else _explicitNullProperties?.Remove("cancellation_policy_provided"); } }
         private bool? _explicitNullValueCancellationPolicyProvided = default!;
@@ -68,8 +68,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCancellationReason = default!;
 #endif
         /// <summary>Date when the cardholder expected to receive the product.</summary>
-        public int? ExpectedAt { get => _explicitNullValueExpectedAt; set { _explicitNullValueExpectedAt = value; AdditionalData?.Remove("expected_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_at"); else _explicitNullProperties?.Remove("expected_at"); } }
-        private int? _explicitNullValueExpectedAt = default!;
+        public long? ExpectedAt { get => _explicitNullValueExpectedAt; set { _explicitNullValueExpectedAt = value; AdditionalData?.Remove("expected_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_at"); else _explicitNullProperties?.Remove("expected_at"); } }
+        private long? _explicitNullValueExpectedAt = default!;
         /// <summary>Explanation of why the cardholder is disputing this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,8 +94,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("product_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_type"); else _explicitNullProperties?.Remove("product_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType? _explicitNullValueProductType = default!;
         /// <summary>Date when the product was returned or attempted to be returned.</summary>
-        public int? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; AdditionalData?.Remove("returned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
-        private int? _explicitNullValueReturnedAt = default!;
+        public long? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; AdditionalData?.Remove("returned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
+        private long? _explicitNullValueReturnedAt = default!;
         /// <summary>Result of cardholder&apos;s attempt to return the product.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus? ReturnStatus { get => _explicitNullValueReturnStatus; set { _explicitNullValueReturnStatus = value; AdditionalData?.Remove("return_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_status"); else _explicitNullProperties?.Remove("return_status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus? _explicitNullValueReturnStatus = default!;
@@ -125,15 +125,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_documentation", n => { AdditionalDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation.CreateFromDiscriminatorValue); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
                 { "cancellation_policy_provided", n => { CancellationPolicyProvided = n.GetBoolValue(); } },
                 { "cancellation_reason", n => { CancellationReason = n.GetStringValue(); } },
-                { "expected_at", n => { ExpectedAt = n.GetIntValue(); } },
+                { "expected_at", n => { ExpectedAt = n.GetLongValue(); } },
                 { "explanation", n => { Explanation = n.GetStringValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
                 { "product_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProductType = default; _explicitNullProperties?.Remove("product_type"); AdditionalData["product_type"] = unknown; } else { ProductType = parsed; AdditionalData.Remove("product_type"); } } },
                 { "return_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReturnStatus = default; _explicitNullProperties?.Remove("return_status"); AdditionalData["return_status"] = unknown; } else { ReturnStatus = parsed; AdditionalData.Remove("return_status"); } } },
-                { "returned_at", n => { ReturnedAt = n.GetIntValue(); } },
+                { "returned_at", n => { ReturnedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -144,14 +144,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>("additional_documentation", AdditionalDocumentation);
-            writer.WriteIntValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
             writer.WriteBoolValue("cancellation_policy_provided", CancellationPolicyProvided);
             writer.WriteStringValue("cancellation_reason", CancellationReason);
-            writer.WriteIntValue("expected_at", ExpectedAt);
+            writer.WriteLongValue("expected_at", ExpectedAt);
             writer.WriteStringValue("explanation", Explanation);
             writer.WriteStringValue("product_description", ProductDescription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceProductType>("product_type", ProductType);
-            writer.WriteIntValue("returned_at", ReturnedAt);
+            writer.WriteLongValue("returned_at", ReturnedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceReturnStatus>("return_status", ReturnStatus);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

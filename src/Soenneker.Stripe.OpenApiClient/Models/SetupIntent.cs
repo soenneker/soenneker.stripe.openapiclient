@@ -106,12 +106,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings for dynamic payment methods compatible with this Setup Intent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods? AutomaticPaymentMethods { get => _explicitNullValueAutomaticPaymentMethods; set { _explicitNullValueAutomaticPaymentMethods = value; AdditionalData?.Remove("automatic_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_payment_methods"); else _explicitNullProperties?.Remove("automatic_payment_methods"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods? _explicitNullValueAutomaticPaymentMethods = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent? AutomaticPaymentMethods { get => _explicitNullValueAutomaticPaymentMethods; set { _explicitNullValueAutomaticPaymentMethods = value; AdditionalData?.Remove("automatic_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_payment_methods"); else _explicitNullProperties?.Remove("automatic_payment_methods"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent? _explicitNullValueAutomaticPaymentMethods = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods AutomaticPaymentMethods { get => _explicitNullValueAutomaticPaymentMethods; set { _explicitNullValueAutomaticPaymentMethods = value; AdditionalData?.Remove("automatic_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_payment_methods"); else _explicitNullProperties?.Remove("automatic_payment_methods"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods _explicitNullValueAutomaticPaymentMethods = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent AutomaticPaymentMethods { get => _explicitNullValueAutomaticPaymentMethods; set { _explicitNullValueAutomaticPaymentMethods = value; AdditionalData?.Remove("automatic_payment_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic_payment_methods"); else _explicitNullProperties?.Remove("automatic_payment_methods"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent _explicitNullValueAutomaticPaymentMethods = default!;
 #endif
         /// <summary>Reason for cancellation of this SetupIntent, one of `abandoned`, `requested_by_customer`, or `duplicate`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason? CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; AdditionalData?.Remove("cancellation_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
@@ -127,8 +127,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>ID of the Customer this SetupIntent belongs to, if one exists.If present, the SetupIntent&apos;s payment method will be attached to the Customer on successful setup. Payment methods attached to other Customers cannot be used with this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -192,12 +192,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The error encountered in the previous SetupIntent confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError? LastSetupError { get => _explicitNullValueLastSetupError; set { _explicitNullValueLastSetupError = value; AdditionalData?.Remove("last_setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_setup_error"); else _explicitNullProperties?.Remove("last_setup_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError? _explicitNullValueLastSetupError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? LastSetupError { get => _explicitNullValueLastSetupError; set { _explicitNullValueLastSetupError = value; AdditionalData?.Remove("last_setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_setup_error"); else _explicitNullProperties?.Remove("last_setup_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? _explicitNullValueLastSetupError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError LastSetupError { get => _explicitNullValueLastSetupError; set { _explicitNullValueLastSetupError = value; AdditionalData?.Remove("last_setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_setup_error"); else _explicitNullProperties?.Remove("last_setup_error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError _explicitNullValueLastSetupError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors LastSetupError { get => _explicitNullValueLastSetupError; set { _explicitNullValueLastSetupError = value; AdditionalData?.Remove("last_setup_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_setup_error"); else _explicitNullProperties?.Remove("last_setup_error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors _explicitNullValueLastSetupError = default!;
 #endif
         /// <summary>The most recent SetupAttempt for this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -215,12 +215,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The managed_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments? _explicitNullValueManagedPayments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments? ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments? _explicitNullValueManagedPayments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments _explicitNullValueManagedPayments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments ManagedPayments { get => _explicitNullValueManagedPayments; set { _explicitNullValueManagedPayments = value; AdditionalData?.Remove("managed_payments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed_payments"); else _explicitNullProperties?.Remove("managed_payments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments _explicitNullValueManagedPayments = default!;
 #endif
         /// <summary>ID of the multi use Mandate generated by the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -245,12 +245,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If present, this property tells you what actions you need to take in order for your customer to continue payment setup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed? NextAction { get => _explicitNullValueNextAction; set { _explicitNullValueNextAction = value; AdditionalData?.Remove("next_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_action"); else _explicitNullProperties?.Remove("next_action"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed? _explicitNullValueNextAction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction? NextAction { get => _explicitNullValueNextAction; set { _explicitNullValueNextAction = value; AdditionalData?.Remove("next_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_action"); else _explicitNullProperties?.Remove("next_action"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction? _explicitNullValueNextAction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed NextAction { get => _explicitNullValueNextAction; set { _explicitNullValueNextAction = value; AdditionalData?.Remove("next_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_action"); else _explicitNullProperties?.Remove("next_action"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed _explicitNullValueNextAction = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction NextAction { get => _explicitNullValueNextAction; set { _explicitNullValueNextAction = value; AdditionalData?.Remove("next_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_action"); else _explicitNullProperties?.Remove("next_action"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction _explicitNullValueNextAction = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
@@ -278,22 +278,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the [payment method configuration](https://docs.stripe.com/api/payment_method_configurations) used for this Setup Intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; AdditionalData?.Remove("payment_method_configuration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails? _explicitNullValuePaymentMethodConfigurationDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; AdditionalData?.Remove("payment_method_configuration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails? _explicitNullValuePaymentMethodConfigurationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; AdditionalData?.Remove("payment_method_configuration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails _explicitNullValuePaymentMethodConfigurationDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get => _explicitNullValuePaymentMethodConfigurationDetails; set { _explicitNullValuePaymentMethodConfigurationDetails = value; AdditionalData?.Remove("payment_method_configuration_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_configuration_details"); else _explicitNullProperties?.Remove("payment_method_configuration_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails _explicitNullValuePaymentMethodConfigurationDetails = default!;
 #endif
         /// <summary>Payment method-specific configuration for this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed? _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>The list of payment method types (e.g. card) that this SetupIntent is allowed to set up. A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -356,28 +356,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "allowed_payment_method_types", n => { AllowedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem>()?.AsList(); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication.CreateFromDiscriminatorValue); } },
                 { "attach_to_self", n => { AttachToSelf = n.GetBoolValue(); } },
-                { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods.CreateFromDiscriminatorValue); } },
+                { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent.CreateFromDiscriminatorValue); } },
                 { "cancellation_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancellationReason = default; _explicitNullProperties?.Remove("cancellation_reason"); AdditionalData["cancellation_reason"] = unknown; } else { CancellationReason = parsed; AdditionalData.Remove("cancellation_reason"); } } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem>()?.AsList(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_setup_error", n => { LastSetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError.CreateFromDiscriminatorValue); } },
+                { "last_setup_error", n => { LastSetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.CreateFromDiscriminatorValue); } },
                 { "latest_attempt", n => { LatestAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments.CreateFromDiscriminatorValue); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments.CreateFromDiscriminatorValue); } },
                 { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed.CreateFromDiscriminatorValue); } },
+                { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod.CreateFromDiscriminatorValue); } },
-                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed.CreateFromDiscriminatorValue); } },
+                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "single_use_mandate", n => { SingleUseMandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
@@ -394,28 +394,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem>("allowed_payment_method_types", AllowedPaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>("application", Application);
             writer.WriteBoolValue("attach_to_self", AttachToSelf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>("automatic_payment_methods", AutomaticPaymentMethods);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent>("automatic_payment_methods", AutomaticPaymentMethods);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteStringValue("client_secret", ClientSecret);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem>("flow_directions", FlowDirections);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError>("last_setup_error", LastSetupError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>("last_setup_error", LastSetupError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt>("latest_attempt", LatestAttempt);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments>("managed_payments", ManagedPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate>("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadataProperty>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed>("next_action", NextAction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction>("next_action", NextAction);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf>("on_behalf_of", OnBehalfOf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod>("payment_method", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate>("single_use_mandate", SingleUseMandate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentStatus>("status", Status);

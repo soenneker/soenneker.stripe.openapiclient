@@ -85,8 +85,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>The time when the billing credits become effective-when they&apos;re eligible for use. It defaults to the current timestamp if not specified.</summary>
-        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
-        private int? _explicitNullValueEffectiveAt = default!;
+        public long? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private long? _explicitNullValueEffectiveAt = default!;
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,8 +98,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The time when the billing credits expire. If not specified, the billing credits don&apos;t expire.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Set of key-value pairs that you can attach to an object. You can use this to store additional information about the object (for example, cost basis) in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,9 +146,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestCategory>(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
+                { "effective_at", n => { EffectiveAt = n.GetLongValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
@@ -166,9 +166,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestCategory>("category", Category);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteIntValue("effective_at", EffectiveAt);
+            writer.WriteLongValue("effective_at", EffectiveAt);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("priority", Priority);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

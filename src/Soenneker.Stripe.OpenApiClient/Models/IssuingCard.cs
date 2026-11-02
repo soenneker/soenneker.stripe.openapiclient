@@ -100,8 +100,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder _explicitNullValueCardholder = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Supported currencies are `usd` in the US, `eur` in the EU, and `gbp` in the UK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,22 +161,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stripe’s assessment of whether this card’s details have been compromised. If this property isn&apos;t null, cancel and reissue the card to prevent fraudulent activity risk.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning? LatestFraudWarning { get => _explicitNullValueLatestFraudWarning; set { _explicitNullValueLatestFraudWarning = value; AdditionalData?.Remove("latest_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_fraud_warning"); else _explicitNullProperties?.Remove("latest_fraud_warning"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning? _explicitNullValueLatestFraudWarning = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning? LatestFraudWarning { get => _explicitNullValueLatestFraudWarning; set { _explicitNullValueLatestFraudWarning = value; AdditionalData?.Remove("latest_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_fraud_warning"); else _explicitNullProperties?.Remove("latest_fraud_warning"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning? _explicitNullValueLatestFraudWarning = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning LatestFraudWarning { get => _explicitNullValueLatestFraudWarning; set { _explicitNullValueLatestFraudWarning = value; AdditionalData?.Remove("latest_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_fraud_warning"); else _explicitNullProperties?.Remove("latest_fraud_warning"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning _explicitNullValueLatestFraudWarning = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning LatestFraudWarning { get => _explicitNullValueLatestFraudWarning; set { _explicitNullValueLatestFraudWarning = value; AdditionalData?.Remove("latest_fraud_warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_fraud_warning"); else _explicitNullProperties?.Remove("latest_fraud_warning"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning _explicitNullValueLatestFraudWarning = default!;
 #endif
         /// <summary>Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed? LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; AdditionalData?.Remove("lifecycle_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed? _explicitNullValueLifecycleControls = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls? LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; AdditionalData?.Remove("lifecycle_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls? _explicitNullValueLifecycleControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; AdditionalData?.Remove("lifecycle_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed _explicitNullValueLifecycleControls = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls LifecycleControls { get => _explicitNullValueLifecycleControls; set { _explicitNullValueLifecycleControls = value; AdditionalData?.Remove("lifecycle_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_controls"); else _explicitNullProperties?.Remove("lifecycle_controls"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls _explicitNullValueLifecycleControls = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
@@ -250,12 +250,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Where and how the card will be shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed? _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The spending_controls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -276,12 +276,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information relating to digital wallets (like Apple Pay and Google Pay).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed? Wallets { get => _explicitNullValueWallets; set { _explicitNullValueWallets = value; AdditionalData?.Remove("wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallets"); else _explicitNullProperties?.Remove("wallets"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed? _explicitNullValueWallets = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets? Wallets { get => _explicitNullValueWallets; set { _explicitNullValueWallets = value; AdditionalData?.Remove("wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallets"); else _explicitNullProperties?.Remove("wallets"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets? _explicitNullValueWallets = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed Wallets { get => _explicitNullValueWallets; set { _explicitNullValueWallets = value; AdditionalData?.Remove("wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallets"); else _explicitNullProperties?.Remove("wallets"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed _explicitNullValueWallets = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets Wallets { get => _explicitNullValueWallets; set { _explicitNullValueWallets = value; AdditionalData?.Remove("wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallets"); else _explicitNullProperties?.Remove("wallets"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets _explicitNullValueWallets = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/> and sets the default values.
@@ -311,7 +311,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "brand", n => { Brand = n.GetStringValue(); } },
                 { "cancellation_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancellationReason = default; _explicitNullProperties?.Remove("cancellation_reason"); AdditionalData["cancellation_reason"] = unknown; } else { CancellationReason = parsed; AdditionalData.Remove("cancellation_reason"); } } },
                 { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "cvc", n => { Cvc = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
@@ -319,8 +319,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning.CreateFromDiscriminatorValue); } },
-                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed.CreateFromDiscriminatorValue); } },
+                { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning.CreateFromDiscriminatorValue); } },
+                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
@@ -330,11 +330,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "replacement_for", n => { ReplacementFor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor.CreateFromDiscriminatorValue); } },
                 { "replacement_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReplacementReason = default; _explicitNullProperties?.Remove("replacement_reason"); AdditionalData["replacement_reason"] = unknown; } else { ReplacementReason = parsed; AdditionalData.Remove("replacement_reason"); } } },
                 { "second_line", n => { SecondLine = n.GetStringValue(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping.CreateFromDiscriminatorValue); } },
                 { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
-                { "wallets", n => { Wallets = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed.CreateFromDiscriminatorValue); } },
+                { "wallets", n => { Wallets = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -347,7 +347,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("brand", Brand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder>("cardholder", Cardholder);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("cvc", Cvc);
             writer.WriteIntValue("exp_month", ExpMonth);
@@ -355,8 +355,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning>("latest_fraud_warning", LatestFraudWarning);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed>("lifecycle_controls", LifecycleControls);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning>("latest_fraud_warning", LatestFraudWarning);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls>("lifecycle_controls", LifecycleControls);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("number", Number);
@@ -366,11 +366,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor>("replacement_for", ReplacementFor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementReason>("replacement_reason", ReplacementReason);
             writer.WriteStringValue("second_line", SecondLine);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls>("spending_controls", SpendingControls);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed>("wallets", Wallets);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets>("wallets", Wallets);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

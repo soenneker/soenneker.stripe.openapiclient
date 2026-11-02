@@ -152,22 +152,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about card networks that can be used to process the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed? Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed? _explicitNullValueNetworks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks? Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks? _explicitNullValueNetworks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed _explicitNullValueNetworks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks _explicitNullValueNetworks = default!;
 #endif
         /// <summary>Details about payment methods collected offline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline? Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline? _explicitNullValueOffline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline? Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline? _explicitNullValueOffline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline _explicitNullValueOffline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline Offline { get => _explicitNullValueOffline; set { _explicitNullValueOffline = value; AdditionalData?.Remove("offline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline"); else _explicitNullProperties?.Remove("offline"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline _explicitNullValueOffline = default!;
 #endif
         /// <summary>The languages that the issuing bank recommends using for localizing any customer-facing text, as read from the card. Referenced from EMV tag 5F2D, data encoded on the card&apos;s chip.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -228,8 +228,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "funding", n => { Funding = n.GetStringValue(); } },
                 { "issuer", n => { Issuer = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed.CreateFromDiscriminatorValue); } },
-                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline.CreateFromDiscriminatorValue); } },
+                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks.CreateFromDiscriminatorValue); } },
+                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline.CreateFromDiscriminatorValue); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "read_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentReadMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReadMethod = default; _explicitNullProperties?.Remove("read_method"); AdditionalData["read_method"] = unknown; } else { ReadMethod = parsed; AdditionalData.Remove("read_method"); } } },
                 { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet.CreateFromDiscriminatorValue); } },
@@ -253,8 +253,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("funding", Funding);
             writer.WriteStringValue("issuer", Issuer);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworksComposed>("networks", Networks);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentOffline>("offline", Offline);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentNetworks>("networks", Networks);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>("offline", Offline);
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresentReadMethod>("read_method", ReadMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet>("wallet", Wallet);

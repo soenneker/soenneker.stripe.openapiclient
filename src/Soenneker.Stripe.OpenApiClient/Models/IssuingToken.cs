@@ -57,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard _explicitNullValueCard = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The hashed ID derived from the device ID from the card network associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,8 +106,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData _explicitNullValueNetworkData = default!;
 #endif
         /// <summary>Time at which the token was last updated by the card network. Measured in seconds since the Unix epoch.</summary>
-        public int? NetworkUpdatedAt { get => _explicitNullValueNetworkUpdatedAt; set { _explicitNullValueNetworkUpdatedAt = value; AdditionalData?.Remove("network_updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_updated_at"); else _explicitNullProperties?.Remove("network_updated_at"); } }
-        private int? _explicitNullValueNetworkUpdatedAt = default!;
+        public long? NetworkUpdatedAt { get => _explicitNullValueNetworkUpdatedAt; set { _explicitNullValueNetworkUpdatedAt = value; AdditionalData?.Remove("network_updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_updated_at"); else _explicitNullProperties?.Remove("network_updated_at"); } }
+        private long? _explicitNullValueNetworkUpdatedAt = default!;
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject? _explicitNullValueObject = default!;
@@ -143,14 +143,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "device_fingerprint", n => { DeviceFingerprint = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "network", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenNetwork>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNetwork = default; _explicitNullProperties?.Remove("network"); AdditionalData["network"] = unknown; } else { Network = parsed; AdditionalData.Remove("network"); } } },
                 { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData.CreateFromDiscriminatorValue); } },
-                { "network_updated_at", n => { NetworkUpdatedAt = n.GetIntValue(); } },
+                { "network_updated_at", n => { NetworkUpdatedAt = n.GetLongValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "wallet_provider", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenWalletProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWalletProvider = default; _explicitNullProperties?.Remove("wallet_provider"); AdditionalData["wallet_provider"] = unknown; } else { WalletProvider = parsed; AdditionalData.Remove("wallet_provider"); } } },
@@ -164,14 +164,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard>("card", Card);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("device_fingerprint", DeviceFingerprint);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenNetwork>("network", Network);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData>("network_data", NetworkData);
-            writer.WriteIntValue("network_updated_at", NetworkUpdatedAt);
+            writer.WriteLongValue("network_updated_at", NetworkUpdatedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenWalletProvider>("wallet_provider", WalletProvider);

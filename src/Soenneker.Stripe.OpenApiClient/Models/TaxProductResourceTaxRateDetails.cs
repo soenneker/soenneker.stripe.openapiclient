@@ -46,12 +46,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount of the tax rate when the `rate_type` is `flat_amount`. Tax rates with `rate_type` `percentage` can vary based on the transaction, resulting in this field being `null`. This field exposes the amount and currency of the flat tax rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount? _explicitNullValueFlatAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? _explicitNullValueFlatAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount _explicitNullValueFlatAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount _explicitNullValueFlatAmount = default!;
 #endif
         /// <summary>The tax rate percentage as a string. For example, 8.5% is represented as `&quot;8.5&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount.CreateFromDiscriminatorValue); } },
+                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount.CreateFromDiscriminatorValue); } },
                 { "percentage_decimal", n => { PercentageDecimal = n.GetStringValue(); } },
                 { "rate_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsRateType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRateType = default; _explicitNullProperties?.Remove("rate_type"); AdditionalData["rate_type"] = unknown; } else { RateType = parsed; AdditionalData.Remove("rate_type"); } } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount>("flat_amount", FlatAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>("flat_amount", FlatAmount);
             writer.WriteStringValue("percentage_decimal", PercentageDecimal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsRateType>("rate_type", RateType);
             writer.WriteStringValue("state", State);

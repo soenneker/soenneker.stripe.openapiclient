@@ -29,8 +29,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? ApprovalRequested { get => _explicitNullValueApprovalRequested; set { _explicitNullValueApprovalRequested = value; AdditionalData?.Remove("approval_requested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_requested"); else _explicitNullProperties?.Remove("approval_requested"); } }
         private bool? _explicitNullValueApprovalRequested = default!;
         /// <summary>If customer approval is required, they need to provide approval before this time.</summary>
-        public int? CompletesAt { get => _explicitNullValueCompletesAt; set { _explicitNullValueCompletesAt = value; AdditionalData?.Remove("completes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completes_at"); else _explicitNullProperties?.Remove("completes_at"); } }
-        private int? _explicitNullValueCompletesAt = default!;
+        public long? CompletesAt { get => _explicitNullValueCompletesAt; set { _explicitNullValueCompletesAt = value; AdditionalData?.Remove("completes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completes_at"); else _explicitNullProperties?.Remove("completes_at"); } }
+        private long? _explicitNullValueCompletesAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentProcessingCustomerNotification"/> and sets the default values.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "approval_requested", n => { ApprovalRequested = n.GetBoolValue(); } },
-                { "completes_at", n => { CompletesAt = n.GetIntValue(); } },
+                { "completes_at", n => { CompletesAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("approval_requested", ApprovalRequested);
-            writer.WriteIntValue("completes_at", CompletesAt);
+            writer.WriteLongValue("completes_at", CompletesAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

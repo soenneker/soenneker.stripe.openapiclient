@@ -140,8 +140,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputed _explicitNullValueComputed = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -203,8 +203,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>The date on which the quote will be canceled if in `open` or `draft` status. Measured in seconds since the Unix epoch.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>A footer that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -218,12 +218,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the quote that was cloned. See the [cloning documentation](https://docs.stripe.com/quotes/clone) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote? FromQuote { get => _explicitNullValueFromQuote; set { _explicitNullValueFromQuote = value; AdditionalData?.Remove("from_quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_quote"); else _explicitNullProperties?.Remove("from_quote"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote? _explicitNullValueFromQuote = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote? FromQuote { get => _explicitNullValueFromQuote; set { _explicitNullValueFromQuote = value; AdditionalData?.Remove("from_quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_quote"); else _explicitNullProperties?.Remove("from_quote"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote? _explicitNullValueFromQuote = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote FromQuote { get => _explicitNullValueFromQuote; set { _explicitNullValueFromQuote = value; AdditionalData?.Remove("from_quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_quote"); else _explicitNullProperties?.Remove("from_quote"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote _explicitNullValueFromQuote = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote FromQuote { get => _explicitNullValueFromQuote; set { _explicitNullValueFromQuote = value; AdditionalData?.Remove("from_quote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_quote"); else _explicitNullProperties?.Remove("from_quote"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote _explicitNullValueFromQuote = default!;
 #endif
         /// <summary>A header that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -377,12 +377,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account (if any) the payments will be attributed to for tax reporting, and where funds from each payment will be transferred to for each of the invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData? _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Quote"/> and sets the default values.
@@ -417,16 +417,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax.CreateFromDiscriminatorValue); } },
                 { "collection_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCollectionMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCollectionMethod = default; _explicitNullProperties?.Remove("collection_method"); AdditionalData["collection_method"] = unknown; } else { CollectionMethod = parsed; AdditionalData.Remove("collection_method"); } } },
                 { "computed", n => { Computed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputed>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputed.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "from_quote", n => { FromQuote = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote.CreateFromDiscriminatorValue); } },
+                { "from_quote", n => { FromQuote = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote.CreateFromDiscriminatorValue); } },
                 { "header", n => { Header = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteInvoice.CreateFromDiscriminatorValue); } },
@@ -444,7 +444,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "subscription_schedule", n => { SubscriptionSchedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionSchedule>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionSchedule.CreateFromDiscriminatorValue); } },
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteTestClock>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteTestClock.CreateFromDiscriminatorValue); } },
                 { "total_details", n => { TotalDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails.CreateFromDiscriminatorValue); } },
-                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData.CreateFromDiscriminatorValue); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -462,16 +462,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCollectionMethod>("collection_method", CollectionMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputed>("computed", Computed);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("discounts", Discounts);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote>("from_quote", FromQuote);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceFromQuote>("from_quote", FromQuote);
             writer.WriteStringValue("header", Header);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteInvoice>("invoice", Invoice);
@@ -489,7 +489,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionSchedule>("subscription_schedule", SubscriptionSchedule);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteTestClock>("test_clock", TestClock);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTotalDetails>("total_details", TotalDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceTransferData>("transfer_data", TransferData);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>If set, prorations will be calculated as though the subscription was resumed at the given time. This can be used to apply exactly the same prorations that were previewed with the [create preview](https://stripe.com/docs/api/invoices/create_preview) endpoint.</summary>
-        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
-        private int? _explicitNullValueProrationDate = default!;
+        public long? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private long? _explicitNullValueProrationDate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "payment_behavior", n => { PaymentBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestPaymentBehavior>(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior>(); } },
-                { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
+                { "proration_date", n => { ProrationDate = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("proration_date", ProrationDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

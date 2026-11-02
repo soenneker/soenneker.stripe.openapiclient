@@ -28,8 +28,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp after which the OXXO voucher expires.</summary>
-        public int? ExpiresAfter { get => _explicitNullValueExpiresAfter; set { _explicitNullValueExpiresAfter = value; AdditionalData?.Remove("expires_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after"); else _explicitNullProperties?.Remove("expires_after"); } }
-        private int? _explicitNullValueExpiresAfter = default!;
+        public long? ExpiresAfter { get => _explicitNullValueExpiresAfter; set { _explicitNullValueExpiresAfter = value; AdditionalData?.Remove("expires_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after"); else _explicitNullProperties?.Remove("expires_after"); } }
+        private long? _explicitNullValueExpiresAfter = default!;
         /// <summary>The URL for the hosted OXXO voucher page, which allows customers to view and print an OXXO voucher.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expires_after", n => { ExpiresAfter = n.GetIntValue(); } },
+                { "expires_after", n => { ExpiresAfter = n.GetLongValue(); } },
                 { "hosted_voucher_url", n => { HostedVoucherUrl = n.GetStringValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("expires_after", ExpiresAfter);
+            writer.WriteLongValue("expires_after", ExpiresAfter);
             writer.WriteStringValue("hosted_voucher_url", HostedVoucherUrl);
             writer.WriteStringValue("number", Number);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

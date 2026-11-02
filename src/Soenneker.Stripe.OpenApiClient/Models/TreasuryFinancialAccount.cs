@@ -89,8 +89,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Encodes whether a FinancialAccount has access to a particular Feature, with a `status` enum and associated `status_details`.Stripe or the platform can control Features via the requested field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -163,12 +163,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The set of functionalities that the platform can restrict on the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions? PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; AdditionalData?.Remove("platform_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions? _explicitNullValuePlatformRestrictions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions? PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; AdditionalData?.Remove("platform_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions? _explicitNullValuePlatformRestrictions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; AdditionalData?.Remove("platform_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions _explicitNullValuePlatformRestrictions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions PlatformRestrictions { get => _explicitNullValuePlatformRestrictions; set { _explicitNullValuePlatformRestrictions = value; AdditionalData?.Remove("platform_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_restrictions"); else _explicitNullProperties?.Remove("platform_restrictions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions _explicitNullValuePlatformRestrictions = default!;
 #endif
         /// <summary>The array of paths to restricted Features in the Features hash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -231,7 +231,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "active_features", n => { ActiveFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem>()?.AsList(); } },
                 { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures.CreateFromDiscriminatorValue); } },
                 { "financial_addresses", n => { FinancialAddresses = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -241,7 +241,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "pending_features", n => { PendingFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem>()?.AsList(); } },
-                { "platform_restrictions", n => { PlatformRestrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions.CreateFromDiscriminatorValue); } },
+                { "platform_restrictions", n => { PlatformRestrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions.CreateFromDiscriminatorValue); } },
                 { "restricted_features", n => { RestrictedFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem>()?.AsList(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails.CreateFromDiscriminatorValue); } },
@@ -258,7 +258,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem>("active_features", ActiveFeatures);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance>("balance", Balance);
             writer.WriteStringValue("country", Country);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures>("features", Features);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress>("financial_addresses", FinancialAddresses);
             writer.WriteStringValue("id", Id);
@@ -268,7 +268,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("nickname", Nickname);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountObject>("object", Object);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem>("pending_features", PendingFeatures);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions>("platform_restrictions", PlatformRestrictions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions>("platform_restrictions", PlatformRestrictions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem>("restricted_features", RestrictedFeatures);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails>("status_details", StatusDetails);

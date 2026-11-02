@@ -28,12 +28,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For a credit proration, links to the debit invoice line items or invoice item that the credit applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? _explicitNullValueCreditedItems = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems? CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems? _explicitNullValueCreditedItems = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems _explicitNullValueCreditedItems = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems CreditedItems { get => _explicitNullValueCreditedItems; set { _explicitNullValueCreditedItems = value; AdditionalData?.Remove("credited_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credited_items"); else _explicitNullProperties?.Remove("credited_items"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems _explicitNullValueCreditedItems = default!;
 #endif
         /// <summary>Discount amounts applied when the proration was created. This field is only populated for prorations created from subscriptions with `billing_mode=flexible`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "credited_items", n => { CreditedItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems>(global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems.CreateFromDiscriminatorValue); } },
+                { "credited_items", n => { CreditedItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems.CreateFromDiscriminatorValue); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems>("credited_items", CreditedItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems>("credited_items", CreditedItems);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -30,12 +30,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The adjustable_quantity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed? AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed? _explicitNullValueAdjustableQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity? AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity? _explicitNullValueAdjustableQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed _explicitNullValueAdjustableQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity _explicitNullValueAdjustableQuantity = default!;
 #endif
         /// <summary>The price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed.CreateFromDiscriminatorValue); } },
+                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantityComposed>("adjustable_quantity", AdjustableQuantity);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceOptionalItemAdjustableQuantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteStringValue("price", Price);
             writer.WriteIntValue("quantity", Quantity);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

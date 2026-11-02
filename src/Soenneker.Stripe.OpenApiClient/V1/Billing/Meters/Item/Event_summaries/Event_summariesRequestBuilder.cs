@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Meters.Item.Event_summaries
 #endif
             /// <summary>The timestamp from when to stop aggregating meter events (exclusive). Must be aligned with minute boundaries.</summary>
             [QueryParameter("end_time")]
-            public int? EndTime { get; set; }
+            public long? EndTime { get; set; }
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,7 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Meters.Item.Event_summaries
 #endif
             /// <summary>The timestamp from when to start aggregating meter events (inclusive). Must be aligned with minute boundaries.</summary>
             [QueryParameter("start_time")]
-            public int? StartTime { get; set; }
+            public long? StartTime { get; set; }
             /// <summary>Specifies what granularity to use when generating event summaries. If not specified, a single event summary would be returned for the specified time range. For hourly granularity, start and end times must align with hour boundaries (e.g., 00:00, 01:00, ..., 23:00). For daily granularity, start and end times must align with UTC day boundaries (00:00 UTC).</summary>
             [QueryParameter("value_grouping_window")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetBillingMetersIdEventSummariesValueGroupingWindowParameter? ValueGroupingWindow { get; set; }

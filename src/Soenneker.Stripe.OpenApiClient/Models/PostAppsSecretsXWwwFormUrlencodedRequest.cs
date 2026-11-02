@@ -40,8 +40,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The Unix timestamp for the expiry time of the secret, after which the secret deletes.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>A name for the secret that&apos;s unique within the scope.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "payload", n => { Payload = n.GetStringValue(); } },
                 { "scope", n => { Scope = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAppsSecretsXWwwFormUrlencodedRequestScope>(global::Soenneker.Stripe.OpenApiClient.Models.PostAppsSecretsXWwwFormUrlencodedRequestScope.CreateFromDiscriminatorValue); } },
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("payload", Payload);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAppsSecretsXWwwFormUrlencodedRequestScope>("scope", Scope);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

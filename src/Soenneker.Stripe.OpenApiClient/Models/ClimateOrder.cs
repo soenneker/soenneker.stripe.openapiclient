@@ -86,8 +86,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary _explicitNullValueBeneficiary = default!;
 #endif
         /// <summary>Time at which the order was canceled. Measured in seconds since the Unix epoch.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Reason for the cancellation of this order.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason? CancellationReason { get => _explicitNullValueCancellationReason; set { _explicitNullValueCancellationReason = value; AdditionalData?.Remove("cancellation_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellation_reason"); else _explicitNullProperties?.Remove("cancellation_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason? _explicitNullValueCancellationReason = default!;
@@ -102,11 +102,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCertificate = default!;
 #endif
         /// <summary>Time at which the order was confirmed. Measured in seconds since the Unix epoch.</summary>
-        public int? ConfirmedAt { get => _explicitNullValueConfirmedAt; set { _explicitNullValueConfirmedAt = value; AdditionalData?.Remove("confirmed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmed_at"); else _explicitNullProperties?.Remove("confirmed_at"); } }
-        private int? _explicitNullValueConfirmedAt = default!;
+        public long? ConfirmedAt { get => _explicitNullValueConfirmedAt; set { _explicitNullValueConfirmedAt = value; AdditionalData?.Remove("confirmed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmed_at"); else _explicitNullProperties?.Remove("confirmed_at"); } }
+        private long? _explicitNullValueConfirmedAt = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase, representing the currency for this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,11 +118,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Time at which the order&apos;s expected_delivery_year was delayed. Measured in seconds since the Unix epoch.</summary>
-        public int? DelayedAt { get => _explicitNullValueDelayedAt; set { _explicitNullValueDelayedAt = value; AdditionalData?.Remove("delayed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayed_at"); else _explicitNullProperties?.Remove("delayed_at"); } }
-        private int? _explicitNullValueDelayedAt = default!;
+        public long? DelayedAt { get => _explicitNullValueDelayedAt; set { _explicitNullValueDelayedAt = value; AdditionalData?.Remove("delayed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delayed_at"); else _explicitNullProperties?.Remove("delayed_at"); } }
+        private long? _explicitNullValueDelayedAt = default!;
         /// <summary>Time at which the order was delivered. Measured in seconds since the Unix epoch.</summary>
-        public int? DeliveredAt { get => _explicitNullValueDeliveredAt; set { _explicitNullValueDeliveredAt = value; AdditionalData?.Remove("delivered_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered_at"); else _explicitNullProperties?.Remove("delivered_at"); } }
-        private int? _explicitNullValueDeliveredAt = default!;
+        public long? DeliveredAt { get => _explicitNullValueDeliveredAt; set { _explicitNullValueDeliveredAt = value; AdditionalData?.Remove("delivered_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivered_at"); else _explicitNullProperties?.Remove("delivered_at"); } }
+        private long? _explicitNullValueDeliveredAt = default!;
         /// <summary>Details about the delivery of carbon removal for this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -183,8 +183,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct _explicitNullValueProduct = default!;
 #endif
         /// <summary>Time at which the order&apos;s product was substituted for a different product. Measured in seconds since the Unix epoch.</summary>
-        public int? ProductSubstitutedAt { get => _explicitNullValueProductSubstitutedAt; set { _explicitNullValueProductSubstitutedAt = value; AdditionalData?.Remove("product_substituted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_substituted_at"); else _explicitNullProperties?.Remove("product_substituted_at"); } }
-        private int? _explicitNullValueProductSubstitutedAt = default!;
+        public long? ProductSubstitutedAt { get => _explicitNullValueProductSubstitutedAt; set { _explicitNullValueProductSubstitutedAt = value; AdditionalData?.Remove("product_substituted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_substituted_at"); else _explicitNullProperties?.Remove("product_substituted_at"); } }
+        private long? _explicitNullValueProductSubstitutedAt = default!;
         /// <summary>The current status of this order.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus? _explicitNullValueStatus = default!;
@@ -217,14 +217,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "beneficiary", n => { Beneficiary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary.CreateFromDiscriminatorValue); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
                 { "cancellation_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancellationReason = default; _explicitNullProperties?.Remove("cancellation_reason"); AdditionalData["cancellation_reason"] = unknown; } else { CancellationReason = parsed; AdditionalData.Remove("cancellation_reason"); } } },
                 { "certificate", n => { Certificate = n.GetStringValue(); } },
-                { "confirmed_at", n => { ConfirmedAt = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "confirmed_at", n => { ConfirmedAt = n.GetLongValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "delayed_at", n => { DelayedAt = n.GetIntValue(); } },
-                { "delivered_at", n => { DeliveredAt = n.GetIntValue(); } },
+                { "delayed_at", n => { DelayedAt = n.GetLongValue(); } },
+                { "delivered_at", n => { DeliveredAt = n.GetLongValue(); } },
                 { "delivery_details", n => { DeliveryDetails = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expected_delivery_year", n => { ExpectedDeliveryYear = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -233,7 +233,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metric_tons", n => { MetricTons = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct.CreateFromDiscriminatorValue); } },
-                { "product_substituted_at", n => { ProductSubstitutedAt = n.GetIntValue(); } },
+                { "product_substituted_at", n => { ProductSubstitutedAt = n.GetLongValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
@@ -248,14 +248,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary>("beneficiary", Beneficiary);
-            writer.WriteIntValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteStringValue("certificate", Certificate);
-            writer.WriteIntValue("confirmed_at", ConfirmedAt);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("confirmed_at", ConfirmedAt);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteIntValue("delayed_at", DelayedAt);
-            writer.WriteIntValue("delivered_at", DeliveredAt);
+            writer.WriteLongValue("delayed_at", DelayedAt);
+            writer.WriteLongValue("delivered_at", DeliveredAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries>("delivery_details", DeliveryDetails);
             writer.WriteIntValue("expected_delivery_year", ExpectedDeliveryYear);
             writer.WriteStringValue("id", Id);
@@ -264,7 +264,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("metric_tons", MetricTons);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct>("product", Product);
-            writer.WriteIntValue("product_substituted_at", ProductSubstitutedAt);
+            writer.WriteLongValue("product_substituted_at", ProductSubstitutedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

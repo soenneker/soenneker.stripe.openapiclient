@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? ApplicationFeePercent { get => _explicitNullValueApplicationFeePercent; set { _explicitNullValueApplicationFeePercent = value; AdditionalData?.Remove("application_fee_percent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_percent"); else _explicitNullProperties?.Remove("application_fee_percent"); } }
         private double? _explicitNullValueApplicationFeePercent = default!;
         /// <summary>The billing_cycle_anchor property</summary>
-        public int? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; AdditionalData?.Remove("billing_cycle_anchor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
-        private int? _explicitNullValueBillingCycleAnchor = default!;
+        public long? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; AdditionalData?.Remove("billing_cycle_anchor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private long? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>The billing_cycle_anchor_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -152,8 +152,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>The trial_end property</summary>
-        public int? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
-        private int? _explicitNullValueTrialEnd = default!;
+        public long? TrialEnd { get => _explicitNullValueTrialEnd; set { _explicitNullValueTrialEnd = value; AdditionalData?.Remove("trial_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_end"); else _explicitNullProperties?.Remove("trial_end"); } }
+        private long? _explicitNullValueTrialEnd = default!;
         /// <summary>The trial_period_days property</summary>
         public int? TrialPeriodDays { get => _explicitNullValueTrialPeriodDays; set { _explicitNullValueTrialPeriodDays = value; AdditionalData?.Remove("trial_period_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_period_days"); else _explicitNullProperties?.Remove("trial_period_days"); } }
         private int? _explicitNullValueTrialPeriodDays = default!;
@@ -193,7 +193,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetDoubleValue(); } },
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetLongValue(); } },
                 { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -204,7 +204,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataPendingInvoiceItemInterval>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataPendingInvoiceItemInterval.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataProrationBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProrationBehavior = default; _explicitNullProperties?.Remove("proration_behavior"); AdditionalData["proration_behavior"] = unknown; } else { ProrationBehavior = parsed; AdditionalData.Remove("proration_behavior"); } } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTransferData.CreateFromDiscriminatorValue); } },
-                { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
+                { "trial_end", n => { TrialEnd = n.GetLongValue(); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
                 { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTrialSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTrialSettings.CreateFromDiscriminatorValue); } },
             };
@@ -217,7 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("application_fee_percent", ApplicationFeePercent);
-            writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteLongValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode>("billing_mode", BillingMode);
             writer.WriteCollectionOfPrimitiveValues<string>("default_tax_rates", DefaultTaxRates);
@@ -228,7 +228,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataPendingInvoiceItemInterval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTransferData>("transfer_data", TransferData);
-            writer.WriteIntValue("trial_end", TrialEnd);
+            writer.WriteLongValue("trial_end", TrialEnd);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataTrialSettings>("trial_settings", TrialSettings);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

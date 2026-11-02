@@ -108,11 +108,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAutomaticTax _explicitNullValueAutomaticTax = default!;
 #endif
         /// <summary>A past timestamp to backdate the subscription&apos;s start date to. If set, the first invoice will contain line items for the timespan between the start date and the current time. Can be combined with trials and the billing cycle anchor.</summary>
-        public int? BackdateStartDate { get => _explicitNullValueBackdateStartDate; set { _explicitNullValueBackdateStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backdate_start_date"); else _explicitNullProperties?.Remove("backdate_start_date"); } }
-        private int? _explicitNullValueBackdateStartDate = default!;
+        public long? BackdateStartDate { get => _explicitNullValueBackdateStartDate; set { _explicitNullValueBackdateStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backdate_start_date"); else _explicitNullProperties?.Remove("backdate_start_date"); } }
+        private long? _explicitNullValueBackdateStartDate = default!;
         /// <summary>A future timestamp in UTC format to anchor the subscription&apos;s [billing cycle](https://docs.stripe.com/subscriptions/billing-cycle). The anchor is the reference point that aligns future billing cycle dates. It sets the day of week for `week` intervals, the day of month for `month` and `year` intervals, and the month of year for `year` intervals.</summary>
-        public int? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
-        private int? _explicitNullValueBillingCycleAnchor = default!;
+        public long? BillingCycleAnchor { get => _explicitNullValueBillingCycleAnchor; set { _explicitNullValueBillingCycleAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle_anchor"); else _explicitNullProperties?.Remove("billing_cycle_anchor"); } }
+        private long? _explicitNullValueBillingCycleAnchor = default!;
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period. When updating, pass an empty string to remove previously-defined thresholds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -318,8 +318,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "add_invoice_items", n => { AddInvoiceItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAddInvoiceItemsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAddInvoiceItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestApplicationFeePercent>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestApplicationFeePercent.CreateFromDiscriminatorValue); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAutomaticTax.CreateFromDiscriminatorValue); } },
-                { "backdate_start_date", n => { BackdateStartDate = n.GetIntValue(); } },
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
+                { "backdate_start_date", n => { BackdateStartDate = n.GetLongValue(); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetLongValue(); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestBillingThresholds.CreateFromDiscriminatorValue); } },
                 { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestCancelAt>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestCancelAt.CreateFromDiscriminatorValue); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
@@ -356,8 +356,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAddInvoiceItemsItem>("add_invoice_items", AddInvoiceItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestApplicationFeePercent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestAutomaticTax>("automatic_tax", AutomaticTax);
-            writer.WriteIntValue("backdate_start_date", BackdateStartDate);
-            writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteLongValue("backdate_start_date", BackdateStartDate);
+            writer.WriteLongValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestBillingThresholds>("billing_thresholds", BillingThresholds);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestCancelAt>("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);

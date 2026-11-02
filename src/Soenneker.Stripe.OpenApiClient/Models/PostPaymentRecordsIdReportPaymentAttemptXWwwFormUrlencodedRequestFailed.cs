@@ -25,8 +25,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The failed_at property</summary>
-        public int? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; AdditionalData?.Remove("failed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
-        private int? _explicitNullValueFailedAt = default!;
+        public long? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; AdditionalData?.Remove("failed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
+        private long? _explicitNullValueFailedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestFailed"/> and sets the default values.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failed_at", n => { FailedAt = n.GetIntValue(); } },
+                { "failed_at", n => { FailedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("failed_at", FailedAt);
+            writer.WriteLongValue("failed_at", FailedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

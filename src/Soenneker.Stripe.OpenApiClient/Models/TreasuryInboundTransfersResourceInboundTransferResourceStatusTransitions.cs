@@ -28,14 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp describing when an InboundTransfer changed status to `canceled`.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Timestamp describing when an InboundTransfer changed status to `failed`.</summary>
-        public int? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; AdditionalData?.Remove("failed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
-        private int? _explicitNullValueFailedAt = default!;
+        public long? FailedAt { get => _explicitNullValueFailedAt; set { _explicitNullValueFailedAt = value; AdditionalData?.Remove("failed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_at"); else _explicitNullProperties?.Remove("failed_at"); } }
+        private long? _explicitNullValueFailedAt = default!;
         /// <summary>Timestamp describing when an InboundTransfer changed status to `succeeded`.</summary>
-        public int? SucceededAt { get => _explicitNullValueSucceededAt; set { _explicitNullValueSucceededAt = value; AdditionalData?.Remove("succeeded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded_at"); else _explicitNullProperties?.Remove("succeeded_at"); } }
-        private int? _explicitNullValueSucceededAt = default!;
+        public long? SucceededAt { get => _explicitNullValueSucceededAt; set { _explicitNullValueSucceededAt = value; AdditionalData?.Remove("succeeded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded_at"); else _explicitNullProperties?.Remove("succeeded_at"); } }
+        private long? _explicitNullValueSucceededAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -61,9 +61,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "failed_at", n => { FailedAt = n.GetIntValue(); } },
-                { "succeeded_at", n => { SucceededAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
+                { "failed_at", n => { FailedAt = n.GetLongValue(); } },
+                { "succeeded_at", n => { SucceededAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -73,9 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteIntValue("failed_at", FailedAt);
-            writer.WriteIntValue("succeeded_at", SucceededAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("failed_at", FailedAt);
+            writer.WriteLongValue("succeeded_at", SucceededAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

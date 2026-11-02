@@ -29,12 +29,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Cart object to be displayed by the reader, including line items, amounts, and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? _explicitNullValueCart = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart? Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart? _explicitNullValueCart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart _explicitNullValueCart = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart Cart { get => _explicitNullValueCart; set { _explicitNullValueCart = value; AdditionalData?.Remove("cart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cart"); else _explicitNullProperties?.Remove("cart"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart _explicitNullValueCart = default!;
 #endif
         /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CartType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart.CreateFromDiscriminatorValue); } },
+                { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart>("cart", Cart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart>("cart", Cart);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -151,8 +151,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A future timestamp on which the quote will be canceled if in `open` or `draft` status. Measured in seconds since the Unix epoch.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>A footer that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -261,7 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter.CreateFromDiscriminatorValue); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader.CreateFromDiscriminatorValue); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings.CreateFromDiscriminatorValue); } },
@@ -289,7 +289,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDescription>("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestDiscounts>("discounts", Discounts);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestFooter>("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestHeader>("header", Header);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestInvoiceSettings>("invoice_settings", InvoiceSettings);

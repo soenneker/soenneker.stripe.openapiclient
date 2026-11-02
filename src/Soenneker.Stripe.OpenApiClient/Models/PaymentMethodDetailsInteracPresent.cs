@@ -221,12 +221,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A collection of fields required to be displayed on receipts. Only required for EMV transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; AdditionalData?.Remove("receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed? _explicitNullValueReceipt = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; AdditionalData?.Remove("receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt? _explicitNullValueReceipt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; AdditionalData?.Remove("receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed _explicitNullValueReceipt = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; AdditionalData?.Remove("receipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receipt"); else _explicitNullProperties?.Remove("receipt"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt _explicitNullValueReceipt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresent"/> and sets the default values.
@@ -271,7 +271,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "read_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReadMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReadMethod = default; _explicitNullProperties?.Remove("read_method"); AdditionalData["read_method"] = unknown; } else { ReadMethod = parsed; AdditionalData.Remove("read_method"); } } },
                 { "reader", n => { Reader = n.GetStringValue(); } },
-                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed.CreateFromDiscriminatorValue); } },
+                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -299,7 +299,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
             writer.WriteStringValue("reader", Reader);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReadMethod>("read_method", ReadMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed>("receipt", Receipt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt>("receipt", Receipt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

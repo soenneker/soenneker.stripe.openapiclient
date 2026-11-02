@@ -106,12 +106,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If `type=reversal`, contains information about what was reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal? Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal? _explicitNullValueReversal = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal? Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal? _explicitNullValueReversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal _explicitNullValueReversal = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal Reversal { get => _explicitNullValueReversal; set { _explicitNullValueReversal = value; AdditionalData?.Remove("reversal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal"); else _explicitNullProperties?.Remove("reversal"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal _explicitNullValueReversal = default!;
 #endif
         /// <summary>Specifies whether the `amount` includes taxes. If `tax_behavior=inclusive`, then the amount includes taxes.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior? TaxBehavior { get => _explicitNullValueTaxBehavior; set { _explicitNullValueTaxBehavior = value; AdditionalData?.Remove("tax_behavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_behavior"); else _explicitNullProperties?.Remove("tax_behavior"); } }
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal.CreateFromDiscriminatorValue); } },
+                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal.CreateFromDiscriminatorValue); } },
                 { "tax_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxBehavior = default; _explicitNullProperties?.Remove("tax_behavior"); AdditionalData["tax_behavior"] = unknown; } else { TaxBehavior = parsed; AdditionalData.Remove("tax_behavior"); } } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
@@ -185,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal>("reversal", Reversal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal>("reversal", Reversal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteStringValue("tax_code", TaxCode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemType>("type", Type);

@@ -95,17 +95,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueBrand = default!;
 #endif
         /// <summary>When using manual capture, a future timestamp at which the charge will be automatically refunded if uncaptured.</summary>
-        public int? CaptureBefore { get => _explicitNullValueCaptureBefore; set { _explicitNullValueCaptureBefore = value; AdditionalData?.Remove("capture_before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_before"); else _explicitNullProperties?.Remove("capture_before"); } }
-        private int? _explicitNullValueCaptureBefore = default!;
+        public long? CaptureBefore { get => _explicitNullValueCaptureBefore; set { _explicitNullValueCaptureBefore = value; AdditionalData?.Remove("capture_before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capture_before"); else _explicitNullProperties?.Remove("capture_before"); } }
+        private long? _explicitNullValueCaptureBefore = default!;
         /// <summary>Check results by Card networks on Card address and CVC at time of payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed? Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed? _explicitNullValueChecks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks? Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks? _explicitNullValueChecks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed _explicitNullValueChecks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks Checks { get => _explicitNullValueChecks; set { _explicitNullValueChecks = value; AdditionalData?.Remove("checks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checks"); else _explicitNullProperties?.Remove("checks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks _explicitNullValueChecks = default!;
 #endif
         /// <summary>Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you&apos;ve collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,12 +176,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://docs.stripe.com/payments/installments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed? _explicitNullValueInstallments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments? Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments? _explicitNullValueInstallments = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed _explicitNullValueInstallments = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments Installments { get => _explicitNullValueInstallments; set { _explicitNullValueInstallments = value; AdditionalData?.Remove("installments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installments"); else _explicitNullProperties?.Remove("installments"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments _explicitNullValueInstallments = default!;
 #endif
         /// <summary>The last four digits of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -226,12 +226,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If this card has network token credentials, this contains the details of the network token credentials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed? NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; AdditionalData?.Remove("network_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed? _explicitNullValueNetworkToken = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken? NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; AdditionalData?.Remove("network_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken? _explicitNullValueNetworkToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; AdditionalData?.Remove("network_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed _explicitNullValueNetworkToken = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken NetworkToken { get => _explicitNullValueNetworkToken; set { _explicitNullValueNetworkToken = value; AdditionalData?.Remove("network_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_token"); else _explicitNullProperties?.Remove("network_token"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken _explicitNullValueNetworkToken = default!;
 #endif
         /// <summary>This is used by the financial networks to identify a transaction. Visa calls this the Transaction ID, Mastercard calls this the Trace ID, and American Express calls this the Acquirer Reference Data. This value will be present if it is returned by the financial network in the authorization response, and null otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -259,12 +259,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Populated if this transaction used 3D Secure authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure? _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>Transaction Link ID (TLID) is a unique identifier for a transaction. This is used by some card networks, such as Mastercard, for transaction linking, in addition to Network Transaction IDs. This value will be present if it is returned by the financial network in the authorization response, and null otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -279,12 +279,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If this Card is part of a card wallet, this contains the details of the card wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed? Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed? _explicitNullValueWallet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet? Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet? _explicitNullValueWallet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed _explicitNullValueWallet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet Wallet { get => _explicitNullValueWallet; set { _explicitNullValueWallet = value; AdditionalData?.Remove("wallet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallet"); else _explicitNullProperties?.Remove("wallet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet _explicitNullValueWallet = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCard"/> and sets the default values.
@@ -314,8 +314,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_authorized", n => { AmountAuthorized = n.GetIntValue(); } },
                 { "authorization_code", n => { AuthorizationCode = n.GetStringValue(); } },
                 { "brand", n => { Brand = n.GetStringValue(); } },
-                { "capture_before", n => { CaptureBefore = n.GetIntValue(); } },
-                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed.CreateFromDiscriminatorValue); } },
+                { "capture_before", n => { CaptureBefore = n.GetLongValue(); } },
+                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "electronic_commerce_indicator", n => { ElectronicCommerceIndicator = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
@@ -324,18 +324,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "funding", n => { Funding = n.GetStringValue(); } },
                 { "incremental_authorization", n => { IncrementalAuthorization = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization.CreateFromDiscriminatorValue); } },
-                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed.CreateFromDiscriminatorValue); } },
+                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments.CreateFromDiscriminatorValue); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate.CreateFromDiscriminatorValue); } },
                 { "multicapture", n => { Multicapture = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture.CreateFromDiscriminatorValue); } },
                 { "network", n => { Network = n.GetStringValue(); } },
-                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed.CreateFromDiscriminatorValue); } },
+                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken.CreateFromDiscriminatorValue); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
                 { "overcapture", n => { Overcapture = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture.CreateFromDiscriminatorValue); } },
                 { "regulated_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardRegulatedStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRegulatedStatus = default; _explicitNullProperties?.Remove("regulated_status"); AdditionalData["regulated_status"] = unknown; } else { RegulatedStatus = parsed; AdditionalData.Remove("regulated_status"); } } },
-                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure.CreateFromDiscriminatorValue); } },
+                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge>(global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge.CreateFromDiscriminatorValue); } },
                 { "transaction_link_id", n => { TransactionLinkId = n.GetStringValue(); } },
-                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed.CreateFromDiscriminatorValue); } },
+                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -348,8 +348,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_authorized", AmountAuthorized);
             writer.WriteStringValue("authorization_code", AuthorizationCode);
             writer.WriteStringValue("brand", Brand);
-            writer.WriteIntValue("capture_before", CaptureBefore);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed>("checks", Checks);
+            writer.WriteLongValue("capture_before", CaptureBefore);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecks>("checks", Checks);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("electronic_commerce_indicator", ElectronicCommerceIndicator);
             writer.WriteIntValue("exp_month", ExpMonth);
@@ -358,18 +358,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("funding", Funding);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization>("incremental_authorization", IncrementalAuthorization);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed>("installments", Installments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallments>("installments", Installments);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate>("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture>("multicapture", Multicapture);
             writer.WriteStringValue("network", Network);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed>("network_token", NetworkToken);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkToken>("network_token", NetworkToken);
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture>("overcapture", Overcapture);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardRegulatedStatus>("regulated_status", RegulatedStatus);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure>("three_d_secure", ThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsCharge>("three_d_secure", ThreeDSecure);
             writer.WriteStringValue("transaction_link_id", TransactionLinkId);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed>("wallet", Wallet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWallet>("wallet", Wallet);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

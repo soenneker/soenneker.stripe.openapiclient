@@ -88,12 +88,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>Whether the authorization has been approved.</summary>
         public bool? Approved { get => _explicitNullValueApproved; set { _explicitNullValueApproved = value; AdditionalData?.Remove("approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved"); else _explicitNullProperties?.Remove("approved"); } }
@@ -135,8 +135,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? CardPresence { get => _explicitNullValueCardPresence; set { _explicitNullValueCardPresence = value; AdditionalData?.Remove("card_presence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_presence"); else _explicitNullProperties?.Remove("card_presence"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? _explicitNullValueCardPresence = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The currency of the cardholder. This currency can be different from the currency presented at authorization and the `merchant_currency` field on this authorization. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,12 +150,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Fleet-specific information for authorizations using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; AdditionalData?.Remove("fleet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? _explicitNullValueFleet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData? Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; AdditionalData?.Remove("fleet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData? _explicitNullValueFleet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; AdditionalData?.Remove("fleet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet _explicitNullValueFleet = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData Fleet { get => _explicitNullValueFleet; set { _explicitNullValueFleet = value; AdditionalData?.Remove("fleet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet"); else _explicitNullProperties?.Remove("fleet"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData _explicitNullValueFleet = default!;
 #endif
         /// <summary>Fraud challenges sent to the cardholder, if this authorization was declined for fraud risk reasons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,12 +170,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about fuel that was purchased with this transaction. Typically this information is received from the merchant after the authorization has been approved and the fuel dispensed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? _explicitNullValueFuel = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData? Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData? _explicitNullValueFuel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel _explicitNullValueFuel = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData Fuel { get => _explicitNullValueFuel; set { _explicitNullValueFuel = value; AdditionalData?.Remove("fuel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fuel"); else _explicitNullProperties?.Remove("fuel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData _explicitNullValueFuel = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -226,12 +226,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the authorization, such as identifiers, set by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? _explicitNullValueNetworkData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData? NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData? _explicitNullValueNetworkData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed _explicitNullValueNetworkData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData _explicitNullValueNetworkData = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
@@ -239,12 +239,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pending authorization request. This field will only be non-null during an `issuing_authorization.request` webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; AdditionalData?.Remove("pending_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? _explicitNullValuePendingRequest = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest? PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; AdditionalData?.Remove("pending_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest? _explicitNullValuePendingRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; AdditionalData?.Remove("pending_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed _explicitNullValuePendingRequest = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest PendingRequest { get => _explicitNullValuePendingRequest; set { _explicitNullValuePendingRequest = value; AdditionalData?.Remove("pending_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_request"); else _explicitNullProperties?.Remove("pending_request"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest _explicitNullValuePendingRequest = default!;
 #endif
         /// <summary>History of every time a `pending_request` authorization was approved/declined, either by you directly or by Stripe (e.g. based on your spending_controls). If the merchant changes the authorization by performing an incremental authorization, you can look at this field to see the previous requests for the authorization. This field can be helpful in determining why a given authorization was approved/declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -282,12 +282,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this authorization if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury? _explicitNullValueTreasury = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury _explicitNullValueTreasury = default!;
 #endif
         /// <summary>The verification_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -338,32 +338,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed.CreateFromDiscriminatorValue); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails.CreateFromDiscriminatorValue); } },
                 { "approved", n => { Approved = n.GetBoolValue(); } },
                 { "authorization_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAuthorizationMethod = default; _explicitNullProperties?.Remove("authorization_method"); AdditionalData["authorization_method"] = unknown; } else { AuthorizationMethod = parsed; AdditionalData.Remove("authorization_method"); } } },
                 { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.CreateFromDiscriminatorValue); } },
                 { "card_presence", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCardPresence = default; _explicitNullProperties?.Remove("card_presence"); AdditionalData["card_presence"] = unknown; } else { CardPresence = parsed; AdditionalData.Remove("card_presence"); } } },
                 { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "fleet", n => { Fleet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet.CreateFromDiscriminatorValue); } },
+                { "fleet", n => { Fleet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData.CreateFromDiscriminatorValue); } },
                 { "fraud_challenges", n => { FraudChallenges = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel.CreateFromDiscriminatorValue); } },
+                { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "merchant_data", n => { MerchantData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed.CreateFromDiscriminatorValue); } },
+                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "pending_request", n => { PendingRequest = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed.CreateFromDiscriminatorValue); } },
+                { "pending_request", n => { PendingRequest = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest.CreateFromDiscriminatorValue); } },
                 { "request_history", n => { RequestHistory = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "token", n => { Token = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken.CreateFromDiscriminatorValue); } },
                 { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed.CreateFromDiscriminatorValue); } },
+                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury.CreateFromDiscriminatorValue); } },
                 { "verification_data", n => { VerificationData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData.CreateFromDiscriminatorValue); } },
                 { "verified_by_fraud_challenge", n => { VerifiedByFraudChallenge = n.GetBoolValue(); } },
                 { "wallet", n => { Wallet = n.GetStringValue(); } },
@@ -377,32 +377,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed>("amount_details", AmountDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>("amount_details", AmountDetails);
             writer.WriteBoolValue("approved", Approved);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod>("authorization_method", AuthorizationMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>("balance_transactions", BalanceTransactions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder>("cardholder", Cardholder);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence>("card_presence", CardPresence);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet>("fleet", Fleet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData>("fleet", Fleet);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>("fraud_challenges", FraudChallenges);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel>("fuel", Fuel);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData>("fuel", Fuel);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>("merchant_data", MerchantData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed>("network_data", NetworkData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData>("network_data", NetworkData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed>("pending_request", PendingRequest);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest>("pending_request", PendingRequest);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>("request_history", RequestHistory);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken>("token", Token);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>("transactions", Transactions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed>("treasury", Treasury);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury>("treasury", Treasury);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData>("verification_data", VerificationData);
             writer.WriteBoolValue("verified_by_fraud_challenge", VerifiedByFraudChallenge);
             writer.WriteStringValue("wallet", Wallet);

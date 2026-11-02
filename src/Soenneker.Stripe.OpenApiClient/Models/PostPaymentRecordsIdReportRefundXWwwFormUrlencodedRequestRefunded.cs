@@ -25,8 +25,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The refunded_at property</summary>
-        public int? RefundedAt { get => _explicitNullValueRefundedAt; set { _explicitNullValueRefundedAt = value; AdditionalData?.Remove("refunded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunded_at"); else _explicitNullProperties?.Remove("refunded_at"); } }
-        private int? _explicitNullValueRefundedAt = default!;
+        public long? RefundedAt { get => _explicitNullValueRefundedAt; set { _explicitNullValueRefundedAt = value; AdditionalData?.Remove("refunded_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refunded_at"); else _explicitNullProperties?.Remove("refunded_at"); } }
+        private long? _explicitNullValueRefundedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestRefunded"/> and sets the default values.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "refunded_at", n => { RefundedAt = n.GetIntValue(); } },
+                { "refunded_at", n => { RefundedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("refunded_at", RefundedAt);
+            writer.WriteLongValue("refunded_at", RefundedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

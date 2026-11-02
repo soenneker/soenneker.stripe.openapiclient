@@ -26,8 +26,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp property</summary>
-        public int? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
-        private int? _explicitNullValueTimestamp = default!;
+        public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private long? _explicitNullValueTimestamp = default!;
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestAddInvoiceItemsItemPeriodEndType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestAddInvoiceItemsItemPeriodEndType? _explicitNullValueType = default!;
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestAddInvoiceItemsItemPeriodEndType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestAddInvoiceItemsItemPeriodEndType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -48,12 +48,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional details about the tax rate. Only present when `type` is `tax_rate_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails? _explicitNullValueTaxRateDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails? TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails? _explicitNullValueTaxRateDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails _explicitNullValueTaxRateDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails TaxRateDetails { get => _explicitNullValueTaxRateDetails; set { _explicitNullValueTaxRateDetails = value; AdditionalData?.Remove("tax_rate_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate_details"); else _explicitNullProperties?.Remove("tax_rate_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails _explicitNullValueTaxRateDetails = default!;
 #endif
         /// <summary>The type of tax information.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "tax_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxBehavior = default; _explicitNullProperties?.Remove("tax_behavior"); AdditionalData["tax_behavior"] = unknown; } else { TaxBehavior = parsed; AdditionalData.Remove("tax_behavior"); } } },
-                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails.CreateFromDiscriminatorValue); } },
+                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails.CreateFromDiscriminatorValue); } },
                 { "taxability_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxabilityReason = default; _explicitNullProperties?.Remove("taxability_reason"); AdditionalData["taxability_reason"] = unknown; } else { TaxabilityReason = parsed; AdditionalData.Remove("taxability_reason"); } } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason>("taxability_reason", TaxabilityReason);
             writer.WriteIntValue("taxable_amount", TaxableAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior>("tax_behavior", TaxBehavior);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>("tax_rate_details", TaxRateDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails>("tax_rate_details", TaxRateDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

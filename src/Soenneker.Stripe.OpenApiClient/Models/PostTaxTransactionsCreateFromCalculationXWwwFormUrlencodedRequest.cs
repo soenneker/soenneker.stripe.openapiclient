@@ -60,8 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostTaxTransactionsCreateFromCalculationXWwwFormUrlencodedRequestMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The Unix timestamp representing when the tax liability is assumed or reduced, which determines the liability posting period and handling in tax liability reports. The timestamp must fall within the `tax_date` and the current time, unless the `tax_date` is scheduled in advance. Defaults to the current time.</summary>
-        public int? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
-        private int? _explicitNullValuePostedAt = default!;
+        public long? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
+        private long? _explicitNullValuePostedAt = default!;
         /// <summary>A custom order or sale identifier, such as &apos;myOrder_123&apos;. Must be unique across all transactions, including reversals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,7 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "calculation", n => { Calculation = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxTransactionsCreateFromCalculationXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxTransactionsCreateFromCalculationXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
-                { "posted_at", n => { PostedAt = n.GetIntValue(); } },
+                { "posted_at", n => { PostedAt = n.GetLongValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
@@ -107,7 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("calculation", Calculation);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxTransactionsCreateFromCalculationXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteIntValue("posted_at", PostedAt);
+            writer.WriteLongValue("posted_at", PostedAt);
             writer.WriteStringValue("reference", Reference);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

@@ -29,8 +29,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time when this signal was evaluated.</summary>
-        public int? EvaluatedAt { get => _explicitNullValueEvaluatedAt; set { _explicitNullValueEvaluatedAt = value; AdditionalData?.Remove("evaluated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluated_at"); else _explicitNullProperties?.Remove("evaluated_at"); } }
-        private int? _explicitNullValueEvaluatedAt = default!;
+        public long? EvaluatedAt { get => _explicitNullValueEvaluatedAt; set { _explicitNullValueEvaluatedAt = value; AdditionalData?.Remove("evaluated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluated_at"); else _explicitNullProperties?.Remove("evaluated_at"); } }
+        private long? _explicitNullValueEvaluatedAt = default!;
         /// <summary>Risk level of this signal, based on the score.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel? RiskLevel { get => _explicitNullValueRiskLevel; set { _explicitNullValueRiskLevel = value; AdditionalData?.Remove("risk_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk_level"); else _explicitNullProperties?.Remove("risk_level"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel? _explicitNullValueRiskLevel = default!;
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "evaluated_at", n => { EvaluatedAt = n.GetIntValue(); } },
+                { "evaluated_at", n => { EvaluatedAt = n.GetLongValue(); } },
                 { "risk_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRiskLevel = default; _explicitNullProperties?.Remove("risk_level"); AdditionalData["risk_level"] = unknown; } else { RiskLevel = parsed; AdditionalData.Remove("risk_level"); } } },
                 { "score", n => { Score = n.GetDoubleValue(); } },
             };
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("evaluated_at", EvaluatedAt);
+            writer.WriteLongValue("evaluated_at", EvaluatedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel>("risk_level", RiskLevel);
             writer.WriteDoubleValue("score", Score);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

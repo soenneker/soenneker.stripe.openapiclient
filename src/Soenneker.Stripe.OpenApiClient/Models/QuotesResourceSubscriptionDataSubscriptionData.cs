@@ -52,8 +52,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>When creating a new subscription, the date of which the subscription schedule will start after the quote is accepted. This date is ignored if it is in the past when the quote is accepted. Measured in seconds since the Unix epoch.</summary>
-        public int? EffectiveDate { get => _explicitNullValueEffectiveDate; set { _explicitNullValueEffectiveDate = value; AdditionalData?.Remove("effective_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_date"); else _explicitNullProperties?.Remove("effective_date"); } }
-        private int? _explicitNullValueEffectiveDate = default!;
+        public long? EffectiveDate { get => _explicitNullValueEffectiveDate; set { _explicitNullValueEffectiveDate = value; AdditionalData?.Remove("effective_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_date"); else _explicitNullProperties?.Remove("effective_date"); } }
+        private long? _explicitNullValueEffectiveDate = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "effective_date", n => { EffectiveDate = n.GetIntValue(); } },
+                { "effective_date", n => { EffectiveDate = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
             };
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode>("billing_mode", BillingMode);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("effective_date", EffectiveDate);
+            writer.WriteLongValue("effective_date", EffectiveDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

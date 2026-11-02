@@ -70,8 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationBacsDebitData _explicitNullValueBacsDebit = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationAcssDebitData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationAcssDebitData.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationBacsDebitData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationBacsDebitData.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
@@ -187,7 +187,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationAcssDebitData>("acss_debit", AcssDebit);
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationBacsDebitData>("bacs_debit", BacsDebit);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationObject>("object", Object);

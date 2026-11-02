@@ -42,8 +42,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation _explicitNullValueAdditionalDocumentation = default!;
 #endif
         /// <summary>Date when order was canceled.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>Reason for canceling the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,8 +65,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueExplanation = default!;
 #endif
         /// <summary>Date when the product was received.</summary>
-        public int? ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; AdditionalData?.Remove("received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
-        private int? _explicitNullValueReceivedAt = default!;
+        public long? ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; AdditionalData?.Remove("received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
+        private long? _explicitNullValueReceivedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence"/> and sets the default values.
         /// </summary>
@@ -93,10 +93,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additional_documentation", n => { AdditionalDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation.CreateFromDiscriminatorValue); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
                 { "cancellation_reason", n => { CancellationReason = n.GetStringValue(); } },
                 { "explanation", n => { Explanation = n.GetStringValue(); } },
-                { "received_at", n => { ReceivedAt = n.GetIntValue(); } },
+                { "received_at", n => { ReceivedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -107,10 +107,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>("additional_documentation", AdditionalDocumentation);
-            writer.WriteIntValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
             writer.WriteStringValue("cancellation_reason", CancellationReason);
             writer.WriteStringValue("explanation", Explanation);
-            writer.WriteIntValue("received_at", ReceivedAt);
+            writer.WriteLongValue("received_at", ReceivedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

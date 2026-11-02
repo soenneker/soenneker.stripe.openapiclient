@@ -205,8 +205,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow _explicitNullValueCodeVerification = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO code for the currency](https://stripe.com/docs/currencies) associated with the source. This is the currency for which the source will be chargeable once ready. Required for `single_use` sources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -316,12 +316,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the owner of the payment instrument that may be used or required by particular source types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed? _explicitNullValueOwner = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed _explicitNullValueOwner = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>The p24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -473,7 +473,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent.CreateFromDiscriminatorValue); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "code_verification", n => { CodeVerification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow>(global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps.CreateFromDiscriminatorValue); } },
@@ -486,7 +486,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner.CreateFromDiscriminatorValue); } },
                 { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24.CreateFromDiscriminatorValue); } },
                 { "receiver", n => { Receiver = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>(global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow.CreateFromDiscriminatorValue); } },
                 { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>(global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow.CreateFromDiscriminatorValue); } },
@@ -520,7 +520,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent>("card_present", CardPresent);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow>("code_verification", CodeVerification);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps>("eps", Eps);
@@ -533,7 +533,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>("multibanco", Multibanco);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner>("owner", Owner);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>("p24", P24);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>("receiver", Receiver);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>("redirect", Redirect);

@@ -93,8 +93,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? ApplicationFeeAmount { get => _explicitNullValueApplicationFeeAmount; set { _explicitNullValueApplicationFeeAmount = value; AdditionalData?.Remove("application_fee_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_fee_amount"); else _explicitNullProperties?.Remove("application_fee_amount"); } }
         private int? _explicitNullValueApplicationFeeAmount = default!;
         /// <summary>Date that you can expect the payout to arrive in the bank. This factors in delays to account for weekends or bank holidays.</summary>
-        public int? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; AdditionalData?.Remove("arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
-        private int? _explicitNullValueArrivalDate = default!;
+        public long? ArrivalDate { get => _explicitNullValueArrivalDate; set { _explicitNullValueArrivalDate = value; AdditionalData?.Remove("arrival_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arrival_date"); else _explicitNullProperties?.Remove("arrival_date"); } }
+        private long? _explicitNullValueArrivalDate = default!;
         /// <summary>Returns `true` if the payout is created by an [automated payout schedule](https://docs.stripe.com/payouts#payout-schedule) and `false` if it&apos;s [requested manually](https://stripe.com/docs/payouts#manual-payouts).</summary>
         public bool? Automatic { get => _explicitNullValueAutomatic; set { _explicitNullValueAutomatic = value; AdditionalData?.Remove("automatic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatic"); else _explicitNullProperties?.Remove("automatic"); } }
         private bool? _explicitNullValueAutomatic = default!;
@@ -109,8 +109,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction _explicitNullValueBalanceTransaction = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -273,12 +273,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A value that generates from the beneficiary&apos;s bank that allows users to track payouts with their bank. Banks might call this a &quot;reference number&quot; or something similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId? _explicitNullValueTraceId = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId? _explicitNullValueTraceId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId _explicitNullValueTraceId = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId _explicitNullValueTraceId = default!;
 #endif
         /// <summary>Can be `bank_account` or `card`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PayoutType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -311,10 +311,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "application_fee", n => { ApplicationFee = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
-                { "arrival_date", n => { ArrivalDate = n.GetIntValue(); } },
+                { "arrival_date", n => { ArrivalDate = n.GetLongValue(); } },
                 { "automatic", n => { Automatic = n.GetBoolValue(); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination.CreateFromDiscriminatorValue); } },
@@ -333,7 +333,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "source_type", n => { SourceType = n.GetStringValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "trace_id", n => { TraceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId.CreateFromDiscriminatorValue); } },
+                { "trace_id", n => { TraceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -347,10 +347,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee>("application_fee", ApplicationFee);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
-            writer.WriteIntValue("arrival_date", ArrivalDate);
+            writer.WriteLongValue("arrival_date", ArrivalDate);
             writer.WriteBoolValue("automatic", Automatic);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction>("balance_transaction", BalanceTransaction);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination>("destination", Destination);
@@ -369,7 +369,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("source_type", SourceType);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId>("trace_id", TraceId);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId>("trace_id", TraceId);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

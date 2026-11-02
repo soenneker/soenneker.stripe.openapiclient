@@ -45,8 +45,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? ExpiresAfterDays { get => _explicitNullValueExpiresAfterDays; set { _explicitNullValueExpiresAfterDays = value; AdditionalData?.Remove("expires_after_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_after_days"); else _explicitNullProperties?.Remove("expires_after_days"); } }
         private int? _explicitNullValueExpiresAfterDays = default!;
         /// <summary>The timestamp at which the Konbini payment instructions will expire. Only one of `expires_after_days` or `expires_at` may be set.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>A product descriptor of up to 22 characters, which will appear to customers at the convenience store.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "confirmation_number", n => { ConfirmationNumber = n.GetStringValue(); } },
                 { "expires_after_days", n => { ExpiresAfterDays = n.GetIntValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
                 { "setup_future_usage", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NoneSetupFutureUsage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSetupFutureUsage = default; _explicitNullProperties?.Remove("setup_future_usage"); AdditionalData["setup_future_usage"] = unknown; } else { SetupFutureUsage = parsed; AdditionalData.Remove("setup_future_usage"); } } },
             };
@@ -101,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("confirmation_number", ConfirmationNumber);
             writer.WriteIntValue("expires_after_days", ExpiresAfterDays);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("product_description", ProductDescription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NoneSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

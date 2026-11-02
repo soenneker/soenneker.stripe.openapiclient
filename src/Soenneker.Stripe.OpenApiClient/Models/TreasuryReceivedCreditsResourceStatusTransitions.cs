@@ -24,8 +24,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp describing when the CreditReversal changed status to `posted`</summary>
-        public int? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; AdditionalData?.Remove("posted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
-        private int? _explicitNullValuePostedAt = default!;
+        public long? PostedAt { get => _explicitNullValuePostedAt; set { _explicitNullValuePostedAt = value; AdditionalData?.Remove("posted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posted_at"); else _explicitNullProperties?.Remove("posted_at"); } }
+        private long? _explicitNullValuePostedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "posted_at", n => { PostedAt = n.GetIntValue(); } },
+                { "posted_at", n => { PostedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("posted_at", PostedAt);
+            writer.WriteLongValue("posted_at", PostedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -30,8 +30,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Unix timestamp marking when the account representative accepted their service agreement</summary>
-        public int? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
-        private int? _explicitNullValueDate = default!;
+        public long? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private long? _explicitNullValueDate = default!;
         /// <summary>The IP address from which the account representative accepted their service agreement</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "date", n => { Date = n.GetIntValue(); } },
+                { "date", n => { Date = n.GetLongValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
                 { "service_agreement", n => { ServiceAgreement = n.GetStringValue(); } },
                 { "user_agent", n => { UserAgent = n.GetStringValue(); } },
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("date", Date);
+            writer.WriteLongValue("date", Date);
             writer.WriteStringValue("ip", Ip);
             writer.WriteStringValue("service_agreement", ServiceAgreement);
             writer.WriteStringValue("user_agent", UserAgent);

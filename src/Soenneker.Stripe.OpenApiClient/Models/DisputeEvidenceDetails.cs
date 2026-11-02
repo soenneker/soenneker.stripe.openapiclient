@@ -32,8 +32,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date by which evidence must be submitted in order to successfully challenge dispute. Will be 0 if the customer&apos;s bank or credit card company doesn&apos;t allow a response for this particular dispute.</summary>
-        public int? DueBy { get => _explicitNullValueDueBy; set { _explicitNullValueDueBy = value; AdditionalData?.Remove("due_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_by"); else _explicitNullProperties?.Remove("due_by"); } }
-        private int? _explicitNullValueDueBy = default!;
+        public long? DueBy { get => _explicitNullValueDueBy; set { _explicitNullValueDueBy = value; AdditionalData?.Remove("due_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_by"); else _explicitNullProperties?.Remove("due_by"); } }
+        private long? _explicitNullValueDueBy = default!;
         /// <summary>The enhanced_eligibility property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "due_by", n => { DueBy = n.GetIntValue(); } },
+                { "due_by", n => { DueBy = n.GetLongValue(); } },
                 { "enhanced_eligibility", n => { EnhancedEligibility = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility.CreateFromDiscriminatorValue); } },
                 { "has_evidence", n => { HasEvidence = n.GetBoolValue(); } },
                 { "past_due", n => { PastDue = n.GetBoolValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("due_by", DueBy);
+            writer.WriteLongValue("due_by", DueBy);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibility>("enhanced_eligibility", EnhancedEligibility);
             writer.WriteBoolValue("has_evidence", HasEvidence);
             writer.WriteBoolValue("past_due", PastDue);

@@ -75,8 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Requested { get => _explicitNullValueRequested; set { _explicitNullValueRequested = value; AdditionalData?.Remove("requested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested"); else _explicitNullProperties?.Remove("requested"); } }
         private bool? _explicitNullValueRequested = default!;
         /// <summary>Time at which the capability was requested. Measured in seconds since the Unix epoch.</summary>
-        public int? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
-        private int? _explicitNullValueRequestedAt = default!;
+        public long? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
+        private long? _explicitNullValueRequestedAt = default!;
         /// <summary>The requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CapabilityObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "requested", n => { Requested = n.GetBoolValue(); } },
-                { "requested_at", n => { RequestedAt = n.GetIntValue(); } },
+                { "requested_at", n => { RequestedAt = n.GetLongValue(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CapabilityStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CapabilityObject>("object", Object);
             writer.WriteBoolValue("requested", Requested);
-            writer.WriteIntValue("requested_at", RequestedAt);
+            writer.WriteLongValue("requested_at", RequestedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements>("requirements", Requirements);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CapabilityStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

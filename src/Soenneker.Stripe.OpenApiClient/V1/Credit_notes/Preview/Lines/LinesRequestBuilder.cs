@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines
             public int? CreditAmount { get; set; }
             /// <summary>The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated &apos;Date of issue&apos; printed on the credit note PDF.</summary>
             [QueryParameter("effective_at")]
-            public int? EffectiveAt { get; set; }
+            public long? EffectiveAt { get; set; }
             /// <summary>Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.</summary>
             [QueryParameter("email_type")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewLinesEmailTypeParameter? EmailType { get; set; }

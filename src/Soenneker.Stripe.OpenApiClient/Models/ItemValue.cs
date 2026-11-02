@@ -53,12 +53,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The adjustable_quantity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity? AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity? _explicitNullValueAdjustableQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity? AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity? _explicitNullValueAdjustableQuantity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity _explicitNullValueAdjustableQuantity = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity AdjustableQuantity { get => _explicitNullValueAdjustableQuantity; set { _explicitNullValueAdjustableQuantity = value; AdditionalData?.Remove("adjustable_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adjustable_quantity"); else _explicitNullProperties?.Remove("adjustable_quantity"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity _explicitNullValueAdjustableQuantity = default!;
 #endif
         /// <summary>Total discount amount applied. If no discounts were applied, defaults to 0.</summary>
         public int? AmountDiscount { get => _explicitNullValueAmountDiscount; set { _explicitNullValueAmountDiscount = value; AdditionalData?.Remove("amount_discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_discount"); else _explicitNullProperties?.Remove("amount_discount"); } }
@@ -128,12 +128,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The price used to generate the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice? _explicitNullValuePrice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Price? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Price? _explicitNullValuePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice _explicitNullValuePrice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Price Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Price _explicitNullValuePrice = default!;
 #endif
         /// <summary>The quantity of products being purchased.</summary>
         public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity.CreateFromDiscriminatorValue); } },
+                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity.CreateFromDiscriminatorValue); } },
                 { "amount_discount", n => { AmountDiscount = n.GetIntValue(); } },
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
@@ -184,7 +184,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValueMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ItemValueMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice>(global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>(global::Soenneker.Stripe.OpenApiClient.Models.Price.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -196,7 +196,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValueAdjustableQuantity>("adjustable_quantity", AdjustableQuantity);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteIntValue("amount_discount", AmountDiscount);
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_tax", AmountTax);
@@ -207,7 +207,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValueMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ItemValuePrice>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>("price", Price);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>("taxes", Taxes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

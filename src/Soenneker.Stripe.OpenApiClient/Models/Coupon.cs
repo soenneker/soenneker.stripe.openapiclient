@@ -70,8 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo _explicitNullValueAppliesTo = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>If `amount_off` has been set, the three-letter [ISO code for the currency](https://stripe.com/docs/currencies) of the amount to take off.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,8 +141,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? PercentOff { get => _explicitNullValuePercentOff; set { _explicitNullValuePercentOff = value; AdditionalData?.Remove("percent_off"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_off"); else _explicitNullProperties?.Remove("percent_off"); } }
         private double? _explicitNullValuePercentOff = default!;
         /// <summary>Date after which the coupon can no longer be redeemed.</summary>
-        public int? RedeemBy { get => _explicitNullValueRedeemBy; set { _explicitNullValueRedeemBy = value; AdditionalData?.Remove("redeem_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeem_by"); else _explicitNullProperties?.Remove("redeem_by"); } }
-        private int? _explicitNullValueRedeemBy = default!;
+        public long? RedeemBy { get => _explicitNullValueRedeemBy; set { _explicitNullValueRedeemBy = value; AdditionalData?.Remove("redeem_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeem_by"); else _explicitNullProperties?.Remove("redeem_by"); } }
+        private long? _explicitNullValueRedeemBy = default!;
         /// <summary>Number of times this coupon has been applied to a customer.</summary>
         public int? TimesRedeemed { get => _explicitNullValueTimesRedeemed; set { _explicitNullValueTimesRedeemed = value; AdditionalData?.Remove("times_redeemed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("times_redeemed"); else _explicitNullProperties?.Remove("times_redeemed"); } }
         private int? _explicitNullValueTimesRedeemed = default!;
@@ -176,7 +176,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount_off", n => { AmountOff = n.GetIntValue(); } },
                 { "applies_to", n => { AppliesTo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo>(global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponCurrencyOptionsProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CouponCurrencyOptionsProperty.CreateFromDiscriminatorValue); } },
                 { "duration", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponDuration>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDuration = default; _explicitNullProperties?.Remove("duration"); AdditionalData["duration"] = unknown; } else { Duration = parsed; AdditionalData.Remove("duration"); } } },
@@ -188,7 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "percent_off", n => { PercentOff = n.GetDoubleValue(); } },
-                { "redeem_by", n => { RedeemBy = n.GetIntValue(); } },
+                { "redeem_by", n => { RedeemBy = n.GetLongValue(); } },
                 { "times_redeemed", n => { TimesRedeemed = n.GetIntValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
             };
@@ -202,7 +202,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_off", AmountOff);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo>("applies_to", AppliesTo);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponCurrencyOptionsProperty>("currency_options", CurrencyOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponDuration>("duration", Duration);
@@ -214,7 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponObject>("object", Object);
             writer.WriteDoubleValue("percent_off", PercentOff);
-            writer.WriteIntValue("redeem_by", RedeemBy);
+            writer.WriteLongValue("redeem_by", RedeemBy);
             writer.WriteIntValue("times_redeemed", TimesRedeemed);
             writer.WriteBoolValue("valid", Valid);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

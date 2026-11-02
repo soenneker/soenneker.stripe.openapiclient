@@ -37,12 +37,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specifies which event to cancel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel? Cancel { get => _explicitNullValueCancel; set { _explicitNullValueCancel = value; AdditionalData?.Remove("cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel"); else _explicitNullProperties?.Remove("cancel"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel? _explicitNullValueCancel = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel? Cancel { get => _explicitNullValueCancel; set { _explicitNullValueCancel = value; AdditionalData?.Remove("cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel"); else _explicitNullProperties?.Remove("cancel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel? _explicitNullValueCancel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel Cancel { get => _explicitNullValueCancel; set { _explicitNullValueCancel = value; AdditionalData?.Remove("cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel"); else _explicitNullProperties?.Remove("cancel"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel _explicitNullValueCancel = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel Cancel { get => _explicitNullValueCancel; set { _explicitNullValueCancel = value; AdditionalData?.Remove("cancel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancel"); else _explicitNullProperties?.Remove("cancel"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel _explicitNullValueCancel = default!;
 #endif
         /// <summary>The name of the meter event. Corresponds with the `event_name` field on a meter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cancel", n => { Cancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel.CreateFromDiscriminatorValue); } },
+                { "cancel", n => { Cancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel.CreateFromDiscriminatorValue); } },
                 { "event_name", n => { EventName = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel>("cancel", Cancel);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel>("cancel", Cancel);
             writer.WriteStringValue("event_name", EventName);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>("object", Object);

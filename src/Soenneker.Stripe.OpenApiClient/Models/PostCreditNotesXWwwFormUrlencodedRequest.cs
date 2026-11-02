@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? CreditAmount { get => _explicitNullValueCreditAmount; set { _explicitNullValueCreditAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_amount"); else _explicitNullProperties?.Remove("credit_amount"); } }
         private int? _explicitNullValueCreditAmount = default!;
         /// <summary>The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated &apos;Date of issue&apos; printed on the credit note PDF.</summary>
-        public int? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
-        private int? _explicitNullValueEffectiveAt = default!;
+        public long? EffectiveAt { get => _explicitNullValueEffectiveAt; set { _explicitNullValueEffectiveAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_at"); else _explicitNullProperties?.Remove("effective_at"); } }
+        private long? _explicitNullValueEffectiveAt = default!;
         /// <summary>Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestEmailType? EmailType { get => _explicitNullValueEmailType; set { _explicitNullValueEmailType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_type"); else _explicitNullProperties?.Remove("email_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestEmailType? _explicitNullValueEmailType = default!;
@@ -158,7 +158,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "credit_amount", n => { CreditAmount = n.GetIntValue(); } },
-                { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
+                { "effective_at", n => { EffectiveAt = n.GetLongValue(); } },
                 { "email_type", n => { EmailType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestEmailType>(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("credit_amount", CreditAmount);
-            writer.WriteIntValue("effective_at", EffectiveAt);
+            writer.WriteLongValue("effective_at", EffectiveAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestEmailType>("email_type", EmailType);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("invoice", Invoice);

@@ -80,8 +80,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.DisputeCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,7 +212,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeCharge>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeCharge.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "enhanced_eligibility_types", n => { EnhancedEligibilityTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityTypesItem>()?.AsList(); } },
                 { "evidence", n => { Evidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.CreateFromDiscriminatorValue); } },
@@ -238,7 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>("balance_transactions", BalanceTransactions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeCharge>("charge", Charge);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityTypesItem>("enhanced_eligibility_types", EnhancedEligibilityTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence>("evidence", Evidence);

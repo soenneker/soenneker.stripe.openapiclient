@@ -74,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction _explicitNullValueBalanceTransaction = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,22 +161,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment-method-specific configuration for this top-up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions? PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions? _explicitNullValuePaymentMethodOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions PaymentMethodOptions { get => _explicitNullValuePaymentMethodOptions; set { _explicitNullValuePaymentMethodOptions = value; AdditionalData?.Remove("payment_method_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_options"); else _explicitNullProperties?.Remove("payment_method_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions _explicitNullValuePaymentMethodOptions = default!;
 #endif
         /// <summary>The source field is deprecated. It might not always be present in the API response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TopupSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TopupSource? _explicitNullValueSource = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Source? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Source? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TopupSource Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TopupSource _explicitNullValueSource = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Source Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Source _explicitNullValueSource = default!;
 #endif
         /// <summary>Extra information about a top-up. This will appear on your source&apos;s bank statement. It must contain at least one letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -228,7 +228,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expected_availability_date", n => { ExpectedAvailabilityDate = n.GetIntValue(); } },
@@ -240,8 +240,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod.CreateFromDiscriminatorValue); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>(global::Soenneker.Stripe.OpenApiClient.Models.TopupSource.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(global::Soenneker.Stripe.OpenApiClient.Models.Source.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transfer_group", n => { TransferGroup = n.GetStringValue(); } },
@@ -256,7 +256,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction>("balance_transaction", BalanceTransaction);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("expected_availability_date", ExpectedAvailabilityDate);
@@ -268,8 +268,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod>("payment_method", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupResourcePaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>("source", Source);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>("status", Status);
             writer.WriteStringValue("transfer_group", TransferGroup);

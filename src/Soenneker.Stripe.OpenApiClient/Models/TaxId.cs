@@ -55,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>ID of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,12 +96,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account or customer the tax ID belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner? _explicitNullValueOwner = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner _explicitNullValueOwner = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `fo_vat`, `gb_vat`, `ge_vat`, `gi_tin`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `ic_nif`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `it_cf`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `py_ruc`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -119,12 +119,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Tax ID verification information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed? _explicitNullValueVerification = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed _explicitNullValueVerification = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxId"/> and sets the default values.
@@ -152,16 +152,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.TaxIdCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner>(global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner>(global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "value", n => { Value = n.GetStringValue(); } },
-                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed.CreateFromDiscriminatorValue); } },
+                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification>(global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -172,16 +172,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdOwner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIDsOwner>("owner", Owner);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdType>("type", Type);
             writer.WriteStringValue("value", Value);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationComposed>("verification", Verification);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerification>("verification", Verification);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

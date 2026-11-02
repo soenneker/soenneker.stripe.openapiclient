@@ -32,8 +32,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The departure_at property</summary>
-        public int? DepartureAt { get => _explicitNullValueDepartureAt; set { _explicitNullValueDepartureAt = value; AdditionalData?.Remove("departure_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_at"); else _explicitNullProperties?.Remove("departure_at"); } }
-        private int? _explicitNullValueDepartureAt = default!;
+        public long? DepartureAt { get => _explicitNullValueDepartureAt; set { _explicitNullValueDepartureAt = value; AdditionalData?.Remove("departure_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("departure_at"); else _explicitNullProperties?.Remove("departure_at"); } }
+        private long? _explicitNullValueDepartureAt = default!;
         /// <summary>The passenger_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "departure_at", n => { DepartureAt = n.GetIntValue(); } },
+                { "departure_at", n => { DepartureAt = n.GetLongValue(); } },
                 { "passenger_name", n => { PassengerName = n.GetStringValue(); } },
                 { "refundable", n => { Refundable = n.GetBoolValue(); } },
                 { "segments", n => { Segments = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("departure_at", DepartureAt);
+            writer.WriteLongValue("departure_at", DepartureAt);
             writer.WriteStringValue("passenger_name", PassengerName);
             writer.WriteBoolValue("refundable", Refundable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFlightSegmentsItem>("segments", Segments);

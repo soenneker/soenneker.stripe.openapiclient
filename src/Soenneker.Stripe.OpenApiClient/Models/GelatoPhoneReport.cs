@@ -31,12 +31,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed? _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError _explicitNullValueError = default!;
 #endif
         /// <summary>Phone to be verified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError>("error", Error);
             writer.WriteStringValue("phone", Phone);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -47,12 +47,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The place where your business is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; AdditionalData?.Remove("head_office"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? _explicitNullValueHeadOffice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice? HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; AdditionalData?.Remove("head_office"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice? _explicitNullValueHeadOffice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; AdditionalData?.Remove("head_office"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice _explicitNullValueHeadOffice = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice HeadOffice { get => _explicitNullValueHeadOffice; set { _explicitNullValueHeadOffice = value; AdditionalData?.Remove("head_office"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_office"); else _explicitNullProperties?.Remove("head_office"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice _explicitNullValueHeadOffice = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
@@ -99,7 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "defaults", n => { Defaults = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults.CreateFromDiscriminatorValue); } },
-                { "head_office", n => { HeadOffice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice>(global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice.CreateFromDiscriminatorValue); } },
+                { "head_office", n => { HeadOffice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
@@ -114,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults>("defaults", Defaults);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice>("head_office", HeadOffice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice>("head_office", HeadOffice);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus>("status", Status);

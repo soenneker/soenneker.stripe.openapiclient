@@ -74,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.ReviewClosedReason? ClosedReason { get => _explicitNullValueClosedReason; set { _explicitNullValueClosedReason = value; AdditionalData?.Remove("closed_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_reason"); else _explicitNullProperties?.Remove("closed_reason"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ReviewClosedReason? _explicitNullValueClosedReason = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,12 +99,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information related to the location of the payment. Note that this information is an approximation and attempts to locate the nearest population center - it should not be used to determine a specific address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation? IpAddressLocation { get => _explicitNullValueIpAddressLocation; set { _explicitNullValueIpAddressLocation = value; AdditionalData?.Remove("ip_address_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_location"); else _explicitNullProperties?.Remove("ip_address_location"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation? _explicitNullValueIpAddressLocation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation? IpAddressLocation { get => _explicitNullValueIpAddressLocation; set { _explicitNullValueIpAddressLocation = value; AdditionalData?.Remove("ip_address_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_location"); else _explicitNullProperties?.Remove("ip_address_location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation? _explicitNullValueIpAddressLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation IpAddressLocation { get => _explicitNullValueIpAddressLocation; set { _explicitNullValueIpAddressLocation = value; AdditionalData?.Remove("ip_address_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_location"); else _explicitNullProperties?.Remove("ip_address_location"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation _explicitNullValueIpAddressLocation = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation IpAddressLocation { get => _explicitNullValueIpAddressLocation; set { _explicitNullValueIpAddressLocation = value; AdditionalData?.Remove("ip_address_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_location"); else _explicitNullProperties?.Remove("ip_address_location"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation _explicitNullValueIpAddressLocation = default!;
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
@@ -141,12 +141,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information related to the browsing session of the user who initiated the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession? Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession? _explicitNullValueSession = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession? Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession? _explicitNullValueSession = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession _explicitNullValueSession = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession _explicitNullValueSession = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Review"/> and sets the default values.
@@ -176,17 +176,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_zip", n => { BillingZip = n.GetStringValue(); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewCharge>(global::Soenneker.Stripe.OpenApiClient.Models.ReviewCharge.CreateFromDiscriminatorValue); } },
                 { "closed_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewClosedReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueClosedReason = default; _explicitNullProperties?.Remove("closed_reason"); AdditionalData["closed_reason"] = unknown; } else { ClosedReason = parsed; AdditionalData.Remove("closed_reason"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "ip_address_location", n => { IpAddressLocation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation>(global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation.CreateFromDiscriminatorValue); } },
+                { "ip_address_location", n => { IpAddressLocation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation>(global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "open", n => { Open = n.GetBoolValue(); } },
                 { "opened_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewOpenedReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOpenedReason = default; _explicitNullProperties?.Remove("opened_reason"); AdditionalData["opened_reason"] = unknown; } else { OpenedReason = parsed; AdditionalData.Remove("opened_reason"); } } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.ReviewPaymentIntent.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
-                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession>(global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession.CreateFromDiscriminatorValue); } },
+                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession>(global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -199,17 +199,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("billing_zip", BillingZip);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewCharge>("charge", Charge);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewClosedReason>("closed_reason", ClosedReason);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewIpAddressLocation>("ip_address_location", IpAddressLocation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation>("ip_address_location", IpAddressLocation);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewObject>("object", Object);
             writer.WriteBoolValue("open", Open);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewOpenedReason>("opened_reason", OpenedReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewPaymentIntent>("payment_intent", PaymentIntent);
             writer.WriteStringValue("reason", Reason);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReviewSession>("session", Session);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession>("session", Session);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

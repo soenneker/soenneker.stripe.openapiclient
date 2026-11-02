@@ -88,12 +88,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about US bank account networks that can be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks? Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks? _explicitNullValueNetworks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks? Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks? _explicitNullValueNetworks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks _explicitNullValueNetworks = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks Networks { get => _explicitNullValueNetworks; set { _explicitNullValueNetworks = value; AdditionalData?.Remove("networks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networks"); else _explicitNullProperties?.Remove("networks"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks _explicitNullValueNetworks = default!;
 #endif
         /// <summary>Routing number of the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,12 +108,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the future reusability of this PaymentMethod.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed? StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; AdditionalData?.Remove("status_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed? _explicitNullValueStatusDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails? StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; AdditionalData?.Remove("status_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails? _explicitNullValueStatusDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; AdditionalData?.Remove("status_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed _explicitNullValueStatusDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails StatusDetails { get => _explicitNullValueStatusDetails; set { _explicitNullValueStatusDetails = value; AdditionalData?.Remove("status_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_details"); else _explicitNullProperties?.Remove("status_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails _explicitNullValueStatusDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount"/> and sets the default values.
@@ -146,9 +146,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_connections_account", n => { FinancialConnectionsAccount = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks.CreateFromDiscriminatorValue); } },
+                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks.CreateFromDiscriminatorValue); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
-                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed.CreateFromDiscriminatorValue); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -164,9 +164,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("financial_connections_account", FinancialConnectionsAccount);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks>("networks", Networks);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks>("networks", Networks);
             writer.WriteStringValue("routing_number", RoutingNumber);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed>("status_details", StatusDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails>("status_details", StatusDetails);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

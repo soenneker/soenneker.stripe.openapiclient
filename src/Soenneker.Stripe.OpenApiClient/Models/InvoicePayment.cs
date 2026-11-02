@@ -53,8 +53,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? AmountRequested { get => _explicitNullValueAmountRequested; set { _explicitNullValueAmountRequested = value; AdditionalData?.Remove("amount_requested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_requested"); else _explicitNullProperties?.Remove("amount_requested"); } }
         private int? _explicitNullValueAmountRequested = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,7 +151,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount_paid", n => { AmountPaid = n.GetIntValue(); } },
                 { "amount_requested", n => { AmountRequested = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice.CreateFromDiscriminatorValue); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_paid", AmountPaid);
             writer.WriteIntValue("amount_requested", AmountRequested);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice>("invoice", Invoice);

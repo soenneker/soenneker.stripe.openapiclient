@@ -66,8 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCheckoutSession _explicitNullValueCheckoutSession = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The ID of the credit note (if any) related to the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -187,7 +187,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "checkout_session", n => { CheckoutSession = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCheckoutSession>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCheckoutSession.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "credit_note", n => { CreditNote = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCreditNote>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCreditNote.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCustomer.CreateFromDiscriminatorValue); } },
@@ -211,7 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCheckoutSession>("checkout_session", CheckoutSession);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCreditNote>("credit_note", CreditNote);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionCustomer>("customer", Customer);

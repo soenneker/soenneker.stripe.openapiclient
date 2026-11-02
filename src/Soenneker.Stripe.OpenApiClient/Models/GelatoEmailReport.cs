@@ -41,12 +41,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed? _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError _explicitNullValueError = default!;
 #endif
         /// <summary>Status of this `email` check.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError>("error", Error);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

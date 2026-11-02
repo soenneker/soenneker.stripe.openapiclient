@@ -34,12 +34,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s postal address (for example, home or business location).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The type of customer address provided.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource? AddressSource { get => _explicitNullValueAddressSource; set { _explicitNullValueAddressSource = value; AdditionalData?.Remove("address_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_source"); else _explicitNullProperties?.Remove("address_source"); } }
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress.CreateFromDiscriminatorValue); } },
                 { "address_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressSource = default; _explicitNullProperties?.Remove("address_source"); AdditionalData["address_source"] = unknown; } else { AddressSource = parsed; AdditionalData.Remove("address_source"); } } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "tax_ids", n => { TaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress>("address", Address);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>("address_source", AddressSource);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride>("taxability_override", TaxabilityOverride);

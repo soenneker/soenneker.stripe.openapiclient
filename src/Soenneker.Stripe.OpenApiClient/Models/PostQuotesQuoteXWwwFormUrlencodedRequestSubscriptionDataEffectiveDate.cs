@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1"/>, <see cref="int"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1"/>, <see cref="long"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate : IComposedTypeWrapper, IParsable
@@ -18,8 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-        /// <summary>Composed type representation for type <see cref="int"/></summary>
-        public int? Integer { get; set; }
+        /// <summary>Composed type representation for type <see cref="long"/></summary>
+        public long? Int64 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1"/></summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1? PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1 { get; set; }
         /// <summary>Composed type representation for type <see cref="string"/></summary>
@@ -39,9 +39,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDate();
-            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int integerValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is (global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong) && parseNode.GetLongValue() is long int64Value)
             {
-                result.Integer = integerValue;
+                result.Int64 = int64Value;
             }
             else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.Integer == null && result.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1 == null && result.String == null) result.UnrecognizedValue = unionPayload;
+            if (result.Int64 == null && result.PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1 == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -73,12 +73,12 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (Integer == null && PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (Int64 == null && PostQuotesQuoteXWwwFormUrlencodedRequestSubscriptionDataEffectiveDateAnyOf1 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(Integer != null)
+            if(Int64 != null)
             {
-                writer.WriteIntValue(null, Integer);
+                writer.WriteLongValue(null, Int64);
             }
             else if(String != null)
             {

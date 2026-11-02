@@ -68,8 +68,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The end_date property</summary>
-        public int? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
-        private int? _explicitNullValueEndDate = default!;
+        public long? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        private long? _explicitNullValueEndDate = default!;
         /// <summary>The interval property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsInterval? _explicitNullValueInterval = default!;
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueReference = default!;
 #endif
         /// <summary>The start_date property</summary>
-        public int? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
-        private int? _explicitNullValueStartDate = default!;
+        public long? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private long? _explicitNullValueStartDate = default!;
         /// <summary>The supported_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,11 +128,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsAmountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAmountType = default; _explicitNullProperties?.Remove("amount_type"); AdditionalData["amount_type"] = unknown; } else { AmountType = parsed; AdditionalData.Remove("amount_type"); } } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "end_date", n => { EndDate = n.GetIntValue(); } },
+                { "end_date", n => { EndDate = n.GetLongValue(); } },
                 { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "start_date", n => { StartDate = n.GetIntValue(); } },
+                { "start_date", n => { StartDate = n.GetLongValue(); } },
                 { "supported_types", n => { SupportedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>()?.AsList(); } },
             };
         }
@@ -147,11 +147,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsAmountType>("amount_type", AmountType);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteIntValue("end_date", EndDate);
+            writer.WriteLongValue("end_date", EndDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsInterval>("interval", Interval);
             writer.WriteIntValue("interval_count", IntervalCount);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteIntValue("start_date", StartDate);
+            writer.WriteLongValue("start_date", StartDate);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>("supported_types", SupportedTypes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

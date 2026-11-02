@@ -39,8 +39,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePausedStatusDetailsSubscription _explicitNullValueSubscription = default!;
 #endif
         /// <summary>Unix timestamp in seconds of when the subscription status transitioned to `paused`.</summary>
-        public int? TransitionedAt { get => _explicitNullValueTransitionedAt; set { _explicitNullValueTransitionedAt = value; AdditionalData?.Remove("transitioned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitioned_at"); else _explicitNullProperties?.Remove("transitioned_at"); } }
-        private int? _explicitNullValueTransitionedAt = default!;
+        public long? TransitionedAt { get => _explicitNullValueTransitionedAt; set { _explicitNullValueTransitionedAt = value; AdditionalData?.Remove("transitioned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitioned_at"); else _explicitNullProperties?.Remove("transitioned_at"); } }
+        private long? _explicitNullValueTransitionedAt = default!;
         /// <summary>The type of pause settings.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType? _explicitNullValueType = default!;
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePausedStatusDetailsSubscription>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePausedStatusDetailsSubscription.CreateFromDiscriminatorValue); } },
-                { "transitioned_at", n => { TransitionedAt = n.GetIntValue(); } },
+                { "transitioned_at", n => { TransitionedAt = n.GetLongValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePausedStatusDetailsSubscription>("subscription", Subscription);
-            writer.WriteIntValue("transitioned_at", TransitionedAt);
+            writer.WriteLongValue("transitioned_at", TransitionedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

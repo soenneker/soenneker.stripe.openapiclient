@@ -64,8 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The ID of the [Price](https://docs.stripe.com/api/prices) object that is the default price for this product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,12 +145,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The dimensions of this product for shipping purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions? PackageDimensions { get => _explicitNullValuePackageDimensions; set { _explicitNullValuePackageDimensions = value; AdditionalData?.Remove("package_dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_dimensions"); else _explicitNullProperties?.Remove("package_dimensions"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions? _explicitNullValuePackageDimensions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions? PackageDimensions { get => _explicitNullValuePackageDimensions; set { _explicitNullValuePackageDimensions = value; AdditionalData?.Remove("package_dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_dimensions"); else _explicitNullProperties?.Remove("package_dimensions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions? _explicitNullValuePackageDimensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions PackageDimensions { get => _explicitNullValuePackageDimensions; set { _explicitNullValuePackageDimensions = value; AdditionalData?.Remove("package_dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_dimensions"); else _explicitNullProperties?.Remove("package_dimensions"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions _explicitNullValuePackageDimensions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions PackageDimensions { get => _explicitNullValuePackageDimensions; set { _explicitNullValuePackageDimensions = value; AdditionalData?.Remove("package_dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_dimensions"); else _explicitNullProperties?.Remove("package_dimensions"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions _explicitNullValuePackageDimensions = default!;
 #endif
         /// <summary>Whether this product is shipped (i.e., physical goods).</summary>
         public bool? Shippable { get => _explicitNullValueShippable; set { _explicitNullValueShippable = value; AdditionalData?.Remove("shippable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippable"); else _explicitNullProperties?.Remove("shippable"); } }
@@ -178,12 +178,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Tax details for this product, including the [tax code](/tax/tax-codes) and an optional performance location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails? TaxDetails { get => _explicitNullValueTaxDetails; set { _explicitNullValueTaxDetails = value; AdditionalData?.Remove("tax_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_details"); else _explicitNullProperties?.Remove("tax_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails? _explicitNullValueTaxDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails? TaxDetails { get => _explicitNullValueTaxDetails; set { _explicitNullValueTaxDetails = value; AdditionalData?.Remove("tax_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_details"); else _explicitNullProperties?.Remove("tax_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails? _explicitNullValueTaxDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails TaxDetails { get => _explicitNullValueTaxDetails; set { _explicitNullValueTaxDetails = value; AdditionalData?.Remove("tax_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_details"); else _explicitNullProperties?.Remove("tax_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails _explicitNullValueTaxDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails TaxDetails { get => _explicitNullValueTaxDetails; set { _explicitNullValueTaxDetails = value; AdditionalData?.Remove("tax_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_details"); else _explicitNullProperties?.Remove("tax_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails _explicitNullValueTaxDetails = default!;
 #endif
         /// <summary>A label that represents units of this product. When set, this will be included in customers&apos; receipts, invoices, Checkout, and the customer portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -196,8 +196,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueUnitLabel = default!;
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>A URL of a publicly-accessible webpage for this product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -234,7 +234,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "default_price", n => { DefaultPrice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductDefaultPrice>(global::Soenneker.Stripe.OpenApiClient.Models.ProductDefaultPrice.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -244,13 +244,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ProductMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "package_dimensions", n => { PackageDimensions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions>(global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions.CreateFromDiscriminatorValue); } },
+                { "package_dimensions", n => { PackageDimensions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions>(global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions.CreateFromDiscriminatorValue); } },
                 { "shippable", n => { Shippable = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode>(global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode.CreateFromDiscriminatorValue); } },
-                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails.CreateFromDiscriminatorValue); } },
+                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails.CreateFromDiscriminatorValue); } },
                 { "unit_label", n => { UnitLabel = n.GetStringValue(); } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -262,7 +262,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductDefaultPrice>("default_price", DefaultPrice);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
@@ -272,13 +272,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductPackageDimensions>("package_dimensions", PackageDimensions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions>("package_dimensions", PackageDimensions);
             writer.WriteBoolValue("shippable", Shippable);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode>("tax_code", TaxCode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails>("tax_details", TaxDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductTaxDetailsResourceTaxDetails>("tax_details", TaxDetails);
             writer.WriteStringValue("unit_label", UnitLabel);
-            writer.WriteIntValue("updated", Updated);
+            writer.WriteLongValue("updated", Updated);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

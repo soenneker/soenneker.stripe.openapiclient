@@ -121,8 +121,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed _explicitNullValueGuaranteed = default!;
 #endif
         /// <summary>When the reported payment was initiated. Measured in seconds since the Unix epoch.</summary>
-        public int? InitiatedAt { get => _explicitNullValueInitiatedAt; set { _explicitNullValueInitiatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiated_at"); else _explicitNullProperties?.Remove("initiated_at"); } }
-        private int? _explicitNullValueInitiatedAt = default!;
+        public long? InitiatedAt { get => _explicitNullValueInitiatedAt; set { _explicitNullValueInitiatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiated_at"); else _explicitNullProperties?.Remove("initiated_at"); } }
+        private long? _explicitNullValueInitiatedAt = default!;
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -192,7 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "failed", n => { Failed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestFailed>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestFailed.CreateFromDiscriminatorValue); } },
                 { "guaranteed", n => { Guaranteed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed.CreateFromDiscriminatorValue); } },
-                { "initiated_at", n => { InitiatedAt = n.GetIntValue(); } },
+                { "initiated_at", n => { InitiatedAt = n.GetLongValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestOutcome>(); } },
                 { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestPaymentMethodDetails.CreateFromDiscriminatorValue); } },
@@ -215,7 +215,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestFailed>("failed", Failed);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestGuaranteed>("guaranteed", Guaranteed);
-            writer.WriteIntValue("initiated_at", InitiatedAt);
+            writer.WriteLongValue("initiated_at", InitiatedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);

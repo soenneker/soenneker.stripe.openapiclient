@@ -119,26 +119,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The address_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana? _explicitNullValueAddressKana = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana _explicitNullValueAddressKana = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The address_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji? _explicitNullValueAddressKanji = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji _explicitNullValueAddressKanji = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The dob property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -202,12 +202,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The future_requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed? _explicitNullValueFutureRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements? FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements? _explicitNullValueFutureRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed _explicitNullValueFutureRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements FutureRequirements { get => _explicitNullValueFutureRequirements; set { _explicitNullValueFutureRequirements = value; AdditionalData?.Remove("future_requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_requirements"); else _explicitNullProperties?.Remove("future_requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements _explicitNullValueFutureRequirements = default!;
 #endif
         /// <summary>The person&apos;s gender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -334,12 +334,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed? _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements? Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements? _explicitNullValueRequirements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed _explicitNullValueRequirements = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements Requirements { get => _explicitNullValueRequirements; set { _explicitNullValueRequirements = value; AdditionalData?.Remove("requirements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements"); else _explicitNullProperties?.Remove("requirements"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements _explicitNullValueRequirements = default!;
 #endif
         /// <summary>Whether the last four digits of the person&apos;s Social Security number have been provided (U.S. only).</summary>
         public bool? SsnLast4Provided { get => _explicitNullValueSsnLast4Provided; set { _explicitNullValueSsnLast4Provided = value; AdditionalData?.Remove("ssn_last_4_provided"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssn_last_4_provided"); else _explicitNullProperties?.Remove("ssn_last_4_provided"); } }
@@ -347,12 +347,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Demographic data related to the person.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed? UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; AdditionalData?.Remove("us_cfpb_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed? _explicitNullValueUsCfpbData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData? UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; AdditionalData?.Remove("us_cfpb_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData? _explicitNullValueUsCfpbData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; AdditionalData?.Remove("us_cfpb_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed _explicitNullValueUsCfpbData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData UsCfpbData { get => _explicitNullValueUsCfpbData; set { _explicitNullValueUsCfpbData = value; AdditionalData?.Remove("us_cfpb_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_cfpb_data"); else _explicitNullProperties?.Remove("us_cfpb_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData _explicitNullValueUsCfpbData = default!;
 #endif
         /// <summary>The verification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -392,16 +392,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "additional_tos_acceptances", n => { AdditionalTosAcceptances = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptances>(global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptances.CreateFromDiscriminatorValue); } },
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
-                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana>(global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana.CreateFromDiscriminatorValue); } },
-                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji>(global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress.CreateFromDiscriminatorValue); } },
+                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDob>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDob.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "first_name_kana", n => { FirstNameKana = n.GetStringValue(); } },
                 { "first_name_kanji", n => { FirstNameKanji = n.GetStringValue(); } },
                 { "full_name_aliases", n => { FullNameAliases = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed.CreateFromDiscriminatorValue); } },
+                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements.CreateFromDiscriminatorValue); } },
                 { "gender", n => { Gender = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "id_number_provided", n => { IdNumberProvided = n.GetBoolValue(); } },
@@ -417,9 +417,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "political_exposure", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonPoliticalExposure>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePoliticalExposure = default; _explicitNullProperties?.Remove("political_exposure"); AdditionalData["political_exposure"] = unknown; } else { PoliticalExposure = parsed; AdditionalData.Remove("political_exposure"); } } },
                 { "registered_address", n => { RegisteredAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "relationship", n => { Relationship = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRelationship>(global::Soenneker.Stripe.OpenApiClient.Models.PersonRelationship.CreateFromDiscriminatorValue); } },
-                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements.CreateFromDiscriminatorValue); } },
                 { "ssn_last_4_provided", n => { SsnLast4Provided = n.GetBoolValue(); } },
-                { "us_cfpb_data", n => { UsCfpbData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed.CreateFromDiscriminatorValue); } },
+                { "us_cfpb_data", n => { UsCfpbData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData>(global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData.CreateFromDiscriminatorValue); } },
                 { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerification>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerification.CreateFromDiscriminatorValue); } },
             };
         }
@@ -433,16 +433,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("account", Account);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptances>("additional_tos_acceptances", AdditionalTosAcceptances);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKana>("address_kana", AddressKana);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAddressKanji>("address_kanji", AddressKanji);
-            writer.WriteIntValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>("address_kana", AddressKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>("address_kanji", AddressKanji);
+            writer.WriteLongValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDob>("dob", Dob);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("first_name_kana", FirstNameKana);
             writer.WriteStringValue("first_name_kanji", FirstNameKanji);
             writer.WriteCollectionOfPrimitiveValues<string>("full_name_aliases", FullNameAliases);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirementsComposed>("future_requirements", FutureRequirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonFutureRequirements>("future_requirements", FutureRequirements);
             writer.WriteStringValue("gender", Gender);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("id_number_provided", IdNumberProvided);
@@ -458,9 +458,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonPoliticalExposure>("political_exposure", PoliticalExposure);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("registered_address", RegisteredAddress);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRelationship>("relationship", Relationship);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirements>("requirements", Requirements);
             writer.WriteBoolValue("ssn_last_4_provided", SsnLast4Provided);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed>("us_cfpb_data", UsCfpbData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbData>("us_cfpb_data", UsCfpbData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerification>("verification", Verification);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

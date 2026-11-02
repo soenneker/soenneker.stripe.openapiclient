@@ -67,8 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus _explicitNullValueApplePay = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The domain name that this payment method domain object represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -165,7 +165,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
                 { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "domain_name", n => { DomainName = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
@@ -186,7 +186,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("apple_pay", ApplePay);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("domain_name", DomainName);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("google_pay", GooglePay);

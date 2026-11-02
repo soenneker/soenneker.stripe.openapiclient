@@ -110,12 +110,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The address to which a physical product was shipped. All fields are required for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress? _explicitNullValueShippingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress _explicitNullValueShippingAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction"/> and sets the default values.
@@ -149,7 +149,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer_email_address", n => { CustomerEmailAddress = n.GetStringValue(); } },
                 { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetStringValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -166,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("customer_email_address", CustomerEmailAddress);
             writer.WriteStringValue("customer_purchase_ip", CustomerPurchaseIp);
             writer.WriteStringValue("product_description", ProductDescription);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress>("shipping_address", ShippingAddress);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

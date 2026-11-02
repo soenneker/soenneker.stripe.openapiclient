@@ -74,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile _explicitNullValueBusinessProfile = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The default URL to redirect customers to when they click on the portal&apos;s link to return to your website. This can be [overridden](https://docs.stripe.com/api/customer_portal/sessions/create#create_portal_session-return_url) when creating the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,8 +146,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject? _explicitNullValueObject = default!;
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration"/> and sets the default values.
         /// </summary>
@@ -176,7 +176,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication.CreateFromDiscriminatorValue); } },
                 { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile>(global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "default_return_url", n => { DefaultReturnUrl = n.GetStringValue(); } },
                 { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFeatures.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -186,7 +186,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -199,7 +199,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile>("business_profile", BusinessProfile);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("default_return_url", DefaultReturnUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFeatures>("features", Features);
             writer.WriteStringValue("id", Id);
@@ -209,7 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>("object", Object);
-            writer.WriteIntValue("updated", Updated);
+            writer.WriteLongValue("updated", Updated);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

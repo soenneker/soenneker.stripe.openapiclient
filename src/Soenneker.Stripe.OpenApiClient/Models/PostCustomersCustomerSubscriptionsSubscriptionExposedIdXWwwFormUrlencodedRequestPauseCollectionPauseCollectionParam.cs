@@ -29,8 +29,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPauseCollectionPauseCollectionParamBehavior? Behavior { get => _explicitNullValueBehavior; set { _explicitNullValueBehavior = value; AdditionalData?.Remove("behavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behavior"); else _explicitNullProperties?.Remove("behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPauseCollectionPauseCollectionParamBehavior? _explicitNullValueBehavior = default!;
         /// <summary>The resumes_at property</summary>
-        public int? ResumesAt { get => _explicitNullValueResumesAt; set { _explicitNullValueResumesAt = value; AdditionalData?.Remove("resumes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resumes_at"); else _explicitNullProperties?.Remove("resumes_at"); } }
-        private int? _explicitNullValueResumesAt = default!;
+        public long? ResumesAt { get => _explicitNullValueResumesAt; set { _explicitNullValueResumesAt = value; AdditionalData?.Remove("resumes_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resumes_at"); else _explicitNullProperties?.Remove("resumes_at"); } }
+        private long? _explicitNullValueResumesAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPauseCollectionPauseCollectionParam"/> and sets the default values.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPauseCollectionPauseCollectionParamBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBehavior = default; _explicitNullProperties?.Remove("behavior"); AdditionalData["behavior"] = unknown; } else { Behavior = parsed; AdditionalData.Remove("behavior"); } } },
-                { "resumes_at", n => { ResumesAt = n.GetIntValue(); } },
+                { "resumes_at", n => { ResumesAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPauseCollectionPauseCollectionParamBehavior>("behavior", Behavior);
-            writer.WriteIntValue("resumes_at", ResumesAt);
+            writer.WriteLongValue("resumes_at", ResumesAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -71,12 +71,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Encapsulates configuration of the alert to monitor usage on a specific [Billing Meter](https://docs.stripe.com/api/billing/meter).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold? UsageThreshold { get => _explicitNullValueUsageThreshold; set { _explicitNullValueUsageThreshold = value; AdditionalData?.Remove("usage_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_threshold"); else _explicitNullProperties?.Remove("usage_threshold"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold? _explicitNullValueUsageThreshold = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig? UsageThreshold { get => _explicitNullValueUsageThreshold; set { _explicitNullValueUsageThreshold = value; AdditionalData?.Remove("usage_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_threshold"); else _explicitNullProperties?.Remove("usage_threshold"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig? _explicitNullValueUsageThreshold = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold UsageThreshold { get => _explicitNullValueUsageThreshold; set { _explicitNullValueUsageThreshold = value; AdditionalData?.Remove("usage_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_threshold"); else _explicitNullProperties?.Remove("usage_threshold"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold _explicitNullValueUsageThreshold = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig UsageThreshold { get => _explicitNullValueUsageThreshold; set { _explicitNullValueUsageThreshold = value; AdditionalData?.Remove("usage_threshold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage_threshold"); else _explicitNullProperties?.Remove("usage_threshold"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig _explicitNullValueUsageThreshold = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert"/> and sets the default values.
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "usage_threshold", n => { UsageThreshold = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold>(global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold.CreateFromDiscriminatorValue); } },
+                { "usage_threshold", n => { UsageThreshold = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig>(global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -125,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertStatus>("status", Status);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold>("usage_threshold", UsageThreshold);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig>("usage_threshold", UsageThreshold);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

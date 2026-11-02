@@ -72,8 +72,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>An arbitrary string attached to the tax rate for your internal use only. It will not be visible to your customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,12 +100,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount of the tax rate when the `rate_type` is `flat_amount`. Tax rates with `rate_type` `percentage` can vary based on the transaction, resulting in this field being `null`. This field exposes the amount and currency of the flat tax rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed? _explicitNullValueFlatAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? _explicitNullValueFlatAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed _explicitNullValueFlatAmount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount FlatAmount { get => _explicitNullValueFlatAmount; set { _explicitNullValueFlatAmount = value; AdditionalData?.Remove("flat_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_amount"); else _explicitNullProperties?.Remove("flat_amount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount _explicitNullValueFlatAmount = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -195,11 +195,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "effective_percentage", n => { EffectivePercentage = n.GetDoubleValue(); } },
-                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed.CreateFromDiscriminatorValue); } },
+                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "inclusive", n => { Inclusive = n.GetBoolValue(); } },
                 { "jurisdiction", n => { Jurisdiction = n.GetStringValue(); } },
@@ -222,11 +222,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("country", Country);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteDoubleValue("effective_percentage", EffectivePercentage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed>("flat_amount", FlatAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>("flat_amount", FlatAmount);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("inclusive", Inclusive);
             writer.WriteStringValue("jurisdiction", Jurisdiction);

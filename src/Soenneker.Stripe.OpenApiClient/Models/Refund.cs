@@ -96,8 +96,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge _explicitNullValueCharge = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -315,7 +315,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>(global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
@@ -349,7 +349,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundBalanceTransaction>("balance_transaction", BalanceTransaction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>("charge", Charge);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);

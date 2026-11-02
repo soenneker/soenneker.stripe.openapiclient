@@ -37,12 +37,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds? _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds? BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds? _explicitNullValueBillingThresholds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds _explicitNullValueBillingThresholds = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds BillingThresholds { get => _explicitNullValueBillingThresholds; set { _explicitNullValueBillingThresholds = value; AdditionalData?.Remove("billing_thresholds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_thresholds"); else _explicitNullProperties?.Remove("billing_thresholds"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds _explicitNullValueBillingThresholds = default!;
 #endif
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettings>(global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettings.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemPrice>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemPrice.CreateFromDiscriminatorValue); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>("billing_thresholds", BillingThresholds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettings>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItemPrice>("price", Price);

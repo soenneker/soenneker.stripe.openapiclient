@@ -39,22 +39,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Date of birth.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob? _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate? _explicitNullValueDob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate _explicitNullValueDob = default!;
 #endif
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed? _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed _explicitNullValueError = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError _explicitNullValueError = default!;
 #endif
         /// <summary>First name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,8 +117,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob.CreateFromDiscriminatorValue); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed.CreateFromDiscriminatorValue); } },
+                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError.CreateFromDiscriminatorValue); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "id_number", n => { IdNumber = n.GetStringValue(); } },
                 { "id_number_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportIdNumberType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIdNumberType = default; _explicitNullProperties?.Remove("id_number_type"); AdditionalData["id_number_type"] = unknown; } else { IdNumberType = parsed; AdditionalData.Remove("id_number_type"); } } },
@@ -133,8 +133,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob>("dob", Dob);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate>("dob", Dob);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError>("error", Error);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("id_number", IdNumber);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportIdNumberType>("id_number_type", IdNumberType);

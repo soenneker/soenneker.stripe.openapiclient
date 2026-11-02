@@ -35,12 +35,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The PaymentRecord refund details associated with this credit note refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund? PaymentRecordRefund { get => _explicitNullValuePaymentRecordRefund; set { _explicitNullValuePaymentRecordRefund = value; AdditionalData?.Remove("payment_record_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record_refund"); else _explicitNullProperties?.Remove("payment_record_refund"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund? _explicitNullValuePaymentRecordRefund = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund? PaymentRecordRefund { get => _explicitNullValuePaymentRecordRefund; set { _explicitNullValuePaymentRecordRefund = value; AdditionalData?.Remove("payment_record_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record_refund"); else _explicitNullProperties?.Remove("payment_record_refund"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund? _explicitNullValuePaymentRecordRefund = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund PaymentRecordRefund { get => _explicitNullValuePaymentRecordRefund; set { _explicitNullValuePaymentRecordRefund = value; AdditionalData?.Remove("payment_record_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record_refund"); else _explicitNullProperties?.Remove("payment_record_refund"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund _explicitNullValuePaymentRecordRefund = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund PaymentRecordRefund { get => _explicitNullValuePaymentRecordRefund; set { _explicitNullValuePaymentRecordRefund = value; AdditionalData?.Remove("payment_record_refund"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_record_refund"); else _explicitNullProperties?.Remove("payment_record_refund"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund _explicitNullValuePaymentRecordRefund = default!;
 #endif
         /// <summary>ID of the refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetIntValue(); } },
-                { "payment_record_refund", n => { PaymentRecordRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund.CreateFromDiscriminatorValue); } },
+                { "payment_record_refund", n => { PaymentRecordRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund.CreateFromDiscriminatorValue); } },
                 { "refund", n => { Refund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundRefund>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundRefund.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_refunded", AmountRefunded);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundPaymentRecordRefund>("payment_record_refund", PaymentRecordRefund);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPaymentRecordRefund>("payment_record_refund", PaymentRecordRefund);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundRefund>("refund", Refund);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefundType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -178,8 +178,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Captured { get => _explicitNullValueCaptured; set { _explicitNullValueCaptured = value; AdditionalData?.Remove("captured"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captured"); else _explicitNullProperties?.Remove("captured"); } }
         private bool? _explicitNullValueCaptured = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -246,12 +246,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information on fraud assessments for the charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed? FraudDetails { get => _explicitNullValueFraudDetails; set { _explicitNullValueFraudDetails = value; AdditionalData?.Remove("fraud_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_details"); else _explicitNullProperties?.Remove("fraud_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed? _explicitNullValueFraudDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails? FraudDetails { get => _explicitNullValueFraudDetails; set { _explicitNullValueFraudDetails = value; AdditionalData?.Remove("fraud_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_details"); else _explicitNullProperties?.Remove("fraud_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails? _explicitNullValueFraudDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed FraudDetails { get => _explicitNullValueFraudDetails; set { _explicitNullValueFraudDetails = value; AdditionalData?.Remove("fraud_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_details"); else _explicitNullProperties?.Remove("fraud_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed _explicitNullValueFraudDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails FraudDetails { get => _explicitNullValueFraudDetails; set { _explicitNullValueFraudDetails = value; AdditionalData?.Remove("fraud_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fraud_details"); else _explicitNullProperties?.Remove("fraud_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails _explicitNullValueFraudDetails = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -292,12 +292,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about whether the payment was accepted, and why. See [understanding declines](https://docs.stripe.com/declines) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed? _explicitNullValueOutcome = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome? _explicitNullValueOutcome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed _explicitNullValueOutcome = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome _explicitNullValueOutcome = default!;
 #endif
         /// <summary>`true` if the charge succeeded, or was successfully authorized for later capture.</summary>
         public bool? Paid { get => _explicitNullValuePaid; set { _explicitNullValuePaid = value; AdditionalData?.Remove("paid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid"); else _explicitNullProperties?.Remove("paid"); } }
@@ -325,12 +325,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the payment method at the time of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails? PaymentMethodDetails { get => _explicitNullValuePaymentMethodDetails; set { _explicitNullValuePaymentMethodDetails = value; AdditionalData?.Remove("payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_details"); else _explicitNullProperties?.Remove("payment_method_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails? _explicitNullValuePaymentMethodDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails? PaymentMethodDetails { get => _explicitNullValuePaymentMethodDetails; set { _explicitNullValuePaymentMethodDetails = value; AdditionalData?.Remove("payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_details"); else _explicitNullProperties?.Remove("payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails? _explicitNullValuePaymentMethodDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails PaymentMethodDetails { get => _explicitNullValuePaymentMethodDetails; set { _explicitNullValuePaymentMethodDetails = value; AdditionalData?.Remove("payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_details"); else _explicitNullProperties?.Remove("payment_method_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails _explicitNullValuePaymentMethodDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails PaymentMethodDetails { get => _explicitNullValuePaymentMethodDetails; set { _explicitNullValuePaymentMethodDetails = value; AdditionalData?.Remove("payment_method_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_details"); else _explicitNullProperties?.Remove("payment_method_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails _explicitNullValuePaymentMethodDetails = default!;
 #endif
         /// <summary>The presentment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -408,12 +408,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Shipping information for the charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping? _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The transfer ID which created this charge. Only present if the charge came from another Stripe account. [See the Connect documentation](https://docs.stripe.com/connect/destination-charges) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -461,12 +461,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>An optional dictionary including the account to automatically transfer to as part of a destination charge. [See the Connect documentation](https://docs.stripe.com/connect/destination-charges) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed? _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData? TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData? _explicitNullValueTransferData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed _explicitNullValueTransferData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData TransferData { get => _explicitNullValueTransferData; set { _explicitNullValueTransferData = value; AdditionalData?.Remove("transfer_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_data"); else _explicitNullProperties?.Remove("transfer_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData _explicitNullValueTransferData = default!;
 #endif
         /// <summary>A string that identifies this transaction as part of a group. See the [Connect documentation](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -513,7 +513,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails.CreateFromDiscriminatorValue); } },
                 { "calculated_statement_descriptor", n => { CalculatedStatementDescriptor = n.GetStringValue(); } },
                 { "captured", n => { Captured = n.GetBoolValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeCustomer.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -521,17 +521,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFailureBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeFailureBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "failure_code", n => { FailureCode = n.GetStringValue(); } },
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
-                { "fraud_details", n => { FraudDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed.CreateFromDiscriminatorValue); } },
+                { "fraud_details", n => { FraudDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeOnBehalfOf.CreateFromDiscriminatorValue); } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed.CreateFromDiscriminatorValue); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome.CreateFromDiscriminatorValue); } },
                 { "paid", n => { Paid = n.GetBoolValue(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentIntent.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
-                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails.CreateFromDiscriminatorValue); } },
+                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails.CreateFromDiscriminatorValue); } },
                 { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>(global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions.CreateFromDiscriminatorValue); } },
                 { "receipt_email", n => { ReceiptEmail = n.GetStringValue(); } },
@@ -540,13 +540,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "refunded", n => { Refunded = n.GetBoolValue(); } },
                 { "refunds", n => { Refunds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeRefunds>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeRefunds.CreateFromDiscriminatorValue); } },
                 { "review", n => { Review = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeReview>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeReview.CreateFromDiscriminatorValue); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Shipping.CreateFromDiscriminatorValue); } },
                 { "source_transfer", n => { SourceTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeSourceTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeSourceTransfer.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "statement_descriptor_suffix", n => { StatementDescriptorSuffix = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transfer", n => { Transfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransfer.CreateFromDiscriminatorValue); } },
-                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed.CreateFromDiscriminatorValue); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData.CreateFromDiscriminatorValue); } },
                 { "transfer_group", n => { TransferGroup = n.GetStringValue(); } },
             };
         }
@@ -567,7 +567,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>("billing_details", BillingDetails);
             writer.WriteStringValue("calculated_statement_descriptor", CalculatedStatementDescriptor);
             writer.WriteBoolValue("captured", Captured);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeCustomer>("customer", Customer);
             writer.WriteStringValue("description", Description);
@@ -575,17 +575,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFailureBalanceTransaction>("failure_balance_transaction", FailureBalanceTransaction);
             writer.WriteStringValue("failure_code", FailureCode);
             writer.WriteStringValue("failure_message", FailureMessage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetailsComposed>("fraud_details", FraudDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeFraudDetails>("fraud_details", FraudDetails);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOnBehalfOf>("on_behalf_of", OnBehalfOf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeComposed>("outcome", Outcome);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcome>("outcome", Outcome);
             writer.WriteBoolValue("paid", Paid);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentIntent>("payment_intent", PaymentIntent);
             writer.WriteStringValue("payment_method", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargePaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>("presentment_details", PresentmentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>("radar_options", RadarOptions);
             writer.WriteStringValue("receipt_email", ReceiptEmail);
@@ -594,13 +594,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("refunded", Refunded);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeRefunds>("refunds", Refunds);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeReview>("review", Review);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeSourceTransfer>("source_transfer", SourceTransfer);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("statement_descriptor_suffix", StatementDescriptorSuffix);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransfer>("transfer", Transfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferDataComposed>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeTransferData>("transfer_data", TransferData);
             writer.WriteStringValue("transfer_group", TransferGroup);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

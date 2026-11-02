@@ -26,12 +26,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s date of birth, if provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob? _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob? Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob? _explicitNullValueDob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob _explicitNullValueDob = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob Dob { get => _explicitNullValueDob; set { _explicitNullValueDob = value; AdditionalData?.Remove("dob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dob"); else _explicitNullProperties?.Remove("dob"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob _explicitNullValueDob = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarna"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob.CreateFromDiscriminatorValue); } },
+                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarnaDob>("dob", Dob);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsKlarnaDob>("dob", Dob);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

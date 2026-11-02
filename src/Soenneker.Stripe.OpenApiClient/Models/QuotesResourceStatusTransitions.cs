@@ -26,16 +26,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         }
 
         /// <summary>The time that the quote was accepted. Measured in seconds since Unix epoch.</summary>
-        public int? AcceptedAt { get => _explicitNullValueAcceptedAt; set { _explicitNullValueAcceptedAt = value; AdditionalData?.Remove("accepted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted_at"); else _explicitNullProperties?.Remove("accepted_at"); } }
-        private int? _explicitNullValueAcceptedAt = default!;
+        public long? AcceptedAt { get => _explicitNullValueAcceptedAt; set { _explicitNullValueAcceptedAt = value; AdditionalData?.Remove("accepted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted_at"); else _explicitNullProperties?.Remove("accepted_at"); } }
+        private long? _explicitNullValueAcceptedAt = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time that the quote was canceled. Measured in seconds since Unix epoch.</summary>
-        public int? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
-        private int? _explicitNullValueCanceledAt = default!;
+        public long? CanceledAt { get => _explicitNullValueCanceledAt; set { _explicitNullValueCanceledAt = value; AdditionalData?.Remove("canceled_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled_at"); else _explicitNullProperties?.Remove("canceled_at"); } }
+        private long? _explicitNullValueCanceledAt = default!;
         /// <summary>The time that the quote was finalized. Measured in seconds since Unix epoch.</summary>
-        public int? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; AdditionalData?.Remove("finalized_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
-        private int? _explicitNullValueFinalizedAt = default!;
+        public long? FinalizedAt { get => _explicitNullValueFinalizedAt; set { _explicitNullValueFinalizedAt = value; AdditionalData?.Remove("finalized_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalized_at"); else _explicitNullProperties?.Remove("finalized_at"); } }
+        private long? _explicitNullValueFinalizedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceStatusTransitions"/> and sets the default values.
         /// </summary>
@@ -61,9 +61,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accepted_at", n => { AcceptedAt = n.GetIntValue(); } },
-                { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "finalized_at", n => { FinalizedAt = n.GetIntValue(); } },
+                { "accepted_at", n => { AcceptedAt = n.GetLongValue(); } },
+                { "canceled_at", n => { CanceledAt = n.GetLongValue(); } },
+                { "finalized_at", n => { FinalizedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -73,9 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("accepted_at", AcceptedAt);
-            writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteIntValue("finalized_at", FinalizedAt);
+            writer.WriteLongValue("accepted_at", AcceptedAt);
+            writer.WriteLongValue("canceled_at", CanceledAt);
+            writer.WriteLongValue("finalized_at", FinalizedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

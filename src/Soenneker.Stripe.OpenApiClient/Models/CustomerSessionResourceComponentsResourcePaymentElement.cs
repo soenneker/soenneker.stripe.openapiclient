@@ -32,12 +32,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This hash defines whether the Payment Element supports certain features.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures? _explicitNullValueFeatures = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures _explicitNullValueFeatures = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; AdditionalData?.Remove("features"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures _explicitNullValueFeatures = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElement"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures.CreateFromDiscriminatorValue); } },
+                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures>("features", Features);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeatures>("features", Features);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

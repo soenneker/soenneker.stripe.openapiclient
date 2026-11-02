@@ -109,8 +109,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions _explicitNullValueStatusTransitions = default!;
 #endif
         /// <summary>Time at which the transaction was transacted. Measured in seconds since the Unix epoch.</summary>
-        public int? TransactedAt { get => _explicitNullValueTransactedAt; set { _explicitNullValueTransactedAt = value; AdditionalData?.Remove("transacted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transacted_at"); else _explicitNullProperties?.Remove("transacted_at"); } }
-        private int? _explicitNullValueTransactedAt = default!;
+        public long? TransactedAt { get => _explicitNullValueTransactedAt; set { _explicitNullValueTransactedAt = value; AdditionalData?.Remove("transacted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transacted_at"); else _explicitNullProperties?.Remove("transacted_at"); } }
+        private long? _explicitNullValueTransactedAt = default!;
         /// <summary>The token of the transaction refresh that last updated or created this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,8 +122,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueTransactionRefresh = default!;
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction"/> and sets the default values.
         /// </summary>
@@ -158,9 +158,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions.CreateFromDiscriminatorValue); } },
-                { "transacted_at", n => { TransactedAt = n.GetIntValue(); } },
+                { "transacted_at", n => { TransactedAt = n.GetLongValue(); } },
                 { "transaction_refresh", n => { TransactionRefresh = n.GetStringValue(); } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -179,9 +179,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions>("status_transitions", StatusTransitions);
-            writer.WriteIntValue("transacted_at", TransactedAt);
+            writer.WriteLongValue("transacted_at", TransactedAt);
             writer.WriteStringValue("transaction_refresh", TransactionRefresh);
-            writer.WriteIntValue("updated", Updated);
+            writer.WriteLongValue("updated", Updated);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

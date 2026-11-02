@@ -57,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived _explicitNullValueEarlyFraudWarningReceived = default!;
 #endif
         /// <summary>Timestamp when the event occurred.</summary>
-        public int? OccurredAt { get => _explicitNullValueOccurredAt; set { _explicitNullValueOccurredAt = value; AdditionalData?.Remove("occurred_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurred_at"); else _explicitNullProperties?.Remove("occurred_at"); } }
-        private int? _explicitNullValueOccurredAt = default!;
+        public long? OccurredAt { get => _explicitNullValueOccurredAt; set { _explicitNullValueOccurredAt = value; AdditionalData?.Remove("occurred_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("occurred_at"); else _explicitNullProperties?.Remove("occurred_at"); } }
+        private long? _explicitNullValueOccurredAt = default!;
         /// <summary>Refunded Event details attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "dispute_opened", n => { DisputeOpened = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationDisputeOpened>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationDisputeOpened.CreateFromDiscriminatorValue); } },
                 { "early_fraud_warning_received", n => { EarlyFraudWarningReceived = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived.CreateFromDiscriminatorValue); } },
-                { "occurred_at", n => { OccurredAt = n.GetIntValue(); } },
+                { "occurred_at", n => { OccurredAt = n.GetLongValue(); } },
                 { "refunded", n => { Refunded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEventType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "user_intervention_raised", n => { UserInterventionRaised = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised.CreateFromDiscriminatorValue); } },
@@ -135,7 +135,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationDisputeOpened>("dispute_opened", DisputeOpened);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived>("early_fraud_warning_received", EarlyFraudWarningReceived);
-            writer.WriteIntValue("occurred_at", OccurredAt);
+            writer.WriteLongValue("occurred_at", OccurredAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded>("refunded", Refunded);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEventType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised>("user_intervention_raised", UserInterventionRaised);

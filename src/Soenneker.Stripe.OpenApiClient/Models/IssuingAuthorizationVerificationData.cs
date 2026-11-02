@@ -44,12 +44,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The exemption applied to this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; AdditionalData?.Remove("authentication_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? _explicitNullValueAuthenticationExemption = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption? AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; AdditionalData?.Remove("authentication_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption? _explicitNullValueAuthenticationExemption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; AdditionalData?.Remove("authentication_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption _explicitNullValueAuthenticationExemption = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption AuthenticationExemption { get => _explicitNullValueAuthenticationExemption; set { _explicitNullValueAuthenticationExemption = value; AdditionalData?.Remove("authentication_exemption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication_exemption"); else _explicitNullProperties?.Remove("authentication_exemption"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption _explicitNullValueAuthenticationExemption = default!;
 #endif
         /// <summary>Whether the cardholder provided a CVC and if it matched Stripe’s record.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck? CvcCheck { get => _explicitNullValueCvcCheck; set { _explicitNullValueCvcCheck = value; AdditionalData?.Remove("cvc_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cvc_check"); else _explicitNullProperties?.Remove("cvc_check"); } }
@@ -70,12 +70,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>3D Secure details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure? ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure? _explicitNullValueThreeDSecure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure _explicitNullValueThreeDSecure = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure ThreeDSecure { get => _explicitNullValueThreeDSecure; set { _explicitNullValueThreeDSecure = value; AdditionalData?.Remove("three_d_secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("three_d_secure"); else _explicitNullProperties?.Remove("three_d_secure"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure _explicitNullValueThreeDSecure = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData"/> and sets the default values.
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "address_line1_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressLine1Check = default; _explicitNullProperties?.Remove("address_line1_check"); AdditionalData["address_line1_check"] = unknown; } else { AddressLine1Check = parsed; AdditionalData.Remove("address_line1_check"); } } },
                 { "address_postal_code_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressPostalCodeCheck = default; _explicitNullProperties?.Remove("address_postal_code_check"); AdditionalData["address_postal_code_check"] = unknown; } else { AddressPostalCodeCheck = parsed; AdditionalData.Remove("address_postal_code_check"); } } },
-                { "authentication_exemption", n => { AuthenticationExemption = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption.CreateFromDiscriminatorValue); } },
+                { "authentication_exemption", n => { AuthenticationExemption = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption.CreateFromDiscriminatorValue); } },
                 { "cvc_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCvcCheck = default; _explicitNullProperties?.Remove("cvc_check"); AdditionalData["cvc_check"] = unknown; } else { CvcCheck = parsed; AdditionalData.Remove("cvc_check"); } } },
                 { "expiry_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExpiryCheck = default; _explicitNullProperties?.Remove("expiry_check"); AdditionalData["expiry_check"] = unknown; } else { ExpiryCheck = parsed; AdditionalData.Remove("expiry_check"); } } },
                 { "postal_code", n => { PostalCode = n.GetStringValue(); } },
-                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure.CreateFromDiscriminatorValue); } },
+                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,11 +120,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check>("address_line1_check", AddressLine1Check);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck>("address_postal_code_check", AddressPostalCodeCheck);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption>("authentication_exemption", AuthenticationExemption);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption>("authentication_exemption", AuthenticationExemption);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck>("cvc_check", CvcCheck);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck>("expiry_check", ExpiryCheck);
             writer.WriteStringValue("postal_code", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure>("three_d_secure", ThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure>("three_d_secure", ThreeDSecure);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

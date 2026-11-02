@@ -24,8 +24,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The `frozen_time` that the Test Clock is advancing towards.</summary>
-        public int? TargetFrozenTime { get => _explicitNullValueTargetFrozenTime; set { _explicitNullValueTargetFrozenTime = value; AdditionalData?.Remove("target_frozen_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_frozen_time"); else _explicitNullProperties?.Remove("target_frozen_time"); } }
-        private int? _explicitNullValueTargetFrozenTime = default!;
+        public long? TargetFrozenTime { get => _explicitNullValueTargetFrozenTime; set { _explicitNullValueTargetFrozenTime = value; AdditionalData?.Remove("target_frozen_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_frozen_time"); else _explicitNullProperties?.Remove("target_frozen_time"); } }
+        private long? _explicitNullValueTargetFrozenTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingClocksResourceStatusDetailsAdvancingStatusDetails"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "target_frozen_time", n => { TargetFrozenTime = n.GetIntValue(); } },
+                { "target_frozen_time", n => { TargetFrozenTime = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("target_frozen_time", TargetFrozenTime);
+            writer.WriteLongValue("target_frozen_time", TargetFrozenTime);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

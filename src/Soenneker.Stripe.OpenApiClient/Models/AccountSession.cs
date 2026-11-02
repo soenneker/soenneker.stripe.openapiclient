@@ -65,8 +65,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents _explicitNullValueComponents = default!;
 #endif
         /// <summary>The timestamp at which this AccountSession will expire.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get => _explicitNullValueLivemode; set { _explicitNullValueLivemode = value; AdditionalData?.Remove("livemode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("livemode"); else _explicitNullProperties?.Remove("livemode"); } }
         private bool? _explicitNullValueLivemode = default!;
@@ -101,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "components", n => { Components = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents.CreateFromDiscriminatorValue); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSessionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
             };
@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents>("components", Components);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSessionObject>("object", Object);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

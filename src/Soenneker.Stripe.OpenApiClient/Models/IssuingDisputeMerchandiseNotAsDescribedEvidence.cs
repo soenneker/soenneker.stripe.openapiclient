@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueExplanation = default!;
 #endif
         /// <summary>Date when the product was received.</summary>
-        public int? ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; AdditionalData?.Remove("received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
-        private int? _explicitNullValueReceivedAt = default!;
+        public long? ReceivedAt { get => _explicitNullValueReceivedAt; set { _explicitNullValueReceivedAt = value; AdditionalData?.Remove("received_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("received_at"); else _explicitNullProperties?.Remove("received_at"); } }
+        private long? _explicitNullValueReceivedAt = default!;
         /// <summary>Description of the cardholder&apos;s attempt to return the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,8 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueReturnDescription = default!;
 #endif
         /// <summary>Date when the product was returned or attempted to be returned.</summary>
-        public int? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; AdditionalData?.Remove("returned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
-        private int? _explicitNullValueReturnedAt = default!;
+        public long? ReturnedAt { get => _explicitNullValueReturnedAt; set { _explicitNullValueReturnedAt = value; AdditionalData?.Remove("returned_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returned_at"); else _explicitNullProperties?.Remove("returned_at"); } }
+        private long? _explicitNullValueReturnedAt = default!;
         /// <summary>Result of cardholder&apos;s attempt to return the product.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidenceReturnStatus? ReturnStatus { get => _explicitNullValueReturnStatus; set { _explicitNullValueReturnStatus = value; AdditionalData?.Remove("return_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_status"); else _explicitNullProperties?.Remove("return_status"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidenceReturnStatus? _explicitNullValueReturnStatus = default!;
@@ -99,10 +99,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "additional_documentation", n => { AdditionalDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation.CreateFromDiscriminatorValue); } },
                 { "explanation", n => { Explanation = n.GetStringValue(); } },
-                { "received_at", n => { ReceivedAt = n.GetIntValue(); } },
+                { "received_at", n => { ReceivedAt = n.GetLongValue(); } },
                 { "return_description", n => { ReturnDescription = n.GetStringValue(); } },
                 { "return_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidenceReturnStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReturnStatus = default; _explicitNullProperties?.Remove("return_status"); AdditionalData["return_status"] = unknown; } else { ReturnStatus = parsed; AdditionalData.Remove("return_status"); } } },
-                { "returned_at", n => { ReturnedAt = n.GetIntValue(); } },
+                { "returned_at", n => { ReturnedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -114,9 +114,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeCanceledEvidenceAdditionalDocumentation>("additional_documentation", AdditionalDocumentation);
             writer.WriteStringValue("explanation", Explanation);
-            writer.WriteIntValue("received_at", ReceivedAt);
+            writer.WriteLongValue("received_at", ReceivedAt);
             writer.WriteStringValue("return_description", ReturnDescription);
-            writer.WriteIntValue("returned_at", ReturnedAt);
+            writer.WriteLongValue("returned_at", ReturnedAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMerchandiseNotAsDescribedEvidenceReturnStatus>("return_status", ReturnStatus);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

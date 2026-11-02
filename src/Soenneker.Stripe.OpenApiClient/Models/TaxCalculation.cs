@@ -86,8 +86,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails _explicitNullValueCustomerDetails = default!;
 #endif
         /// <summary>Timestamp of date at which the tax calculation will expire.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>Unique identifier for the calculation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,22 +117,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The details of the ship from location, such as the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails? ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails? _explicitNullValueShipFromDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? _explicitNullValueShipFromDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails _explicitNullValueShipFromDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails ShipFromDetails { get => _explicitNullValueShipFromDetails; set { _explicitNullValueShipFromDetails = value; AdditionalData?.Remove("ship_from_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ship_from_details"); else _explicitNullProperties?.Remove("ship_from_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails _explicitNullValueShipFromDetails = default!;
 #endif
         /// <summary>The shipping cost details for the calculation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost? _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost? ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost? _explicitNullValueShippingCost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost _explicitNullValueShippingCost = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost ShippingCost { get => _explicitNullValueShippingCost; set { _explicitNullValueShippingCost = value; AdditionalData?.Remove("shipping_cost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_cost"); else _explicitNullProperties?.Remove("shipping_cost"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost _explicitNullValueShippingCost = default!;
 #endif
         /// <summary>The amount of tax to be collected on top of the line item prices.</summary>
         public int? TaxAmountExclusive { get => _explicitNullValueTaxAmountExclusive; set { _explicitNullValueTaxAmountExclusive = value; AdditionalData?.Remove("tax_amount_exclusive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_amount_exclusive"); else _explicitNullProperties?.Remove("tax_amount_exclusive"); } }
@@ -151,8 +151,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown> _explicitNullValueTaxBreakdown = default!;
 #endif
         /// <summary>The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn&apos;t guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.</summary>
-        public int? TaxDate { get => _explicitNullValueTaxDate; set { _explicitNullValueTaxDate = value; AdditionalData?.Remove("tax_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_date"); else _explicitNullProperties?.Remove("tax_date"); } }
-        private int? _explicitNullValueTaxDate = default!;
+        public long? TaxDate { get => _explicitNullValueTaxDate; set { _explicitNullValueTaxDate = value; AdditionalData?.Remove("tax_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_date"); else _explicitNullProperties?.Remove("tax_date"); } }
+        private long? _explicitNullValueTaxDate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation"/> and sets the default values.
         /// </summary>
@@ -182,17 +182,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails.CreateFromDiscriminatorValue); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost.CreateFromDiscriminatorValue); } },
+                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost.CreateFromDiscriminatorValue); } },
                 { "tax_amount_exclusive", n => { TaxAmountExclusive = n.GetIntValue(); } },
                 { "tax_amount_inclusive", n => { TaxAmountInclusive = n.GetIntValue(); } },
                 { "tax_breakdown", n => { TaxBreakdown = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "tax_date", n => { TaxDate = n.GetIntValue(); } },
+                { "tax_date", n => { TaxDate = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -206,17 +206,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>("customer_details", CustomerDetails);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails>("ship_from_details", ShipFromDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>("ship_from_details", ShipFromDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost>("shipping_cost", ShippingCost);
             writer.WriteIntValue("tax_amount_exclusive", TaxAmountExclusive);
             writer.WriteIntValue("tax_amount_inclusive", TaxAmountInclusive);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown>("tax_breakdown", TaxBreakdown);
-            writer.WriteIntValue("tax_date", TaxDate);
+            writer.WriteLongValue("tax_date", TaxDate);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

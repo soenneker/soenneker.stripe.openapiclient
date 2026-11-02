@@ -90,8 +90,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? AutoAdvance { get => _explicitNullValueAutoAdvance; set { _explicitNullValueAutoAdvance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_advance"); else _explicitNullProperties?.Remove("auto_advance"); } }
         private bool? _explicitNullValueAutoAdvance = default!;
         /// <summary>The time when this invoice should be scheduled to finalize (up to 5 years in the future). The invoice is finalized at this time if it&apos;s still in draft state. To turn off automatic finalization, set `auto_advance` to false.</summary>
-        public int? AutomaticallyFinalizesAt { get => _explicitNullValueAutomaticallyFinalizesAt; set { _explicitNullValueAutomaticallyFinalizesAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatically_finalizes_at"); else _explicitNullProperties?.Remove("automatically_finalizes_at"); } }
-        private int? _explicitNullValueAutomaticallyFinalizesAt = default!;
+        public long? AutomaticallyFinalizesAt { get => _explicitNullValueAutomaticallyFinalizesAt; set { _explicitNullValueAutomaticallyFinalizesAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automatically_finalizes_at"); else _explicitNullProperties?.Remove("automatically_finalizes_at"); } }
+        private long? _explicitNullValueAutomaticallyFinalizesAt = default!;
         /// <summary>Settings for automatic tax lookup for this invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -169,8 +169,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDiscounts _explicitNullValueDiscounts = default!;
 #endif
         /// <summary>The date on which payment for this invoice is due. Only valid for invoices where `collection_method=send_invoice`. This field can only be updated on `draft` invoices.</summary>
-        public int? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
-        private int? _explicitNullValueDueDate = default!;
+        public long? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private long? _explicitNullValueDueDate = default!;
         /// <summary>The date when this invoice is in effect. Same as `finalized_at` unless overwritten. When defined, this value replaces the system-generated &apos;Date of issue&apos; printed on the invoice PDF and receipt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -323,7 +323,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "auto_advance", n => { AutoAdvance = n.GetBoolValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestAutomaticTax.CreateFromDiscriminatorValue); } },
-                { "automatically_finalizes_at", n => { AutomaticallyFinalizesAt = n.GetIntValue(); } },
+                { "automatically_finalizes_at", n => { AutomaticallyFinalizesAt = n.GetLongValue(); } },
                 { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestCollectionMethod>(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestCustomFields>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestCustomFields.CreateFromDiscriminatorValue); } },
                 { "days_until_due", n => { DaysUntilDue = n.GetIntValue(); } },
@@ -332,7 +332,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDefaultTaxRates>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDefaultTaxRates.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDiscounts.CreateFromDiscriminatorValue); } },
-                { "due_date", n => { DueDate = n.GetIntValue(); } },
+                { "due_date", n => { DueDate = n.GetLongValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestEffectiveAt>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestEffectiveAt.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
@@ -358,7 +358,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestAccountTaxIds>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteBoolValue("auto_advance", AutoAdvance);
-            writer.WriteIntValue("automatically_finalizes_at", AutomaticallyFinalizesAt);
+            writer.WriteLongValue("automatically_finalizes_at", AutomaticallyFinalizesAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestCollectionMethod>("collection_method", CollectionMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestCustomFields>("custom_fields", CustomFields);
@@ -368,7 +368,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDefaultTaxRates>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestDiscounts>("discounts", Discounts);
-            writer.WriteIntValue("due_date", DueDate);
+            writer.WriteLongValue("due_date", DueDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestEffectiveAt>("effective_at", EffectiveAt);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("footer", Footer);

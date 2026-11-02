@@ -41,11 +41,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Most recent time for which this Report Type is available. Measured in seconds since the Unix epoch.</summary>
-        public int? DataAvailableEnd { get => _explicitNullValueDataAvailableEnd; set { _explicitNullValueDataAvailableEnd = value; AdditionalData?.Remove("data_available_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_available_end"); else _explicitNullProperties?.Remove("data_available_end"); } }
-        private int? _explicitNullValueDataAvailableEnd = default!;
+        public long? DataAvailableEnd { get => _explicitNullValueDataAvailableEnd; set { _explicitNullValueDataAvailableEnd = value; AdditionalData?.Remove("data_available_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_available_end"); else _explicitNullProperties?.Remove("data_available_end"); } }
+        private long? _explicitNullValueDataAvailableEnd = default!;
         /// <summary>Earliest time for which this Report Type is available. Measured in seconds since the Unix epoch.</summary>
-        public int? DataAvailableStart { get => _explicitNullValueDataAvailableStart; set { _explicitNullValueDataAvailableStart = value; AdditionalData?.Remove("data_available_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_available_start"); else _explicitNullProperties?.Remove("data_available_start"); } }
-        private int? _explicitNullValueDataAvailableStart = default!;
+        public long? DataAvailableStart { get => _explicitNullValueDataAvailableStart; set { _explicitNullValueDataAvailableStart = value; AdditionalData?.Remove("data_available_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_available_start"); else _explicitNullProperties?.Remove("data_available_start"); } }
+        private long? _explicitNullValueDataAvailableStart = default!;
         /// <summary>List of column names that are included by default when this Report Type gets run. (If the Report Type doesn&apos;t support the `columns` parameter, this will be null.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,8 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject? _explicitNullValueObject = default!;
         /// <summary>When this Report Type was latest updated. Measured in seconds since the Unix epoch.</summary>
-        public int? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
-        private int? _explicitNullValueUpdated = default!;
+        public long? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; AdditionalData?.Remove("updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private long? _explicitNullValueUpdated = default!;
         /// <summary>Version of the Report Type. Different versions report with the same ID will have the same purpose, but may take different run parameters or have different result schemas.</summary>
         public int? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
         private int? _explicitNullValueVersion = default!;
@@ -113,14 +113,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data_available_end", n => { DataAvailableEnd = n.GetIntValue(); } },
-                { "data_available_start", n => { DataAvailableStart = n.GetIntValue(); } },
+                { "data_available_end", n => { DataAvailableEnd = n.GetLongValue(); } },
+                { "data_available_start", n => { DataAvailableStart = n.GetLongValue(); } },
                 { "default_columns", n => { DefaultColumns = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "updated", n => { Updated = n.GetIntValue(); } },
+                { "updated", n => { Updated = n.GetLongValue(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
         }
@@ -131,14 +131,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("data_available_end", DataAvailableEnd);
-            writer.WriteIntValue("data_available_start", DataAvailableStart);
+            writer.WriteLongValue("data_available_end", DataAvailableEnd);
+            writer.WriteLongValue("data_available_start", DataAvailableStart);
             writer.WriteCollectionOfPrimitiveValues<string>("default_columns", DefaultColumns);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject>("object", Object);
-            writer.WriteIntValue("updated", Updated);
+            writer.WriteLongValue("updated", Updated);
             writer.WriteIntValue("version", Version);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

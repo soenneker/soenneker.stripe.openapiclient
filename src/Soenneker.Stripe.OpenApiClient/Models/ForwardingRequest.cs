@@ -45,8 +45,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,32 +96,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Context about the request from Stripe&apos;s servers to the destination endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext? RequestContext { get => _explicitNullValueRequestContext; set { _explicitNullValueRequestContext = value; AdditionalData?.Remove("request_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_context"); else _explicitNullProperties?.Remove("request_context"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext? _explicitNullValueRequestContext = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext? RequestContext { get => _explicitNullValueRequestContext; set { _explicitNullValueRequestContext = value; AdditionalData?.Remove("request_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_context"); else _explicitNullProperties?.Remove("request_context"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext? _explicitNullValueRequestContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext RequestContext { get => _explicitNullValueRequestContext; set { _explicitNullValueRequestContext = value; AdditionalData?.Remove("request_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_context"); else _explicitNullProperties?.Remove("request_context"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext _explicitNullValueRequestContext = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext RequestContext { get => _explicitNullValueRequestContext; set { _explicitNullValueRequestContext = value; AdditionalData?.Remove("request_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_context"); else _explicitNullProperties?.Remove("request_context"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext _explicitNullValueRequestContext = default!;
 #endif
         /// <summary>The request that was sent to the destination endpoint. We redact any sensitive fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails? RequestDetails { get => _explicitNullValueRequestDetails; set { _explicitNullValueRequestDetails = value; AdditionalData?.Remove("request_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_details"); else _explicitNullProperties?.Remove("request_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails? _explicitNullValueRequestDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails? RequestDetails { get => _explicitNullValueRequestDetails; set { _explicitNullValueRequestDetails = value; AdditionalData?.Remove("request_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_details"); else _explicitNullProperties?.Remove("request_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails? _explicitNullValueRequestDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails RequestDetails { get => _explicitNullValueRequestDetails; set { _explicitNullValueRequestDetails = value; AdditionalData?.Remove("request_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_details"); else _explicitNullProperties?.Remove("request_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails _explicitNullValueRequestDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails RequestDetails { get => _explicitNullValueRequestDetails; set { _explicitNullValueRequestDetails = value; AdditionalData?.Remove("request_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_details"); else _explicitNullProperties?.Remove("request_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails _explicitNullValueRequestDetails = default!;
 #endif
         /// <summary>The response that the destination endpoint returned to us. We redact any sensitive fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails? ResponseDetails { get => _explicitNullValueResponseDetails; set { _explicitNullValueResponseDetails = value; AdditionalData?.Remove("response_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_details"); else _explicitNullProperties?.Remove("response_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails? _explicitNullValueResponseDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails? ResponseDetails { get => _explicitNullValueResponseDetails; set { _explicitNullValueResponseDetails = value; AdditionalData?.Remove("response_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_details"); else _explicitNullProperties?.Remove("response_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails? _explicitNullValueResponseDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails ResponseDetails { get => _explicitNullValueResponseDetails; set { _explicitNullValueResponseDetails = value; AdditionalData?.Remove("response_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_details"); else _explicitNullProperties?.Remove("response_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails _explicitNullValueResponseDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails ResponseDetails { get => _explicitNullValueResponseDetails; set { _explicitNullValueResponseDetails = value; AdditionalData?.Remove("response_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_details"); else _explicitNullProperties?.Remove("response_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails _explicitNullValueResponseDetails = default!;
 #endif
         /// <summary>The destination URL for the forwarded request. Must be supported by the config.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,16 +158,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "replacements", n => { Replacements = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>()?.AsList(); } },
-                { "request_context", n => { RequestContext = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext.CreateFromDiscriminatorValue); } },
-                { "request_details", n => { RequestDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails.CreateFromDiscriminatorValue); } },
-                { "response_details", n => { ResponseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails.CreateFromDiscriminatorValue); } },
+                { "request_context", n => { RequestContext = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext.CreateFromDiscriminatorValue); } },
+                { "request_details", n => { RequestDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails.CreateFromDiscriminatorValue); } },
+                { "response_details", n => { ResponseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -178,16 +178,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>("object", Object);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>("replacements", Replacements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext>("request_context", RequestContext);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails>("request_details", RequestDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails>("response_details", ResponseDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext>("request_context", RequestContext);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails>("request_details", RequestDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails>("response_details", ResponseDetails);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

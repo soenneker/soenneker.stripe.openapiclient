@@ -35,12 +35,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability? Liability { get => _explicitNullValueLiability; set { _explicitNullValueLiability = value; AdditionalData?.Remove("liability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability"); else _explicitNullProperties?.Remove("liability"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability? _explicitNullValueLiability = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Liability { get => _explicitNullValueLiability; set { _explicitNullValueLiability = value; AdditionalData?.Remove("liability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability"); else _explicitNullProperties?.Remove("liability"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? _explicitNullValueLiability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability Liability { get => _explicitNullValueLiability; set { _explicitNullValueLiability = value; AdditionalData?.Remove("liability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability"); else _explicitNullProperties?.Remove("liability"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability _explicitNullValueLiability = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Liability { get => _explicitNullValueLiability; set { _explicitNullValueLiability = value; AdditionalData?.Remove("liability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability"); else _explicitNullProperties?.Remove("liability"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference _explicitNullValueLiability = default!;
 #endif
         /// <summary>The tax provider powering automatic tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability.CreateFromDiscriminatorValue); } },
+                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxLiability>("liability", Liability);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("liability", Liability);
             writer.WriteStringValue("provider", Provider);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTaxStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

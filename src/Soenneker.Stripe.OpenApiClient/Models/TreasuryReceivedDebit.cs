@@ -58,8 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,12 +145,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details describing when a ReceivedDebit might be reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails? ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; AdditionalData?.Remove("reversal_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails? _explicitNullValueReversalDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails? ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; AdditionalData?.Remove("reversal_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails? _explicitNullValueReversalDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; AdditionalData?.Remove("reversal_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails _explicitNullValueReversalDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails ReversalDetails { get => _explicitNullValueReversalDetails; set { _explicitNullValueReversalDetails = value; AdditionalData?.Remove("reversal_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reversal_details"); else _explicitNullProperties?.Remove("reversal_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails _explicitNullValueReversalDetails = default!;
 #endif
         /// <summary>Status of the ReceivedDebit. ReceivedDebits are created with a status of either `succeeded` (approved) or `failed` (declined). The failure reason can be found under the `failure_code`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -191,7 +191,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "failure_code", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitFailureCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFailureCode = default; _explicitNullProperties?.Remove("failure_code"); AdditionalData["failure_code"] = unknown; } else { FailureCode = parsed; AdditionalData.Remove("failure_code"); } } },
@@ -203,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "network", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitNetwork>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNetwork = default; _explicitNullProperties?.Remove("network"); AdditionalData["network"] = unknown; } else { Network = parsed; AdditionalData.Remove("network"); } } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "reversal_details", n => { ReversalDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails.CreateFromDiscriminatorValue); } },
+                { "reversal_details", n => { ReversalDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction.CreateFromDiscriminatorValue); } },
             };
@@ -216,7 +216,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitFailureCode>("failure_code", FailureCode);
@@ -228,7 +228,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitNetwork>("network", Network);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitReversalDetails>("reversal_details", ReversalDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceReversalDetails>("reversal_details", ReversalDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversalTransaction>("transaction", Transaction);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

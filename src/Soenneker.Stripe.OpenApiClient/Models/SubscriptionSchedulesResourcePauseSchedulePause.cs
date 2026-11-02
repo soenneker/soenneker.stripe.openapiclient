@@ -28,17 +28,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the subscription pauses.</summary>
-        public int? PauseAt { get => _explicitNullValuePauseAt; set { _explicitNullValuePauseAt = value; AdditionalData?.Remove("pause_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_at"); else _explicitNullProperties?.Remove("pause_at"); } }
-        private int? _explicitNullValuePauseAt = default!;
+        public long? PauseAt { get => _explicitNullValuePauseAt; set { _explicitNullValuePauseAt = value; AdditionalData?.Remove("pause_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause_at"); else _explicitNullProperties?.Remove("pause_at"); } }
+        private long? _explicitNullValuePauseAt = default!;
         /// <summary>Settings controlling billing behavior during the pause.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed? _explicitNullValueSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings? Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings? _explicitNullValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed _explicitNullValueSettings = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings Settings { get => _explicitNullValueSettings; set { _explicitNullValueSettings = value; AdditionalData?.Remove("settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settings"); else _explicitNullProperties?.Remove("settings"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings _explicitNullValueSettings = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,8 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "pause_at", n => { PauseAt = n.GetIntValue(); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed.CreateFromDiscriminatorValue); } },
+                { "pause_at", n => { PauseAt = n.GetLongValue(); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseStatus>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseStatus.CreateFromDiscriminatorValue); } },
             };
         }
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("pause_at", PauseAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettingsComposed>("settings", Settings);
+            writer.WriteLongValue("pause_at", PauseAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseSettings>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedulePauseStatus>("status", Status);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

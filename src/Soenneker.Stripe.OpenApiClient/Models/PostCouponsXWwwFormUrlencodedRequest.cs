@@ -131,8 +131,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? PercentOff { get => _explicitNullValuePercentOff; set { _explicitNullValuePercentOff = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_off"); else _explicitNullProperties?.Remove("percent_off"); } }
         private double? _explicitNullValuePercentOff = default!;
         /// <summary>Unix timestamp specifying the last time at which the coupon can be redeemed (cannot be set to more than 5 years in the future). After the redeem_by date, the coupon can no longer be applied to new customers.</summary>
-        public int? RedeemBy { get => _explicitNullValueRedeemBy; set { _explicitNullValueRedeemBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeem_by"); else _explicitNullProperties?.Remove("redeem_by"); } }
-        private int? _explicitNullValueRedeemBy = default!;
+        public long? RedeemBy { get => _explicitNullValueRedeemBy; set { _explicitNullValueRedeemBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeem_by"); else _explicitNullProperties?.Remove("redeem_by"); } }
+        private long? _explicitNullValueRedeemBy = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCouponsXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostCouponsXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "percent_off", n => { PercentOff = n.GetDoubleValue(); } },
-                { "redeem_by", n => { RedeemBy = n.GetIntValue(); } },
+                { "redeem_by", n => { RedeemBy = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -185,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCouponsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("percent_off", PercentOff);
-            writer.WriteIntValue("redeem_by", RedeemBy);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("redeem_by", RedeemBy);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

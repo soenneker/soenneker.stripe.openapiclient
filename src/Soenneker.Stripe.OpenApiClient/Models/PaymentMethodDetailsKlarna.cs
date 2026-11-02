@@ -44,12 +44,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payer details for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails? PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; AdditionalData?.Remove("payer_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails? _explicitNullValuePayerDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails? PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; AdditionalData?.Remove("payer_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails? _explicitNullValuePayerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; AdditionalData?.Remove("payer_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails _explicitNullValuePayerDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails PayerDetails { get => _explicitNullValuePayerDetails; set { _explicitNullValuePayerDetails = value; AdditionalData?.Remove("payer_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payer_details"); else _explicitNullProperties?.Remove("payer_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails _explicitNullValuePayerDetails = default!;
 #endif
         /// <summary>The Klarna payment method used for this transaction.Can be one of `pay_later`, `pay_now`, `pay_with_financing`, or `pay_in_installments`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,7 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "location", n => { Location = n.GetStringValue(); } },
-                { "payer_details", n => { PayerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails.CreateFromDiscriminatorValue); } },
+                { "payer_details", n => { PayerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails.CreateFromDiscriminatorValue); } },
                 { "payment_method_category", n => { PaymentMethodCategory = n.GetStringValue(); } },
                 { "preferred_locale", n => { PreferredLocale = n.GetStringValue(); } },
                 { "reader", n => { Reader = n.GetStringValue(); } },
@@ -121,7 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("location", Location);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKlarnaPayerDetails>("payer_details", PayerDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.KlarnaPayerDetails>("payer_details", PayerDetails);
             writer.WriteStringValue("payment_method_category", PaymentMethodCategory);
             writer.WriteStringValue("preferred_locale", PreferredLocale);
             writer.WriteStringValue("reader", Reader);

@@ -65,12 +65,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account holder that this account belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder? AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder? _explicitNullValueAccountHolder = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? _explicitNullValueAccountHolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder _explicitNullValueAccountHolder = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder AccountHolder { get => _explicitNullValueAccountHolder; set { _explicitNullValueAccountHolder = value; AdditionalData?.Remove("account_holder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_holder"); else _explicitNullProperties?.Remove("account_holder"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder _explicitNullValueAccountHolder = default!;
 #endif
         /// <summary>Details about the account numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,29 +87,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The most recent information about the account&apos;s balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance? _explicitNullValueBalance = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance? _explicitNullValueBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance _explicitNullValueBalance = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance _explicitNullValueBalance = default!;
 #endif
         /// <summary>The state of the most recent attempt to refresh the account balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh? BalanceRefresh { get => _explicitNullValueBalanceRefresh; set { _explicitNullValueBalanceRefresh = value; AdditionalData?.Remove("balance_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_refresh"); else _explicitNullProperties?.Remove("balance_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh? _explicitNullValueBalanceRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh? BalanceRefresh { get => _explicitNullValueBalanceRefresh; set { _explicitNullValueBalanceRefresh = value; AdditionalData?.Remove("balance_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_refresh"); else _explicitNullProperties?.Remove("balance_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh? _explicitNullValueBalanceRefresh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh BalanceRefresh { get => _explicitNullValueBalanceRefresh; set { _explicitNullValueBalanceRefresh = value; AdditionalData?.Remove("balance_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_refresh"); else _explicitNullProperties?.Remove("balance_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh _explicitNullValueBalanceRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh BalanceRefresh { get => _explicitNullValueBalanceRefresh; set { _explicitNullValueBalanceRefresh = value; AdditionalData?.Remove("balance_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_refresh"); else _explicitNullProperties?.Remove("balance_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh _explicitNullValueBalanceRefresh = default!;
 #endif
         /// <summary>The type of the account. Account category is further divided in `subcategory`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory? _explicitNullValueCategory = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>A human-readable name that has been assigned to this account, either by the account holder or by the institution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -169,12 +169,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The state of the most recent attempt to refresh the account owners.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh? OwnershipRefresh { get => _explicitNullValueOwnershipRefresh; set { _explicitNullValueOwnershipRefresh = value; AdditionalData?.Remove("ownership_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_refresh"); else _explicitNullProperties?.Remove("ownership_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh? _explicitNullValueOwnershipRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh? OwnershipRefresh { get => _explicitNullValueOwnershipRefresh; set { _explicitNullValueOwnershipRefresh = value; AdditionalData?.Remove("ownership_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_refresh"); else _explicitNullProperties?.Remove("ownership_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh? _explicitNullValueOwnershipRefresh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh OwnershipRefresh { get => _explicitNullValueOwnershipRefresh; set { _explicitNullValueOwnershipRefresh = value; AdditionalData?.Remove("ownership_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_refresh"); else _explicitNullProperties?.Remove("ownership_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh _explicitNullValueOwnershipRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh OwnershipRefresh { get => _explicitNullValueOwnershipRefresh; set { _explicitNullValueOwnershipRefresh = value; AdditionalData?.Remove("ownership_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_refresh"); else _explicitNullProperties?.Remove("ownership_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh _explicitNullValueOwnershipRefresh = default!;
 #endif
         /// <summary>The list of permissions granted by this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,12 +225,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The state of the most recent attempt to refresh the account transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh? TransactionRefresh { get => _explicitNullValueTransactionRefresh; set { _explicitNullValueTransactionRefresh = value; AdditionalData?.Remove("transaction_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_refresh"); else _explicitNullProperties?.Remove("transaction_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh? _explicitNullValueTransactionRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh? TransactionRefresh { get => _explicitNullValueTransactionRefresh; set { _explicitNullValueTransactionRefresh = value; AdditionalData?.Remove("transaction_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_refresh"); else _explicitNullProperties?.Remove("transaction_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh? _explicitNullValueTransactionRefresh = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh TransactionRefresh { get => _explicitNullValueTransactionRefresh; set { _explicitNullValueTransactionRefresh = value; AdditionalData?.Remove("transaction_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_refresh"); else _explicitNullProperties?.Remove("transaction_refresh"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh _explicitNullValueTransactionRefresh = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh TransactionRefresh { get => _explicitNullValueTransactionRefresh; set { _explicitNullValueTransactionRefresh = value; AdditionalData?.Remove("transaction_refresh"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_refresh"); else _explicitNullProperties?.Remove("transaction_refresh"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh _explicitNullValueTransactionRefresh = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount"/> and sets the default values.
@@ -257,12 +257,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder.CreateFromDiscriminatorValue); } },
+                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder.CreateFromDiscriminatorValue); } },
                 { "account_numbers", n => { AccountNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance.CreateFromDiscriminatorValue); } },
-                { "balance_refresh", n => { BalanceRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh.CreateFromDiscriminatorValue); } },
+                { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance.CreateFromDiscriminatorValue); } },
+                { "balance_refresh", n => { BalanceRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh.CreateFromDiscriminatorValue); } },
                 { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "institution_name", n => { InstitutionName = n.GetStringValue(); } },
@@ -270,14 +270,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "ownership", n => { Ownership = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed.CreateFromDiscriminatorValue); } },
-                { "ownership_refresh", n => { OwnershipRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh.CreateFromDiscriminatorValue); } },
+                { "ownership_refresh", n => { OwnershipRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>()?.AsList(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails.CreateFromDiscriminatorValue); } },
                 { "subcategory", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubcategory = default; _explicitNullProperties?.Remove("subcategory"); AdditionalData["subcategory"] = unknown; } else { Subcategory = parsed; AdditionalData.Remove("subcategory"); } } },
                 { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>()?.AsList(); } },
                 { "supported_payment_method_types", n => { SupportedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>()?.AsList(); } },
-                { "transaction_refresh", n => { TransactionRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh.CreateFromDiscriminatorValue); } },
+                { "transaction_refresh", n => { TransactionRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -287,12 +287,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder>("account_holder", AccountHolder);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>("account_holder", AccountHolder);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails>("account_numbers", AccountNumbers);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance>("balance", Balance);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh>("balance_refresh", BalanceRefresh);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance>("balance", Balance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh>("balance_refresh", BalanceRefresh);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory>("category", Category);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("institution_name", InstitutionName);
@@ -300,14 +300,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed>("ownership", Ownership);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>("ownership_refresh", OwnershipRefresh);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh>("ownership_refresh", OwnershipRefresh);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>("permissions", Permissions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>("status_details", StatusDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>("subcategory", Subcategory);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>("subscriptions", Subscriptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>("supported_payment_method_types", SupportedPaymentMethodTypes);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>("transaction_refresh", TransactionRefresh);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh>("transaction_refresh", TransactionRefresh);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

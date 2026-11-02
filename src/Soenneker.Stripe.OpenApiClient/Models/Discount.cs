@@ -79,8 +79,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private string _explicitNullValueCustomerAccount = default!;
 #endif
         /// <summary>If the coupon has a duration of `repeating`, the date that this discount will end. If the coupon has a duration of `once` or `forever`, this attribute will be null.</summary>
-        public int? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
-        private int? _explicitNullValueEnd = default!;
+        public long? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        private long? _explicitNullValueEnd = default!;
         /// <summary>The ID of the discount object. Discounts can&apos;t be fetched by ID. Use `expand[]=discounts` in API calls to expand discount IDs in an array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,8 +135,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource _explicitNullValueSource = default!;
 #endif
         /// <summary>Date that the coupon was applied.</summary>
-        public int? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
-        private int? _explicitNullValueStart = default!;
+        public long? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        private long? _explicitNullValueStart = default!;
         /// <summary>The subscription that this coupon is applied to, if it is applied to a particular subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,14 +185,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "checkout_session", n => { CheckoutSession = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "end", n => { End = n.GetIntValue(); } },
+                { "end", n => { End = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "invoice_item", n => { InvoiceItem = n.GetStringValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "promotion_code", n => { PromotionCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode>(global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource.CreateFromDiscriminatorValue); } },
-                { "start", n => { Start = n.GetIntValue(); } },
+                { "start", n => { Start = n.GetLongValue(); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
                 { "subscription_item", n => { SubscriptionItem = n.GetStringValue(); } },
             };
@@ -207,14 +207,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("checkout_session", CheckoutSession);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteIntValue("end", End);
+            writer.WriteLongValue("end", End);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteStringValue("invoice_item", InvoiceItem);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode>("promotion_code", PromotionCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>("source", Source);
-            writer.WriteIntValue("start", Start);
+            writer.WriteLongValue("start", Start);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteStringValue("subscription_item", SubscriptionItem);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

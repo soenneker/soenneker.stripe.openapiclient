@@ -72,12 +72,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed? _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails? AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails? _explicitNullValueAmountDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed _explicitNullValueAmountDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails AmountDetails { get => _explicitNullValueAmountDetails; set { _explicitNullValueAmountDetails = value; AdditionalData?.Remove("amount_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_details"); else _explicitNullProperties?.Remove("amount_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails _explicitNullValueAmountDetails = default!;
 #endif
         /// <summary>The `Authorization` object that led to this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,8 +120,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCardholder _explicitNullValueCardholder = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,12 +191,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the transaction, such as processing dates, set by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed? NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed? _explicitNullValueNetworkData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData? NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData? _explicitNullValueNetworkData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed _explicitNullValueNetworkData = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData NetworkData { get => _explicitNullValueNetworkData; set { _explicitNullValueNetworkData = value; AdditionalData?.Remove("network_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_data"); else _explicitNullProperties?.Remove("network_data"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData _explicitNullValueNetworkData = default!;
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
@@ -204,12 +204,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional purchase information that is optionally provided by the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed? PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; AdditionalData?.Remove("purchase_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed? _explicitNullValuePurchaseDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails? PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; AdditionalData?.Remove("purchase_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails? _explicitNullValuePurchaseDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; AdditionalData?.Remove("purchase_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed _explicitNullValuePurchaseDetails = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails PurchaseDetails { get => _explicitNullValuePurchaseDetails; set { _explicitNullValuePurchaseDetails = value; AdditionalData?.Remove("purchase_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_details"); else _explicitNullProperties?.Remove("purchase_details"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails _explicitNullValuePurchaseDetails = default!;
 #endif
         /// <summary>[Token](https://docs.stripe.com/api/issuing/tokens/object) object used for this transaction. If a network token was not used for this transaction, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -224,12 +224,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this transaction if it was created on a [FinancialAccount](/docs/api/treasury/financial_accounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed? _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury? Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury? _explicitNullValueTreasury = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed _explicitNullValueTreasury = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury Treasury { get => _explicitNullValueTreasury; set { _explicitNullValueTreasury = value; AdditionalData?.Remove("treasury"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("treasury"); else _explicitNullProperties?.Remove("treasury"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury _explicitNullValueTreasury = default!;
 #endif
         /// <summary>The nature of the transaction.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -263,12 +263,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed.CreateFromDiscriminatorValue); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails.CreateFromDiscriminatorValue); } },
                 { "authorization", n => { Authorization = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAuthorization>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAuthorization.CreateFromDiscriminatorValue); } },
                 { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCard.CreateFromDiscriminatorValue); } },
                 { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCardholder.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "dispute", n => { Dispute = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionDispute>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionDispute.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -277,11 +277,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "merchant_data", n => { MerchantData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed.CreateFromDiscriminatorValue); } },
+                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "purchase_details", n => { PurchaseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed.CreateFromDiscriminatorValue); } },
+                { "purchase_details", n => { PurchaseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionToken>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionToken.CreateFromDiscriminatorValue); } },
-                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed.CreateFromDiscriminatorValue); } },
+                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "wallet", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionWallet>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWallet = default; _explicitNullProperties?.Remove("wallet"); AdditionalData["wallet"] = unknown; } else { Wallet = parsed; AdditionalData.Remove("wallet"); } } },
             };
@@ -294,12 +294,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetailsComposed>("amount_details", AmountDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAmountDetails>("amount_details", AmountDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionAuthorization>("authorization", Authorization);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionBalanceTransaction>("balance_transaction", BalanceTransaction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionCardholder>("cardholder", Cardholder);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionDispute>("dispute", Dispute);
             writer.WriteStringValue("id", Id);
@@ -308,11 +308,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>("merchant_data", MerchantData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionMetadataProperty>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed>("network_data", NetworkData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkData>("network_data", NetworkData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed>("purchase_details", PurchaseDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetails>("purchase_details", PurchaseDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionToken>("token", Token);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasuryComposed>("treasury", Treasury);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionTreasury>("treasury", Treasury);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionType>("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionWallet>("wallet", Wallet);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

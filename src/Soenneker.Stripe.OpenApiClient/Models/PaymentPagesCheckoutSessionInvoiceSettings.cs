@@ -78,12 +78,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The connected account that issues the invoice. The invoice is presented with the branding and support information of the specified account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer? Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; AdditionalData?.Remove("issuer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer? _explicitNullValueIssuer = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; AdditionalData?.Remove("issuer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? _explicitNullValueIssuer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; AdditionalData?.Remove("issuer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer _explicitNullValueIssuer = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; AdditionalData?.Remove("issuer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference _explicitNullValueIssuer = default!;
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,12 +98,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Options for invoice PDF rendering.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions? RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions? _explicitNullValueRenderingOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions? RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions? _explicitNullValueRenderingOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions _explicitNullValueRenderingOptions = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions RenderingOptions { get => _explicitNullValueRenderingOptions; set { _explicitNullValueRenderingOptions = value; AdditionalData?.Remove("rendering_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rendering_options"); else _explicitNullProperties?.Remove("rendering_options"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions _explicitNullValueRenderingOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings"/> and sets the default values.
@@ -134,9 +134,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
+                { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty.CreateFromDiscriminatorValue); } },
-                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions.CreateFromDiscriminatorValue); } },
+                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -150,9 +150,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>("issuer", Issuer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("issuer", Issuer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>("rendering_options", RenderingOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions>("rendering_options", RenderingOptions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

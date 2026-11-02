@@ -87,12 +87,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s billing address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress? _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress _explicitNullValueAddress = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Address _explicitNullValueAddress = default!;
 #endif
         /// <summary>The current balance, if any, that&apos;s stored on the customer in their default currency. If negative, the customer has credit to apply to their next invoice. If positive, the customer has an amount owed that&apos;s added to their next invoice. The balance only considers amounts that Stripe hasn&apos;t successfully applied to any invoice. It doesn&apos;t reflect unpaid invoices. This balance is only taken into account after invoices finalize. For multi-currency balances, see [invoice_credit_balance](https://docs.stripe.com/api/customers/object#customer_object-invoice_credit_balance).</summary>
         public int? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
@@ -110,16 +110,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The current funds being held by Stripe on behalf of the customer. You can apply these funds towards payment intents when the source is &quot;cash_balance&quot;. The `settings[reconciliation_mode]` field describes if these funds apply to these payment intents manually or automatically.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance? CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; AdditionalData?.Remove("cash_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance? _explicitNullValueCashBalance = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalance? CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; AdditionalData?.Remove("cash_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CashBalance? _explicitNullValueCashBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; AdditionalData?.Remove("cash_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance _explicitNullValueCashBalance = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalance CashBalance { get => _explicitNullValueCashBalance; set { _explicitNullValueCashBalance = value; AdditionalData?.Remove("cash_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_balance"); else _explicitNullProperties?.Remove("cash_balance"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.CashBalance _explicitNullValueCashBalance = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO code for the currency](https://stripe.com/docs/currencies) the customer can be charged in for recurring billing purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,12 +166,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Describes the current discount active on the customer, if there is one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount? _explicitNullValueDiscount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Discount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount _explicitNullValueDiscount = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Discount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>The customer&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -285,12 +285,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Mailing and shipping address for the customer. Appears on invoices emailed to this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping? _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping? Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping? _explicitNullValueShipping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping _explicitNullValueShipping = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.Shipping Shipping { get => _explicitNullValueShipping; set { _explicitNullValueShipping = value; AdditionalData?.Remove("shipping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping"); else _explicitNullProperties?.Remove("shipping"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.Shipping _explicitNullValueShipping = default!;
 #endif
         /// <summary>The customer&apos;s payment sources, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -370,17 +370,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "balance", n => { Balance = n.GetIntValue(); } },
                 { "business_name", n => { BusinessName = n.GetStringValue(); } },
-                { "cash_balance", n => { CashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "cash_balance", n => { CashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance>(global::Soenneker.Stripe.OpenApiClient.Models.CashBalance.CreateFromDiscriminatorValue); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_source", n => { DefaultSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSource>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSource.CreateFromDiscriminatorValue); } },
                 { "delinquent", n => { Delinquent = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individual_name", n => { IndividualName = n.GetStringValue(); } },
@@ -394,7 +394,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Shipping.CreateFromDiscriminatorValue); } },
                 { "sources", n => { Sources = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSources>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSources.CreateFromDiscriminatorValue); } },
                 { "subscriptions", n => { Subscriptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSubscriptions>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSubscriptions.CreateFromDiscriminatorValue); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax.CreateFromDiscriminatorValue); } },
@@ -410,17 +410,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAddress>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
             writer.WriteIntValue("balance", Balance);
             writer.WriteStringValue("business_name", BusinessName);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalance>("cash_balance", CashBalance);
-            writer.WriteIntValue("created", Created);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance>("cash_balance", CashBalance);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSource>("default_source", DefaultSource);
             writer.WriteBoolValue("delinquent", Delinquent);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerDiscount>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>("discount", Discount);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("individual_name", IndividualName);
@@ -434,7 +434,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerObject>("object", Object);
             writer.WriteStringValue("phone", Phone);
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSources>("sources", Sources);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSubscriptions>("subscriptions", Subscriptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax>("tax", Tax);

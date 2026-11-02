@@ -113,8 +113,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy _explicitNullValueContentSecurityPolicyPending = default!;
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>The ID of the embedding platform that created the install, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -216,7 +216,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "channel", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannel = default; _explicitNullProperties?.Remove("channel"); AdditionalData["channel"] = unknown; } else { Channel = parsed; AdditionalData.Remove("channel"); } } },
                 { "content_security_policy_granted", n => { ContentSecurityPolicyGranted = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy.CreateFromDiscriminatorValue); } },
                 { "content_security_policy_pending", n => { ContentSecurityPolicyPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy.CreateFromDiscriminatorValue); } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
                 { "endpoints_granted", n => { EndpointsGranted = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "endpoints_pending", n => { EndpointsPending = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -242,7 +242,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstallChannel>("channel", Channel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>("content_security_policy_granted", ContentSecurityPolicyGranted);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallContentSecurityPolicy>("content_security_policy_pending", ContentSecurityPolicyPending);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("created_by", CreatedBy);
             writer.WriteCollectionOfPrimitiveValues<string>("endpoints_granted", EndpointsGranted);
             writer.WriteCollectionOfPrimitiveValues<string>("endpoints_pending", EndpointsPending);

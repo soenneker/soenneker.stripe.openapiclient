@@ -29,12 +29,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If this is a Mandate accepted online, this hash contains details about the online acceptance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline? Online { get => _explicitNullValueOnline; set { _explicitNullValueOnline = value; AdditionalData?.Remove("online"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online"); else _explicitNullProperties?.Remove("online"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline? _explicitNullValueOnline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline? Online { get => _explicitNullValueOnline; set { _explicitNullValueOnline = value; AdditionalData?.Remove("online"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online"); else _explicitNullProperties?.Remove("online"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline? _explicitNullValueOnline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline Online { get => _explicitNullValueOnline; set { _explicitNullValueOnline = value; AdditionalData?.Remove("online"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online"); else _explicitNullProperties?.Remove("online"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline _explicitNullValueOnline = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline Online { get => _explicitNullValueOnline; set { _explicitNullValueOnline = value; AdditionalData?.Remove("online"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online"); else _explicitNullProperties?.Remove("online"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline _explicitNullValueOnline = default!;
 #endif
         /// <summary>The type of customer acceptance information included with the Mandate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "online", n => { Online = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline.CreateFromDiscriminatorValue); } },
+                { "online", n => { Online = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline>("online", Online);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline>("online", Online);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

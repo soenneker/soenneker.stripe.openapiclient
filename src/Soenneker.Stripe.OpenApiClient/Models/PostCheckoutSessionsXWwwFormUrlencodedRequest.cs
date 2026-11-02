@@ -311,8 +311,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>The Epoch time in seconds at which the Checkout Session will expire. It can be anywhere from 30 minutes to 24 hours after Checkout Session creation. By default, this value is 24 hours from creation.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
-        private int? _explicitNullValueExpiresAt = default!;
+        public long? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private long? _explicitNullValueExpiresAt = default!;
         /// <summary>The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -593,7 +593,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestExcludedPaymentMethodTypesItem>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetLongValue(); } },
                 { "integration_identifier", n => { IntegrationIdentifier = n.GetStringValue(); } },
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestInvoiceCreation>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestInvoiceCreation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestLineItemsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestLineItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -653,7 +653,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestDiscountsItem>("discounts", Discounts);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestExcludedPaymentMethodTypesItem>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteLongValue("expires_at", ExpiresAt);
             writer.WriteStringValue("integration_identifier", IntegrationIdentifier);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestInvoiceCreation>("invoice_creation", InvoiceCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestLineItemsItem>("line_items", LineItems);

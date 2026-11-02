@@ -26,12 +26,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details related to the closure of this FinancialAccount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed? Closed { get => _explicitNullValueClosed; set { _explicitNullValueClosed = value; AdditionalData?.Remove("closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed"); else _explicitNullProperties?.Remove("closed"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed? _explicitNullValueClosed = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails? Closed { get => _explicitNullValueClosed; set { _explicitNullValueClosed = value; AdditionalData?.Remove("closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed"); else _explicitNullProperties?.Remove("closed"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails? _explicitNullValueClosed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed Closed { get => _explicitNullValueClosed; set { _explicitNullValueClosed = value; AdditionalData?.Remove("closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed"); else _explicitNullProperties?.Remove("closed"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed _explicitNullValueClosed = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails Closed { get => _explicitNullValueClosed; set { _explicitNullValueClosed = value; AdditionalData?.Remove("closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed"); else _explicitNullProperties?.Remove("closed"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails _explicitNullValueClosed = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "closed", n => { Closed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed.CreateFromDiscriminatorValue); } },
+                { "closed", n => { Closed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed>("closed", Closed);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails>("closed", Closed);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

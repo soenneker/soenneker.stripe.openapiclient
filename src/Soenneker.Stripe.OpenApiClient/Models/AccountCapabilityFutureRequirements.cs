@@ -48,8 +48,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         private List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative> _explicitNullValueAlternatives = default!;
 #endif
         /// <summary>Date on which `future_requirements` becomes the main `requirements` hash and `future_requirements` becomes empty. After the transition, `currently_due` requirements may immediately become `past_due`, but the account may also be given a grace period depending on the capability&apos;s enablement state prior to transitioning.</summary>
-        public int? CurrentDeadline { get => _explicitNullValueCurrentDeadline; set { _explicitNullValueCurrentDeadline = value; AdditionalData?.Remove("current_deadline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_deadline"); else _explicitNullProperties?.Remove("current_deadline"); } }
-        private int? _explicitNullValueCurrentDeadline = default!;
+        public long? CurrentDeadline { get => _explicitNullValueCurrentDeadline; set { _explicitNullValueCurrentDeadline = value; AdditionalData?.Remove("current_deadline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_deadline"); else _explicitNullProperties?.Remove("current_deadline"); } }
+        private long? _explicitNullValueCurrentDeadline = default!;
         /// <summary>Fields that need to be resolved to keep the capability enabled. If not resolved by `future_requirements[current_deadline]`, these fields will transition to the main `requirements` hash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alternatives", n => { Alternatives = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "current_deadline", n => { CurrentDeadline = n.GetIntValue(); } },
+                { "current_deadline", n => { CurrentDeadline = n.GetLongValue(); } },
                 { "currently_due", n => { CurrentlyDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "disabled_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisabledReason = default; _explicitNullProperties?.Remove("disabled_reason"); AdditionalData["disabled_reason"] = unknown; } else { DisabledReason = parsed; AdditionalData.Remove("disabled_reason"); } } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative>("alternatives", Alternatives);
-            writer.WriteIntValue("current_deadline", CurrentDeadline);
+            writer.WriteLongValue("current_deadline", CurrentDeadline);
             writer.WriteCollectionOfPrimitiveValues<string>("currently_due", CurrentlyDue);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason>("disabled_reason", DisabledReason);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>("errors", Errors);

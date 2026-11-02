@@ -45,11 +45,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>When the query was run, Sigma contained a snapshot of your Stripe data at this time.</summary>
-        public int? DataLoadTime { get => _explicitNullValueDataLoadTime; set { _explicitNullValueDataLoadTime = value; AdditionalData?.Remove("data_load_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_load_time"); else _explicitNullProperties?.Remove("data_load_time"); } }
-        private int? _explicitNullValueDataLoadTime = default!;
+        public long? DataLoadTime { get => _explicitNullValueDataLoadTime; set { _explicitNullValueDataLoadTime = value; AdditionalData?.Remove("data_load_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_load_time"); else _explicitNullProperties?.Remove("data_load_time"); } }
+        private long? _explicitNullValueDataLoadTime = default!;
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,12 +63,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The file object representing the results of the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile? _explicitNullValueFile = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject1? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FileObject1? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile _explicitNullValueFile = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject1 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.FileObject1 _explicitNullValueFile = default!;
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,8 +87,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject? _explicitNullValueObject = default!;
         /// <summary>Time at which the result expires and is no longer available for download.</summary>
-        public int? ResultAvailableUntil { get => _explicitNullValueResultAvailableUntil; set { _explicitNullValueResultAvailableUntil = value; AdditionalData?.Remove("result_available_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result_available_until"); else _explicitNullProperties?.Remove("result_available_until"); } }
-        private int? _explicitNullValueResultAvailableUntil = default!;
+        public long? ResultAvailableUntil { get => _explicitNullValueResultAvailableUntil; set { _explicitNullValueResultAvailableUntil = value; AdditionalData?.Remove("result_available_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result_available_until"); else _explicitNullProperties?.Remove("result_available_until"); } }
+        private long? _explicitNullValueResultAvailableUntil = default!;
         /// <summary>SQL for the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -144,14 +144,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created", n => { Created = n.GetIntValue(); } },
-                { "data_load_time", n => { DataLoadTime = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
+                { "data_load_time", n => { DataLoadTime = n.GetLongValue(); } },
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError>(global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError.CreateFromDiscriminatorValue); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile>(global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject1>(global::Soenneker.Stripe.OpenApiClient.Models.FileObject1.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "result_available_until", n => { ResultAvailableUntil = n.GetIntValue(); } },
+                { "result_available_until", n => { ResultAvailableUntil = n.GetLongValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -164,14 +164,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("created", Created);
-            writer.WriteIntValue("data_load_time", DataLoadTime);
+            writer.WriteLongValue("created", Created);
+            writer.WriteLongValue("data_load_time", DataLoadTime);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError>("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject1>("file", File);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject>("object", Object);
-            writer.WriteIntValue("result_available_until", ResultAvailableUntil);
+            writer.WriteLongValue("result_available_until", ResultAvailableUntil);
             writer.WriteStringValue("sql", Sql);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);

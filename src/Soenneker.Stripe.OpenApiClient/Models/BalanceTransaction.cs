@@ -58,14 +58,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private int? _explicitNullValueAmount = default!;
         /// <summary>The date that the transaction&apos;s net funds become available in the Stripe balance.</summary>
-        public int? AvailableOn { get => _explicitNullValueAvailableOn; set { _explicitNullValueAvailableOn = value; AdditionalData?.Remove("available_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_on"); else _explicitNullProperties?.Remove("available_on"); } }
-        private int? _explicitNullValueAvailableOn = default!;
+        public long? AvailableOn { get => _explicitNullValueAvailableOn; set { _explicitNullValueAvailableOn = value; AdditionalData?.Remove("available_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_on"); else _explicitNullProperties?.Remove("available_on"); } }
+        private long? _explicitNullValueAvailableOn = default!;
         /// <summary>The balance that this transaction impacts.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType? BalanceType { get => _explicitNullValueBalanceType; set { _explicitNullValueBalanceType = value; AdditionalData?.Remove("balance_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance_type"); else _explicitNullProperties?.Remove("balance_type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType? _explicitNullValueBalanceType = default!;
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
-        public int? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
-        private int? _explicitNullValueCreated = default!;
+        public long? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; AdditionalData?.Remove("created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private long? _explicitNullValueCreated = default!;
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -177,9 +177,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "available_on", n => { AvailableOn = n.GetIntValue(); } },
+                { "available_on", n => { AvailableOn = n.GetLongValue(); } },
                 { "balance_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBalanceType = default; _explicitNullProperties?.Remove("balance_type"); AdditionalData["balance_type"] = unknown; } else { BalanceType = parsed; AdditionalData.Remove("balance_type"); } } },
-                { "created", n => { Created = n.GetIntValue(); } },
+                { "created", n => { Created = n.GetLongValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "exchange_rate", n => { ExchangeRate = n.GetDoubleValue(); } },
@@ -202,9 +202,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteIntValue("available_on", AvailableOn);
+            writer.WriteLongValue("available_on", AvailableOn);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType>("balance_type", BalanceType);
-            writer.WriteIntValue("created", Created);
+            writer.WriteLongValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteDoubleValue("exchange_rate", ExchangeRate);

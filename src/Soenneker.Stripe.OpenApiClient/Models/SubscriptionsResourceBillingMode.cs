@@ -31,19 +31,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configure behavior for flexible billing mode</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed? Flexible { get => _explicitNullValueFlexible; set { _explicitNullValueFlexible = value; AdditionalData?.Remove("flexible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexible"); else _explicitNullProperties?.Remove("flexible"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed? _explicitNullValueFlexible = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible? Flexible { get => _explicitNullValueFlexible; set { _explicitNullValueFlexible = value; AdditionalData?.Remove("flexible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexible"); else _explicitNullProperties?.Remove("flexible"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible? _explicitNullValueFlexible = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed Flexible { get => _explicitNullValueFlexible; set { _explicitNullValueFlexible = value; AdditionalData?.Remove("flexible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexible"); else _explicitNullProperties?.Remove("flexible"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed _explicitNullValueFlexible = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible Flexible { get => _explicitNullValueFlexible; set { _explicitNullValueFlexible = value; AdditionalData?.Remove("flexible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexible"); else _explicitNullProperties?.Remove("flexible"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible _explicitNullValueFlexible = default!;
 #endif
         /// <summary>Controls how prorations and invoices for subscriptions are calculated and orchestrated.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType? _explicitNullValueType = default!;
         /// <summary>Details on when the current billing_mode was adopted.</summary>
-        public int? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
-        private int? _explicitNullValueUpdatedAt = default!;
+        public long? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private long? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode"/> and sets the default values.
         /// </summary>
@@ -69,9 +69,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed.CreateFromDiscriminatorValue); } },
+                { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible.CreateFromDiscriminatorValue); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
-                { "updated_at", n => { UpdatedAt = n.GetIntValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -81,9 +81,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed>("flexible", Flexible);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>("flexible", Flexible);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType>("type", Type);
-            writer.WriteIntValue("updated_at", UpdatedAt);
+            writer.WriteLongValue("updated_at", UpdatedAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

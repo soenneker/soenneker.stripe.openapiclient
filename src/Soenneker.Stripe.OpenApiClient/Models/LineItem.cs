@@ -147,12 +147,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The parent that generated this line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent? _explicitNullValueParent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent _explicitNullValueParent = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent _explicitNullValueParent = default!;
 #endif
         /// <summary>The period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,12 +177,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pricing information of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing? _explicitNullValuePricing = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing _explicitNullValuePricing = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing _explicitNullValuePricing = default!;
 #endif
         /// <summary>Quantity of units for the invoice line item in integer format, with any decimal precision truncated. For the line item&apos;s full-precision decimal quantity, use `quantity_decimal`. This field will be deprecated in favor of `quantity_decimal` in a future version. If the line item is a proration or subscription, the quantity of the subscription that the proration was computed for.</summary>
         public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
@@ -256,10 +256,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemObject>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObject = default; _explicitNullProperties?.Remove("object"); AdditionalData["object"] = unknown; } else { Object = parsed; AdditionalData.Remove("object"); } } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLineItemPeriod>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLineItemPeriod.CreateFromDiscriminatorValue); } },
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing.CreateFromDiscriminatorValue); } },
+                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemSubscription>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemSubscription.CreateFromDiscriminatorValue); } },
@@ -285,10 +285,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemObject>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParent>("parent", Parent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLineItemPeriod>("period", Period);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount>("pretax_credit_amounts", PretaxCreditAmounts);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemPricing>("pricing", Pricing);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingPricingPricing>("pricing", Pricing);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemSubscription>("subscription", Subscription);

@@ -312,8 +312,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get => _explicitNullValueProrationBehavior; set { _explicitNullValueProrationBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_behavior"); else _explicitNullProperties?.Remove("proration_behavior"); } }
         private global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestProrationBehavior? _explicitNullValueProrationBehavior = default!;
         /// <summary>If set, prorations will be calculated as though the subscription was updated at the given time. This can be used to apply exactly the same prorations that were previewed with the [create preview](https://stripe.com/docs/api/invoices/create_preview) endpoint. `proration_date` can also be used to implement custom proration logic, such as prorating by day instead of by second, by providing the time that you wish to use for proration calculations.</summary>
-        public int? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
-        private int? _explicitNullValueProrationDate = default!;
+        public long? ProrationDate { get => _explicitNullValueProrationDate; set { _explicitNullValueProrationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proration_date"); else _explicitNullProperties?.Remove("proration_date"); } }
+        private long? _explicitNullValueProrationDate = default!;
         /// <summary>If specified, the funds from the subscription&apos;s invoices will be transferred to the destination and the ID of the resulting transfers will be found on the resulting charges. This will be unset if you POST an empty value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -392,7 +392,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_settings", n => { PaymentSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettings.CreateFromDiscriminatorValue); } },
                 { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPendingInvoiceItemInterval>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPendingInvoiceItemInterval.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestProrationBehavior>(); } },
-                { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
+                { "proration_date", n => { ProrationDate = n.GetLongValue(); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTransferData.CreateFromDiscriminatorValue); } },
                 { "trial_end", n => { TrialEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialEnd>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialEnd.CreateFromDiscriminatorValue); } },
                 { "trial_from_plan", n => { TrialFromPlan = n.GetBoolValue(); } },
@@ -433,7 +433,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettings>("payment_settings", PaymentSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPendingInvoiceItemInterval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
-            writer.WriteIntValue("proration_date", ProrationDate);
+            writer.WriteLongValue("proration_date", ProrationDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialEnd>("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);

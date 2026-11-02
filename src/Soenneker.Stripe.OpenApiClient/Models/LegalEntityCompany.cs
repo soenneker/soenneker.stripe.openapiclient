@@ -82,22 +82,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The Kana variation of the company&apos;s primary address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana? _explicitNullValueAddressKana = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? _explicitNullValueAddressKana = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana _explicitNullValueAddressKana = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress AddressKana { get => _explicitNullValueAddressKana; set { _explicitNullValueAddressKana = value; AdditionalData?.Remove("address_kana"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kana"); else _explicitNullProperties?.Remove("address_kana"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress _explicitNullValueAddressKana = default!;
 #endif
         /// <summary>The Kanji variation of the company&apos;s primary address (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji? _explicitNullValueAddressKanji = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress? _explicitNullValueAddressKanji = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji _explicitNullValueAddressKanji = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress AddressKanji { get => _explicitNullValueAddressKanji; set { _explicitNullValueAddressKanji = value; AdditionalData?.Remove("address_kanji"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_kanji"); else _explicitNullProperties?.Remove("address_kanji"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress _explicitNullValueAddressKanji = default!;
 #endif
         /// <summary>The administrative_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,12 +112,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This hash is used to attest that the director information provided to Stripe is both current and correct.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration? DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; AdditionalData?.Remove("directorship_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration? _explicitNullValueDirectorshipDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration? DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; AdditionalData?.Remove("directorship_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration? _explicitNullValueDirectorshipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; AdditionalData?.Remove("directorship_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration _explicitNullValueDirectorshipDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration DirectorshipDeclaration { get => _explicitNullValueDirectorshipDeclaration; set { _explicitNullValueDirectorshipDeclaration = value; AdditionalData?.Remove("directorship_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directorship_declaration"); else _explicitNullProperties?.Remove("directorship_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration _explicitNullValueDirectorshipDeclaration = default!;
 #endif
         /// <summary>Whether the company&apos;s directors have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all directors are provided via [the `directors_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-directors_provided).</summary>
         public bool? DirectorsProvided { get => _explicitNullValueDirectorsProvided; set { _explicitNullValueDirectorsProvided = value; AdditionalData?.Remove("directors_provided"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directors_provided"); else _explicitNullProperties?.Remove("directors_provided"); } }
@@ -178,12 +178,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This hash is used to attest that the beneficial owner information provided to Stripe is both current and correct.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration? OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; AdditionalData?.Remove("ownership_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration? _explicitNullValueOwnershipDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration? OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; AdditionalData?.Remove("ownership_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration? _explicitNullValueOwnershipDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; AdditionalData?.Remove("ownership_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration _explicitNullValueOwnershipDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration OwnershipDeclaration { get => _explicitNullValueOwnershipDeclaration; set { _explicitNullValueOwnershipDeclaration = value; AdditionalData?.Remove("ownership_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_declaration"); else _explicitNullProperties?.Remove("ownership_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration _explicitNullValueOwnershipDeclaration = default!;
 #endif
         /// <summary>This value is used to determine if a business is exempt from providing ultimate beneficial owners. See [this support article](https://support.stripe.com/questions/exemption-from-providing-ownership-details) and [changelog](https://docs.stripe.com/changelog/acacia/2025-01-27/ownership-exemption-reason-accounts-api) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason? OwnershipExemptionReason { get => _explicitNullValueOwnershipExemptionReason; set { _explicitNullValueOwnershipExemptionReason = value; AdditionalData?.Remove("ownership_exemption_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_exemption_reason"); else _explicitNullProperties?.Remove("ownership_exemption_reason"); } }
@@ -224,12 +224,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This hash is used to attest that the representative is authorized to act as the representative of their legal entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration? RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; AdditionalData?.Remove("representative_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration? _explicitNullValueRepresentativeDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration? RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; AdditionalData?.Remove("representative_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration? _explicitNullValueRepresentativeDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; AdditionalData?.Remove("representative_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration _explicitNullValueRepresentativeDeclaration = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration RepresentativeDeclaration { get => _explicitNullValueRepresentativeDeclaration; set { _explicitNullValueRepresentativeDeclaration = value; AdditionalData?.Remove("representative_declaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representative_declaration"); else _explicitNullProperties?.Remove("representative_declaration"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration _explicitNullValueRepresentativeDeclaration = default!;
 #endif
         /// <summary>The category identifying the legal structure of the company or legal entity. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`. See [Business structure](https://docs.stripe.com/connect/identity-verification#business-structure) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure? Structure { get => _explicitNullValueStructure; set { _explicitNullValueStructure = value; AdditionalData?.Remove("structure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structure"); else _explicitNullProperties?.Remove("structure"); } }
@@ -253,12 +253,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information on the verification state of the company.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed? _explicitNullValueVerification = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
-        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed _explicitNullValueVerification = default!;
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        private global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany"/> and sets the default values.
@@ -286,11 +286,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
-                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana.CreateFromDiscriminatorValue); } },
-                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji.CreateFromDiscriminatorValue); } },
+                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress.CreateFromDiscriminatorValue); } },
+                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress.CreateFromDiscriminatorValue); } },
                 { "administrative_address", n => { AdministrativeAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "directors_provided", n => { DirectorsProvided = n.GetBoolValue(); } },
-                { "directorship_declaration", n => { DirectorshipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration.CreateFromDiscriminatorValue); } },
+                { "directorship_declaration", n => { DirectorshipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration.CreateFromDiscriminatorValue); } },
                 { "executives_provided", n => { ExecutivesProvided = n.GetBoolValue(); } },
                 { "export_license_id", n => { ExportLicenseId = n.GetStringValue(); } },
                 { "export_purpose_code", n => { ExportPurposeCode = n.GetStringValue(); } },
@@ -298,17 +298,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "name_kana", n => { NameKana = n.GetStringValue(); } },
                 { "name_kanji", n => { NameKanji = n.GetStringValue(); } },
                 { "owners_provided", n => { OwnersProvided = n.GetBoolValue(); } },
-                { "ownership_declaration", n => { OwnershipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration.CreateFromDiscriminatorValue); } },
+                { "ownership_declaration", n => { OwnershipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration.CreateFromDiscriminatorValue); } },
                 { "ownership_exemption_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOwnershipExemptionReason = default; _explicitNullProperties?.Remove("ownership_exemption_reason"); AdditionalData["ownership_exemption_reason"] = unknown; } else { OwnershipExemptionReason = parsed; AdditionalData.Remove("ownership_exemption_reason"); } } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "principal_place_of_business", n => { PrincipalPlaceOfBusiness = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "registration_date", n => { RegistrationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate.CreateFromDiscriminatorValue); } },
-                { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration.CreateFromDiscriminatorValue); } },
+                { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration.CreateFromDiscriminatorValue); } },
                 { "structure", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStructure = default; _explicitNullProperties?.Remove("structure"); AdditionalData["structure"] = unknown; } else { Structure = parsed; AdditionalData.Remove("structure"); } } },
                 { "tax_id_provided", n => { TaxIdProvided = n.GetBoolValue(); } },
                 { "tax_id_registrar", n => { TaxIdRegistrar = n.GetStringValue(); } },
                 { "vat_id_provided", n => { VatIdProvided = n.GetBoolValue(); } },
-                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed.CreateFromDiscriminatorValue); } },
+                { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -319,10 +319,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana>("address_kana", AddressKana);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji>("address_kanji", AddressKanji);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>("address_kana", AddressKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityJapanAddress>("address_kanji", AddressKanji);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("administrative_address", AdministrativeAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration>("directorship_declaration", DirectorshipDeclaration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityDirectorshipDeclaration>("directorship_declaration", DirectorshipDeclaration);
             writer.WriteBoolValue("directors_provided", DirectorsProvided);
             writer.WriteBoolValue("executives_provided", ExecutivesProvided);
             writer.WriteStringValue("export_license_id", ExportLicenseId);
@@ -330,18 +330,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("name_kana", NameKana);
             writer.WriteStringValue("name_kanji", NameKanji);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration>("ownership_declaration", OwnershipDeclaration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityUboDeclaration>("ownership_declaration", OwnershipDeclaration);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason>("ownership_exemption_reason", OwnershipExemptionReason);
             writer.WriteBoolValue("owners_provided", OwnersProvided);
             writer.WriteStringValue("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("principal_place_of_business", PrincipalPlaceOfBusiness);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate>("registration_date", RegistrationDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration>("representative_declaration", RepresentativeDeclaration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRepresentativeDeclaration>("representative_declaration", RepresentativeDeclaration);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure>("structure", Structure);
             writer.WriteBoolValue("tax_id_provided", TaxIdProvided);
             writer.WriteStringValue("tax_id_registrar", TaxIdRegistrar);
             writer.WriteBoolValue("vat_id_provided", VatIdProvided);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationComposed>("verification", Verification);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerification>("verification", Verification);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
