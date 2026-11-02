@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_rendering_templates/{template}{?expand*,version*}", pathParameters)
+        public WithTemplateItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_rendering_templates/{template}{?expand%5B%5D*,version*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplateItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_rendering_templates/{template}{?expand*,version*}", rawUrl)
+        public WithTemplateItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_rendering_templates/{template}{?expand%5B%5D*,version*}", rawUrl)
         {
         }
         /// <summary>
@@ -105,11 +105,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             #pragma warning disable CS1591

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Report_runsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/reporting/report_runs{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Report_runsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/reporting/report_runs{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand%5B%5D*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Report_runsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/reporting/report_runs{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Report_runsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/reporting/report_runs{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand%5B%5D*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -182,11 +182,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>

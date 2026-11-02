@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "3DD0B8D0F7328E92C831E8AF060894EF7EAE3FD7FCF867A7D16A2F296EC18ACC277619B31BE8C1EC83316B5115E2036F28124D9D7F07651D26D59CB9733C3CEF",
+  "descriptionHash": "8DAA9E9C99C03339B25204D8ABBF60A7BD4D252D75BFF0F09E8AAF60131D4719413C25A99FFD3DB970968BF646AE9108F54D5D317521DCB34F4C7DFC01F51891",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "StripeOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Stripe.OpenApiClient",

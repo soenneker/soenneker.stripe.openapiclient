@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_itemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_items{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Subscription_itemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_items{?ending_before*,expand%5B%5D*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_itemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_items{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Subscription_itemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_items{?ending_before*,expand%5B%5D*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Subscription_itemsRequestBuilder.Subscription_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/subscription_items?subscription={subscription}{&ending_before*,expand*,limit*,starting_after*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/subscription_items?subscription={subscription}{&ending_before*,expand%5B%5D*,limit*,starting_after*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -163,11 +163,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>

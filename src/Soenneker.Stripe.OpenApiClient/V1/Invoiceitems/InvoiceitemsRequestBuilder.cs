@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoiceitemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoiceitems{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,invoice*,limit*,pending*,starting_after*}", pathParameters)
+        public InvoiceitemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoiceitems{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand%5B%5D*,invoice*,limit*,pending*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoiceitemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoiceitems{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,invoice*,limit*,pending*,starting_after*}", rawUrl)
+        public InvoiceitemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoiceitems{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand%5B%5D*,invoice*,limit*,pending*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -202,11 +202,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>Only return invoice items belonging to this invoice. If none is provided, all invoice items will be returned. If specifying an invoice, no customer identifier is needed.</summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/cards{?cardholder*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,exp_month*,exp_year*,expand*,last4*,limit*,personalization_design*,starting_after*,status*,type*}", pathParameters)
+        public CardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/cards{?cardholder*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,exp_month*,exp_year*,expand%5B%5D*,last4*,limit*,personalization_design*,starting_after*,status*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/cards{?cardholder*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,exp_month*,exp_year*,expand*,last4*,limit*,personalization_design*,starting_after*,status*,type*}", rawUrl)
+        public CardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/cards{?cardholder*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,exp_month*,exp_year*,expand%5B%5D*,last4*,limit*,personalization_design*,starting_after*,status*,type*}", rawUrl)
         {
         }
         /// <summary>
@@ -192,11 +192,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>Only return cards that have the given expiration month.</summary>

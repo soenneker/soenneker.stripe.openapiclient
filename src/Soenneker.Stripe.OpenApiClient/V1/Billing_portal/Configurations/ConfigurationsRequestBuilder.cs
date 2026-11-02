@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConfigurationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing_portal/configurations{?active*,ending_before*,expand*,is_default*,limit*,starting_after*}", pathParameters)
+        public ConfigurationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing_portal/configurations{?active*,ending_before*,expand%5B%5D*,is_default*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConfigurationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing_portal/configurations{?active*,ending_before*,expand*,is_default*,limit*,starting_after*}", rawUrl)
+        public ConfigurationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing_portal/configurations{?active*,ending_before*,expand%5B%5D*,is_default*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -166,11 +166,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>Only return the default or non-default configurations (e.g., pass `true` to only list the default configuration).</summary>

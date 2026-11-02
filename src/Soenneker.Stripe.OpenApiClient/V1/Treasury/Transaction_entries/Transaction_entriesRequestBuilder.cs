@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transaction_entries
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Transaction_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/transaction_entries?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,effective_at,effective_at%5Bgt%5D,effective_at%5Bgte%5D,effective_at%5Blt%5D,effective_at%5Blte%5D,ending_before*,expand*,limit*,order_by*,starting_after*,transaction*}", pathParameters)
+        public Transaction_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/transaction_entries?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,effective_at,effective_at%5Bgt%5D,effective_at%5Bgte%5D,effective_at%5Blt%5D,effective_at%5Blte%5D,ending_before*,expand%5B%5D*,limit*,order_by*,starting_after*,transaction*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transaction_entries
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Transaction_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/transaction_entries?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,effective_at,effective_at%5Bgt%5D,effective_at%5Bgte%5D,effective_at%5Blt%5D,effective_at%5Blte%5D,ending_before*,expand*,limit*,order_by*,starting_after*,transaction*}", rawUrl)
+        public Transaction_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/transaction_entries?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,effective_at,effective_at%5Bgt%5D,effective_at%5Bgte%5D,effective_at%5Blt%5D,effective_at%5Blte%5D,ending_before*,expand%5B%5D*,limit*,order_by*,starting_after*,transaction*}", rawUrl)
         {
         }
         /// <summary>
@@ -155,11 +155,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transaction_entries
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>Returns objects associated with this FinancialAccount.</summary>

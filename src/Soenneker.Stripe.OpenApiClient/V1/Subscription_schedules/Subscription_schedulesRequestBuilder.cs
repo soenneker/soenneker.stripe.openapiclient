@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_schedulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", pathParameters)
+        public Subscription_schedulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand%5B%5D*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Subscription_schedulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", rawUrl)
+        public Subscription_schedulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscription_schedules{?canceled_at,canceled_at%5Bgt%5D,canceled_at%5Bgte%5D,canceled_at%5Blt%5D,canceled_at%5Blte%5D,completed_at,completed_at%5Bgt%5D,completed_at%5Bgte%5D,completed_at%5Blt%5D,completed_at%5Blte%5D,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,customer_account*,ending_before*,expand%5B%5D*,limit*,released_at,released_at%5Bgt%5D,released_at%5Bgte%5D,released_at%5Blt%5D,released_at%5Blte%5D,scheduled*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -240,11 +240,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>

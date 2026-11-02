@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Trial_offers
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Trial_offersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/product_catalog/trial_offers{?active*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand*,limit*,prices*,starting_after*}", pathParameters)
+        public Trial_offersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/product_catalog/trial_offers{?active*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand%5B%5D*,limit*,prices%5B%5D*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Trial_offers
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Trial_offersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/product_catalog/trial_offers{?active*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand*,limit*,prices*,starting_after*}", rawUrl)
+        public Trial_offersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/product_catalog/trial_offers{?active*,created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,ending_before*,expand%5B%5D*,limit*,prices%5B%5D*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -185,11 +185,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Trial_offers
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>
@@ -198,11 +198,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Trial_offers
             /// <summary>Only return trial offers that reference these prices (during the trial period).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("prices")]
+            [QueryParameter("prices%5B%5D")]
             public string[]? Prices { get; set; }
 #nullable restore
 #else
-            [QueryParameter("prices")]
+            [QueryParameter("prices%5B%5D")]
             public string[] Prices { get; set; }
 #endif
             /// <summary>A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.</summary>

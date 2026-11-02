@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Outbound_paymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/outbound_payments{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand*,limit*,starting_after*,status*}", pathParameters)
+        public Outbound_paymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/outbound_payments{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand%5B%5D*,limit*,starting_after*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Outbound_paymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/outbound_payments{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand*,limit*,starting_after*,status*}", rawUrl)
+        public Outbound_paymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/outbound_payments{?created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand%5B%5D*,limit*,starting_after*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Outbound_paymentsRequestBuilder.Outbound_paymentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/treasury/outbound_payments?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand*,limit*,starting_after*,status*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/treasury/outbound_payments?financial_account={financial_account}{&created,created%5Bgt%5D,created%5Bgte%5D,created%5Blt%5D,created%5Blte%5D,customer*,ending_before*,expand%5B%5D*,limit*,starting_after*,status*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -192,11 +192,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>Returns objects associated with this FinancialAccount.</summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Received_debitsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/received_debits?financial_account={financial_account}{&ending_before*,expand*,limit*,starting_after*,status*}", pathParameters)
+        public Received_debitsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/received_debits?financial_account={financial_account}{&ending_before*,expand%5B%5D*,limit*,starting_after*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Received_debitsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/received_debits?financial_account={financial_account}{&ending_before*,expand*,limit*,starting_after*,status*}", rawUrl)
+        public Received_debitsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/received_debits?financial_account={financial_account}{&ending_before*,expand%5B%5D*,limit*,starting_after*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -116,11 +116,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>The FinancialAccount that funds were pulled from.</summary>

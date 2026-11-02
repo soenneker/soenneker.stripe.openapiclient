@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", pathParameters)
+        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand%5B%5D*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", rawUrl)
+        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/financial_connections/transactions?account={account}{&ending_before*,expand%5B%5D*,limit*,starting_after*,transacted_at,transacted_at%5Bgt%5D,transacted_at%5Bgte%5D,transacted_at%5Blt%5D,transacted_at%5Blte%5D,transaction_refresh*}", rawUrl)
         {
         }
         /// <summary>
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[]? Expand { get; set; }
 #nullable restore
 #else
-            [QueryParameter("expand")]
+            [QueryParameter("expand%5B%5D")]
             public string[] Expand { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>
