@@ -202,7 +202,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress.CreateFromDiscriminatorValue); } },
                 { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany.CreateFromDiscriminatorValue); } },

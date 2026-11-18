@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "after_completion", n => { AfterCompletion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataAfterCompletion>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataAfterCompletion.CreateFromDiscriminatorValue); } },
                 { "subscription_cancel", n => { SubscriptionCancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancel>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancel.CreateFromDiscriminatorValue); } },

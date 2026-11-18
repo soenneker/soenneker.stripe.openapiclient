@@ -273,7 +273,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestApplicationFeeAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestApplicationFeeAmount.CreateFromDiscriminatorValue); } },
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestApplicationFeePercent>(global::Soenneker.Stripe.OpenApiClient.Models.PostQuotesXWwwFormUrlencodedRequestApplicationFeePercent.CreateFromDiscriminatorValue); } },

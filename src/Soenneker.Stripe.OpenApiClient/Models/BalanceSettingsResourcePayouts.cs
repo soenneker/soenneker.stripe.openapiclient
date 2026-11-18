@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "automatic_transfer_rules_by_currency", n => { AutomaticTransferRulesByCurrency = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty.CreateFromDiscriminatorValue); } },
                 { "minimum_balance_by_currency", n => { MinimumBalanceByCurrency = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty.CreateFromDiscriminatorValue); } },

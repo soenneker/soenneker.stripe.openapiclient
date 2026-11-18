@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "link_options", n => { LinkOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions.CreateFromDiscriminatorValue); } },

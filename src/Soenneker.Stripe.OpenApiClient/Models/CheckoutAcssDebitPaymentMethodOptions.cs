@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "currency", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitPaymentMethodOptionsCurrency>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCurrency = default; _explicitNullProperties?.Remove("currency"); AdditionalData["currency"] = unknown; } else { Currency = parsed; AdditionalData.Remove("currency"); } } },
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions.CreateFromDiscriminatorValue); } },

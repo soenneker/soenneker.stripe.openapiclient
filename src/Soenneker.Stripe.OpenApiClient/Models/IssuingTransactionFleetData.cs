@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "cardholder_prompt_data", n => { CardholderPromptData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetCardholderPromptData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetCardholderPromptData.CreateFromDiscriminatorValue); } },
                 { "purchase_type", n => { PurchaseType = n.GetStringValue(); } },

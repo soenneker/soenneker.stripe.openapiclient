@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "capture_method", n => { var parsed = (n.GetStringValue() == "" ? global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypalPaymentMethodOptionsParamCaptureMethod.EmptyString : n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypalPaymentMethodOptionsParamCaptureMethod>()); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCaptureMethod = default; _explicitNullProperties?.Remove("capture_method"); AdditionalData["capture_method"] = unknown; } else { CaptureMethod = parsed; AdditionalData.Remove("capture_method"); } } },
                 { "preferred_locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaypalPaymentMethodOptionsParamPreferredLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreferredLocale = default; _explicitNullProperties?.Remove("preferred_locale"); AdditionalData["preferred_locale"] = unknown; } else { PreferredLocale = parsed; AdditionalData.Remove("preferred_locale"); } } },

@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "balance", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsBalance>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBalance = default; _explicitNullProperties?.Remove("balance"); AdditionalData["balance"] = unknown; } else { Balance = parsed; AdditionalData.Remove("balance"); } } },
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails.CreateFromDiscriminatorValue); } },

@@ -148,7 +148,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestBilling>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestBilling.CreateFromDiscriminatorValue); } },
                 { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestCompany>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardholdersCardholderXWwwFormUrlencodedRequestCompany.CreateFromDiscriminatorValue); } },

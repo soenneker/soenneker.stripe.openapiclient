@@ -172,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "amount_off", n => { AmountOff = n.GetIntValue(); } },
                 { "applies_to", n => { AppliesTo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo>(global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo.CreateFromDiscriminatorValue); } },

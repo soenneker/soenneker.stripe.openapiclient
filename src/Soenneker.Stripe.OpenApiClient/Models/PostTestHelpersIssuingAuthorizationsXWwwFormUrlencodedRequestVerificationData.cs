@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "address_line1_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestVerificationDataAddressLine1Check>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressLine1Check = default; _explicitNullProperties?.Remove("address_line1_check"); AdditionalData["address_line1_check"] = unknown; } else { AddressLine1Check = parsed; AdditionalData.Remove("address_line1_check"); } } },
                 { "address_postal_code_check", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsXWwwFormUrlencodedRequestVerificationDataAddressPostalCodeCheck>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAddressPostalCodeCheck = default; _explicitNullProperties?.Remove("address_postal_code_check"); AdditionalData["address_postal_code_check"] = unknown; } else { AddressPostalCodeCheck = parsed; AdditionalData.Remove("address_postal_code_check"); } } },

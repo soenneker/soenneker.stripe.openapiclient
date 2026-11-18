@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "active_entitlements", n => { ActiveEntitlements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements.CreateFromDiscriminatorValue); } },
                 { "buy_button", n => { BuyButton = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton.CreateFromDiscriminatorValue); } },

@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "customer_mapping", n => { CustomerMapping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping.CreateFromDiscriminatorValue); } },
                 { "default_aggregation", n => { DefaultAggregation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestDefaultAggregation.CreateFromDiscriminatorValue); } },

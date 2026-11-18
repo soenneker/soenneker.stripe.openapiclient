@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "footer_body", n => { FooterBody = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterBody.CreateFromDiscriminatorValue); } },
                 { "footer_title", n => { FooterTitle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesignXWwwFormUrlencodedRequestCarrierTextCarrierTextParamFooterTitle.CreateFromDiscriminatorValue); } },

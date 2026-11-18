@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "billing_cycle_anchor", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateBillingCycleAnchor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingCycleAnchor = default; _explicitNullProperties?.Remove("billing_cycle_anchor"); AdditionalData["billing_cycle_anchor"] = unknown; } else { BillingCycleAnchor = parsed; AdditionalData.Remove("billing_cycle_anchor"); } } },
                 { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateDefaultAllowedUpdates>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateDefaultAllowedUpdates.CreateFromDiscriminatorValue); } },

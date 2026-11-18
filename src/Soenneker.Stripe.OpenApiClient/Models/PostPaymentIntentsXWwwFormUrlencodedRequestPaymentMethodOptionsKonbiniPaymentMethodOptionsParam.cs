@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "confirmation_number", n => { ConfirmationNumber = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKonbiniPaymentMethodOptionsParamConfirmationNumber>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKonbiniPaymentMethodOptionsParamConfirmationNumber.CreateFromDiscriminatorValue); } },
                 { "expires_after_days", n => { ExpiresAfterDays = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKonbiniPaymentMethodOptionsParamExpiresAfterDays>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsKonbiniPaymentMethodOptionsParamExpiresAfterDays.CreateFromDiscriminatorValue); } },

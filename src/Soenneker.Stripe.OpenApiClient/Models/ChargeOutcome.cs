@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "advice_code", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ChargeOutcomeAdviceCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdviceCode = default; _explicitNullProperties?.Remove("advice_code"); AdditionalData["advice_code"] = unknown; } else { AdviceCode = parsed; AdditionalData.Remove("advice_code"); } } },
                 { "network_advice_code", n => { NetworkAdviceCode = n.GetStringValue(); } },

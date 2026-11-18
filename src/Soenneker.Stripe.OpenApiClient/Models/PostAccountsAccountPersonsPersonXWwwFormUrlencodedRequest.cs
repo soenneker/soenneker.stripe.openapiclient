@@ -376,7 +376,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(29)
             {
                 { "additional_tos_acceptances", n => { AdditionalTosAcceptances = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAdditionalTosAcceptances.CreateFromDiscriminatorValue); } },
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsPersonXWwwFormUrlencodedRequestAddress.CreateFromDiscriminatorValue); } },

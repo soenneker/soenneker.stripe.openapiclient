@@ -164,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "bank_address_city", n => { BankAddressCity = n.GetStringValue(); } },
                 { "bank_address_line_1", n => { BankAddressLine1 = n.GetStringValue(); } },

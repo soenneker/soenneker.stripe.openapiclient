@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "dispute_opened", n => { DisputeOpened = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationDisputeOpened>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationDisputeOpened.CreateFromDiscriminatorValue); } },
                 { "early_fraud_warning_received", n => { EarlyFraudWarningReceived = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived.CreateFromDiscriminatorValue); } },

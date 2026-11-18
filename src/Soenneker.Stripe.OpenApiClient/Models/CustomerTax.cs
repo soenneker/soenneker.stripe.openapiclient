@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "automatic_tax", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAutomaticTax = default; _explicitNullProperties?.Remove("automatic_tax"); AdditionalData["automatic_tax"] = unknown; } else { AutomaticTax = parsed; AdditionalData.Remove("automatic_tax"); } } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },

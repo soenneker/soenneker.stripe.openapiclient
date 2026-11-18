@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "allow_redisplay", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethodXWwwFormUrlencodedRequestCollectConfigAllowRedisplay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAllowRedisplay = default; _explicitNullProperties?.Remove("allow_redisplay"); AdditionalData["allow_redisplay"] = unknown; } else { AllowRedisplay = parsed; AdditionalData.Remove("allow_redisplay"); } } },
                 { "enable_customer_cancellation", n => { EnableCustomerCancellation = n.GetBoolValue(); } },

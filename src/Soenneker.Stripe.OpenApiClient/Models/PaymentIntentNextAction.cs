@@ -308,7 +308,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(22)
             {
                 { "alipay_handle_redirect", n => { AlipayHandleRedirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionAlipayHandleRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionAlipayHandleRedirect.CreateFromDiscriminatorValue); } },
                 { "blik_authorize", n => { BlikAuthorize = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionBlikAuthorizeProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionBlikAuthorizeProperty.CreateFromDiscriminatorValue); } },

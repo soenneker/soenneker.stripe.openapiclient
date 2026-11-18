@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "cardholder_prompt_data", n => { CardholderPromptData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData>(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetCardholderPromptData.CreateFromDiscriminatorValue); } },
                 { "purchase_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersIssuingAuthorizationsAuthorizationCaptureXWwwFormUrlencodedRequestPurchaseDetailsFleetPurchaseType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePurchaseType = default; _explicitNullProperties?.Remove("purchase_type"); AdditionalData["purchase_type"] = unknown; } else { PurchaseType = parsed; AdditionalData.Remove("purchase_type"); } } },

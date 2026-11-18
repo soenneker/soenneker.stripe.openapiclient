@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceError.CreateFromDiscriminatorValue); } },

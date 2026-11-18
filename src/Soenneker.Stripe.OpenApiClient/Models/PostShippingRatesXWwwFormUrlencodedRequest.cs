@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "delivery_estimate", n => { DeliveryEstimate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate>(global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestDeliveryEstimate.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },

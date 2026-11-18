@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "acceptance", n => { Acceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandateAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandateAcceptance.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandateAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PostSourcesSourceXWwwFormUrlencodedRequestMandateAmount.CreateFromDiscriminatorValue); } },

@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "credit_reversal", n => { CreditReversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal.CreateFromDiscriminatorValue); } },
                 { "outbound_payment", n => { OutboundPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment.CreateFromDiscriminatorValue); } },

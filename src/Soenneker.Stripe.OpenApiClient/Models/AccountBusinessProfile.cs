@@ -193,7 +193,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "annual_revenue", n => { AnnualRevenue = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountAnnualRevenue>(global::Soenneker.Stripe.OpenApiClient.Models.AccountAnnualRevenue.CreateFromDiscriminatorValue); } },
                 { "estimated_worker_count", n => { EstimatedWorkerCount = n.GetIntValue(); } },

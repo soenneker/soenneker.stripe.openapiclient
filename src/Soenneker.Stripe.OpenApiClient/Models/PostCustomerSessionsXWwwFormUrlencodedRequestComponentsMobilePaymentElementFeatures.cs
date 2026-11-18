@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "payment_method_allow_redisplay_filters", n => { PaymentMethodAllowRedisplayFilters = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodAllowRedisplayFiltersItem>()?.AsList(); } },
                 { "payment_method_redisplay", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElementFeaturesPaymentMethodRedisplay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentMethodRedisplay = default; _explicitNullProperties?.Remove("payment_method_redisplay"); AdditionalData["payment_method_redisplay"] = unknown; } else { PaymentMethodRedisplay = parsed; AdditionalData.Remove("payment_method_redisplay"); } } },

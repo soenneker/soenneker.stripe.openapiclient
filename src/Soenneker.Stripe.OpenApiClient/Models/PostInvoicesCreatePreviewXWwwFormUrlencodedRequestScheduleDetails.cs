@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsBillingMode.CreateFromDiscriminatorValue); } },
                 { "end_behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestScheduleDetailsEndBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEndBehavior = default; _explicitNullProperties?.Remove("end_behavior"); AdditionalData["end_behavior"] = unknown; } else { EndBehavior = parsed; AdditionalData.Remove("end_behavior"); } } },

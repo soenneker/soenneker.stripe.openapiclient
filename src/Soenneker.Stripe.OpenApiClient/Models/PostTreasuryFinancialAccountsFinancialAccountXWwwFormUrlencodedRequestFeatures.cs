@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "card_issuing", n => { CardIssuing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeaturesCardIssuing>(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeaturesCardIssuing.CreateFromDiscriminatorValue); } },
                 { "deposit_insurance", n => { DepositInsurance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeaturesDepositInsurance>(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountXWwwFormUrlencodedRequestFeaturesDepositInsurance.CreateFromDiscriminatorValue); } },

@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "default_price_data", n => { DefaultPriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestDefaultPriceData>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestDefaultPriceData.CreateFromDiscriminatorValue); } },

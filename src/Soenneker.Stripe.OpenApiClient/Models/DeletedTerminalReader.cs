@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "device_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderDeviceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeviceType = default; _explicitNullProperties?.Remove("device_type"); AdditionalData["device_type"] = unknown; } else { DeviceType = parsed; AdditionalData.Remove("device_type"); } } },

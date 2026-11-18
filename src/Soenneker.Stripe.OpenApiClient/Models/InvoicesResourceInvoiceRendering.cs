@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "amount_tax_display", n => { AmountTaxDisplay = n.GetStringValue(); } },
                 { "pdf", n => { Pdf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingPdf>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingPdf.CreateFromDiscriminatorValue); } },

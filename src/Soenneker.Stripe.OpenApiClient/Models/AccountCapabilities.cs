@@ -389,7 +389,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(69)
             {
                 { "acss_debit_payments", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAcssDebitPayments>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAcssDebitPayments = default; _explicitNullProperties?.Remove("acss_debit_payments"); AdditionalData["acss_debit_payments"] = unknown; } else { AcssDebitPayments = parsed; AdditionalData.Remove("acss_debit_payments"); } } },
                 { "affirm_payments", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAffirmPayments>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAffirmPayments = default; _explicitNullProperties?.Remove("affirm_payments"); AdditionalData["affirm_payments"] = unknown; } else { AffirmPayments = parsed; AdditionalData.Remove("affirm_payments"); } } },

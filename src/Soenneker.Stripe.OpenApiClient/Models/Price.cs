@@ -234,7 +234,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "billing_scheme", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceBillingScheme>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingScheme = default; _explicitNullProperties?.Remove("billing_scheme"); AdditionalData["billing_scheme"] = unknown; } else { BillingScheme = parsed; AdditionalData.Remove("billing_scheme"); } } },

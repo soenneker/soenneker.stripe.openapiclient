@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "enterprise_eap_peap", n => { EnterpriseEapPeap = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestWifiWifiEnterpriseEapPeap.CreateFromDiscriminatorValue); } },
                 { "enterprise_eap_tls", n => { EnterpriseEapTls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsXWwwFormUrlencodedRequestWifiWifiEnterpriseEapTls.CreateFromDiscriminatorValue); } },

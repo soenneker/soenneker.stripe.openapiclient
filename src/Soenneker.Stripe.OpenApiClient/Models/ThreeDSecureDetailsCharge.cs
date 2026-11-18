@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "authentication_flow", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsChargeAuthenticationFlow>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAuthenticationFlow = default; _explicitNullProperties?.Remove("authentication_flow"); AdditionalData["authentication_flow"] = unknown; } else { AuthenticationFlow = parsed; AdditionalData.Remove("authentication_flow"); } } },
                 { "electronic_commerce_indicator", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsChargeElectronicCommerceIndicator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueElectronicCommerceIndicator = default; _explicitNullProperties?.Remove("electronic_commerce_indicator"); AdditionalData["electronic_commerce_indicator"] = unknown; } else { ElectronicCommerceIndicator = parsed; AdditionalData.Remove("electronic_commerce_indicator"); } } },

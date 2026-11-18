@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "currently_due", n => { CurrentlyDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError.CreateFromDiscriminatorValue)?.AsList(); } },

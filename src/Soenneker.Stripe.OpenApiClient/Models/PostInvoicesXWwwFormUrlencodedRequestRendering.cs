@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "amount_tax_display", n => { var parsed = (n.GetStringValue() == "" ? global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestRenderingAmountTaxDisplay.EmptyString : n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestRenderingAmountTaxDisplay>()); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAmountTaxDisplay = default; _explicitNullProperties?.Remove("amount_tax_display"); AdditionalData["amount_tax_display"] = unknown; } else { AmountTaxDisplay = parsed; AdditionalData.Remove("amount_tax_display"); } } },
                 { "pdf", n => { Pdf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestRenderingPdf>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestRenderingPdf.CreateFromDiscriminatorValue); } },

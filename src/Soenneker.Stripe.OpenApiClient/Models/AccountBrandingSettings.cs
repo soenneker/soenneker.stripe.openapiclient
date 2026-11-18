@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsIcon.CreateFromDiscriminatorValue); } },
                 { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBrandingSettingsLogo.CreateFromDiscriminatorValue); } },

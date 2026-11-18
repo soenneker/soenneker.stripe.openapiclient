@@ -747,7 +747,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(69)
             {
                 { "adaptive_pricing", n => { AdaptivePricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing.CreateFromDiscriminatorValue); } },
                 { "after_expiration", n => { AfterExpiration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration.CreateFromDiscriminatorValue); } },

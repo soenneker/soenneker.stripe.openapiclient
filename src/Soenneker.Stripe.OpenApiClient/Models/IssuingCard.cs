@@ -306,7 +306,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(27)
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
                 { "cancellation_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancellationReason = default; _explicitNullProperties?.Remove("cancellation_reason"); AdditionalData["cancellation_reason"] = unknown; } else { CancellationReason = parsed; AdditionalData.Remove("cancellation_reason"); } } },

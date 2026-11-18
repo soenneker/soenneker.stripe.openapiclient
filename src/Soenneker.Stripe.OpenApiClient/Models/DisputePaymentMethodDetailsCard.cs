@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
                 { "case_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCardCaseType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCaseType = default; _explicitNullProperties?.Remove("case_type"); AdditionalData["case_type"] = unknown; } else { CaseType = parsed; AdditionalData.Remove("case_type"); } } },
